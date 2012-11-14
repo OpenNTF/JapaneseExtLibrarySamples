@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="3.0" replicaid="80257A9F004BC20A" version="8.5" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="4a6" sequence="2" unid="9830FE21DC3F029649257AB60054A8E9">
+<created><datetime>20121115T002442,65+09</datetime></created>
+<modified><datetime>20121115T002442,69+09</datetime></modified>
+<revised><datetime>20121115T002442,68+09</datetime></revised>
+<lastaccessed><datetime>20121115T002442,69+09</datetime></lastaccessed>
+<addedtofile><datetime>20121115T002442,67+09</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Atsushi 1 Ono/OU=Japan/O=IBM</name></updatedby>
+<wassignedby><name>CN=Atsushi 1 Ono/OU=Japan/O=IBM</name></wassignedby>
+<item name="$Flags"><text>gC~4K2</text></item>
+<item name="$TITLE"><text>DWA_Home_ja.properties</text></item>
+
+
+<item name="$FileNames" sign="true"><text>DWA_Home_ja.properties</text></item></note>

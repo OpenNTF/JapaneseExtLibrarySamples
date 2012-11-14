@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="3.0" replicaid="80257A9F004BC20A" version="8.5" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="442" sequence="2" unid="DAC48F6DAB0531C149257AB60054A85C">
+<created><datetime>20121115T002441,24+09</datetime></created>
+<modified><datetime>20121115T002441,36+09</datetime></modified>
+<revised><datetime>20121115T002441,35+09</datetime></revised>
+<lastaccessed><datetime>20121115T002441,36+09</datetime></lastaccessed>
+<addedtofile><datetime>20121115T002441,34+09</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Atsushi 1 Ono/OU=Japan/O=IBM</name></updatedby>
+<wassignedby><name>CN=Atsushi 1 Ono/OU=Japan/O=IBM</name></wassignedby>
+<item name="$Flags"><text>gC~4;2</text></item>
+<item name="$TITLE"><text>LeftREST.properties</text></item>
+
+
+<item name="$FileNames" sign="true"><text>LeftREST.properties</text></item></note>

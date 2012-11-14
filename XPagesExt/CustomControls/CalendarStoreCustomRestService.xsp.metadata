@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="3.0" replicaid="80257A9F004BC20A" version="8.5" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="39e" sequence="9" unid="8A1EB4638BDEAB878525786500660EE0">
+<created><datetime dst="true">20110401T143444,80-04</datetime></created>
+<modified><datetime>20121115T002449,30+09</datetime></modified>
+<revised><datetime>20121115T002449,29+09</datetime></revised>
+<lastaccessed><datetime>20121115T002449,30+09</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20121022T144752,01+01</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Andrejus Chaliapinas/OU=Ireland/O=IBM</name><name>CN=Atsushi 1 Ono/OU=Japan/O=IBM</name></updatedby>
+<wassignedby><name>CN=Atsushi 1 Ono/OU=Japan/O=IBM</name></wassignedby>
+<item name="$Flags"><text>gC~4;</text></item>
+<item name="$TITLE" sign="true"><text>CalendarStoreCustomRestService.xsp</text></item>
+
+
+
+
+<item name="$FileNames" sign="true"><text>CalendarStoreCustomRestService.xsp</text></item>
+
+<item name="$DesignerVersion"><text>8.5.1</text></item>
+
+
+
+</note>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="3.0" replicaid="80257A9F004BC20A" version="8.5" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="3aa" sequence="7" unid="56929C6D72A76DC6852579900008DE84">
+<created><datetime>20120124T203652,52-05</datetime></created>
+<modified><datetime>20121114T230654,31+09</datetime></modified>
+<revised><datetime>20121114T230654,30+09</datetime></revised>
+<lastaccessed><datetime>20121114T230654,31+09</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20121022T144752,79+01</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Andrejus Chaliapinas/OU=Ireland/O=IBM</name><name>CN=Atsushi 1 Ono/OU=Japan/O=IBM</name></updatedby>
+<wassignedby><name>CN=Atsushi 1 Ono/OU=Japan/O=IBM</name></wassignedby>
+<item name="$Flags"><text>34567Cg~[</text></item>
+<item name="$TITLE"><text>extlib/tree/SimpleTreeNode.java</text></item>
+<item name="$DesignerVersion"><text>8.5.3</text></item>
+
+
+<item name="$FileNames" sign="true"><text>extlib/tree/SimpleTreeNode.java</text></item>
+
+
+</note>

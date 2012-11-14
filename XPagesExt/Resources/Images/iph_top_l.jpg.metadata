@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="3.0" replicaid="80257A9F004BC20A" version="8.5" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="2aa" sequence="4" unid="532BC336439A5902852578EA0050633E">
+<created><datetime dst="true">20110812T103802,86-04</datetime></created>
+<modified><datetime>20121114T230653,25+09</datetime></modified>
+<revised><datetime>20121114T230653,24+09</datetime></revised>
+<lastaccessed><datetime>20121114T230653,25+09</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20121022T144743,57+01</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Andrejus Chaliapinas/OU=Ireland/O=IBM</name><name>CN=Atsushi 1 Ono/OU=Japan/O=IBM</name></updatedby>
+<wassignedby><name>CN=Atsushi 1 Ono/OU=Japan/O=IBM</name></wassignedby>
+<item name="$TITLE"><text>iph_top_l.jpg</text></item>
+<item name="$Flags"><text>D34CiQ</text></item>
+<item name="$FlagsExt"><text>D</text></item>
+<item name="$ImagesWide" sign="true"><number>1</number></item>
+<item name="$ImagesHigh" sign="true"><number>1</number></item>
+<item name="$ImagesColorize" sign="true"><number>0</number></item>
+<item name="$FileModDT" sign="true"><datetime dst="true">20110729T094457,56-04</datetime></item>
+<item name="$ImageNames" sign="true"><text>iph_top_l.jpg</text></item>
+<item name="$DesignerVersion"><text>8.5.3</text></item>
+
+</note>

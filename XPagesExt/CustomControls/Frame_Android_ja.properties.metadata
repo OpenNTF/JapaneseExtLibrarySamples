@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="3.0" replicaid="80257A9F004BC20A" version="8.5" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="65e" sequence="2" unid="C59B9288CA75FE0849257AB60054B03C">
+<created><datetime>20121115T002501,40+09</datetime></created>
+<modified><datetime>20121115T002501,52+09</datetime></modified>
+<revised><datetime>20121115T002501,51+09</datetime></revised>
+<lastaccessed><datetime>20121115T002501,52+09</datetime></lastaccessed>
+<addedtofile><datetime>20121115T002501,50+09</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Atsushi 1 Ono/OU=Japan/O=IBM</name></updatedby>
+<wassignedby><name>CN=Atsushi 1 Ono/OU=Japan/O=IBM</name></wassignedby>
+<item name="$Flags"><text>gC~4;2</text></item>
+<item name="$TITLE"><text>Frame_Android_ja.properties</text></item>
+
+
+<item name="$FileNames" sign="true"><text>Frame_Android_ja.properties</text></item></note>
