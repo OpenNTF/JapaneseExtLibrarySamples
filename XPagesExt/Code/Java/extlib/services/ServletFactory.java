@@ -59,6 +59,6 @@ public class ServletFactory extends DefaultServletFactory {
 	}
 	
 	public ServletFactory() {
-		super("services","Extension Library Services Servlet",createFactory());
+		super("services","Extension Library サービスサーブレット",createFactory());
 	}
 }

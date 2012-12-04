@@ -139,7 +139,7 @@ public class SimplePicker implements IValuePickerData {
 					}
 				}).sort();
 			} catch(IOException e) {
-				throw new FacesExceptionEx("Unable to read the state list");
+				throw new FacesExceptionEx("BƒŠƒXƒg‚ğ“Ç‚İ‚Ş‚±‚Æ‚ª‚Å‚«‚Ü‚¹‚ñ");
 			}
 		}
 		return states;

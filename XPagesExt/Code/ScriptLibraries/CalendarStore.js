@@ -353,7 +353,7 @@ dojo.declare("xpagesext.CalendarStore", null, {
 				if(oEvent.oEndTime){ oEvent.endDateTime = oEvent.oEndTime.getISO8601String(); }
 				oEvent.unid = oData.unid;
 			} catch(e) {
-				console.error("An error occurred reading a calendar document.");
+				console.error("カレンダー文書読み取り中にエラーが発生。");
 			}
 
 			oEvent[this._storeRef] = this;

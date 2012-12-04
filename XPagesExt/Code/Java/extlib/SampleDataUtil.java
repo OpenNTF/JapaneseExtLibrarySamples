@@ -76,10 +76,10 @@ public class SampleDataUtil {
 	
 	// Read a file from a class resource in the classpath
 	private static void readFromClassResource(String resourceName, List<String> entries, boolean capitalize) throws IOException {
-		if(TRACE) {System.out.println("Reading: "+resourceName);}
+		if(TRACE) {System.out.println("“Ç‚İ‚İ’†: "+resourceName);}
 		InputStream is = SampleDataUtil.class.getResourceAsStream(resourceName);
 		if(is!=null) {
-			if(TRACE) {System.out.println("Found: "+resourceName);}
+			if(TRACE) {System.out.println("Ÿ‚Ì‚à‚Ì‚ªŒ©‚Â‚©‚è‚Ü‚µ‚½: "+resourceName);}
 			try {
 				BufferedReader r = new BufferedReader(new InputStreamReader(is,"utf-8"));
 				String s;
@@ -92,17 +92,17 @@ public class SampleDataUtil {
 				is.close();
 			}
 		} else {
-			if(TRACE) {System.out.println("Cannot find: "+resourceName);}
+			if(TRACE) {System.out.println("Ÿ‚Ì‚à‚Ì‚ªŒ©‚Â‚©‚è‚Ü‚¹‚ñ: "+resourceName);}
 		}
 	}
 
 	// Read a file from a resource in the NSF
-	@SuppressWarnings("unused")
+	@SuppressWarnings("g—p‚³‚ê‚Ä‚¢‚Ü‚¹‚ñ")
 	private  static void readFromFileResource(String resourceName, List<String> entries, boolean capitalize) throws IOException {
-		if(TRACE) {System.out.println("Reading: "+resourceName);}
+		if(TRACE) {System.out.println("“Ç‚İ‚İ’†: "+resourceName);}
 		InputStream is = FacesContext.getCurrentInstance().getExternalContext().getResourceAsStream(resourceName);
 		if(is!=null) {
-			if(TRACE) {System.out.println("Found: "+resourceName);}
+			if(TRACE) {System.out.println("Ÿ‚Ì‚à‚Ì‚ªŒ©‚Â‚©‚è‚Ü‚µ‚½: "+resourceName);}
 			try {
 				BufferedReader r = new BufferedReader(new InputStreamReader(is,"utf-8"));
 				String s;
@@ -115,7 +115,7 @@ public class SampleDataUtil {
 				is.close();
 			}
 		} else {
-			if(TRACE) {System.out.println("Cannot find: "+resourceName);}
+			if(TRACE) {System.out.println("Ÿ‚Ì‚à‚Ì‚ªŒ©‚Â‚©‚è‚Ü‚¹‚ñ: "+resourceName);}
 		}
 	}
 	

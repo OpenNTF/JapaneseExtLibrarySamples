@@ -19,7 +19,7 @@ public class MemberDataProvider extends AbstractPeopleDataProvider {
 	}
 
 	public String getName() {
-		return "Demo App Provider";
+		return "デモアプリプロバイダー";
 	}
 	
 	public Object getValue(PersonImpl person, Object prop) {
