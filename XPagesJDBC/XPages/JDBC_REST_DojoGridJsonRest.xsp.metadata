@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="3.0" replicaid="80257980003A8C3F" version="8.5" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="1ce" sequence="7" unid="62C4D2CBF334D3A180257932006826A6">
+<created><datetime dst="true">20111023T195736,38+01</datetime></created>
+<modified><datetime>20121208T173814,63+09</datetime></modified>
+<revised><datetime>20121208T173814,62+09</datetime></revised>
+<lastaccessed><datetime>20121208T173814,63+09</datetime></lastaccessed>
+<addedtofile><datetime>20120111T103134,97+00</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Andrejus Chaliapinas/OU=Ireland/O=IBM</name><name>CN=Atsushi 1 Ono/OU=Japan/O=IBM</name></updatedby>
+<wassignedby><name>CN=Atsushi 1 Ono/OU=Japan/O=IBM</name></wassignedby>
+<item name="$Flags"><text>gC~4K</text></item>
+<item name="$TITLE" sign="true"><text>JDBC_REST_DojoGridJsonRest.xsp</text></item>
+
+
+<item name="$FileNames" sign="true"><text>JDBC_REST_DojoGridJsonRest.xsp</text></item>
+
+<item name="$DesignerVersion"><text>8.5.1</text></item>
+
+
+
+</note>

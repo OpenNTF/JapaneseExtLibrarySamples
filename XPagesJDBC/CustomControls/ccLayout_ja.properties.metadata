@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="3.0" replicaid="80257980003A8C3F" version="8.5" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="1ea" sequence="2" unid="0B4480CE1B2CB4A549257ACE002F7173">
+<created><datetime>20121208T173812,35+09</datetime></created>
+<modified><datetime>20121208T173812,40+09</datetime></modified>
+<revised><datetime>20121208T173812,39+09</datetime></revised>
+<lastaccessed><datetime>20121208T173812,40+09</datetime></lastaccessed>
+<addedtofile><datetime>20121208T173812,38+09</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Atsushi 1 Ono/OU=Japan/O=IBM</name></updatedby>
+<wassignedby><name>CN=Atsushi 1 Ono/OU=Japan/O=IBM</name></wassignedby>
+<item name="$Flags"><text>gC~4;2</text></item>
+<item name="$TITLE"><text>ccLayout_ja.properties</text></item>
+
+
+<item name="$FileNames" sign="true"><text>ccLayout_ja.properties</text></item></note>

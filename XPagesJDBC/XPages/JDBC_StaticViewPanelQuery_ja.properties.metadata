@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="3.0" replicaid="80257980003A8C3F" version="8.5" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="222" sequence="2" unid="162D332D0006BD0149257ACE002F71B2">
+<created><datetime>20121208T173812,98+09</datetime></created>
+<modified><datetime>20121208T173813,10+09</datetime></modified>
+<revised><datetime>20121208T173813,09+09</datetime></revised>
+<lastaccessed><datetime>20121208T173813,10+09</datetime></lastaccessed>
+<addedtofile><datetime>20121208T173813,08+09</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Atsushi 1 Ono/OU=Japan/O=IBM</name></updatedby>
+<wassignedby><name>CN=Atsushi 1 Ono/OU=Japan/O=IBM</name></wassignedby>
+<item name="$Flags"><text>gC~4K2</text></item>
+<item name="$TITLE"><text>JDBC_StaticViewPanelQuery_ja.properties</text></item>
+
+
+<item name="$FileNames" sign="true"><text>JDBC_StaticViewPanelQuery_ja.properties</text></item></note>

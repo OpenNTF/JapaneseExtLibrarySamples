@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config>
+  <managed-bean>
+    <managed-bean-name>dbUtil</managed-bean-name>
+    <managed-bean-class>xpages.DBUtil</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+  </managed-bean>
+  <!--AUTOGEN-START-BUILDER: IBM Lotus Domino Designer によって自動的に生成されます。変更しないでください。-->
+  <application>
+    <locale-config>
+      <default-locale>en</default-locale>
+      <supported-locale>en</supported-locale>
+      <supported-locale>ja</supported-locale>
+    </locale-config>
+  </application>
+  <!--AUTOGEN-END-BUILDER: 自動的に生成されたセクションの終了-->
+</faces-config>
