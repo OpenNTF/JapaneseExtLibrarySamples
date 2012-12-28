@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="3.0" replicaid="80257980003A8C3F" version="8.5" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="21a" sequence="2" unid="2AA03D2AD1DBD74E49257ACE002F71A4">
-<created><datetime>20121208T173812,84+09</datetime></created>
-<modified><datetime>20121208T173813,00+09</datetime></modified>
-<revised><datetime>20121208T173812,99+09</datetime></revised>
-<lastaccessed><datetime>20121208T173813,00+09</datetime></lastaccessed>
-<addedtofile><datetime>20121208T173812,98+09</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Atsushi 1 Ono/OU=Japan/O=IBM</name></updatedby>
-<wassignedby><name>CN=Atsushi 1 Ono/OU=Japan/O=IBM</name></wassignedby>
+<noteinfo noteid="21e" sequence="2" unid="75A94B47D1AEDA0949257AE200349188">
+<created><datetime>20121228T183411,28+09</datetime></created>
+<modified><datetime>20121228T183411,31+09</datetime></modified>
+<revised><datetime>20121228T183411,30+09</datetime></revised>
+<lastaccessed><datetime>20121228T183411,31+09</datetime></lastaccessed>
+<addedtofile><datetime>20121228T183411,29+09</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Admin/O=Lotus</name></updatedby>
+<wassignedby><name>CN=Admin/O=Lotus</name></wassignedby>
 <item name="$Flags"><text>gC~4K2</text></item>
 <item name="$TITLE"><text>JDBC_REST_DojoGridJsonRest_ja.properties</text></item>
 

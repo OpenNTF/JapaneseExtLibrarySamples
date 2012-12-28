@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="3.0" replicaid="80257980003A8C3F" version="8.5" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="206" sequence="2" unid="0E0459F5CF99B3BB49257ACE002F7196">
-<created><datetime>20121208T173812,70+09</datetime></created>
-<modified><datetime>20121208T173812,75+09</datetime></modified>
-<revised><datetime>20121208T173812,74+09</datetime></revised>
-<lastaccessed><datetime>20121208T173812,75+09</datetime></lastaccessed>
-<addedtofile><datetime>20121208T173812,73+09</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Atsushi 1 Ono/OU=Japan/O=IBM</name></updatedby>
-<wassignedby><name>CN=Atsushi 1 Ono/OU=Japan/O=IBM</name></wassignedby>
+<noteinfo noteid="20a" sequence="2" unid="B6A383F21C7BB8A349257AE200349168">
+<created><datetime>20121228T183410,96+09</datetime></created>
+<modified><datetime>20121228T183410,99+09</datetime></modified>
+<revised><datetime>20121228T183410,98+09</datetime></revised>
+<lastaccessed><datetime>20121228T183410,99+09</datetime></lastaccessed>
+<addedtofile><datetime>20121228T183410,97+09</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Admin/O=Lotus</name></updatedby>
+<wassignedby><name>CN=Admin/O=Lotus</name></wassignedby>
 <item name="$Flags"><text>gC~4K2</text></item>
 <item name="$TITLE"><text>JDBC_MetaData.properties</text></item>
 

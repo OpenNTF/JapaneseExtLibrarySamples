@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="3.0" replicaid="80257980003A8C3F" version="8.5" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="202" sequence="2" unid="8D940498FB82384849257ACE002F7191">
-<created><datetime>20121208T173812,65+09</datetime></created>
-<modified><datetime>20121208T173812,70+09</datetime></modified>
-<revised><datetime>20121208T173812,69+09</datetime></revised>
-<lastaccessed><datetime>20121208T173812,70+09</datetime></lastaccessed>
-<addedtofile><datetime>20121208T173812,68+09</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Atsushi 1 Ono/OU=Japan/O=IBM</name></updatedby>
-<wassignedby><name>CN=Atsushi 1 Ono/OU=Japan/O=IBM</name></wassignedby>
+<noteinfo noteid="206" sequence="2" unid="5A72E72CE0CF01C549257AE200349161">
+<created><datetime>20121228T183410,89+09</datetime></created>
+<modified><datetime>20121228T183410,92+09</datetime></modified>
+<revised><datetime>20121228T183410,91+09</datetime></revised>
+<lastaccessed><datetime>20121228T183410,92+09</datetime></lastaccessed>
+<addedtofile><datetime>20121228T183410,90+09</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Admin/O=Lotus</name></updatedby>
+<wassignedby><name>CN=Admin/O=Lotus</name></wassignedby>
 <item name="$Flags"><text>gC~4K2</text></item>
 <item name="$TITLE"><text>JDBC_StaticViewPanelQueryCount_ja.properties</text></item>
 

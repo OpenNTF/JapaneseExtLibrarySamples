@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="3.0" replicaid="80257980003A8C3F" version="8.5" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="1f6" sequence="2" unid="05FF661BD1DF3C4E49257ACE002F7181">
-<created><datetime>20121208T173812,49+09</datetime></created>
-<modified><datetime>20121208T173812,55+09</datetime></modified>
-<revised><datetime>20121208T173812,54+09</datetime></revised>
-<lastaccessed><datetime>20121208T173812,55+09</datetime></lastaccessed>
-<addedtofile><datetime>20121208T173812,53+09</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Atsushi 1 Ono/OU=Japan/O=IBM</name></updatedby>
-<wassignedby><name>CN=Atsushi 1 Ono/OU=Japan/O=IBM</name></wassignedby>
+<noteinfo noteid="1fa" sequence="2" unid="96AE93BDE464BEE849257AE20034914F">
+<created><datetime>20121228T183410,71+09</datetime></created>
+<modified><datetime>20121228T183410,74+09</datetime></modified>
+<revised><datetime>20121228T183410,73+09</datetime></revised>
+<lastaccessed><datetime>20121228T183410,74+09</datetime></lastaccessed>
+<addedtofile><datetime>20121228T183410,72+09</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Admin/O=Lotus</name></updatedby>
+<wassignedby><name>CN=Admin/O=Lotus</name></wassignedby>
 <item name="$Flags"><text>gC~4K2</text></item>
 <item name="$TITLE"><text>JDBC_RowSetDatasource.properties</text></item>
 

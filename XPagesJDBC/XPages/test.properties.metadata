@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="3.0" replicaid="80257980003A8C3F" version="8.5" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="1ee" sequence="2" unid="0CB575A9BA9B599749257ACE002F7179">
-<created><datetime>20121208T173812,41+09</datetime></created>
-<modified><datetime>20121208T173812,45+09</datetime></modified>
-<revised><datetime>20121208T173812,44+09</datetime></revised>
-<lastaccessed><datetime>20121208T173812,45+09</datetime></lastaccessed>
-<addedtofile><datetime>20121208T173812,43+09</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Atsushi 1 Ono/OU=Japan/O=IBM</name></updatedby>
-<wassignedby><name>CN=Atsushi 1 Ono/OU=Japan/O=IBM</name></wassignedby>
+<noteinfo noteid="1f2" sequence="2" unid="00855DBBF780C95F49257AE200349143">
+<created><datetime>20121228T183410,59+09</datetime></created>
+<modified><datetime>20121228T183410,62+09</datetime></modified>
+<revised><datetime>20121228T183410,61+09</datetime></revised>
+<lastaccessed><datetime>20121228T183410,62+09</datetime></lastaccessed>
+<addedtofile><datetime>20121228T183410,60+09</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Admin/O=Lotus</name></updatedby>
+<wassignedby><name>CN=Admin/O=Lotus</name></wassignedby>
 <item name="$Flags"><text>gC~4K2</text></item>
 <item name="$TITLE"><text>test.properties</text></item>
 

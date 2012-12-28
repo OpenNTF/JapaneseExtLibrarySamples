@@ -4,12 +4,11 @@
  maintenanceversion='3.0' replicaid='80257980003A8C3F'>
 <noteinfo noteid='11a' unid='62542FCAEC8F492480257980003A8C4A' sequence='17'>
 <created><datetime>20120109T103930,02+00</datetime></created>
-<modified><datetime>20121208T173811,56+09</datetime></modified>
-<revised><datetime>20121208T173811,55+09</datetime></revised>
-<lastaccessed><datetime>20121208T173811,56+09</datetime></lastaccessed>
+<modified><datetime>20121228T183408,71+09</datetime></modified>
+<revised><datetime>20121228T183408,70+09</datetime></revised>
+<lastaccessed><datetime>20121228T183408,71+09</datetime></lastaccessed>
 <addedtofile><datetime>20120109T103930,05+00</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Andrejus Chaliapinas/OU=Ireland/O=IBM</name><name>CN=Atsushi 1 Ono/OU=Japan/O=IBM</name></updatedby>
-<wassignedby><name>CN=Andrejus Chaliapinas/OU=Ireland/O=IBM</name></wassignedby>
+<updatedby><name>CN=Andrejus Chaliapinas/OU=Ireland/O=IBM</name><name>CN=Admin/O=Lotus</name></updatedby>
 <item name='IconBitmap' summary='true'>
 <rawitemdata type='6'>
 AiAgAQAA///////wD///gAH//gAAf/wAAD/4AAAf8AAAD+AAAAfgAAAHwAAAA8AAAAPAAAADgAAA
