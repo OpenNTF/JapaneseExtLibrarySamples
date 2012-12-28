@@ -2,14 +2,13 @@
 <!DOCTYPE note SYSTEM 'xmlschemas/domino_8_5_3.dtd'>
 <note class='form' xmlns='http://www.lotus.com/dxl' version='8.5' maintenanceversion='3.0'
  replicaid='80257A9F004BC20A'>
-<noteinfo noteid='342' unid='D010E58DE21278AF852578EA0050645C' sequence='3'>
+<noteinfo noteid='342' unid='D010E58DE21278AF852578EA0050645C' sequence='5'>
 <created><datetime dst='true'>20110812T103805,72-04</datetime></created>
-<modified><datetime>20121114T230653,91+09</datetime></modified>
-<revised><datetime>20121114T230653,90+09</datetime></revised>
-<lastaccessed><datetime>20121114T230653,91+09</datetime></lastaccessed>
+<modified><datetime>20121218T134857,55+00</datetime></modified>
+<revised><datetime>20121218T134857,54+00</datetime></revised>
+<lastaccessed><datetime>20121218T134857,55+00</datetime></lastaccessed>
 <addedtofile><datetime dst='true'>20121022T144748,39+01</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Andrejus Chaliapinas/OU=Ireland/O=IBM</name><name>CN=Atsushi 1 Ono/OU=Japan/O=IBM</name></updatedby>
-<wassignedby><name>CN=Atsushi 1 Ono/OU=Japan/O=IBM</name></wassignedby>
+<updatedby><name>CN=admin/O=acme</name><name>CN=a admin/O=ibm</name></updatedby>
 <item name='$HTMLCode' sign='true'>
 <rawitemdata type='1'>
 X/8QAAIADwAHAAAAAAAAAA==

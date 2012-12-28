@@ -97,7 +97,7 @@ public class SampleDataUtil {
 	}
 
 	// Read a file from a resource in the NSF
-	@SuppressWarnings("égópÇ≥ÇÍÇƒÇ¢Ç‹ÇπÇÒ")
+	@SuppressWarnings("unused")
 	private  static void readFromFileResource(String resourceName, List<String> entries, boolean capitalize) throws IOException {
 		if(TRACE) {System.out.println("ì«Ç›çûÇ›íÜ: "+resourceName);}
 		InputStream is = FacesContext.getCurrentInstance().getExternalContext().getResourceAsStream(resourceName);

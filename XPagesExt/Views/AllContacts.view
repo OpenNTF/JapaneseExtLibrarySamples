@@ -2,14 +2,13 @@
 <!DOCTYPE note SYSTEM 'xmlschemas/domino_8_5_3.dtd'>
 <note class='view' xmlns='http://www.lotus.com/dxl' version='8.5' maintenanceversion='3.0'
  replicaid='80257A9F004BC20A'>
-<noteinfo noteid='28a' unid='CD40A953ABDE036A8525786500660C27' sequence='3'>
-<created><datetime dst='true'>20110401T143437,83-04</datetime></created>
-<modified><datetime>20121114T230653,09+09</datetime></modified>
-<revised><datetime>20121114T230653,08+09</datetime></revised>
-<lastaccessed><datetime>20121114T230653,09+09</datetime></lastaccessed>
+<noteinfo noteid='28a' unid='CD40A953ABDE036A8525786500660C27' sequence='5'>
+<created><datetime>20110401T133437,83-05</datetime></created>
+<modified><datetime>20121218T134856,77+00</datetime></modified>
+<revised><datetime>20121218T134856,76+00</datetime></revised>
+<lastaccessed><datetime>20121218T134856,77+00</datetime></lastaccessed>
 <addedtofile><datetime dst='true'>20121022T144742,65+01</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Andrejus Chaliapinas/OU=Ireland/O=IBM</name><name>CN=Atsushi 1 Ono/OU=Japan/O=IBM</name></updatedby>
-<wassignedby><name>CN=Atsushi 1 Ono/OU=Japan/O=IBM</name></wassignedby>
+<updatedby><name>CN=admin/O=acme</name><name>CN=a admin/O=ibm</name></updatedby>
 <item name='$FormulaClass' sign='true'><text>1</text></item>
 <item name='$TITLE' sign='true'><text>AllContacts</text></item>
 <item name='$Index' sign='true'><text/></item>

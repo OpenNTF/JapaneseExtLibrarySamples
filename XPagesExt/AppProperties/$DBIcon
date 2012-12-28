@@ -2,14 +2,13 @@
 <!DOCTYPE note SYSTEM 'xmlschemas/domino_8_5_3.dtd'>
 <note class='form' xmlns='http://www.lotus.com/dxl' version='8.5' maintenanceversion='3.0'
  replicaid='80257A9F004BC20A'>
-<noteinfo noteid='3d2' unid='B76AEA0D6568DA0780257925007A083C' sequence='3'>
+<noteinfo noteid='3d2' unid='B76AEA0D6568DA0780257925007A083C' sequence='5'>
 <created><datetime dst='true'>20111010T231255,00+01</datetime></created>
-<modified><datetime>20121114T230654,45+09</datetime></modified>
-<revised><datetime>20121114T230654,44+09</datetime></revised>
-<lastaccessed><datetime>20121114T230654,45+09</datetime></lastaccessed>
+<modified><datetime>20121218T134900,35+00</datetime></modified>
+<revised><datetime>20121218T134900,34+00</datetime></revised>
+<lastaccessed><datetime>20121218T134900,35+00</datetime></lastaccessed>
 <addedtofile><datetime dst='true'>20121022T144753,82+01</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Andrejus Chaliapinas/OU=Ireland/O=IBM</name><name>CN=Atsushi 1 Ono/OU=Japan/O=IBM</name></updatedby>
-<wassignedby><name>CN=Atsushi 1 Ono/OU=Japan/O=IBM</name></wassignedby>
+<updatedby><name>CN=admin/O=acme</name><name>CN=a admin/O=ibm</name></updatedby>
 <item name='$TITLE'><text>$DBIcon</text></item>
 <item name='$Flags'><text>34Ci~Q</text></item>
 <item name='$ImagesWide' sign='true'><number>1</number></item>

@@ -47,7 +47,6 @@
 				</xe:formRow>
 				<xe:formRow id="formRow3" label="Abstract:">
 					<xe:djTextarea id="abstract" required="true"
-						disableClientSideValidation="true"
 						value="#{document1.Abstract}">
 					<xp:this.validators>
 						<xp:validateRequired
