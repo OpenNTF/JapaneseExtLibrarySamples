@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="3.0" replicaid="80257A15003960C3" version="8.5" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="472" sequence="2" unid="D819644D01CC183349257B0B003D8F8A">
+<created><datetime>20130207T201224,42+09</datetime></created>
+<modified><datetime>20130207T201224,85+09</datetime></modified>
+<revised><datetime>20130207T201224,84+09</datetime></revised>
+<lastaccessed><datetime>20130207T201224,85+09</datetime></lastaccessed>
+<addedtofile><datetime>20130207T201224,83+09</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Admin/O=Lotus</name></updatedby>
+<wassignedby><name>CN=Admin/O=Lotus</name></wassignedby>
+<item name="$Flags"><text>gC~4K2</text></item>
+<item name="$TITLE"><text>ConnectionsCommunitiesVCard.properties</text></item>
+
+
+<item name="$FileNames" sign="true"><text>ConnectionsCommunitiesVCard.properties</text></item></note>

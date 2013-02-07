@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="3.0" replicaid="80257A15003960C3" version="8.5" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="2e6" sequence="6" unid="654CF003F993FD6880257A15003968E1">
+<created><datetime dst="true">20120606T112704,01+01</datetime></created>
+<modified><datetime dst="true">20121025T150030,58+01</datetime></modified>
+<revised><datetime dst="true">20121025T150030,57+01</datetime></revised>
+<lastaccessed><datetime dst="true">20121025T150030,58+01</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20120606T112704,02+01</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=admin/O=acme</name></updatedby>
+<item name="$Flags"><text>34567Cg~[</text></item>
+<item name="$TITLE"><text>META-INF/services/com.ibm.xsp.extlib.social.IdentityProvider</text></item>
+<item name="$DesignerVersion"><text>8.5.3</text></item>
+
+
+<item name="$FileNames" sign="true"><text>META-INF/services/com.ibm.xsp.extlib.social.IdentityProvider</text></item></note>

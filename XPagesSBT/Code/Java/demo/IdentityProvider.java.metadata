@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="3.0" replicaid="80257A15003960C3" version="8.5" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="2e2" sequence="19" unid="658A1C25C8A69D2980257A15003968D8">
+<created><datetime dst="true">20120606T112703,92+01</datetime></created>
+<modified><datetime>20130207T201921,27+09</datetime></modified>
+<revised><datetime>20130207T201921,26+09</datetime></revised>
+<lastaccessed><datetime>20130207T201921,27+09</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20120606T112703,92+01</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=admin/O=acme</name><name>CN=Admin/O=Lotus</name></updatedby>
+<wassignedby><name>CN=Admin/O=Lotus</name></wassignedby>
+<item name="$Flags"><text>34567Cg~[</text></item>
+<item name="$TITLE"><text>demo/IdentityProvider.java</text></item>
+<item name="$DesignerVersion"><text>8.5.3</text></item>
+
+
+<item name="$FileNames" sign="true"><text>demo/IdentityProvider.java</text></item>
+
+
+</note>

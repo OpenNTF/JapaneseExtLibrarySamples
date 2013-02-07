@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="3.0" replicaid="80257A15003960C3" version="8.5" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="42a" sequence="2" unid="922F4620426C45B049257B0B003D8F50">
+<created><datetime>20130207T201223,84+09</datetime></created>
+<modified><datetime>20130207T201224,12+09</datetime></modified>
+<revised><datetime>20130207T201224,11+09</datetime></revised>
+<lastaccessed><datetime>20130207T201224,12+09</datetime></lastaccessed>
+<addedtofile><datetime>20130207T201224,10+09</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Admin/O=Lotus</name></updatedby>
+<wassignedby><name>CN=Admin/O=Lotus</name></wassignedby>
+<item name="$Flags"><text>gC~4K2</text></item>
+<item name="$TITLE"><text>SametimeWidgets.properties</text></item>
+
+
+<item name="$FileNames" sign="true"><text>SametimeWidgets.properties</text></item></note>

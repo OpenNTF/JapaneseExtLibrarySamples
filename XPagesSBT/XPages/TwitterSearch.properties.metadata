@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="3.0" replicaid="80257A15003960C3" version="8.5" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="4f2" sequence="2" unid="D48AA69268C1829B49257B0B003D8FD8">
+<created><datetime>20130207T201225,20+09</datetime></created>
+<modified><datetime>20130207T201226,13+09</datetime></modified>
+<revised><datetime>20130207T201226,12+09</datetime></revised>
+<lastaccessed><datetime>20130207T201226,13+09</datetime></lastaccessed>
+<addedtofile><datetime>20130207T201226,11+09</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Admin/O=Lotus</name></updatedby>
+<wassignedby><name>CN=Admin/O=Lotus</name></wassignedby>
+<item name="$Flags"><text>gC~4K2</text></item>
+<item name="$TITLE"><text>TwitterSearch.properties</text></item>
+
+
+<item name="$FileNames" sign="true"><text>TwitterSearch.properties</text></item></note>

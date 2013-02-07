@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="3.0" replicaid="80257A15003960C3" version="8.5" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="1d2" sequence="12" unid="A41053EA445C31FB80257A150039660C">
+<created><datetime dst="true">20120606T112656,76+01</datetime></created>
+<modified><datetime>20130207T201230,76+09</datetime></modified>
+<revised><datetime>20130207T201230,75+09</datetime></revised>
+<lastaccessed><datetime>20130207T201230,76+09</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20120606T112656,76+01</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=admin/O=acme</name><name>CN=Admin/O=Lotus</name></updatedby>
+<wassignedby><name>CN=Admin/O=Lotus</name></wassignedby>
+<item name="$Flags"><text>gC~4K</text></item>
+<item name="$TITLE"><text>FacebookClientAPI.xsp</text></item>
+
+
+<item name="$FileNames" sign="true"><text>FacebookClientAPI.xsp</text></item>
+
+<item name="$DesignerVersion"><text>8.5.1</text></item>
+
+
+
+</note>

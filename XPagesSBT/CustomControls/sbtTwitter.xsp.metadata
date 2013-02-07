@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="3.0" replicaid="80257A15003960C3" version="8.5" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="272" sequence="14" unid="3B443B79D53E637D80257A1500396775">
+<created><datetime dst="true">20120606T112700,37+01</datetime></created>
+<modified><datetime>20130207T201229,43+09</datetime></modified>
+<revised><datetime>20130207T201229,42+09</datetime></revised>
+<lastaccessed><datetime>20130207T201229,43+09</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20120606T112700,38+01</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=admin/O=acme</name><name>CN=Admin/O=Lotus</name></updatedby>
+<wassignedby><name>CN=Admin/O=Lotus</name></wassignedby>
+<item name="$Flags"><text>gC~4;</text></item>
+<item name="$TITLE"><text>sbtTwitter.xsp</text></item>
+
+
+
+
+<item name="$FileNames" sign="true"><text>sbtTwitter.xsp</text></item>
+
+<item name="$DesignerVersion"><text>8.5.1</text></item>
+
+
+
+</note>
