@@ -7,7 +7,7 @@ XPages Extension Library サンプル NSF 日本語翻訳プロジェクト
 詳細については OpenNTF の [XPages Extension Library Japan Project のページ](http://www.openntf.org/internal/home.nsf/project.xsp?action=openDocument&name=XPages%20Extension%20Library%20Japan) をご覧ください。
 
 ・XPages Extension Library Demo (XPagesExt.nsf)
-  XPages Extension Library が提供している機能を試すことができます。
+	XPages Extension Library が提供している機能を試すことができます。
 ・XPages JDBC Demo (XPagesJDBC.nsf)
 	XPages から JDBC によってリレーショナルデータベースにアクセスします。
 ・XPages Social Enabler Demo (XPagesSBT.nsf)
