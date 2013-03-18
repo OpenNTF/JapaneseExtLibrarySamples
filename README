@@ -1,26 +1,26 @@
-XPages Extension Library ƒTƒ“ƒvƒ‹ NSF “ú–{Œê–|–óƒvƒƒWƒFƒNƒg
-====================================================
+XPages Extension Library ã‚µãƒ³ãƒ—ãƒ« NSF æ—¥æœ¬èªç¿»è¨³ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆ
+============================================================
 
-“à—e
+å†…å®¹
 ----
-‚±‚ÌƒvƒƒWƒFƒNƒg‚Í AXPages Extension Library Japan Project ‚ÌˆêŠÂ‚Æ‚µ‚ÄA XPages Extension Library ‚Ìƒ‚ƒWƒ…[ƒ‹‚ÉŠÜ‚Ü‚ê‚Ä‚¢‚éˆÈ‰º‚ÌƒTƒ“ƒvƒ‹ NSF ‚ğ–|–ó‚µ‚Ä‚¢‚Ü‚·B
-Ú×‚É‚Â‚¢‚Ä‚Í OpenNTF ‚Ì [XPages Extension Library Japan Project ‚Ìƒy[ƒW](http://www.openntf.org/internal/home.nsf/project.xsp?action=openDocument&name=XPages%20Extension%20Library%20Japan) ‚ğ‚²——‚­‚¾‚³‚¢B
+ã“ã®ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã¯ ã€XPages Extension Library Japan Project ã®ä¸€ç’°ã¨ã—ã¦ã€ XPages Extension Library ã®ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ã«å«ã¾ã‚Œã¦ã„ã‚‹ä»¥ä¸‹ã®ã‚µãƒ³ãƒ—ãƒ« NSF ã‚’ç¿»è¨³ã—ã¦ã„ã¾ã™ã€‚
+è©³ç´°ã«ã¤ã„ã¦ã¯ OpenNTF ã® [XPages Extension Library Japan Project ã®ãƒšãƒ¼ã‚¸](http://www.openntf.org/internal/home.nsf/project.xsp?action=openDocument&name=XPages%20Extension%20Library%20Japan) ã‚’ã”è¦§ãã ã•ã„ã€‚
 
-EXPages Extension Library Demo (XPagesExt.nsf)
-	XPages Extension Library ‚ª’ñ‹Ÿ‚µ‚Ä‚¢‚é‹@”\‚ğ‚·‚±‚Æ‚ª‚Å‚«‚Ü‚·B
-EXPages JDBC Demo (XPagesJDBC.nsf)
-	XPages ‚©‚ç JDBC ‚É‚æ‚Á‚ÄƒŠƒŒ[ƒVƒ‡ƒiƒ‹ƒf[ƒ^ƒx[ƒX‚ÉƒAƒNƒZƒX‚µ‚Ü‚·B
-EXPages Social Enabler Demo (XPagesSBT.nsf)
-	XPages ‚©‚çƒNƒ‰ƒEƒhƒT[ƒrƒX‚âƒ\[ƒVƒƒƒ‹ƒlƒbƒgƒ[ƒNƒT[ƒrƒX‚ÉƒAƒNƒZƒX‚µ‚Ü‚·B
-	ƒŠƒŠ[ƒX“_‚Å‚ÍˆÈ‰º‚ÌƒT[ƒrƒX‚Ö‚ÌÚ‘±‚ğŠm”F‚µ‚Ä‚¢‚Ü‚·B
-	EIBM Sametime ‚Æ IBM Connections (Lotus Greenhouse)
-	ELotusLive (IBM SmarterCloud) ¥¥¥ —˜—p‚É‚ ‚½‚è‘gDŠÇ—Ò‚ÌŒ ŒÀ‚ª•K—v
-	EDropbox
-	ETwitter
-	EGeneric Services (Stackoverflow ‚Æ Redmine)
-	EUtilities (User Bean, @Functions, JSON DataNavigator) 
+- XPages Extension Library Demo (XPagesExt.nsf)
+  XPages Extension Library ãŒæä¾›ã—ã¦ã„ã‚‹æ©Ÿèƒ½ã‚’è©¦ã™ã“ã¨ãŒã§ãã¾ã™ã€‚
+- XPages JDBC Demo (XPagesJDBC.nsf)
+  XPages ã‹ã‚‰ JDBC ã«ã‚ˆã£ã¦ãƒªãƒ¬ãƒ¼ã‚·ãƒ§ãƒŠãƒ«ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ã«ã‚¢ã‚¯ã‚»ã‚¹ã—ã¾ã™ã€‚
+- XPages Social Enabler Demo (XPagesSBT.nsf)
+  XPages ã‹ã‚‰ã‚¯ãƒ©ã‚¦ãƒ‰ã‚µãƒ¼ãƒ“ã‚¹ã‚„ã‚½ãƒ¼ã‚·ãƒ£ãƒ«ãƒãƒƒãƒˆãƒ¯ãƒ¼ã‚¯ã‚µãƒ¼ãƒ“ã‚¹ã«ã‚¢ã‚¯ã‚»ã‚¹ã—ã¾ã™ã€‚
+  ãƒªãƒªãƒ¼ã‚¹æ™‚ç‚¹ã§ã¯ä»¥ä¸‹ã®ã‚µãƒ¼ãƒ“ã‚¹ã¸ã®æ¥ç¶šã‚’ç¢ºèªã—ã¦ã„ã¾ã™ã€‚
+  - IBM Sametime ã¨ IBM Connections (Lotus Greenhouse)
+  - LotusLive (IBM SmarterCloud) ï½¥ï½¥ï½¥ åˆ©ç”¨ã«ã‚ãŸã‚Šçµ„ç¹”ç®¡ç†è€…ã®æ¨©é™ãŒå¿…è¦
+  - Dropbox
+  - Twitter
+  - Generic Services (Stackoverflow ã¨ Redmine)
+  - Utilities (User Bean, @Functions, JSON DataNavigator) 
 
-Œ»İAƒx[ƒX‚Æ‚µ‚Ä‚¢‚é XPages Extension Library ƒ‚ƒWƒ…[ƒ‹‚Ìƒo[ƒWƒ‡ƒ“‚ÍA[853.20121217-1354](http://www.openntf.org/internal/home.nsf/release.xsp?documentId=2C31F7B202B31DCA86257ADA0054AED0&action=openDocument) ‚Å‚·B
+ç¾åœ¨ã€ãƒ™ãƒ¼ã‚¹ã¨ã—ã¦ã„ã‚‹ XPages Extension Library ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ã®ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã¯ã€[853.20121217-1354](http://www.openntf.org/internal/home.nsf/release.xsp?documentId=2C31F7B202B31DCA86257ADA0054AED0&action=openDocument) ã§ã™ã€‚
 
 
 Content
@@ -28,26 +28,27 @@ Content
 This project aims to localize the following sample NSF applications in XPages Extension Library module as one of activities in XPages Extension Library Japan project. 
 For more details, please see [XPages Extension Library Japan Project page](http://www.openntf.org/internal/home.nsf/project.xsp?action=openDocument&name=XPages%20Extension%20Library%20Japan) on OpenNTF.org.
 
-* XPages Extension Library Demo (XPagesExt.nsf)
-	You can try the functions of XPages Extension Library with this application.
-* XPages JDBC Demo (XPagesJDBC.nsf)
-	You can access a Relational Database via JDBC from this XPages application.
-* XPages Social Enabler Demo (XPagesSBT.nsf)
-	You can access Cloud Services and Social Network Services from this XPages application.
-	Conductivities to the following services was verified on this release.
-	- IBM Sametime ‚Æ IBM Connections (Lotus Greenhouse)
-	- LotusLive (IBM SmarterCloud) ... Administrator role for your organization is required.
-	- Dropbox
-	- Twitter
-	- Generic Services (Stackoverflow ‚Æ Redmine)
-	- Utilities (User Bean, @Functions, JSON DataNavigator) 
+- XPages Extension Library Demo (XPagesExt.nsf)
+  You can try the functions of XPages Extension Library with this application.
+- XPages JDBC Demo (XPagesJDBC.nsf)
+  You can access a Relational Database via JDBC from this XPages application.
+- XPages Social Enabler Demo (XPagesSBT.nsf)
+  You can access Cloud Services and Social Network Services from this XPages application.
+  Conductivities to the following services was verified on this release.
+  - IBM Sametime and IBM Connections (Lotus Greenhouse)
+  - LotusLive (IBM SmarterCloud) ... Administrator role for your organization is required.
+  - Dropbox
+  - Twitter
+  - Generic Services (Stackoverflow and Redmine)
+  - Utilities (User Bean, @Functions, JSON DataNavigator) 
 
 Currently, it is based on the version [853.20121217-1354](http://www.openntf.org/internal/home.nsf/release.xsp?documentId=2C31F7B202B31DCA86257ADA0054AED0&action=openDocument) of XPages Extension Library module.
 
 
-OPENNTF
 
-    This project is an OpenNTF project, and is available under the Apache License V2.0.  
-    All other aspects of the project, including contributions, defect reports, discussions, 
-    feature requests and reviews are subject to the OpenNTF Terms of Use - available at 
-    http://openntf.org/Internal/home.nsf/dx/Terms_of_Use .
+OPENNTF
+-------
+This project is an OpenNTF project, and is available under the Apache License V2.0.
+All other aspects of the project, including contributions, defect reports, discussions,
+feature requests and reviews are subject to the OpenNTF Terms of Use - available at
+http://openntf.org/Internal/home.nsf/dx/Terms_of_Use .
