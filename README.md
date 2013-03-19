@@ -3,8 +3,12 @@ XPages Extension Library サンプル NSF 日本語翻訳プロジェクト
 
 内容
 ----
-このプロジェクトは 、XPages Extension Library Japan Project の一環として、 XPages Extension Library のモジュールに含まれている以下のサンプル NSF を翻訳しています。
+このプロジェクトは 、XPages Extension Library Japan Project の一環として、 XPages Extension Library のモジュールに含まれているサンプルアプリケーションの翻訳
+および OpenNTF.org で公開されている Demonstration Application for XPages の翻訳を行っています。
+
 詳細については OpenNTF の [XPages Extension Library Japan Project のページ](http://www.openntf.org/internal/home.nsf/project.xsp?action=openDocument&name=XPages%20Extension%20Library%20Japan) をご覧ください。
+
+現在翻訳を進めているアプリケーションは以下になります。
 
 * XPages Extension Library Demo (XPagesExt.nsf)
 
@@ -16,7 +20,7 @@ XPages Extension Library サンプル NSF 日本語翻訳プロジェクト
 
 * XPages Social Enabler Demo (XPagesSBT.nsf)
 
-  XPages からクラウドサービスやソーシャルネットワークサービスにアクセスします。<br>
+  XPages からクラウドサービスやソーシャルネットワークサービスにアクセスします。
   リリース時点では以下のサービスへの接続を確認しています。
 
   * IBM Sametime と IBM Connections (Lotus Greenhouse)

@@ -1,10 +1,9 @@
-XPages Extension Library サンプル NSF 日本語翻訳プロジェクト
+XPages Extension Library Japan プロジェクト
 ====================================================
 
 内容
 ----
-このプロジェクトは 、XPages Extension Library Japan Project の一環として、 XPages Extension Library のモジュールに含まれている以下のサンプル NSF を翻訳しています。
-詳細については OpenNTF の [XPages Extension Library Japan Project のページ](http://www.openntf.org/internal/home.nsf/project.xsp?action=openDocument&name=XPages%20Extension%20Library%20Japan) をご覧ください。
+XPages Extension Library Japan プロジェクト Beta 3 では、以下の翻訳済みサンプルアプリケーションを提供しています。
 
 ・XPages Extension Library Demo (XPagesExt.nsf)
 	XPages Extension Library が提供している機能を試すことができます。
@@ -25,8 +24,7 @@ XPages Extension Library サンプル NSF 日本語翻訳プロジェクト
 
 Content
 -------
-This project aims to localize the following sample NSF applications in XPages Extension Library module as one of activities in XPages Extension Library Japan project. 
-For more details, please see [XPages Extension Library Japan Project page](http://www.openntf.org/internal/home.nsf/project.xsp?action=openDocument&name=XPages%20Extension%20Library%20Japan) on OpenNTF.org.
+Beta 3 of Xpages Extension Library Japan Project release following translated sample applications.
 
 * XPages Extension Library Demo (XPagesExt.nsf)
 	You can try the functions of XPages Extension Library with this application.
