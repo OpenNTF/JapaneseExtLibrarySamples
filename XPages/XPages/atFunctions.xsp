@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf">
+
+	<XPa:ccLayout id="cc4cclayout">
+		<xp:this.facets>
+			<xp:panel xp:key="facetMain">
+
+				<xp:panel>
+					<xp:paragraph id="paragraph1">
+						<b>@Functions</b>
+						<xp:br />
+						@Functions in XPages emulate their counterparts
+						in Lotus Notes as follows:
+						<xp:br />
+						Names must be in the exact case.
+						<xp:br />
+						Parameters are separated by commas not
+						semicolons.
+
+
+					</xp:paragraph>
+				</xp:panel>
+
+
+			</xp:panel>
+			
+		</xp:this.facets>
+	</XPa:ccLayout>
+</xp:view>

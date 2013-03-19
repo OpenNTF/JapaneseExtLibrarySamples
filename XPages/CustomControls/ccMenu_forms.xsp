@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xe="http://www.ibm.com/xsp/coreex">
+
+	<xe:navigator id="navigator1" expandEffect="wipe" expandable="true"
+		keepState="true">
+		<xe:this.treeNodes>
+			<xe:basicContainerNode label="Convertors">
+				<xe:this.children>
+					<xe:pageTreeNode label="Number"
+						page="/convertorsNumbers.xsp" selection="/forms/cnumber/" />
+					<xe:pageTreeNode label="Date and Time"
+						page="/convertorsDatesTimes.xsp" selection="/forms/cdatetimes/" />
+					<xe:pageTreeNode label="Mask"
+						page="/convertorsPatterns.xsp" selection="/forms/cmask/" />
+
+				</xe:this.children>
+			</xe:basicContainerNode>
+			<xe:basicContainerNode label="Properties">
+				<xe:this.children>
+					<xe:pageTreeNode label="Accelerator Keys"
+						page="/propAccelerator.xsp" selection="/forms/paccelerator/" />
+					<xe:pageTreeNode label="Button Properties"
+						page="/propCoreButton.xsp" selection="/forms/pbuttonprop/" />
+					<xe:pageTreeNode label="Edit Box Properties"
+						page="/propCoreEditBox.xsp" selection="/forms/peditboxprop/" />
+					<xe:pageTreeNode label="Link Properties"
+						page="/propCoreLink.xsp" selection="/forms/plinkprop/" />
+					<xe:pageTreeNode label="List Box Properties"
+						page="/PropCoreListBox.xsp" selection="/forms/plistboxprop/" />
+					<xe:pageTreeNode
+						label="Multiline Edit Box Properties"
+						page="/propCoreMultiLineEditBox.xsp"
+						selection="/forms/pmeditboxprop/" />
+					<xe:pageTreeNode label="Tab Order"
+						page="/propTabOrder.xsp" selection="/forms/ptaborderprop/" />
+
+				</xe:this.children>
+			</xe:basicContainerNode>
+
+			<xe:pageTreeNode label="Validators"
+				page="/propValidatorsConvertors.xsp"
+				selection="/forms/validators/">
+			</xe:pageTreeNode>
+		</xe:this.treeNodes>
+	</xe:navigator></xp:view>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xe="http://www.ibm.com/xsp/coreex">
+
+	<xe:appPage id="CountryView" pageName="viewcountry">
+	
+		<xe:dataView id="dataView1" openDocAsReadonly="true"
+			collapsibleCategory="true" pageName="#doccity" rows="7">
+			<xp:this.facets>
+			<xp:panel xp:key="pagerBottom">
+	<xp:pager partialRefresh="true" id="pager2" >
+		<xp:pagerControl type="Previous" id="pagerControl1"></xp:pagerControl>
+		<xp:pagerControl type="Next" id="pagerControl2"></xp:pagerControl>
+	</xp:pager>
+	<xp:button value="Add Rows" id="button1"><xp:eventHandler event="onclick" submit="false">
+	<xp:this.script>
+		<xe:addRows for="dataView1" rowCount="5" state="true"></xe:addRows>
+	</xp:this.script></xp:eventHandler></xp:button>
+			</xp:panel>
+	</xp:this.facets>
+			<xe:this.data>
+				<xp:dominoView var="view1" viewName="xspCountryCityView03"
+					expandLevel="1"></xp:dominoView>
+			</xe:this.data>
+			<xe:this.summaryColumn>
+				<xe:viewSummaryColumn columnName="City"></xe:viewSummaryColumn>
+			</xe:this.summaryColumn>
+			<xe:this.categoryColumn>
+				<xe:viewCategoryColumn columnName="Country"></xe:viewCategoryColumn>
+			</xe:this.categoryColumn>
+		</xe:dataView>
+		<xe:djxmHeading id="djxmHeading1" back="Home" moveTo="home"
+			label="Country City">
+		</xe:djxmHeading>
+	</xe:appPage>
+	<xe:appPage id="CityDocument" pageName="doccity"
+		resetContent="true">
+		<xp:panel>
+			<xp:this.data>
+				<xp:dominoDocument var="document1"
+					formName="xspCountryCity">
+				</xp:dominoDocument>
+			</xp:this.data>
+			<xe:formTable id="formTable1">
+				<xe:formRow id="formRow1">
+					<xp:inputText id="inputText1" value="#{document1.City}"></xp:inputText></xe:formRow><xe:formRow id="formRow2">
+					<xp:inputRichText id="inputRichText1" value="#{document1.CityFacts}"></xp:inputRichText></xe:formRow>
+				</xe:formTable></xp:panel>
+		<xe:djxmHeading id="djxmHeading2" back="back"
+			moveTo="viewcountry" label="City">
+		</xe:djxmHeading>
+	</xe:appPage>
+</xp:view>

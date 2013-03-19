@@ -1,0 +1,923 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+
+	<xp:this.data>
+		<xp:dominoDocument var="document1" formName="xspMainTopic"></xp:dominoDocument>
+	</xp:this.data>
+	<xp:this.resources>
+		<xp:styleSheet href="/csscustom.css"></xp:styleSheet>
+	</xp:this.resources>
+	<XPa:ccLayout id="cc4cclayout" navPath="/views/catresviews/">
+		<xp:this.facets>
+			<xc:ccMenu_views xp:key="facetLeft"></xc:ccMenu_views>
+			<xp:panel xp:key="facetMain">
+				<xp:panel>
+					<xp:button value="New Document"
+						id="buttonCatResNewDocument" rendered="false">
+						<xp:eventHandler event="onclick" submit="true"
+							refreshMode="complete">
+							<xp:this.action>
+								<xp:openPage
+									name="/propCatResViewsParentDoc.xsp" target="newDocument">
+								</xp:openPage>
+							</xp:this.action>
+						</xp:eventHandler>
+					</xp:button>
+					<xp:button value="Delete Selected"
+						id="buttonCatResDeleteSelected" rendered="false">
+						<xp:eventHandler event="onclick" submit="true"
+							refreshMode="complete">
+							<xp:this.action>
+								<xp:deleteSelectedDocuments
+									view="viewPanel1"
+									message="This action will delete the selected documents?">
+								</xp:deleteSelectedDocuments>
+							</xp:this.action>
+						</xp:eventHandler>
+					</xp:button>
+					<xp:panel>
+						<xp:label value="Show view: " id="label1"></xp:label>
+						<xp:comboBox id="comboBoxCatResShowView01"
+							value="#{sessionScope.cres01}">
+							<xp:selectItem itemLabel="none"
+								itemValue="none">
+							</xp:selectItem>
+							<xp:selectItem itemLabel="Flat"
+								itemValue="shvw01">
+							</xp:selectItem>
+							<xp:selectItem
+								itemLabel="Flat with date categorized" itemValue="shvw02">
+							</xp:selectItem>
+							<xp:selectItem itemLabel="Date created"
+								itemValue="shvw03">
+							</xp:selectItem>
+							<xp:selectItem
+								itemLabel="1 column categorized" itemValue="shvw04">
+							</xp:selectItem>
+							<xp:selectItem
+								itemLabel="2 columns categorized" itemValue="shvw05">
+							</xp:selectItem>
+							<xp:selectItem
+								itemLabel="3 columns categorized" itemValue="shvw06">
+							</xp:selectItem>
+							<xp:selectItem
+								itemLabel="Date and 3 columns categorized" itemValue="shvw07">
+							</xp:selectItem>
+							<xp:selectItem
+								itemLabel="Replaced Not Categorized Text" itemValue="shvw08">
+							</xp:selectItem>
+							<xp:selectItem itemLabel="Totals"
+								itemValue="shvw09">
+							</xp:selectItem>
+							<xp:selectItem itemLabel="Totals Averages"
+								itemValue="shvw10">
+							</xp:selectItem>
+							<xp:selectItem
+								itemLabel="Totals Percentages" itemValue="shvw11">
+							</xp:selectItem>
+							<xp:selectItem itemLabel="Null value column"
+								itemValue="shvw12">
+							</xp:selectItem>
+							<xp:eventHandler event="onchange"
+								submit="true" refreshMode="complete" execMode="partial">
+							</xp:eventHandler>
+							<xp:selectItem itemLabel="Unread Marks"
+								itemValue="shvw13">
+							</xp:selectItem>
+						</xp:comboBox>
+						<xp:panel>
+
+
+
+							<xp:panel id="panel4FlatView">
+								<xp:this.rendered><![CDATA[#{javascript:sessionScope.cres01 == "shvw01"}]]></xp:this.rendered>
+								<xp:label value="Flat" id="label2"
+									style="font-weight:bold;color:rgb(128,64,0)">
+								</xp:label>
+								<xp:viewPanel rows="30"
+									id="viewPanel1">
+
+									<xp:this.data>
+										<xp:dominoView
+											var="xSPCategoryAndResponsesFlat"
+											viewName="XSP Category and Responses\Flat">
+										</xp:dominoView>
+									</xp:this.data>
+									<xp:viewColumn columnName="$116"
+										id="viewColumn1">
+										<xp:viewColumnHeader
+											value="Date" id="viewColumnHeader1">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+									<xp:viewColumn
+										columnName="Categories" id="viewColumn2">
+										<xp:viewColumnHeader
+											value="Categories" id="viewColumnHeader2">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+									<xp:viewColumn columnName="Fruit"
+										id="viewColumn3">
+										<xp:viewColumnHeader
+											value="Fruit" id="viewColumnHeader3">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+									<xp:viewColumn
+										columnName="Vegetables" id="viewColumn4">
+										<xp:viewColumnHeader
+											value="Vegetables" id="viewColumnHeader4">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+									<xp:viewColumn columnName="$118"
+										id="viewColumn5">
+										<xp:viewColumnHeader
+											value="$118" id="viewColumnHeader5">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+
+									<xp:viewColumn
+										columnName="SametimeInfo" id="viewColumn7">
+										<xp:viewColumnHeader
+											value="SametimeInfo" id="viewColumnHeader7">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+
+									<xp:viewColumn columnName="Topic"
+										id="viewColumn9">
+										<xp:viewColumnHeader
+											value="Topic" id="viewColumnHeader9">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+								</xp:viewPanel>
+							</xp:panel>
+							<xp:panel
+								id="panel4FlatViewwithdateCategorized">
+								<xp:this.rendered><![CDATA[#{javascript:sessionScope.cres01 == "shvw02"}]]></xp:this.rendered>
+								<xp:label
+									value="Flat with date categorized" id="label3"
+									style="font-weight:bold">
+								</xp:label>
+								<xp:viewPanel rows="30"
+									id="viewPanel2">
+
+									<xp:this.data>
+										<xp:dominoView
+											var="xSPCategoryAndResponsesFlatWithDateCategorised"
+											viewName="XSP Category and Responses\Flat with Date categorised">
+										</xp:dominoView>
+									</xp:this.data>
+									<xp:viewColumn columnName="$116"
+										id="viewColumn6">
+										<xp:viewColumnHeader
+											value="Date" id="viewColumnHeader6">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+									<xp:viewColumn
+										columnName="Categories" id="viewColumn8">
+										<xp:viewColumnHeader
+											value="Categories" id="viewColumnHeader8">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+									<xp:viewColumn columnName="Fruit"
+										id="viewColumn10">
+										<xp:viewColumnHeader
+											value="Fruit" id="viewColumnHeader10">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+									<xp:viewColumn
+										columnName="Vegetables" id="viewColumn11">
+										<xp:viewColumnHeader
+											value="Vegetables" id="viewColumnHeader11">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+									<xp:viewColumn columnName="$118"
+										id="viewColumn12">
+										<xp:viewColumnHeader
+											value="$118" id="viewColumnHeader12">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+									<xp:viewColumn
+										columnName="SametimeInfo" id="viewColumn13">
+										<xp:viewColumnHeader
+											value="SametimeInfo" id="viewColumnHeader13">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+									<xp:viewColumn columnName="Topic"
+										id="viewColumn14">
+										<xp:viewColumnHeader
+											value="Topic" id="viewColumnHeader14">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+								</xp:viewPanel>
+							</xp:panel>
+							<xp:panel id="panel4DateCreatedView">
+								<xp:this.rendered><![CDATA[#{javascript:sessionScope.cres01 == "shvw03"}]]></xp:this.rendered>
+								<xp:label value="Date Created"
+									id="label4" style="font-weight:bold">
+								</xp:label>
+								<xp:viewPanel rows="30"
+									id="viewPanel3">
+
+									<xp:this.data>
+										<xp:dominoView
+											var="xSPCategoryAndResponsesDateCreated"
+											viewName="XSP Category and Responses\Date Created">
+										</xp:dominoView>
+									</xp:this.data>
+									<xp:viewColumn columnName="$116"
+										id="viewColumn15">
+										<xp:viewColumnHeader
+											value="Date" id="viewColumnHeader15">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+									<xp:viewColumn
+										columnName="Categories" id="viewColumn16">
+										<xp:viewColumnHeader
+											value="Categories" id="viewColumnHeader16">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+									<xp:viewColumn columnName="Fruit"
+										id="viewColumn17">
+										<xp:viewColumnHeader
+											value="Fruit" id="viewColumnHeader17">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+									<xp:viewColumn
+										columnName="Vegetables" id="viewColumn18">
+										<xp:viewColumnHeader
+											value="Vegetables" id="viewColumnHeader18">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+									<xp:viewColumn columnName="$118"
+										id="viewColumn19">
+										<xp:viewColumnHeader
+											value="$118" id="viewColumnHeader19">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+									<xp:viewColumn
+										columnName="SametimeInfo" id="viewColumn20">
+										<xp:viewColumnHeader
+											value="SametimeInfo" id="viewColumnHeader20">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+									<xp:viewColumn columnName="Topic"
+										id="viewColumn21" indentResponses="true">
+										<xp:viewColumnHeader
+											value="Topic" id="viewColumnHeader21">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+								</xp:viewPanel>
+							</xp:panel>
+							<xp:panel id="panel41ColumnCat">
+								<xp:this.rendered><![CDATA[#{javascript:sessionScope.cres01 == "shvw04"}]]></xp:this.rendered>
+								<xp:label value="1 column catecorized"
+									id="label5" style="font-weight:bold">
+								</xp:label>
+								<xp:viewPanel rows="100"
+									id="viewPanel4">
+
+									<xp:this.data>
+										<xp:dominoView
+											var="xSPCategoryAndResponses1Category"
+											viewName="XSP Category and Responses\1 Category">
+										</xp:dominoView>
+									</xp:this.data>
+									<xp:viewColumn
+										columnName="Categories" id="viewColumn22">
+										<xp:viewColumnHeader
+											value="Categories" id="viewColumnHeader22">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+									<xp:viewColumn columnName="Fruit"
+										id="viewColumn23">
+										<xp:viewColumnHeader
+											value="Fruit" id="viewColumnHeader23">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+									<xp:viewColumn
+										columnName="Vegetables" id="viewColumn24">
+										<xp:viewColumnHeader
+											value="Vegetables" id="viewColumnHeader24">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+									<xp:viewColumn columnName="$118"
+										id="viewColumn25">
+										<xp:viewColumnHeader
+											value="$118" id="viewColumnHeader25">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+									<xp:viewColumn
+										columnName="SametimeInfo" id="viewColumn26">
+										<xp:viewColumnHeader
+											value="SametimeInfo" id="viewColumnHeader26">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+									<xp:viewColumn id="viewColumn27"
+										columnName="Topic" indentResponses="true">
+										<xp:viewColumnHeader
+											id="viewColumnHeader27" value="Topic">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+								</xp:viewPanel>
+
+							</xp:panel>
+							<xp:panel id="panel42ColumnCat">
+								<xp:this.rendered><![CDATA[#{javascript:sessionScope.cres01 == "shvw05"}]]></xp:this.rendered>
+								<xp:label value="2 columns catecorized"
+									id="label6" style="font-weight:bold">
+								</xp:label>
+								<xp:viewPanel rows="100"
+									id="viewPanel5">
+
+									<xp:this.data>
+										<xp:dominoView
+											var="xSPCategoryAndResponses2Categories"
+											viewName="XSP Category and Responses\2 Categories">
+										</xp:dominoView>
+									</xp:this.data>
+									<xp:viewColumn
+										columnName="Categories" id="viewColumn28">
+										<xp:viewColumnHeader
+											value="Categories" id="viewColumnHeader28">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+									<xp:viewColumn columnName="Fruit"
+										id="viewColumn29">
+										<xp:viewColumnHeader
+											value="Fruit" id="viewColumnHeader29">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+									<xp:viewColumn
+										columnName="Vegetables" id="viewColumn30">
+										<xp:viewColumnHeader
+											value="Vegetables" id="viewColumnHeader30">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+									<xp:viewColumn columnName="$118"
+										id="viewColumn31">
+										<xp:viewColumnHeader
+											value="$118" id="viewColumnHeader31">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+									<xp:viewColumn
+										columnName="SametimeInfo" id="viewColumn32">
+										<xp:viewColumnHeader
+											value="SametimeInfo" id="viewColumnHeader32">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+									<xp:viewColumn columnName="Topic"
+										id="viewColumn33" indentResponses="true">
+										<xp:viewColumnHeader
+											value="Topic" id="viewColumnHeader33">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+								</xp:viewPanel>
+
+							</xp:panel>
+							<xp:panel id="panel43ColumnCat">
+								<xp:this.rendered><![CDATA[#{javascript:sessionScope.cres01 == "shvw06"}]]></xp:this.rendered>
+								<xp:label value="3 columns catecorized"
+									id="label7" style="font-weight:bold">
+								</xp:label>
+								<xp:viewPanel rows="100"
+									id="viewPanel6">
+
+									<xp:this.data>
+										<xp:dominoView
+											var="xSPCategoryAndResponses3Categories"
+											viewName="XSP Category and Responses\3 Categories">
+										</xp:dominoView>
+									</xp:this.data>
+									<xp:viewColumn
+										columnName="Categories" id="viewColumn34">
+										<xp:viewColumnHeader
+											value="Categories" id="viewColumnHeader34">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+									<xp:viewColumn columnName="Fruit"
+										id="viewColumn35">
+										<xp:viewColumnHeader
+											value="Fruit" id="viewColumnHeader35">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+									<xp:viewColumn
+										columnName="Vegetables" id="viewColumn36">
+										<xp:viewColumnHeader
+											value="Vegetables" id="viewColumnHeader36">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+									<xp:viewColumn columnName="$118"
+										id="viewColumn37">
+										<xp:viewColumnHeader
+											value="$118" id="viewColumnHeader37">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+									<xp:viewColumn
+										columnName="SametimeInfo" id="viewColumn38">
+										<xp:viewColumnHeader
+											value="SametimeInfo" id="viewColumnHeader38">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+									<xp:viewColumn columnName="Topic"
+										id="viewColumn39" indentResponses="true">
+										<xp:viewColumnHeader
+											value="Topic" id="viewColumnHeader39">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+								</xp:viewPanel>
+
+							</xp:panel>
+							<xp:panel id="panel4Date3ColCat">
+								<xp:this.rendered><![CDATA[#{javascript:sessionScope.cres01 == "shvw07"}]]></xp:this.rendered>
+								<xp:label
+									value="Date and 3 columns catecorized" id="label8"
+									style="font-weight:bold">
+								</xp:label>
+								<xp:viewPanel rows="30"
+									id="viewPanel7">
+
+									<xp:this.data>
+										<xp:dominoView
+											var="xSPCategoryAndResponses3CategoriesWithDate"
+											viewName="XSP Category and Responses\3 Categories with Date">
+										</xp:dominoView>
+									</xp:this.data>
+									<xp:viewColumn columnName="$116"
+										id="viewColumn40">
+										<xp:viewColumnHeader
+											value="Date" id="viewColumnHeader40">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+									<xp:viewColumn id="viewColumn41"
+										columnName="Categories">
+										<xp:viewColumnHeader
+											id="viewColumnHeader41" value="Categories">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+									<xp:viewColumn columnName="Fruit"
+										id="viewColumn42">
+										<xp:viewColumnHeader
+											value="Fruit" id="viewColumnHeader42">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+									<xp:viewColumn
+										columnName="Vegetables" id="viewColumn43">
+										<xp:viewColumnHeader
+											value="Vegetables" id="viewColumnHeader43">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+									<xp:viewColumn columnName="$118"
+										id="viewColumn44">
+										<xp:viewColumnHeader
+											value="$118" id="viewColumnHeader44">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+									<xp:viewColumn
+										columnName="SametimeInfo" id="viewColumn45">
+										<xp:viewColumnHeader
+											value="SametimeInfo" id="viewColumnHeader45">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+									<xp:viewColumn columnName="Topic"
+										id="viewColumn46" indentResponses="true">
+										<xp:viewColumnHeader
+											value="Topic" id="viewColumnHeader46">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+								</xp:viewPanel>
+
+							</xp:panel>
+							<xp:panel id="panel4NotCatText">
+								<xp:this.rendered><![CDATA[#{javascript:sessionScope.cres01 == "shvw08"}]]></xp:this.rendered>
+								<xp:label
+									value="Replaced Not Categorized Text" id="label9"
+									style="font-weight:bold">
+								</xp:label>
+								<xp:viewPanel rows="30"
+									id="viewPanel8">
+
+									<xp:this.data>
+										<xp:dominoView
+											var="xSPCategoryAndResponsesReplacedNotCategorizedText"
+											viewName="XSP Category and Responses\Replaced Not Categorized Text">
+										</xp:dominoView>
+									</xp:this.data>
+									<xp:viewColumn columnName="$116"
+										id="viewColumn47">
+										<xp:viewColumnHeader
+											value="Date" id="viewColumnHeader47">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+									<xp:viewColumn columnName="$119"
+										id="viewColumn48">
+										<xp:viewColumnHeader
+											value="$119" id="viewColumnHeader48">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+									<xp:viewColumn columnName="$120"
+										id="viewColumn49">
+										<xp:viewColumnHeader
+											value="$120" id="viewColumnHeader49">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+									<xp:viewColumn columnName="$121"
+										id="viewColumn50">
+										<xp:viewColumnHeader
+											value="$121" id="viewColumnHeader50">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+									<xp:viewColumn columnName="$118"
+										id="viewColumn51">
+										<xp:viewColumnHeader
+											value="$118" id="viewColumnHeader51">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+									<xp:viewColumn
+										columnName="SametimeInfo" id="viewColumn52">
+										<xp:viewColumnHeader
+											value="SametimeInfo" id="viewColumnHeader52">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+									<xp:viewColumn columnName="Topic"
+										id="viewColumn53" indentResponses="true">
+										<xp:viewColumnHeader
+											value="Topic" id="viewColumnHeader53">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+								</xp:viewPanel>
+								<xp:br />
+							</xp:panel>
+							<xp:panel id="panel4Totals">
+								<xp:this.rendered><![CDATA[#{javascript:sessionScope.cres01 == "shvw09"}]]></xp:this.rendered>
+								<xp:label value="Totals" id="label10"
+									style="font-weight:bold">
+								</xp:label>
+								<xp:viewPanel id="viewPanel9"
+									rows="100">
+
+									<xp:this.data>
+										<xp:dominoView
+											var="xSPCategoryAndResponsesTotals"
+											viewName="XSP Category and Responses\Totals">
+										</xp:dominoView>
+									</xp:this.data>
+									<xp:viewColumn columnName="$119"
+										id="viewColumn54">
+										<xp:viewColumnHeader
+											value="Totals" id="viewColumnHeader54">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+									<xp:viewColumn columnName="$116"
+										id="viewColumn55">
+										<xp:viewColumnHeader
+											value="Date" id="viewColumnHeader55">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+									<xp:viewColumn
+										columnName="Categories" id="viewColumn56">
+										<xp:viewColumnHeader
+											value="Categories" id="viewColumnHeader56">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+									<xp:viewColumn columnName="Fruit"
+										id="viewColumn57">
+										<xp:viewColumnHeader
+											value="Fruit" id="viewColumnHeader57">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+									<xp:viewColumn
+										columnName="Vegetables" id="viewColumn58">
+										<xp:viewColumnHeader
+											value="Vegetables" id="viewColumnHeader58">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+									<xp:viewColumn columnName="$118"
+										id="viewColumn59">
+										<xp:viewColumnHeader
+											value="$118" id="viewColumnHeader59">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+									<xp:viewColumn
+										columnName="SametimeInfo" id="viewColumn60">
+										<xp:viewColumnHeader
+											value="SametimeInfo" id="viewColumnHeader60">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+									<xp:viewColumn columnName="Topic"
+										id="viewColumn61" indentResponses="true">
+										<xp:viewColumnHeader
+											value="Topic" id="viewColumnHeader61">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+								</xp:viewPanel>
+
+							</xp:panel>
+							<xp:panel id="panel4TotalsAve">
+								<xp:this.rendered><![CDATA[#{javascript:sessionScope.cres01 == "shvw10"}]]></xp:this.rendered>
+								<xp:label value="Totals - Averages"
+									id="label11" style="font-weight:bold">
+								</xp:label>
+								<xp:viewPanel rows="30"
+									id="viewPanel10">
+
+									<xp:this.data>
+										<xp:dominoView
+											var="xSPCategoryAndResponsesTotalsAverages"
+											viewName="XSP Category and Responses\Totals Averages">
+										</xp:dominoView>
+									</xp:this.data>
+									<xp:viewColumn columnName="$119"
+										id="viewColumn62">
+										<xp:viewColumnHeader
+											value="Totals Averages" id="viewColumnHeader62">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+									<xp:viewColumn columnName="$116"
+										id="viewColumn63">
+										<xp:viewColumnHeader
+											value="Date" id="viewColumnHeader63">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+									<xp:viewColumn
+										columnName="Categories" id="viewColumn64">
+										<xp:viewColumnHeader
+											value="Categories" id="viewColumnHeader64">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+									<xp:viewColumn columnName="Fruit"
+										id="viewColumn65">
+										<xp:viewColumnHeader
+											value="Fruit" id="viewColumnHeader65">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+									<xp:viewColumn
+										columnName="Vegetables" id="viewColumn66">
+										<xp:viewColumnHeader
+											value="Vegetables" id="viewColumnHeader66">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+									<xp:viewColumn columnName="$118"
+										id="viewColumn67">
+										<xp:viewColumnHeader
+											value="$118" id="viewColumnHeader67">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+									<xp:viewColumn
+										columnName="SametimeInfo" id="viewColumn68">
+										<xp:viewColumnHeader
+											value="SametimeInfo" id="viewColumnHeader68">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+									<xp:viewColumn columnName="Topic"
+										id="viewColumn69" indentResponses="true">
+										<xp:viewColumnHeader
+											value="Topic" id="viewColumnHeader69">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+								</xp:viewPanel>
+
+							</xp:panel>
+							<xp:panel id="panel4TotalsPer">
+								<xp:this.rendered><![CDATA[#{javascript:sessionScope.cres01 == "shvw11"}]]></xp:this.rendered>
+								<xp:label value="Totals - Percentages"
+									id="label12" style="font-weight:bold">
+								</xp:label>
+								<xp:viewPanel rows="30"
+									id="viewPanel11">
+
+									<xp:this.data>
+										<xp:dominoView
+											var="xSPCategoryAndResponsesTotalsPercentages"
+											viewName="XSP Category and Responses\Totals Percentages">
+										</xp:dominoView>
+									</xp:this.data>
+									<xp:viewColumn columnName="$119"
+										id="viewColumn70">
+										<xp:viewColumnHeader
+											id="viewColumnHeader70" value="Percentages">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+									<xp:viewColumn columnName="$116"
+										id="viewColumn71">
+										<xp:viewColumnHeader
+											value="Date" id="viewColumnHeader71">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+									<xp:viewColumn
+										columnName="Categories" id="viewColumn72">
+										<xp:viewColumnHeader
+											value="Categories" id="viewColumnHeader72">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+									<xp:viewColumn columnName="Fruit"
+										id="viewColumn73">
+										<xp:viewColumnHeader
+											value="Fruit" id="viewColumnHeader73">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+									<xp:viewColumn
+										columnName="Vegetables" id="viewColumn74">
+										<xp:viewColumnHeader
+											value="Vegetables" id="viewColumnHeader74">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+									<xp:viewColumn columnName="$118"
+										id="viewColumn75">
+										<xp:viewColumnHeader
+											value="$118" id="viewColumnHeader75">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+									<xp:viewColumn
+										columnName="SametimeInfo" id="viewColumn76">
+										<xp:viewColumnHeader
+											value="SametimeInfo" id="viewColumnHeader76">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+									<xp:viewColumn columnName="Topic"
+										id="viewColumn77" indentResponses="true">
+										<xp:viewColumnHeader
+											value="Topic" id="viewColumnHeader77">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+								</xp:viewPanel>
+
+							</xp:panel>
+							<xp:panel id="panel4NullValueCol">
+								<xp:this.rendered><![CDATA[#{javascript:sessionScope.cres01 == "shvw12"}]]></xp:this.rendered>
+								<xp:label value="Null value column"
+									id="label13" style="font-weight:bold">
+								</xp:label>
+								<xp:viewPanel rows="30"
+									id="viewPanel12">
+
+									<xp:this.data>
+										<xp:dominoView
+											var="xSPCategoryAndResponsesViewWithNullValueColumn"
+											viewName="XSP Category and Responses\View with null value column">
+										</xp:dominoView>
+									</xp:this.data>
+									<xp:viewColumn
+										columnName="Categories" id="viewColumn78">
+										<xp:viewColumnHeader
+											value="Categories" id="viewColumnHeader78">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+									<xp:viewColumn columnName="Fruit"
+										id="viewColumn79">
+										<xp:viewColumnHeader
+											value="Fruit" id="viewColumnHeader79">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+									<xp:viewColumn
+										columnName="Vegetables" id="viewColumn80">
+										<xp:viewColumnHeader
+											value="Vegetables" id="viewColumnHeader80">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+									<xp:viewColumn columnName="$118"
+										id="viewColumn81">
+										<xp:viewColumnHeader
+											value="$118" id="viewColumnHeader81">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+									<xp:viewColumn
+										columnName="SametimeInfo" id="viewColumn82">
+										<xp:viewColumnHeader
+											value="SametimeInfo" id="viewColumnHeader82">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+									<xp:viewColumn columnName="$122"
+										id="viewColumn83">
+										<xp:viewColumnHeader
+											value="$122" id="viewColumnHeader83">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+									<xp:viewColumn columnName="Topic"
+										id="viewColumn84" indentResponses="true">
+										<xp:viewColumnHeader
+											value="Topic" id="viewColumnHeader84">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+								</xp:viewPanel>
+
+							</xp:panel>
+
+							<xp:panel id="panel4HeaderSorting">
+								<xp:this.rendered><![CDATA[#{javascript:sessionScope.cres01 == "shvw13"}]]></xp:this.rendered>
+								<xp:label value="Unread Marks"
+									id="label14" style="font-weight:bold">
+								</xp:label>
+
+
+
+								Select a document from the view and then
+								try the buttons below:
+								<xp:viewPanel rows="30" id="viewPanel13"
+									showUnreadMarks="true" pageName="/propCatResViews.xsp">
+
+									<xp:this.data>
+										<xp:dominoView
+											var="xSPCategoryAndResponsesUnreadMarks"
+											viewName="XSP Category and Responses\Unread Marks">
+										</xp:dominoView>
+									</xp:this.data>
+									<xp:viewColumn columnName="Date"
+										id="viewColumn85" displayAs="link" openDocAsReadonly="true">
+										<xp:viewColumnHeader
+											value="Date" id="viewColumnHeader85">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+									<xp:viewColumn columnName="Time"
+										id="viewColumn86">
+										<xp:viewColumnHeader
+											value="Time" id="viewColumnHeader86">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+									<xp:viewColumn columnName="Category"
+										id="viewColumn87">
+										<xp:viewColumnHeader
+											value="Category" id="viewColumnHeader87">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+									<xp:viewColumn columnName="Fruit"
+										id="viewColumn88">
+										<xp:viewColumnHeader
+											value="Fruit" id="viewColumnHeader88">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+									<xp:viewColumn columnName="Veg"
+										id="viewColumn89">
+										<xp:viewColumnHeader value="Veg"
+											id="viewColumnHeader89">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+									<xp:viewColumn columnName="Number"
+										id="viewColumn90">
+										<xp:viewColumnHeader
+											value="Number" id="viewColumnHeader90">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+									<xp:viewColumn
+										columnName="SametimeInfo" id="viewColumn91">
+										<xp:viewColumnHeader
+											value="SametimeInfo" id="viewColumnHeader91">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+									<xp:viewColumn columnName="Topic"
+										id="viewColumn92">
+										<xp:viewColumnHeader
+											value="Topic" id="viewColumnHeader92">
+										</xp:viewColumnHeader>
+									</xp:viewColumn>
+								</xp:viewPanel>
+								<xp:panel>
+									<xp:button value="Mark Read"
+										id="button1" styleClass="customButton">
+										<xp:eventHandler event="onclick"
+											submit="true" refreshMode="complete">
+											<xp:this.action><![CDATA[#{javascript:document1.getDocument().markRead()}]]></xp:this.action>
+										</xp:eventHandler>
+									</xp:button>
+									<xp:button value="Mark Unread"
+										id="button2" styleClass="customButton">
+										<xp:eventHandler event="onclick"
+											submit="true" refreshMode="complete">
+											<xp:this.action><![CDATA[#{javascript:document1.getDocument().markUnread()}]]></xp:this.action>
+										</xp:eventHandler>
+									</xp:button>
+									<xp:br></xp:br>
+									<xp:text escape="true"
+										id="computedFieldUnreadMarksSubject"
+										value="#{document1.Subject}">
+									</xp:text>
+
+									<xp:br></xp:br>
+									<xp:text escape="true"
+										id="computedFieldUnreadMarksCategory"
+										value="#{document1.Categories}">
+									</xp:text>
+									<xp:br></xp:br>
+									<xp:text escape="true"
+										id="computedFieldUnreadMarksFruit"
+										value="#{document1.Fruit}">
+									</xp:text>
+									<xp:br></xp:br>
+									<xp:text escape="true"
+										id="computedFieldUnreadMarksVeg"
+										value="#{document1.Vegetables}">
+									</xp:text>
+								</xp:panel>
+
+							</xp:panel>
+
+
+						</xp:panel>
+
+					</xp:panel>
+				</xp:panel>
+
+			</xp:panel>
+		</xp:this.facets>
+	</XPa:ccLayout>
+</xp:view>

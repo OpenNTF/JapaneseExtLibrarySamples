@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+
+	<XPa:ccLayout id="cc4cclayout" navPath="/basics/includepage/">
+		<xp:this.facets>
+			<xc:ccMenu_basics xp:key="facetLeft"></xc:ccMenu_basics>
+			<xp:panel xp:key="facetMain" id="panel4facetmain">
+
+				<xp:label
+					value="From the combo box select which page to include: "
+					for="comboBox1">
+				</xp:label>
+				<xp:comboBox id="comboBoxIncludePage"
+					value="#{sessionScope.incl1}" defaultValue="none">
+					<xp:selectItem itemLabel="none" itemValue="none"></xp:selectItem>
+					<xp:selectItem itemLabel="Page 1"
+						itemValue="Page 1">
+					</xp:selectItem>
+					<xp:selectItem itemLabel="Page 2"
+						itemValue="Page 2">
+					</xp:selectItem>
+					<xp:eventHandler event="onchange" submit="true"
+						refreshMode="complete">
+						<xp:this.action>
+							<![CDATA[#{javascript:print ("");}]]>
+						</xp:this.action>
+					</xp:eventHandler>
+				</xp:comboBox>
+
+				<!-- 
+					<xp:include id="include1">
+					<xp:this.pageName>
+					<![CDATA[#{javascript:var inny = sessionScope.incl1;
+					if(inny =="Page 1"){"/testPage01.xsp"}
+					else if (inny =="Page 2"){"/testPage02.xsp"}
+					else ""}]]>
+					</xp:this.pageName>
+					</xp:include>
+					
+					
+					<xp:text escape="true" id="computedField1"
+					value="#{sessionScope.incl1}">
+					</xp:text>-->
+				<xp:include pageName="/testPage01.xsp" id="include1">
+					<xp:this.rendered>
+						<![CDATA[#{javascript:sessionScope.incl1 == "Page 1"}]]>
+					</xp:this.rendered>
+				</xp:include>
+				<xp:include pageName="/testPage02.xsp" id="include2">
+					<xp:this.rendered>
+						<![CDATA[#{javascript:sessionScope.incl1 == "Page 2"}]]>
+					</xp:this.rendered>
+				</xp:include>
+
+			</xp:panel>
+
+		</xp:this.facets>
+	</XPa:ccLayout>
+</xp:view>

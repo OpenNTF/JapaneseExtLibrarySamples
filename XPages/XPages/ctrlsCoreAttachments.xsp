@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+	<xp:this.data>
+		<xp:dominoDocument var="dominoDocument1"
+			formName="xspAttachments">
+			<xp:this.postNewDocument>
+				<xp:actionGroup>
+					<xp:setValue binding="#{dominoDocument1.From}"
+						value="#{javascript:@UserName()}">
+					</xp:setValue>
+					<xp:setValue binding="#{dominoDocument1.Categories}"
+						value="Attachments">
+					</xp:setValue>
+					<xp:setValue
+						binding="#{dominoDocument1.dateTimeCreated}"
+						value="#{javascript:@Now()}">
+					</xp:setValue>
+				</xp:actionGroup>
+			</xp:this.postNewDocument>
+
+		</xp:dominoDocument>
+	</xp:this.data>
+	<XPa:ccLayout id="cc4cclayout" navPath="/basics/attachments/">
+		<xp:this.facets>
+			<xc:ccMenu_basics xp:key="facetLeft"></xc:ccMenu_basics>
+
+			<XPa:ccContentCoreCtrl xp:key="facetMain"
+				id="cc4cccontentcorectrl">
+				<xp:this.facets>
+					<xp:panel xp:key="facetTestControl">
+						<xp:table>
+							<xp:tr>
+								<xp:td>
+
+
+									<xp:inputText id="inputText1"
+										value="#{dominoDocument1.Subject}">
+									</xp:inputText>
+								</xp:td>
+							</xp:tr>
+							<xp:tr>
+								<xp:td>
+
+
+									<xp:fileUpload id="fileUpload1"
+										value="#{dominoDocument1.testAttachmentBody}">
+									</xp:fileUpload>
+								</xp:td>
+							</xp:tr>
+							<xp:tr>
+								<xp:td>
+									<xp:fileDownload rows="30"
+										id="fileDownload1"
+										value="#{dominoDocument1.testAttachmentBody}"
+										displayLastModified="true" allowDelete="true"
+										hideWhen="true">
+									</xp:fileDownload>
+								</xp:td>
+							</xp:tr>
+						</xp:table>
+					</xp:panel>
+
+				</xp:this.facets>
+			</XPa:ccContentCoreCtrl>
+		</xp:this.facets>
+	</XPa:ccLayout>
+</xp:view>

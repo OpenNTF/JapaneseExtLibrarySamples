@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+	<xp:this.data>
+		<xp:dominoDocument var="document1"
+			formName="xspGroupRadioButton">
+		</xp:dominoDocument>
+	</xp:this.data>
+
+	<XPa:ccLayout id="cc4cclayout" navPath="/basics/radiobuttongroup/">
+		<xp:this.facets>
+			<xc:ccMenu_basics xp:key="facetLeft"></xc:ccMenu_basics>
+			<xp:panel xp:key="facetMain">
+
+				<xp:panel>
+					<xp:button value="Submit"
+						id="buttonRadioGroupSubmit" rendered="#{javascript:document1.isEditable()}">
+						<xp:eventHandler event="onclick" submit="true"
+							refreshMode="complete" immediate="false" save="true">
+						</xp:eventHandler>
+					</xp:button>
+					<xp:button value="Cancel"
+						id="buttonRadioGroupCancel" rendered="#{javascript:document1.isEditable()}">
+						<xp:eventHandler event="onclick" submit="true"
+							refreshMode="complete" immediate="true" save="false">
+						</xp:eventHandler>
+					</xp:button>
+					<xp:button id="buttonRadioGroupNew" value="New">
+						<xp:eventHandler event="onclick" submit="true"
+							refreshMode="complete">
+							<xp:this.action>
+								<xp:openPage
+									name="/ctrlsOtherRadioButtonGroup.xsp" target="newDocument">
+								</xp:openPage>
+							</xp:this.action>
+						</xp:eventHandler>
+					</xp:button>
+					<xp:button value="Edit" id="buttonRadioGroupEdit"
+						rendered="#{javascript:!document1.isEditable()}">
+						<xp:eventHandler event="onclick" submit="true"
+							refreshMode="complete">
+							<xp:this.action>
+								<xp:changeDocumentMode mode="edit"></xp:changeDocumentMode>
+							</xp:this.action>
+						</xp:eventHandler>
+					</xp:button>
+				</xp:panel>
+				<xp:panel>
+					<xp:table>
+						<xp:tr>
+							<xp:td>
+								<xp:label value="Subject:"
+									id="labelRadioGroupSubject">
+								</xp:label>
+							</xp:td>
+							<xp:td>
+								<xp:inputText
+									id="inputTextRadioGroupSubject" value="#{document1.Subject}">
+								</xp:inputText>
+							</xp:td>
+						</xp:tr>
+						<xp:tr>
+							<xp:td>
+								<xp:label value="Radio Button Group: "
+									id="labelRadioGroupControl">
+								</xp:label>
+							</xp:td>
+							<xp:td>
+								A control that displays a group of radio
+								buttons.
+								<xp:br></xp:br>
+								Users can select only one radio button
+								at a time.
+								<xp:br></xp:br>
+								<xp:radioGroup id="radioGroupTest01"
+									value="#{document1.testGroupRadioButton}"
+									layout="pageDirection">
+
+									<xp:selectItem itemLabel="Edinburgh"
+										itemValue="Edinburgh">
+									</xp:selectItem>
+									<xp:selectItem itemLabel="Frankfurt"
+										itemValue="Frankfurt">
+									</xp:selectItem>
+									<xp:selectItems>
+										<xp:this.value><![CDATA[${javascript:return ["Galway","Helsinki"]}]]></xp:this.value>
+									</xp:selectItems>
+
+
+								</xp:radioGroup>
+							</xp:td>
+						</xp:tr>
+					</xp:table>
+				</xp:panel>
+				<xp:panel>
+					<xp:button value="Delete Selected"
+						id="buttonRadioGroupDeleteSelected">
+						<xp:eventHandler event="onclick" submit="true"
+							refreshMode="complete">
+							<xp:this.action>
+								<xp:deleteSelectedDocuments
+									view="viewPanel1"
+									message="This action will delete the selected documents">
+								</xp:deleteSelectedDocuments>
+							</xp:this.action>
+						</xp:eventHandler>
+					</xp:button>
+					<xp:viewPanel rows="30" id="viewPanel1"
+						pageName="/ctrlsOtherRadioButtonGroup.xsp">
+						<xp:this.facets>
+							<xp:pager layout="Previous Group Next"
+								xp:key="headerPager" id="pager1">
+							</xp:pager>
+						</xp:this.facets>
+						<xp:this.data>
+							<xp:dominoView var="xspViewRadioButtonGroup"
+								viewName="xspViewRadioButtonGroup">
+							</xp:dominoView>
+						</xp:this.data>
+						<xp:viewColumn columnName="Date"
+							id="viewColumn1">
+							<xp:viewColumnHeader value="Date"
+								id="viewColumnHeader1">
+							</xp:viewColumnHeader>
+						</xp:viewColumn>
+						<xp:viewColumn id="viewColumn2"
+							columnName="Subject" displayAs="link" showCheckbox="true"
+							openDocAsReadonly="true">
+							<xp:viewColumnHeader id="viewColumnHeader2"
+								value="Subject" showCheckbox="true">
+							</xp:viewColumnHeader>
+						</xp:viewColumn>
+						<xp:viewColumn columnName="Test Value"
+							id="viewColumn3">
+							<xp:viewColumnHeader value="Test Value"
+								id="viewColumnHeader3">
+							</xp:viewColumnHeader>
+						</xp:viewColumn>
+					</xp:viewPanel>
+				</xp:panel>
+
+			</xp:panel>
+		</xp:this.facets>
+	</XPa:ccLayout>
+</xp:view>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+
+	<XPa:ccLayout id="cc4cclayout" navPath="/events/key/">
+		<xp:this.facets>
+			<xc:ccMenu_events xp:key="facetLeft"></xc:ccMenu_events>
+			<xp:panel xp:key="facetMain" id="panel4Content">
+
+				<xp:label id="labelKeyEvts5"
+					style="font-size:12pt;color:rgb(0,0,0);font-weight:bold">
+					<xp:this.value><![CDATA[This XPage Tests Key Events - Server & Client side]]></xp:this.value>
+				</xp:label>
+				<xp:table>
+					<xp:tr>
+						<xp:td>
+							<xp:label value="Event Type"
+								id="labelKeyEvts1" style="font-weight:bold">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:label id="labelKeyEvts2" value="Control"
+								style="font-weight:bold">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:label value="Result Client Side"
+								id="labelKeyEvts3" style="font-weight:bold">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:label value="Result Server Side"
+								id="labelKeyEvts12" style="font-weight:bold">
+							</xp:label>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							<xp:label value="onkeypress"
+								id="labelKeyEvts6">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:section id="sectionKeyEvts1"
+								header="Section test">
+								<xp:eventHandler event="onkeypress"
+									submit="true">
+									<xp:this.script><![CDATA[XSP.getElementById('#{id:inputTextKeyEvts1}').value += "Client - On Key Press\n";]]></xp:this.script>
+									<xp:this.action>
+										<xp:setValue
+											binding="#{requestScope.rqk1}">
+											<xp:this.value><![CDATA[#{javascript:return "Server - On Press Down "+@Unique()}]]></xp:this.value>
+										</xp:setValue>
+									</xp:this.action>
+								</xp:eventHandler>
+							</xp:section>
+						</xp:td>
+						<xp:td>
+							<xp:inputText id="inputTextKeyEvts1"></xp:inputText>
+						</xp:td>
+						<xp:td>
+							<xp:text escape="true"
+								id="computedFieldKeyEvts1" value="#{requestScope.rqk1}">
+							</xp:text>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							<xp:label value="onkeydown"
+								id="labelKeyEvts7">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:inputText id="inputText1">
+								<xp:eventHandler event="onkeydown"
+									submit="true">
+									<xp:this.script><![CDATA[XSP.getElementById('#{id:inputTextKeyEvts2}').value += "Client - On Key down\n";]]></xp:this.script>
+									<xp:this.action>
+										<xp:setValue
+											binding="#{requestScope.rqk2}">
+											<xp:this.value><![CDATA[#{javascript:return "Server - On Key Down "+@Unique()}]]></xp:this.value>
+										</xp:setValue>
+									</xp:this.action>
+								</xp:eventHandler>
+							</xp:inputText>
+						</xp:td>
+						<xp:td>
+							<xp:inputText id="inputTextKeyEvts2"></xp:inputText>
+						</xp:td>
+						<xp:td>
+							<xp:text escape="true"
+								id="computedFieldKeyEvts2" value="#{requestScope.rqk2}">
+							</xp:text>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							<xp:label value="onkeyup"
+								id="labelKeyEvts8">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:inputTextarea
+								id="inputTextareaKeyEvts1">
+								<xp:eventHandler event="onkeyup"
+									submit="true">
+									<xp:this.script><![CDATA[XSP.getElementById('#{id:inputTextKeyEvts3}').value += "Client - On Key UP\n";]]></xp:this.script>
+									<xp:this.action>
+										<xp:setValue
+											binding="#{requestScope.rqk3}">
+											<xp:this.value><![CDATA[#{javascript:return "Server - On Key UP "+@Unique()}]]></xp:this.value>
+										</xp:setValue>
+									</xp:this.action>
+								</xp:eventHandler>
+							</xp:inputTextarea>
+						</xp:td>
+						<xp:td>
+							<xp:inputText id="inputTextKeyEvts3"></xp:inputText>
+						</xp:td>
+						<xp:td>
+							<xp:text escape="true"
+								id="computedFieldKeyEvts3" value="#{requestScope.rqk3}">
+							</xp:text>
+						</xp:td>
+					</xp:tr>
+
+				</xp:table>
+
+
+			</xp:panel>
+		</xp:this.facets>
+	</XPa:ccLayout>
+</xp:view>

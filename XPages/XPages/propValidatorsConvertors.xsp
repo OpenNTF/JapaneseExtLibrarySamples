@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+	<xp:this.data>
+		<xp:dominoDocument var="document1"
+			formName="xspValidatorsConvertorsForm">
+		</xp:dominoDocument>
+	</xp:this.data>
+	<xp:this.resources>
+		<xp:styleSheet href="/csscustom.css"></xp:styleSheet>
+	</xp:this.resources>
+	<XPa:ccLayout id="cc4cclayout"  navPath="/forms/validators/">
+		<xp:this.facets>
+			<xc:ccMenu_forms xp:key="facetLeft"></xc:ccMenu_forms>
+			<xp:panel xp:key="facetMain">
+				<xp:panel id="panel4view">
+					<xp:button id="buttonNewValDoc" value="New"
+						styleClass="customButton">
+
+						<xp:eventHandler event="onclick" submit="true"
+							refreshMode="complete">
+							<xp:this.action>
+								<xp:openPage
+									name="/propValidatorsConvertors.xsp" target="newDocument">
+								</xp:openPage>
+							</xp:this.action>
+						</xp:eventHandler>
+					</xp:button>
+					<xp:button value="Delete selected"
+						id="buttonDeleteSelectedValDoc" styleClass="customButton">
+						<xp:eventHandler event="onclick" submit="true"
+							refreshMode="complete">
+							<xp:this.action>
+								<xp:deleteSelectedDocuments
+									view="viewPanel1" message="Delete the selected documents">
+								</xp:deleteSelectedDocuments>
+							</xp:this.action>
+						</xp:eventHandler>
+					</xp:button>
+					<xp:viewPanel rows="300" id="viewPanel1"
+						pageName="/propValidatorsConvertors.xsp">
+						<xp:this.data>
+							<xp:dominoView
+								var="validatorsConvertorsView"
+								viewName="ValidatorsConvertorsView">
+							</xp:dominoView>
+						</xp:this.data>
+						<xp:viewColumn id="viewColumn1"
+							showCheckbox="true" displayAs="link" openDocAsReadonly="true"
+							columnName="Subject">
+							<xp:viewColumnHeader id="viewColumnHeader1"
+								value="Subject" showCheckbox="true">
+							</xp:viewColumnHeader>
+						</xp:viewColumn>
+					</xp:viewPanel>
+				</xp:panel>
+				<hr />
+				<xp:panel id="panel4doc">
+					<xp:button value="Submit" id="buttonSubmitValDoc"
+						styleClass="customButton"
+						rendered="#{javascript:document1.isEditable()}">
+						<xp:eventHandler event="onclick" submit="true"
+							refreshMode="complete" immediate="false" save="true">
+						</xp:eventHandler>
+					</xp:button>
+					<xp:button value="Save as Draft"
+						id="buttonSaveAsDraft" styleClass="customButton"
+						rendered="#{javascript:document1.isEditable()}">
+						<xp:eventHandler event="onclick" submit="true"
+							refreshMode="complete" immediate="false" save="true"
+							disableValidators="true">
+						</xp:eventHandler>
+					</xp:button>
+					<xp:button value="Edit" id="buttonEditValDoc"
+						styleClass="customButton"
+						rendered="#{javascript:!document1.isEditable()}">
+						<xp:eventHandler event="onclick" submit="true"
+							refreshMode="complete">
+							<xp:this.action>
+								<xp:changeDocumentMode mode="edit"></xp:changeDocumentMode>
+							</xp:this.action>
+						</xp:eventHandler>
+					</xp:button>
+					<xp:button value="Cancel" id="buttonCancelValDoc"
+						styleClass="customButton">
+						<xp:eventHandler event="onclick" submit="true"
+							refreshMode="complete" immediate="true" save="false">
+						</xp:eventHandler>
+					</xp:button>
+
+					<xp:panel>
+						<xp:br />
+						<xp:label value="Subject: " id="label1"
+							style="font-weight:bold">
+						</xp:label>
+						<xp:inputText id="inputTextSubjectValDoc"
+							value="#{document1.Subject}">
+						</xp:inputText>
+						<xp:br></xp:br>
+						(validation is done server side)
+					</xp:panel>
+					<xp:table styleClass="customTable">
+						<xp:tr>
+							<xp:td>
+								<xp:span style="font-weight:bold">
+									Validator:
+								</xp:span>
+							</xp:td>
+							<xp:td></xp:td>
+							<xp:td></xp:td>
+							<xp:td></xp:td>
+						</xp:tr>
+						<xp:tr>
+							<xp:td>
+								validateRequired with custom message.
+							</xp:td>
+							<xp:td>Required field</xp:td>
+							<xp:td>
+								<xp:inputText
+									id="inputTextValRequired01" value="#{document1.Textdata_1}"
+									required="true">
+									<xp:this.validators>
+										<xp:validateRequired
+											message="This is the Required field error message, ok?">
+										</xp:validateRequired>
+									</xp:this.validators>
+								</xp:inputText>
+							</xp:td>
+							<xp:td>
+								<xp:message id="message1"
+									for="inputTextValRequired01">
+								</xp:message>
+							</xp:td>
+						</xp:tr>
+						<xp:tr>
+							<xp:td>validateRequired</xp:td>
+							<xp:td>Required field</xp:td>
+							<xp:td>
+								<xp:inputText
+									id="inputTextValRequired02" value="#{document1.Textdata_2}"
+									required="true">
+								</xp:inputText>
+							</xp:td>
+							<xp:td>
+								<xp:message id="message2"
+									for="inputTextValRequired02">
+								</xp:message>
+							</xp:td>
+						</xp:tr>
+						<xp:tr>
+							<xp:td>validateLength</xp:td>
+							<xp:td>
+								String must be between 5 and 10
+								characters.
+							</xp:td>
+							<xp:td>
+								<xp:inputText id="inputTextValLength01"
+									value="#{document1.Textdata_3}">
+									<xp:this.validators>
+										<xp:validateLength minimum="5"
+											maximum="10">
+										</xp:validateLength>
+									</xp:this.validators>
+								</xp:inputText>
+							</xp:td>
+							<xp:td>
+								<xp:message id="message3"
+									for="inputTextValLength01">
+								</xp:message>
+							</xp:td>
+						</xp:tr>
+						<xp:tr>
+							<xp:td>
+								validateLength with custom message
+							</xp:td>
+							<xp:td>Between 3 and 6 characters</xp:td>
+							<xp:td>
+								<xp:inputText id="inputTextValLength02"
+									value="#{document1.Textdata_4}">
+									<xp:this.validators>
+										<xp:validateLength minimum="3"
+											maximum="6"
+											message="The number of characters must be between 3 and 6">
+										</xp:validateLength>
+									</xp:this.validators>
+								</xp:inputText>
+							</xp:td>
+							<xp:td>
+								<xp:message id="message4"
+									for="inputTextValLength02">
+								</xp:message>
+							</xp:td>
+						</xp:tr>
+						<xp:tr>
+							<xp:td>validateConstraint</xp:td>
+							<xp:td>Email address</xp:td>
+							<xp:td>
+								<xp:inputText
+									id="inputTextValConstraint01"
+									value="#{document1.Textdata_5}">
+									<xp:this.validators>
+										<xp:validateConstraint>
+											<xp:this.regex>
+												<![CDATA[\b[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}\b]]>
+											</xp:this.regex>
+										</xp:validateConstraint>
+									</xp:this.validators>
+								</xp:inputText>
+							</xp:td>
+							<xp:td>
+								<xp:message id="message5"
+									for="inputTextValConstraint01">
+								</xp:message>
+							</xp:td>
+						</xp:tr>
+						<xp:tr>
+							<xp:td>
+								validateConstraint with custom message
+							</xp:td>
+							<xp:td>Email address</xp:td>
+							<xp:td>
+								<xp:inputText
+									id="inputTextValConstraint02"
+									value="#{document1.Textdata_6}">
+									<xp:this.validators>
+										<xp:validateConstraint
+											message="Value not an email address, please correct">
+											<xp:this.regex>
+												<![CDATA[\b[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}\b]]>
+											</xp:this.regex>
+										</xp:validateConstraint>
+									</xp:this.validators>
+								</xp:inputText>
+							</xp:td>
+							<xp:td>
+								<xp:message id="message6"
+									for="inputTextValConstraint02">
+								</xp:message>
+							</xp:td>
+						</xp:tr>
+						<xp:tr>
+							<xp:td>validateDateTimeRange</xp:td>
+							<xp:td>
+								Select a Date:
+								<xp:br id="br1"></xp:br>
+								Min =
+								<xp:label id="label2"
+									value="#{javascript:@Yesterday()}">
+								</xp:label>
+								<xp:br id="br2"></xp:br>
+								Max =
+								<xp:label
+									value="#{javascript:@Tomorrow()}" id="label3">
+								</xp:label>
+							</xp:td>
+							<xp:td>
+								<xp:inputText
+									id="inputTextValDateTimeRange01"
+									value="#{document1.DateData_1}">
+									<xp:this.converter>
+										<xp:convertDateTime
+											type="date">
+										</xp:convertDateTime>
+									</xp:this.converter>
+									<xp:this.validators>
+										<xp:validateDateTimeRange
+											minimum="#{javascript:@Yesterday()}"
+											maximum="#{javascript:@Tomorrow()}">
+										</xp:validateDateTimeRange>
+									</xp:this.validators>
+									<xp:dateTimeHelper></xp:dateTimeHelper>
+								</xp:inputText>
+							</xp:td>
+							<xp:td>
+								<xp:message id="message7"
+									for="inputTextValDateTimeRange01">
+								</xp:message>
+							</xp:td>
+						</xp:tr>
+						<xp:tr>
+							<xp:td>
+								validateDateTimeRange with custom
+								message
+							</xp:td>
+							<xp:td>Select another date</xp:td>
+							<xp:td>
+								<xp:inputText
+									id="inputTextValDateTimeRange02"
+									value="#{document1.DateData_2}">
+									<xp:this.converter>
+										<xp:convertDateTime
+											type="date">
+										</xp:convertDateTime>
+									</xp:this.converter>
+									<xp:this.validators>
+										<xp:validateDateTimeRange
+											minimum="#{javascript:@Now()}"
+											message="The date must be in this year and not in the past.">
+											<xp:this.maximum><![CDATA[#{javascript:var now = @Now();
+var thisyr = now.getFullYear();
+var date = @Date(@Now());
+date.setFullYear(thisyr, 12, 31);
+return date}]]></xp:this.maximum>
+										</xp:validateDateTimeRange>
+									</xp:this.validators>
+									<xp:dateTimeHelper
+										id="dateTimeHelper2">
+									</xp:dateTimeHelper>
+								</xp:inputText>
+							</xp:td>
+							<xp:td>
+								<xp:message id="message8"
+									for="inputTextValDateTimeRange02">
+								</xp:message>
+							</xp:td>
+						</xp:tr>
+						<xp:tr>
+							<xp:td>validateLongRange</xp:td>
+							<xp:td>
+								Enter anything (between 4 and 8).
+							</xp:td>
+							<xp:td>
+								<xp:inputText
+									id="inputTextValLongRange01"
+									value="#{document1.NumberData_1}">
+									<xp:this.converter>
+										<xp:convertNumber></xp:convertNumber>
+									</xp:this.converter>
+									<xp:this.validators>
+										<xp:validateLongRange
+											minimum="4" maximum="8">
+										</xp:validateLongRange>
+									</xp:this.validators>
+								</xp:inputText>
+							</xp:td>
+							<xp:td>
+								<xp:message id="message9"
+									for="inputTextValLongRange01">
+								</xp:message>
+							</xp:td>
+						</xp:tr>
+						<xp:tr>
+							<xp:td>
+								validateLongRange with custom message
+							</xp:td>
+							<xp:td>Enter anything again</xp:td>
+							<xp:td>
+								<xp:inputText
+									id="inputTextValLongRange02"
+									value="#{document1.NumberData_2}">
+									<xp:this.converter>
+										<xp:convertNumber></xp:convertNumber>
+									</xp:this.converter>
+									<xp:this.validators>
+										<xp:validateLongRange
+											minimum="123" maximum="456"
+											message="Number must be between 123 and 456.">
+										</xp:validateLongRange>
+									</xp:this.validators>
+								</xp:inputText>
+							</xp:td>
+							<xp:td>
+								<xp:message id="message10"
+									for="inputTextValLongRange02">
+								</xp:message>
+							</xp:td>
+						</xp:tr>
+						<xp:tr>
+							<xp:td>validateDoubleRange</xp:td>
+							<xp:td>
+								Enter a number (between 12.34 and 56.78)
+							</xp:td>
+							<xp:td>
+								<xp:inputText
+									id="inputTextValDoubleRange01"
+									value="#{document1.NumberData_3}">
+									<xp:this.converter>
+										<xp:convertNumber></xp:convertNumber>
+									</xp:this.converter>
+									<xp:this.validators>
+										<xp:validateDoubleRange
+											maximum="56.78" minimum="12.34">
+										</xp:validateDoubleRange>
+									</xp:this.validators>
+								</xp:inputText>
+							</xp:td>
+							<xp:td>
+								<xp:message id="message11"
+									for="inputTextValDoubleRange01">
+								</xp:message>
+							</xp:td>
+						</xp:tr>
+						<xp:tr>
+							<xp:td>
+								xp:validateDoubleRange (custom message)
+							</xp:td>
+							<xp:td>Enter another number.</xp:td>
+							<xp:td>
+								<xp:inputText
+									id="inputTextValDoubleRange02"
+									value="#{document1.NumberData_4}">
+									<xp:this.converter>
+										<xp:convertNumber></xp:convertNumber>
+									</xp:this.converter>
+									<xp:this.validators>
+										<xp:validateDoubleRange
+											maximum="999" minimum="333"
+											message="Must be between 333 and 999">
+										</xp:validateDoubleRange>
+									</xp:this.validators>
+								</xp:inputText>
+							</xp:td>
+							<xp:td>
+								<xp:message id="message12"
+									for="inputTextValDoubleRange02">
+								</xp:message>
+							</xp:td>
+						</xp:tr>
+						<xp:tr>
+							<xp:td>xp:validateModulusSelfCheck</xp:td>
+							<xp:td>
+								This is used for numbers with a self
+								check digit, e.g. a credit card number
+								not your own
+							</xp:td>
+							<xp:td>
+								<xp:inputText
+									id="inputTextValModulusSelfCheck01"
+									value="#{document1.NumberData_5}">
+									<xp:this.validators>
+										<xp:validateModulusSelfCheck
+											modulus="10">
+										</xp:validateModulusSelfCheck>
+									</xp:this.validators>
+
+
+								</xp:inputText>
+							</xp:td>
+							<xp:td>
+								<xp:message id="message13"
+									for="inputTextValModulusSelfCheck01">
+								</xp:message>
+							</xp:td>
+						</xp:tr>
+						<xp:tr>
+							<xp:td>
+								xp:validateModulusSelfCheck (custom
+								message)
+							</xp:td>
+							<xp:td>Enter another.</xp:td>
+							<xp:td>
+								<xp:inputText
+									id="inputTextValModulusSelfCheck02"
+									value="#{document1.NumberData_6}">
+									<xp:this.validators>
+										<xp:validateModulusSelfCheck
+											message="Try another, e.g 1111222233334444" modulus="10">
+										</xp:validateModulusSelfCheck>
+									</xp:this.validators>
+
+								</xp:inputText>
+							</xp:td>
+							<xp:td>
+								<xp:message id="message14"
+									for="inputTextValModulusSelfCheck02">
+								</xp:message>
+							</xp:td>
+						</xp:tr>
+						<xp:tr>
+							<xp:td>xp:validateExpression</xp:td>
+							<xp:td>
+								Enter anything to get the error message,
+								then &quot;BB&quot; to correct it.
+							</xp:td>
+							<xp:td>
+								<xp:inputText
+									id="inputTextValExpression01"
+									value="#{document1.Textdata_7}">
+
+									<xp:this.validators>
+										<xp:validateExpression>
+											<xp:this.expression><![CDATA[#{javascript:value == "BB"}]]></xp:this.expression>
+										</xp:validateExpression>
+									</xp:this.validators>
+								</xp:inputText>
+							</xp:td>
+							<xp:td>
+								<xp:message id="message15"
+									for="inputTextValExpression01">
+								</xp:message>
+							</xp:td>
+						</xp:tr>
+						<xp:tr>
+							<xp:td>
+								xp:validateExpression (custom message)
+							</xp:td>
+							<xp:td>
+								Enter anything to get the error message.
+							</xp:td>
+							<xp:td>
+								<xp:inputText
+									id="inputTextValExpression02"
+									value="#{document1.NumberData_7}">
+
+									<xp:this.converter>
+										<xp:convertNumber
+											type="number">
+										</xp:convertNumber>
+									</xp:this.converter>
+									<xp:this.validators>
+										<xp:validateExpression
+											message="The value must be the number '123'">
+											<xp:this.expression><![CDATA[#{javascript:value == "123"}]]></xp:this.expression>
+
+										</xp:validateExpression>
+									</xp:this.validators>
+								</xp:inputText>
+							</xp:td>
+							<xp:td>
+								<xp:message id="message16"
+									for="inputTextValExpression02">
+								</xp:message>
+							</xp:td>
+						</xp:tr>
+						<xp:tr>
+							<xp:td></xp:td>
+							<xp:td></xp:td>
+							<xp:td></xp:td>
+							<xp:td></xp:td>
+						</xp:tr>
+						<xp:tr>
+							<xp:td></xp:td>
+							<xp:td></xp:td>
+							<xp:td></xp:td>
+							<xp:td></xp:td>
+						</xp:tr>
+						<xp:tr>
+							<xp:td></xp:td>
+							<xp:td></xp:td>
+							<xp:td></xp:td>
+							<xp:td></xp:td>
+						</xp:tr>
+						<xp:tr>
+							<xp:td></xp:td>
+							<xp:td></xp:td>
+							<xp:td></xp:td>
+							<xp:td></xp:td>
+						</xp:tr>
+					</xp:table>
+				</xp:panel>
+			</xp:panel>
+		</xp:this.facets>
+	</XPa:ccLayout>
+</xp:view>

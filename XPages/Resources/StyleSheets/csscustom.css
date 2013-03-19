@@ -1,0 +1,13 @@
+.customTitle {padding:0 0 0 15px;float:left;font-size:1.5em;line-height:2em;letter-spacing:0;width:600px;font-weight:normal;color:#fff}
+.customButton {background-color:rgb(226,236,241);border-style:solid;border-width:thin;border-color:rgb(206,211,236);font-size:8pt;margin-right: 2px;margin-bottom: 5px;}
+.customTable {border-bottom-color:#e0e0e0;border-bottom-width:1px;border-bottom-style:solid;border-top-color:#e0e0e0;border-top-width:1px;border-top-style:solid;width:80.0%}
+.widgetmain1{background:#ffffff;padding:3px;border-left:1px solid #aaaaaa;border-right:1px solid #aaaaaa;border-bottom:1px solid #aaaaaa;border-top:0px;-moz-border-radius:0px 0px 5px 5px;-webkit-border-radius:0px 0px 5px 5px;overflow:hidden;}
+.widgetTop{background:#659EE2;padding:3px;border-left:1px solid #aaaaaa;border-right:1px solid #aaaaaa;border-bottom:0px;border-top:1px solid #aaaaaa;-moz-border-radius:5px 5px 0px 0px;-webkit-border-radius:5px 5px 0px 0px ;overflow:hidden;}
+.widgetTitle {padding:0 0 0 5px;float:left;font-size:1em;line-height:2em;letter-spacing:0;font-weight:bolder;color:#fff}
+ 
+.customBannerImage {width:124.0px; height:20.0px;margin-right:100.0px}
+.customBannerImage2 {width:124.0px; height:20.0px;margin-right:100.0px;padding:1}
+.customPlaceBarTitle {
+	color:rgb(0,128,192);
+	padding-left:1.0em
+}

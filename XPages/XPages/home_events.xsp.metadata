@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" replicaid="85257A870079CB8F" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="87e" sequence="26" unid="B68B92E708BDAF7580257ACD00543A0C">
+<created><datetime dst="true">20121207T161958,84+01</datetime></created>
+<modified><datetime>20130319T214347,21+09</datetime></modified>
+<revised><datetime>20130319T214347,20+09</datetime></revised>
+<lastaccessed><datetime>20130319T214347,21+09</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20121207T112050,39-04</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=Admin/O=LotusLab</name></updatedby>
+<revisions><datetime dst="true">20121207T161958,84+01</datetime><datetime dst="true">20121207T161958,86+01</datetime><datetime dst="true">20121207T162000,55+01</datetime><datetime dst="true">20121207T162000,57+01</datetime><datetime dst="true">20121207T162000,59+01</datetime><datetime dst="true">20121207T162000,61+01</datetime><datetime dst="true">20121207T162117,71+01</datetime><datetime dst="true">20121207T162117,88+01</datetime><datetime dst="true">20121207T162117,90+01</datetime><datetime dst="true">20121207T162120,04+01</datetime><datetime dst="true">20121207T162120,06+01</datetime><datetime dst="true">20121207T162120,08+01</datetime><datetime dst="true">20121207T162120,10+01</datetime><datetime dst="true">20121207T183305,24+01</datetime><datetime dst="true">20121207T183305,66+01</datetime><datetime dst="true">20121207T183305,68+01</datetime><datetime dst="true">20121207T183655,63+01</datetime><datetime dst="true">20121207T183655,93+01</datetime><datetime dst="true">20121214T163928,79+01</datetime><datetime dst="true">20121214T163929,13+01</datetime></revisions>
+<wassignedby><name>CN=Admin/O=LotusLab</name></wassignedby>
+<item name="$Flags"><text>gC~4K</text></item>
+<item name="$TITLE" sign="true"><text>home_events.xsp</text></item>
+
+
+
+<item name="$FileNames" sign="true"><text>home_events.xsp</text></item>
+<item name="$DesignerVersion"><text>8.5</text></item>
+
+
+
+</note>

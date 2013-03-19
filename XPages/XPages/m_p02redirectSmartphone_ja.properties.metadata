@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" replicaid="85257A870079CB8F" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="1502" sequence="2" unid="C471EF5A42909B2249257B330045E903">
+<created><datetime>20130319T214336,35+09</datetime></created>
+<modified><datetime>20130319T214340,83+09</datetime></modified>
+<revised><datetime>20130319T214340,82+09</datetime></revised>
+<lastaccessed><datetime>20130319T214340,83+09</datetime></lastaccessed>
+<addedtofile><datetime>20130319T214340,81+09</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Admin/O=LotusLab</name></updatedby>
+<wassignedby><name>CN=Admin/O=LotusLab</name></wassignedby>
+<item name="$Flags"><text>gC~4K2</text></item>
+<item name="$TITLE"><text>m_p02redirectSmartphone_ja.properties</text></item>
+
+
+<item name="$FileNames" sign="true"><text>m_p02redirectSmartphone_ja.properties</text></item></note>

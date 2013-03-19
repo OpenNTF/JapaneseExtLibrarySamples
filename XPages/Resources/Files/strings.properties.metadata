@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" replicaid="85257A870079CB8F" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="23e" sequence="44" unid="91B8B9CC06398901802576B100502D63">
+<created><datetime dst="true">20100120T153544,99+01</datetime></created>
+<modified><datetime dst="true">20130121T164303,84+01</datetime></modified>
+<revised><datetime dst="true">20130121T164303,83+01</datetime></revised>
+<lastaccessed><datetime dst="true">20130121T164303,84+01</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20120928T180553,38-04</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name></updatedby>
+<revisions><datetime dst="true">20110126T155558,43+01</datetime><datetime dst="true">20110309T132604,72+01</datetime><datetime dst="true">20110309T154759,36+01</datetime><datetime dst="true">20110309T172102,04+01</datetime><datetime dst="true">20110330T093546,10+01</datetime><datetime dst="true">20110330T164820,28+01</datetime><datetime dst="true">20110331T113522,85+01</datetime><datetime dst="true">20110411T154911,66+01</datetime><datetime dst="true">20110411T160119,14+01</datetime><datetime dst="true">20110531T155451,11+01</datetime><datetime dst="true">20110601T092733,07+01</datetime><datetime dst="true">20110930T154240,82+01</datetime><datetime dst="true">20121005T170951,98+01</datetime><datetime dst="true">20121008T133122,34+01</datetime><datetime dst="true">20121126T161941,93+01</datetime><datetime dst="true">20121129T154601,86+01</datetime><datetime dst="true">20121214T162847,73+01</datetime><datetime dst="true">20130109T120610,87+01</datetime></revisions>
+<item name="$Flags"><text>345CgQ</text></item>
+<item name="$Comment" sign="true"><text>translatable UI strings</text></item>
+<item name="$TITLE" sign="true"><text>strings.properties</text></item>
+<item name="$$ScriptName" sign="true" summary="false"><text>strings.properties</text></item>
+<item name="$DesignerVersion"><text>8.5.3</text></item>
+
+
+<item name="$FileNames" sign="true"><text>strings.properties</text></item></note>

@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+
+	<xp:this.data>
+		<xp:dominoDocument var="dominoDocument1"
+			formName="xspDataTable">
+
+			<xp:this.postNewDocument>
+
+				<xp:actionGroup>
+					<xp:setValue binding="#{dominoDocument1.From}"
+						value="#{javascript:@UserName()}">
+					</xp:setValue>
+
+					<xp:setValue
+						binding="#{dominoDocument1.dateTimeCreated}"
+						value="#{javascript:@Now()}">
+					</xp:setValue>
+				</xp:actionGroup>
+			</xp:this.postNewDocument>
+
+
+
+		</xp:dominoDocument>
+		<xp:dominoView var="dominoView1" viewName="xspDataTableView"></xp:dominoView>
+	</xp:this.data>
+
+
+
+	<XPa:ccLayout id="cc4cclayout" navPath="/basics/datatable/">
+		<xp:this.facets>
+			<xc:ccMenu_basics xp:key="facetLeft"></xc:ccMenu_basics>
+			<xp:panel xp:key="facetMain" id="panel4facetmain">
+
+
+				<xp:panel id="panel4buttons">
+					<xp:button value="Save" id="buttonDataTableSave">
+
+
+						<xp:eventHandler event="onclick" submit="true"
+							refreshMode="complete">
+							<xp:this.action>
+								<xp:save
+									name="/ctrlsContainerDataTable.xsp">
+								</xp:save>
+							</xp:this.action>
+						</xp:eventHandler>
+					</xp:button>
+					<xp:button value="Edit" id="buttonDataTableEdit">
+						<xp:eventHandler event="onclick" submit="true"
+							refreshMode="complete">
+							<xp:this.action>
+								<xp:changeDocumentMode mode="edit"></xp:changeDocumentMode>
+							</xp:this.action>
+						</xp:eventHandler>
+					</xp:button>
+					<xp:button value="New"
+						id="buttonDataTableNewDocument">
+						<xp:eventHandler event="onclick" submit="true"
+							refreshMode="complete">
+							<xp:this.action>
+								<xp:openPage
+									name="/ctrlsContainerDataTable.xsp" target="newDocument">
+								</xp:openPage>
+							</xp:this.action>
+						</xp:eventHandler>
+					</xp:button>
+					<xp:button value="Delete" id="buttonRepeatDelete">
+
+						<xp:eventHandler event="onclick" submit="true"
+							refreshMode="complete">
+							<xp:this.action>
+								<xp:deleteDocument
+									name="/ctrlsContainerDataTable.xsp"
+									message="This action will delete the document.">
+								</xp:deleteDocument>
+							</xp:this.action>
+						</xp:eventHandler>
+					</xp:button>
+				</xp:panel>
+				<xp:panel id="panel4input">
+					<xp:table styleClass="customTable">
+						<xp:tr>
+							<xp:td>
+								<xp:label value="Subject: "
+									id="label1">
+								</xp:label>
+							</xp:td>
+							<xp:td>
+								<xp:inputText
+									id="inputTextDataTableSubject"
+									value="#{dominoDocument1.Subject}">
+								</xp:inputText>
+
+							</xp:td>
+						</xp:tr>
+						<xp:tr>
+							<xp:td>
+								<xp:label value="Category: "
+									id="label2">
+								</xp:label>
+							</xp:td>
+							<xp:td>
+								<xp:inputText
+									id="inputTextDataTableCategory"
+									value="#{dominoDocument1.Categories}">
+								</xp:inputText>
+							</xp:td>
+						</xp:tr>
+						<xp:tr>
+							<xp:td>
+								<xp:label value="Power: " id="label3">
+								</xp:label>
+							</xp:td>
+							<xp:td>
+								<xp:checkBox
+									id="checkBoxDataTableCheckBox"
+									value="#{dominoDocument1.testCheckBox}" checkedValue="ON"
+									uncheckedValue="OFF">
+								</xp:checkBox>
+							</xp:td>
+						</xp:tr>
+					</xp:table>
+				</xp:panel>
+				<xp:panel id="panel4datatable">
+
+					<xp:label value="Data Table Container:"
+						style="font-weight:bold;color:rgb(0,128,128)">
+					</xp:label>
+
+
+
+					<xp:dataTable id="dataTable1" var="coll1"
+						value="#{dominoView1}" cellpadding="12" cellspacing="10"
+						style="background-color:rgb(254,252,235);border-color:rgb(128,128,0);border-style:solid;border-width:thin;width:100%"
+						styleClass="customTable" rows="100">
+						<xp:column id="column2" style="width:12%">
+							<xp:this.facets>
+								<xp:label value="Date:" id="label4"
+									xp:key="header" style="font-weight:bold">
+								</xp:label>
+							</xp:this.facets>
+
+							<xp:text escape="true">
+								<xp:this.value>
+									<![CDATA[#{javascript:coll1.getColumnValue("Date")}]]>
+								</xp:this.value>
+								<xp:this.converter>
+									<xp:convertDateTime
+										dateStyle="short" type="both" timeStyle="short">
+									</xp:convertDateTime>
+								</xp:this.converter>
+							</xp:text>
+						</xp:column>
+						<xp:column id="column5" style="width:12%">
+							<xp:this.facets>
+								<xp:label value="Author:" id="label5"
+									xp:key="header" style="font-weight:bold">
+								</xp:label>
+							</xp:this.facets>
+							<xp:text escape="true"
+								id="computedFieldByCol">
+								<xp:this.value>
+									<![CDATA[#{javascript:coll1.getColumnValue("Author")}]]>
+								</xp:this.value>
+							</xp:text>
+						</xp:column>
+						<xp:column id="column3" style="width:5%">
+							<xp:this.facets>
+								<xp:label value="Power:" id="label6"
+									xp:key="header" style="font-weight:bold">
+								</xp:label>
+							</xp:this.facets>
+							<xp:text escape="true"
+								id="computedField1">
+								<xp:this.value>
+									<![CDATA[#{javascript:coll1.getColumnValue("Test Control")}]]>
+								</xp:this.value>
+							</xp:text>
+						</xp:column>
+						<xp:column id="column4" style="width:12%">
+							<xp:this.facets>
+								<xp:label value="Category:" id="label7"
+									xp:key="header" style="font-weight:bold">
+								</xp:label>
+							</xp:this.facets>
+							<xp:text escape="true"
+								id="computedField2">
+								<xp:this.value>
+									<![CDATA[#{javascript:coll1.getColumnValue("Category")}]]>
+								</xp:this.value>
+							</xp:text>
+						</xp:column>
+						<xp:column id="column1">
+							<xp:this.facets>
+								<xp:label value="Subject:" id="label8"
+									xp:key="header" style="font-weight:bold">
+								</xp:label>
+							</xp:this.facets>
+							<xp:link id="linkTopicCol">
+								<xp:this.text>
+									<![CDATA[#{javascript:coll1.getColumnValue("Subject")}]]>
+								</xp:this.text>
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="complete">
+									<xp:this.action>
+										<xp:openPage
+											name="/ctrlsContainerDataTable.xsp" target="openDocument"
+											documentId="#{javascript:coll1.getId()}">
+										</xp:openPage>
+									</xp:this.action>
+								</xp:eventHandler>
+							</xp:link>
+						</xp:column>
+					</xp:dataTable>
+
+
+
+
+				</xp:panel>
+
+
+
+
+
+
+			</xp:panel>
+
+		</xp:this.facets>
+	</XPa:ccLayout>
+
+
+</xp:view>

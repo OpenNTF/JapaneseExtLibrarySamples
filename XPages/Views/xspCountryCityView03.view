@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' replicaid='85257A870079CB8F'>
+<noteinfo noteid='2d6' unid='AC7D6CBC103CBD4F802576B70050FD62' sequence='9'>
+<created><datetime dst='true'>20100126T154437,46+01</datetime></created>
+<modified><datetime dst='true'>20130118T132314,44+01</datetime></modified>
+<revised><datetime dst='true'>20130118T132314,43+01</datetime></revised>
+<lastaccessed><datetime dst='true'>20130118T132314,44+01</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20120928T180556,61-04</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name><name
+>CN=Paul Hannan/OU=Ireland/O=IBM</name></updatedby>
+<revisions><datetime dst='true'>20100527T110308,79+01</datetime></revisions>
+<item name='$FormatNote' summary='true' sign='true'>
+<rawitemdata type='4'>
+AQA5JhJTudfLUuNfPwCsdiWA
+</rawitemdata></item>
+<item name='$FormulaClass' sign='true'><text>1</text></item>
+<item name='$TITLE' sign='true'><text>xspCountryCityView03</text></item>
+<item name='$Index' sign='true'><text/></item>
+<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
+kAACABwABwBDb3VudHJ5AAUABwBDb3VudHJ5AAMAAgAUAAQAQ2l0eQUABABDaXR5AwAFACgAJAAE
+AAcABAAJAAQAQ291bnRyeUNpdHkkQ29uZmxpY3QkUkVGBAAEAAAAJgAFAAQARm9ybQEADgB4c3BD
+b3VudHJ5Q2l0eQoCBAAEAAMABwAMAAUACTNTNFMA
+</formula></item>
+<item name='$Collation' summary='true'>
+<rawitemdata type='2'>
+HwACAABECGYHAAAHAIBmAAcABABDb3VudHJ5Q2l0eQ==
+</rawitemdata></item>
+<item name='$VIEWFORMAT' summary='true' sign='true'>
+<rawitemdata type='5'>
+AQACAAUACAAAAFZDAwAHAAcAHgAAACcAAQAACgABAAAAAAAAAAICAAAAVkMBAAQABAAWAAAAqwAB
+AAAKAAAAAAAAAAAAAgIAAABDb3VudHJ5Q291bnRyeR4AAgAcAAcAQ291bnRyeQAFAAcAQ291bnRy
+eQADAENpdHlDaXR5FgACABQABABDaXR5BQAEAENpdHkDACYAAQAAAAEBAAkBAAAKAQEOCgAAAQCt
+KwEAAQABAAAAAAAAAAAAV0MBAQAJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAA
+AAAAAFdDAQEACQAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAP//AAAAAAAAAAAAAAAAAABCAAAAAAAB
+AP///wAFAP///wABAAAAAAAAAAAAAAAAAAEA////AAEA////AAAAAQAAAAAAAQAAAAAAAQAAAAAA
+AAAIAAAAAAABAA==
+</rawitemdata></item>
+<item name='$Comment' sign='true'><text/></item>
+<item name='$Flags'><text>Y</text></item>
+<item name='$DesignerVersion' sign='true'><text>8.5</text></item>
+<item name='$SelQuery' sign='true'>
+<rawitemdata type='f'>
+gQYAAAAAif8aAAAAAAABAA4AeHNwQ291bnRyeUNpdHk=
+</rawitemdata></item>
+<item name='$V5ACTIONS' sign='true'>
+<rawitemdata type='1'>
+vRwjAAAAAQABAAAAAQAAAAAAAAAAAAAACAACAHn/bAABANTQyAABAAAAAAAJAAAAAAABANTQyAAA
+AB8AAAAAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAPz/OgAAAAAAAQAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAEAAAAAAAAAAAAAAAAAAAC+/1AAAAABAAAAnwEAAAcAAAAAAAAAbmV3Q2l0eaoyAAAA
+JAACAOgDAAAAAAAAAQAOAHhzcENvdW50cnlDaXR57QIDAAcADAAFAAkwUzBFAL7/PAAAAAEAAACf
+AQAABQAAAAAAAABSZWNhbAAgAAAAEgACAJcXAAAAAAAA7QEDAAcADAAFAAkwUzBFAA==
+</rawitemdata></item></note>
+

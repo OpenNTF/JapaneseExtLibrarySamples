@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+
+
+	<xp:this.data>
+		<xp:dominoView var="dominoView1" viewName="(Default View)"></xp:dominoView>
+	</xp:this.data>
+	<xp:this.resources>
+		<xp:styleSheet href="/csscustom.css"></xp:styleSheet>
+
+	</xp:this.resources>
+	<XPa:ccLayout id="cc4cclayout" navPath="/basics/simplecrud/">
+		<xp:this.facets>
+			<xc:ccMenu_basics xp:key="facetLeft"></xc:ccMenu_basics>
+
+			<xp:panel xp:key="facetMain" id="panel4facetmain">
+				<xp:button value="New Document" id="buttonNewCRUDDoc">
+					<xp:eventHandler event="onclick" submit="true"
+						refreshMode="complete">
+						<xp:this.action>
+							<xp:openPage name="/crudSimpleTestDoc.xsp"
+								target="newDocument">
+							</xp:openPage>
+						</xp:this.action>
+					</xp:eventHandler>
+				</xp:button>
+				<xp:table id="tableCaption" styleClass="customTable">
+					<xp:tr>
+						<xp:td style="width:20.0%">
+							<xp:label id="label1" value="Date Created"
+								style="font-weight:bold">
+							</xp:label>
+						</xp:td>
+						<xp:td style="width:15.0%">
+							<xp:label id="label2" value="Author"
+								style="font-weight:bold">
+							</xp:label>
+
+						</xp:td>
+						<xp:td>
+							<xp:label id="label3" value="Subject"
+								style="font-weight:bold">
+							</xp:label>
+						</xp:td>
+
+					</xp:tr>
+				</xp:table>
+				<xp:repeat id="repeatView1" value="#{dominoView1}"
+					rows="100" var="coll1">
+					<xp:table id="repeatTable1"
+						styleClass="customTable">
+						<xp:tr>
+							<xp:td style="width:20.0%">
+								<xp:text escape="true">
+									<xp:this.value>
+										<![CDATA[#{javascript:coll1.getColumnValue("Date")}]]>
+									</xp:this.value>
+									<xp:this.converter>
+										<xp:convertDateTime
+											dateStyle="long" type="both" timeStyle="short">
+										</xp:convertDateTime>
+									</xp:this.converter>
+								</xp:text>
+							</xp:td>
+							<xp:td style="width:15.0%">
+
+								<xp:text escape="true"
+									id="computedFieldByCol">
+									<xp:this.value>
+										<![CDATA[#{javascript:coll1.getColumnValue("By")}]]>
+									</xp:this.value>
+								</xp:text>
+							</xp:td>
+							<xp:td>
+								<xp:link id="linkTopicCol">
+									<xp:this.text>
+										<![CDATA[#{javascript:coll1.getColumnValue("Topic")}]]>
+									</xp:this.text>
+									<xp:eventHandler event="onclick"
+										submit="true" refreshMode="complete">
+										<xp:this.action>
+											<xp:openPage
+												name="/crudSimpleTestDoc.xsp" target="openDocument"
+												documentId="#{javascript:coll1.getId()}">
+											</xp:openPage>
+										</xp:this.action>
+									</xp:eventHandler>
+								</xp:link>
+							</xp:td>
+
+						</xp:tr>
+					</xp:table>
+				</xp:repeat>
+
+
+
+
+
+
+			</xp:panel>
+
+		</xp:this.facets>
+	</XPa:ccLayout>
+</xp:view>

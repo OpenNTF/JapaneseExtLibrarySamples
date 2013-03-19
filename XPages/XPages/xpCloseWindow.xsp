@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf">
+
+	<XPa:ccLayout id="cc4cclayout"><xp:this.facets>
+	<xp:panel xp:key="facetMain">
+		<xp:button value="Close Window" id="button1">
+			<xp:eventHandler event="onclick" submit="false">
+				<xp:this.script><![CDATA[window.close();]]></xp:this.script>
+			</xp:eventHandler></xp:button></xp:panel></xp:this.facets></XPa:ccLayout></xp:view>

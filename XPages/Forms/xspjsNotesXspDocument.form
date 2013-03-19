@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' replicaid='85257A870079CB8F'>
+<noteinfo noteid='78e' unid='43A46DED9AFA50FB802577310032FD19' sequence='5'>
+<created><datetime dst='true'>20100528T101655,93+01</datetime></created>
+<modified><datetime dst='true'>20130118T132315,20+01</datetime></modified>
+<revised><datetime dst='true'>20130118T132315,19+01</datetime></revised>
+<lastaccessed><datetime dst='true'>20130118T132315,20+01</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20120928T180643,16-04</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name><name
+>CN=Paul Hannan/OU=Ireland/O=IBM</name></updatedby>
+<revisions><datetime dst='true'>20100528T101655,95+01</datetime></revisions>
+<item name='$Comment' sign='true'><text/></item>
+<item name='$HTMLCode' sign='true'>
+<rawitemdata type='1'>
+X/8QAAIADwAHAAAAAAAAAA==
+</rawitemdata></item>
+<item name='$TITLE'><text>xspjsNotesXspDocument</text></item>
+<item name='$INFO' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAQAAAA
+</rawitemdata></item>
+<item name='$Flags'><text/></item>
+<item name='$DesignerVersion' sign='true'><text>8.5.2</text></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>xspjsNotesXspDocument</text></item>
+<item name='NotesXspDocumentSubject' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='NotesXspDocumentBody' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='NotesXspDocumentDate' summary='false' sign='true'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='NotesXspDocumentInteger' summary='false' sign='true'><number>0</number></item>
+<item name='NotesXspDocumentDouble' summary='false' sign='true'><number>0</number></item>
+<item name='$Fields'><textlist><text>NotesXspDocumentDouble</text><text>NotesXspDocumentInteger</text><text
+>NotesXspDocumentDate</text><text>NotesXspDocumentBody</text><text>NotesXspDocumentSubject</text></textlist></item>
+<item name='$BODY' sign='true'>
+<rawitemdata type='1'>
+gQKC/1oAAQAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAABAAAAAJSHAAAAAAAAAAAAAAAAAQAAAAQAAACDBAEAhf8IAAEAAArdBgAAiv/+/1AA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4AHgAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAIr/PACKAAAFADACAAAAAAAAAgEAAAoAAAAAAAAAABcAAAAAAE5v
+dGVzWHNwRG9jdW1lbnRTdWJqZWN0AGIOAQCEAAAAAAAAAAAA3gYAAIr/hf8IAAEAAArdBgAAiv/+
+/1AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4AHgAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAIr/OACCAAEAAAACAAAAAAAAAgEAAAoAAAAAAAAAABQAAAAA
+AE5vdGVzWHNwRG9jdW1lbnRCb2R5Yg4BAIQAAAAAAAEAAADeBgAAiv+F/wgAAQAACt0GAACK//7/
+VAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHgAeAAAAAAAAEiAAwAAAAAAAQIC
+AgEBAQEHBAAAAAAAAAAAAAAAAAAAIC8vOor/OACKAAAEADACAAAAAAAAAAEAAAoAAAAAAAAAABQA
+AAAAAE5vdGVzWHNwRG9jdW1lbnREYXRl3gYAAIr/hf8IAAEAAArdBgAAiv/+/1AAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4AHgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAIr/PACKAAADADACAAAAAAAAAgEAAAoAAAAAAAAAABcAAAAAAE5vdGVzWHNwRG9j
+dW1lbnRJbnRlZ2VyAN4GAACK/4X/CAABAAAK3QYAAIr//v9QAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAeAB4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACK
+/zoAigAAAwAwAgAAAAAAAAIBAAAKAAAAAAAAAAAWAAAAAABOb3Rlc1hzcERvY3VtZW50RG91Ymxl
+3gYAAIr/hf8IAAEAAAqBAoMEAQCF/wgAAQAACoECgwQBAIX/CAABAAAK
+</rawitemdata></item></note>
+

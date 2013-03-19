@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:XPa="component/XPages.nsf"
+	xmlns:xc="http://www.ibm.com/xsp/custom" xmlns:xe="http://www.ibm.com/xsp/coreex">
+
+	<XPa:ccLayout navPath="/new/sendmail/">
+		<xp:this.facets>
+			<xp:panel xp:key="facetMain">
+
+
+				<xp:div style="font-weight:bold;color:rgb(255,0,0)">
+					Please login to use the Send Mail simple action
+					<xp:this.rendered><![CDATA[#{javascript:var u = context.getUser().getCommonName();
+@If(u=="Anonymous",true,false)}]]></xp:this.rendered>
+				</xp:div>
+				<xp:panel id="sendmailpanel">
+					<xp:this.rendered><![CDATA[#{javascript:var u = context.getUser().getCommonName();
+@If(u=="Anonymous",false,true)}]]></xp:this.rendered>
+					<xp:button value="Select this button to send a mail to yourself"
+						id="button1">
+
+						<xp:eventHandler event="onclick" submit="true"
+							refreshMode="complete">
+							<xp:this.action>
+								<xp:sendMail bodyPlain="TEST MAIL" importance="low"
+									deliveryPriority="low" markSubjectConfidential="true"
+									htmlUrl="/simpleActionSendMail.xsp" from="XPages Demo App"
+									to="#{javascript:context.getUser().getMail()}">
+									<xp:this.subject><![CDATA[#{javascript:"A message sent to myself from the XPages Demo App - "+@Now()}]]></xp:this.subject>
+								</xp:sendMail>
+							</xp:this.action>
+						</xp:eventHandler>
+					</xp:button>
+					<xp:br></xp:br>
+					<hr />
+					<xp:div>
+						Send a mail to someone from your Names and
+						Address book.
+					</xp:div>
+					<xp:label value="To: " id="label1" style="font-weight:bold">
+					</xp:label>
+					
+					<xp:inputText id="inputTextTo">
+						<xp:eventHandler event="onchange" submit="true"
+							refreshMode="partial" refreshId="sendmailpanel">
+						</xp:eventHandler></xp:inputText>
+					<xe:namePicker id="namePicker1" for="inputTextTo">
+						<xe:this.dataProvider>
+							<xe:dominoNABNamePicker></xe:dominoNABNamePicker>
+						</xe:this.dataProvider>
+					</xe:namePicker>
+					<xp:br></xp:br>
+					<xp:button value="Send" id="buttonSendmail"><xp:this.rendered><![CDATA[#{javascript:var inputTextTo:com.ibm.xsp.component.xp.XspInputText = getComponent("inputTextTo");
+var t = inputTextTo.getValue();
+t!=null}]]></xp:this.rendered><xp:eventHandler event="onclick" submit="true" refreshMode="complete">
+	<xp:this.action>
+
+		<xp:actionGroup>
+			<xp:sendMail from="XPages Demo App"
+				subject="Test mail from the XPages Demo App  - To: field test">
+				<xp:this.to><![CDATA[#{javascript:var To:com.ibm.xsp.component.xp.XspInputText = getComponent("inputTextTo");
+To.getValue()}]]></xp:this.to>
+			</xp:sendMail>
+			<xp:executeScript>
+				<xp:this.script><![CDATA[#{javascript:var inputTextTo:com.ibm.xsp.component.xp.XspInputText = getComponent("inputTextTo");
+inputTextTo.setValue(null)}]]></xp:this.script>
+			</xp:executeScript>
+		</xp:actionGroup>
+	</xp:this.action></xp:eventHandler></xp:button>
+					<xp:br></xp:br>
+					<xp:button value="Send a mail to the above recipient with the Embedded Experience of this page" id="button3">
+					<xp:this.rendered><![CDATA[#{javascript:var inputTextTo:com.ibm.xsp.component.xp.XspInputText = getComponent("inputTextTo");
+var t = inputTextTo.getValue();
+t!=null}]]></xp:this.rendered><xp:eventHandler event="onclick" submit="true"
+refreshMode="complete">
+<xp:this.action>
+	<xp:actionGroup><xp:sendMail encodingType="BASE64"
+			bodyPlain="You should see Embedded Experience if your Notes or iNotes client has been configured for such."
+			embeddedFormat="json" from="XPages Demo App">
+			<xp:this.bodyHtml><![CDATA[#{javascript:var url = context.getUrl();
+"<a href='"+ url+ "'> A link to the XPages Demo App </a>"}]]></xp:this.bodyHtml>
+			<xp:this.embeddedJson>
+				<![CDATA[#{javascript:var url =context.getUrl();
+var json='{"url" : "' + url + '"}';
+return json;}]]>
+			</xp:this.embeddedJson>
+			<xp:this.subject><![CDATA[#{javascript:"An email from the XPages Demo App containing an Embedded Experience, sent "+@Now()}]]></xp:this.subject>
+			<xp:this.to><![CDATA[#{javascript:var inputTextTo:com.ibm.xsp.component.xp.XspInputText = getComponent("inputTextTo");
+inputTextTo.getValue()}]]></xp:this.to>
+		</xp:sendMail>
+
+
+		<xp:executeScript>
+			<xp:this.script><![CDATA[#{javascript:var inputTextTo:com.ibm.xsp.component.xp.XspInputText = getComponent("inputTextTo");
+inputTextTo.setValue(null)}]]></xp:this.script>
+		</xp:executeScript>
+	</xp:actionGroup>
+</xp:this.action>
+</xp:eventHandler>
+	</xp:button>
+					<xp:br></xp:br>
+<hr/>
+				</xp:panel>
+			</xp:panel>
+			<xc:ccMenu_new xp:key="facetLeft"></xc:ccMenu_new>
+		</xp:this.facets>
+	</XPa:ccLayout>
+</xp:view>

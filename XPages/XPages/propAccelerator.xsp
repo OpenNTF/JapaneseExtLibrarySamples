@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+
+	<XPa:ccLayout id="cc4cclayout"  navPath="/forms/paccelerator/">
+		<xp:this.facets>
+			<xc:ccMenu_forms xp:key="facetLeft"></xc:ccMenu_forms>
+			<xp:table xp:key="facetMain" style="width:670.0px"
+				styleClass="customTable">
+				<xp:tr>
+					<xp:td
+						style="font-weight:bold;font-size:12pt;height:43.0px">
+						<xp:div style="text-align:center">
+							Control Name:
+						</xp:div>
+					</xp:td>
+					<xp:td
+						style="font-weight:bold;font-size:12pt;height:43.0px;width:274.0px">
+						<xp:div style="text-align:center">
+							Control:
+						</xp:div>
+					</xp:td>
+					<xp:td
+						style="font-weight:bold;font-size:12pt;height:43.0px;width:112.0px">
+						<xp:div style="text-align:center">
+							Tab Order (IE)
+						</xp:div>
+					</xp:td>
+					<xp:td
+						style="font-weight:bold;font-size:12pt;height:43.0px;width:148.0px">
+						<xp:div style="text-align:center">
+							Tab Order (Firefox)
+						</xp:div>
+					</xp:td>
+				</xp:tr>
+				<xp:tr>
+					<xp:td style="width:118.0px">Edit Box</xp:td>
+					<xp:td style="padding-left:10.0px;width:274.0px">
+						<xp:inputText id="inputTextAccelerator01"
+							style="text-align:center" accesskey="J">
+						</xp:inputText>
+					</xp:td>
+					<xp:td style="text-align:center;width:112.0px">
+						<xp:div style="text-align:center">
+							Alt + J
+						</xp:div>
+					</xp:td>
+					<xp:td style="text-align:center;width:148.0px">
+						Shift + Alt + J
+					</xp:td>
+				</xp:tr>
+				<xp:tr>
+					<xp:td style="width:118.0px">
+						MultiLine Edit Box
+					</xp:td>
+					<xp:td style="padding-left:10.0px;width:274.0px">
+						<xp:inputTextarea
+							id="inputTextareaAccelerator01" style="text-align:center"
+							accesskey="K">
+						</xp:inputTextarea>
+					</xp:td>
+					<xp:td style="width:112.0px">
+						<xp:div style="text-align:center">
+							Alt + K
+						</xp:div>
+					</xp:td>
+					<xp:td style="text-align:center;width:148.0px">
+						Shift + Alt + K
+					</xp:td>
+				</xp:tr>
+				<xp:tr>
+					<xp:td style="width:118.0px">Button</xp:td>
+					<xp:td style="padding-left:10.0px;width:274.0px">
+						<xp:button value="Button"
+							id="buttonAccelerator01" style="text-align:center"
+							accesskey="L">
+							<xp:eventHandler event="onclick"
+								submit="true" refreshMode="complete" id="eventHandler1">
+								<xp:this.action>
+									<xp:setValue
+										binding="#{requestScope.buttonEvent}"
+										value="Button Clicked">
+									</xp:setValue>
+								</xp:this.action>
+							</xp:eventHandler>
+						</xp:button>
+						<xp:text escape="true"
+							id="buttonActionAcceleratorKeys"
+							value="#{requestScope.buttonEvent}">
+						</xp:text>
+					</xp:td>
+					<xp:td style="text-align:center;width:112.0px">
+						<xp:div style="text-align:center">
+							Alt + L
+						</xp:div>
+					</xp:td>
+					<xp:td style="text-align:center;width:148.0px">
+						Shift + Alt + L
+					</xp:td>
+				</xp:tr>
+				<xp:tr>
+					<xp:td style="width:118.0px">List Box</xp:td>
+					<xp:td style="padding-left:10.0px;width:274.0px">
+						<xp:listBox id="listBoxAccelerator01"
+							style="text-align:center" accesskey="V">
+							<xp:selectItem itemLabel="Apples"
+								itemValue="Apples" id="selectItem1">
+							</xp:selectItem>
+							<xp:selectItem itemLabel="Oranges"
+								itemValue="Oranges" id="selectItem2">
+							</xp:selectItem>
+							<xp:selectItem itemLabel="Grapes"
+								itemValue="Grapes" id="selectItem3">
+							</xp:selectItem>
+						</xp:listBox>
+					</xp:td>
+					<xp:td style="text-align:center;width:112.0px">
+						<xp:div style="text-align:center">
+							Alt + V
+						</xp:div>
+					</xp:td>
+					<xp:td style="text-align:center;width:148.0px">
+						Shift + Alt + V
+					</xp:td>
+				</xp:tr>
+				<xp:tr>
+					<xp:td style="width:118.0px">Combo Box</xp:td>
+					<xp:td style="padding-left:10.0px;width:274.0px">
+						<xp:comboBox id="comboBoxAccelerator01"
+							accesskey="B">
+							<xp:selectItem itemLabel="Apples"
+								itemValue="Apples" id="selectItem4">
+							</xp:selectItem>
+							<xp:selectItem itemLabel="Oranges"
+								itemValue="Oranges" id="selectItem5">
+							</xp:selectItem>
+							<xp:selectItem itemLabel="Grapes"
+								itemValue="Grapes" id="selectItem6">
+							</xp:selectItem>
+						</xp:comboBox>
+					</xp:td>
+					<xp:td style="text-align:center;width:112.0px">
+						<xp:div style="text-align:center">
+							Alt + B
+						</xp:div>
+					</xp:td>
+					<xp:td style="text-align:center;width:148.0px">
+						Shift + Alt + B
+					</xp:td>
+				</xp:tr>
+				<xp:tr>
+					<xp:td style="width:118.0px">Check Box</xp:td>
+					<xp:td style="width:274.0px">
+						<xp:checkBox text="Label"
+							id="checkBoxAccelerator01" style="padding-left:10px"
+							accesskey="W">
+						</xp:checkBox>
+					</xp:td>
+					<xp:td style="text-align:center;width:112.0px">
+						<xp:div style="text-align:center">
+							Alt + W
+						</xp:div>
+					</xp:td>
+					<xp:td style="text-align:center;width:148.0px">
+						Shift + Alt + W
+					</xp:td>
+				</xp:tr>
+				<xp:tr>
+					<xp:td style="width:118.0px">Radio Button</xp:td>
+					<xp:td style="padding-left:10px;width:274.0px">
+						<xp:radio text="Label" id="radioAccelerator01"
+							accesskey="Y">
+						</xp:radio>
+					</xp:td>
+					<xp:td style="text-align:center;width:112.0px">
+						<xp:div style="text-align:center">
+							Alt + Y
+						</xp:div>
+					</xp:td>
+					<xp:td style="text-align:center;width:148.0px">
+						Shift + Alt + Y
+					</xp:td>
+				</xp:tr>
+				<!-- 
+					<xp:tr>
+					<xp:td style="width:118.0px">Image:</xp:td>
+					<xp:td style="padding-left:10px;width:274.0px">
+					<xp:image url="/lotus-logo2.gif"
+					id="imageAccelerator01" accesskey="G">
+					</xp:image>
+					</xp:td>
+					<xp:td style="text-align:center;width:112.0px">
+					<xp:div style="text-align:center">
+					Alt + G
+					</xp:div>
+					</xp:td>
+					<xp:td style="text-align:center;width:148.0px">
+					Shift + Alt + G
+					</xp:td>
+					</xp:tr>
+				-->
+
+				<xp:tr>
+					<xp:td style="width:118.0px">Section:</xp:td>
+					<xp:td style="width:274.0px">
+						<xp:section id="sectionAccelerator01"
+							style="padding-left:10px" header="This is a section"
+							initClosed="true" accesskey="C">
+							<xp:button
+								id="buttonAcceleratorKeys_sectionButton"
+								value="Section Button">
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="complete" id="eventHandler2">
+									<xp:this.action>
+										<xp:setValue
+											binding="#{requestScope.buttonClickAction}"
+											value="Button on Section Clicked">
+										</xp:setValue>
+									</xp:this.action>
+								</xp:eventHandler>
+							</xp:button>
+							<xp:text escape="true"
+								id="computedField_sectionButton"
+								value="#{requestScope.buttonClickAction}">
+							</xp:text>
+						</xp:section>
+					</xp:td>
+					<xp:td style="text-align:center;width:112.0px">
+						<xp:div style="text-align:center">
+							Alt + C
+						</xp:div>
+					</xp:td>
+					<xp:td style="text-align:center;width:148.0px">
+						Shift + Alt + C
+					</xp:td>
+				</xp:tr>
+				<xp:tr>
+					<xp:td style="width:118.0px">Link</xp:td>
+					<xp:td style="padding-left:10px;width:274.0px">
+						<xp:link escape="true" text="Link to IBM site"
+							id="linkAccelerator01" value="http://www.ibm.com/ibm/us/en/"
+							accesskey="P">
+						</xp:link>
+					</xp:td>
+					<xp:td style="text-align:center;width:112.0px">
+						<xp:div style="text-align:center">
+							Alt + P
+						</xp:div>
+					</xp:td>
+					<xp:td style="text-align:center;width:148.0px">
+						Shift + Alt + P
+					</xp:td>
+				</xp:tr>
+				<xp:tr>
+					<xp:td style="width:118.0px">Label</xp:td>
+					<xp:td style="padding-left:10px;width:274.0px">
+						<xp:label id="labelAccelerator01"
+							value="#{javascript:@DbTitle()}" accesskey="Q">
+						</xp:label>
+					</xp:td>
+					<xp:td style="text-align:center;width:112.0px">
+						<xp:div style="text-align:center">
+							Alt + Q
+						</xp:div>
+					</xp:td>
+					<xp:td style="text-align:center;width:148.0px">
+						Shift + Alt + Q
+					</xp:td>
+				</xp:tr>
+				<xp:tr>
+					<xp:td>Link with Image</xp:td>
+					<xp:td style="width:274.0px">
+						<xp:link escape="true" id="linkWithImage"
+							value="http://www.ibm.com/ibm/us/en/" tabindex="13"
+							accesskey="X">
+							<xp:image id="image1"
+								url="/ibm-logo03.gif">
+							</xp:image>
+						</xp:link>
+					</xp:td>
+					<xp:td style="text-align:center;width:112.0px">
+						<xp:div style="text-align:center">
+							Alt + X
+						</xp:div>
+					</xp:td>
+					<xp:td style="text-align:center;width:148.0px">
+						<xp:div style="text-align:center">
+							Shift + Alt + X
+						</xp:div>
+					</xp:td>
+				</xp:tr>
+			</xp:table>
+		</xp:this.facets>
+	</XPa:ccLayout>
+</xp:view>

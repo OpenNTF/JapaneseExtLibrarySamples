@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+
+	<xp:this.data>
+		<xp:dominoDocument var="document2"
+			formName="xspjsNotesXspDocument">
+		</xp:dominoDocument>
+	</xp:this.data>
+
+	<XPa:ccLayout id="cc4cclayout" navPath="/other/godocument/">
+		<xp:this.facets>
+			<xc:ccMenu_other xp:key="facetLeft"></xc:ccMenu_other>
+			<xp:panel xp:key="facetMain">
+
+
+				<xp:span
+					style="color:rgb(0,128,255);font-weight:bold">
+					Response
+				</xp:span>
+				<xp:br></xp:br>
+				<xp:br></xp:br>
+				Subject
+				<xp:inputText id="inputText1"
+					value="#{document2.NotesXspDocumentSubject}">
+				</xp:inputText>
+
+				<xp:button value="Save" id="button1">
+					<xp:eventHandler event="onclick" submit="true"
+						refreshMode="complete">
+						<xp:this.action>
+							<xp:save name="/jsXSPDocument.xsp"></xp:save>
+						</xp:this.action>
+					</xp:eventHandler>
+				</xp:button>
+				<xp:br></xp:br>
+				<xp:inputRichText id="inputRichText1"
+					value="#{document2.NotesXspDocumentBody}">
+				</xp:inputRichText>
+				<xp:br></xp:br>
+			</xp:panel>
+		</xp:this.facets>
+	</XPa:ccLayout>
+</xp:view>

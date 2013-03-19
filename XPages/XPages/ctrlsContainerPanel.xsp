@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+
+	<xp:this.beforePageLoad><![CDATA[#{javascript:requestScope.p01 = "show"}]]></xp:this.beforePageLoad>
+	<XPa:ccLayout id="cc4cclayout"  navPath="/basics/panel/">
+		<xp:this.facets>
+			<xc:ccMenu_basics xp:key="facetLeft"></xc:ccMenu_basics>
+			<xp:panel xp:key="facetMain" id="panel4facetmain">
+
+				<xp:panel id="panelOne" title="Panel One"
+					style="height:300px;width:300px;text-align:right;background-color:rgb(238,247,245);border-color:rgb(0,128,64);border-style:solid;border-width:thin">
+					Panel Content I
+					<xp:br></xp:br>
+					<xp:checkBox text="Show Panel II"
+						id="checkBoxShowHidePanel2" defaultChecked="true"
+						value="#{requestScope.p01}" checkedValue="show"
+						uncheckedValue="hide" style="font-weight:bold">
+						<xp:eventHandler event="onchange" submit="true"
+							refreshMode="partial" refreshId="panelOne">
+						</xp:eventHandler>
+					</xp:checkBox>
+					<xp:panel id="panelTwo" title="Panel Two"
+						style="height:200px;width:200px;text-align:center;background-color:rgb(241,233,254);border-color:rgb(128,0,128);border-style:dotted;border-width:thin">
+						Panel Content II
+						<xp:this.rendered><![CDATA[#{javascript:requestScope.p01 == "show"}]]></xp:this.rendered>
+						<xp:panel id="panelThree" title="Panel Three"
+							style="height:100px;width:100px;text-align:right;background-color:rgb(224,236,254);border-color:rgb(0,128,192);border-style:double;border-width:medium;background-position:bottom right">
+							Panel Content III
+						</xp:panel>
+					</xp:panel>
+				</xp:panel>
+
+
+
+			</xp:panel>
+
+		</xp:this.facets>
+	</XPa:ccLayout>
+</xp:view>

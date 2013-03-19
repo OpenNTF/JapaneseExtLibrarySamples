@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+
+	<XPa:ccLayout navPath="/events/prmain/">
+		<xp:this.facets>
+			<xc:ccMenu_events xp:key="facetLeft"></xc:ccMenu_events>
+			<xp:panel xp:key="facetMain">
+				<xp:span
+					style="color:rgb(0,128,255);font-weight:bold;font-size:16pt">
+					Partial Refresh
+				</xp:span>
+				<xp:br></xp:br>
+				<xp:span
+					style="color:rgb(0,128,255);font-weight:bold;font-size:16pt">
+				</xp:span>
+				<xp:link escape="true" text="Core Controls" id="link1"
+					style="font-size:12pt;font-weight:bold"
+					value="/ajaxPartialRefreshCore.xsp">
+
+					<xp:span style="font-weight:bold"></xp:span>
+				</xp:link>
+				<xp:br></xp:br>
+				<xp:link escape="true" text="Container Controls"
+					id="link3" style="font-size:12pt;font-weight:bold"
+					value="/ajaxPartialRefreshContainer.xsp">
+
+				</xp:link>
+				<xp:br></xp:br>
+				<xp:link escape="true" text="Multilevel Dojo Controls"
+					id="link2" style="font-size:12pt;font-weight:bold"
+					value="/ajaxPartialRefreshDojo.xsp">
+
+				</xp:link>
+				<xp:br></xp:br>
+				<xp:link escape="true" text="Server Options" id="link4"
+					style="font-size:12pt;font-weight:bold"
+					value="/ajaxPartialRefreshServer.xsp">
+
+				</xp:link>
+				<xp:br></xp:br>
+				<xp:link escape="true" text="More Server Options"
+					id="link6" style="font-size:12pt;font-weight:bold"
+					value="/ajaxPartialRefreshServerMore.xsp">
+					<xp:eventHandler event="onclick" submit="true"
+						refreshMode="complete">
+						<xp:this.action>
+							<xp:openPage
+								name="/ajaxPartialRefreshServer.xsp">
+							</xp:openPage>
+						</xp:this.action>
+					</xp:eventHandler>
+				</xp:link>
+				<xp:br></xp:br>
+
+				<xp:link escape="true" id="link5"
+					style="font-size:12pt;font-weight:bold"
+					text="Toggle Documents from edit to read-only mode"
+					value="/ajaxPartialRefreshDoc.xsp">
+
+				</xp:link>
+				<xp:br></xp:br>
+				<xp:br></xp:br>
+				<xp:br></xp:br>
+				<xp:button value="Delete Selected" id="button1">
+					<xp:eventHandler event="onclick" submit="true"
+						refreshMode="complete">
+						<xp:this.action>
+							<xp:deleteSelectedDocuments
+								view="viewPanel1" message="Delete all documents?">
+							</xp:deleteSelectedDocuments>
+						</xp:this.action>
+					</xp:eventHandler>
+				</xp:button>
+				<xp:viewPanel rows="30" id="viewPanel1"
+					pageName="/ajaxPartialRefreshDoc.xsp">
+					<xp:this.facets>
+						<xp:pager partialRefresh="true"
+							layout="Previous Group Next" xp:key="headerPager" id="pager1">
+						</xp:pager>
+					</xp:this.facets>
+					<xp:this.data>
+						<xp:dominoView var="xspPartialRefresh"
+							viewName="xspPartialRefresh">
+						</xp:dominoView>
+					</xp:this.data>
+					<xp:viewColumn id="viewColumn2" showCheckbox="true"
+						displayAs="hidden" value="#{javascript:return null}">
+						<xp:this.facets>
+							<xp:viewColumnHeader xp:key="header"
+								id="viewColumnHeader2">
+							</xp:viewColumnHeader>
+						</xp:this.facets>
+					</xp:viewColumn>
+					<xp:viewColumn id="viewColumn1" displayAs="link"
+						columnName="partialRefreshSubject">
+						<xp:viewColumnHeader id="viewColumnHeader1"
+							value="Partial refresh subject">
+						</xp:viewColumnHeader>
+
+						<xp:eventHandler event="onclick" submit="true"
+							refreshMode="complete">
+							<xp:this.action>
+								<xp:openPage
+									name="/ajaxPartialRefreshDoc.xsp" target="openDocument">
+								</xp:openPage>
+							</xp:this.action>
+						</xp:eventHandler>
+					</xp:viewColumn>
+
+				</xp:viewPanel>
+			</xp:panel>
+		</xp:this.facets>
+	</XPa:ccLayout>
+</xp:view>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf"
+	xmlns:xc="http://www.ibm.com/xsp/custom"
+	xmlns:xe="http://www.ibm.com/xsp/coreex">
+
+	<XPa:ccLayout navPath="/new/redirect/">
+		<xp:this.facets>
+			<xp:panel xp:key="facetMain">
+				<xp:this.data>
+					<xp:dominoDocument var="document1"
+						formName="f01redirect">
+					</xp:dominoDocument>
+				</xp:this.data>
+				<xc:cc4redirect></xc:cc4redirect>
+
+				<xp:div style="color:rgb(255,0,0);font-weight:bold;font-size:14pt">
+					You should NOT be seeing this if you are viewing
+					this XPage in XPiNC, Firefox, Chrome, Safari, IE, or
+					on a mobile device (iOS or Android)
+				</xp:div>
+				
+				<xp:br></xp:br>
+				<xe:redirect id="redirect1">
+
+					<xe:this.rules>
+						<xe:redirectCustomRule
+							url="/p02redirectFirefox.xsp">
+
+							<xe:this.redirect><![CDATA[#{javascript:var b = context.getUserAgent().getBrowser();
+@If(@Contains(b, "Firefox"), true, false)}]]></xe:this.redirect>
+						</xe:redirectCustomRule>
+						<xe:redirectCustomRule
+							url="/p02redirectChrome.xsp">
+							<xe:this.redirect><![CDATA[#{javascript:var b = context.getUserAgent().getBrowser();
+var m = context.getUserAgent().getUserAgent();
+var e = @If(@Contains(b, "Chrome"), true, false);
+
+@If(@Contains(m,"Mobile"),false, e )}]]></xe:this.redirect>
+						</xe:redirectCustomRule>
+						<xe:redirectCustomRule
+							url="/p02redirectSafari.xsp">
+							<xe:this.redirect><![CDATA[#{javascript:var b = context.getUserAgent().getBrowser();
+var m = context.getUserAgent().getUserAgent();
+var e = @If(@Contains(b, "Safari"), true, false);
+
+@If(@Contains(m,"iPad"|"iPhone"|"Android"),false, e )}]]></xe:this.redirect>
+						</xe:redirectCustomRule>
+						<xe:redirectCustomRule
+							url="/p02redirectIE.xsp">
+							<xe:this.redirect><![CDATA[#{javascript:var b = context.getUserAgent().getBrowser();
+@If(b =="IE", true, false)}]]></xe:this.redirect>
+						</xe:redirectCustomRule>
+						<xe:redirectCustomRule
+							url="/p02redirectXPiNC.xsp">
+							<xe:this.redirect><![CDATA[#{javascript:var b = @ClientType();
+@If(b =="Notes", true, false)}]]></xe:this.redirect>
+						</xe:redirectCustomRule>
+						<xe:redirectPhoneRule
+							url="/m_p02redirectSmartphone.xsp" urlHash="mpdoc">
+						</xe:redirectPhoneRule>
+						<xe:redirectTabletRule
+							url="/m_p02redirectTablet.xsp" urlHash="mtdoc">
+						</xe:redirectTabletRule>
+
+					</xe:this.rules>
+				</xe:redirect>
+				<xp:br></xp:br>
+				<xp:button value="Close" id="button1">
+					<xp:eventHandler event="onclick" submit="true"
+						refreshMode="complete" immediate="true" save="false">
+						<xp:this.action>
+							<xp:openPage name="/p01redirect.xsp"></xp:openPage>
+						</xp:this.action>
+					</xp:eventHandler>
+				</xp:button>
+				<xp:br></xp:br>
+				<xp:label value="Subject: " id="label1"></xp:label>
+				<xp:inputText id="inputText1"
+					value="#{document1.subject}">
+				</xp:inputText>
+				<xp:br></xp:br>
+				<xp:label value="Category: " id="label2"></xp:label>
+				<xp:inputText id="inputText2"
+					value="#{document1.category}">
+				</xp:inputText>
+				<xp:br></xp:br>
+				<hr />
+				<xp:inputRichText id="inputRichText1"
+					value="#{document1.body}">
+				</xp:inputRichText>
+				<xp:br></xp:br>
+			</xp:panel>
+			<xc:ccMenu_new xp:key="facetLeft"></xc:ccMenu_new>
+		</xp:this.facets>
+	</XPa:ccLayout>
+</xp:view>

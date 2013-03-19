@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" replicaid="85257A870079CB8F" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="432" sequence="39" unid="B6A08655C76C3204802575FC00692EB7">
+<created><datetime dst="true">20090723T200852,39+01</datetime></created>
+<modified><datetime>20130319T214345,09+09</datetime></modified>
+<revised><datetime>20130319T214345,08+09</datetime></revised>
+<lastaccessed><datetime>20130319T214345,09+09</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20120928T180605,17-04</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=Admin/O=LotusLab</name></updatedby>
+<revisions><datetime dst="true">20090723T200852,39+01</datetime><datetime dst="true">20090723T200852,41+01</datetime><datetime dst="true">20090723T200852,62+01</datetime><datetime dst="true">20090723T200852,64+01</datetime><datetime dst="true">20090723T201124,61+01</datetime><datetime dst="true">20090723T201124,82+01</datetime><datetime dst="true">20090723T201124,84+01</datetime><datetime dst="true">20090727T152143,05+01</datetime><datetime dst="true">20090727T152143,94+01</datetime><datetime dst="true">20090727T152147,36+01</datetime><datetime dst="true">20090727T152147,38+01</datetime><datetime dst="true">20090806T210346,56+01</datetime><datetime dst="true">20090806T210347,45+01</datetime><datetime dst="true">20090806T210347,81+01</datetime><datetime dst="true">20090806T210347,83+01</datetime><datetime dst="true">20090826T113840,72+01</datetime><datetime dst="true">20090826T113841,42+01</datetime><datetime dst="true">20090826T113841,67+01</datetime><datetime dst="true">20090826T113841,69+01</datetime><datetime dst="true">20090826T113907,68+01</datetime><datetime dst="true">20090826T113908,36+01</datetime><datetime dst="true">20090826T113908,93+01</datetime><datetime dst="true">20100603T132254,86+01</datetime><datetime dst="true">20110331T101352,64+01</datetime><datetime dst="true">20121213T111025,99+01</datetime><datetime dst="true">20121213T111026,44+01</datetime></revisions>
+<wassignedby><name>CN=Admin/O=LotusLab</name></wassignedby>
+<item name="$TITLE"><text>viewFilteringNumber.xsp</text></item>
+
+<item name="$Flags"><text>gC~K4</text></item>
+
+
+<item name="$FileNames" sign="true"><text>viewFilteringNumber.xsp</text></item>
+<item name="$DesignerVersion"><text>8.5</text></item>
+
+
+
+</note>

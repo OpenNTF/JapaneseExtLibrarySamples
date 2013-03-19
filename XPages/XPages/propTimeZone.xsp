@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+	<xp:this.resources>
+		<xp:styleSheet href="/csscustom.css"></xp:styleSheet>
+	</xp:this.resources>
+	<XPa:ccLayout id="cc4cclayout" navPath="/other/timezone/">
+		<xp:this.facets>
+			<xc:ccMenu_other xp:key="facetLeft"></xc:ccMenu_other>
+
+			<xp:panel xp:key="facetMain">
+
+				These are the timezones in use:
+
+
+				<xp:table>
+					<xp:tr>
+						<xp:td
+							style="background-color:rgb(244,251,255)">
+							User's timezone -context.getTimeZoneString()
+						</xp:td>
+						<xp:td>
+							<xp:text escape="true" id="computedField8"
+								style="font-weight:bold"
+								value="#{javascript:context.getTimeZoneString()}">
+							</xp:text>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td
+							style="background-color:rgb(244,251,255)">
+							TimeZone.getDefault()
+						</xp:td>
+						<xp:td>
+							<xp:text escape="true" id="computedField9"
+								style="font-weight:bold"
+								value="#{javascript:TimeZone.getDefault()}">
+							</xp:text>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td
+							style="background-color:rgb(244,251,255)">
+							Server timezone - I18n.getServerTimeZone()
+						</xp:td>
+						<xp:td>
+							<xp:text escape="true" id="computedField10"
+								style="font-weight:bold"
+								value="#{javascript:I18n.getServerTimeZone()}">
+							</xp:text>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td
+							style="background-color:rgb(244,251,255)">
+							Set Timezone::
+						</xp:td>
+						<xp:td>
+
+							<xp:comboBox id="comboBox1"
+								value="#{sessionScope.tz1}" defaultValue="None">
+
+
+								<xp:selectItem itemLabel="None"
+									itemValue="">
+								</xp:selectItem>
+								<xp:selectItems>
+									<xp:this.value><![CDATA[${javascript:TimeZone.getAvailableIDs().sort()}]]></xp:this.value>
+								</xp:selectItems>
+
+								<xp:eventHandler event="onchange"
+									submit="true" refreshMode="complete">
+									<xp:this.action><![CDATA[#{javascript:var tz = sessionScope.tz1;
+context.setTimeZoneString(tz)
+//context.setTimeZone(tz)}]]></xp:this.action>
+								</xp:eventHandler>
+
+							</xp:comboBox>
+							<xp:button value="reset time zone"
+								id="button6">
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="complete">
+									<xp:this.action><![CDATA[#{javascript:context.setTimeZoneString("")}]]></xp:this.action>
+								</xp:eventHandler>
+							</xp:button>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td
+							style="background-color:rgb(244,251,255)">
+							Current Date and Time:
+						</xp:td>
+						<xp:td>
+
+							<xp:text escape="true" id="computedField6"
+								value="#{javascript:new Date()}"
+								style="font-weight:bold;color:rgb(64,0,128)">
+								<xp:this.converter>
+									<xp:convertDateTime type="both"
+										dateStyle="full" timeStyle="full">
+									</xp:convertDateTime>
+								</xp:this.converter>
+							</xp:text>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td
+							style="background-color:rgb(244,251,255)">
+							Current Time:
+						</xp:td>
+						<xp:td>
+							<xp:text escape="true" id="computedField7"
+								value="#{javascript:@Now()}">
+								<xp:this.converter>
+									<xp:convertDateTime type="time"
+										timeStyle="full">
+									</xp:convertDateTime>
+								</xp:this.converter>
+							</xp:text>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td
+							style="background-color:rgb(244,251,255)">
+						</xp:td>
+						<xp:td>
+							<xp:button value="Compute TZ Cookie"
+								id="button1">
+								<xp:eventHandler event="onclick"
+									submit="false">
+									<xp:this.handlers>
+										<xp:handler
+											type="text/javascript">
+											<xp:this.script><![CDATA[XSP.initTimeZoneCookie()]]></xp:this.script>
+										</xp:handler>
+									</xp:this.handlers>
+								</xp:eventHandler>
+							</xp:button>
+						</xp:td>
+					</xp:tr>
+
+				</xp:table>
+			</xp:panel>
+		</xp:this.facets>
+	</XPa:ccLayout>
+</xp:view>

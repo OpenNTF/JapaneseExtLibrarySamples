@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+	<XPa:ccLayout id="cc4cclayout" navPath="/views/fstartkeys/">
+		<xp:this.facets>
+			<xc:ccMenu_views xp:key="facetLeft"></xc:ccMenu_views>
+			<xp:panel xp:key="facetMain" id="panelContent">
+				<xp:label
+					value="Select from the dropdown a value to filter the view by a startKey: "
+					id="label1" for="comboBoxViewFilterText1">
+				</xp:label>
+				<xp:comboBox id="comboBoxViewFilterText1"
+					value="#{viewScope.filter01s}">
+					<xp:selectItem itemLabel="No Filtering"
+						itemValue="">
+					</xp:selectItem>
+					<xp:selectItems>
+						<xp:this.value><![CDATA[#{javascript:@Unique(@DbColumn(@DbName(),"xspFiltersView",1))}]]></xp:this.value>
+					</xp:selectItems>
+					<xp:eventHandler event="onchange" submit="true"
+						refreshMode="partial" refreshId="viewPanelFilter1">
+					</xp:eventHandler>
+				</xp:comboBox>
+				<xp:viewPanel rows="30" id="viewPanelFilter1">
+					<xp:this.facets>
+						<xp:pager layout="Previous Group Next"
+							xp:key="headerPager" id="pager1">
+						</xp:pager>
+					</xp:this.facets>
+					<xp:this.data>
+						<xp:dominoView var="xspFiltersView"
+							viewName="xspFiltersView"
+							startKeys="#{javascript:viewScope.filter01s}">
+						</xp:dominoView>
+					</xp:this.data>
+					<xp:viewColumn columnName="Text01"
+						id="viewColumn1">
+						<xp:viewColumnHeader value="Text01"
+							id="viewColumnHeader1">
+						</xp:viewColumnHeader>
+					</xp:viewColumn>
+					<xp:viewColumn columnName="Text02"
+						id="viewColumn2">
+						<xp:viewColumnHeader value="Text02"
+							id="viewColumnHeader2">
+						</xp:viewColumnHeader>
+					</xp:viewColumn>
+					<xp:viewColumn columnName="Text03"
+						id="viewColumn3">
+						<xp:viewColumnHeader value="Text03"
+							id="viewColumnHeader3">
+						</xp:viewColumnHeader>
+					</xp:viewColumn>
+					<xp:viewColumn columnName="DateTest"
+						id="viewColumn4">
+						<xp:viewColumnHeader value="DateTest"
+							id="viewColumnHeader4">
+						</xp:viewColumnHeader>
+					</xp:viewColumn>
+					<xp:viewColumn columnName="NumberTest"
+						id="viewColumn5">
+						<xp:viewColumnHeader value="NumberTest"
+							id="viewColumnHeader5">
+						</xp:viewColumnHeader>
+					</xp:viewColumn>
+				</xp:viewPanel>
+			</xp:panel>
+		</xp:this.facets>
+	</XPa:ccLayout>
+</xp:view>

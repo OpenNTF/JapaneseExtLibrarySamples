@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xc="http://www.ibm.com/xsp/custom">
+
+
+	<xc:ccWidget>
+		<xp:this.facets>
+			<xp:panel xp:key="facet_1">
+
+				Parameters for xpagesDemoAppParameters1 - Component
+				<xp:table id="table1" style="font-size:8pt">
+					<xp:tr>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:label value="Input:" id="label3"></xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:label value="Output" id="label7"></xp:label>
+						</xp:td>
+					</xp:tr>
+					<xp:tr id="tr0">
+						<xp:td id="tdl0">
+							<xp:label value="String Edit Box"
+								id="label0">
+							</xp:label>
+						</xp:td>
+						<xp:td id="tde0">
+							<xp:inputText id="inputText0"
+								value="#{componentParameters.prStringEditBox}" >
+								<xp:eventHandler event="onchange"
+									submit="true" refreshMode="partial" refreshId="computedField01">
+									<xp:this.action><![CDATA[#{javascript:var se1 = getComponent("inputText0").getValue();
+context.setComponentParameter('prStringEditBox', se1)}]]></xp:this.action>
+								</xp:eventHandler></xp:inputText>
+						</xp:td>
+						<xp:td>
+							<xp:text escape="true"
+								id="computedField01" value="#{componentParameters.prStringEditBox}" style="color:rgb(0,64,128)">
+							</xp:text></xp:td>
+					</xp:tr>
+
+					<xp:tr id="tr1">
+						<xp:td id="tdl1">
+							<xp:label value="String Combo Box"
+								id="label1">
+							</xp:label>
+						</xp:td>
+						<xp:td id="tde1">
+							<xp:comboBox id="comboBox1"
+								value="#{componentParameters.prStringComboBox}">
+								<xp:selectItem itemLabel="AAA"
+									itemValue="aaa" id="selectItem1" />
+								<xp:selectItem itemLabel="BBB"
+									itemValue="bbb" id="selectItem2" />
+								<xp:selectItem itemLabel="CCC"
+									itemValue="ccc" id="selectItem3" />
+
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="partial"
+									refreshId="computedField02"></xp:eventHandler>
+								<xp:eventHandler event="onchange"
+									submit="true" refreshMode="partial" refreshId="computedField02">
+									<xp:this.action><![CDATA[#{javascript:var sc1 = getComponent("comboBox1").getValue();
+context.setComponentParameter('prStringComboBox', sc1)}]]></xp:this.action>
+								</xp:eventHandler></xp:comboBox>
+						</xp:td>
+						<xp:td><xp:text escape="true" id="computedField02" value="#{componentParameters.prStringComboBox}" style="color:rgb(0,64,128)">
+							</xp:text></xp:td>
+					</xp:tr>
+					<xp:tr id="tr2">
+						<xp:td id="tdl2">
+							<xp:label value="String Boolean"
+								id="label2">
+							</xp:label>
+						</xp:td>
+						<xp:td id="tde2">
+							<xp:checkBox id="checkBox2" text="True or False" value="#{componentParameters.prStringBoolean}" defaultChecked="true">
+								<xp:eventHandler event="onchange"
+									submit="true" refreshMode="partial"
+									refreshId="computedField03">
+									<xp:this.action><![CDATA[#{javascript:var sb1 = getComponent("checkBox2").getValue();
+@If(sb1 == "true",context.setComponentParameter('prStringBoolean', "true"),context.setComponentParameter('prStringBoolean', "false"))
+ }]]></xp:this.action>
+								</xp:eventHandler></xp:checkBox>
+						</xp:td>
+						<xp:td><xp:text escape="true" id="computedField03" value="#{componentParameters.prStringBoolean}" style="color:rgb(0,64,128)">
+							</xp:text></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							<xp:label value="String Hidden:" id="label11"></xp:label></xp:td>
+						<xp:td>
+							<xp:link escape="true" text="Redo hidden string"
+								id="link1">
+							<xp:eventHandler event="onclick"
+								submit="true" refreshMode="partial" refreshId="computedField04">
+								<xp:this.action><![CDATA[#{javascript:var se1 = getComponent("inputText0").getValue();
+var sc1 = getComponent("comboBox1").getValue();
+var sb1 = getComponent("checkBox2").getValue();
+var sh1 = se1 +" "+sc1+" "+sb1;
+context.setComponentParameter('prStringHidden', sh1)
+ }]]></xp:this.action>
+							</xp:eventHandler></xp:link></xp:td>
+						<xp:td><xp:text escape="true" id="computedField04" value="#{componentParameters.prStringHidden}" style="color:rgb(0,64,128)">
+							</xp:text></xp:td>
+					</xp:tr>
+					<xp:tr id="tr4">
+						<xp:td id="tdl4">
+							<xp:label value="Editbox Boolean"
+								id="label4">
+							</xp:label>
+						</xp:td>
+						<xp:td id="tde4">
+							<xp:inputText id="inputText4"
+								value="#{componentParameters.prBooleanEditBox}" >
+								<xp:eventHandler event="onchange"
+									submit="true" refreshMode="partial" refreshId="computedField05">
+									<xp:this.action><![CDATA[#{javascript:var be1 = getComponent("inputText4").getValue();
+context.setComponentParameter('prBooleanEditBox', be1)}]]></xp:this.action>
+								</xp:eventHandler></xp:inputText>
+						</xp:td>
+						<xp:td><xp:text escape="true" id="computedField05" value="#{componentParameters.prBooleanEditBox}" style="color:rgb(0,64,128)">
+							</xp:text></xp:td>
+					</xp:tr>
+					<xp:tr id="tr5" rendered="false">
+						<xp:td id="tdl5">
+							<xp:label value="Combobox Boolean"
+								id="label5">
+							</xp:label>
+						</xp:td>
+						<xp:td id="tde5">
+							<xp:comboBox id="comboBox5"
+								value="#{componentParameters.prBooleanComboBox}">
+								<xp:selectItem itemLabel="False"
+									itemValue="false" id="selectItem4" />
+								<xp:selectItem itemLabel="True"
+									itemValue="true" id="selectItem5" />
+
+								</xp:comboBox>
+						</xp:td>
+						<xp:td><xp:text escape="true" id="computedField06" value="#{componentParameters.prBooleanComboBox}" style="color:rgb(0,64,128)">
+							</xp:text></xp:td>
+					</xp:tr>
+					<xp:tr id="tr6">
+						<xp:td id="tdl6">
+							<xp:label value="Boolean Boolean"
+								id="label6">
+							</xp:label>
+						</xp:td>
+						<xp:td id="tde6">
+							<xp:checkBox id="checkBox6" text="False or true" value="#{componentParameters.prBooleanBoolean}">
+								<xp:eventHandler event="onchange"
+									submit="true" refreshMode="partial"
+									refreshId="computedField07">
+									<xp:this.action><![CDATA[#{javascript:var bb1 = getComponent("checkBox6").getValue();
+@If(bb1 == "true",context.setComponentParameter('prBooleanBoolean', "true"),context.setComponentParameter('prBooleanBoolean', "false"))
+ }]]></xp:this.action>
+								</xp:eventHandler></xp:checkBox>
+						</xp:td>
+						<xp:td><xp:text escape="true" id="computedField07" value="#{componentParameters.prBooleanBoolean}" style="color:rgb(0,64,128)">
+							</xp:text></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td><xp:label value="Boolean Hidden:" id="label12"></xp:label></xp:td>
+						<xp:td></xp:td>
+						<xp:td><xp:text escape="true" id="computedField08" value="#{componentParameters.prBooleanHidden}" style="color:rgb(0,64,128)">
+							</xp:text></xp:td>
+					</xp:tr>
+					<xp:tr id="tr8">
+						<xp:td id="tdl8">
+							<xp:label value="Editbox Number"
+								id="label8">
+							</xp:label>
+						</xp:td>
+						<xp:td id="tde8">
+							<xp:inputText id="inputText8"
+								value="#{componentParameters.prNumberEditBox}" >
+								<xp:eventHandler event="onchange"
+									submit="true" refreshMode="partial"
+									refreshId="computedField09">
+									<xp:this.action><![CDATA[#{javascript:var ne1 = getComponent("inputText8").getValue();
+context.setComponentParameter('prNumberEditBox', ne1)}]]></xp:this.action>
+								</xp:eventHandler></xp:inputText>
+						</xp:td>
+						<xp:td><xp:text escape="true" id="computedField09" value="#{componentParameters.prNumberEditBox}" style="color:rgb(0,64,128)">
+							</xp:text></xp:td>
+					</xp:tr>
+					<xp:tr id="tr9">
+						<xp:td id="tdl9">
+							<xp:label value="Combobox Number"
+								id="label9">
+							</xp:label>
+						</xp:td>
+						<xp:td id="tde9">
+							<xp:comboBox id="comboBox9"
+								value="#{componentParameters.prNumberComboBox}">
+								
+								<xp:selectItem itemLabel="1111"
+									itemValue="1111" id="selectItem6" />
+								<xp:selectItem itemLabel="222"
+									itemValue="222" id="selectItem7" />
+								<xp:selectItem itemLabel="33"
+									itemValue="33" id="selectItem8" />
+								<xp:eventHandler event="onchange"
+									submit="true" refreshMode="partial"
+									refreshId="computedField10">
+									<xp:this.action><![CDATA[#{javascript:var nc1 = getComponent("comboBox9").getValue();
+context.setComponentParameter('prNumberComboBox', nc1)}]]></xp:this.action>
+								</xp:eventHandler>
+							</xp:comboBox>
+						</xp:td>
+						<xp:td><xp:text escape="true" id="computedField10" value="#{componentParameters.prNumberComboBox}" style="color:rgb(0,64,128)">
+							</xp:text></xp:td>
+					</xp:tr>
+					<xp:tr id="tr10">
+						<xp:td id="tdl10">
+							<xp:label value="Boolean Number"
+								id="label10">
+							</xp:label>
+						</xp:td>
+						<xp:td id="tde10">
+							<xp:checkBox id="checkBox10" text="1 or 0" value="#{componentParameters.prNumberBoolean}" checkedValue="1" uncheckedValue="0">
+								<xp:eventHandler event="onchange"
+									submit="true" refreshMode="partial"
+									refreshId="computedField11">
+									<xp:this.action><![CDATA[#{javascript:var nb1 = getComponent("checkBox10").getValue();
+@If(nb1 == "1",context.setComponentParameter('prNumberBoolean', "true"),context.setComponentParameter('prNumberBoolean', "false"))
+ }]]></xp:this.action>
+								</xp:eventHandler></xp:checkBox>
+						</xp:td>
+						<xp:td><xp:text escape="true" id="computedField11" value="#{componentParameters.prNumberBoolean}" style="color:rgb(0,64,128)">
+							</xp:text></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td><xp:label value="Number Hidden:" id="label13"></xp:label></xp:td>
+						<xp:td>
+							<xp:link escape="true"
+								text="Redo hidden number" id="link2">
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="partial"
+									refreshId="computedField12">
+									<xp:this.action><![CDATA[#{javascript:var ne1 = getComponent("inputText8").getValue();
+var nc1 = getComponent("comboBox9").getValue();
+var nb1 = getComponent("checkBox10").getValue();
+var nh1 = @If(nb1==1,ne1+nc1,ne1-nc1);
+context.setComponentParameter('prNumberHidden', nh1)
+ }]]></xp:this.action>
+								</xp:eventHandler>
+							</xp:link></xp:td>
+						<xp:td><xp:text escape="true" id="computedField12" value="#{componentParameters.prNumberHidden}" style="color:rgb(0,64,128)">
+							</xp:text></xp:td>
+					</xp:tr>
+				</xp:table>
+				<xp:br></xp:br>
+
+
+
+			</xp:panel>
+		</xp:this.facets>
+	</xc:ccWidget>
+</xp:view>

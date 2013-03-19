@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf">
+
+	<XPa:ccLayout><xp:this.facets>
+	<xp:panel xp:key="facetMain">
+	<xp:span style="font-weight:bold;font-size:16pt">htmlFilterIn</xp:span><xp:br></xp:br>
+
+	<xp:this.data>
+		<xp:dominoDocument var="document1" formName="xspjsFilterHtml"></xp:dominoDocument>
+	</xp:this.data>
+	<xp:span style="color:rgb(0,128,255)">htmlFilterIn parses rich text &quot;on the way in&quot; and stores it that way</xp:span><xp:br></xp:br> &#160;&#160;&#160;&#160;<xp:span style="color:rgb(0,128,255)">Identity - does no filtering when used
+								as htmlFilter or htmlFilterIn
+							</xp:span>
+	<xp:br style="color:rgb(0,128,255)"></xp:br><xp:span style="color:rgb(0,128,255)"> &#160;&#160;&#160;&#160;Acf - uses the acf library (based on
+							acf-config.xml) to filter when used as
+							htmlFiler or htmlFilterIn
+						
+	</xp:span><xp:br style="color:rgb(0,128,255)"></xp:br> &#160;&#160;&#160;&#160;<xp:span style="color:rgb(0,128,255)">Empty - entire text is stripped out when
+							used as htmlFiler or htmlFilterIn
+						
+	</xp:span><xp:br style="color:rgb(0,128,255)"></xp:br><xp:span style="color:rgb(0,128,255)"> &#160;&#160;&#160;&#160;Striptags - removes all formatting (by
+							stripping out all tags) when used as
+							htmlFiler or htmlFilterIn
+						
+	</xp:span>
+	<xp:br></xp:br>
+	<xp:br></xp:br>
+	<xp:button value="Save and Close" id="button1">
+		<xp:eventHandler event="onclick" submit="true" refreshMode="complete">
+			<xp:this.action>
+				<xp:save name="/jsFilterHtmlMain.xsp"></xp:save>
+			</xp:this.action>
+		</xp:eventHandler>
+	</xp:button><xp:button value="Cancel" id="button2">
+		<xp:eventHandler event="onclick" submit="true" refreshMode="complete">
+			<xp:this.action>
+				<xp:openPage name="/jsFilterHtmlMain.xsp"></xp:openPage>
+			</xp:this.action>
+		</xp:eventHandler>
+	</xp:button><xp:table>
+		<xp:tr>
+			<xp:td>select 'htmlFilterIn' &#160;</xp:td>
+			<xp:td>
+				<xp:comboBox id="comboType">
+					<xp:selectItem itemLabel="none" itemValue="null">
+					</xp:selectItem>
+					<xp:selectItem itemLabel="acf" itemValue="acf">
+					</xp:selectItem>
+					<xp:selectItem itemLabel="identity"
+						itemValue="identity">
+					</xp:selectItem>
+					<xp:selectItem itemLabel="empty"
+						itemValue="empty">
+					</xp:selectItem>
+					<xp:selectItem itemLabel="striptags"
+						itemValue="striptags">
+					</xp:selectItem>
+
+					<xp:eventHandler event="onchange" submit="true"
+						refreshMode="complete">
+					</xp:eventHandler>
+				</xp:comboBox> &#160;&#160; </xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td>subject
+						</xp:td>
+			<xp:td>
+				<xp:inputText id="inputText1"
+					value="#{document1.jsFilterHtmlSubject}">
+				</xp:inputText></xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+	body</xp:td>
+			<xp:td>
+				<xp:inputRichText id="inputRichText1"
+					value="#{document1.jsFilterHtmlBody}">
+					<xp:this.htmlFilterIn><![CDATA[#{javascript:var element = getComponent('comboType');
+var filterInType = element.value;
+return filterInType;}]]></xp:this.htmlFilterIn>
+				</xp:inputRichText></xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td></xp:td>
+			<xp:td></xp:td>
+		</xp:tr>
+	</xp:table>
+	
+	
+	</xp:panel></xp:this.facets></XPa:ccLayout></xp:view>

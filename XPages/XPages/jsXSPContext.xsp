@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+
+	<XPa:ccLayout id="cc4cclayout" navPath="/other/gocontext/">
+		<xp:this.facets>
+			<xc:ccMenu_other xp:key="facetLeft"></xc:ccMenu_other>
+			<xp:panel xp:key="facetMain">
+
+				<xp:span style="font-size:12pt;font-weight:bold">
+					JavaScript : XSPContext
+				</xp:span>
+				<xp:br style="font-size:12pt;font-weight:bold"></xp:br>
+				<xp:br></xp:br>
+
+				<xp:span style="color:rgb(0,128,255)">
+					Displays all the Javascript funtions associated with
+					XSPContext
+				</xp:span>
+				.
+				<xp:br></xp:br>
+				<xp:span style="color:rgb(0,128,255)">
+					XSPContext represents the context in which the
+					server script is running.
+				</xp:span>
+				<xp:br></xp:br>
+				<xp:br></xp:br>
+
+
+
+				<xp:table>
+					<xp:tr>
+						<xp:td style="color:rgb(255,0,0)"></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+
+					<xp:tr>
+						<xp:td>filterHTML()</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							Removes malicious active content from HTML.
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+
+							<xp:link escape="true"
+								text="Open FilterHTML" id="link1">
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="complete" id="eventHandler1">
+									<xp:this.action>
+										<xp:openPage
+											name="/jsFilterHtmlMain.xsp">
+										</xp:openPage>
+									</xp:this.action>
+								</xp:eventHandler>
+							</xp:link>
+						</xp:td>
+
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+
+
+
+
+					<xp:tr>
+						<xp:td>getHistoryUrl()</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							Gets a previous URL from the navigation
+							history of the current page.
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:text escape="true"
+								id="computedField2">
+								<xp:this.value><![CDATA[#{javascript:context.getHistoryUrl(1);
+}]]></xp:this.value>
+							</xp:text>
+						</xp:td>
+
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>getHistoryUrls()</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							Gets all URLs from the navigation history of
+							the current page.
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+
+							<xp:text escape="true"
+								id="computedField3">
+
+
+								<xp:this.value><![CDATA[#{javascript:var urls = new Array();
+urls = context.getHistoryUrls().concat();
+
+return urls;}]]></xp:this.value>
+							</xp:text>
+						</xp:td>
+
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+
+
+
+
+
+
+
+
+
+
+					<xp:tr>
+						<xp:td>getTimeZone()</xp:td>
+						<xp:td></xp:td>
+						<xp:td>Gets the current time zone.</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:text escape="true" id="computedField10"
+								value="#{javascript:context.getTimeZone()}">
+							</xp:text>
+						</xp:td>
+
+						<xp:td>
+
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>setTimeZone()</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							Sets the time zone for the current session.
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:button value="Set Timezone"
+								id="button4">
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="complete" id="eventHandler6">
+									<xp:this.action><![CDATA[#{javascript:var tz = TimeZone.getTimeZone("America/Los_Angeles");
+context.setTimeZone(tz)}]]></xp:this.action>
+								</xp:eventHandler>
+							</xp:button>
+						</xp:td>
+
+						<xp:td>
+
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>getTimeZoneString()</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							Gets the current time zone as a string.
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:text escape="true" id="computedField11"
+								value="#{javascript:context.getTimeZoneString()}">
+							</xp:text>
+						</xp:td>
+
+						<xp:td>
+
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>setTimeZoneString()</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							Sets the time zone for the current session
+							as a string
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:button value="Set Timezone String"
+								id="button5">
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="complete" id="eventHandler7">
+									<xp:this.action><![CDATA[#{javascript:context.setTimeZoneString("America/New_York")}]]></xp:this.action>
+								</xp:eventHandler>
+							</xp:button>
+						</xp:td>
+
+						<xp:td>
+
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+
+
+
+
+					<xp:tr>
+						<xp:td>getLocale()</xp:td>
+						<xp:td></xp:td>
+						<xp:td>Gets the current locale.</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:text escape="true" id="computedField4"
+								value="#{javascript:context.getLocale();}">
+							</xp:text>
+						</xp:td>
+						<xp:td>
+
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>setLocale()</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							Sets the locale for the current session.
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:button value="Set Locale"
+								id="button1">
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="complete" id="eventHandler3">
+									<xp:this.action><![CDATA[#{javascript:context.setLocale(new Locale("fr", "CA"))}]]></xp:this.action>
+								</xp:eventHandler>
+							</xp:button>
+						</xp:td>
+						<xp:td>
+
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>getLocaleString()</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							The locale for the current session as a
+							string
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:text escape="true" id="computedField5"
+								value="#{javascript:context.getLocaleString()}">
+							</xp:text>
+						</xp:td>
+						<xp:td>
+
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>setLocaleString()</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							Sets the locale for the current session as a
+							string.
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:button value="Set Locale String"
+								id="button2">
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="complete" id="eventHandler4">
+									<xp:this.action><![CDATA[#{javascript:context.setLocaleString("en_us")}]]></xp:this.action>
+								</xp:eventHandler>
+							</xp:button>
+						</xp:td>
+
+						<xp:td>
+
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+
+
+					<xp:tr>
+						<xp:td>isDirectionLTR()</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							Checks if the base direction of text is left
+							to right.
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:text escape="true" id="computedField19"
+								value="#{javascript:context.isDirectionLTR()}">
+							</xp:text>
+						</xp:td>
+
+						<xp:td></xp:td>
+						<xp:td>
+
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>isDirectionRTL()</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							Checks if the base direction of text is
+							right to left.
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:text escape="true" id="computedField20"
+								value="#{javascript:context.isDirectionRTL()}">
+							</xp:text>
+						</xp:td>
+
+						<xp:td></xp:td>
+						<xp:td>
+
+						</xp:td>
+					</xp:tr>
+
+
+					<xp:tr>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:button value="Set Locale RTL"
+								id="button7">
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="complete" id="eventHandler8">
+									<xp:this.action><![CDATA[#{javascript:context.setLocale(new Locale("ar", "AE"));
+
+}]]></xp:this.action>
+								</xp:eventHandler>
+							</xp:button>
+							<xp:button value="Reset Locale"
+								id="button8">
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="complete" id="eventHandler9">
+									<xp:this.action><![CDATA[#{javascript:context.setLocaleString("")
+context.reloadPage()}]]></xp:this.action>
+								</xp:eventHandler>
+							</xp:button>
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>reloadPage()</xp:td>
+						<xp:td></xp:td>
+						<xp:td>Reloads the page.</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:button value="Reload Page"
+								id="button6">
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="complete" id="eventHandler2">
+									<xp:this.action><![CDATA[#{javascript:context.reloadPage()}]]></xp:this.action>
+								</xp:eventHandler>
+							</xp:button>
+
+						</xp:td>
+
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					<xp:tr>
+						<xp:td>getProperty()</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							Gets a property with a default value
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:text escape="true"
+								id="computedField6">
+								<xp:this.value><![CDATA[#{javascript:context.getProperty("testproperty", "test property default");}]]></xp:this.value>
+							</xp:text>
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>getProperty()</xp:td>
+						<xp:td></xp:td>
+						<xp:td>Gets a property value</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:text escape="true"
+								id="computedField7">
+								<xp:this.value><![CDATA[#{javascript:context.setSessionProperty("testproperty1","test property 1")
+context.getProperty("testproperty1");}]]></xp:this.value>
+							</xp:text>
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+
+					<xp:tr>
+						<xp:td>setSessionProperty()</xp:td>
+						<xp:td></xp:td>
+						<xp:td>Sets a session property value</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:button value="Set Session Property"
+								id="button3">
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="complete" id="eventHandler5">
+									<xp:this.action><![CDATA[#{javascript:context.setSessionProperty("testproperty2", "test property 2");}]]></xp:this.action>
+								</xp:eventHandler>
+							</xp:button>
+						</xp:td>
+						<xp:td>
+
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>getSessionProperty()</xp:td>
+						<xp:td></xp:td>
+						<xp:td>Gets a session property value</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:text escape="true"
+								id="computedField8">
+								<xp:this.value><![CDATA[#{javascript:context.getSessionProperty("testproperty2");}]]></xp:this.value>
+							</xp:text>
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>isComponent()</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							Checks if the runtime context is a
+							component.
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:text escape="true" id="computedField16"
+								value="#{javascript:context.isComponent()}">
+							</xp:text>
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							<xp:span style="color:rgb(255,0,0)">
+							</xp:span>
+							isRunningContext()
+							<xp:span style="color:rgb(255,0,0)">
+							</xp:span>
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>Checks is running context</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:text escape="true"
+								id="computedField21">
+								<xp:this.value><![CDATA[#{javascript:context.isRunningContext("jsXSPContext.xsp");
+
+}]]></xp:this.value>
+							</xp:text>
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td style="color:rgb(255,0,0)">
+							bundle()
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:text escape="true"
+								id="computedField1">
+							</xp:text>
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td style="color:rgb(255,0,0)">
+							getThemeId()
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:text escape="true"
+								id="computedField9">
+
+							</xp:text>
+
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+				</xp:table>
+
+
+
+			</xp:panel>
+		</xp:this.facets>
+	</XPa:ccLayout>
+</xp:view>

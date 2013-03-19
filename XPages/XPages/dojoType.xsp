@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf" dojoTheme="true"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+
+
+	<xp:this.resources>
+		<xp:dojoModule name="dijit.form.CheckBox"></xp:dojoModule>
+		<xp:dojoModule name="dijit.form.CurrencyTextBox"></xp:dojoModule>
+		<xp:dojoModule name="dijit.form.NumberSpinner"></xp:dojoModule>
+		<xp:dojoModule name="dijit.form.NumberTextBox"></xp:dojoModule>
+		<xp:dojoModule name="dijit.form.RadioButton"></xp:dojoModule>
+		<xp:dojoModule name="dijit.form.SimpleTextarea"></xp:dojoModule>
+		<xp:dojoModule name="dijit.form.Textarea"></xp:dojoModule>
+		<xp:dojoModule name="dijit.form.TextBox"></xp:dojoModule>
+		<xp:dojoModule name="dijit.form.ValidationTextBox"></xp:dojoModule>
+		<xp:dojoModule name="dijit.Editor"></xp:dojoModule>
+		<xp:dojoModule name="dijit._editor.plugins.LinkDialog"></xp:dojoModule>
+		<xp:dojoModule name="dijit._editor.plugins.ToggleDir"></xp:dojoModule>
+		<xp:dojoModule name="dijit._editor.plugins.TextColor"></xp:dojoModule>
+		<xp:dojoModule name="dijit._editor.plugins.FontChoice"></xp:dojoModule>
+		<xp:dojoModule name="dijit.form.ComboBox"></xp:dojoModule>
+		<xp:dojoModule name="dijit.form.MultiSelect"></xp:dojoModule>
+		<xp:dojoModule name="dijit.form.FilteringSelect"></xp:dojoModule>
+		<xp:dojoModule name="dijit.layout.BorderContainer"></xp:dojoModule>
+
+
+	</xp:this.resources>
+
+
+	<XPa:ccLayout id="cc4cclayout" navPath="/other/dojoin/">
+		<xp:this.facets>
+			<xc:ccMenu_other xp:key="facetLeft"></xc:ccMenu_other>
+			<xp:panel xp:key="facetMain">
+
+				<xp:this.data>
+					<xp:dominoDocument var="document1"
+						formName="xspDojoType">
+					</xp:dominoDocument>
+				</xp:this.data>
+				<xp:span style="font-size:18pt;font-weight:bold">
+					Dojo Type - Input Controls
+				</xp:span>
+				<xp:br></xp:br>
+				<xp:br></xp:br>
+				<xp:panel id="panelCheckBox">
+
+
+
+					<xp:button value="Save and Close" id="button1"
+						style="text-align:center">
+
+						<xp:eventHandler event="onclick" submit="true"
+							refreshMode="complete">
+							<xp:this.action>
+								<xp:save name="/dojoTypeMain.xsp"></xp:save>
+							</xp:this.action>
+						</xp:eventHandler>
+					</xp:button>
+					<xp:button value="Cancel" id="button2">
+						<xp:eventHandler event="onclick" submit="true"
+							refreshMode="complete">
+							<xp:this.action>
+								<xp:openPage name="/dojoTypeMain.xsp"></xp:openPage>
+							</xp:this.action>
+						</xp:eventHandler>
+					</xp:button>
+					<xp:button value="Toggle" id="button3">
+						<xp:eventHandler event="onclick" submit="true"
+							refreshMode="complete">
+							<xp:this.action>
+								<xp:changeDocumentMode mode="toggle"></xp:changeDocumentMode>
+							</xp:this.action>
+						</xp:eventHandler>
+					</xp:button>
+					<xp:br></xp:br>
+					<xp:br></xp:br>
+					Subject
+
+					<xp:span style="font-weight:bold"></xp:span>
+					 
+					<xp:inputText id="inputText1"
+						value="#{document1.dojoTypeSubject}">
+					</xp:inputText>
+					&#160;&#160;&#160;
+
+					<xp:br></xp:br>
+					<xp:br></xp:br>
+					<xp:span style="font-size:12pt;font-weight:bold"></xp:span>
+					<xp:table>
+						<xp:tr>
+							<xp:td>dijit.form.CheckBox &#160;</xp:td>
+							<xp:td>
+
+								<xp:checkBox id="checkBox1"
+									dojoType="dijit.form.CheckBox"
+									value="#{document1.dojoTypeCheckbox}" checkedValue="agree"
+									uncheckedValue="disagree" defaultChecked="true">
+									<xp:this.dojoAttributes>
+
+										<xp:dojoAttribute name="checked"
+											value="true">
+										</xp:dojoAttribute>
+									</xp:this.dojoAttributes>
+
+
+									<xp:eventHandler event="onclick"
+										submit="true" refreshMode="partial"
+										refreshId="computedField3">
+									</xp:eventHandler>
+								</xp:checkBox>
+								<xp:text escape="true"
+									id="computedField3">
+									<xp:this.value><![CDATA[#{javascript:var element = getComponent('checkBox1');
+element.value}]]></xp:this.value>
+								</xp:text>
+							</xp:td>
+							<xp:td></xp:td>
+							<xp:td></xp:td>
+							<xp:td>
+								Verify checkbox is &quot;checked&quot;
+								by default
+							</xp:td>
+						</xp:tr>
+
+
+						<xp:tr>
+							<xp:td>
+								dijit.form.CurrencyTextBox &#160;
+							</xp:td>
+							<xp:td>
+								<xp:inputText id="inputText2"
+									dojoType="dijit.form.CurrencyTextBox"
+									value="#{document1.dojoTypeCurrency}">
+									<xp:this.dojoAttributes>
+										<xp:dojoAttribute
+											name="currency" value="EUR">
+										</xp:dojoAttribute>
+									</xp:this.dojoAttributes>
+
+									<xp:this.converter>
+										<xp:convertNumber
+											pattern="0.00">
+										</xp:convertNumber>
+									</xp:this.converter>
+								</xp:inputText>
+							</xp:td>
+							<xp:td></xp:td>
+							<xp:td></xp:td>
+							<xp:td>Verify currency in EUR</xp:td>
+						</xp:tr>
+
+						<xp:tr>
+							<xp:td>dijit.form.NumberSpinner</xp:td>
+							<xp:td>
+								<xp:inputText id="inputText3"
+									dojoType="dijit.form.NumberSpinner"
+									value="#{document1.dojoTypeNumberSpinner}">
+									<xp:this.dojoAttributes>
+										<xp:dojoAttribute name="value"
+											value="100">
+										</xp:dojoAttribute>
+									</xp:this.dojoAttributes>
+
+
+
+
+									<xp:this.converter>
+										<xp:convertNumber
+											type="number">
+										</xp:convertNumber>
+									</xp:this.converter>
+								</xp:inputText>
+							</xp:td>
+							<xp:td></xp:td>
+							<xp:td></xp:td>
+							<xp:td>
+								Verify number spinner displays
+							</xp:td>
+						</xp:tr>
+						<xp:tr>
+							<xp:td>dijit.form.NumberTextBox</xp:td>
+							<xp:td>
+								<xp:inputText id="inputText4"
+									value="#{document1.dojoTypeNumber}"
+									dojoType="dijit.form.NumberTextBox">
+									<xp:this.dojoAttributes>
+										<xp:dojoAttribute name="value"
+											value="3000">
+										</xp:dojoAttribute>
+									</xp:this.dojoAttributes>
+									<xp:this.converter>
+										<xp:convertNumber type="number"
+											integerOnly="true">
+										</xp:convertNumber>
+									</xp:this.converter>
+								</xp:inputText>
+							</xp:td>
+							<xp:td>
+
+							</xp:td>
+							<xp:td></xp:td>
+							<xp:td>
+								Verify default value is 3,000
+								and&#160;correct number format displays
+							</xp:td>
+						</xp:tr>
+						<xp:tr>
+							<xp:td>dijit.form.RadioButton</xp:td>
+							<xp:td>
+								<xp:radio id="radio1"
+									dojoType="dijit.form.RadioButton"
+									value="#{document1.dojoTypeRadio}" text="true"
+									groupName="radioGroup" selectedValue="true">
+
+									<xp:eventHandler event="onclick"
+										submit="true" refreshMode="partial"
+										refreshId="computedField4">
+									</xp:eventHandler>
+								</xp:radio>
+
+								<xp:br id="br2"></xp:br>
+								<xp:radio id="radio2"
+									dojoType="dijit.form.RadioButton"
+									value="#{document1.dojoTypeRadio}" text="false"
+									groupName="radioGroup" selectedValue="false">
+
+									<xp:eventHandler event="onclick"
+										submit="true" refreshMode="partial"
+										refreshId="computedField4">
+									</xp:eventHandler>
+								</xp:radio>
+								&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+							</xp:td>
+							<xp:td></xp:td>
+							<xp:td></xp:td>
+							<xp:td>
+								Verify radio button&#160;&#160;
+								<xp:text escape="true"
+									id="computedField4"
+									style="color:rgb(255,0,0);font-weight:bold">
+									<xp:this.value><![CDATA[#{javascript:var element = getComponent('radio1');
+element.value}]]></xp:this.value>
+								</xp:text>
+							</xp:td>
+						</xp:tr>
+
+
+						<xp:tr>
+							<xp:td>dijit.form.TextBox</xp:td>
+							<xp:td>
+								<xp:inputText id="inputText5"
+									dojoType="dijit.form.TextBox"
+									value="#{document1.dojoTypeTextbox}">
+									<xp:this.dojoAttributes>
+										<xp:dojoAttribute name="trim"
+											value="true">
+										</xp:dojoAttribute>
+										<xp:dojoAttribute
+											name="uppercase" value="true">
+										</xp:dojoAttribute>
+									</xp:this.dojoAttributes>
+								</xp:inputText>
+							</xp:td>
+							<xp:td></xp:td>
+							<xp:td></xp:td>
+							<xp:td>
+								Verify text appears in upper case
+							</xp:td>
+						</xp:tr>
+
+						<xp:tr>
+							<xp:td>
+								dijit.form.ValidationTextBox &#160;
+							</xp:td>
+							<xp:td>
+								<xp:inputText id="inputText6"
+									value="#{document1.dojoTypeValidationTextbox}"
+									dojoType="dijit.form.ValidationTextBox">
+									<xp:this.dojoAttributes>
+										<xp:dojoAttribute
+											name="required" value="true">
+
+										</xp:dojoAttribute>
+
+
+										<xp:dojoAttribute
+											name="regExp">
+											<xp:this.value><![CDATA[[0-9]*]]></xp:this.value>
+										</xp:dojoAttribute>
+									</xp:this.dojoAttributes>
+								</xp:inputText>
+							</xp:td>
+							<xp:td></xp:td>
+							<xp:td></xp:td>
+							<xp:td>
+								Verify can only enter a number
+							</xp:td>
+						</xp:tr>
+
+
+
+
+
+
+
+
+
+						<xp:tr>
+							<xp:td>
+								dijit.form.TextBox (Hidden text)
+							</xp:td>
+							<xp:td>
+								<xp:text escape="true"
+									id="computedField1">
+									<xp:this.value><![CDATA[#{javascript:return getComponent('inputHidden1').value;
+}]]></xp:this.value>
+								</xp:text>
+								<xp:inputHidden id="inputHidden1"
+									dojoType="dijit.form.TextBox" value="hidden text">
+								</xp:inputHidden>
+							</xp:td>
+							<xp:td></xp:td>
+							<xp:td></xp:td>
+							<xp:td>
+								Verify text &quot;hidden text&quot;
+								displays
+							</xp:td>
+						</xp:tr>
+						<xp:tr>
+							<xp:td>
+								dijit.form.TextBox (Hidden number)
+								&#160;
+							</xp:td>
+							<xp:td>
+								<xp:text escape="true"
+									id="computedField2">
+									<xp:this.value><![CDATA[#{javascript:return getComponent('inputHidden2').value;
+}]]></xp:this.value>
+								</xp:text>
+								<xp:inputHidden id="inputHidden2"
+									dojoType="dijit.form.TextBox" value="111">
+									<xp:this.converter>
+										<xp:convertNumber type="number"
+											integerOnly="true">
+										</xp:convertNumber>
+									</xp:this.converter>
+								</xp:inputHidden>
+							</xp:td>
+							<xp:td></xp:td>
+							<xp:td></xp:td>
+							<xp:td>
+								Verfiy number &quot;111&quot; displays
+							</xp:td>
+						</xp:tr>
+
+
+						<xp:tr>
+							<xp:td>dijit.form.SimpleTextarea</xp:td>
+							<xp:td>
+
+								<xp:inputText id="inputText7"
+									dojoType="dijit.form.SimpleTextarea"
+									value="#{document1.dojoTypeSimpleTextarea}">
+									<xp:this.dojoAttributes>
+										<xp:dojoAttribute
+											name="lowercase" value="true">
+										</xp:dojoAttribute>
+									</xp:this.dojoAttributes>
+								</xp:inputText>
+							</xp:td>
+							<xp:td>
+
+							</xp:td>
+							<xp:td></xp:td>
+							<xp:td>
+								Verify text area&#160;doesn't expand
+							</xp:td>
+						</xp:tr>
+						<xp:tr>
+							<xp:td>dijit.form.Textarea</xp:td>
+							<xp:td>
+								<xp:inputTextarea id="inputTextarea1"
+									dojoType="dijit.form.Textarea"
+									value="#{document1.dojoTypeTextarea}">
+									<xp:this.dojoAttributes>
+										<xp:dojoAttribute
+											name="lowercase" value="true">
+										</xp:dojoAttribute>
+									</xp:this.dojoAttributes>
+								</xp:inputTextarea>
+							</xp:td>
+							<xp:td>
+
+							</xp:td>
+							<xp:td></xp:td>
+							<xp:td>Verify text area does expand</xp:td>
+						</xp:tr>
+						<xp:tr>
+							<xp:td>dijit.form.ComboBox</xp:td>
+							<xp:td>
+								<xp:comboBox id="comboBox1"
+									dojoType="dijit.form.ComboBox"
+									value="#{document1.dojoTypeComboBox}">
+									<xp:selectItem
+										itemLabel="Combo Item I" itemValue="Combo Item I"
+										id="selectItem1">
+									</xp:selectItem>
+									<xp:selectItem
+										itemLabel="Combo Item II" itemValue="Combo Item II"
+										id="selectItem2">
+									</xp:selectItem>
+									<xp:selectItem
+										itemLabel="Combo Item III" itemValue="Combo Item III"
+										id="selectItem3">
+									</xp:selectItem>
+									<xp:selectItem
+										itemLabel="Combo Item IV" itemValue="Combo Item IV"
+										id="selectItem11">
+									</xp:selectItem>
+
+								</xp:comboBox>
+							</xp:td>
+							<xp:td>
+								<!--<xp:comboBox id="comboBox2"
+									dojoType="dijit.form.ComboBox">
+									
+									<xp:this.dojoAttributes>
+									<xp:dojoAttribute
+									name="disabled" value="true">
+									</xp:dojoAttribute>
+									</xp:this.dojoAttributes>
+									<xp:selectItem
+									itemLabel="Combo Item I" itemValue="Combo Item I"
+									id="selectItem19">
+									</xp:selectItem>
+									<xp:selectItem
+									itemLabel="Combo Item II" itemValue="Combo Item II"
+									id="selectItem20">
+									</xp:selectItem>
+									<xp:selectItem
+									itemLabel="Combo Item III" itemValue="Combo Item III"
+									id="selectItem21">
+									</xp:selectItem>
+									<xp:selectItem
+									itemLabel="Combo Item IV" itemValue="Combo Item IV"
+									id="selectItem22">
+									</xp:selectItem>
+									</xp:comboBox>
+								-->
+							</xp:td>
+							<xp:td></xp:td>
+							<xp:td>
+								Verify all items display and if an item
+								not in the list is selected/entered, no
+								error message displays
+							</xp:td>
+						</xp:tr>
+						<xp:tr>
+							<xp:td>dijit.form.FilteringSelect</xp:td>
+							<xp:td>
+								<xp:comboBox id="comboBox3"
+									dojoType="dijit.form.FilteringSelect"
+									value="#{document1.dojoTypeFilteringSelect}">
+									<xp:selectItem
+										itemLabel="Filtering Item I" itemValue="Filtering Item I"
+										id="selectItem7">
+									</xp:selectItem>
+									<xp:selectItem
+										itemLabel="Filtering Item II" itemValue="Filtering item II"
+										id="selectItem8">
+									</xp:selectItem>
+									<xp:selectItem
+										itemLabel="Filtering Item III" itemValue="Filtering item III"
+										id="selectItem9">
+									</xp:selectItem>
+									<xp:selectItem
+										itemLabel="Filtering Item IV" itemValue="Filtering item IV"
+										id="selectItem10">
+									</xp:selectItem>
+								</xp:comboBox>
+							</xp:td>
+							<xp:td>
+								<!--<xp:comboBox id="comboBox4"
+									dojoType="dijit.form.FilteringSelect">
+									
+									<xp:this.dojoAttributes>
+									<xp:dojoAttribute
+									name="disabled" value="true">
+									</xp:dojoAttribute>
+									</xp:this.dojoAttributes>
+									<xp:selectItem
+									itemLabel="Filtering Item I" itemValue="Filtering Item I"
+									id="selectItem15">
+									</xp:selectItem>
+									<xp:selectItem
+									itemLabel="Filtering Item II" itemValue="Filtering item II"
+									id="selectItem16">
+									</xp:selectItem>
+									<xp:selectItem
+									itemLabel="Filtering Item III" itemValue="Filtering item III"
+									id="selectItem17">
+									</xp:selectItem>
+									<xp:selectItem
+									itemLabel="Filtering Item IV" itemValue="Filtering item IV"
+									id="selectItem18">
+									</xp:selectItem>
+									</xp:comboBox>
+								-->
+							</xp:td>
+							<xp:td></xp:td>
+							<xp:td>
+								Verify all items display and if an item
+								not in the list is selected/entered, an
+								error message displays
+							</xp:td>
+						</xp:tr>
+						<xp:tr>
+							<xp:td>dijit.form.MultiSelect</xp:td>
+							<xp:td>
+
+								<xp:listBox id="listBox1"
+									dojoType="dijit.form.MultiSelect" multiple="true"
+									value="#{document1.dojoTypeMultiSelect}">
+									<xp:selectItem
+										itemLabel="List Box Item I" itemValue="List Box Item I"
+										id="selectItem4">
+									</xp:selectItem>
+									<xp:selectItem
+										itemLabel="List Box Item II" itemValue="List Box Item II"
+										id="selectItem5">
+									</xp:selectItem>
+									<xp:selectItem
+										itemLabel="List Box Item III" itemValue="List Box Item III"
+										id="selectItem6">
+									</xp:selectItem>
+								</xp:listBox>
+
+							</xp:td>
+							<xp:td>
+
+								<!--<xp:listBox id="listBox2"
+									dojoType="dijit.form.MultiSelect" multiple="true">
+									
+									<xp:this.dojoAttributes>
+									<xp:dojoAttribute
+									name="disabled" value="true">
+									</xp:dojoAttribute>
+									</xp:this.dojoAttributes>
+									<xp:selectItem
+									itemLabel="List Box Item I" itemValue="List Box Item I"
+									id="selectItem12">
+									</xp:selectItem>
+									<xp:selectItem
+									itemLabel="List Box Item II" itemValue="List Box Item II"
+									id="selectItem13">
+									</xp:selectItem>
+									<xp:selectItem
+									itemLabel="List Box Item III" itemValue="List Box Item III"
+									id="selectItem14">
+									</xp:selectItem>
+									</xp:listBox>
+								-->
+							</xp:td>
+							<xp:td></xp:td>
+							<xp:td>
+								Verify all items display and multiple
+								items can be selected &#160;&#160;&#160;
+								<xp:text escape="true"
+									id="computedField5"
+									style="color:rgb(255,0,0);font-weight:bold">
+									<xp:this.value><![CDATA[#{javascript:var element = getComponent('listBox1');
+element.value}]]></xp:this.value>
+								</xp:text>
+							</xp:td>
+						</xp:tr>
+						<xp:tr>
+							<xp:td></xp:td>
+							<xp:td></xp:td>
+							<xp:td></xp:td>
+							<xp:td></xp:td>
+							<xp:td></xp:td>
+						</xp:tr>
+						<xp:tr>
+							<xp:td></xp:td>
+							<xp:td>
+
+							</xp:td>
+							<xp:td></xp:td>
+							<xp:td></xp:td>
+							<xp:td></xp:td>
+						</xp:tr>
+					</xp:table>
+					<xp:br></xp:br>
+					<xp:br></xp:br>
+					<xp:messages id="messages1"></xp:messages>
+					<xp:br></xp:br>
+				</xp:panel>
+			</xp:panel>
+
+		</xp:this.facets>
+	</XPa:ccLayout>
+</xp:view>

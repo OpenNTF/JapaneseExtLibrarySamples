@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+
+	<XPa:ccLayout id="cc4cclayout">
+		<xp:this.facets>
+			<xp:panel xp:key="facetMain" id="panel4facetmain">
+				<xp:label id="labelwelcome" style="font-weight:bold">
+					<xp:this.value>
+						<![CDATA[#{javascript:var currentuser = @UserName();
+var CommonN = @Name("[CN]",currentuser);
+"Hello "+ CommonN +", and welcome to the XPages Demonstration Application."}]]>
+					</xp:this.value>
+				</xp:label>
+				<xp:br />
+				<xp:label
+					value="Select any link on the left hand side to continue..."
+					id="label1">
+				</xp:label><xp:br></xp:br>
+				<xp:br /><xc:ccXPagesResources></xc:ccXPagesResources>
+			</xp:panel>
+
+		</xp:this.facets>
+	</XPa:ccLayout>
+
+
+</xp:view>

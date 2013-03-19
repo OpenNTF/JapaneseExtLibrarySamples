@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config>
+  <faces-config-extension>
+    <namespace-uri>http://www.ibm.com/xsp/custom</namespace-uri>
+    <default-prefix>xc</default-prefix>
+    <public>true</public>
+  </faces-config-extension>
+  <composite-component>
+    <component-type>ccWidget</component-type>
+    <composite-name>ccWidget</composite-name>
+    <composite-file>/ccWidget.xsp</composite-file>
+    <composite-extension>
+      <designer-extension>
+        <in-palette>true</in-palette>
+      </designer-extension>
+    </composite-extension>
+  </composite-component>
+</faces-config>

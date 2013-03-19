@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+
+	<XPa:ccLayout id="cc4cclayout" navPath="/basics/table/">
+		<xp:this.facets>
+			<xc:ccMenu_basics xp:key="facetLeft"></xc:ccMenu_basics>
+			<xp:panel xp:key="facetMain" id="panel4facetmain">
+
+				<xp:div style="text-align:center">
+					<xp:table border="1" cellpadding="2" cellspacing="2"
+						style="width:100%;color:rgb(128,64,0);background-color:rgb(232,245,255);border-color:rgb(128,0,255);border-style:solid;border-width:thin"
+						id="testTable"
+						summary="this is text in the Table summary property"
+						title="This is a Test Table" styleClass="lotusTable">
+						<xp:this.caption><![CDATA[#{javascript:var t = new Date();
+
+"Table Caption | "+t.getFullYear()+t.getMonth()+t.getDay()+t.getHour()+t.getMinute()+t.getSecond()+t.getMilliseconds()}]]></xp:this.caption>
+						<xp:tr>
+							<xp:td>
+								<xp:button value="Label" id="button1"></xp:button>
+							</xp:td>
+							<xp:td>
+								<xp:inputText id="inputText1"></xp:inputText>
+							</xp:td>
+						</xp:tr>
+						<xp:tr>
+							<xp:td valign="top" align="right"
+								style="background-color:rgb(232,249,242)">
+								<xp:listBox id="listBox1"></xp:listBox>
+							</xp:td>
+							<xp:td>
+								<xp:table
+									style="width:100.0%;background-color:rgb(254,252,235);border-color:rgb(128,128,64);border-style:solid;border-width:thin"
+									id="TablewithinaTable" cellpadding="3" cellspacing="3">
+									<xp:tr>
+										<xp:td>
+											<xp:checkBox text="Label"
+												id="checkBox1">
+											</xp:checkBox>
+										</xp:td>
+										<xp:td>
+											<xp:comboBox
+												id="comboBox1">
+											</xp:comboBox>
+										</xp:td>
+									</xp:tr>
+									<xp:tr>
+										<xp:td>
+											<xp:radio
+												text="#{javascript:@UpperCase(@Unique())}" id="radio1">
+											</xp:radio>
+										</xp:td>
+										<xp:td>
+											<xp:inputTextarea
+												id="inputTextarea1">
+											</xp:inputTextarea>
+										</xp:td>
+									</xp:tr>
+								</xp:table>
+							</xp:td>
+						</xp:tr>
+					</xp:table>
+				</xp:div>
+
+			</xp:panel>
+
+		</xp:this.facets>
+	</XPa:ccLayout>
+</xp:view>

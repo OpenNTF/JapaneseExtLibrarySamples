@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' replicaid='85257A870079CB8F'>
+<noteinfo noteid='316' unid='ADF3C2645AD3AAA1802574670047F310' sequence='16'>
+<created><datetime dst='true'>20080613T140552,80+01</datetime></created>
+<modified><datetime dst='true'>20130118T132314,86+01</datetime></modified>
+<revised><datetime dst='true'>20130118T132314,85+01</datetime></revised>
+<lastaccessed><datetime dst='true'>20130118T132314,86+01</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20120928T180557,99-04</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name><name
+>CN=Paul Hannan/OU=Ireland/O=IBM</name></updatedby>
+<revisions><datetime dst='true'>20080613T140552,82+01</datetime><datetime
+ dst='true'>20080613T140552,87+01</datetime><datetime dst='true'>20080613T143024,80+01</datetime><datetime
+ dst='true'>20080613T143121,12+01</datetime><datetime dst='true'>20080613T143333,12+01</datetime><datetime
+ dst='true'>20100527T110308,89+01</datetime></revisions>
+<item name='$FormulaClass' sign='true'><text>1</text></item>
+<item name='$TITLE' sign='true'><text>xspHearerSortingView</text></item>
+<item name='$Index' sign='true'><text/></item>
+<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
+9AACABwABwBTdWJqZWN0AAUABwBTdWJqZWN0AAMAAgAcAAgAU29ydFRleHQFAAgAU29ydFRleHQD
+AAIAIAAKAFNvcnROdW1iZXIFAAoAU29ydE51bWJlcgMAAgAcAAgAU29ydERhdGUFAAgAU29ydERh
+dGUDAAUAQgA+AAYABwAIAAoACAAJAAQAU3ViamVjdFNvcnRUZXh0U29ydE51bWJlclNvcnREYXRl
+JENvbmZsaWN0JFJFRgQABAAAACwABQAEAEZvcm0BABQAeHNwSGVhZGVyU29ydGluZ0Zvcm0KAgQA
+BAADAAcADAAFAAkzUzRTAA==
+</formula></item>
+<item name='$Collation' summary='true'>
+<rawitemdata type='2'>
+QwAEAABEgGYAAAAHAIBmAAcACACAZgAPAAoAgGYAGQAIAFN1YmplY3RTb3J0VGV4dFNvcnROdW1i
+ZXJTb3J0RGF0ZQ==
+</rawitemdata></item>
+<item name='$Collation1' summary='true'>
+<rawitemdata type='2'>
+FAABAABEgGYAAAAHAFN1YmplY3Q=
+</rawitemdata></item>
+<item name='$Collation2' summary='true'>
+<rawitemdata type='2'>
+FAABAABEgWYAAAAHAFN1YmplY3Q=
+</rawitemdata></item>
+<item name='$Collation3' summary='true'>
+<rawitemdata type='2'>
+FQABAABEgGYAAAAIAFNvcnRUZXh0
+</rawitemdata></item>
+<item name='$Collation4' summary='true'>
+<rawitemdata type='2'>
+FQABAABEgWYAAAAIAFNvcnRUZXh0
+</rawitemdata></item>
+<item name='$Collation5' summary='true'>
+<rawitemdata type='2'>
+FwABAABEgGYAAAAKAFNvcnROdW1iZXI=
+</rawitemdata></item>
+<item name='$Collation6' summary='true'>
+<rawitemdata type='2'>
+FwABAABEgWYAAAAKAFNvcnROdW1iZXI=
+</rawitemdata></item>
+<item name='$Collation7' summary='true'>
+<rawitemdata type='2'>
+FQABAABEgGYAAAAIAFNvcnREYXRl
+</rawitemdata></item>
+<item name='$Collation8' summary='true'>
+<rawitemdata type='2'>
+FQABAABEgWYAAAAIAFNvcnREYXRl
+</rawitemdata></item>
+<item name='$VIEWFORMAT' summary='true' sign='true'>
+<rawitemdata type='5'>
+AQAEAAIACAAAAFZDAQMHAAcAHgAAABUBAQAACgAAAAAAAAAAAAICAAAAVkMBAwgABAAeAAAAUAAB
+AAAKAAAAAAAAAAAAAgIAAABWQwEDCgAGACIAAABQAAEAAAoAAAAAAAAAAAACAgAAAFZDAQMIAAQA
+HgAAAFAAAQAACgAAAAAAAAAAAAICAAAAU3ViamVjdFN1YmplY3QeAAIAHAAHAFN1YmplY3QABQAH
+AFN1YmplY3QAAwBTb3J0VGV4dFRleHQeAAIAHAAIAFNvcnRUZXh0BQAIAFNvcnRUZXh0AwBTb3J0
+TnVtYmVyTnVtYmVyIgACACAACgBTb3J0TnVtYmVyBQAKAFNvcnROdW1iZXIDAFNvcnREYXRlRGF0
+ZR4AAgAcAAgAU29ydERhdGUFAAgAU29ydERhdGUDACYAAQAAAAEBAAkBAAAKAQEOCgAAAQCtKwEA
+AQABAAAAAAAAAAAAV0MBAQAJAAAAAAAAAAAAAAAAAAAAAAEABAAAAAAA//8AAAAAAAAAAAAAAAAA
+AFdDAQEACQAAAAAAAAAAAAAAAAAAAAABAAQAAAAAAP//AAAAAAAAAAAAAAAAAABXQwEBAAkAAAAA
+AAAAAAAAAAAAAAAAAAAEAAAAAAD//wAAAAAAAAAAAAAAAAAAV0MBAQAJAAAAAAAAAAAAAAAAAAAA
+AAAABAAAAAAA//8AAAAAAAAAAAAAAAAAAEIAAAAAAAEA////AAUA////AAEAAAAAAAAAAAAAAAAA
+AQD///8AAQD///8AAAABAAAAAAABAAAAAAABAAAAAAAAAAgAAAAAAAEA
+</rawitemdata></item>
+<item name='$Comment' sign='true'><text/></item>
+<item name='$Flags'><text>Y</text></item>
+<item name='$DesignerVersion' sign='true'><text>8.5</text></item>
+<item name='$SelQuery' sign='true'>
+<rawitemdata type='f'>
+gQYAAAAAif8gAAAAAAABABQAeHNwSGVhZGVyU29ydGluZ0Zvcm0=
+</rawitemdata></item></note>
+

@@ -1,0 +1,15 @@
+
+a.action:link, a.lotusLinkAction:visited{position:relative;top:-4px;}
+
+.lotusContent{display:inline-block;}
+.lotusBanner{margin-bottom:20px}
+.lotusFrame{width:expression( documentElement.clientWidth < 990 ? (documentElement.clientWidth == 0 ? (body.clientWidth < 990 ? "990px" : "auto") : "990px") : "auto" );}
+
+.lotusMain{display:inline-block;overflow:hidden;}
+
+.lotusColumnLeft{display:inline-block;}
+
+
+.lotusTop{display:inline-block;}
+.lotusInner{display:inline-block;}
+.lotusBottom{display:inline-block;}

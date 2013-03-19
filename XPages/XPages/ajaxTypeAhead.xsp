@@ -1,0 +1,573 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+
+
+
+
+	<XPa:ccLayout id="cc4cclayout"  navPath="/events/typeahead/">
+		<xp:this.facets>
+			<xc:ccMenu_events xp:key="facetLeft"></xc:ccMenu_events>
+			<xp:panel xp:key="facetMain">
+
+				<xp:label value="Ajax Type Ahead" id="label1"
+					style="font-weight:bold">
+				</xp:label>
+				<xp:panel>
+
+
+					<xp:this.data>
+						<xp:dominoDocument var="document1"
+							formName="xspAjaxTypeAhead">
+						</xp:dominoDocument>
+						<xp:dominoView var="view1"
+							viewName="(Default View)">
+						</xp:dominoView>
+					</xp:this.data>
+					<xp:button value="Save" id="buttonAjaxTASave">
+						<xp:eventHandler event="onclick" submit="true"
+							refreshMode="complete">
+							<xp:this.action>
+								<xp:save name="/ajaxTypeAhead.xsp"></xp:save>
+							</xp:this.action>
+						</xp:eventHandler>
+					</xp:button>
+					<xp:button value="Edit" id="buttonAjaxTAEdit">
+						<xp:eventHandler event="onclick" submit="true"
+							refreshMode="complete">
+							<xp:this.action>
+								<xp:changeDocumentMode mode="edit"></xp:changeDocumentMode>
+							</xp:this.action>
+						</xp:eventHandler>
+					</xp:button>
+					<xp:button value="Delete" id="buttonAjaxTADelete">
+						<xp:eventHandler event="onclick" submit="true"
+							refreshMode="complete">
+							<xp:this.action>
+								<xp:deleteDocument
+									name="/ajaxTypeAhead.xsp">
+								</xp:deleteDocument>
+							</xp:this.action>
+						</xp:eventHandler>
+					</xp:button>
+					<xp:table>
+						<xp:tr>
+							<xp:td>
+								Subject:
+								<xp:inputText
+									id="inputTextAjaxTypeAheadSubject" value="#{document1.Subject}"
+									style="width:63.0px">
+								</xp:inputText>
+							</xp:td>
+							<xp:td>
+
+							</xp:td>
+						</xp:tr>
+						<xp:tr>
+							<xp:td>
+								Mode 'Full' - static list | type 'a' or
+								'A'
+							</xp:td>
+							<xp:td
+								style="background-color:rgb(242,250,253)">
+								<xp:inputText
+									id="inputTextAjaxTypeAhead01"
+									value="#{document1.testAjaxTypeAhead_1}">
+									<xp:typeAhead mode="full"
+										minChars="1" id="typeAhead1">
+										<xp:this.valueList><![CDATA[a001
+a002
+a003
+a004
+A01
+A02
+A03
+A04
+A05]]></xp:this.valueList>
+									</xp:typeAhead>
+								</xp:inputText>
+							</xp:td>
+						</xp:tr>
+						<xp:tr>
+							<xp:td>
+								Mode 'Full' - computed list | type 'b'
+								or 'B'
+							</xp:td>
+							<xp:td
+								style="background-color:rgb(242,250,253)">
+								<xp:inputText
+									id="inputTextAjaxTypeAhead02"
+									value="#{document1.testAjaxTypeAhead_2}">
+									<xp:typeAhead mode="full"
+										minChars="1" id="typeAhead2">
+										<xp:this.valueList><![CDATA[#{javascript:return ["B0001", "B0002", "B0003", "B0004", "B0005", "b01", "b02", "b03", "b04", "b05"]}]]></xp:this.valueList>
+									</xp:typeAhead>
+								</xp:inputText>
+							</xp:td>
+						</xp:tr>
+						<xp:tr>
+							<xp:td>
+								Mode 'Partial' - static list | type 'c'
+								or 'C'
+							</xp:td>
+							<xp:td
+								style="background-color:rgb(242,250,253)">
+								<xp:inputText
+									id="inputTextAjaxTypeAhead03"
+									value="#{document1.testAjaxTypeAhead_3}">
+									<xp:typeAhead mode="partial"
+										minChars="1" id="typeAhead3">
+
+										<xp:this.valueList><![CDATA[c001
+c002
+c003
+c004
+C01
+C02
+C03
+C04
+C05]]></xp:this.valueList>
+									</xp:typeAhead>
+								</xp:inputText>
+							</xp:td>
+						</xp:tr>
+						<xp:tr>
+							<xp:td>
+								Mode 'Partial' - computed list | type
+								'd' or 'D'
+							</xp:td>
+							<xp:td
+								style="background-color:rgb(242,250,253)">
+								<xp:inputText
+									id="inputTextAjaxTypeAhead04"
+									value="#{document1.testAjaxTypeAhead_4}">
+									<xp:typeAhead mode="partial"
+										minChars="1" id="typeAhead4">
+										<xp:this.valueList><![CDATA[#{javascript:return ["D0001", "D0002", "D0003", "D0004", "D0005", "d01", "d02", "d03", "d04", "d05"]}]]></xp:this.valueList>
+									</xp:typeAhead>
+								</xp:inputText>
+							</xp:td>
+						</xp:tr>
+						<xp:tr>
+							<xp:td>
+								Client separator ',' | type 'e' or 'E'
+							</xp:td>
+							<xp:td
+								style="background-color:rgb(242,250,253)">
+								<xp:inputText
+									id="typeAhead_clientSeparator"
+									value="#{document1.testAjaxTypeAhead_5}">
+									<xp:typeAhead mode="full"
+										minChars="1" tokens="," id="typeAhead5">
+										<xp:this.valueList><![CDATA[e001
+e002
+e003
+e004
+E01
+E02
+E03
+E04
+E05]]></xp:this.valueList>
+									</xp:typeAhead>
+								</xp:inputText>
+							</xp:td>
+						</xp:tr>
+						<xp:tr>
+							<xp:td>
+								Min chars = 2 | type 'f0' or 'F0'
+							</xp:td>
+							<xp:td
+								style="background-color:rgb(242,250,253)">
+								<xp:inputText
+									id="typeAhead_minimum2Chars"
+									value="#{document1.testAjaxTypeAhead_6}">
+									<xp:typeAhead mode="full"
+										minChars="2" id="typeAhead6">
+										<xp:this.valueList><![CDATA[#{javascript:return ["F0001", "F0002", "F0003", "F0004", "F0005", "f01", "f02", "f03", "f04", "f05"]}]]></xp:this.valueList>
+									</xp:typeAhead>
+								</xp:inputText>
+							</xp:td>
+						</xp:tr>
+						<xp:tr>
+							<xp:td>
+								Search delay = 1.0sec | type 'g' or 'g'
+							</xp:td>
+							<xp:td
+								style="background-color:rgb(242,250,253)">
+								<xp:inputText id="typeAhead_searchDelay"
+									value="#{document1.testAjaxTypeAhead_7}">
+									<xp:typeAhead mode="full"
+										minChars="1" frequency="5.0" id="typeAhead7">
+										<xp:this.valueList><![CDATA[g001
+g002 
+g003
+g004
+G01
+G02
+G03
+G04
+G05]]></xp:this.valueList>
+									</xp:typeAhead>
+								</xp:inputText>
+							</xp:td>
+						</xp:tr>
+						<xp:tr>
+							<xp:td>
+								Primitive suggestions | type 'h' or 'H'
+							</xp:td>
+							<xp:td
+								style="background-color:rgb(242,250,253)">
+								<xp:inputText
+									id="typeAhead_primitiveSuggestions"
+									value="#{document1.testAjaxTypeAhead_8}">
+									<xp:typeAhead mode="full"
+										minChars="1" id="typeAhead8">
+										<xp:this.valueList><![CDATA[h001
+h002 
+h003
+h004
+H01
+H02
+H03
+H04
+H05]]></xp:this.valueList>
+									</xp:typeAhead>
+								</xp:inputText>
+							</xp:td>
+						</xp:tr>
+						<xp:tr>
+							<xp:td>
+								Value binding filtered suggestions
+								&#160;| type 'i' or 'I'
+							</xp:td>
+							<xp:td
+								style="background-color:rgb(242,250,253)">
+								<xp:inputText
+									id="typeAhead_valueBindingFiltered"
+									value="#{document1.testAjaxTypeAhead_9}">
+									<xp:typeAhead mode="full"
+										minChars="1" id="typeAhead9">
+										<xp:this.valueList><![CDATA[#{javascript:var list = new Array();
+// note, methods available on Array are listed at 
+// http://www.w3schools.com/jsref/jsref_obj_array.asp
+// push() Adds one or more elements to the end of an array
+list.push('i001');
+list.push('i002');
+list.push('i003');
+list.push('i004');
+list.push('I001');
+list.push('I002');
+list.push('I003');
+list.push('I004');
+
+if( typeof starts == 'undefined' || null == starts ){
+	return list;
+}
+
+var filtered = new Array();
+while( list.length > 0 ){
+	// shift() Removes and returns the first element of an array
+	var item = list.shift();
+	
+	if( item.startsWith(starts) ){
+		filtered.push(item);
+	}
+}
+return filtered;
+}
+]]></xp:this.valueList>
+									</xp:typeAhead>
+								</xp:inputText>
+							</xp:td>
+						</xp:tr>
+						<xp:tr>
+							<xp:td>
+								Markup suggestions (unfiltered) | type
+								'j' or 'J'
+							</xp:td>
+							<xp:td
+								style="background-color:rgb(242,250,253)">
+								<xp:inputText
+									id="typeAhead_markupSuggestions"
+									value="#{document1.testAjaxTypeAhead_10}">
+									<xp:typeAhead mode="full"
+										minChars="1" valueMarkup="true" id="typeAhead10">
+										<xp:this.valueList><![CDATA[<ul>
+	<li><button>j001</button></li>
+	<li><i>j002</i></li>
+	<li><b>j003</b></li>
+	<li><i>j004</i></li>
+ 	<li><b>J001</b></li>
+	<li><i>J002</i></li>
+	<li><b>J003</b></li>
+	<li><i>J004</i></li>
+</ul>]]></xp:this.valueList>
+									</xp:typeAhead>
+								</xp:inputText>
+							</xp:td>
+						</xp:tr>
+						<xp:tr>
+							<xp:td>
+								Case Sensitive False | type 'k' or 'K'
+							</xp:td>
+							<xp:td
+								style="background-color:rgb(242,250,253)">
+								<xp:inputText
+									id="typeAhead_NotCaseSensitive"
+									value="#{document1.testAjaxTypeAhead_11}">
+									<xp:typeAhead mode="full"
+										minChars="1" ignoreCase="true" id="typeAhead11">
+										<xp:this.valueList><![CDATA[K01
+K02
+K03
+K04
+K05
+k01
+k02
+k03
+k04
+k05]]></xp:this.valueList>
+									</xp:typeAhead>
+								</xp:inputText>
+							</xp:td>
+						</xp:tr>
+						<xp:tr>
+							<xp:td>
+								Suggestions separator | type 'l' or 'L'
+							</xp:td>
+							<xp:td
+								style="background-color:rgb(242,250,253)">
+								<xp:inputText
+									id="typeAhead_suggestionSeparator"
+									value="#{document1.testAjaxTypeAhead_12}">
+									<xp:typeAhead mode="full"
+										minChars="1"
+										valueList="l001-l002-l003-l004-L01-L02-L03-L04-L05"
+										valueListSeparator="-" id="typeAhead12">
+
+									</xp:typeAhead>
+								</xp:inputText>
+							</xp:td>
+						</xp:tr>
+						<xp:tr>
+							<xp:td rendered="false">
+								External Mode&#160;| type 'm' or 'M'
+							</xp:td>
+							<xp:td rendered="false"
+								style="background-color:rgb(242,250,253)">
+								<xp:inputText
+									id="typeAhead_externalMode"
+									value="#{document1.testAjaxTypeAhead_13}" rendered="false">
+									<xp:typeAhead mode="external"
+										minChars="1" url="http://localhost/servlet/cars"
+										id="typeAhead13">
+									</xp:typeAhead>
+								</xp:inputText>
+							</xp:td>
+						</xp:tr>
+						<xp:tr rendered="false">
+							<xp:td>
+								escape &quot;true&quot;| type '&lt;'
+							</xp:td>
+							<xp:td
+								style="background-color:rgb(242,250,253)">
+								<xp:inputText id="typeAhead_escapeTrue"
+									value="#{document1.testAjaxTypeAhead_14}">
+									<xp:typeAhead mode="full"
+										minChars="1" id="typeAhead14">
+										<xp:this.valueList><![CDATA[<b>n001</b>
+<b>n002</b>
+<b>N001</b>
+<b>N002</b>]]></xp:this.valueList>
+									</xp:typeAhead>
+								</xp:inputText>
+							</xp:td>
+						</xp:tr>
+
+						<xp:tr>
+							<xp:td>
+								Value Markup | type 'o' or 'O'
+							</xp:td>
+							<xp:td
+								style="background-color:rgb(242,250,253)">
+								<xp:inputText id="typeAhead_valueMarkup"
+									value="#{document1.testAjaxTypeAhead_15}">
+									<xp:typeAhead mode="full"
+										minChars="1" valueMarkup="true" id="typeAhead15"
+										var="starts">
+										<xp:this.valueList><![CDATA[#{javascript:var values = [
+	['o001',20],
+	['o002',30],
+	['O001',100],
+	['O002',5]
+];
+var i;
+if( typeof starts != 'undefined' && null != starts ){
+	// filter the list
+	var fullList = values;
+	values = new Array();
+	for( i = 0; i < fullList.length; i++){
+		if( fullList[i][0].startsWith(starts) ){
+			values.push(fullList[i]);
+		}
+	}
+}
+
+var result = "<ul>";
+var even = false;
+for( i = 0; i < values.length; i++){
+	result += "<li>";
+	if( even ){
+		// add the text to a html button
+		result += "<button>";
+	}
+	result += values[i][0];
+	
+	if( even ){
+		result += "</button>";
+	}
+	result += "</li>";
+	
+	even = !even;
+}
+result += "</ul>";	
+return result;
+}]]></xp:this.valueList>
+									</xp:typeAhead>
+								</xp:inputText>
+							</xp:td>
+						</xp:tr>
+						<xp:tr>
+							<xp:td>
+								Span class informal | type 'p' or 'P'
+							</xp:td>
+							<xp:td
+								style="background-color:rgb(242,250,253)">
+								<xp:inputText
+									id="typeAhead_spanClassInformal"
+									value="#{document1.testAjaxTypeAhead_17}">
+									<xp:typeAhead mode="full"
+										minChars="1" id="typeAhead17" valueMarkup="true">
+
+										<xp:this.valueList><![CDATA[<ul>
+<li>p001<span class="informal">20</span></li>
+<li>p002<span class="informal">30</span></li>
+<li>P001<span class="informal">100</span></li>
+<li>P002<span class="informal">5</span></li>
+</ul>]]></xp:this.valueList>
+									</xp:typeAhead>
+								</xp:inputText>
+							</xp:td>
+						</xp:tr>
+						<xp:tr>
+							<xp:td>
+								Multiple character filter | type 'a' or
+								'ab'
+							</xp:td>
+							<xp:td
+								style="background-color:rgb(242,250,253)">
+								<xp:inputText
+									id="typeAhead_multipleCharFilter"
+									value="#{document1.testAjaxTypeAhead_16}">
+									<xp:typeAhead mode="full"
+										minChars="1" id="typeAhead16">
+										<xp:this.valueList><![CDATA[aa
+ab01
+ac
+abc
+abcde
+ba
+bb]]></xp:this.valueList>
+									</xp:typeAhead>
+								</xp:inputText>
+							</xp:td>
+						</xp:tr>
+
+
+
+						<xp:tr>
+							<xp:td></xp:td>
+							<xp:td></xp:td>
+						</xp:tr>
+						<xp:tr>
+							<xp:td>
+								New to 852
+								-&#160;preventFiltering=&quot;true&quot;
+								| type 'a'
+							</xp:td>
+							<xp:td>
+								<xp:inputText
+									id="typeAhead_preventFilteringTrue"
+									value="#{document1.testAjaxTypeAhead_18}">
+									<xp:typeAhead mode="full"
+										minChars="1" ignoreCase="true" preventFiltering="true">
+										<xp:this.valueList><![CDATA[#{javascript:var one = @Unique(@DbColumn(@DbName(),"xspFiltersView",1));
+var two = one.concat(@Unique(@DbColumn(@DbName(),"xspFiltersView",2)));
+two.concat(@Unique(@DbColumn(@DbName(),"xspFiltersView",3))).sort()
+}]]></xp:this.valueList>
+									</xp:typeAhead>
+								</xp:inputText>
+							</xp:td>
+						</xp:tr>
+						<xp:tr>
+							<xp:td>
+								preventFiltering=&quot;false&quot; |
+								type 'a'
+							</xp:td>
+							<xp:td>
+								<xp:inputText
+									id="typeAhead_preventFilteringFalse"
+									value="#{document1.testAjaxTypeAhead_19}">
+									<xp:typeAhead mode="full"
+										minChars="1" ignoreCase="true" preventFiltering="false">
+										<xp:this.valueList><![CDATA[#{javascript:var one = @Unique(@DbColumn(@DbName(),"xspFiltersView",1));
+var two = one.concat(@Unique(@DbColumn(@DbName(),"xspFiltersView",2)));
+two.concat(@Unique(@DbColumn(@DbName(),"xspFiltersView",3))).sort()
+}]]></xp:this.valueList>
+									</xp:typeAhead>
+								</xp:inputText>
+							</xp:td>
+						</xp:tr>
+						<xp:tr>
+							<xp:td></xp:td>
+							<xp:td></xp:td>
+						</xp:tr>
+					</xp:table>
+
+					<xp:repeat rows="30" value="#{view1}" var="coll1">
+						<xp:table>
+							<xp:tr>
+								<xp:td>
+									<xp:image url="/vwicn142.gif"
+										id="image7">
+									</xp:image>
+								</xp:td>
+								<xp:td>
+
+
+									<xp:link escape="true" id="link6">
+										<xp:this.text><![CDATA[#{javascript:coll1.getColumnValue("Topic")}]]></xp:this.text>
+
+										<xp:eventHandler event="onclick"
+											submit="true" refreshMode="complete">
+											<xp:this.action>
+												<xp:openPage
+													name="/ajaxTypeAhead.xsp" target="openDocument"
+													documentId="#{javascript:coll1.getId()}">
+												</xp:openPage>
+											</xp:this.action>
+										</xp:eventHandler>
+									</xp:link>
+								</xp:td>
+								<xp:td></xp:td>
+							</xp:tr>
+						</xp:table>
+					</xp:repeat>
+				</xp:panel>
+				<xp:panel></xp:panel>
+
+			</xp:panel>
+		</xp:this.facets>
+	</XPa:ccLayout>
+</xp:view>

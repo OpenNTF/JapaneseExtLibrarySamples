@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+
+	<XPa:ccLayout navPath="/forms/">
+		<xp:this.facets>
+			<xc:ccMenu_forms xp:key="facetLeft"></xc:ccMenu_forms></xp:this.facets>
+	</XPa:ccLayout>
+</xp:view>

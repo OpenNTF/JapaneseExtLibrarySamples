@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+	<xp:this.data>
+		<xp:dominoDocument var="document1"
+			formName="xspValidatorsConvertorsForm">
+		</xp:dominoDocument>
+	</xp:this.data>
+	<xp:this.resources>
+		<xp:styleSheet href="/csscustom.css"></xp:styleSheet>
+	</xp:this.resources>
+	<XPa:ccLayout id="cc4cclayout" navPath="/forms/cmask/">
+		<xp:this.facets>
+			<xc:ccMenu_forms xp:key="facetLeft"></xc:ccMenu_forms>
+			<xp:panel xp:key="facetMain" id="contentPanel">
+				<xp:panel id="panel4view">
+					<xp:button id="buttonNewValDoc" value="New">
+						<xp:eventHandler event="onclick" submit="true"
+							refreshMode="complete">
+							<xp:this.action>
+								<xp:openPage
+									name="/propValidatorsConvertors.xsp" target="newDocument">
+								</xp:openPage>
+							</xp:this.action>
+						</xp:eventHandler>
+					</xp:button>
+					<xp:button value="Delete selected"
+						id="buttonDeleteSelectedValDoc">
+						<xp:eventHandler event="onclick" submit="true"
+							refreshMode="complete">
+							<xp:this.action>
+								<xp:deleteSelectedDocuments
+									view="viewPanel1" message="Delete the selected documents">
+								</xp:deleteSelectedDocuments>
+							</xp:this.action>
+						</xp:eventHandler>
+					</xp:button>
+					<xp:viewPanel rows="300" id="viewPanel1"
+						pageName="/convertorsPatterns.xsp">
+						<xp:this.data>
+							<xp:dominoView
+								var="validatorsConvertorsView"
+								viewName="ValidatorsConvertorsView">
+							</xp:dominoView>
+						</xp:this.data>
+						<xp:viewColumn id="viewColumn1"
+							showCheckbox="true" displayAs="link" openDocAsReadonly="true"
+							columnName="Subject">
+							<xp:viewColumnHeader id="viewColumnHeader1"
+								value="Subject" showCheckbox="true">
+							</xp:viewColumnHeader>
+						</xp:viewColumn>
+					</xp:viewPanel>
+				</xp:panel>
+				<xp:panel id="panel4doc">
+					<xp:button value="Submit" id="buttonSubmitValDoc">
+						<xp:eventHandler event="onclick" submit="true"
+							refreshMode="complete" immediate="false" save="true">
+						</xp:eventHandler>
+					</xp:button>
+					<xp:button value="Cancel" id="buttonCancelValDoc">
+						<xp:eventHandler event="onclick" submit="true"
+							refreshMode="complete" immediate="true" save="false">
+						</xp:eventHandler>
+					</xp:button>
+					<xp:button value="Edit" id="buttonEditValDoc">
+						<xp:eventHandler event="onclick" submit="true"
+							refreshMode="complete">
+							<xp:this.action>
+								<xp:changeDocumentMode mode="edit"></xp:changeDocumentMode>
+							</xp:this.action>
+						</xp:eventHandler>
+					</xp:button>
+					<xp:panel id="testPanel">
+						<xp:br></xp:br>
+						<xp:label value="Subject: " id="label1"></xp:label>
+						<xp:inputText id="inputTextSubjectValDoc"
+							value="#{document1.Subject}">
+						</xp:inputText>
+						<xp:br></xp:br>
+						(validation is done server side)
+						<xp:table styleClass="customTable"
+							caption="Mask Convertors">
+
+
+
+
+							<xp:tr>
+								<xp:td></xp:td>
+								<xp:td>
+									Enter credit card number
+									<xp:br id="br4"></xp:br>
+									(default)
+								</xp:td>
+								<xp:td>
+									<xp:inputText id="m1"
+										value="#{document1.Textdata_18}">
+										<xp:this.converter>
+											<xp:convertMask
+												mask="####-####-####-####">
+											</xp:convertMask>
+										</xp:this.converter>
+									</xp:inputText>
+								</xp:td>
+								<xp:td>
+									<xp:message id="message1"
+										for="m1">
+									</xp:message>
+								</xp:td>
+							</xp:tr>
+							<xp:tr>
+								<xp:td></xp:td>
+								<xp:td>
+									Enter credit card number
+									<xp:br id="br5"></xp:br>
+									(asis = false)
+								</xp:td>
+								<xp:td>
+									<xp:inputText id="m2"
+										value="#{document1.Textdata_19}">
+										<xp:this.converter>
+											<xp:convertMask asis="false"
+												mask="####-####-####-####">
+											</xp:convertMask>
+										</xp:this.converter>
+									</xp:inputText>
+									<xp:text escape="true"
+										id="computedField3" value="#{document1.Mask2}">
+									</xp:text>
+								</xp:td>
+								<xp:td>
+									<xp:message id="message2"
+										for="m2">
+									</xp:message>
+								</xp:td>
+							</xp:tr>
+							<xp:tr>
+								<xp:td></xp:td>
+								<xp:td>
+									Enter credit card number
+									<xp:br id="br24"></xp:br>
+									<xp:span
+										style="color:rgb(255,0,0)">
+									</xp:span>
+									(asis = true)
+									<xp:span
+										style="color:rgb(255,0,0)">
+									</xp:span>
+								</xp:td>
+								<xp:td>
+									<xp:inputText id="m3"
+										value="#{document1.Textdata_20}">
+
+										<xp:this.converter>
+											<xp:convertMask asis="true"
+												mask="####-####-####-####">
+
+
+											</xp:convertMask>
+										</xp:this.converter>
+									</xp:inputText>
+									<xp:text escape="true"
+										id="computedField4" value="#{document1.Mask3}">
+									</xp:text>
+								</xp:td>
+								<xp:td>
+									<xp:message id="message3"
+										for="m3">
+									</xp:message>
+								</xp:td>
+							</xp:tr>
+
+						</xp:table>
+
+
+
+					</xp:panel>
+
+				</xp:panel>
+			</xp:panel>
+		</xp:this.facets>
+	</XPa:ccLayout>
+</xp:view>

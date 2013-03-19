@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+
+	<XPa:ccLayout navPath="/other/gouseragent/">
+		<xp:this.facets>
+			<xc:ccMenu_other xp:key="facetLeft"></xc:ccMenu_other>
+			<xp:panel xp:key="facetMain">
+
+
+				<xp:span style="font-size:12pt;font-weight:bold">
+					JavaScript : XSPUserAgent
+				</xp:span>
+				<xp:br style="font-size:12pt;font-weight:bold"></xp:br>
+				<xp:br></xp:br>
+				<xp:span style="color:rgb(0,128,255)">
+					Displays all the Javascript funtions associated with
+					XSPUserAgent
+				</xp:span>
+				<xp:br></xp:br>
+				<xp:br></xp:br>
+				<xp:table>
+					<xp:tr>
+						<xp:td>getBrowser</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:text escape="true"
+								id="computedField3">
+								<xp:this.value><![CDATA[#{javascript:return context.getUserAgent().getBrowser();
+
+}]]></xp:this.value>
+							</xp:text>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>getBrowserVersion</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:text escape="true"
+								id="computedField1">
+								<xp:this.value><![CDATA[#{javascript:return context.getUserAgent().getBrowserVersion();
+}]]></xp:this.value>
+							</xp:text>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>getBrowserVersionNumber</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:text escape="true"
+								id="computedField4">
+								<xp:this.value><![CDATA[#{javascript:return context.getUserAgent().getBrowserVersionNumber();
+}]]></xp:this.value>
+							</xp:text>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>getVersion</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:text escape="true"
+								id="computedField6">
+								<xp:this.value><![CDATA[#{javascript:var browser = context.getUserAgent().getBrowser();
+return context.getUserAgent().getVersion(browser);
+}]]></xp:this.value>
+							</xp:text>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>getVersionNumber</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:text escape="true"
+								id="computedField7">
+								<xp:this.value><![CDATA[#{javascript:var browser = context.getUserAgent().getBrowser();
+return context.getUserAgent().getVersionNumber(browser);}]]></xp:this.value>
+							</xp:text>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>getUserAgent</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:text escape="true"
+								id="computedField5">
+								<xp:this.value><![CDATA[#{javascript:return context.getUserAgent().getUserAgent();
+}]]></xp:this.value>
+							</xp:text>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>hasEntry</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+
+							<xp:text escape="true"
+								id="computedField8">
+								<xp:this.value><![CDATA[#{javascript:if(context.getUserAgent().hasEntry("Mozilla")) {
+	return "User Agent has entry : Mozilla";
+}else{
+	return "User Agent DOES NOT have entry : Mozilla";
+}
+	}]]></xp:this.value>
+							</xp:text>
+						</xp:td>
+					</xp:tr>
+
+
+
+					<xp:tr>
+						<xp:td>
+							isBrowser
+
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:text escape="true"
+								id="computedField2">
+								<xp:this.value><![CDATA[#{javascript:var browser = context.getUserAgent();
+
+if(browser.isChrome()){
+	return "You are on a Chrome Browser";
+}else if(browser.isFirefox()){
+	return "You are on a FireFox Browser";
+}else if (browser.isIE()){
+	return "You are on an IE Browser";
+}else if (browser.isOpera()){
+	return "You are on an Opera Browser";
+}else if (browser.isSafari()){
+	return "You are on a Safari Browser";
+}else{
+	return "Cannot detect your browser!!";
+}
+}]]></xp:this.value>
+							</xp:text>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>isBrowser(min, max)</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:text escape="true"
+								id="computedField9">
+								<xp:this.value><![CDATA[#{javascript:var browser = context.getUserAgent();
+
+if(browser.isChrome()){
+	if(browser.isChrome(0.0,3.0)){
+		return "You are on a Chrome Browser, version 1.0 - 3.0";		
+	}
+	return "You are on a Chrome Browser, version > 3.0";
+}else if(browser.isFirefox()){
+	if(browser.isFirefox(0.0,3.0)){
+		return "You are on a Firefox Browser, version 1.0 - 3.0";		
+	}
+	return "You are on a FireFox Browser, version > 3.0";
+}else if (browser.isIE()){
+	if(browser.isIE(0.0,3.0)){
+		return "You are on an IE Browser, version 1.0 - 3.0";		
+	}
+	return "You are on an IE Browser, version > 3.0";
+}else if (browser.isOpera()){
+	if(browser.isOpera(0.0,3.0)){
+		return "You are on an Opera Browser, version 1.0 - 3.0";		
+	}
+	return "You are on an Opera Browser, version > 3.0";
+}else if (browser.isSafari()){
+	if(browser.isSafari(0.0,3.0)){
+		return "You are on a Safari Browser, version 1.0 - 3.0";		
+	}
+	return "You are on a Safari Browser, version > 3.0";
+}else{
+	return "Cannot detect your browser!!";
+}
+}]]></xp:this.value>
+							</xp:text>
+						</xp:td>
+					</xp:tr>
+				</xp:table>
+
+			</xp:panel>
+		</xp:this.facets>
+	</XPa:ccLayout>
+</xp:view>

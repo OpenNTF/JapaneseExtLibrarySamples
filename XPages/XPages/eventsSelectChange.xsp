@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+
+	<XPa:ccLayout navPath="/events/selectchange/">
+		<xp:this.facets>
+			<xc:ccMenu_events xp:key="facetLeft"></xc:ccMenu_events>
+			<xp:panel xp:key="facetMain">
+				<xp:label id="labelSCEvts5"
+					style="font-size:12pt;color:rgb(0,0,0);font-weight:bold">
+					<xp:this.value><![CDATA[This XPage Tests Select & Change Events - Server & Client side]]></xp:this.value>
+				</xp:label>
+				<xp:br></xp:br>
+				<xp:br></xp:br>
+
+				<xp:table>
+					<xp:tr>
+						<xp:td>
+							<xp:label value="Event Type"
+								id="labelSCEvts1" style="font-weight:bold">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:label id="labelSCEvts2" value="Control"
+								style="font-weight:bold">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:label value="Result Client Side"
+								id="labelSCEvts3" style="font-weight:bold">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:label value="Result Server Side"
+								id="labelSCEvts12" style="font-weight:bold">
+							</xp:label>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							<xp:label value="onselect"
+								id="labelSCEvts7">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:inputTextarea id="inputTextarea1">
+								<xp:eventHandler event="onselect"
+									submit="true">
+									<xp:this.script><![CDATA[XSP.getElementById('#{id:inputTextSCEvts1}').value += "Client - On Select\n";]]></xp:this.script>
+									<xp:this.action>
+										<xp:setValue
+											binding="#{requestScope.rqsc1}">
+											<xp:this.value><![CDATA[#{javascript:return "Server - On Select "+@Unique()}]]></xp:this.value>
+										</xp:setValue>
+									</xp:this.action>
+								</xp:eventHandler>
+							</xp:inputTextarea>
+						</xp:td>
+						<xp:td>
+							<xp:inputText id="inputTextSCEvts1"></xp:inputText>
+						</xp:td>
+						<xp:td>
+							<xp:text escape="true"
+								id="computedFieldSCEvts1" value="#{requestScope.rqsc1}">
+							</xp:text>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							<xp:label value="onchange"
+								id="labelSCEvts6">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:inputRichText
+								id="inputRichTextSCEvts1">
+								<xp:eventHandler event="onchange"
+									submit="true">
+									<xp:this.script><![CDATA[XSP.getElementById('#{id:inputTextSCEvts2}').value += "Client - On Change\n";]]></xp:this.script>
+									<xp:this.action>
+										<xp:setValue
+											binding="#{requestScope.rqsc2}">
+											<xp:this.value><![CDATA[#{javascript:return "Server - On Change "+@Unique()}]]></xp:this.value>
+										</xp:setValue>
+									</xp:this.action>
+								</xp:eventHandler>
+							</xp:inputRichText>
+						</xp:td>
+						<xp:td>
+							<xp:inputText id="inputTextSCEvts2"></xp:inputText>
+						</xp:td>
+						<xp:td>
+							<xp:text escape="true"
+								id="computedFieldSCEvts2" value="#{requestScope.rqsc2}">
+							</xp:text>
+						</xp:td>
+					</xp:tr>
+
+					<xp:tr>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+				</xp:table>
+				<xp:br></xp:br>
+				<xp:br></xp:br>
+			</xp:panel>
+		</xp:this.facets>
+	</XPa:ccLayout>
+</xp:view>
+

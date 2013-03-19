@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+	<xp:this.data>
+		<xp:dominoDocument var="dominoDocument1"
+			formName="xspRichText">
+			<xp:this.postNewDocument>
+				<xp:actionGroup>
+					<xp:setValue binding="#{dominoDocument1.From}"
+						value="#{javascript:@UserName()}">
+					</xp:setValue>
+					<xp:setValue binding="#{dominoDocument1.Categories}"
+						value="Rich Text">
+					</xp:setValue>
+					<xp:setValue
+						binding="#{dominoDocument1.dateTimeCreated}"
+						value="#{javascript:@Now()}">
+					</xp:setValue>
+				</xp:actionGroup>
+			</xp:this.postNewDocument>
+		</xp:dominoDocument>
+	</xp:this.data>
+
+	<XPa:ccLayout id="cc4cclayout" navPath="/basics/richtext/">
+		<xp:this.facets>
+			<xc:ccMenu_basics xp:key="facetLeft"></xc:ccMenu_basics>
+
+			<XPa:ccContentCoreCtrl xp:key="facetMain"
+				id="cc4cccontentcorectrl">
+				<xp:this.facets>
+					<xp:panel xp:key="facetTestControl">
+						<xp:span
+							style="font-size:14pt;font-weight:bold">
+							Rich Text
+						</xp:span>
+						<xp:paragraph>
+							Rich text Rich text controls display an
+							input field in which users can create, edit,
+							save, and display rich text on a page. Rich
+							text fields are more versatile that plain
+							text fields because they can contain
+							objects, file attachments, or pictures as
+							well as text with formatting options such as
+							italics or boldface.
+
+							At run time, rich text fields look similar
+							to edit box or multiline edit box fields,
+							but they also display a formatting toolbar
+							with options for changing fonts, inserting
+							tables, aligning text, inserting links and
+							file attachments, and more.
+						</xp:paragraph>
+
+						<xp:inputText id="inputTextRichTextTextSubject"
+							value="#{dominoDocument1.Subject}">
+						</xp:inputText>
+						<xp:inputRichText id="inputRichTextTestRichText"
+							value="#{dominoDocument1.testRichTextBody}">
+						</xp:inputRichText>
+
+
+					</xp:panel>
+				</xp:this.facets>
+			</XPa:ccContentCoreCtrl>
+		</xp:this.facets>
+	</XPa:ccLayout>
+</xp:view>

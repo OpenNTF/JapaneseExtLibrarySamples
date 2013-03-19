@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:XPa="component/XPages.nsf">
+
+	<XPa:ccLayout id="cc4cclayout">
+		<xp:this.facets>
+			<xp:panel xp:key="facetMain">
+				<xp:panel>
+					<xp:label value="XPages Hierarchical Fields" id="label1"
+						styleClass="lotusTitlebar"></xp:label>
+					<hr />
+					<xp:button value="New Doc storing JSON in a Text field"
+						id="button1">
+						<xp:eventHandler event="onclick" submit="true"
+							refreshMode="complete">
+							<xp:this.action>
+								<xp:openPage name="/hftxjson.xsp" target="newDocument"></xp:openPage>
+							</xp:this.action>
+						</xp:eventHandler>
+					</xp:button>
+					<xp:br />
+					<xp:button value="New Doc storing JSON in a Rich Text field"
+						id="button2">
+						<xp:eventHandler event="onclick" submit="true"
+							refreshMode="complete">
+							<xp:this.action>
+								<xp:openPage name="/hfrtjson.xsp" target="newDocument"></xp:openPage>
+							</xp:this.action>
+						</xp:eventHandler>
+					</xp:button>
+					<xp:br />
+					<xp:button value="New Doc storing XML in a Text field"
+						id="button3">
+						<xp:eventHandler event="onclick" submit="true"
+							refreshMode="complete">
+							<xp:this.action>
+								<xp:openPage name="/hftxxml.xsp" target="newDocument"></xp:openPage>
+							</xp:this.action>
+						</xp:eventHandler>
+					</xp:button>
+					<xp:br />
+					<xp:button value="New Doc storing XML in a Rich Text field"
+						id="button4">
+						<xp:eventHandler event="onclick" submit="true"
+							refreshMode="complete">
+							<xp:this.action>
+								<xp:openPage name="/hfrtxml.xsp" target="newDocument"></xp:openPage>
+							</xp:this.action>
+						</xp:eventHandler>
+					</xp:button>
+
+
+
+					
+					<xp:br></xp:br>
+					<xp:button value="Delete selected" id="button5"><xp:eventHandler event="onclick" submit="true" refreshMode="complete">
+	<xp:this.action>
+		<xp:deleteSelectedDocuments view="viewPanelHF"
+			message="This action will delete the selected document">
+		</xp:deleteSelectedDocuments>
+	</xp:this.action></xp:eventHandler></xp:button>
+					<xp:viewPanel rows="30" id="viewPanelHF" var="vhf1">
+						<xp:this.facets>
+							<xp:pager partialRefresh="true" layout="Previous Group Next"
+								xp:key="headerPager" id="pager1">
+							</xp:pager>
+						</xp:this.facets>
+						<xp:this.data>
+							<xp:dominoView var="view1" viewName="xphfview"></xp:dominoView>
+						</xp:this.data>
+						<xp:viewColumn columnName="created"
+							id="viewColumn1">
+							<xp:this.converter>
+								<xp:convertDateTime type="date"></xp:convertDateTime>
+							</xp:this.converter>
+							<xp:viewColumnHeader value="created"
+								id="viewColumnHeader1">
+							</xp:viewColumnHeader>
+						</xp:viewColumn>
+						
+						<xp:viewColumn columnName="form" id="viewColumn3" showCheckbox="true">
+							<xp:viewColumnHeader value="form"
+								id="viewColumnHeader3" showCheckbox="true">
+							</xp:viewColumnHeader>
+						</xp:viewColumn>
+						<xp:viewColumn id="viewColumn4" value="">
+							<xp:this.facets>
+								<xp:viewColumnHeader xp:key="header"
+									id="viewColumnHeader4" value="LINK">
+								</xp:viewColumnHeader>
+							</xp:this.facets>
+							<xp:link escape="true"
+								text="#{javascript:vhf1.getColumnValue('Subject')}" id="link1">
+							<xp:eventHandler event="onclick" submit="true" refreshMode="complete">
+								<xp:this.action>
+									<xp:openPage
+										documentId="#{javascript:vhf1.getNoteID()}"
+										target="openDocument">
+										<xp:this.name><![CDATA[#{javascript:var f = vhf1.getColumnValue('form')
+@If(f=="xphfrtj","/hfrtjson.xsp",f=="xphfrtx","/hfrtxml.xsp",f=="xphftxtj","/hftxjson.xsp",f=="xphftxtx","/hftxxml.xsp","")
+}]]></xp:this.name>
+									</xp:openPage>
+								</xp:this.action></xp:eventHandler></xp:link>
+
+
+
+						</xp:viewColumn>
+					</xp:viewPanel>
+				</xp:panel>
+			</xp:panel>
+		</xp:this.facets>
+	</XPa:ccLayout>
+</xp:view>

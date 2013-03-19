@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+	<xp:this.data>
+		<xp:dominoDocument var="document1" formName="xspTabbedpanel"></xp:dominoDocument>
+	</xp:this.data>
+	<XPa:ccLayout id="cc4cclayout" navPath="/basics/tabbedpanel/">
+		<xp:this.facets>
+			<xc:ccMenu_basics xp:key="facetLeft"></xc:ccMenu_basics>
+			<xp:panel xp:key="facetMain" id="panel4facetmain">
+
+
+				<xp:table>
+					<xp:tr>
+						<xp:td>
+							<xp:label value="Subject:"
+								id="Subject_Label1" for="Subject1">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:inputText value="#{document1.Subject}"
+								id="Subject1">
+							</xp:inputText>
+						</xp:td>
+					</xp:tr>
+				</xp:table>
+				<xp:tabbedPanel id="tabbedPanel1"
+					selectedTab="tabPanel1">
+					<xp:tabPanel id="tabPanel1" label="Input Tab I">
+
+						<xp:label value="Test input_1:"
+							id="testInput_1_Label1" for="testInput_11">
+						</xp:label>
+						<xp:inputText value="#{document1.testInput_1}"
+							id="testInput_11">
+						</xp:inputText>
+					</xp:tabPanel>
+					<xp:tabPanel label="Input Tab II" id="tabPanel2">
+
+						<xp:label value="Test input_2:"
+							id="testInput_2_Label1" for="testInput_21">
+						</xp:label>
+						<xp:inputText value="#{document1.testInput_2}"
+							id="testInput_21">
+						</xp:inputText>
+					</xp:tabPanel>
+					<xp:tabPanel label="Input Tab III" id="tabPanel3">
+						<xp:label value="Test input_3:"
+							id="testInput_3_Label1" for="testInput_31">
+						</xp:label>
+						<xp:inputText value="#{document1.testInput_3}"
+							id="testInput_31">
+						</xp:inputText>
+					</xp:tabPanel>
+					<xp:tabPanel id="tabPanel4" label="Input Tab IV">
+						<xp:label value="Test input_4:"
+							id="testInput_4_Label1" for="testInput_41">
+						</xp:label>
+						<xp:inputText value="#{document1.testInput_4}"
+							id="testInput_41">
+						</xp:inputText>
+					</xp:tabPanel>
+					<xp:tabPanel label="Submit Tab" id="tabPanel5">
+						<xp:button value="Submit" id="button1">
+							<xp:eventHandler event="onclick"
+								submit="true" refreshMode="complete" immediate="false"
+								save="true">
+							</xp:eventHandler>
+						</xp:button>
+					</xp:tabPanel>
+				</xp:tabbedPanel>
+
+				<xp:button value="New" id="buttonNewTabbedPanelDoc"
+					rendered="#{javascript:document1.isEditable()}">
+					<xp:eventHandler event="onclick" submit="true"
+						refreshMode="complete">
+						<xp:this.action>
+							<xp:openPage
+								name="/ctrlsContainerTabbedPanel.xsp" target="newDocument">
+							</xp:openPage>
+						</xp:this.action>
+					</xp:eventHandler>
+				</xp:button>
+				<xp:button value="Delete Selected"
+					id="buttonDeleteSelectedTabbedPanelDoc">
+					<xp:eventHandler event="onclick" submit="true"
+						refreshMode="complete">
+						<xp:this.action>
+							<xp:deleteSelectedDocuments
+								view="viewPanel1"
+								message="This action will delete the selected document.">
+							</xp:deleteSelectedDocuments>
+						</xp:this.action>
+					</xp:eventHandler>
+				</xp:button>
+				<xp:button value="Edit" id="buttonEditTabbedPanelDoc"
+					rendered="#{javascript:!document1.isEditable()}">
+					<xp:eventHandler event="onclick" submit="true"
+						refreshMode="complete">
+						<xp:this.action>
+							<xp:changeDocumentMode mode="edit"></xp:changeDocumentMode>
+						</xp:this.action>
+					</xp:eventHandler>
+				</xp:button>
+				<xp:br></xp:br>
+				<xp:viewPanel rows="30" id="viewPanel1"
+					pageName="/ctrlsContainerTabbedPanel.xsp"
+					viewStyle="padding-left:3px">
+					<xp:this.facets>
+						<xp:pager layout="Previous Group Next"
+							xp:key="headerPager" id="pager1">
+						</xp:pager>
+					</xp:this.facets>
+					<xp:this.data>
+						<xp:dominoView var="xspTabbedPanelView"
+							viewName="xspTabbedPanelView">
+						</xp:dominoView>
+					</xp:this.data>
+					<xp:viewColumn columnName="Date" id="viewColumn1">
+						<xp:viewColumnHeader value="Date"
+							id="viewColumnHeader1">
+						</xp:viewColumnHeader>
+					</xp:viewColumn>
+					<xp:viewColumn columnName="Author"
+						id="viewColumn2">
+						<xp:viewColumnHeader value="Author"
+							id="viewColumnHeader2">
+						</xp:viewColumnHeader>
+					</xp:viewColumn>
+					<xp:viewColumn columnName="Subject" id="viewColumn3"
+						displayAs="link" openDocAsReadonly="true" showCheckbox="true">
+						<xp:viewColumnHeader value="Subject"
+							id="viewColumnHeader3" showCheckbox="true">
+						</xp:viewColumnHeader>
+					</xp:viewColumn>
+					<xp:viewColumn columnName="Input1"
+						id="viewColumn4">
+						<xp:viewColumnHeader value="Input 1"
+							id="viewColumnHeader4">
+						</xp:viewColumnHeader>
+					</xp:viewColumn>
+					<xp:viewColumn id="viewColumn5"
+						columnName="Input2">
+						<xp:this.facets>
+							<xp:viewColumnHeader xp:key="header"
+								id="viewColumnHeader5" value="Input 2">
+							</xp:viewColumnHeader>
+						</xp:this.facets>
+					</xp:viewColumn>
+					<xp:viewColumn id="viewColumn6"
+						columnName="Input3">
+						<xp:this.facets>
+							<xp:viewColumnHeader xp:key="header"
+								id="viewColumnHeader6" value="Input 3">
+							</xp:viewColumnHeader>
+						</xp:this.facets>
+					</xp:viewColumn>
+					<xp:viewColumn id="viewColumn7"
+						columnName="Input4">
+						<xp:this.facets>
+							<xp:viewColumnHeader xp:key="header"
+								id="viewColumnHeader7" value="Input 4">
+							</xp:viewColumnHeader>
+						</xp:this.facets>
+					</xp:viewColumn>
+				</xp:viewPanel>
+
+
+
+				<xp:br></xp:br>
+				<xp:br></xp:br>
+				<xp:br></xp:br>
+				<xp:br></xp:br>
+			</xp:panel>
+
+		</xp:this.facets>
+	</XPa:ccLayout>
+</xp:view>

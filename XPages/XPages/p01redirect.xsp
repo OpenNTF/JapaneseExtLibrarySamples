@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+
+	<XPa:ccLayout navPath="/new/redirect/">
+		<xp:this.facets>
+			<xp:panel xp:key="facetMain">
+				<xc:cc4redirect></xc:cc4redirect>
+				<xp:div style="font-size:14pt;color:rgb(0,128,192)">Select any of the documents in the view panel below to launch the XPage with the redirect control.&#160;</xp:div>
+				<xp:br></xp:br>
+				<xp:viewPanel rows="30" id="viewPanel1">
+					<xp:this.facets>
+						<xp:pager partialRefresh="true"
+							layout="Previous Group Next" xp:key="headerPager" id="pager1">
+						</xp:pager>
+					</xp:this.facets>
+					<xp:this.data>
+						<xp:dominoView var="view1"
+							viewName="v01redirect">
+						</xp:dominoView>
+					</xp:this.data>
+					<xp:viewColumn columnName="$0" id="viewColumn1">
+						<xp:viewColumnHeader value="Date Created"
+							id="viewColumnHeader1">
+						</xp:viewColumnHeader>
+					</xp:viewColumn>
+					<xp:viewColumn columnName="Subject"
+						id="viewColumn2" displayAs="link" openDocAsReadonly="true">
+						<xp:viewColumnHeader value="Subject"
+							id="viewColumnHeader2">
+						</xp:viewColumnHeader>
+					</xp:viewColumn>
+				</xp:viewPanel>
+				<xp:br></xp:br></xp:panel>
+			<xc:ccMenu_new xp:key="facetLeft"></xc:ccMenu_new></xp:this.facets>
+	</XPa:ccLayout>
+</xp:view>

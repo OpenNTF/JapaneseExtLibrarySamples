@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf">
+
+	<XPa:ccLayout>
+		<xp:this.facets>
+
+			<xp:panel xp:key="facetMain">
+
+				<xp:panel>
+					<xp:paragraph id="paragraph1">
+						<b>Simple actions</b> <xp:br/>
+						A simple action performs a
+						pre-programmed activity that can be modified by
+						arguments.<xp:br/>
+
+						Simple actions reside in the Events view for a
+						page or user interface (UI) control. 
+
+						
+					</xp:paragraph>
+				</xp:panel>
+
+
+			</xp:panel>
+			
+		</xp:this.facets>
+	</XPa:ccLayout>
+</xp:view>

@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+
+	<XPa:ccLayout navPath="/other/godirectory/">
+		<xp:this.facets>
+			<xc:ccMenu_other xp:key="facetLeft"></xc:ccMenu_other>
+			<xp:panel xp:key="facetMain">
+
+				<xp:span style="font-size:12pt;font-weight:bold">
+					JavaScript : XSPDirectoryUser
+				</xp:span>
+				<xp:br style="font-size:12pt;font-weight:bold"></xp:br>
+				<xp:br></xp:br>
+
+				<xp:span style="color:rgb(0,128,255)">
+					Displays all the Javascript funtions associated with
+					XSPDirectoryUser
+				</xp:span>
+				.
+				<xp:br></xp:br>
+				<xp:span style="color:rgb(0,128,255)">
+					Represents a user entry in the server directory.
+				</xp:span>
+				<xp:br></xp:br>
+				<xp:br></xp:br>
+				<xp:table>
+					<xp:tr>
+						<xp:td>equals()</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							Checks if this object equals another.
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:text escape="true" id="computedField1"
+								value="#{javascript:context.getUser().equals(context.getUser())}">
+							</xp:text>
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>getCommonName()</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							Gets the common name of the directory entry.
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:text escape="true" id="computedField2"
+								value="#{javascript:context.getUser().getCommonName();}">
+							</xp:text>
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>setCommonName()</xp:td>
+						<xp:td></xp:td>
+						<xp:td>Sets the common name.</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:button value="Set Common Name"
+								id="button1">
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="complete" id="eventHandler1">
+									<xp:this.action><![CDATA[#{javascript:context.getUser().setCommonName("CommonName")}]]></xp:this.action>
+								</xp:eventHandler>
+							</xp:button>
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>getDistinguishedName()</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							Gets the distinguished name of the directory
+							entry.
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:text escape="true" id="computedField3"
+								value="#{javascript:context.getUser().getDistinguishedName();}">
+							</xp:text>
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>setDistinguishedName()</xp:td>
+						<xp:td></xp:td>
+						<xp:td>Sets the distinguished name.</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:button value="Set Distinguished Name"
+								id="button2">
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="complete" id="eventHandler2">
+									<xp:this.action><![CDATA[#{javascript:context.getUser().setDistinguishedName("DistinguishedName")}]]></xp:this.action>
+								</xp:eventHandler>
+							</xp:button>
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>getFullName()</xp:td>
+						<xp:td></xp:td>
+						<xp:td>Gets the full name.</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:text escape="true" id="computedField4"
+								value="#{javascript:context.getUser().getFullName();}">
+							</xp:text>
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>setFullName()</xp:td>
+						<xp:td></xp:td>
+						<xp:td>Sets the full name.</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:button value="Set Full Name"
+								id="button3">
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="complete" id="eventHandler3">
+									<xp:this.action><![CDATA[#{javascript:context.getUser().setFullName("FullName")}]]></xp:this.action>
+								</xp:eventHandler>
+							</xp:button>
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>getMail()</xp:td>
+						<xp:td></xp:td>
+						<xp:td>Gets the mail name</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:text escape="true"
+								id="computedField5">
+								<xp:this.value><![CDATA[#{javascript:var mail = context.getUser().getMail();
+return mail;}]]></xp:this.value>
+							</xp:text>
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>setMail()</xp:td>
+						<xp:td></xp:td>
+						<xp:td>Sets the mail name.</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:button value="Set Mail" id="button4">
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="complete" id="eventHandler4">
+									<xp:this.action><![CDATA[#{javascript:context.getUser().setMail("MailName")}]]></xp:this.action>
+								</xp:eventHandler>
+							</xp:button>
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>getGroups()</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							Gets the directory entry's groups.
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:text escape="true"
+								id="computedField6">
+								<xp:this.value><![CDATA[#{javascript:
+var groups = context.getUser().getGroups().toArray();
+if(groups.length > 0) {
+	for(var i=0; i<groups.length; i++) {
+		var groupsOut = groupsOut + " " + groups[i];
+	}
+	return groupsOut
+} else {
+	return "No groups"
+}}]]></xp:this.value>
+							</xp:text>
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>getRoles()</xp:td>
+						<xp:td></xp:td>
+						<xp:td>Gets the directory entry's roles.</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:text escape="true"
+								id="computedField7">
+								<xp:this.value><![CDATA[#{javascript:var roles = context.getUser().getRoles().toArray();
+if(roles.length > 0) {
+	for(var i=0; i<roles.length; i++) {
+		var rolesOut = rolesOut + " " + roles[i];
+	}
+	return rolesOut
+} else {
+	return "No roles"
+}}]]></xp:this.value>
+							</xp:text>
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>isAnonymous()</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							Checks if the directory user is an
+							Anonymous.
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:text escape="true" id="computedField8"
+								value="#{javascript:context.getUser().isAnonymous()}">
+							</xp:text>
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+
+
+
+
+					<xp:tr>
+						<xp:td>toString()</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							Gets a string representation of the user
+							entry.
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:text escape="true" id="computedField9"
+								value="#{javascript:context.getUser().toString()}">
+							</xp:text>
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+
+
+
+
+
+
+
+				</xp:table>
+
+
+			</xp:panel>
+		</xp:this.facets>
+	</XPa:ccLayout>
+</xp:view>

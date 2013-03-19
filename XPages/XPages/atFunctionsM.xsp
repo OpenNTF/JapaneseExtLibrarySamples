@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+
+
+
+	<XPa:ccLayout id="cc4cclayout" navPath="/events/atfm/">
+		<xp:this.facets>
+			<xc:ccMenu_events xp:key="facetLeft"></xc:ccMenu_events>
+			<xp:panel xp:key="facetMain">
+				<xp:panel>
+					<xp:label id="label1" value="@M*: "
+						style="font-weight:bold;font-size:12pt">
+					</xp:label>
+					<xp:comboBox id="comboBoxAtFuncsM"
+						value="#{sessionScope.atFuncsMs}" defaultValue="None">
+						<xp:selectItem itemLabel="None"
+							itemValue="None">
+						</xp:selectItem>
+						<xp:selectItem itemLabel="@Max"
+							itemValue="atFM01">
+						</xp:selectItem>
+						<xp:selectItem itemLabel="@Member"
+							itemValue="atFM02">
+						</xp:selectItem>
+						<xp:selectItem itemLabel="@Middle"
+							itemValue="atFM03">
+						</xp:selectItem>
+						<xp:selectItem itemLabel="@MiddleBack"
+							itemValue="atFM04">
+						</xp:selectItem>
+						<xp:selectItem itemLabel="@Min"
+							itemValue="atFM05">
+						</xp:selectItem>
+						<xp:selectItem itemLabel="@Minute"
+							itemValue="atFM06">
+						</xp:selectItem>
+						<xp:selectItem itemLabel="@Modified"
+							itemValue="atFM07">
+						</xp:selectItem>
+						<xp:selectItem itemLabel="@Modulo"
+							itemValue="atFM08">
+						</xp:selectItem>
+						<xp:selectItem itemLabel="@Month"
+							itemValue="atFM09">
+						</xp:selectItem>
+
+
+						<xp:eventHandler event="onchange" submit="true"
+							refreshMode="complete">
+							<xp:this.action>
+								<![CDATA[#{javascript:print("")}]]>
+							</xp:this.action>
+						</xp:eventHandler>
+					</xp:comboBox>
+					<xp:panel>
+
+						<xp:panel>
+							<xp:this.rendered>
+								<![CDATA[#{javascript:sessionScope.atFuncsMs == "atFM01"}]]>
+							</xp:this.rendered>
+							<xp:table styleClass="customTable">
+								<xp:tr>
+									<xp:td>
+										<xp:label value="@Function: "
+											id="label2">
+										</xp:label>
+									</xp:td>
+									<xp:td>
+										@Max(values:...) : double |
+										Returns the largest number in a
+										group of numbers.
+									</xp:td>
+								</xp:tr>
+							</xp:table>
+							<xp:br />
+						</xp:panel>
+
+						<xp:panel>
+							<xp:this.rendered>
+								<![CDATA[#{javascript:sessionScope.atFuncsMs == "atFM02"}]]>
+							</xp:this.rendered>
+							<xp:table styleClass="customTable">
+								<xp:tr>
+									<xp:td>
+										<xp:label value="@Function: "
+											id="label3">
+										</xp:label>
+									</xp:td>
+									<xp:td>
+										@Member(value:string, list:any)
+										: int | Returns the position of
+										the first occurrence of a value
+										in a string list.
+									</xp:td>
+								</xp:tr>
+							</xp:table>
+							<xp:br />
+						</xp:panel>
+						<xp:panel>
+							<xp:this.rendered>
+								<![CDATA[#{javascript:sessionScope.atFuncsMs == "atFM03"}]]>
+							</xp:this.rendered>
+							<xp:table styleClass="customTable">
+								<xp:tr>
+									<xp:td>
+										<xp:label value="@Function: "
+											id="label4">
+										</xp:label>
+									</xp:td>
+									<xp:td>
+										@Middle(value:string,
+										offset:int, endString:string) :
+										string | Returns characters of a
+										string, starting at an offset
+										from the beginning, up to and
+										excluding a substring.
+										<xp:br></xp:br>
+										@Middle(value:string,
+										offset:int, len:int) : string |
+										Returns characters of a string,
+										starting at an offset from the
+										beginning, for the number of
+										characters specified.
+										<xp:br></xp:br>
+										@Middle(value:string,
+										startString:string,
+										endString:string) : string |
+										Returns characters of a string,
+										starting after a substring, up
+										to and excluding a substring.
+										<xp:br></xp:br>
+										@Middle(value:string,
+										startString:string, len:int) :
+										string | Returns characters of a
+										string, starting after a
+										substring, for the number of
+										characters specified.
+									</xp:td>
+								</xp:tr>
+							</xp:table>
+							<xp:br />
+						</xp:panel>
+						<xp:panel>
+							<xp:this.rendered>
+								<![CDATA[#{javascript:sessionScope.atFuncsMs == "atFM04"}]]>
+							</xp:this.rendered>
+							<xp:table styleClass="customTable">
+								<xp:tr>
+									<xp:td>
+										<xp:label value="@Function: "
+											id="label5">
+										</xp:label>
+									</xp:td>
+									<xp:td>
+										@MiddleBack(value:string,
+										offset:int, endString:string) :
+										string | Returns characters of a
+										string, starting at an offset
+										from the end, back to and
+										excluding the last occurrence of
+										a substring.
+										<xp:br></xp:br>
+										@MiddleBack(value:string,
+										offset:int, len:int) : string |
+										Returns characters of a string,
+										starting at an offset from the
+										end, for the negative number of
+										characters specified.
+										<xp:br></xp:br>
+										@MiddleBack(value:string,
+										startString:string,
+										endString:string) : string |
+										Returns characters of a string,
+										starting before the last
+										occurrence of a substring, back
+										to and excluding the last
+										occurrence of a substring.
+										<xp:br></xp:br>
+										@MiddleBack(value:string,
+										startString:string, len:int) :
+										string | Returns characters of a
+										string, starting before the last
+										occurrence of a substring, for
+										the negative number of
+										characters specified.
+									</xp:td>
+								</xp:tr>
+							</xp:table>
+							<xp:br />
+						</xp:panel>
+						<xp:panel>
+							<xp:this.rendered>
+								<![CDATA[#{javascript:sessionScope.atFuncsMs == "atFM05"}]]>
+							</xp:this.rendered>
+							<xp:table styleClass="customTable">
+								<xp:tr>
+									<xp:td>
+										<xp:label value="@Function: "
+											id="label6">
+										</xp:label>
+									</xp:td>
+									<xp:td>
+										@Min(values:...) : double |
+										Returns the smallest number in a
+										group of numbers.
+									</xp:td>
+								</xp:tr>
+							</xp:table>
+							<xp:br />
+						</xp:panel>
+						<xp:panel>
+							<xp:this.rendered>
+								<![CDATA[#{javascript:sessionScope.atFuncsMs == "atFM06"}]]>
+							</xp:this.rendered>
+							<xp:table styleClass="customTable">
+								<xp:tr>
+									<xp:td>
+										<xp:label value="@Function: "
+											id="label7">
+										</xp:label>
+									</xp:td>
+									<xp:td>
+										@Minute(time:Date) : int |
+										Returns the minute from a date
+										and time.
+									</xp:td>
+								</xp:tr>
+							</xp:table>
+							<xp:br />
+						</xp:panel>
+						<xp:panel>
+							<xp:this.rendered>
+								<![CDATA[#{javascript:sessionScope.atFuncsMs == "atFM07"}]]>
+							</xp:this.rendered>
+							<xp:table styleClass="customTable">
+								<xp:tr>
+									<xp:td>
+										<xp:label value="@Function: "
+											id="label8">
+										</xp:label>
+									</xp:td>
+									<xp:td>
+										@Modified() : Date | Returns the
+										date and time when the current
+										document was last modified and
+										saved.
+									</xp:td>
+								</xp:tr>
+							</xp:table>
+							<xp:br />
+							<xp:panel styleClass="content">
+								<xp:this.data>
+									<xp:dominoDocument var="document1"
+										formName="xspAtFunctions">
+									</xp:dominoDocument>
+									<xp:dominoView var="view1"
+										viewName="xspAtFunctionsView">
+									</xp:dominoView>
+								</xp:this.data>
+
+								Select any of the following link to
+								compute the field below:
+
+
+								<xp:repeat id="repeat2" value="#{view1}"
+									rows="100" var="coll1">
+
+
+									<xp:table id="table2"
+										styleClass="customTable">
+										<xp:tr>
+
+
+											<xp:td>
+												<xp:image
+													url="/actn103.gif" id="image3">
+												</xp:image>
+
+												<xp:link id="link2">
+													<xp:this.text>
+														<![CDATA[#{javascript:coll1.getColumnValue("subject")}]]>
+													</xp:this.text>
+
+													<xp:eventHandler
+														event="onclick" submit="true" refreshMode="complete">
+														<xp:this.action>
+															<xp:openPage
+																name="/atFunctionsM.xsp" target="openDocument"
+																documentId="#{javascript:coll1.getId()}">
+															</xp:openPage>
+														</xp:this.action>
+													</xp:eventHandler>
+												</xp:link>
+											</xp:td>
+
+										</xp:tr>
+									</xp:table>
+								</xp:repeat>
+								<xp:label
+									value="When was this document last modified: " id="label21"
+									rendered="false">
+								</xp:label>
+								<xp:text escape="true"
+									id="computedField4AtModified01"
+									style="color:rgb(128,0,255);font-weight:bold"
+									rendered="#{javascript:!document1.isNewNote()}">
+									<xp:this.value><![CDATA[#{javascript://@Explode(@Modified(),",")
+var mdf = @Modified();
+"This document was last modified: "+mdf+" ("+@Year(mdf)+@Month(mdf)+@Day(mdf)+")."}]]></xp:this.value>
+								</xp:text>
+							</xp:panel>
+
+
+
+
+						</xp:panel>
+						<xp:panel>
+							<xp:this.rendered>
+								<![CDATA[#{javascript:sessionScope.atFuncsMs == "atFM08"}]]>
+							</xp:this.rendered>
+							<xp:table styleClass="customTable">
+								<xp:tr>
+									<xp:td>
+										<xp:label value="@Function: "
+											id="label9">
+										</xp:label>
+									</xp:td>
+									<xp:td>
+										@Modulo(value:double,
+										divider:double) : double |
+										Returns the remainder of a
+										division operation.
+									</xp:td>
+								</xp:tr>
+							</xp:table>
+							<xp:br />
+						</xp:panel>
+						<xp:panel>
+							<xp:this.rendered>
+								<![CDATA[#{javascript:sessionScope.atFuncsMs == "atFM09"}]]>
+							</xp:this.rendered>
+							<xp:table styleClass="customTable">
+								<xp:tr>
+									<xp:td>
+										<xp:label value="@Function: "
+											id="label10">
+										</xp:label>
+									</xp:td>
+									<xp:td>
+										@Month(date:Date) : int |
+										Returns the month from a date
+										and time.
+									</xp:td>
+								</xp:tr>
+							</xp:table>
+							<xp:br />
+						</xp:panel>
+
+
+
+
+
+
+
+
+
+
+
+					</xp:panel>
+				</xp:panel>
+			</xp:panel>
+
+		</xp:this.facets>
+	</XPa:ccLayout>
+</xp:view>

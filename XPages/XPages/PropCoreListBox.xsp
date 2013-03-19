@@ -1,0 +1,638 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+	<XPa:ccLayout id="cc4cclayout" navPath="/forms/plistboxprop/">
+		<xp:this.facets>
+			<xc:ccMenu_forms xp:key="facetLeft"></xc:ccMenu_forms>
+			<xp:panel xp:key="facetMain">
+
+
+				<xp:div style="text-align:center">
+					<xp:span
+						style="text-decoration:underline;font-weight:bold;font-size:14pt;text-align:center">
+						Test of List Box Properties
+					</xp:span>
+				</xp:div>
+				<xp:table styleClass="customTable" xp:key="facetMain">
+					<xp:tr>
+						<xp:td>Visible Check box On</xp:td>
+						<xp:td>
+							<xp:listBox id="listBoxPropVisibleOn01">
+								<xp:selectItem itemLabel="IBM"
+									itemValue="IBM" />
+								<xp:selectItem itemLabel="Lotus"
+									itemValue="Lotus" />
+								<xp:selectItem itemLabel="Vallent"
+									itemValue="Vallent" />
+								<xp:selectItem itemLabel="Tivoli"
+									itemValue="Tivoli" />
+							</xp:listBox>
+						</xp:td>
+
+					</xp:tr>
+					<xp:tr>
+						<xp:td>Visible Check box Off</xp:td>
+						<xp:td>
+							<xp:listBox id="listBoxPropVisibleOff01"
+								rendered="false">
+
+								<xp:selectItem itemLabel="IBM"
+									itemValue="IBM" />
+								<xp:selectItem itemLabel="Lotus"
+									itemValue="Lotus" />
+								<xp:selectItem itemLabel="Vallent"
+									itemValue="Vallent" />
+								<xp:selectItem itemLabel="Tivoli"
+									itemValue="Tivoli" />
+							</xp:listBox>
+						</xp:td>
+
+					</xp:tr>
+					<xp:tr>
+						<xp:td>Visible Computed On</xp:td>
+						<xp:td>
+							<xp:listBox
+								id="listBoxPropVisibleOnComp01">
+								<xp:this.rendered><![CDATA[#{javascript:return true}]]></xp:this.rendered>
+								<xp:selectItem itemLabel="IBM"
+									itemValue="IBM" />
+								<xp:selectItem itemLabel="Lotus"
+									itemValue="Lotus" />
+								<xp:selectItem itemLabel="Tivoli"
+									itemValue="Tivoli" />
+								<xp:selectItem itemLabel="Vallent"
+									itemValue="Vallent" />
+							</xp:listBox>
+						</xp:td>
+
+					</xp:tr>
+					<xp:tr>
+						<xp:td>Visible Computed Off</xp:td>
+						<xp:td>
+							<xp:listBox
+								id="listBoxPropVisibleOffComp01">
+								<xp:this.rendered><![CDATA[#{javascript:return false}]]></xp:this.rendered>
+								<xp:selectItem itemLabel="IBM"
+									itemValue="IBM" />
+								<xp:selectItem itemLabel="Lotus"
+									itemValue="Lotus" />
+								<xp:selectItem itemLabel="Tivoli"
+									itemValue="Tivoli" />
+								<xp:selectItem itemLabel="Vallent"
+									itemValue="Vallent" />
+							</xp:listBox>
+						</xp:td>
+
+					</xp:tr>
+					<xp:tr>
+						<xp:td>Read Only Check box On</xp:td>
+						<xp:td>
+							<xp:listBox id="listBoxPropReadOnlyOn01"
+								readonly="true">
+								<xp:selectItem itemLabel="IBM"
+									itemValue="IBM" />
+								<xp:selectItem itemLabel="Lotus"
+									itemValue="Lotus" />
+								<xp:selectItem itemLabel="Tivoli"
+									itemValue="Tivoli" />
+								<xp:selectItem itemLabel="Vallent"
+									itemValue="Vallent" />
+							</xp:listBox>
+						</xp:td>
+
+					</xp:tr>
+					<xp:tr>
+						<xp:td>Read Only Check box Off</xp:td>
+						<xp:td>
+							<xp:listBox id="listBoxPropReadOnlyOff01">
+								<xp:selectItem itemLabel="IBM"
+									itemValue="IBM" />
+								<xp:selectItem itemLabel="Lotus"
+									itemValue="Lotus" />
+								<xp:selectItem itemLabel="Tivoli"
+									itemValue="Tivoli" />
+								<xp:selectItem itemLabel="Vallent"
+									itemValue="Vallent" />
+							</xp:listBox>
+						</xp:td>
+
+					</xp:tr>
+					<xp:tr>
+						<xp:td>Read Only Computed On</xp:td>
+						<xp:td>
+							<xp:listBox
+								id="listBoxPropReadOnlyOnComp01">
+								<xp:this.readonly><![CDATA[#{javascript:return true}]]></xp:this.readonly>
+								<xp:selectItem itemLabel="IBM"
+									itemValue="IBM" />
+								<xp:selectItem itemLabel="Lotus"
+									itemValue="Lotus" />
+								<xp:selectItem itemLabel="Tivoli"
+									itemValue="Tivoli" />
+								<xp:selectItem itemLabel="Vallent"
+									itemValue="Vallent" />
+
+							</xp:listBox>
+						</xp:td>
+
+
+					</xp:tr>
+					<xp:tr>
+						<xp:td>Read Only Computed Off</xp:td>
+						<xp:td>
+							<xp:listBox
+								id="listBoxPropReadOnlyOffComp01">
+								<xp:this.readonly><![CDATA[#{javascript:return false}]]></xp:this.readonly>
+								<xp:selectItem itemLabel="IBM"
+									itemValue="IBM" />
+								<xp:selectItem itemLabel="Lotus"
+									itemValue="Lotus" />
+								<xp:selectItem itemLabel="Tivoli"
+									itemValue="Tivoli" />
+								<xp:selectItem itemLabel="Vallent"
+									itemValue="Vallent" />
+							</xp:listBox>
+						</xp:td>
+
+					</xp:tr>
+					<xp:tr>
+						<xp:td>Disabled CheckBox On</xp:td>
+						<xp:td>
+							<xp:listBox id="listBoxPropDisabledOn01"
+								disabled="true">
+								<xp:selectItem itemLabel="IBM"
+									itemValue="IBM">
+								</xp:selectItem>
+								<xp:selectItem itemLabel="Lotus"
+									itemValue="Lotus">
+								</xp:selectItem>
+								<xp:selectItem itemLabel="Tivoli"
+									itemValue="Tivoli">
+								</xp:selectItem>
+								<xp:selectItem itemLabel="Vallent"
+									itemValue="Vallent">
+								</xp:selectItem>
+							</xp:listBox>
+						</xp:td>
+
+
+					</xp:tr>
+					<xp:tr>
+						<xp:td>Disabled CheckBox Off</xp:td>
+						<xp:td>
+							<xp:listBox id="listBoxPropDisabledOff01">
+								<xp:selectItem itemLabel="IBM"
+									itemValue="IBM">
+								</xp:selectItem>
+								<xp:selectItem itemLabel="Lotus"
+									itemValue="Lotus">
+								</xp:selectItem>
+								<xp:selectItem itemLabel="Tivoli"
+									itemValue="Tivoli">
+								</xp:selectItem>
+								<xp:selectItem itemLabel="Vallent"
+									itemValue="Vallent">
+								</xp:selectItem>
+							</xp:listBox>
+						</xp:td>
+
+
+					</xp:tr>
+					<xp:tr>
+						<xp:td>Disabled Computed On</xp:td>
+						<xp:td>
+							<xp:listBox
+								id="listBoxPropDisabledOnComp01">
+								<xp:this.disabled><![CDATA[#{javascript:return true}]]></xp:this.disabled>
+								<xp:selectItem itemLabel="IBM"
+									itemValue="IBM">
+								</xp:selectItem>
+								<xp:selectItem itemLabel="Lotus"
+									itemValue="Lotus">
+								</xp:selectItem>
+								<xp:selectItem itemLabel="Tivoli"
+									itemValue="Tivoli">
+								</xp:selectItem>
+								<xp:selectItem itemLabel="Vallent"
+									itemValue="Vallent">
+								</xp:selectItem>
+							</xp:listBox>
+						</xp:td>
+
+					</xp:tr>
+					<xp:tr>
+						<xp:td>Disabled&#160;Computed Off</xp:td>
+						<xp:td>
+							<xp:listBox
+								id="listBoxPropDisabledOffComp01">
+								<xp:this.disabled><![CDATA[#{javascript:return false}]]></xp:this.disabled>
+								<xp:selectItem itemLabel="IBM"
+									itemValue="IBM" />
+								<xp:selectItem itemLabel="Lotus"
+									itemValue="Lotus" />
+								<xp:selectItem itemLabel="Tivoli"
+									itemValue="Tivoli" />
+								<xp:selectItem itemLabel="Vallent"
+									itemValue="Vallent" />
+							</xp:listBox>
+
+
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+
+						<xp:td>Height - Pixels(40) - Static</xp:td>
+						<xp:td>
+
+
+							<xp:listBox id="listBoxHeightPixStat01"
+								style="height:40.0px">
+								<xp:selectItem itemLabel="IBM"
+									itemValue="IBM" />
+								<xp:selectItem itemLabel="Lotus"
+									itemValue="Lotus" />
+								<xp:selectItem itemLabel="Tivoli"
+									itemValue="Tivoli" />
+								<xp:selectItem itemLabel="Vallent"
+									itemValue="Vallent" />
+							</xp:listBox>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>Height - Ems (5) - Static</xp:td>
+						<xp:td>
+
+
+							<xp:listBox id="listBoxHeightEmsStat01"
+								style="height:5em">
+								<xp:selectItem itemLabel="IBM"
+									itemValue="IBM" />
+								<xp:selectItem itemLabel="Lotus"
+									itemValue="Lotus" />
+								<xp:selectItem itemLabel="Tivoli"
+									itemValue="Tivoli" />
+								<xp:selectItem itemLabel="Vallent"
+									itemValue="Vallent" />
+							</xp:listBox>
+						</xp:td>
+
+					</xp:tr>
+
+
+
+
+
+
+
+
+					<xp:tr>
+						<xp:td>Height - Auto - Static</xp:td>
+						<xp:td>
+
+							<xp:listBox id="listBoxHeightAutoStat01">
+								<xp:selectItem itemLabel="IBM"
+									itemValue="IBM" />
+								<xp:selectItem itemLabel="Lotus"
+									itemValue="Lotus" />
+								<xp:selectItem itemLabel="Tivoli"
+									itemValue="Tivoli" />
+								<xp:selectItem itemLabel="Vallent"
+									itemValue="Vallent" />
+							</xp:listBox>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							Height - Pixels - Computed - Units (40)
+						</xp:td>
+						<xp:td>
+
+
+							<xp:listBox
+								id="listBoxHeightPixCompUnits01">
+								<xp:this.style><![CDATA[height:40.0#{javascript:return "px"}]]></xp:this.style>
+								<xp:selectItem itemLabel="IBM"
+									itemValue="IBM" />
+								<xp:selectItem itemLabel="Lotus"
+									itemValue="Lotus" />
+								<xp:selectItem itemLabel="Tivoli"
+									itemValue="Tivoli" />
+								<xp:selectItem itemLabel="Vallent"
+									itemValue="Vallent" />
+							</xp:listBox>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							Height - Pixels - Computed - Value (80)
+						</xp:td>
+						<xp:td>
+
+
+							<xp:listBox id="listBoxHeightPixCompValue01"
+								style="height:#{javascript:return 80}px">
+								<xp:selectItem itemLabel="IBM"
+									itemValue="IBM" />
+								<xp:selectItem itemLabel="Lotus"
+									itemValue="Lotus" />
+								<xp:selectItem itemLabel="Tivoli"
+									itemValue="Tivoli" />
+								<xp:selectItem itemLabel="Vallent"
+									itemValue="Vallent" />
+							</xp:listBox>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							Height - Ems - Computed - Units (6)
+						</xp:td>
+						<xp:td>
+
+
+							<xp:listBox
+								id="listBoxHeightEmsCompUnits01">
+								<xp:this.style><![CDATA[height:6.0#{javascript:return "em"}]]></xp:this.style>
+								<xp:selectItem itemLabel="IBM"
+									itemValue="IBM" />
+								<xp:selectItem itemLabel="Lotus"
+									itemValue="Lotus" />
+								<xp:selectItem itemLabel="Tivoli"
+									itemValue="Tivoli" />
+								<xp:selectItem itemLabel="Vallent"
+									itemValue="Vallent" />
+							</xp:listBox>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							Height - Ems - Computed - Value (4)
+						</xp:td>
+						<xp:td>
+
+							<xp:listBox id="listBoxHeightEmsCompValue01"
+								style="height:#{javascript:return 4}em">
+								<xp:selectItem itemLabel="IBM"
+									itemValue="IBM" />
+								<xp:selectItem itemLabel="Lotus"
+									itemValue="Lotus" />
+								<xp:selectItem itemLabel="Tivoli"
+									itemValue="Tivoli" />
+								<xp:selectItem itemLabel="Vallent"
+									itemValue="Vallent" />
+							</xp:listBox>
+						</xp:td>
+					</xp:tr>
+
+
+					<xp:tr>
+						<xp:td>Width - Pixels (250) - Static</xp:td>
+						<xp:td>
+
+
+							<xp:listBox id="listBoxWidthPixStat01"
+								style="width:250px">
+								<xp:selectItem itemLabel="IBM"
+									itemValue="IBM" />
+								<xp:selectItem itemLabel="Lotus"
+									itemValue="Lotus" />
+								<xp:selectItem itemLabel="Tivoli"
+									itemValue="Tivoli" />
+								<xp:selectItem itemLabel="Vallent"
+									itemValue="Vallent" />
+							</xp:listBox>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>Width - Ems (15)- Static</xp:td>
+						<xp:td>
+
+
+							<xp:listBox id="listBoxWidthEmsStat01"
+								style="width:15em">
+								<xp:selectItem itemLabel="IBM"
+									itemValue="IBM" />
+								<xp:selectItem itemLabel="Lotus"
+									itemValue="Lotus" />
+								<xp:selectItem itemLabel="Tivoli"
+									itemValue="Tivoli" />
+								<xp:selectItem itemLabel="Vallent"
+									itemValue="Vallent" />
+							</xp:listBox>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>Width - Percent (50%) - Static</xp:td>
+						<xp:td>
+
+
+							<xp:listBox id="listBoxWidthPercentStat01"
+								style="width:50%">
+								<xp:selectItem itemLabel="IBM"
+									itemValue="IBM" />
+								<xp:selectItem itemLabel="Lotus"
+									itemValue="Lotus" />
+								<xp:selectItem itemLabel="Tivoli"
+									itemValue="Tivoli" />
+								<xp:selectItem itemLabel="Vallent"
+									itemValue="Vallent" />
+							</xp:listBox>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>Width - Auto - Static</xp:td>
+						<xp:td>
+
+
+							<xp:listBox id="listBoxWidthAutoStat01">
+								<xp:selectItem itemLabel="IBM"
+									itemValue="IBM" />
+								<xp:selectItem itemLabel="Lotus"
+									itemValue="Lotus" />
+								<xp:selectItem itemLabel="Tivoli"
+									itemValue="Tivoli" />
+								<xp:selectItem itemLabel="Vallent"
+									itemValue="Vallent" />
+							</xp:listBox>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							Width - Pixels - Computed - Units (100)
+						</xp:td>
+						<xp:td>
+
+
+							<xp:listBox
+								id="listBoxWidthPixCompUnits01">
+								<xp:this.style><![CDATA[width:100.0#{javascript:return "px"}]]></xp:this.style>
+								<xp:selectItem itemLabel="IBM"
+									itemValue="IBM" />
+								<xp:selectItem itemLabel="Lotus"
+									itemValue="Lotus" />
+								<xp:selectItem itemLabel="Tivoli"
+									itemValue="Tivoli" />
+								<xp:selectItem itemLabel="Vallent"
+									itemValue="Vallent" />
+							</xp:listBox>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							Width - Pixels - Computed - Value (180)
+						</xp:td>
+						<xp:td>
+
+							<xp:listBox id="listBoxWidthPixCompValue01"
+								style="width:#{javascript:return 180}px">
+								<xp:selectItem itemLabel="IBM"
+									itemValue="IBM" />
+								<xp:selectItem itemLabel="Lotus"
+									itemValue="Lotus" />
+								<xp:selectItem itemLabel="Tivoli"
+									itemValue="Tivoli" />
+								<xp:selectItem itemLabel="Vallent"
+									itemValue="Vallent" />
+							</xp:listBox>
+						</xp:td>
+
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							Width - Ems - Computed - Units
+
+							(15)
+						</xp:td>
+						<xp:td>
+
+
+							<xp:listBox
+								id="listBoxWidthEmsCompUnits01">
+								<xp:this.style><![CDATA[width:15.0#{javascript:return "em"}]]></xp:this.style>
+								<xp:selectItem itemLabel="IBM"
+									itemValue="IBM" />
+								<xp:selectItem itemLabel="Lotus"
+									itemValue="Lotus" />
+								<xp:selectItem itemLabel="Tivoli"
+									itemValue="Tivoli" />
+								<xp:selectItem itemLabel="Vallent"
+									itemValue="Vallent" />
+							</xp:listBox>
+						</xp:td>
+
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							Width - Ems - Computed - Value (8)
+						</xp:td>
+						<xp:td>
+
+							<xp:listBox id="listBoxWidthemsCompValue01"
+								style="width:#{javascript:return 8}em">
+								<xp:selectItem itemLabel="IBM"
+									itemValue="IBM" />
+								<xp:selectItem itemLabel="Lotus"
+									itemValue="Lotus" />
+								<xp:selectItem itemLabel="Tivoli"
+									itemValue="Tivoli" />
+								<xp:selectItem itemLabel="Vallent"
+									itemValue="Vallent" />
+							</xp:listBox>
+						</xp:td>
+
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							Width - Percent - Computed - Units (60%)
+						</xp:td>
+						<xp:td>
+
+
+							<xp:listBox
+								id="listBoxWidthPercentCompUnits01">
+								<xp:this.style><![CDATA[width:60.0#{javascript:return "%"}]]></xp:this.style>
+								<xp:selectItem itemLabel="IBM"
+									itemValue="IBM" />
+								<xp:selectItem itemLabel="Lotus"
+									itemValue="Lotus" />
+								<xp:selectItem itemLabel="Tivoli"
+									itemValue="Tivoli" />
+								<xp:selectItem itemLabel="Vallent"
+									itemValue="Vallent" />
+							</xp:listBox>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							Width - Percent - Computed - Value (50%)
+						</xp:td>
+						<xp:td>
+
+
+							<xp:listBox
+								id="listBoxWidthPercentCompValue01"
+								style="width:#{javascript:return 50}%">
+								<xp:selectItem itemLabel="IBM"
+									itemValue="IBM" />
+								<xp:selectItem itemLabel="Lotus"
+									itemValue="Lotus" />
+								<xp:selectItem itemLabel="Tivoli"
+									itemValue="Tivoli" />
+								<xp:selectItem itemLabel="Vallent"
+									itemValue="Vallent" />
+							</xp:listBox>
+						</xp:td>
+
+					</xp:tr>
+
+
+
+
+
+
+
+
+					<xp:tr>
+						<xp:td>Allow Multiple Selections</xp:td>
+						<xp:td>
+
+							<xp:listBox id="listBoxMultiSelections01"
+								multiple="true">
+								<xp:selectItem itemLabel="IBM"
+									itemValue="IBM" />
+								<xp:selectItem itemLabel="Lotus"
+									itemValue="Lotus" />
+								<xp:selectItem itemLabel="Tivoli"
+									itemValue="Tivoli" />
+								<xp:selectItem itemLabel="Vallent"
+									itemValue="Vallent" />
+							</xp:listBox>
+						</xp:td>
+
+					</xp:tr>
+					<xp:tr>
+						<xp:td />
+						<xp:td />
+
+
+
+					</xp:tr>
+
+
+
+
+
+
+
+
+
+				</xp:table>
+				<xp:br />
+
+
+
+
+			</xp:panel>
+		</xp:this.facets>
+	</XPa:ccLayout>
+</xp:view>

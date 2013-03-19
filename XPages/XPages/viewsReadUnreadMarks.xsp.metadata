@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" replicaid="85257A870079CB8F" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="6b6" sequence="92" unid="C830025628587CDB802575BE0042CA0C">
+<created><datetime dst="true">20090522T130931,00+01</datetime></created>
+<modified><datetime>20130319T214344,97+09</datetime></modified>
+<revised><datetime>20130319T214344,96+09</datetime></revised>
+<lastaccessed><datetime>20130319T214344,97+09</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20120928T180628,47-04</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=Admin/O=LotusLab</name></updatedby>
+<revisions><datetime dst="true">20110331T101359,05+01</datetime><datetime dst="true">20121213T111943,74+01</datetime><datetime dst="true">20121213T111944,30+01</datetime><datetime dst="true">20121213T111944,33+01</datetime><datetime dst="true">20121213T112302,99+01</datetime></revisions>
+<wassignedby><name>CN=Admin/O=LotusLab</name></wassignedby>
+<item name="$TITLE"><text>viewsReadUnreadMarks.xsp</text></item>
+
+<item name="$Flags"><text>gC~K4</text></item>
+
+
+<item name="$FileNames" sign="true"><text>viewsReadUnreadMarks.xsp</text></item>
+<item name="$DesignerVersion"><text>8.5</text></item>
+
+
+
+
+</note>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" replicaid="85257A870079CB8F" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="65a" sequence="129" unid="53F307475B92C20E802573DB003E4C44">
+<created><datetime dst="true">20080125T122027,56+01</datetime></created>
+<modified><datetime>20130319T214348,69+09</datetime></modified>
+<revised><datetime>20130319T214348,68+09</datetime></revised>
+<lastaccessed><datetime>20130319T214348,69+09</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20120928T180624,38-04</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=Admin/O=LotusLab</name></updatedby>
+<revisions><datetime dst="true">20110331T101051,05+01</datetime><datetime dst="true">20121212T114412,52+01</datetime><datetime dst="true">20121212T114413,05+01</datetime><datetime dst="true">20121212T114413,07+01</datetime><datetime dst="true">20121212T123341,85+01</datetime></revisions>
+<wassignedby><name>CN=Admin/O=LotusLab</name></wassignedby>
+<item name="$TITLE"><text>ctrlsCoreComboBox.xsp</text></item>
+
+<item name="$Flags"><text>gK4</text></item>
+
+
+<item name="$FileNames" sign="true"><text>ctrlsCoreComboBox.xsp</text></item>
+<item name="$DesignerVersion"><text>8.5</text></item>
+
+
+
+</note>

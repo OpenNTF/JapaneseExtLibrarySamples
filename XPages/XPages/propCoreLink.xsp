@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+	<XPa:ccLayout id="cc4cclayout"  navPath="/forms/plinkprop/">
+		<xp:this.facets>
+			<xc:ccMenu_forms xp:key="facetLeft"></xc:ccMenu_forms>
+			<xp:panel xp:key="facetMain">
+
+				<xp:div style="text-align:center">
+					<xp:span
+						style="font-size:14pt;text-decoration:underline">
+						Test of Link Properties
+					</xp:span>
+				</xp:div>
+				<xp:table styleClass="customTable" xp:key="facetMain">
+					<xp:tr>
+						<xp:td>Label - Regular</xp:td>
+						<xp:td>
+							<xp:link escape="true" text="Regular Label"
+								id="linkregularlabel01" value="/index.xsp">
+							</xp:link>
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>Label - Computed</xp:td>
+						<xp:td>
+							<xp:link escape="true"
+								id="linkComputedLabel01" value="/index.xsp">
+								<xp:this.text><![CDATA[#{javascript:return "Computed Label"}]]></xp:this.text>
+							</xp:link>
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>Visable Checkbox On</xp:td>
+						<xp:td>
+							<xp:link escape="true"
+								id="linkVisibleOnChecked01" text="VisibleLinkOn01"
+								value="/index.xsp">
+							</xp:link>
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>Visable Checkbox Off</xp:td>
+						<xp:td>
+							<xp:link escape="true"
+								id="linkVisibleOffChecked01" text="VisibleLinkOn02"
+								value="/index.xsp" rendered="false">
+							</xp:link>
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>Visable Computed On</xp:td>
+						<xp:td>
+							<xp:link escape="true"
+								text="VisibleLinkOn02" id="linkVisibleOnComputed01"
+								rendered="#{javascript:return true}" value="/index.xsp">
+							</xp:link>
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>Visable Computed Off</xp:td>
+						<xp:td>
+							<xp:link escape="true"
+								text="VisibleLinkOff02" id="linkVisibleOffComputed01"
+								rendered="#{javascript:return false}" value="/index.xsp">
+							</xp:link>
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>Height - Pixels(30) - Static</xp:td>
+						<xp:td>
+							<xp:link escape="true"
+								text="StaticHeightPixls" id="linkStaticHeightPxls01"
+								style="height:30px">
+								<xp:this.value><![CDATA[#{javascript:return "linkStaticHeightPxls01"}]]></xp:this.value>
+							</xp:link>
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>Height - Ems (5) - Static</xp:td>
+						<xp:td>
+							<xp:link escape="true"
+								text="StaticHeightEms" id="linkStaticHeightEms01"
+								style="height:5em" value="/index.xsp">
+							</xp:link>
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>Height - Auto - Static</xp:td>
+						<xp:td>
+							<xp:link escape="true"
+								text="StaticHeightAuto" id="linkStaticHeightAuto01"
+								value="/index.xsp">
+							</xp:link>
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							Height - Pixels - Computed - Units (30)
+						</xp:td>
+						<xp:td>
+							<xp:link escape="true"
+								text="ComputedHeightPxlsUnits"
+								id="linkComputedHeightPxlsUnits01" value="/index.xsp">
+								<xp:this.style><![CDATA[height:30.0#{javascript:return "px"}]]></xp:this.style>
+							</xp:link>
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							Height - Pixels - Computed - Value (25)
+						</xp:td>
+						<xp:td>
+							<xp:link escape="true"
+								text="ComputedHeightPxlsValue"
+								id="linkComputedHeightPxlsValue01"
+								style="height:#{javascript:return 25}px" value="/index.xsp">
+							</xp:link>
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							Height - Ems - Computed - Units (6)
+						</xp:td>
+						<xp:td>
+							<xp:link escape="true"
+								text="ComputedHeightEmsUnit" id="linkComputedHeightEmsUnits01"
+								value="/index.xsp">
+								<xp:this.style><![CDATA[height:6.0#{javascript:return "em"}]]></xp:this.style>
+							</xp:link>
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							Height - Ems - Computed - Value (4)
+						</xp:td>
+						<xp:td>
+							<xp:link escape="true"
+								text="ComputedHeightEmsValue" id="linkComputedHeightEmsValue01"
+								style="height:4em" value="/index.xsp">
+							</xp:link>
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>Width - Pixels (250) - Static</xp:td>
+						<xp:td>
+							<xp:link escape="true"
+								text="StaticWidthPxls" id="linkStaticWidthPxls01"
+								value="/index.xsp" style="width:250px">
+							</xp:link>
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>Width - Ems (15)- Static</xp:td>
+						<xp:td>
+							<xp:link escape="true" text="StaticWidthEms"
+								id="linkStaticWidthEms01" value="/index.xsp"
+								style="width:15em">
+							</xp:link>
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>Width - Percent (50%) - Static</xp:td>
+						<xp:td>
+
+							<xp:link escape="true"
+								text="StaticWidthPercent" id="linkStaticWidthPercent01"
+								style="width:50%">
+							</xp:link>
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>Width - Auto - Static</xp:td>
+						<xp:td>
+
+							<xp:link escape="true"
+								text="StaticWidthAuto" id="linkStaticWidthAuto01"
+								value="/index.xsp">
+							</xp:link>
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							Width - Pixels - Computed - Units (100)
+						</xp:td>
+						<xp:td>
+
+							<xp:link escape="true"
+								text="ComputedWidthPxlsUnits" id="linkComputedWidthPxlsUnits01"
+								value="/index.xsp">
+								<xp:this.style><![CDATA[width:100.0#{javascript:return "px"}]]></xp:this.style>
+							</xp:link>
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							Width - Pixels - Computed - Value (180)
+						</xp:td>
+						<xp:td>
+							<xp:link escape="true"
+								text="ComputedWidthPxlsValue" id="linkComputedWidthPxlsValue01"
+								style="width:#{javascript:return 180}px" value="/index.xsp">
+							</xp:link>
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							Width - Ems - Computed - Units
+
+							(15)
+						</xp:td>
+						<xp:td>
+
+							<xp:link escape="true"
+								text="ComputedWidthEmsUnits" id="linkComputedWidthEmsUnits01"
+								value="/index.xsp">
+								<xp:this.style><![CDATA[width:15.0#{javascript:return "em"}]]></xp:this.style>
+							</xp:link>
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							Width - Ems - Computed - Value (8)
+						</xp:td>
+						<xp:td>
+							<xp:link escape="true"
+								text="ComputedWidthEmsValue" id="linkComputedWidthEmsValue01"
+								value="/index.xsp" style="width:#{javascript:return 8}em">
+							</xp:link>
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							Width - Percent - Computed - Units (60%)
+						</xp:td>
+						<xp:td>
+
+							<xp:link escape="true"
+								text="ComputedWidthPercentUnit"
+								id="linkComputedWidthPercentUnits01" value="/index.xsp">
+								<xp:this.style><![CDATA[width:60.0#{javascript:return "%"}]]></xp:this.style>
+							</xp:link>
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							Width - Percent - Computed - Value (50)
+						</xp:td>
+						<xp:td>
+							<xp:link escape="true"
+								text="ComputedWidthPercentValue"
+								id="linkComputedWidthPercentValue01" style="width:50%"
+								value="/index.xsp">
+							</xp:link>
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+
+
+
+					<xp:tr>
+						<xp:td>Alternate Text - Static</xp:td>
+						<xp:td>
+
+
+							<xp:link escape="true" text="StaticAltTex"
+								id="linkStaticAltText01"
+								title="This is AltText created Statically!"
+								value="/index.xsp">
+							</xp:link>
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>Alternate Text - Computed</xp:td>
+						<xp:td>
+							<xp:link escape="true"
+								text="ComputedAltText" id="linkComputedAltText01"
+								value="/index.xsp">
+								<xp:this.title><![CDATA[#{javascript:return "This is Alt Text computed!"}]]></xp:this.title>
+							</xp:link>
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>Link Type - URL -Static</xp:td>
+						<xp:td>
+
+							<xp:link escape="true" text="StaticURL"
+								id="linkStaticURL01" value="http://www.ibm.com/ibm/us/en/">
+							</xp:link>
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>Link Type - URL -Computed</xp:td>
+						<xp:td>
+							<xp:link escape="true" text="ComputedURL"
+								id="linkComputedURL01">
+								<xp:this.value><![CDATA[#{javascript:return "http://www.ibm.com/ibm/us/en/"}]]></xp:this.value>
+							</xp:link>
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>Link Type - Anchor - Static</xp:td>
+						<xp:td>
+
+							<xp:link escape="true"
+								text="AnchorStatic to Regular Label Link"
+								id="linkAnchorStatic01" value="##{id:linkregularlabel01}">
+							</xp:link>
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>Link Type - Anchor - Computed</xp:td>
+						<xp:td>
+
+							<xp:link escape="true"
+								text="AnchorComputed to StaticHeightPxls"
+								id="linkAnchorComputed01">
+								<xp:this.value><![CDATA[#{javascript:return "#"+getClientId("linkStaticHeightPxls01")}]]></xp:this.value>
+							</xp:link>
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>Link Type - Open Page - Static</xp:td>
+						<xp:td>
+							<xp:link escape="true" text="OpenPageStatic"
+								id="linkOpenPageStatic01" value="/ctrlsCoreLink.xsp">
+							</xp:link>
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>Link Type - Open Page - Computed</xp:td>
+						<xp:td>
+
+							<xp:link escape="true"
+								text="OpenPageComputed" id="linkOpenPageComputed01">
+								<xp:this.value><![CDATA[#{javascript:return "atFunctionsA.xsp"}]]></xp:this.value>
+							</xp:link>
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							Add Image to Link - Image - Static
+						</xp:td>
+						<xp:td>
+
+							<xp:link escape="true" text="AddImageStatic"
+								id="linkAddImageStatic01" value="/index.xsp">
+
+								<xp:image id="image1"
+									url="/authprof.gif">
+								</xp:image>
+							</xp:link>
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							Add Image to Link - Image - Computed
+						</xp:td>
+						<xp:td>
+
+							<xp:link escape="true"
+								text="AddImageComputed" id="linkAddImageComputed01"
+								value="/index.xsp">
+								<xp:image id="image3"
+									url='#{javascript:return "/authprof.gif"}'>
+								</xp:image>
+							</xp:link>
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+
+					<xp:tr>
+						<xp:td>
+							Add Image to Link - Image Alt - Static
+						</xp:td>
+						<xp:td>
+							<xp:link escape="true"
+								text="AddImageStaticAltText" id="linkAddImageStaticAltText01"
+								value="/index.xsp">
+								<xp:image id="image2"
+									alt="This is the ALT Text for the image."
+									url="/authprof1.gif">
+								</xp:image>
+							</xp:link>
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							Add Image to Link - Image Alt - Computed
+						</xp:td>
+						<xp:td>
+							<xp:link escape="true"
+								text="AddImageComputedAltText"
+								id="linkAddImageComputedAltText01" value="/index.xsp">
+								<xp:image id="image4"
+									url="/ActionButton1.gif"
+									alt='#{javascript:return "This is Alt Text for this image."}'>
+								</xp:image>
+							</xp:link>
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td></xp:td>
+						<xp:td>
+
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+				</xp:table>
+			</xp:panel>
+		</xp:this.facets>
+	</XPa:ccLayout>
+</xp:view>

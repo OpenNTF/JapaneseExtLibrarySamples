@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" replicaid="85257A870079CB8F" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="636" sequence="701" unid="97B425307F7CD11B802573DB003E4DA3">
+<created><datetime dst="true">20080125T122031,07+01</datetime></created>
+<modified><datetime>20130319T214345,37+09</datetime></modified>
+<revised><datetime>20130319T214345,36+09</datetime></revised>
+<lastaccessed><datetime>20130319T214345,37+09</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20120928T180622,94-04</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=Admin/O=LotusLab</name></updatedby>
+<revisions><datetime dst="true">20110308T132401,80+01</datetime><datetime dst="true">20110308T132403,55+01</datetime><datetime dst="true">20110308T132403,57+01</datetime></revisions>
+<wassignedby><name>CN=Admin/O=LotusLab</name></wassignedby>
+<item name="$TITLE"><text>t01.xsp</text></item>
+
+<item name="$Flags"><text>gK4</text></item>
+
+
+<item name="$FileNames" sign="true"><text>t01.xsp</text></item>
+<item name="$DesignerVersion"><text>8.5</text></item>
+
+
+
+</note>

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+
+	<XPa:ccLayout id="cc4cclayout" navPath="/events/prbasicdemo/">
+		<xp:this.facets>
+			<xc:ccMenu_events xp:key="facetLeft"></xc:ccMenu_events>
+			<xp:panel xp:key="facetMain">
+				<xp:panel>
+					<xp:label value="Links Panel:" id="label1"></xp:label>
+					<xp:table>
+						<xp:tr>
+							<xp:td>
+								Partial refresh the Panel with the green
+								border:
+							</xp:td>
+							<xp:td>
+								<xp:link escape="true"
+									text="Refresh Panel" id="link1">
+									<xp:eventHandler event="onclick"
+										submit="true" refreshMode="partial" refreshId="panel4Refresh"
+										id="eventHandler1">
+									</xp:eventHandler>
+								</xp:link>
+							</xp:td>
+							<xp:td></xp:td>
+							<xp:td></xp:td>
+							<xp:td></xp:td>
+						</xp:tr>
+						<xp:tr>
+							<xp:td>
+								Partial refresh the Panel with the green
+								border but only&#160;the value in the
+								cell with the red border:
+							</xp:td>
+							<xp:td>
+								<xp:link escape="true"
+									text="Refresh Panel but only the RED cell" id="link5">
+									<xp:eventHandler event="onclick"
+										submit="true" refreshMode="partial" refreshId="panel4Refresh"
+										id="eventHandler5">
+										<xp:this.action><![CDATA[#{javascript:var clientID = getClientId("computedFieldPR03");
+facesContext.setPartialRefreshId(clientID) }]]></xp:this.action>
+									</xp:eventHandler>
+								</xp:link>
+							</xp:td>
+							<xp:td></xp:td>
+							<xp:td></xp:td>
+							<xp:td></xp:td>
+						</xp:tr>
+						<xp:tr>
+							<xp:td>
+								Partial refresh the red computed field:
+							</xp:td>
+							<xp:td>
+								<xp:link escape="true"
+									text="Refresh Computed Field" id="link2">
+									<xp:eventHandler event="onclick"
+										submit="true" refreshMode="partial"
+										refreshId="computedFieldPR02" id="eventHandler2">
+									</xp:eventHandler>
+								</xp:link>
+							</xp:td>
+							<xp:td></xp:td>
+							<xp:td></xp:td>
+							<xp:td></xp:td>
+						</xp:tr>
+						<xp:tr>
+							<xp:td>
+								Partial refresh the table with the
+								purple border:
+							</xp:td>
+							<xp:td>
+								<xp:link escape="true"
+									text="Refresh Table" id="link3">
+									<xp:eventHandler event="onclick"
+										submit="true" refreshMode="partial" refreshId="table2refresh"
+										id="eventHandler3">
+									</xp:eventHandler>
+								</xp:link>
+							</xp:td>
+							<xp:td></xp:td>
+							<xp:td></xp:td>
+							<xp:td></xp:td>
+						</xp:tr>
+						<xp:tr>
+							<xp:td>
+								Partial refresh the table cell with the
+								red border:
+							</xp:td>
+							<xp:td>
+								<xp:link escape="true"
+									text="Refresh Cell" id="link4">
+									<xp:eventHandler event="onclick"
+										submit="true" refreshMode="partial" refreshId="tableCell01"
+										id="eventHandler4">
+									</xp:eventHandler>
+								</xp:link>
+							</xp:td>
+							<xp:td></xp:td>
+							<xp:td></xp:td>
+							<xp:td></xp:td>
+						</xp:tr>
+						<xp:tr>
+							<xp:td>
+								The value on this row should only
+								refresh when there is a complete refresh
+								of the page:
+							</xp:td>
+							<xp:td>
+								<xp:text escape="true"
+									id="computedField1"
+									value="#{javascript:@UpperCase(@Left(@Unique(),5))}"
+									style="font-family:Courier New;font-size:14pt;font-weight:bold;color:rgb(0,128,192)">
+								</xp:text>
+							</xp:td>
+							<xp:td></xp:td>
+							<xp:td></xp:td>
+							<xp:td></xp:td>
+						</xp:tr>
+					</xp:table>
+				</xp:panel>
+				<xp:panel>
+					<xp:label id="label2" value="Test Display Panel:"></xp:label>
+					<xp:panel>
+						<xp:panel
+							style="border-color:rgb(0,128,0);border-style:solid;border-width:medium"
+							id="panel4Refresh">
+							<xp:text escape="true"
+								id="computedFieldPR01"
+								value="#{javascript:@UpperCase(@Left(@Unique(),5))}"
+								style="font-family:Courier New;font-size:14pt;font-weight:bold;color:rgb(0,128,192)">
+							</xp:text>
+
+							<xp:br></xp:br>
+							<xp:text escape="true"
+								id="computedFieldPR02"
+								value="#{javascript:@UpperCase(@Left(@Unique(),5))}"
+								style="font-family:Courier New;font-size:14pt;font-weight:bold;color:rgb(255,0,0)">
+							</xp:text>
+							<xp:table id="table2refresh"
+								style="border-color:rgb(64,0,128);border-style:solid;border-width:medium;background-color:rgb(250,252,254)">
+								<xp:tr>
+									<xp:td id="tableCell01"
+										style="border-color:rgb(255,0,0);border-style:solid;border-width:medium">
+										<xp:text escape="true"
+											id="computedFieldPR03"
+											value="#{javascript:@UpperCase(@Left(@Unique(),5))}"
+											style="font-family:Courier New;font-size:14pt;font-weight:bold;color:rgb(0,0,128)">
+										</xp:text>
+									</xp:td>
+									<xp:td id="tableCell02">
+										<xp:text escape="true"
+											id="computedFieldPR05"
+											value="#{javascript:@UpperCase(@Left(@Unique(),5))}"
+											style="font-family:Courier New;font-size:14pt;font-weight:bold;color:rgb(0,0,128)">
+										</xp:text>
+									</xp:td>
+								</xp:tr>
+								<xp:tr>
+									<xp:td id="tableCell03">
+										<xp:text escape="true"
+											id="computedFieldPR04"
+											value="#{javascript:@UpperCase(@Left(@Unique(),5))}"
+											style="font-family:Courier New;font-size:14pt;font-weight:bold;color:rgb(0,0,160)">
+										</xp:text>
+									</xp:td>
+									<xp:td id="tableCell04">
+										<xp:text escape="true"
+											id="computedFieldPR06"
+											value="#{javascript:@UpperCase(@Left(@Unique(),5))}"
+											style="font-family:Courier New;font-size:14pt;font-weight:bold;color:rgb(0,0,128)">
+										</xp:text>
+									</xp:td>
+								</xp:tr>
+							</xp:table>
+						</xp:panel>
+						<xp:panel></xp:panel>
+						<xp:panel></xp:panel>
+					</xp:panel>
+				</xp:panel>
+			</xp:panel>
+		</xp:this.facets>
+	</XPa:ccLayout>
+</xp:view>

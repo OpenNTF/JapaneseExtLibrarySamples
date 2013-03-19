@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+
+	<xp:this.resources>
+		<xp:styleSheet href="/csscustom.css"></xp:styleSheet>
+
+	</xp:this.resources>
+	<xp:this.data>
+		<xp:dominoDocument var="dominoDocument1" formName="MainTopic">
+			<xp:this.postNewDocument>
+				<xp:setValue binding="#{dominoDocument1.From}"
+					value="#{javascript:@UserName()}">
+				</xp:setValue>
+			</xp:this.postNewDocument>
+
+
+		</xp:dominoDocument>
+	</xp:this.data>
+	<XPa:ccLayout id="cc4cclayout" navPath="/basics/simplecrud/">
+		<xp:this.facets>
+			<xc:ccMenu_basics xp:key="facetLeft"></xc:ccMenu_basics>
+			<xp:panel xp:key="facetMain" id="panel4facetmain">
+				<xp:button value="Save and Close"
+					id="buttonSaveCloseCRUD">
+					<xp:eventHandler event="onclick" submit="true"
+						refreshMode="complete">
+						<xp:this.action>
+							<xp:save name="/crudSimpleTest.xsp"></xp:save>
+						</xp:this.action>
+					</xp:eventHandler>
+				</xp:button>
+				<xp:button value="Cancel" id="buttonCancelCRUD">
+					<xp:eventHandler event="onclick" submit="true"
+						refreshMode="complete" immediate="true" save="false">
+						<xp:this.action>
+							<xp:openPage name="/crudSimpleTest.xsp"></xp:openPage>
+						</xp:this.action>
+					</xp:eventHandler>
+				</xp:button>
+				<xp:button value="Edit" id="buttonEditCRUD">
+					<xp:eventHandler event="onclick" submit="true"
+						refreshMode="complete">
+						<xp:this.action>
+							<xp:changeDocumentMode mode="edit"></xp:changeDocumentMode>
+						</xp:this.action>
+					</xp:eventHandler>
+				</xp:button>
+				<xp:button value="Delete" id="buttonDeleteCRUD">
+					<xp:eventHandler event="onclick" submit="true"
+						refreshMode="complete">
+						<xp:this.action>
+							<xp:deleteDocument
+								name="/crudSimpleTest.xsp"
+								message="This action will delete this document.">
+							</xp:deleteDocument>
+						</xp:this.action>
+					</xp:eventHandler>
+				</xp:button>
+
+				<xp:table id="tableCRUDmain1" style="margin-top:10px">
+					<xp:tr>
+						<xp:td>
+							<xp:label value="Subject:"
+								id="labelCRUDSubject" for="inputTextCRUDSubject">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:inputText id="inputTextCRUDSubject"
+								value="#{dominoDocument1.Subject}">
+							</xp:inputText>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							<xp:label value="Category: "
+								id="labelCRUDCategory" for="inputTextCRUDCategories">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:inputText id="inputTextCRUDCategories"
+								value="#{dominoDocument1.Categories}">
+							</xp:inputText>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							<xp:label value="Body: " id="labelCRUDBody"
+								for="inputTextareaCRUDBody">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:inputTextarea id="inputTextareaCRUDBody"
+								value="#{dominoDocument1.Body}">
+							</xp:inputTextarea>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							<xp:label value="Author: "
+								id="labelCRUDAuthor" for="computedFieldCRUDAuthor">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:text escape="true"
+								id="computedFieldCRUDAuthor" value="#{dominoDocument1.From}">
+							</xp:text>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							<xp:label value="You are: "
+								id="labelyouare1" for="labelCRUDYouAre">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:label value="#{javascript:@UserName()}"
+								id="labelCRUDYouAre">
+							</xp:label>
+						</xp:td>
+					</xp:tr>
+				</xp:table>
+
+
+
+
+			</xp:panel>
+
+		</xp:this.facets>
+	</XPa:ccLayout>
+</xp:view>

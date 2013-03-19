@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf"
+	xmlns:xc="http://www.ibm.com/xsp/custom"
+	xmlns:xe="http://www.ibm.com/xsp/coreex">
+
+	<XPa:ccLayout navPath="/basics/">
+		<xp:this.facets>
+			<xc:ccXPagesResources xp:key="facetMain"></xc:ccXPagesResources>
+
+			<xc:ccMenu_basics xp:key="facetLeft"></xc:ccMenu_basics>
+		</xp:this.facets>
+	</XPa:ccLayout>
+</xp:view>

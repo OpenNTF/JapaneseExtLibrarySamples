@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+
+
+
+	<XPa:ccLayout id="cc4cclayout" navPath="/events/atfe/">
+		<xp:this.facets>
+			<xc:ccMenu_events xp:key="facetLeft"></xc:ccMenu_events>
+			<xp:panel xp:key="facetMain">
+				<xp:panel>
+					<xp:label id="label1" value="@E*: "
+						style="font-weight:bold;font-size:12pt">
+					</xp:label>
+					<xp:comboBox id="comboBoxAtFuncsE"
+						value="#{sessionScope.atFuncsEs}" defaultValue="None">
+						<xp:selectItem itemLabel="None"
+							itemValue="None">
+						</xp:selectItem>
+						<xp:selectItem itemLabel="@Element"
+							itemValue="atFE01">
+						</xp:selectItem>
+						<xp:selectItem itemLabel="@Elements"
+							itemValue="atFE02">
+						</xp:selectItem>
+						<xp:selectItem itemLabel="@Ends"
+							itemValue="atFE03">
+						</xp:selectItem>
+						<xp:selectItem itemLabel="@Error"
+							itemValue="atFE04">
+						</xp:selectItem>
+						<xp:selectItem itemLabel="@Explode"
+							itemValue="atFE05">
+						</xp:selectItem>
+
+
+						<xp:eventHandler event="onchange" submit="true"
+							refreshMode="complete">
+							<xp:this.action>
+								<![CDATA[#{javascript:print("")}]]>
+							</xp:this.action>
+						</xp:eventHandler>
+					</xp:comboBox>
+					<xp:panel>
+
+						<xp:panel>
+							<xp:this.rendered>
+								<![CDATA[#{javascript:sessionScope.atFuncsEs == "atFE01"}]]>
+							</xp:this.rendered>
+							<xp:table styleClass="customTable">
+								<xp:tr>
+									<xp:td>
+										<xp:label value="@Function: "
+											id="label2">
+										</xp:label>
+									</xp:td>
+									<xp:td>
+
+										@Element(list:any, position:int)
+										: any | Returns an element of a
+										list.
+									</xp:td>
+								</xp:tr>
+							</xp:table>
+							<xp:br />
+						</xp:panel>
+						<xp:panel>
+							<xp:this.rendered>
+								<![CDATA[#{javascript:sessionScope.atFuncsEs == "atFE02"}]]>
+							</xp:this.rendered>
+							<xp:table styleClass="customTable">
+								<xp:tr>
+									<xp:td>
+										<xp:label value="@Function: "
+											id="label3">
+										</xp:label>
+									</xp:td>
+									<xp:td>
+
+										@Elements(list:any) : int |
+										Returns the number of entries in
+										a list.
+									</xp:td>
+								</xp:tr>
+							</xp:table>
+							<xp:br />
+						</xp:panel>
+						<xp:panel>
+							<xp:this.rendered>
+								<![CDATA[#{javascript:sessionScope.atFuncsEs == "atFE03"}]]>
+							</xp:this.rendered>
+							<xp:table styleClass="customTable">
+								<xp:tr>
+									<xp:td>
+										<xp:label value="@Function: "
+											id="label4">
+										</xp:label>
+									</xp:td>
+									<xp:td>
+
+										@Ends(value:string,
+										subString:string) : int |
+										Determines whether a string ends
+										with a substring.
+									</xp:td>
+								</xp:tr>
+							</xp:table>
+							<xp:br />
+						</xp:panel>
+						<xp:panel>
+							<xp:this.rendered>
+								<![CDATA[#{javascript:sessionScope.atFuncsEs == "atFE04"}]]>
+							</xp:this.rendered>
+							<xp:table styleClass="customTable">
+								<xp:tr>
+									<xp:td>
+										<xp:label value="@Function: "
+											id="label5">
+										</xp:label>
+									</xp:td>
+									<xp:td>
+
+										@Error() : Object | Assigns an
+										error condition to a value.
+									</xp:td>
+								</xp:tr>
+							</xp:table>
+							<xp:br />
+						</xp:panel>
+						<xp:panel>
+							<xp:this.rendered>
+								<![CDATA[#{javascript:sessionScope.atFuncsEs == "atFE05"}]]>
+							</xp:this.rendered>
+							<xp:table styleClass="customTable">
+								<xp:tr>
+									<xp:td>
+										<xp:label value="@Function: "
+											id="label6">
+										</xp:label>
+									</xp:td>
+									<xp:td>
+
+										@Explode(value:string) : any |
+										Parses a string into elements in
+										a list using the comma,
+										semicolon, and space as
+										separators.
+										<xp:br></xp:br>
+										@Explode(value:string,
+										separators:string) : any |
+										Parses a string into elements in
+										a list using specified
+										separators.
+										<xp:br></xp:br>
+										@Explode(value:string,
+										separators:string,
+										incEmpties:int) : any | Parses a
+										string into elements in a list
+										using specified separators and
+										optionally including empty
+										elements.
+										<xp:br></xp:br>
+										@Explode(value:string,
+										separators:string,
+										incEmpties:int,
+										newLineAsSeparator:int) : any |
+										Parses a string into elements in
+										a list using specified
+										separators, optionally including
+										empty elements, and optionally
+										not using the newline as a
+										separator.
+									</xp:td>
+								</xp:tr>
+							</xp:table>
+							<xp:br />
+						</xp:panel>
+
+
+
+					</xp:panel>
+				</xp:panel>
+			</xp:panel>
+
+		</xp:this.facets>
+	</XPa:ccLayout>
+</xp:view>

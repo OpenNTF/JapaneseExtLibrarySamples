@@ -1,0 +1,999 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ibm-portal-composite xmlns="http://www.ibm.com/xmlns/prod/websphere/portal/v6.0/ibm-portal-composite" xmlns:var="http://www.ibm.com/xmlns/prod/websphere/portal/v6.0/ibm-portal-composite-variable" xmlns:base="http://www.ibm.com/xmlns/prod/websphere/portal/v6.0/ibm-portal-composite-base" xmlns:community="http://www.ibm.com/xmlns/prod/websphere/portal/v6.0/ibm-portal-composite-community">
+<application-info guid="[rep_id]_8025764900022595" category="default">
+<base:title>
+<base:nls-string xml:lang="en">XPages Demo Application</base:nls-string>
+</base:title>
+<base:description>
+<base:nls-string xml:lang="en">This is the demonstration application for XPages updated to 8.5.1.</base:nls-string>
+</base:description>
+</application-info>
+<business-component guid="[rep_id]_6_T6N1H4420G3SC02AVFRVVJ00H1" name="com.ibm.portal.blank.paa" handlerRef="local:ejb/ejb/com/ibm/wps/internalapp/service/PaaInstantiationServiceHome">
+<var:component-role ref="Manager@6_T6N1H4420G3SC02AVFRVVJ00H1"/>
+<var:component-role ref="Manager@3_T6N1H4420G3SC02AVFRVVJ0090"/>
+<var:component-role ref="Manager@3_T6N1H4420G3SC02AVFRVVJ0097"/>
+<var:component-role ref="Manager@3_T6N1H4420G3SC02AVFRVVJ00P3"/>	<var:component-role ref="User@6_T6N1H4420G3SC02AVFRVVJ00H1"/>
+<object-data>
+<ibm-portal-topology xmlns="http://www.ibm.com/xmlns/prod/websphere/portal/v6.0/ibm-portal-topology" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.ibm.com/xmlns/prod/websphere/portal/v6.0/ibm-portal-topology ibm-portal-topology.xsd">
+  <component-tree>
+    <portlet-definition id="ZTcwZmM5MjZmMDM5ZmY5MToxYzA3ZmJjYToxMjQzNGEzN2YyMTotN2ZmYw__">
+      <description>
+        <base:nls-string xml:lang="en">This is the default XPage for the Demo App</base:nls-string>
+      </description>
+      <preference name="com.ibm.notes.viewCustomization.filterByCategory">
+        <base:value value="" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.notes.viewCustomization.hideNavigator">
+        <base:value value="true" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.notes.notesurl">
+        <base:value value="notes:///[rep_id]/index.xsp?OpenXPage" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.notes.viewCustomization.hideHeader">
+        <base:value value="true" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.extensionType">
+        <base:value value="simple view" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.viewId">
+        <base:value value="com.ibm.xsp.rcp.XspViewPart" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.notes.viewCustomization.hideActionBar">
+        <base:value value="true" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.aaf.provider.id">
+        <base:value value="com.ibm.rcp.aaf.domino.provider.DominoProvider" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.notes.viewCustomization.hideColumnByName">
+        <base:value value="" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.aaf.createdByAAF">
+        <base:value value="com.ibm.rcp.aaf.createdByAAF" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.closeable">
+        <base:value value="false" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.showTitle">
+        <base:value value="false" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.moveable">
+        <base:value value="false" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.visible">
+        <base:value value="true" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.component.enable.window.actions">
+        <base:value value="false" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.aaf.portletappid">
+        <base:value xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.aaf.comptype">
+        <base:value value="0" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.standalone">
+        <base:value value="false" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.WiredProperties">
+        <base:value value="" xsi:type="base:String"/>
+      </preference>
+      <object-id value="[rep_id]_ZTcwZmM5MjZmMDM5ZmY5MToxYzA3ZmJjYToxMjQzNGEzN2YyMTotN2ZmYQ__"/>
+      <title>
+        <base:nls-string xml:lang="en">Index XPage</base:nls-string>
+      </title>
+      <resource-link portletApplication="PlaceHolder_Portlet">
+        <name value="Index XPage"/>
+        <portletId/>
+      </resource-link>
+    </portlet-definition>
+    <portlet-entity id="ZTcwZmM5MjZmMDM5ZmY5MToxYzA3ZmJjYToxMjQzNGEzN2YyMTotN2ZmYw__.1" portletDefinitionRef="ZTcwZmM5MjZmMDM5ZmY5MToxYzA3ZmJjYToxMjQzNGEzN2YyMTotN2ZmYw__">
+      <object-id value="[rep_id]_ZTcwZmM5MjZmMDM5ZmY5MToxYzA3ZmJjYToxMjQzNGEzN2YyMTotN2ZmOA__"/>
+    </portlet-entity>
+    <portlet-definition id="OWJlNmViODg3ODk0NGIyZDo2ZDgyMDkxMToxMjUzMDgyZDczYjotN2ZiYQ__">
+      <description>
+        <base:nls-string xml:lang="en"/>
+      </description>
+      <preference name="com.ibm.notes.viewCustomization.filterByCategory">
+        <base:value value="" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.notes.viewCustomization.hideNavigator">
+        <base:value value="true" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.notes.notesurl">
+        <base:value value="notes:///[rep_id]/xpagesDemoAppParameters1.component" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.notes.viewCustomization.hideHeader">
+        <base:value value="true" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.extensionType">
+        <base:value value="simple view" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.viewId">
+        <base:value value="com.ibm.xsp.rcp.XspViewPart" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.notes.viewCustomization.hideActionBar">
+        <base:value value="true" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.aaf.provider.id">
+        <base:value value="com.ibm.rcp.aaf.domino.provider.DominoProvider" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.notes.viewCustomization.hideColumnByName">
+        <base:value value="" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.aaf.createdByAAF">
+        <base:value value="com.ibm.rcp.aaf.createdByAAF" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.closeable">
+        <base:value value="false" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.showTitle">
+        <base:value value="false" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.moveable">
+        <base:value value="false" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.visible">
+        <base:value value="true" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.component.enable.window.actions">
+        <base:value value="false" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.aaf.portletappid">
+        <base:value xsi:type="base:String"/>
+      </preference>
+      <preference name="prStringEditBox">
+        <base:value value="Editbox String Value" xsi:type="base:String"/>
+      </preference>
+      <preference name="prStringComboBox">
+        <base:value value="" xsi:type="base:String"/>
+      </preference>
+      <preference name="prStringBoolean">
+        <base:value value="true" xsi:type="base:String"/>
+      </preference>
+      <preference name="prStringHidden">
+        <base:value value="Hidden String" xsi:type="base:String"/>
+      </preference>
+      <preference name="prBooleanEditBox">
+        <base:value value="false" xsi:type="base:String"/>
+      </preference>
+      <preference name="prBooleanComboBox">
+        <base:value value="" xsi:type="base:String"/>
+      </preference>
+      <preference name="prBooleanBoolean">
+        <base:value value="true" xsi:type="base:String"/>
+      </preference>
+      <preference name="prBooleanHidden">
+        <base:value value="true" xsi:type="base:String"/>
+      </preference>
+      <preference name="prNumberEditBox">
+        <base:value value="122333" xsi:type="base:String"/>
+      </preference>
+      <preference name="prNumberComboBox">
+        <base:value value="" xsi:type="base:String"/>
+      </preference>
+      <preference name="prNumberBoolean">
+        <base:value value="true" xsi:type="base:String"/>
+      </preference>
+      <preference name="prNumberHidden">
+        <base:value value="54321" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.aaf.xspParameters">
+        <base:value value="prStringEditBox" xsi:type="base:String"/>
+        <base:value value="prStringComboBox" xsi:type="base:String"/>
+        <base:value value="prStringBoolean" xsi:type="base:String"/>
+        <base:value value="prStringHidden" xsi:type="base:String"/>
+        <base:value value="prBooleanEditBox" xsi:type="base:String"/>
+        <base:value value="prBooleanComboBox" xsi:type="base:String"/>
+        <base:value value="prBooleanBoolean" xsi:type="base:String"/>
+        <base:value value="prBooleanHidden" xsi:type="base:String"/>
+        <base:value value="prNumberEditBox" xsi:type="base:String"/>
+        <base:value value="prNumberComboBox" xsi:type="base:String"/>
+        <base:value value="prNumberBoolean" xsi:type="base:String"/>
+        <base:value value="prNumberHidden" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.ratio">
+        <base:value value="0.6095061" xsi:type="base:String"/>
+      </preference>
+      <object-id value="[rep_id]_OWJlNmViODg3ODk0NGIyZDo2ZDgyMDkxMToxMjUzMDgyZDczYjotN2ZiOA__"/>
+      <title>
+        <base:nls-string xml:lang="en">Parameters Test XPage Component</base:nls-string>
+      </title>
+      <resource-link portletApplication="PlaceHolder_Portlet">
+        <name value="Parameters Test XPage Component"/>
+        <portletId/>
+      </resource-link>
+    </portlet-definition>
+    <portlet-entity id="OWJlNmViODg3ODk0NGIyZDo2ZDgyMDkxMToxMjUzMDgyZDczYjotN2ZiYQ__.1" portletDefinitionRef="OWJlNmViODg3ODk0NGIyZDo2ZDgyMDkxMToxMjUzMDgyZDczYjotN2ZiYQ__">
+      <object-id value="[rep_id]_OWJlNmViODg3ODk0NGIyZDo2ZDgyMDkxMToxMjUzMDgyZDczYjotN2ZiNg__"/>
+    </portlet-entity>
+    <portlet-definition id="ZjUwOTIyZTFmYzc0ZTYwZjotNzM1NjcwNGU6MTI2NDcxMjVjNDM6LTdmZjc_">
+      <description>
+        <base:nls-string xml:lang="en"/>
+      </description>
+      <preference name="com.ibm.notes.viewCustomization.filterByCategory">
+        <base:value value="" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.notes.viewCustomization.hideNavigator">
+        <base:value value="true" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.notes.notesurl">
+        <base:value value="notes:///[rep_id]/xpagesDemoAppViewColumnPublish.component" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.notes.viewCustomization.hideHeader">
+        <base:value value="true" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.extensionType">
+        <base:value value="simple view" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.viewId">
+        <base:value value="com.ibm.xsp.rcp.XspViewPart" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.notes.viewCustomization.hideActionBar">
+        <base:value value="true" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.aaf.provider.id">
+        <base:value value="com.ibm.rcp.aaf.domino.provider.DominoProvider" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.notes.viewCustomization.hideColumnByName">
+        <base:value value="" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.aaf.createdByAAF">
+        <base:value value="com.ibm.rcp.aaf.createdByAAF" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.closeable">
+        <base:value value="false" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.showTitle">
+        <base:value value="false" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.moveable">
+        <base:value value="false" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.visible">
+        <base:value value="true" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.component.enable.window.actions">
+        <base:value value="false" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.aaf.portletappid">
+        <base:value xsi:type="base:String"/>
+      </preference>
+      <object-id value="[rep_id]_ZjUwOTIyZTFmYzc0ZTYwZjotNzM1NjcwNGU6MTI2NDcxMjVjNDM6LTdmZjU_"/>
+      <title>
+        <base:nls-string xml:lang="en">Publish View Columns</base:nls-string>
+      </title>
+      <resource-link portletApplication="PlaceHolder_Portlet">
+        <name value="Publish View Columns"/>
+        <portletId/>
+      </resource-link>
+    </portlet-definition>
+    <portlet-entity id="ZjUwOTIyZTFmYzc0ZTYwZjotNzM1NjcwNGU6MTI2NDcxMjVjNDM6LTdmZjc_.1" portletDefinitionRef="ZjUwOTIyZTFmYzc0ZTYwZjotNzM1NjcwNGU6MTI2NDcxMjVjNDM6LTdmZjc_">
+      <object-id value="[rep_id]_ZjUwOTIyZTFmYzc0ZTYwZjotNzM1NjcwNGU6MTI2NDcxMjVjNDM6LTdmZjM_"/>
+    </portlet-entity>
+    <portlet-definition id="ZjUwOTIyZTFmYzc0ZTYwZjotNzM1NjcwNGU6MTI2NDcxMjVjNDM6LTdmZWY_">
+      <description>
+        <base:nls-string xml:lang="en"/>
+      </description>
+      <preference name="com.ibm.notes.viewCustomization.filterByCategory">
+        <base:value value="" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.notes.viewCustomization.hideNavigator">
+        <base:value value="true" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.notes.notesurl">
+        <base:value value="notes:///[rep_id]/xpagesDemoAppViewColumnReceiveCountry.component" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.notes.viewCustomization.hideHeader">
+        <base:value value="true" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.extensionType">
+        <base:value value="simple view" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.viewId">
+        <base:value value="com.ibm.xsp.rcp.XspViewPart" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.notes.viewCustomization.hideActionBar">
+        <base:value value="true" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.aaf.provider.id">
+        <base:value value="com.ibm.rcp.aaf.domino.provider.DominoProvider" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.notes.viewCustomization.hideColumnByName">
+        <base:value value="" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.aaf.createdByAAF">
+        <base:value value="com.ibm.rcp.aaf.createdByAAF" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.closeable">
+        <base:value value="false" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.showTitle">
+        <base:value value="false" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.moveable">
+        <base:value value="false" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.visible">
+        <base:value value="true" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.component.enable.window.actions">
+        <base:value value="false" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.aaf.portletappid">
+        <base:value xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.ratio">
+        <base:value value="0.5311721" xsi:type="base:String"/>
+      </preference>
+      <object-id value="[rep_id]_ZjUwOTIyZTFmYzc0ZTYwZjotNzM1NjcwNGU6MTI2NDcxMjVjNDM6LTdmZWQ_"/>
+      <title>
+        <base:nls-string xml:lang="en">View Column Receive Country</base:nls-string>
+      </title>
+      <resource-link portletApplication="PlaceHolder_Portlet">
+        <name value="View Column Receive Country"/>
+        <portletId/>
+      </resource-link>
+    </portlet-definition>
+    <portlet-entity id="ZjUwOTIyZTFmYzc0ZTYwZjotNzM1NjcwNGU6MTI2NDcxMjVjNDM6LTdmZWY_.1" portletDefinitionRef="ZjUwOTIyZTFmYzc0ZTYwZjotNzM1NjcwNGU6MTI2NDcxMjVjNDM6LTdmZWY_">
+      <object-id value="[rep_id]_ZjUwOTIyZTFmYzc0ZTYwZjotNzM1NjcwNGU6MTI2NDcxMjVjNDM6LTdmZWI_"/>
+    </portlet-entity>
+    <portlet-definition id="ZjUwOTIyZTFmYzc0ZTYwZjotNzM1NjcwNGU6MTI2NDcxMjVjNDM6LTdmZTk_">
+      <description>
+        <base:nls-string xml:lang="en"/>
+      </description>
+      <preference name="com.ibm.notes.viewCustomization.filterByCategory">
+        <base:value value="" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.notes.viewCustomization.hideNavigator">
+        <base:value value="true" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.notes.notesurl">
+        <base:value value="notes:///[rep_id]/xpagesDemoAppViewColumnReceiveCity.component" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.notes.viewCustomization.hideHeader">
+        <base:value value="true" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.extensionType">
+        <base:value value="simple view" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.viewId">
+        <base:value value="com.ibm.xsp.rcp.XspViewPart" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.notes.viewCustomization.hideActionBar">
+        <base:value value="true" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.aaf.provider.id">
+        <base:value value="com.ibm.rcp.aaf.domino.provider.DominoProvider" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.notes.viewCustomization.hideColumnByName">
+        <base:value value="" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.aaf.createdByAAF">
+        <base:value value="com.ibm.rcp.aaf.createdByAAF" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.closeable">
+        <base:value value="false" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.showTitle">
+        <base:value value="false" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.moveable">
+        <base:value value="false" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.visible">
+        <base:value value="true" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.component.enable.window.actions">
+        <base:value value="false" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.aaf.portletappid">
+        <base:value xsi:type="base:String"/>
+      </preference>
+      <object-id value="[rep_id]_ZjUwOTIyZTFmYzc0ZTYwZjotNzM1NjcwNGU6MTI2NDcxMjVjNDM6LTdmZTc_"/>
+      <title>
+        <base:nls-string xml:lang="en">View Column Receive City</base:nls-string>
+      </title>
+      <resource-link portletApplication="PlaceHolder_Portlet">
+        <name value="View Column Receive City"/>
+        <portletId/>
+      </resource-link>
+    </portlet-definition>
+    <portlet-entity id="ZjUwOTIyZTFmYzc0ZTYwZjotNzM1NjcwNGU6MTI2NDcxMjVjNDM6LTdmZTk_.1" portletDefinitionRef="ZjUwOTIyZTFmYzc0ZTYwZjotNzM1NjcwNGU6MTI2NDcxMjVjNDM6LTdmZTk_">
+      <object-id value="[rep_id]_ZjUwOTIyZTFmYzc0ZTYwZjotNzM1NjcwNGU6MTI2NDcxMjVjNDM6LTdmZTU_"/>
+    </portlet-entity>
+    <portlet-definition id="ZjUwOTIyZTFmYzc0ZTYwZjoxMmM4MjRhMzoxMjY0YjUxMGY4MTotN2ZlNg__">
+      <description>
+        <base:nls-string xml:lang="en">Test XPage for publishing events</base:nls-string>
+      </description>
+      <preference name="com.ibm.notes.viewCustomization.hideNavigator">
+        <base:value value="true" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.notes.viewCustomization.filterByCategory">
+        <base:value value="" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.notes.notesurl">
+        <base:value value="notes:///[rep_id]/xpagesDemoAppTestPublish1.component" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.extensionType">
+        <base:value value="simple view" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.notes.viewCustomization.hideHeader">
+        <base:value value="true" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.viewId">
+        <base:value value="com.ibm.xsp.rcp.XspViewPart" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.notes.viewCustomization.hideActionBar">
+        <base:value value="true" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.aaf.provider.id">
+        <base:value value="com.ibm.rcp.aaf.domino.provider.DominoProvider" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.notes.viewCustomization.hideColumnByName">
+        <base:value value="" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.aaf.createdByAAF">
+        <base:value value="com.ibm.rcp.aaf.createdByAAF" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.closeable">
+        <base:value value="false" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.showTitle">
+        <base:value value="false" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.moveable">
+        <base:value value="false" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.visible">
+        <base:value value="true" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.component.enable.window.actions">
+        <base:value value="false" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.aaf.portletappid">
+        <base:value value="null" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.ratio">
+        <base:value value="0.75" xsi:type="base:String"/>
+      </preference>
+      <object-id value="[rep_id]_ZjUwOTIyZTFmYzc0ZTYwZjoxMmM4MjRhMzoxMjY0YjUxMGY4MTotN2ZlNA__"/>
+      <title>
+        <base:nls-string xml:lang="en">Publish Events Test XPage</base:nls-string>
+      </title>
+      <resource-link portletApplication="PlaceHolder_Portlet">
+        <name value="Publish Events Test XPage"/>
+        <portletId value="null"/>
+      </resource-link>
+    </portlet-definition>
+    <portlet-entity id="ZjUwOTIyZTFmYzc0ZTYwZjoxMmM4MjRhMzoxMjY0YjUxMGY4MTotN2ZlNg__.1" portletDefinitionRef="ZjUwOTIyZTFmYzc0ZTYwZjoxMmM4MjRhMzoxMjY0YjUxMGY4MTotN2ZlNg__">
+      <object-id value="[rep_id]_ZjUwOTIyZTFmYzc0ZTYwZjoxMmM4MjRhMzoxMjY0YjUxMGY4MTotN2ZlMg__"/>
+    </portlet-entity>
+    <portlet-definition id="ZjUwOTIyZTFmYzc0ZTYwZjoxMmM4MjRhMzoxMjY0YjUxMGY4MTotN2ZlMA__">
+      <description>
+        <base:nls-string xml:lang="en">This is a test XPages for receiving events</base:nls-string>
+      </description>
+      <preference name="com.ibm.notes.viewCustomization.hideNavigator">
+        <base:value value="true" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.notes.viewCustomization.filterByCategory">
+        <base:value value="" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.notes.notesurl">
+        <base:value value="notes:///[rep_id]/xpagesDemoAppTestReceive1.component" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.extensionType">
+        <base:value value="simple view" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.notes.viewCustomization.hideHeader">
+        <base:value value="true" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.viewId">
+        <base:value value="com.ibm.xsp.rcp.XspViewPart" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.notes.viewCustomization.hideActionBar">
+        <base:value value="true" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.aaf.provider.id">
+        <base:value value="com.ibm.rcp.aaf.domino.provider.DominoProvider" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.notes.viewCustomization.hideColumnByName">
+        <base:value value="" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.aaf.createdByAAF">
+        <base:value value="com.ibm.rcp.aaf.createdByAAF" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.closeable">
+        <base:value value="false" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.showTitle">
+        <base:value value="false" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.moveable">
+        <base:value value="false" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.visible">
+        <base:value value="true" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.component.enable.window.actions">
+        <base:value value="false" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.aaf.portletappid">
+        <base:value xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.ratio">
+        <base:value value="0.49948823" xsi:type="base:String"/>
+      </preference>
+      <object-id value="[rep_id]_ZjUwOTIyZTFmYzc0ZTYwZjoxMmM4MjRhMzoxMjY0YjUxMGY4MTotN2ZkZQ__"/>
+      <title>
+        <base:nls-string xml:lang="en">Receive Events Test XPage</base:nls-string>
+      </title>
+      <resource-link portletApplication="PlaceHolder_Portlet">
+        <name value="Receive Events Test XPage"/>
+        <portletId/>
+      </resource-link>
+    </portlet-definition>
+    <portlet-entity id="ZjUwOTIyZTFmYzc0ZTYwZjoxMmM4MjRhMzoxMjY0YjUxMGY4MTotN2ZlMA__.1" portletDefinitionRef="ZjUwOTIyZTFmYzc0ZTYwZjoxMmM4MjRhMzoxMjY0YjUxMGY4MTotN2ZlMA__">
+      <object-id value="[rep_id]_ZjUwOTIyZTFmYzc0ZTYwZjoxMmM4MjRhMzoxMjY0YjUxMGY4MTotN2ZkYw__"/>
+    </portlet-entity>
+    <portlet-definition id="YzE0NDRhMjMzNWQxYWNiMDo2YWE0YzM0OToxMjcwNWEyM2FlMDotN2ZmOA__">
+      <description>
+        <base:nls-string xml:lang="en"/>
+      </description>
+      <preference name="com.ibm.notes.viewCustomization.hideNavigator">
+        <base:value value="true" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.notes.viewCustomization.filterByCategory">
+        <base:value value="" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.notes.notesurl">
+        <base:value value="notes:///[rep_id]/xpagesDemoAppViewColumnReceiveCity.component" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.extensionType">
+        <base:value value="simple view" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.notes.viewCustomization.hideHeader">
+        <base:value value="true" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.viewId">
+        <base:value value="com.ibm.xsp.rcp.XspViewPart" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.notes.viewCustomization.hideActionBar">
+        <base:value value="true" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.aaf.provider.id">
+        <base:value value="com.ibm.rcp.aaf.domino.provider.DominoProvider" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.notes.viewCustomization.hideColumnByName">
+        <base:value value="" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.aaf.createdByAAF">
+        <base:value value="com.ibm.rcp.aaf.createdByAAF" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.closeable">
+        <base:value value="false" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.showTitle">
+        <base:value value="false" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.moveable">
+        <base:value value="false" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.visible">
+        <base:value value="true" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.component.enable.window.actions">
+        <base:value value="false" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.aaf.portletappid">
+        <base:value xsi:type="base:String"/>
+      </preference>
+      <object-id value="[rep_id]_YzE0NDRhMjMzNWQxYWNiMDo2YWE0YzM0OToxMjcwNWEyM2FlMDotN2ZmNg__"/>
+      <title>
+        <base:nls-string xml:lang="en">View Column Receive City</base:nls-string>
+      </title>
+      <resource-link portletApplication="PlaceHolder_Portlet">
+        <name value="View Column Receive City"/>
+        <portletId/>
+      </resource-link>
+    </portlet-definition>
+    <portlet-entity id="YzE0NDRhMjMzNWQxYWNiMDo2YWE0YzM0OToxMjcwNWEyM2FlMDotN2ZmOA__.1" portletDefinitionRef="YzE0NDRhMjMzNWQxYWNiMDo2YWE0YzM0OToxMjcwNWEyM2FlMDotN2ZmOA__">
+      <object-id value="[rep_id]_YzE0NDRhMjMzNWQxYWNiMDo2YWE0YzM0OToxMjcwNWEyM2FlMDotN2ZmNA__"/>
+    </portlet-entity>
+    <portlet-definition id="YzE0NDRhMjMzNWQxYWNiMDo2YWE0YzM0OToxMjcwNWEyM2FlMDotN2ZmMg__">
+      <description>
+        <base:nls-string xml:lang="en"/>
+      </description>
+      <preference name="com.ibm.notes.viewCustomization.hideNavigator">
+        <base:value value="true" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.notes.viewCustomization.filterByCategory">
+        <base:value value="" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.notes.notesurl">
+        <base:value value="notes:///[rep_id]/xpagesDemoAppViewColumnReceiveCountry.component" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.extensionType">
+        <base:value value="simple view" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.notes.viewCustomization.hideHeader">
+        <base:value value="true" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.viewId">
+        <base:value value="com.ibm.xsp.rcp.XspViewPart" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.notes.viewCustomization.hideActionBar">
+        <base:value value="true" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.aaf.provider.id">
+        <base:value value="com.ibm.rcp.aaf.domino.provider.DominoProvider" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.notes.viewCustomization.hideColumnByName">
+        <base:value value="" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.aaf.createdByAAF">
+        <base:value value="com.ibm.rcp.aaf.createdByAAF" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.closeable">
+        <base:value value="false" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.showTitle">
+        <base:value value="false" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.moveable">
+        <base:value value="false" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.visible">
+        <base:value value="true" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.component.enable.window.actions">
+        <base:value value="false" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.aaf.portletappid">
+        <base:value xsi:type="base:String"/>
+      </preference>
+      <object-id value="[rep_id]_YzE0NDRhMjMzNWQxYWNiMDo2YWE0YzM0OToxMjcwNWEyM2FlMDotN2ZmMA__"/>
+      <title>
+        <base:nls-string xml:lang="en">View Column Receive Country</base:nls-string>
+      </title>
+      <resource-link portletApplication="PlaceHolder_Portlet">
+        <name value="View Column Receive Country"/>
+        <portletId/>
+      </resource-link>
+    </portlet-definition>
+    <portlet-entity id="YzE0NDRhMjMzNWQxYWNiMDo2YWE0YzM0OToxMjcwNWEyM2FlMDotN2ZmMg__.1" portletDefinitionRef="YzE0NDRhMjMzNWQxYWNiMDo2YWE0YzM0OToxMjcwNWEyM2FlMDotN2ZmMg__">
+      <object-id value="[rep_id]_YzE0NDRhMjMzNWQxYWNiMDo2YWE0YzM0OToxMjcwNWEyM2FlMDotN2ZlZQ__"/>
+    </portlet-entity>
+    <portlet-definition id="YzE0NDRhMjMzNWQxYWNiMDo2YWE0YzM0OToxMjcwNWEyM2FlMDotN2ZlYw__">
+      <description>
+        <base:nls-string xml:lang="en"/>
+      </description>
+      <preference name="com.ibm.notes.viewCustomization.filterByCategory">
+        <base:value value="" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.notes.viewCustomization.hideNavigator">
+        <base:value value="true" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.notes.notesurl">
+        <base:value value="notes:///[rep_id]/xpagesDemoAppViewColumnPublish.component" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.notes.viewCustomization.hideHeader">
+        <base:value value="true" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.extensionType">
+        <base:value value="simple view" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.notes.viewCustomization.hideActionBar">
+        <base:value value="true" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.shelfView.visibility">
+        <base:value value="APP_ACTIVE" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.shelfView.region">
+        <base:value value="TOP" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.notes.viewCustomization.hideColumnByName">
+        <base:value value="" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.viewId">
+        <base:value value="com.ibm.xsp.rcp.XspViewPart" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.shelfView">
+        <base:value value="RIGHT" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.aaf.provider.id">
+        <base:value value="com.ibm.rcp.aaf.domino.provider.DominoProvider" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.shelfView.state">
+        <base:value value="RESTORED" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.aaf.createdByAAF">
+        <base:value value="com.ibm.rcp.aaf.createdByAAF" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.closeable">
+        <base:value value="false" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.showTitle">
+        <base:value value="false" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.moveable">
+        <base:value value="false" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.visible">
+        <base:value value="true" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.component.enable.window.actions">
+        <base:value value="false" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.aaf.portletappid">
+        <base:value xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.shelfWires">
+        <base:value value="DQo8cGx1Z2luPg0KPGV4dGVuc2lvbiBpZD0iWXpFME5EUmhNak16TldReFlXTmlNRG8yWVdFMFl6 TTBPVG94TWpjd05XRXlNMkZsTURvdE4yWmxOZ19fIiBwb2ludD0iY29tLmlibS5yY3AucHJvcGVy dHlicm9rZXIuUHJvcGVydHlCcm9rZXJXaXJlIj4NCjx3aXJlIGNyb3NzcGFnZT0idHJ1ZSIgZW5h YmxlPSJmYWxzZSIg" xsi:type="base:String"/>
+        <base:value value="b3JkaW5hbD0iMSIgb3duZXJpZD0iMkU2OEFFNjlCNjM1RUY4RUUyNTQ1Qzgy QkRBRUQwNDdfODAyNTc2NDkwMDAyMjU5NV8yIiBzb3VyY2VlbnRpdHlpZD0iY29tLmlibS54c3Au cmNwLlhzcFZpZXdQYXJ0OjJFNjhBRTY5QjYzNUVGOEVFMjU0NUM4MkJEQUVEMDQ3X1l6RTBORFJo TWpNek5XUXhZV05pTURvMllXRTBZek0w" xsi:type="base:String"/>
+        <base:value value="T1RveE1qY3dOV0V5TTJGbE1Eb3ROMlpsTndfXyIgc291 cmNlbmFtZT0icHViQ2l0eTEiIHRhcmdldGVudGl0eWlkPSJjb20uaWJtLnhzcC5yY3AuWHNwVmll d1BhcnQ6MkU2OEFFNjlCNjM1RUY4RUUyNTQ1QzgyQkRBRUQwNDdfWXpFME5EUmhNak16TldReFlX TmlNRG8yWVdFMFl6TTBPVG94TWpjd05XRXlNMkZsTURvdE4y" xsi:type="base:String"/>
+        <base:value value="Wm1OQV9fIiB0YXJnZXRuYW1lPSJy ZWNDaXR5IiB0YXJnZXRwYXJhbT0icmVjQ2l0eSIgdHlwZT0iUFJPUEVSVFlfVE9fQUNUSU9OIiB1 aWQ9Ill6RTBORFJoTWpNek5XUXhZV05pTURvMllXRTBZek0wT1RveE1qY3dOV0V5TTJGbE1Eb3RO MlpsTmdfXyIvPg0KPC9leHRlbnNpb24+DQo8ZXh0ZW5zaW9uIGlkPSJZekUwTkRS" xsi:type="base:String"/>
+        <base:value value="aE1qTXpOV1F4 WVdOaU1EbzJZV0UwWXpNME9Ub3hNamN3TldFeU0yRmxNRG90TjJabE5RX18iIHBvaW50PSJjb20u aWJtLnJjcC5wcm9wZXJ0eWJyb2tlci5Qcm9wZXJ0eUJyb2tlcldpcmUiPg0KPHdpcmUgY3Jvc3Nw YWdlPSJ0cnVlIiBlbmFibGU9ImZhbHNlIiBvcmRpbmFsPSIyIiBvd25lcmlkPSIyRTY4QUU2OUI2 Mz" xsi:type="base:String"/>
+        <base:value value="VFRjhFRTI1NDVDODJCREFFRDA0N184MDI1NzY0OTAwMDIyNTk1XzIiIHNvdXJjZWVudGl0eWlk PSJjb20uaWJtLnhzcC5yY3AuWHNwVmlld1BhcnQ6MkU2OEFFNjlCNjM1RUY4RUUyNTQ1QzgyQkRB RUQwNDdfWXpFME5EUmhNak16TldReFlXTmlNRG8yWVdFMFl6TTBPVG94TWpjd05XRXlNMkZsTURv dE4yWmxOd19fIiBzb3" xsi:type="base:String"/>
+        <base:value value="VyY2VuYW1lPSJwdWJDb3VudHJ5MSIgdGFyZ2V0ZW50aXR5aWQ9ImNvbS5p Ym0ueHNwLnJjcC5Yc3BWaWV3UGFydDoyRTY4QUU2OUI2MzVFRjhFRTI1NDVDODJCREFFRDA0N19Z ekUwTkRSaE1qTXpOV1F4WVdOaU1EbzJZV0UwWXpNME9Ub3hNamN3TldFeU0yRmxNRG90TjJabFpR X18iIHRhcmdldG5hbWU9InJlY0NvdW50cn" xsi:type="base:String"/>
+        <base:value value="kiIHRhcmdldHBhcmFtPSJyZWNDb3VudHJ5IiB0eXBl PSJQUk9QRVJUWV9UT19BQ1RJT04iIHVpZD0iWXpFME5EUmhNak16TldReFlXTmlNRG8yWVdFMFl6 TTBPVG94TWpjd05XRXlNMkZsTURvdE4yWmxOUV9fIi8+DQo8L2V4dGVuc2lvbj4NCjwvcGx1Z2lu Pg== " xsi:type="base:String"/>
+      </preference>
+      <object-id value="[rep_id]_YzE0NDRhMjMzNWQxYWNiMDo2YWE0YzM0OToxMjcwNWEyM2FlMDotN2ZlOQ__"/>
+      <title>
+        <base:nls-string xml:lang="en">Publish View Columns</base:nls-string>
+      </title>
+      <resource-link portletApplication="PlaceHolder_Portlet">
+        <name value="Publish View Columns"/>
+        <portletId/>
+      </resource-link>
+    </portlet-definition>
+    <portlet-entity id="YzE0NDRhMjMzNWQxYWNiMDo2YWE0YzM0OToxMjcwNWEyM2FlMDotN2ZlYw__.1" portletDefinitionRef="YzE0NDRhMjMzNWQxYWNiMDo2YWE0YzM0OToxMjcwNWEyM2FlMDotN2ZlYw__">
+      <object-id value="[rep_id]_YzE0NDRhMjMzNWQxYWNiMDo2YWE0YzM0OToxMjcwNWEyM2FlMDotN2ZlNw__"/>
+    </portlet-entity>
+    <wire id="YzE0NDRhMjMzNWQxYWNiMDo2YWE0YzM0OToxMjcwNWEyM2FlMDotN2ZlNA__" ordinal="2000">
+      <object-id value="[rep_id]_YzE0NDRhMjMzNWQxYWNiMDo2YWE0YzM0OToxMjcwNWEyM2FlMDotN2ZkZA__"/>
+      <source-info property="pubCity1" portletEntityRef="ZjUwOTIyZTFmYzc0ZTYwZjotNzM1NjcwNGU6MTI2NDcxMjVjNDM6LTdmZjc_.1"/>
+      <target-info param="recCity" action="recCity" portletEntityRef="ZjUwOTIyZTFmYzc0ZTYwZjotNzM1NjcwNGU6MTI2NDcxMjVjNDM6LTdmZTk_.1"/>
+    </wire>
+    <wire id="YzE0NDRhMjMzNWQxYWNiMDo2YWE0YzM0OToxMjcwNWEyM2FlMDotN2ZlMw__" ordinal="2001">
+      <object-id value="[rep_id]_YzE0NDRhMjMzNWQxYWNiMDo2YWE0YzM0OToxMjcwNWEyM2FlMDotN2ZkYg__"/>
+      <source-info property="pubCountry1" portletEntityRef="ZjUwOTIyZTFmYzc0ZTYwZjotNzM1NjcwNGU6MTI2NDcxMjVjNDM6LTdmZjc_.1"/>
+      <target-info param="recCountry" action="recCountry" portletEntityRef="ZjUwOTIyZTFmYzc0ZTYwZjotNzM1NjcwNGU6MTI2NDcxMjVjNDM6LTdmZWY_.1"/>
+    </wire>
+    <wire id="YzE0NDRhMjMzNWQxYWNiMDo2YWE0YzM0OToxMjcwNWEyM2FlMDotN2ZlMg__" ordinal="2002">
+      <object-id value="[rep_id]_YzE0NDRhMjMzNWQxYWNiMDo2YWE0YzM0OToxMjcwNWEyM2FlMDotN2ZkOQ__"/>
+      <source-info property="pub01" portletEntityRef="ZjUwOTIyZTFmYzc0ZTYwZjoxMmM4MjRhMzoxMjY0YjUxMGY4MTotN2ZlNg__.1"/>
+      <target-info param="rec01" action="rec01" portletEntityRef="ZjUwOTIyZTFmYzc0ZTYwZjoxMmM4MjRhMzoxMjY0YjUxMGY4MTotN2ZlMA__.1"/>
+    </wire>
+    <wire id="YzE0NDRhMjMzNWQxYWNiMDo2YWE0YzM0OToxMjcwNWEyM2FlMDotN2ZlMQ__" ordinal="2003">
+      <object-id value="[rep_id]_YzE0NDRhMjMzNWQxYWNiMDo2YWE0YzM0OToxMjcwNWEyM2FlMDotN2ZkNw__"/>
+      <source-info property="pub02Boolean" portletEntityRef="ZjUwOTIyZTFmYzc0ZTYwZjoxMmM4MjRhMzoxMjY0YjUxMGY4MTotN2ZlNg__.1"/>
+      <target-info param="rec02Boolean" action="rec02Boolean" portletEntityRef="ZjUwOTIyZTFmYzc0ZTYwZjoxMmM4MjRhMzoxMjY0YjUxMGY4MTotN2ZlMA__.1"/>
+    </wire>
+    <wire id="YzE0NDRhMjMzNWQxYWNiMDo2YWE0YzM0OToxMjcwNWEyM2FlMDotN2ZlMA__" ordinal="2004">
+      <object-id value="[rep_id]_YzE0NDRhMjMzNWQxYWNiMDo2YWE0YzM0OToxMjcwNWEyM2FlMDotN2ZkNQ__"/>
+      <source-info property="pub03Number" portletEntityRef="ZjUwOTIyZTFmYzc0ZTYwZjoxMmM4MjRhMzoxMjY0YjUxMGY4MTotN2ZlNg__.1"/>
+      <target-info param="rec03Number" action="rec03Number" portletEntityRef="ZjUwOTIyZTFmYzc0ZTYwZjoxMmM4MjRhMzoxMjY0YjUxMGY4MTotN2ZlMA__.1"/>
+    </wire>
+    <wire id="YzE0NDRhMjMzNWQxYWNiMDo2YWE0YzM0OToxMjcwNWEyM2FlMDotN2ZkZg__" ordinal="2005">
+      <object-id value="[rep_id]_YzE0NDRhMjMzNWQxYWNiMDo2YWE0YzM0OToxMjcwNWEyM2FlMDotN2ZkMw__"/>
+      <source-info property="pub04JSON" portletEntityRef="ZjUwOTIyZTFmYzc0ZTYwZjoxMmM4MjRhMzoxMjY0YjUxMGY4MTotN2ZlNg__.1"/>
+      <target-info param="rec04JSON" action="rec04JSON" portletEntityRef="ZjUwOTIyZTFmYzc0ZTYwZjoxMmM4MjRhMzoxMjY0YjUxMGY4MTotN2ZlMA__.1"/>
+    </wire>
+  </component-tree>
+  <layout-tree>
+    <layout-element id="layout_TMP_10002">
+      <container xsi:type="SimpleContainer" orientation="column">
+        <container xsi:type="SimpleContainer" orientation="row">
+          <window id="ZTcwZmM5MjZmMDM5ZmY5MToxYzA3ZmJjYToxMjQzNGEzN2YyMTotN2ZmYw__.1window"/>
+        </container>
+        <container xsi:type="SimpleContainer" orientation="row">
+          <window id="OWJlNmViODg3ODk0NGIyZDo2ZDgyMDkxMToxMjUzMDgyZDczYjotN2ZiYQ__.1window"/>
+        </container>
+      </container>
+    </layout-element>
+    <layout-element id="Widgets.ZjUwOTIyZTFmYzc0ZTYwZjotNzM1NjcwNGU6MTI2NDcxMjVjNDM6LTdmZmI_">
+      <container xsi:type="SimpleContainer" orientation="column">
+        <container xsi:type="SimpleContainer" orientation="row">
+          <container xsi:type="SimpleContainer" orientation="column">
+            <window id="ZjUwOTIyZTFmYzc0ZTYwZjotNzM1NjcwNGU6MTI2NDcxMjVjNDM6LTdmZjc_.1window"/>
+          </container>
+          <container xsi:type="SimpleContainer" orientation="column">
+            <container xsi:type="SimpleContainer" orientation="row">
+              <window id="ZjUwOTIyZTFmYzc0ZTYwZjotNzM1NjcwNGU6MTI2NDcxMjVjNDM6LTdmZTk_.1window"/>
+            </container>
+            <container xsi:type="SimpleContainer" orientation="row">
+              <window id="ZjUwOTIyZTFmYzc0ZTYwZjotNzM1NjcwNGU6MTI2NDcxMjVjNDM6LTdmZWY_.1window"/>
+            </container>
+          </container>
+        </container>
+        <container xsi:type="SimpleContainer" orientation="row">
+          <container xsi:type="SimpleContainer" orientation="column">
+            <window id="ZjUwOTIyZTFmYzc0ZTYwZjoxMmM4MjRhMzoxMjY0YjUxMGY4MTotN2ZlNg__.1window"/>
+          </container>
+          <container xsi:type="SimpleContainer" orientation="column">
+            <window id="ZjUwOTIyZTFmYzc0ZTYwZjoxMmM4MjRhMzoxMjY0YjUxMGY4MTotN2ZlMA__.1window"/>
+          </container>
+        </container>
+      </container>
+    </layout-element>
+    <layout-element id="XPages in the Sidebar.YzE0NDRhMjMzNWQxYWNiMDo2YWE0YzM0OToxMjcwNWEyM2FlMDotN2ZmYg__">
+      <container xsi:type="SimpleContainer" orientation="row">
+        <container xsi:type="SimpleContainer" orientation="column">
+          <window id="YzE0NDRhMjMzNWQxYWNiMDo2YWE0YzM0OToxMjcwNWEyM2FlMDotN2ZmMg__.1window"/>
+        </container>
+        <container xsi:type="SimpleContainer" orientation="column">
+          <window id="YzE0NDRhMjMzNWQxYWNiMDo2YWE0YzM0OToxMjcwNWEyM2FlMDotN2ZmOA__.1window"/>
+        </container>
+      </container>
+    </layout-element>
+    <layout-element id="__sideshelfpage__">
+      <container xsi:type="SimpleContainer" orientation="column">
+        <window id="__sideshelfpage__0"/>
+      </container>
+    </layout-element>
+  </layout-tree>
+  <navigation-element id="TMP_10000">
+    <title>
+      <base:nls-string xml:lang="en">XPages Demo Application</base:nls-string>
+    </title>
+    <description>
+      <base:nls-string xml:lang="en">This is the demonstration application for XPages updated to 8.5.1.</base:nls-string>
+    </description>
+    <preference name="com.ibm.portal.categoryGuid">
+      <base:value value="1HeDe13PG3IP6G1C03Q46P1DA6R46M9E46OOC6JP4JQ076JPC3Q473JD0" readOnly="false" required="false" xsi:type="base:String"/>
+    </preference>
+    <preference name="com.ibm.rcp.useNavigator">
+      <base:value value="true" xsi:type="base:String"/>
+    </preference>
+    <preference name="com.ibm.rcp.navigationModel">
+      <base:value value="" xsi:type="base:String"/>
+    </preference>
+    <preference name="com.ibm.portal.PageIcon">
+      <base:value value="" xsi:type="base:String"/>
+    </preference>
+    <preference name="com.ibm.rcp.activities">
+      <base:value value="" xsi:type="base:String"/>
+    </preference>
+    <preference name="com.ibm.rcp.alias">
+      <base:value value="" xsi:type="base:String"/>
+    </preference>
+    <preference name="com.ibm.rcp.autoStart">
+      <base:value value="false" xsi:type="base:String"/>
+    </preference>
+    <preference name="com.ibm.rcp.launcher">
+      <base:value value="false" xsi:type="base:String"/>
+    </preference>
+    <preference name="com.ibm.rcp.hidden">
+      <base:value value="false" xsi:type="base:String"/>
+    </preference>
+    <parent-tree>
+      <parent-tree-ref value="wps.application.root" parameterId="portal.root"/>
+    </parent-tree>
+    <object-id value="[rep_id]_8025764900012684"/>
+    <navigation-element id="TMP_10001" layoutElementRef="layout_TMP_10002">
+      <title>
+        <base:nls-string xml:lang="en">XPages Demo App in the Client</base:nls-string>
+      </title>
+      <description>
+        <base:nls-string xml:lang="ar">صفحة خالية</base:nls-string>
+        <base:nls-string xml:lang="ca">Pàgina buida</base:nls-string>
+        <base:nls-string xml:lang="cs">Prázdná stránka</base:nls-string>
+        <base:nls-string xml:lang="da">Tom side</base:nls-string>
+        <base:nls-string xml:lang="de">Leere Seite</base:nls-string>
+        <base:nls-string xml:lang="el">Κενή σελίδα</base:nls-string>
+        <base:nls-string xml:lang="en">Blank Page</base:nls-string>
+        <base:nls-string xml:lang="es">Página en blanco</base:nls-string>
+        <base:nls-string xml:lang="fi">Tyhjä sivu</base:nls-string>
+        <base:nls-string xml:lang="fr">Page vide</base:nls-string>
+        <base:nls-string xml:lang="hu">Üres oldal</base:nls-string>
+        <base:nls-string xml:lang="it">Pagina vuota</base:nls-string>
+        <base:nls-string xml:lang="iw">דף ריק</base:nls-string>
+        <base:nls-string xml:lang="ja">空白ページ</base:nls-string>
+        <base:nls-string xml:lang="ko">공백 페이지</base:nls-string>
+        <base:nls-string xml:lang="nl">Lege pagina</base:nls-string>
+        <base:nls-string xml:lang="no">Tom side</base:nls-string>
+        <base:nls-string xml:lang="pl">Pusta strona</base:nls-string>
+        <base:nls-string xml:lang="pt">Página em branco</base:nls-string>
+        <base:nls-string xml:lang="pt-BR">Página Em Branco</base:nls-string>
+        <base:nls-string xml:lang="ro">Pagină goală</base:nls-string>
+        <base:nls-string xml:lang="ru">Пустая страница</base:nls-string>
+        <base:nls-string xml:lang="sk">Prázdna stránka</base:nls-string>
+        <base:nls-string xml:lang="sl">Prazna stran</base:nls-string>
+        <base:nls-string xml:lang="sv">Tom sida</base:nls-string>
+        <base:nls-string xml:lang="th">หน้าว่าง</base:nls-string>
+        <base:nls-string xml:lang="tr">Boş Sayfa</base:nls-string>
+        <base:nls-string xml:lang="uk">Порожня сторінка</base:nls-string>
+        <base:nls-string xml:lang="zh">空白页面</base:nls-string>
+        <base:nls-string xml:lang="zh-TW">空白頁面</base:nls-string>
+      </description>
+      <preference name="com.ibm.notes.enable.preferences">
+        <base:value value="true" xsi:type="base:String"/>
+      </preference>
+      <object-id value="[rep_id]_8025764900035536"/>
+      <navigation-content windowRef="ZTcwZmM5MjZmMDM5ZmY5MToxYzA3ZmJjYToxMjQzNGEzN2YyMTotN2ZmYw__.1window" componentDefinitionRef="ZTcwZmM5MjZmMDM5ZmY5MToxYzA3ZmJjYToxMjQzNGEzN2YyMTotN2ZmYw__.1"/>
+      <navigation-content windowRef="OWJlNmViODg3ODk0NGIyZDo2ZDgyMDkxMToxMjUzMDgyZDczYjotN2ZiYQ__.1window" componentDefinitionRef="OWJlNmViODg3ODk0NGIyZDo2ZDgyMDkxMToxMjUzMDgyZDczYjotN2ZiYQ__.1"/>
+    </navigation-element>
+    <navigation-element id="Widgets.ZjUwOTIyZTFmYzc0ZTYwZjotNzM1NjcwNGU6MTI2NDcxMjVjNDM6LTdmZmI_" layoutElementRef="Widgets.ZjUwOTIyZTFmYzc0ZTYwZjotNzM1NjcwNGU6MTI2NDcxMjVjNDM6LTdmZmI_">
+      <title>
+        <base:nls-string xml:lang="en">Components with Wiring</base:nls-string>
+      </title>
+      <description>
+        <base:nls-string xml:lang="en"/>
+      </description>
+      <preference name="com.ibm.rcp.alias">
+        <base:value value="wiring" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.notes.enable.preferences">
+        <base:value value="true" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.portal.PageIcon">
+        <base:value value="" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.activities">
+        <base:value value="" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.autoStart">
+        <base:value value="false" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.launcher">
+        <base:value value="false" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.hidden">
+        <base:value value="false" xsi:type="base:String"/>
+      </preference>
+      <object-id value="[rep_id]_ZjUwOTIyZTFmYzc0ZTYwZjotNzM1NjcwNGU6MTI2NDcxMjVjNDM6LTdmZmE_"/>
+      <navigation-content windowRef="ZjUwOTIyZTFmYzc0ZTYwZjotNzM1NjcwNGU6MTI2NDcxMjVjNDM6LTdmZjc_.1window" componentDefinitionRef="ZjUwOTIyZTFmYzc0ZTYwZjotNzM1NjcwNGU6MTI2NDcxMjVjNDM6LTdmZjc_.1"/>
+      <navigation-content windowRef="ZjUwOTIyZTFmYzc0ZTYwZjotNzM1NjcwNGU6MTI2NDcxMjVjNDM6LTdmZWY_.1window" componentDefinitionRef="ZjUwOTIyZTFmYzc0ZTYwZjotNzM1NjcwNGU6MTI2NDcxMjVjNDM6LTdmZWY_.1"/>
+      <navigation-content windowRef="ZjUwOTIyZTFmYzc0ZTYwZjotNzM1NjcwNGU6MTI2NDcxMjVjNDM6LTdmZTk_.1window" componentDefinitionRef="ZjUwOTIyZTFmYzc0ZTYwZjotNzM1NjcwNGU6MTI2NDcxMjVjNDM6LTdmZTk_.1"/>
+      <navigation-content windowRef="ZjUwOTIyZTFmYzc0ZTYwZjoxMmM4MjRhMzoxMjY0YjUxMGY4MTotN2ZlNg__.1window" componentDefinitionRef="ZjUwOTIyZTFmYzc0ZTYwZjoxMmM4MjRhMzoxMjY0YjUxMGY4MTotN2ZlNg__.1"/>
+      <navigation-content windowRef="ZjUwOTIyZTFmYzc0ZTYwZjoxMmM4MjRhMzoxMjY0YjUxMGY4MTotN2ZlMA__.1window" componentDefinitionRef="ZjUwOTIyZTFmYzc0ZTYwZjoxMmM4MjRhMzoxMjY0YjUxMGY4MTotN2ZlMA__.1"/>
+      <navigation-content componentDefinitionRef="YzE0NDRhMjMzNWQxYWNiMDo2YWE0YzM0OToxMjcwNWEyM2FlMDotN2ZlNA__"/>
+      <navigation-content componentDefinitionRef="YzE0NDRhMjMzNWQxYWNiMDo2YWE0YzM0OToxMjcwNWEyM2FlMDotN2ZlMw__"/>
+      <navigation-content componentDefinitionRef="YzE0NDRhMjMzNWQxYWNiMDo2YWE0YzM0OToxMjcwNWEyM2FlMDotN2ZlMg__"/>
+      <navigation-content componentDefinitionRef="YzE0NDRhMjMzNWQxYWNiMDo2YWE0YzM0OToxMjcwNWEyM2FlMDotN2ZlMQ__"/>
+      <navigation-content componentDefinitionRef="YzE0NDRhMjMzNWQxYWNiMDo2YWE0YzM0OToxMjcwNWEyM2FlMDotN2ZlMA__"/>
+      <navigation-content componentDefinitionRef="YzE0NDRhMjMzNWQxYWNiMDo2YWE0YzM0OToxMjcwNWEyM2FlMDotN2ZkZg__"/>
+    </navigation-element>
+    <navigation-element id="XPages in the Sidebar.YzE0NDRhMjMzNWQxYWNiMDo2YWE0YzM0OToxMjcwNWEyM2FlMDotN2ZmYg__" layoutElementRef="XPages in the Sidebar.YzE0NDRhMjMzNWQxYWNiMDo2YWE0YzM0OToxMjcwNWEyM2FlMDotN2ZmYg__">
+      <title>
+        <base:nls-string xml:lang="en">XPages in the Sidebar</base:nls-string>
+      </title>
+      <description/>
+      <preference name="com.ibm.rcp.alias">
+        <base:value value="XPages_in_the_Sidebar" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.notes.enable.preferences">
+        <base:value value="true" xsi:type="base:String"/>
+      </preference>
+      <object-id value="[rep_id]_YzE0NDRhMjMzNWQxYWNiMDo2YWE0YzM0OToxMjcwNWEyM2FlMDotN2ZmYQ__"/>
+      <navigation-content windowRef="YzE0NDRhMjMzNWQxYWNiMDo2YWE0YzM0OToxMjcwNWEyM2FlMDotN2ZmOA__.1window" componentDefinitionRef="YzE0NDRhMjMzNWQxYWNiMDo2YWE0YzM0OToxMjcwNWEyM2FlMDotN2ZmOA__.1"/>
+      <navigation-content windowRef="YzE0NDRhMjMzNWQxYWNiMDo2YWE0YzM0OToxMjcwNWEyM2FlMDotN2ZmMg__.1window" componentDefinitionRef="YzE0NDRhMjMzNWQxYWNiMDo2YWE0YzM0OToxMjcwNWEyM2FlMDotN2ZmMg__.1"/>
+    </navigation-element>
+    <navigation-element id="__sideshelfpage__" layoutElementRef="__sideshelfpage__">
+      <title>
+        <base:nls-string xml:lang="en">__sideshelfpage__</base:nls-string>
+      </title>
+      <description>
+        <base:nls-string xml:lang="en">__sideshelfpage__</base:nls-string>
+      </description>
+      <preference name="com.ibm.rcp.alias">
+        <base:value value="sideshelfpage" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.notes.enable.preferences">
+        <base:value value="true" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.aaf.isshelfpage">
+        <base:value value="true" xsi:type="base:String"/>
+      </preference>
+      <preference name="com.ibm.rcp.hidden">
+        <base:value value="true" xsi:type="base:String"/>
+      </preference>
+      <object-id value="[rep_id]_YzE0NDRhMjMzNWQxYWNiMDo2YWE0YzM0OToxMjcwNWEyM2FlMDotN2ZlYg__"/>
+      <navigation-content windowRef="__sideshelfpage__0" componentDefinitionRef="YzE0NDRhMjMzNWQxYWNiMDo2YWE0YzM0OToxMjcwNWEyM2FlMDotN2ZlYw__.1"/>
+    </navigation-element>
+  </navigation-element>
+</ibm-portal-topology>
+</object-data>
+</business-component>
+</ibm-portal-composite>
+

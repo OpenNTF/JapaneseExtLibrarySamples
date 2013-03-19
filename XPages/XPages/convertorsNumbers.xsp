@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+	<xp:this.data>
+		<xp:dominoDocument var="document1"
+			formName="xspValidatorsConvertorsForm">
+		</xp:dominoDocument>
+	</xp:this.data>
+	<xp:this.resources>
+		<xp:styleSheet href="/csscustom.css"></xp:styleSheet>
+	</xp:this.resources>
+	<XPa:ccLayout id="cc4cclayout" navPath="/forms/cnumber/">
+		<xp:this.facets>
+			<xc:ccMenu_forms xp:key="facetLeft"></xc:ccMenu_forms>
+			<xp:panel xp:key="facetMain" id="contentPanel">
+				<xp:panel id="panel4view">
+					<xp:button id="buttonNewValDoc" value="New">
+
+						<xp:eventHandler event="onclick" submit="true"
+							refreshMode="complete">
+							<xp:this.action>
+								<xp:openPage
+									name="/convertorsNumbers.xsp" target="newDocument">
+								</xp:openPage>
+							</xp:this.action>
+						</xp:eventHandler>
+					</xp:button>
+					<xp:button value="Delete selected"
+						id="buttonDeleteSelectedValDoc">
+						<xp:eventHandler event="onclick" submit="true"
+							refreshMode="complete">
+							<xp:this.action>
+								<xp:deleteSelectedDocuments
+									view="viewPanel1" message="Delete the selected documents">
+								</xp:deleteSelectedDocuments>
+							</xp:this.action>
+						</xp:eventHandler>
+					</xp:button>
+					<xp:viewPanel rows="300" id="viewPanel1"
+						pageName="/convertorsNumbers.xsp">
+						<xp:this.data>
+							<xp:dominoView
+								var="validatorsConvertorsView"
+								viewName="ValidatorsConvertorsView">
+							</xp:dominoView>
+						</xp:this.data>
+						<xp:viewColumn id="viewColumn1"
+							showCheckbox="true" displayAs="link" openDocAsReadonly="true"
+							columnName="Subject">
+							<xp:viewColumnHeader id="viewColumnHeader1"
+								value="Subject" showCheckbox="true">
+							</xp:viewColumnHeader>
+						</xp:viewColumn>
+					</xp:viewPanel>
+				</xp:panel>
+				<xp:panel id="panel4doc">
+					<xp:button value="Submit" id="buttonSubmitValDoc">
+						<xp:eventHandler event="onclick" submit="true"
+							refreshMode="complete" immediate="false" save="true">
+						</xp:eventHandler>
+					</xp:button>
+					<xp:button value="Cancel" id="buttonCancelValDoc">
+						<xp:eventHandler event="onclick" submit="true"
+							refreshMode="complete" immediate="true" save="false">
+						</xp:eventHandler>
+					</xp:button>
+					<xp:button value="Edit" id="buttonEditValDoc">
+						<xp:eventHandler event="onclick" submit="true"
+							refreshMode="complete">
+							<xp:this.action>
+								<xp:changeDocumentMode mode="edit"></xp:changeDocumentMode>
+							</xp:this.action>
+						</xp:eventHandler>
+					</xp:button>
+					<xp:panel id="testPanel">
+						<xp:br></xp:br>
+						<xp:label value="Subject: " id="label1"></xp:label>
+						<xp:inputText id="inputTextSubjectValDoc"
+							value="#{document1.Subject}">
+						</xp:inputText>
+						<xp:br></xp:br>
+						(validation is done server side)
+						<xp:table styleClass="customTable"
+							caption="Number Convertors">
+							<xp:tr>
+								<xp:td></xp:td>
+
+								<xp:td>
+
+								</xp:td>
+								<xp:td></xp:td>
+								<xp:td>
+
+								</xp:td>
+							</xp:tr>
+							<xp:tr
+								style="background-color:rgb(232,245,255)">
+								<xp:td></xp:td>
+
+								<xp:td></xp:td>
+								<xp:td></xp:td>
+								<xp:td></xp:td>
+							</xp:tr>
+							<xp:tr>
+								<xp:td>1</xp:td>
+
+								<xp:td>
+
+
+
+									Enter Number
+
+									(default)
+								</xp:td>
+								<xp:td>
+
+									<xp:inputText
+										value="#{document1.NumberData_1}" id="num1">
+
+										<xp:this.converter>
+											<xp:convertNumber
+												type="number">
+											</xp:convertNumber>
+										</xp:this.converter>
+									</xp:inputText>
+								</xp:td>
+								<xp:td>
+									<xp:message id="message25"
+										for="num1">
+									</xp:message>
+								</xp:td>
+							</xp:tr>
+							<xp:tr>
+								<xp:td>2</xp:td>
+
+								<xp:td>
+									Enter Number
+
+									(type = currency
+
+									currency code = USD)
+								</xp:td>
+								<xp:td>
+
+
+									<xp:inputText id="num2"
+										value="#{document1.NumberData_2}">
+										<xp:this.converter>
+											<xp:convertNumber
+												currencyCode="USD" type="currency">
+											</xp:convertNumber>
+										</xp:this.converter>
+									</xp:inputText>
+								</xp:td>
+								<xp:td>
+									<xp:message id="message26"
+										for="num2">
+									</xp:message>
+								</xp:td>
+							</xp:tr>
+							<xp:tr>
+								<xp:td>3</xp:td>
+
+								<xp:td>
+									Enter Number
+
+									(type = currency
+
+									currency symbol = $)
+								</xp:td>
+								<xp:td>
+
+
+									<xp:inputText id="num3"
+										value="#{document1.NumberData_3}">
+										<xp:this.converter>
+											<xp:convertNumber
+												currencySymbol="$" type="currency">
+											</xp:convertNumber>
+										</xp:this.converter>
+									</xp:inputText>
+								</xp:td>
+								<xp:td>
+									<xp:message id="message27"
+										for="num3">
+									</xp:message>
+								</xp:td>
+							</xp:tr>
+							<xp:tr>
+								<xp:td>4</xp:td>
+
+								<xp:td>
+									Enter Number
+
+									(groupings = false)
+								</xp:td>
+								<xp:td>
+
+
+									<xp:inputText id="num4"
+										value="#{document1.NumberData_4}">
+										<xp:this.converter>
+											<xp:convertNumber
+												groupingUsed="false" type="number">
+											</xp:convertNumber>
+										</xp:this.converter>
+									</xp:inputText>
+								</xp:td>
+								<xp:td>
+									<xp:message id="message28"
+										for="num4">
+									</xp:message>
+								</xp:td>
+							</xp:tr>
+							<xp:tr>
+								<xp:td>5</xp:td>
+
+								<xp:td>
+									Enter Number
+
+									(groupings = true)
+								</xp:td>
+								<xp:td>
+									<xp:inputText id="num5"
+										value="#{document1.NumberData_5}">
+										<xp:this.converter>
+											<xp:convertNumber
+												groupingUsed="true" type="number">
+											</xp:convertNumber>
+										</xp:this.converter>
+									</xp:inputText>
+								</xp:td>
+								<xp:td>
+									<xp:message id="message29"
+										for="num5">
+									</xp:message>
+								</xp:td>
+							</xp:tr>
+							<xp:tr>
+								<xp:td>6</xp:td>
+
+								<xp:td>
+									Enter Number
+
+									(integer only = false)
+								</xp:td>
+								<xp:td>
+									<xp:inputText id="num6"
+										value="#{document1.NumberData_6}">
+										<xp:this.converter>
+											<xp:convertNumber
+												integerOnly="false" type="number">
+											</xp:convertNumber>
+										</xp:this.converter>
+									</xp:inputText>
+								</xp:td>
+								<xp:td>
+									<xp:message id="message30"
+										for="num6">
+									</xp:message>
+								</xp:td>
+							</xp:tr>
+							<xp:tr>
+								<xp:td>7</xp:td>
+
+								<xp:td>
+									Enter Number
+
+									(integer only = true)
+								</xp:td>
+								<xp:td>
+									<xp:inputText id="num7"
+										value="#{document1.NumberData_7}">
+										<xp:this.converter>
+											<xp:convertNumber
+												integerOnly="true" type="number">
+											</xp:convertNumber>
+										</xp:this.converter>
+									</xp:inputText>
+								</xp:td>
+								<xp:td>
+									<xp:message id="message31"
+										for="num7">
+									</xp:message>
+								</xp:td>
+							</xp:tr>
+							<xp:tr>
+								<xp:td>8</xp:td>
+
+								<xp:td>
+									Enter Number
+
+									(type = currency
+
+									locale = US)
+								</xp:td>
+								<xp:td>
+									<xp:inputText id="num8"
+										value="#{document1.NumberData_8}">
+										<xp:this.converter>
+											<xp:convertNumber
+												locale="en_US" type="currency">
+											</xp:convertNumber>
+										</xp:this.converter>
+									</xp:inputText>
+								</xp:td>
+								<xp:td>
+									<xp:message id="message32"
+										for="num8">
+									</xp:message>
+								</xp:td>
+							</xp:tr>
+							<xp:tr>
+								<xp:td>9</xp:td>
+
+								<xp:td>
+									Enter Number
+
+									(max fraction digits = 2)
+								</xp:td>
+								<xp:td>
+									<xp:inputText id="num9"
+										value="#{document1.NumberData_9}">
+										<xp:this.converter>
+											<xp:convertNumber
+												maxFractionDigits="2" type="number">
+											</xp:convertNumber>
+										</xp:this.converter>
+									</xp:inputText>
+								</xp:td>
+								<xp:td>
+									<xp:message id="message33"
+										for="num9">
+									</xp:message>
+								</xp:td>
+							</xp:tr>
+							<xp:tr>
+								<xp:td>10</xp:td>
+
+								<xp:td>
+									Enter Number
+
+									(max integer digits = 2)
+								</xp:td>
+								<xp:td>
+									<xp:inputText id="num10"
+										value="#{document1.NumberData_10}">
+										<xp:this.converter>
+											<xp:convertNumber
+												maxIntegerDigits="2" type="number">
+											</xp:convertNumber>
+										</xp:this.converter>
+									</xp:inputText>
+								</xp:td>
+								<xp:td>
+									<xp:message id="message34"
+										for="num10">
+									</xp:message>
+								</xp:td>
+							</xp:tr>
+							<xp:tr>
+								<xp:td>11</xp:td>
+
+								<xp:td>
+									Enter Number
+
+									(min fraction digits = 1)
+								</xp:td>
+								<xp:td>
+									<xp:inputText id="num11"
+										value="#{document1.NumberData_11}">
+										<xp:this.converter>
+											<xp:convertNumber
+												minFractionDigits="1" type="number">
+											</xp:convertNumber>
+										</xp:this.converter>
+									</xp:inputText>
+								</xp:td>
+								<xp:td>
+									<xp:message id="message35"
+										for="num11">
+									</xp:message>
+								</xp:td>
+							</xp:tr>
+							<xp:tr>
+								<xp:td>12</xp:td>
+
+								<xp:td>
+									Enter Number
+
+									(min integer digits = 1)
+								</xp:td>
+								<xp:td>
+									<xp:inputText id="num12"
+										value="#{document1.NumberData_12}">
+										<xp:this.converter>
+											<xp:convertNumber
+												minIntegerDigits="1" type="number">
+											</xp:convertNumber>
+										</xp:this.converter>
+									</xp:inputText>
+								</xp:td>
+								<xp:td>
+									<xp:message id="message36"
+										for="num12">
+									</xp:message>
+								</xp:td>
+							</xp:tr>
+							<xp:tr>
+								<xp:td>13</xp:td>
+
+								<xp:td>
+									Enter number
+
+									(pattern = #,###.##)
+								</xp:td>
+								<xp:td>
+									<xp:inputText id="num13"
+										value="#{document1.NumberData_13}">
+										<xp:this.converter>
+											<xp:convertNumber
+												pattern="#,###.##" type="number">
+											</xp:convertNumber>
+										</xp:this.converter>
+									</xp:inputText>
+								</xp:td>
+								<xp:td>
+									<xp:message id="message37"
+										for="num13">
+									</xp:message>
+								</xp:td>
+							</xp:tr>
+							<xp:tr>
+								<xp:td>14</xp:td>
+
+								<xp:td>
+									Enter number
+
+									(type = number)
+								</xp:td>
+								<xp:td>
+									<xp:inputText id="num14"
+										value="#{document1.NumberData_14}">
+										<xp:this.converter>
+											<xp:convertNumber
+												type="number">
+											</xp:convertNumber>
+										</xp:this.converter>
+									</xp:inputText>
+								</xp:td>
+								<xp:td>
+									<xp:message id="message38"
+										for="num14">
+									</xp:message>
+								</xp:td>
+							</xp:tr>
+							<xp:tr>
+								<xp:td>15</xp:td>
+								<xp:td>
+									Enter number
+
+									(type = currency)
+								</xp:td>
+								<xp:td>
+									<xp:inputText id="num15"
+										value="#{document1.NumberData_15}">
+										<xp:this.converter>
+											<xp:convertNumber
+												type="currency">
+											</xp:convertNumber>
+										</xp:this.converter>
+									</xp:inputText>
+								</xp:td>
+								<xp:td>
+									<xp:message id="message39"
+										for="num15">
+									</xp:message>
+								</xp:td>
+							</xp:tr>
+							<xp:tr>
+								<xp:td>16</xp:td>
+								<xp:td>
+									Enter number
+
+									(type = percent)
+								</xp:td>
+								<xp:td>
+									<xp:inputText id="num16"
+										value="#{document1.NumberData_16}">
+										<xp:this.converter>
+											<xp:convertNumber
+												type="percent">
+											</xp:convertNumber>
+										</xp:this.converter>
+									</xp:inputText>
+								</xp:td>
+								<xp:td>
+									<xp:message id="message40"
+										for="num16">
+									</xp:message>
+								</xp:td>
+							</xp:tr>
+							<xp:tr>
+								<xp:td></xp:td>
+								<xp:td></xp:td>
+								<xp:td></xp:td>
+								<xp:td></xp:td>
+							</xp:tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						</xp:table>
+
+
+
+					</xp:panel>
+
+				</xp:panel>
+			</xp:panel>
+		</xp:this.facets>
+	</XPa:ccLayout>
+</xp:view>

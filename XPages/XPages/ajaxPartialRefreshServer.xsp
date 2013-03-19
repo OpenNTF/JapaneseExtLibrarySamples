@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+
+	<xp:this.afterPageLoad><![CDATA[#{javascript:
+viewScope.incValue = 0;
+}]]></xp:this.afterPageLoad>
+
+
+
+
+
+
+	<XPa:ccLayout navPath="/events/prserver/">
+		<xp:this.facets>
+			<xc:ccMenu_events xp:key="facetLeft"></xc:ccMenu_events>
+			<xp:panel xp:key="facetMain">
+				<xp:this.data>
+					<xp:dominoView var="view1"
+						viewName="xspPartialRefresh">
+					</xp:dominoView>
+				</xp:this.data>
+				<xp:span
+					style="color:rgb(0,128,255);font-weight:bold;font-size:16pt">
+					Partial Refresh - Server Options
+				</xp:span>
+
+				&#160;
+				<xp:link escape="true" text="Return to Previous"
+					id="link1">
+					<xp:eventHandler event="onclick" submit="true"
+						refreshMode="complete" immediate="true">
+						<xp:this.action>
+							<xp:openPage
+								name="/ajaxPartialRefreshMain.xsp">
+							</xp:openPage>
+						</xp:this.action>
+					</xp:eventHandler>
+				</xp:link>
+				<xp:br></xp:br>
+
+
+
+				<xp:br></xp:br>
+				<xp:br></xp:br>
+				<xp:span
+					style="font-weight:bold;color:rgb(126,58,65)">
+					Verifys the &quot;Full
+				</xp:span>
+				<xp:span
+					style="font-weight:bold;color:rgb(126,58,65)">
+					Update/Partial Update/No Update/No Submission&quot;
+				</xp:span>
+				<xp:span
+					style="font-weight:bold;color:rgb(126,58,65)">
+					server options
+				</xp:span>
+				<xp:br style="color:rgb(126,58,65)"></xp:br>
+				<xp:span style="color:rgb(126,58,65)"></xp:span>
+				<xp:span style="color:rgb(126,58,65)"></xp:span>
+				<xp:button value="Refresh Entire Form" id="button6">
+					<xp:eventHandler event="onclick" submit="true"
+						refreshMode="complete">
+					</xp:eventHandler>
+				</xp:button>
+				<xp:br></xp:br>
+				<xp:panel>
+					<xp:br></xp:br>
+					Value at last full page load:
+					<xp:text escape="true" id="computedField1"
+						value="#{viewScope.incValue}" style="font-weight:bold">
+						<xp:this.converter>
+							<xp:convertNumber type="number"
+								integerOnly="true">
+							</xp:convertNumber>
+						</xp:this.converter>
+					</xp:text>
+					&#160;&#160;
+					<xp:button value="Full Page Load" id="button1">
+						<xp:eventHandler event="onclick" submit="true"
+							refreshMode="complete" immediate="false" save="true">
+						</xp:eventHandler>
+					</xp:button>
+					<xp:br></xp:br>
+					<xp:br></xp:br>
+					Value at last partial update page load:
+					<xp:text escape="true" id="computedField2"
+						value="#{viewScope.incValue}" style="font-weight:bold">
+						<xp:this.converter>
+							<xp:convertNumber type="number"
+								integerOnly="true">
+							</xp:convertNumber>
+						</xp:this.converter>
+					</xp:text>
+					&#160;
+					<xp:button value="Partial Update" id="button3">
+						<xp:eventHandler event="onclick" submit="true"
+							refreshMode="partial" refreshId="computedField2">
+						</xp:eventHandler>
+					</xp:button>
+					<xp:br></xp:br>
+					<xp:br></xp:br>
+					Increment the value, but with no update:
+
+					<xp:text escape="true" value="#{viewScope.incValue}"
+						style="font-weight:bold" id="computedField3">
+						<xp:this.converter>
+							<xp:convertNumber type="number"
+								integerOnly="true">
+							</xp:convertNumber>
+						</xp:this.converter>
+					</xp:text>
+					&#160;
+					<xp:button value="No Update Increment"
+						id="button2">
+						<xp:eventHandler event="onclick" submit="true"
+							refreshMode="norefresh">
+							<xp:this.script><![CDATA[
+var guess = XSP.getElementById('#{id:computedField3}');
+guess.innerHTML = parseFloat(guess.innerHTML) + 1;
+]]></xp:this.script>
+							<xp:this.action><![CDATA[#{javascript:
+viewScope.incValue = viewScope.incValue + 1;
+}]]></xp:this.action>
+						</xp:eventHandler>
+					</xp:button>
+					<xp:br></xp:br>
+					<xp:br></xp:br>
+					Increment the value, but with no submission:
+					<xp:text escape="true" id="computedField4"
+						value="#{viewScope.incValue}" style="font-weight:bold">
+						<xp:this.converter>
+							<xp:convertNumber type="number"
+								integerOnly="true">
+							</xp:convertNumber>
+						</xp:this.converter>
+					</xp:text>
+					&#160;
+					<xp:button value="No Submission Increment"
+						id="button4">
+						<xp:eventHandler event="onclick"
+							submit="false">
+							<xp:this.script><![CDATA[
+var guess = XSP.getElementById('#{id:computedField4}');
+guess.innerHTML = parseFloat(guess.innerHTML) + 1;
+]]></xp:this.script>
+							<xp:this.action><![CDATA[#{javascript:
+viewScope.incValue = viewScope.incValue + 1;
+}]]></xp:this.action>
+						</xp:eventHandler>
+					</xp:button>
+					<xp:br></xp:br>
+				</xp:panel>
+				<xp:br></xp:br>
+				<xp:br></xp:br>
+				<xp:span style="font-weight:bold"></xp:span>
+
+				<xp:span
+					style="font-weight:bold;color:rgb(126,58,65)">
+					Verifys the &quot;No Data Validation
+				</xp:span>
+				<xp:span
+					style="font-weight:bold;color:rgb(126,58,65)">
+					&quot;
+				</xp:span>
+				<xp:span
+					style="font-weight:bold;color:rgb(126,58,65)">
+					server option
+				</xp:span>
+				<xp:br></xp:br>
+				<xp:panel
+					style="border-color:rgb(0,128,255);border-style:solid;border-width:medium;width:60%"
+					id="bluePanel">
+
+					<xp:span style="font-weight:bold">
+						Combo box change has a &quot;No data
+						validation&quot; event
+					</xp:span>
+					<xp:br></xp:br>
+					Choose:
+					<xp:comboBox id="comboBox1"
+						value="#{sessionScope.something}" defaultValue="aaa">
+						<xp:eventHandler event="onchange" submit="true"
+							refreshMode="partial" immediate="true" refreshId="bluePanel">
+							<xp:this.action><![CDATA[#{javascript: 
+var combo = getComponent('comboBox1');
+requestScope.onchangeSubmittedValue = combo.getSubmittedValue();
+requestScope.onchangeValue = combo.getValue();
+requestScope.onchangeBoundValue = sessionScope.something;
+}]]></xp:this.action>
+						</xp:eventHandler>
+						<xp:selectItem itemLabel="aaa"></xp:selectItem>
+						<xp:selectItem itemLabel="bbb"></xp:selectItem>
+						<xp:selectItem itemLabel="ccc"></xp:selectItem>
+						<xp:selectItem itemLabel="ddd"></xp:selectItem>
+					</xp:comboBox>
+
+					<xp:br></xp:br>
+					<xp:button value="Reset to aaa" id="button5">
+						<xp:eventHandler event="onclick" submit="true"
+							refreshMode="complete">
+							<xp:this.action><![CDATA[#{javascript:sessionScope.something = 'aaa';}]]></xp:this.action>
+						</xp:eventHandler>
+					</xp:button>
+					<xp:table>
+						<xp:tr>
+							<xp:td
+								style="border-color:rgb(0,128,255);border-style:double;border-width:thin">
+								onchange bound value :
+							</xp:td>
+							<xp:td
+								style="border-color:rgb(0,128,255);border-style:double;border-width:thin">
+								<xp:text escape="true"
+									id="computedField8"
+									value="#{javascript:requestScope.onchangeBoundValue}">
+								</xp:text>
+							</xp:td>
+
+							<xp:td
+								style="border-color:rgb(0,128,255);border-style:double;border-width:thin">
+								should always ramain default
+								&quot;aaa&quot;
+							</xp:td>
+						</xp:tr>
+						<xp:tr>
+							<xp:td
+								style="border-color:rgb(0,128,255);border-style:double;border-width:thin">
+								onchange value:
+							</xp:td>
+							<xp:td
+								style="border-color:rgb(0,128,255);border-style:double;border-width:thin">
+								<xp:text escape="true"
+									id="computedField6"
+									value="#{javascript:requestScope.onchangeValue}">
+								</xp:text>
+							</xp:td>
+
+							<xp:td
+								style="border-color:rgb(0,128,255);border-style:double;border-width:thin">
+								should always ramain default
+								&quot;aaa&quot;
+							</xp:td>
+						</xp:tr>
+						<xp:tr>
+							<xp:td
+								style="border-color:rgb(0,128,255);border-style:double;border-width:thin">
+								onchange submittedValue:
+							</xp:td>
+							<xp:td
+								style="border-color:rgb(0,128,255);border-style:double;border-width:thin">
+								<xp:text escape="true"
+									id="computedField5"
+									value="#{javascript:requestScope.onchangeSubmittedValue}">
+								</xp:text>
+							</xp:td>
+
+							<xp:td
+								style="border-color:rgb(0,128,255);border-style:double;border-width:thin">
+								should change depending on combo box
+								value chosen
+							</xp:td>
+						</xp:tr>
+						<xp:tr>
+							<xp:td
+								style="border-color:rgb(0,128,255);border-style:double;border-width:thin">
+								render bound value :
+							</xp:td>
+							<xp:td
+								style="border-color:rgb(0,128,255);border-style:double;border-width:thin">
+								<xp:text escape="true"
+									id="computedField7" value="#{sessionScope.something}">
+								</xp:text>
+							</xp:td>
+
+							<xp:td
+								style="border-color:rgb(0,128,255);border-style:double;border-width:thin">
+								should always ramain default
+								&quot;aaa&quot;
+							</xp:td>
+						</xp:tr>
+						<xp:tr>
+							<xp:td
+								style="border-color:rgb(0,128,255);border-style:double;border-width:thin">
+								render value:
+							</xp:td>
+							<xp:td
+								style="border-color:rgb(0,128,255);border-style:double;border-width:thin">
+								<xp:text escape="true"
+									id="computedField10"
+									value="#{javascript:getComponent('comboBox1').getValue()}">
+								</xp:text>
+							</xp:td>
+
+							<xp:td
+								style="border-color:rgb(0,128,255);border-style:double;border-width:thin">
+								should always ramain default
+								&quot;aaa&quot;
+							</xp:td>
+						</xp:tr>
+						<xp:tr>
+							<xp:td
+								style="border-color:rgb(0,128,255);border-style:double;border-width:thin">
+								render submittedValue:
+							</xp:td>
+							<xp:td
+								style="border-color:rgb(0,128,255);border-style:double;border-width:thin">
+								<xp:text escape="true"
+									id="computedField11"
+									value="#{javascript:getComponent('comboBox1').getSubmittedValue()}">
+								</xp:text>
+							</xp:td>
+
+							<xp:td
+								style="border-color:rgb(0,128,255);border-style:double;border-width:thin">
+								should change depending on combo box
+								value chosen
+							</xp:td>
+						</xp:tr>
+					</xp:table>
+				</xp:panel>
+				<xp:br></xp:br>
+				<xp:br></xp:br>
+				<xp:span
+					style="font-weight:bold;color:rgb(126,58,65)">
+					Verifys the logging of Partial Refresh and
+					Javascript errors at runtime
+				</xp:span>
+				<xp:span
+					style="font-weight:bold;color:rgb(126,58,65)">
+				</xp:span>
+				<xp:span
+					style="font-weight:bold;color:rgb(126,58,65)">
+				</xp:span>
+				<xp:br></xp:br>
+
+				Client side script associated with the button contains
+				an error:
+				<xp:br></xp:br>
+				<xp:button value="Button 1" id="button7">
+					<xp:eventHandler event="onclick" submit="false">
+						<xp:this.script><![CDATA[
+// cause a problem by invoking a function on null
+var object = null;
+object.doYourThing();
+]]></xp:this.script>
+					</xp:eventHandler>
+				</xp:button>
+				<xp:br></xp:br>
+				<xp:br></xp:br>
+				<xp:br></xp:br>
+				Client side script associated with the button contains
+				an error,
+				<xp:br></xp:br>
+				and the eventHandler has an error handler:
+				<xp:br></xp:br>
+				<xp:button value="Button 2" id="button8">
+					<xp:eventHandler event="onclick" submit="false"
+						onError="XSP.alert('Problem')">
+						<xp:this.script><![CDATA[
+// cause a problem by invoking a function on null
+var object = null;
+object.doYourThing();
+]]></xp:this.script>
+					</xp:eventHandler>
+				</xp:button>
+				<xp:br></xp:br>
+				<xp:br></xp:br>
+				<xp:br></xp:br>
+				Client side script associated with the button contains
+				an error,
+				<xp:br></xp:br>
+				and the eventHandler has an error handler, and the event
+				is partial refresh:
+				<xp:br></xp:br>
+				<xp:button value="Button 3" id="button9">
+					<xp:eventHandler event="onclick" submit="true"
+						onError="XSP.alert('Problem')" refreshMode="partial"
+						refreshId="orangeBlock">
+						<xp:this.script><![CDATA[
+// cause a problem by invoking a function on null
+var object = null;
+object.doYourThing();
+]]></xp:this.script>
+					</xp:eventHandler>
+				</xp:button>
+				<xp:br></xp:br>
+				<xp:text escape="true" id="computedField9"
+					value="#{javascript:@Now()}">
+					<xp:this.converter>
+						<xp:convertDateTime type="both"></xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+				<xp:div id="orangeBlock"
+					style="border-color:rgb(255,128,64);border-style:solid;border-width:medium">
+					<xp:text escape="true" id="computedField12"
+						value="#{javascript:@Now()}">
+						<xp:this.converter>
+							<xp:convertDateTime type="both"></xp:convertDateTime>
+						</xp:this.converter>
+					</xp:text>
+				</xp:div>
+				<xp:br></xp:br>
+				<xp:br></xp:br>
+				The eventHandler has an error handler, and the event is
+				partial refresh,
+				<xp:br></xp:br>
+				and the *refreshed* area contains a client JavaScript
+				error in an outputScript control.
+				<xp:br></xp:br>
+				<xp:button value="Button 4" id="button10">
+					<xp:eventHandler event="onclick" submit="true"
+						onError="XSP.alert('Problem')" refreshMode="partial"
+						refreshId="blueBlock">
+					</xp:eventHandler>
+				</xp:button>
+				<xp:br></xp:br>
+				<xp:text escape="true" id="computedField13"
+					value="#{javascript:@Now()}">
+					<xp:this.converter>
+						<xp:convertDateTime type="both"></xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+				<xp:div
+					style="border-color:rgb(0,128,255);border-style:solid;border-width:medium"
+					id="blueBlock">
+					<xp:text escape="true" id="computedField14"
+						value="#{javascript:@Now()}">
+						<xp:this.converter>
+							<xp:convertDateTime type="both"></xp:convertDateTime>
+						</xp:this.converter>
+					</xp:text>
+					<xp:br></xp:br>
+					<xp:scriptBlock id="scriptBlock1">
+						<xp:this.value><![CDATA[// cause a problem by invoking a function on null
+var object = null;
+object.doYourThing();]]></xp:this.value>
+						<xp:this.rendered><![CDATA[#{javascript:param['$$ajaxid']}]]></xp:this.rendered>
+					</xp:scriptBlock>
+				</xp:div>
+
+				<xp:br></xp:br>
+				<xp:br></xp:br>
+				The eventHandler has an error handler, and the event is
+				partial refresh,
+				<xp:br></xp:br>
+				and the refreshed area contains a client JavaScript
+				error in a pass through script control.
+				<xp:br></xp:br>
+				<xp:button value="Button 5" id="button11">
+					<xp:eventHandler event="onclick" submit="true"
+						onError="XSP.alert('Problem')" refreshMode="partial"
+						refreshId="greenBlock">
+					</xp:eventHandler>
+				</xp:button>
+				<xp:br></xp:br>
+				<xp:text escape="true" id="computedField15"
+					value="#{javascript:@Now()}">
+					<xp:this.converter>
+						<xp:convertDateTime type="both"></xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+				<xp:div
+					style="border-color:rgb(0,255,0);border-style:solid;border-width:medium"
+					id="greenBlock">
+					<xp:text escape="true" id="computedField16"
+						value="#{javascript:@Now()}">
+						<xp:this.converter>
+							<xp:convertDateTime type="both"></xp:convertDateTime>
+						</xp:this.converter>
+					</xp:text>
+					<xp:div>
+						<xp:this.rendered><![CDATA[#{javascript:param['$$ajaxid']}]]></xp:this.rendered>
+						<script type="text/javascript">
+							var object = null; object.doYourThing();
+						</script>
+					</xp:div>
+				</xp:div>
+
+
+
+
+
+			</xp:panel>
+		</xp:this.facets>
+	</XPa:ccLayout>
+</xp:view>

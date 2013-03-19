@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+
+	<XPa:ccLayout navPath="/other/dojoin/">
+		<xp:this.facets>
+			<xc:ccMenu_other xp:key="facetLeft"></xc:ccMenu_other>
+			<xp:panel xp:key="facetMain">
+
+
+
+				<xp:button value="New Document" id="button1">
+					<xp:eventHandler event="onclick" submit="true"
+						refreshMode="complete">
+						<xp:this.action>
+							<xp:openPage name="/dojoType.xsp"
+								target="newDocument">
+							</xp:openPage>
+						</xp:this.action>
+					</xp:eventHandler>
+				</xp:button>
+				<xp:button value="Delete Selected" id="button2">
+					<xp:eventHandler event="onclick" submit="true"
+						refreshMode="complete">
+						<xp:this.action>
+							<xp:deleteSelectedDocuments
+								view="viewPanel1">
+							</xp:deleteSelectedDocuments>
+						</xp:this.action>
+					</xp:eventHandler>
+				</xp:button>
+				<xp:br></xp:br>
+				<xp:viewPanel rows="30" id="viewPanel1"
+					pageName="/dojoType.xsp">
+					<xp:this.facets>
+						<xp:pager partialRefresh="true"
+							layout="Previous Group Next" xp:key="headerPager" id="pager1">
+						</xp:pager>
+					</xp:this.facets>
+					<xp:this.data>
+						<xp:dominoView var="view1"
+							viewName="xspDojoType">
+						</xp:dominoView>
+					</xp:this.data>
+					<xp:viewColumn id="viewColumn4"
+						value="#{javascript:return null}" showCheckbox="true"
+						displayAs="hidden">
+						<xp:this.facets>
+							<xp:viewColumnHeader xp:key="header"
+								id="viewColumnHeader4">
+							</xp:viewColumnHeader>
+						</xp:this.facets>
+					</xp:viewColumn>
+					<xp:viewColumn columnName="$124" id="viewColumn1">
+						<xp:viewColumnHeader value="Date"
+							id="viewColumnHeader1">
+						</xp:viewColumnHeader>
+					</xp:viewColumn>
+					<xp:viewColumn columnName="dojoTypeSubject"
+						id="viewColumn2" displayAs="link" openDocAsReadonly="true">
+						<xp:viewColumnHeader value="subject"
+							id="viewColumnHeader2">
+						</xp:viewColumnHeader>
+					</xp:viewColumn>
+
+
+
+
+				</xp:viewPanel>
+
+
+
+
+
+			</xp:panel>
+		</xp:this.facets>
+	</XPa:ccLayout>
+</xp:view>

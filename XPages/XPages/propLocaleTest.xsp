@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+	<XPa:ccLayout id="cc4cclayout" navPath="/other/locale/">
+		<xp:this.facets>
+			<xc:ccMenu_other xp:key="facetLeft"></xc:ccMenu_other>
+			<xp:panel xp:key="facetMain">
+
+				<xp:span style="font-weight:bold">
+					This page shows how to programmatically force the
+					Locale
+				</xp:span>
+				<xp:br></xp:br>
+				<xp:label value="Select a locale: " id="label1"></xp:label>
+				<xp:comboBox id="comboBoxChangeLocale"
+					value="#{sessionScope.lc1}">
+					<xp:selectItem itemLabel="default" itemValue=""></xp:selectItem>
+					<xp:selectItems>
+						<xp:this.value><![CDATA[${javascript:context.getLocale().getAvailableLocales().sort()}]]></xp:this.value>
+					</xp:selectItems>
+					<xp:eventHandler event="onchange" submit="true"
+						refreshMode="complete">
+						<xp:this.action><![CDATA[#{javascript:var lc1 = sessionScope.lc1;
+var lng = @If(@Contains(lc1,"_"),@Left(lc1,"_"),"");
+var cty = @If(@Contains(lc1,"_"),@Right(lc1,"_"),"");
+@If(
+@Contains(lc1,"_"), 
+context.setLocale(new Locale(lng, cty)) , 
+context.setLocaleString(lc1))
+context.reloadPage()}]]></xp:this.action>
+					</xp:eventHandler>
+				</xp:comboBox>
+				<xp:button value="Reset Locale" id="button3">
+					<xp:eventHandler event="onclick" submit="true"
+						refreshMode="complete">
+						<xp:this.action><![CDATA[#{javascript:context.setLocaleString("")
+context.reloadPage()}]]></xp:this.action>
+					</xp:eventHandler>
+				</xp:button>
+
+				<xp:table>
+					<xp:tr>
+						<xp:td>
+							<xp:label value="Current locale: "
+								id="label2">
+							</xp:label>
+						</xp:td>
+						<xp:td
+							style="background-color:rgb(248,254,233)">
+							<xp:text escape="true" id="computedField1"
+								value="#{javascript:context.getLocaleString()}">
+							</xp:text>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							<xp:label value="ViewRoot Locale: "
+								id="label3">
+							</xp:label>
+						</xp:td>
+						<xp:td
+							style="background-color:rgb(248,254,233)">
+							<xp:text escape="true" id="computedField2"
+								value="#{javascript:facesContext.getViewRoot().getLocale().toString()}">
+							</xp:text>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>context.getLocale()</xp:td>
+						<xp:td
+							style="background-color:rgb(248,254,233)">
+							<xp:label
+								value="#{javascript:context.getLocale()}" id="label4">
+							</xp:label>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>context.getLocale().getCountry()</xp:td>
+						<xp:td
+							style="background-color:rgb(248,254,233)">
+							<xp:label
+								value="#{javascript:context.getLocale().getCountry()}"
+								id="label5">
+							</xp:label>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							context.getLocale().getDisplayCountry()
+						</xp:td>
+						<xp:td
+							style="background-color:rgb(248,254,233)">
+							<xp:label
+								value="#{javascript:context.getLocale().getDisplayCountry()}"
+								id="label6">
+							</xp:label>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							context.getLocale().getDisplayLanguage()
+						</xp:td>
+						<xp:td
+							style="background-color:rgb(248,254,233)">
+							<xp:label
+								value="#{javascript:context.getLocale().getDisplayLanguage()}"
+								id="label7">
+							</xp:label>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							context.getLocale().getDisplayName()
+						</xp:td>
+						<xp:td
+							style="background-color:rgb(248,254,233)">
+							<xp:label
+								value="#{javascript:context.getLocale().getDisplayName()}"
+								id="label8">
+							</xp:label>
+						</xp:td>
+					</xp:tr>
+
+					<xp:tr>
+						<xp:td>
+							context.getLocale().getISO3Country()
+						</xp:td>
+						<xp:td
+							style="background-color:rgb(248,254,233)">
+							<xp:label
+								value="#{javascript:context.getLocale().getISO3Country()}"
+								id="label10">
+							</xp:label>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							context.getLocale().getISO3Language()
+						</xp:td>
+						<xp:td
+							style="background-color:rgb(248,254,233)">
+							<xp:label
+								value="#{javascript:context.getLocale().getISO3Language()}"
+								id="label11">
+							</xp:label>
+						</xp:td>
+					</xp:tr>
+
+
+					<xp:tr>
+						<xp:td>context.getLocale().getLanguage()</xp:td>
+						<xp:td
+							style="background-color:rgb(248,254,233)">
+							<xp:label
+								value="#{javascript:context.getLocale().getLanguage()}"
+								id="label14">
+							</xp:label>
+						</xp:td>
+					</xp:tr>
+				</xp:table>
+
+
+				<xp:br></xp:br>
+
+
+
+
+
+
+			</xp:panel>
+		</xp:this.facets>
+	</XPa:ccLayout>
+</xp:view>

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+	<xp:br></xp:br>
+	
+	<xp:this.resources>
+
+
+
+		<xp:styleSheet
+			rendered="#{javascript:context.getUserAgent().isIE(0, 6) == true}"
+			href="/iehacks.css"></xp:styleSheet>
+		<xp:styleSheet href="/csscustom.css"></xp:styleSheet>
+		<xp:styleSheet href="/1UIclasses.css"></xp:styleSheet>
+	</xp:this.resources>
+
+
+					<xp:label id="label1" value="Resolved SPRs" style="padding-left:5px;font-weight:bold"></xp:label>
+					<xp:panel>
+						<xp:panel id="panelSPRs">
+							<xp:link escape="true" text="SPR List:" id="linkmnSPRs"
+								styleClass="lotusIndent10">
+								<xp:eventHandler event="onclick" submit="true"
+									refreshMode="partial" refreshId="panel4SPRs">
+									<xp:this.action>
+										<xp:setValue binding="#{sessionScope.sprs1}">
+											<xp:this.value><![CDATA[#{javascript:var zoo = sessionScope.sprs1;
+if (zoo =="on"){"off"
+}
+else{"on"
+}}]]></xp:this.value>
+										</xp:setValue>
+									</xp:this.action>
+								</xp:eventHandler>
+							</xp:link>
+							<xp:panel id="panel4SPRs">
+								<xp:panel>
+									<xp:this.rendered><![CDATA[#{javascript:sessionScope.sprs1 == "on"}]]></xp:this.rendered>
+									<xp:link escape="true"
+										text="CDUT7JQLYL" id="link4" styleClass="lotusIndent15"
+										value="/sprCDUT7JQLYLstringRegexMethod.xsp">
+									</xp:link>
+									<xp:br/>
+									<xp:link escape="true" text="CDUT7L9K5Y" id="link1"
+										styleClass="lotusIndent15" value="/sprCDUT7L9K5YarrayConcat.xsp">
+									</xp:link>
+									<xp:br/>
+									<xp:link escape="true" text="CDUT7QAMKE" id="link2"
+										styleClass="lotusIndent15" value="/sprCDUT7QAMKEprototypeAttributeFunction.xsp">
+									</xp:link>
+									<xp:br/>
+									<xp:link escape="true" id="link3"
+										styleClass="lotusIndent15"
+										value="/sprCDUT7QSKC7jsGlobalValueOpen.xsp"
+										text="CDUT7QSKC7">
+									</xp:link>
+									<xp:br/>
+									<xp:link escape="true" text="JHAM7K6FX8" id="link5"
+										styleClass="lotusIndent15" value="/sprJHAM7K6FX8atClientType.xsp">
+									</xp:link>
+									<xp:br/>
+									<xp:link escape="true" text="JHAM7QAMHP" id="link6"
+										styleClass="lotusIndent15" value="/sprJHAM7QAMHPfunctionUsedBeforeDeclared.xsp">
+									</xp:link>
+									<xp:br/>
+									<xp:link escape="true" text="JPKR7N2L2V" id="link7"
+										styleClass="lotusIndent15" value="/sprJPKR7N2L2VapplicationScopeJSlibrary.xsp">
+									</xp:link>
+									<xp:br/>
+									<xp:link escape="true" text="MKEE7UGF2M (binding)" id="link8"
+										styleClass="lotusIndent15" value="/sprMKEE7UGF2MjsRootControlBinding.xsp">
+									</xp:link>
+									<xp:br/>
+									<xp:link escape="true" text="MKEE7UGF2M (loaded)" id="link9"
+										styleClass="lotusIndent15" value="/sprMKEE7UGF2MjsRootControlLoaded.xsp">
+									</xp:link>
+									<xp:br/>
+									<xp:link escape="true"
+										text="PHAN7JZJC9" id="link10" styleClass="lotusIndent15"
+										value="/sprPHAN7JZJC9jsMIMEConversion.xsp">
+									</xp:link>
+									<xp:br/>
+									<xp:link escape="true"
+										text="PHAN7QHG3K" id="link11" styleClass="lotusIndent15"
+										value="/sprPHAN7QHG3KPrichTextItemPg2.xsp">
+									</xp:link>
+									<xp:br/>
+									<xp:link escape="true" text="PHAN7QPRJ7" id="link12"
+										styleClass="lotusIndent15" value="/sprPHAN7QPRJ7getItemValue.xsp">
+									</xp:link>
+									<xp:br/>
+									<xp:link escape="true" text="PHAN7QVSMP" id="link13"
+										styleClass="lotusIndent15" value="/sprPHAN7QVSMPjsDocModeOpen.xsp">
+									</xp:link>
+									<xp:br/>
+									<xp:link escape="true" text="PHAN7RABCH" id="link14"
+										styleClass="lotusIndent15" value="/sprPHAN7RABCHrequestScopeJSlibrary.xsp">
+									</xp:link>
+									<xp:br/>
+									<xp:link escape="true" text="PHAN7TDRYK" id="link15"
+										styleClass="lotusIndent15" value="/sprPHAN7TDRYKcallingJavaClassesfromJS.xsp">
+									</xp:link>
+									<xp:br/>
+									<xp:link escape="true" text="PHAN7TJL6G" id="link16"
+										styleClass="lotusIndent15" value="/sprPHAN7TJL6GvisibilityParaminCC.xsp">
+									</xp:link>
+									<xp:br/>
+									<xp:link escape="true" text="PHAN7TRGQV" id="link17"
+										styleClass="lotusIndent15" value="/sprPHAN7TRGQVjsGetDocument.xsp">
+									</xp:link>
+									<xp:br/>
+									<xp:link escape="true" text="PHAN7VFLEL" id="link18"
+										styleClass="lotusIndent15" value="/sprPHAN7VFLELjsConcat.xsp">
+									</xp:link>
+									<xp:br/>
+									<xp:link escape="true" text="PHAN7VJKAL" id="link19"
+										styleClass="lotusIndent15" value="/sprPHAN7VJKALjsEventsWithLocale.xsp">
+									</xp:link>
+									<xp:br/>
+									<xp:link escape="true" text="PRID7JANWC"
+										id="link20" styleClass="lotusIndent15"
+										value="/sprPRID7JANWCjsChrome.xsp">
+									</xp:link>
+									<xp:br/>
+									<xp:link escape="true" text="PRID7N45C8"
+										id="link21" styleClass="lotusIndent15"
+										value="/sprPRID7N45C8jsUrl.xsp">
+									</xp:link>
+									<xp:br/>
+									<xp:link escape="true" text="RPEN7STUA7"
+										id="link22" styleClass="lotusIndent15"
+										value="/sprRPEN7STUA7jsRedirect.xsp">
+									</xp:link>
+									<xp:br/>
+									<xp:link escape="true" text="SCAE7QWFN2"
+										id="link23" styleClass="lotusIndent15"
+										value="/sprSCAE7QWFN2jsRegExpress.xsp">
+									</xp:link>
+									<xp:br/>
+									<xp:link escape="true" text="SODY7SUGMB"
+										id="link24" styleClass="lotusIndent15"
+										value="/sprSODY7SUGMBjsExceptionVariable.xsp">
+									</xp:link>
+									<xp:br/>
+									<xp:link escape="true" text="TGUZ7HSSZG"
+										id="link25" styleClass="lotusIndent15"
+										value="/sprTGUZ7HSSZGjsAgentDocumentContext.xsp">
+									</xp:link>
+									<xp:br/>
+									<xp:link escape="true" text="TGUZ7NV5B8"
+										id="link26" styleClass="lotusIndent15"
+										value="/sprTGUZ7NV5B8jsUnitialisedJSLib.xsp">
+									</xp:link>
+									<xp:br/>
+									<xp:link escape="true" text="TGUZ7SMJR6"
+										id="link27" styleClass="lotusIndent15"
+										value="/sprTGUZ7SMJR6jsOperator.xsp">
+									</xp:link>
+									<xp:br/>
+									<xp:link escape="true" text="TGUZ7SMS8Z"
+										id="link28" styleClass="lotusIndent15"
+										value="/sprTGUZ7SMS8ZjsDirectoryUser.xsp">
+									</xp:link>
+									<xp:br/>
+									<xp:link escape="true" text="SPR id" id="link29"
+										styleClass="lotusIndent15" >
+									</xp:link>
+									<xp:br/>
+									<xp:link escape="true" text="SPR id" id="link30"
+										styleClass="lotusIndent15" >
+									</xp:link>
+									<xp:br/>
+									<xp:link escape="true" text="SPR id" id="link31"
+										styleClass="lotusIndent15" >
+									</xp:link>
+									<xp:br/>
+									<xp:link escape="true" text="SPR id" id="link32"
+										styleClass="lotusIndent15" >
+									</xp:link>
+									<xp:br/>
+
+
+
+								</xp:panel>
+							</xp:panel>
+						</xp:panel>
+					</xp:panel>
+	
+
+</xp:view>

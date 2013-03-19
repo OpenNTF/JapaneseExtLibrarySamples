@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+	<XPa:ccLayout id="cc4cclayout" navPath="/events/atfb/">
+		<xp:this.facets>
+			<xc:ccMenu_events xp:key="facetLeft"></xc:ccMenu_events>
+			<xp:panel xp:key="facetMain">
+				<xp:panel>
+					<xp:label id="label1" value="@B*: "
+						style="font-weight:bold;font-size:12pt">
+					</xp:label>
+					<xp:comboBox id="comboBoxAtFuncsB"
+						value="#{sessionScope.atFuncsBs}" defaultValue="None">
+						<xp:selectItem itemLabel="None"
+							itemValue="None">
+						</xp:selectItem>
+						<xp:selectItem itemLabel="@Begin()"
+							itemValue="atFB01">
+						</xp:selectItem>
+
+						<xp:eventHandler event="onchange" submit="true"
+							refreshMode="complete">
+							<xp:this.action>
+								<![CDATA[#{javascript:print("")}]]>
+							</xp:this.action>
+						</xp:eventHandler>
+					</xp:comboBox>
+					<xp:panel>
+						<xp:panel>
+							<xp:this.rendered>
+								<![CDATA[#{javascript:sessionScope.atFuncsBs == "atFB01"}]]>
+							</xp:this.rendered>
+							<xp:table styleClass="customTable">
+								<xp:tr>
+									<xp:td>
+										<xp:label value="@Function: "
+											id="label2">
+										</xp:label>
+									</xp:td>
+									<xp:td>
+										@Begins(value:string,
+										subString:string) : int
+									</xp:td>
+								</xp:tr>
+								<xp:tr>
+									<xp:td>
+										<xp:label value="Description: "
+											id="label3">
+										</xp:label>
+									</xp:td>
+									<xp:td>
+										Determines whether a string
+										begins with a substring.
+									</xp:td>
+								</xp:tr>
+							</xp:table>
+
+
+						</xp:panel>
+
+
+
+
+
+
+
+					</xp:panel>
+				</xp:panel>
+			</xp:panel>
+
+		</xp:this.facets>
+	</XPa:ccLayout>
+
+
+
+</xp:view>

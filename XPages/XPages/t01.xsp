@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xc="http://www.ibm.com/xsp/custom">
+	<xp:this.resources>
+		<xp:styleSheet href="/1UIclasses.css"></xp:styleSheet>
+	</xp:this.resources>
+
+	<xp:div id="pComboBox">
+		<xp:table>
+			<xp:tr>
+				<xp:td>
+					<xp:label value="Country:" id="label1"></xp:label>
+				</xp:td>
+				<xp:td>
+					<xp:comboBox id="comboBoxCountry1" value="#{requestScope.r01}">
+						<xp:selectItem itemLabel="Select a country"></xp:selectItem>
+						<xp:selectItems>
+							<xp:this.value><![CDATA[${javascript:@Unique(@DbColumn(@DbName(),"xspCountryCityView",1))}]]></xp:this.value>
+						</xp:selectItems>
+
+						<xp:eventHandler event="onchange" submit="true"
+							refreshMode="partial" refreshId="comboBoxCity1">
+						</xp:eventHandler>
+					</xp:comboBox>
+				</xp:td>
+			</xp:tr>
+			<xp:tr>
+				<xp:td>
+					<xp:label value="City:" id="label2"></xp:label>
+				</xp:td>
+				<xp:td>
+					<xp:comboBox id="comboBoxCity1" value="#{requestScope.r02}">
+						<xp:selectItem itemLabel="Select a City"></xp:selectItem>
+						<xp:selectItems>
+							<xp:this.value><![CDATA[#{javascript:var ctry = getComponent("comboBoxCountry1").getValue();
+@DbLookup(@DbName(),"xspCountryCityView",ctry,2)}]]></xp:this.value>
+						</xp:selectItems>
+						<xp:eventHandler event="onchange" submit="true"
+							refreshMode="partial" refreshId="computedFieldCityFacts1">
+						</xp:eventHandler>
+					</xp:comboBox>
+				</xp:td>
+			</xp:tr>
+		</xp:table>
+
+
+
+
+		<xp:text escape="true" id="computedFieldCityFacts1">
+			<xp:this.value><![CDATA[#{javascript:var city = getComponent("comboBoxCity1").getValue();
+@DbLookup(@DbName(),"xspCountryCity02",city,"textCityFacts")
+}]]></xp:this.value>
+		</xp:text>
+	</xp:div>
+	<xp:br></xp:br>
+
+
+	<xp:button value="Label" id="button1">
+		<xp:eventHandler event="onclick" submit="true"
+			refreshMode="complete">
+			<xp:this.action><![CDATA[#{javascript:database.createFTIndex()}]]></xp:this.action>
+		</xp:eventHandler></xp:button>
+	<xp:viewPanel rows="15" id="viewPanel1" var="vp01">
+		<xp:this.facets>
+			<xp:pager partialRefresh="true" layout="Previous Group Next"
+				xp:key="headerPager" id="pager1">
+			</xp:pager>
+		</xp:this.facets>
+		<xp:this.data>
+			<xp:dominoView var="xspCountryCityView03" viewName="xspCountryCityView03"
+				expandLevel="1">
+			</xp:dominoView>
+		</xp:this.data>
+		<xp:viewColumn columnName="Country" id="viewColumn1">
+			<xp:viewColumnHeader value="Country" id="viewColumnHeader1">
+			</xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="City" id="viewColumn2">
+			<xp:viewColumnHeader value="City" id="viewColumnHeader2"></xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn id="viewColumn3" value="" rendered="false">
+			<xp:this.facets>
+				<xp:viewColumnHeader xp:key="header" id="viewColumnHeader3">
+				</xp:viewColumnHeader>
+			</xp:this.facets>
+			<xp:text escape="false" id="computedField1">
+				<xp:this.value><![CDATA[#{javascript:var doc = vp01.getDocument();
+doc.getItemValue("CityFacts")}]]></xp:this.value>
+			</xp:text>
+		</xp:viewColumn>
+		<xp:viewColumn id="viewColumn4" value="">
+			<xp:this.facets>
+				<xp:viewColumnHeader xp:key="header" id="viewColumnHeader4">
+				</xp:viewColumnHeader>
+			</xp:this.facets>
+			<xp:panel>
+				<xp:this.data>
+					<xp:dominoDocument var="document1" formName="xspCountryCity"
+						action="openDocument" documentId="#{javascript:vp01.getNoteID()}">
+					</xp:dominoDocument>
+				</xp:this.data>
+				<xp:inputRichText id="inputRichText1" value="#{document1.CityFacts}"
+					readonly="true">
+				</xp:inputRichText>
+			</xp:panel>
+		</xp:viewColumn>
+	</xp:viewPanel>
+</xp:view>

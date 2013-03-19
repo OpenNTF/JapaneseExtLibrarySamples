@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+	<xp:this.data>
+		<xp:dominoDocument var="dominoDocument1"
+			formName="xspViewPanel">
+			<xp:this.postNewDocument>
+				<xp:actionGroup>
+					<xp:setValue binding="#{dominoDocument1.From}"
+						value="#{javascript:@UserName()}">
+					</xp:setValue>
+					<xp:setValue
+						binding="#{dominoDocument1.dateTimeCreated}"
+						value="#{javascript:@Now()}">
+					</xp:setValue>
+				</xp:actionGroup>
+			</xp:this.postNewDocument>
+		</xp:dominoDocument>
+	</xp:this.data>
+
+
+	<XPa:ccLayout id="cc4cclayout"  navPath="/basics/viewpanel/">
+		<xp:this.facets>
+			<xc:ccMenu_basics xp:key="facetLeft"></xc:ccMenu_basics>
+			<xp:panel xp:key="facetMain" id="panel4facetmain">
+				<xp:panel id="panel4buttons">
+					<xp:button value="Save" id="buttonViewPanelSave">
+						<xp:eventHandler event="onclick" submit="true"
+							refreshMode="complete">
+							<xp:this.action>
+								<xp:save
+									name="/ctrlsContainerViewPanel.xsp">
+								</xp:save>
+							</xp:this.action>
+						</xp:eventHandler>
+					</xp:button>
+					<xp:button value="New"
+						id="buttonViewPanelNewDocument">
+						<xp:eventHandler event="onclick" submit="true"
+							refreshMode="complete">
+							<xp:this.action>
+								<xp:openPage
+									name="/ctrlsContainerViewPanel.xsp" target="newDocument">
+								</xp:openPage>
+							</xp:this.action>
+						</xp:eventHandler>
+					</xp:button>
+					<xp:button value="Delete Selected"
+						id="buttonViewPanelDelete">
+						<xp:eventHandler event="onclick" submit="true"
+							refreshMode="complete">
+							<xp:this.action>
+								<xp:deleteSelectedDocuments
+									view="viewPanel1"
+									message="This action will delete the selected documents in the view panel.">
+								</xp:deleteSelectedDocuments>
+							</xp:this.action>
+						</xp:eventHandler>
+					</xp:button>
+				</xp:panel>
+				<xp:panel id="panel4input">
+					<xp:table styleClass="customTable">
+						<xp:tr>
+							<xp:td>
+								<xp:label value="Subject: "
+									id="label1">
+								</xp:label>
+							</xp:td>
+							<xp:td>
+								<xp:inputText
+									id="inputTextViewPanelSubject"
+									value="#{dominoDocument1.Subject}">
+								</xp:inputText>
+							</xp:td>
+						</xp:tr>
+						<xp:tr>
+							<xp:td>
+								<xp:label value="Category: "
+									id="label2">
+								</xp:label>
+							</xp:td>
+							<xp:td>
+								<xp:inputText
+									id="inputTextViewPanelCategory"
+									value="#{dominoDocument1.Categories}">
+								</xp:inputText>
+							</xp:td>
+						</xp:tr>
+						<xp:tr>
+							<xp:td>
+								<xp:label value="Apples: "
+									id="label3">
+								</xp:label>
+							</xp:td>
+							<xp:td>
+								<xp:checkBox
+									id="checkBoxViewPanelCheckBox"
+									value="#{dominoDocument1.testCheckBox}"
+									checkedValue="Include Apples" uncheckedValue="No Apples">
+								</xp:checkBox>
+							</xp:td>
+						</xp:tr>
+					</xp:table>
+				</xp:panel>
+				<xp:panel id="panel4viwpanel">
+
+					<xp:viewPanel rows="4" id="viewPanel1"
+						pageName="/ctrlsContainerViewPanel.xsp" cellpadding="2"
+						cellspacing="2" viewStyle="width:100%">
+						<xp:this.facets>
+							<xp:pager xp:key="header"
+								id="pager4ViewPanelTestHeader">
+								<xp:pagerControl type="separator"
+									value="Page:" />
+								<xp:pagerControl type="status"
+									value="{0}" />
+								<xp:pagerControl type="separator" />
+								<xp:pagerControl type="first" />
+								<xp:pagerControl type="separator" />
+								<xp:pagerControl type="previous" />
+								<xp:pagerControl type="separator" />
+								<xp:pagerControl type="group" />
+								<xp:pagerControl type="separator" />
+								<xp:pagerControl type="next" />
+								<xp:pagerControl type="separator" />
+								<xp:pagerControl type="last" />
+							</xp:pager>
+							<xp:pager xp:key="footer"
+								id="pager4ViewPanelTestFooter">
+								<xp:pagerControl type="separator"
+									value="Page:" />
+								<xp:pagerControl type="status"
+									value="{0}" />
+								<xp:pagerControl type="separator" />
+								<xp:pagerControl type="first" />
+								<xp:pagerControl type="separator" />
+								<xp:pagerControl type="previous" />
+								<xp:pagerControl type="separator" />
+								<xp:pagerControl type="group" />
+								<xp:pagerControl type="separator" />
+								<xp:pagerControl type="next" />
+								<xp:pagerControl type="separator" />
+								<xp:pagerControl type="last" />
+							</xp:pager>
+
+
+
+							<xp:viewTitle xp:key="viewTitle"
+								id="viewTitle1" value="View Panel Container">
+							</xp:viewTitle>
+
+						</xp:this.facets>
+
+
+						<xp:this.data>
+							<xp:dominoView var="xspViewPanelView"
+								viewName="xspViewPanelView">
+							</xp:dominoView>
+						</xp:this.data>
+						<xp:viewColumn id="viewColumn1"
+							columnName="Subject" showCheckbox="true" displayAs="link"
+							openDocAsReadonly="true">
+							<xp:viewColumnHeader id="viewColumnHeader1"
+								value="Subject">
+							</xp:viewColumnHeader>
+						</xp:viewColumn>
+						<xp:viewColumn id="viewColumn2"
+							columnName="Category">
+							<xp:viewColumnHeader id="viewColumnHeader2"
+								value="Category">
+							</xp:viewColumnHeader>
+						</xp:viewColumn>
+					</xp:viewPanel>
+				</xp:panel>
+			</xp:panel>
+		</xp:this.facets>
+	</XPa:ccLayout>
+</xp:view>

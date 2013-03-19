@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:XPa="component/XPages.nsf">
+
+	<XPa:ccLayout id="cc4cclayout">
+		<xp:this.facets>
+			<xp:panel xp:key="facetMain">
+
+				<script type="text/javascript">
+					function runScript( id )
+					{
+					var scriptText = document.getElementById(id).value;
+					eval( scriptText );
+					}
+</script>
+
+				<table>
+					<tr>
+						<td>
+							<textarea rows="4" cols="80" id="scriptInput1">
+								myWindow=window.open("","","width=200,height=100");
+								myWindow.document.write("This is 'myWindow'");
+			</textarea>
+						</td>
+						<td>
+							<input type="button" value="run" onclick="runScript('scriptInput1')" />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<textarea rows="4" cols="80" id="scriptInput2">myWindow.close();
+							</textarea>
+						</td>
+						<td>
+							<input type="button" value="run" onclick="runScript('scriptInput2')" />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<textarea rows="4" cols="80" id="scriptInput3">
+								window.open("xpCloseWindow.xsp", "_blank");
+			</textarea>
+						</td>
+						<td>
+							<input type="button" value="run" onclick="runScript('scriptInput3')" />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<textarea rows="4" cols="80" id="scriptInput4">
+								window.open("http://www.ibm.com", "_blank");
+			</textarea>
+						</td>
+						<td>
+							<input type="button" value="run" onclick="runScript('scriptInput4')" />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<textarea rows="4" cols="80" id="scriptInput5">
+								window.open("notes:///test.nsf/test.xsp?OpenXPage", "_blank");
+			</textarea>
+						</td>
+						<td>
+							<input type="button" value="run" onclick="runScript('scriptInput5')" />
+						</td>
+					</tr>
+				</table>
+
+
+
+
+
+
+			</xp:panel>
+		</xp:this.facets>
+	</XPa:ccLayout>
+</xp:view>

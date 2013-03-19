@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+
+	<XPa:ccLayout id="cc4cclayout" navPath="/other/rteview/">
+		<xp:this.facets>
+			<xc:ccMenu_other xp:key="facetLeft"></xc:ccMenu_other>
+			<xp:panel xp:key="facetMain">
+				<xp:viewPanel rows="10" id="viewPanel1" var="vp01">
+					<xp:this.facets>
+						<xp:pager partialRefresh="true"
+							layout="Previous Group Next" xp:key="headerPager" id="pager1">
+						</xp:pager>
+					</xp:this.facets>
+					<xp:this.data>
+						<xp:dominoView var="xspCountryCityView03"
+							viewName="xspCountryCityView03" expandLevel="1">
+						</xp:dominoView>
+					</xp:this.data>
+					<xp:viewColumn columnName="Country"
+						id="viewColumn1">
+						<xp:viewColumnHeader value="Country"
+							id="viewColumnHeader1">
+						</xp:viewColumnHeader>
+					</xp:viewColumn>
+					<xp:viewColumn columnName="City" id="viewColumn2">
+						<xp:viewColumnHeader value="City"
+							id="viewColumnHeader2">
+						</xp:viewColumnHeader>
+					</xp:viewColumn>
+					<xp:viewColumn id="viewColumn3" value=""
+						rendered="false">
+						<xp:this.facets>
+							<xp:viewColumnHeader xp:key="header"
+								id="viewColumnHeader3">
+							</xp:viewColumnHeader>
+						</xp:this.facets>
+						<xp:text escape="false" id="computedField1">
+							<xp:this.value><![CDATA[#{javascript:var doc = vp01.getDocument();
+doc.getItemValue("CityFacts")}]]></xp:this.value>
+						</xp:text>
+					</xp:viewColumn>
+					<xp:viewColumn id="viewColumn4" value="">
+						<xp:this.facets>
+							<xp:viewColumnHeader xp:key="header"
+								id="viewColumnHeader4">
+							</xp:viewColumnHeader>
+						</xp:this.facets>
+						<xp:panel>
+							<xp:this.data>
+								<xp:dominoDocument var="document1"
+									formName="xspCountryCity" action="openDocument"
+									documentId="#{javascript:vp01.getNoteID()}">
+								</xp:dominoDocument>
+							</xp:this.data>
+							<xp:inputRichText id="inputRichText1"
+								value="#{document1.CityFacts}" readonly="true">
+							</xp:inputRichText>
+						</xp:panel>
+					</xp:viewColumn>
+				</xp:viewPanel>
+			</xp:panel>
+		</xp:this.facets>
+	</XPa:ccLayout>
+</xp:view>

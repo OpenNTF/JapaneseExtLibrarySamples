@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" replicaid="85257A870079CB8F" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="5fe" sequence="134" unid="CD3BF74C3254FC78802573DB003E4C52">
+<created><datetime dst="true">20080125T122027,70+01</datetime></created>
+<modified><datetime>20130319T214348,49+09</datetime></modified>
+<revised><datetime>20130319T214348,48+09</datetime></revised>
+<lastaccessed><datetime>20130319T214348,49+09</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20120928T180620,44-04</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=Admin/O=LotusLab</name></updatedby>
+<revisions><datetime dst="true">20110331T101059,18+01</datetime><datetime dst="true">20121210T114933,32+01</datetime><datetime dst="true">20121210T114934,04+01</datetime><datetime dst="true">20121210T115043,49+01</datetime><datetime dst="true">20121210T115044,06+01</datetime><datetime dst="true">20121210T115044,09+01</datetime><datetime dst="true">20121210T121249,12+01</datetime><datetime dst="true">20121210T121249,76+01</datetime><datetime dst="true">20121210T121410,56+01</datetime></revisions>
+<wassignedby><name>CN=Admin/O=LotusLab</name></wassignedby>
+<item name="$TITLE"><text>ctrlsCoreEditBox.xsp</text></item>
+
+<item name="$Flags"><text>gK4</text></item>
+
+
+<item name="$FileNames" sign="true"><text>ctrlsCoreEditBox.xsp</text></item>
+<item name="$DesignerVersion"><text>8.5</text></item>
+
+
+
+</note>

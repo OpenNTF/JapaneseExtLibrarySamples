@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+
+	<xp:this.resources>
+		<xp:styleSheet href="/csscustom.css"></xp:styleSheet>
+	</xp:this.resources>
+	<xc:ccWidget id="cc4ccwidget">
+		<xp:this.facets>
+			<xp:panel xp:key="facet_1">
+
+				<xp:table style="font-size:8pt">
+					<xp:tr>
+						<xp:td>Publish a string:</xp:td>
+						<xp:td>
+							<xp:button value="String" id="button1" styleClass="customButton">
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="complete" id="eventHandler1">
+									<xp:this.script>
+										<xp:publishValue name="pub01"
+											type="string">
+											<xp:this.value><![CDATA[#{javascript:"Test String | "+@UpperCase(@Left(@Unique(),5))}]]></xp:this.value>
+										</xp:publishValue>
+									</xp:this.script>
+								</xp:eventHandler>
+							</xp:button>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>Publish a boolean:</xp:td>
+						<xp:td>
+							<xp:radio text="True" id="radioON"
+								groupName="rg" value="#{viewScope.t0001}"
+								selectedValue="true">
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="complete">
+									<xp:this.script>
+										<xp:publishValue
+											name="pub02Boolean" type="boolean">
+											<xp:this.value><![CDATA[#{javascript:getComponent("radioOn")}]]></xp:this.value>
+										</xp:publishValue>
+									</xp:this.script>
+								</xp:eventHandler>
+							</xp:radio>
+							<xp:radio text="False" id="radioOFF"
+								groupName="rg" value="#{viewScope.f0001}"
+								selectedValue="false">
+
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="complete">
+									<xp:this.script>
+										<xp:publishValue
+											name="pub02Boolean" type="boolean">
+											<xp:this.value><![CDATA[#{javascript:""}]]></xp:this.value>
+										</xp:publishValue>
+									</xp:this.script>
+								</xp:eventHandler>
+							</xp:radio>
+
+
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>Publish a number:</xp:td>
+						<xp:td>
+							<xp:button value="Number" id="button2" styleClass="customButton">
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="complete">
+									<xp:this.script>
+										<xp:publishValue type="number"
+											name="pub03Number"
+											value="#{javascript:@Right(@Random(),3)}">
+										</xp:publishValue>
+									</xp:this.script>
+								</xp:eventHandler>
+							</xp:button>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>Publish JSON:</xp:td>
+						<xp:td>
+
+							<xp:button value="JSON" id="button3" styleClass="customButton">
+
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="complete">
+									<xp:this.script>
+										<xp:publishValue
+											name="pub04JSON" type="json">
+
+
+											<xp:this.value><![CDATA[{"testValue":"TEST STRING"}]]></xp:this.value>
+										</xp:publishValue>
+									</xp:this.script>
+								</xp:eventHandler>
+							</xp:button>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+				</xp:table>
+			</xp:panel>
+		</xp:this.facets>
+	</xc:ccWidget>
+</xp:view>

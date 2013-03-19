@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+
+	<XPa:ccLayout id="cc4cclayout" navPath="/views/ftsearch/">
+		<xp:this.facets>
+			<xc:ccMenu_views xp:key="facetLeft"></xc:ccMenu_views>
+			<xp:panel xp:key="facetMain">
+				<xp:panel id="searchQueryPanel">
+					<xp:panel id="dbnotindexed"
+						rendered="#{javascript:!database.isFTIndexed()}">
+						<xp:button value="Index DB for Full Text Search"
+							id="buttonCreateIndex">
+							<xp:eventHandler event="onclick"
+								submit="true" refreshMode="complete">
+								<xp:this.action><![CDATA[#{javascript:database.createFTIndex(1,true)}]]></xp:this.action>
+							</xp:eventHandler>
+						</xp:button>
+					</xp:panel>
+					<xp:panel id="dbindexed"
+						rendered="#{javascript:database.isFTIndexed()}">
+						<xp:inputText id="inputTextSearchQuery"
+							value="#{viewScope.fts1}">
+						</xp:inputText>
+						<xp:button value="Search" id="button1">
+							<xp:eventHandler event="onclick"
+								submit="true" refreshMode="complete">
+							</xp:eventHandler>
+						</xp:button>
+						<xp:button id="button2" value="Clear Results">
+							<xp:this.rendered><![CDATA[#{javascript:!viewScope.fts1 ==""}]]></xp:this.rendered>
+							<xp:eventHandler event="onclick"
+								submit="true" refreshMode="partial"
+								refreshId="searchQueryView">
+								<xp:this.action><![CDATA[#{javascript:viewScope.remove("fts1")}]]></xp:this.action>
+							</xp:eventHandler>
+						</xp:button>
+						<xp:br></xp:br>
+						<xp:checkBox id="checkBoxExactMatch"
+							value="#{viewScope.em1}" text="Exact Match" rendered="false">
+							<xp:eventHandler event="onchange"
+								submit="true" refreshMode="partial"
+								refreshId="searchQueryView">
+							</xp:eventHandler>
+						</xp:checkBox>
+						<xp:br rendered="false"></xp:br>
+						<xp:checkBox id="checkBoxFuzzySearch"
+							value="#{viewScope.fuzzy1}" text="Fuzzy Search">
+							<xp:eventHandler event="onchange"
+								submit="true" refreshMode="partial"
+								refreshId="searchQueryView">
+							</xp:eventHandler>
+						</xp:checkBox>
+						<xp:label
+							value="(Enter a search for 'nun', this will find 2 results. Select this checkbox to find 69 results)"
+							id="label1" style="color:rgb(128,128,128)">
+						</xp:label>
+						<xp:br></xp:br>
+						<xp:checkBox id="checkBoxWordVariants"
+							value="#{viewScope.wv1}" text="Word Variants">
+							<xp:eventHandler event="onchange"
+								submit="true" refreshMode="partial"
+								refreshId="searchQueryView">
+							</xp:eventHandler>
+						</xp:checkBox>
+						<xp:label
+							value="(Enter a search for 'Cat'. This will find 1 record. Two are found with word variants)"
+							id="label2" style="color:rgb(128,128,128)">
+						</xp:label>
+						<xp:br></xp:br>
+						<xp:label value="Maximum results: "
+							id="labelMaxResults">
+						</xp:label>
+						<xp:comboBox id="comboBox1"
+							value="#{viewScope.md1}">
+
+							<xp:selectItem itemLabel="No Maximum"></xp:selectItem>
+							<xp:selectItem itemLabel="5"
+								itemValue="5">
+							</xp:selectItem>
+							<xp:selectItem itemLabel="10"
+								itemValue="10">
+							</xp:selectItem>
+							<xp:selectItem itemLabel="15"
+								itemValue="15">
+							</xp:selectItem>
+							<xp:selectItem itemLabel="20"
+								itemValue="20">
+							</xp:selectItem>
+							<xp:eventHandler event="onchange"
+								submit="true" refreshMode="partial"
+								refreshId="searchQueryView">
+							</xp:eventHandler>
+						</xp:comboBox>
+					</xp:panel>
+				</xp:panel>
+				<xp:panel id="searchQueryView">
+					<xp:label value="Options: " id="labeloptions"
+						style="font-weight:bold">
+					</xp:label>
+					<xp:label id="labelfuzzyoption"
+						style="color:rgb(0,128,192)" value="Fuzzy search ">
+						<xp:this.rendered><![CDATA[#{javascript:viewScope.fuzzy1 =="true"}]]></xp:this.rendered>
+					</xp:label>
+					&#160;
+					<xp:label id="labelWordVariants"
+						style="color:rgb(0,64,128)" value="Word variants ">
+						<xp:this.rendered><![CDATA[#{javascript:viewScope.wv1 =="true"}]]></xp:this.rendered>
+					</xp:label>
+					&#160;
+					<xp:label id="labelExactMatch"
+						style="color:rgb(128,0,128)" value="Exact Match">
+						<xp:this.rendered><![CDATA[#{javascript:viewScope.em1 =="true"}]]></xp:this.rendered>
+					</xp:label>
+					<xp:viewPanel rows="10" id="viewPanel1"
+						indexVar="vi1">
+
+						<xp:this.data>
+							<xp:dominoView var="view1"
+								viewName="xspSearch"
+								searchMaxDocs="#{javascript:viewScope.md1}">
+								<xp:this.search><![CDATA[#{javascript:var f = database.isFTIndexed();
+var vs = viewScope.fts1;
+@If(f = false,"",vs)}]]></xp:this.search>
+								<xp:this.searchExactMatch><![CDATA[#{javascript:@If(viewScope.em1=="true",true,false)}]]></xp:this.searchExactMatch>
+								<xp:this.searchFuzzy><![CDATA[#{javascript:@If(viewScope.fuzzy1=="true",true,false)}]]></xp:this.searchFuzzy>
+								<xp:this.searchVariants><![CDATA[#{javascript:@If(viewScope.wv1=="true",true,false)}]]></xp:this.searchVariants>
+							</xp:dominoView>
+						</xp:this.data>
+						<xp:viewColumn id="viewColumn4">
+							<xp:this.facets>
+								<xp:viewColumnHeader xp:key="header"
+									id="viewColumnHeader4" value="#">
+								</xp:viewColumnHeader>
+							</xp:this.facets>
+							<xp:this.value><![CDATA[#{javascript:var v = vi1+1;
+v.toString()}]]></xp:this.value>
+						</xp:viewColumn>
+						<xp:viewColumn id="viewColumn6"
+							columnName="tdate_1">
+							<xp:this.facets>
+								<xp:viewColumnHeader xp:key="header"
+									id="viewColumnHeader6" value="Date1" sortable="true">
+								</xp:viewColumnHeader>
+							</xp:this.facets>
+						</xp:viewColumn>
+						<xp:viewColumn id="viewColumn5"
+							columnName="Num_4">
+							<xp:this.facets>
+								<xp:viewColumnHeader xp:key="header"
+									id="viewColumnHeader5" value="Number1" sortable="true">
+								</xp:viewColumnHeader>
+							</xp:this.facets>
+							<xp:this.converter>
+								<xp:convertNumber pattern="0.00"></xp:convertNumber>
+							</xp:this.converter>
+						</xp:viewColumn>
+
+						<xp:viewColumn columnName="form"
+							id="viewColumn2">
+							<xp:viewColumnHeader value="Form"
+								id="viewColumnHeader2" sortable="true">
+							</xp:viewColumnHeader>
+						</xp:viewColumn>
+						<xp:viewColumn columnName="$120"
+							id="viewColumn3">
+							<xp:viewColumnHeader value="Topic"
+								id="viewColumnHeader3" sortable="true">
+							</xp:viewColumnHeader>
+						</xp:viewColumn>
+						<xp:this.facets>
+							<xp:pager partialRefresh="true"
+								xp:key="headerPager" id="pager1" panelPosition="left"
+								alwaysCalculateLast="true">
+								<xp:pagerControl id="pagerControl8"
+									type="Status" value="{0} of {1}">
+
+
+								</xp:pagerControl>
+								<xp:pagerControl id="pagerControl9"
+									type="Separator">
+								</xp:pagerControl>
+								<xp:pagerControl id="pagerControl1"
+									type="First">
+								</xp:pagerControl>
+								<xp:pagerControl id="pagerControl5"
+									type="Separator">
+								</xp:pagerControl>
+								<xp:pagerControl id="pagerControl2"
+									type="Last">
+								</xp:pagerControl>
+								<xp:pagerControl id="pagerControl6"
+									type="Separator">
+								</xp:pagerControl>
+								<xp:pagerControl id="pagerControl3"
+									type="Previous">
+								</xp:pagerControl>
+								<xp:pagerControl id="pagerControl7"
+									type="Separator">
+								</xp:pagerControl>
+								<xp:pagerControl id="pagerControl4"
+									type="Next">
+								</xp:pagerControl>
+							</xp:pager>
+
+							<xp:viewTitle xp:key="viewTitle"
+								id="viewTitle1">
+								<xp:this.value><![CDATA[#{javascript:"Search results for "+viewScope.fts1}]]></xp:this.value>
+								<xp:this.rendered><![CDATA[#{javascript:!viewScope.fts1 ==""}]]></xp:this.rendered>
+							</xp:viewTitle>
+						</xp:this.facets>
+					</xp:viewPanel>
+				</xp:panel>
+			</xp:panel>
+		</xp:this.facets>
+	</XPa:ccLayout>
+</xp:view>

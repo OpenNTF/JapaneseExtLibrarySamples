@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+
+	<xp:label value="XPages Resources:" id="label1" style="font-weight:bold">
+	</xp:label>
+	<hr size="1" />
+	<xp:link escape="true" text="For all XPages resources go to XPages.info" id="link1"
+		value="http://www.xpages.info/XPagesHome.nsf/Resources.xsp" title="Link to XPages.info"
+		target="_blank">
+
+	</xp:link>
+	
+	
+	
+
+	<xp:table>
+		<xp:tr>
+			<xp:td>
+				<xp:link escape="true" id="link3"
+					value="http://www.ibmpressbooks.com/bookstore/product.asp?isbn=0132486318"
+					style="margin-left:10.0px;margin-bottom:15.0px"
+					title="Mastering XPages: A Step-by-Step Guide to XPages Application Development and the XSP Language by Martin Donnelly, Mark Wallace, Tony McGuckin. ">
+					<xp:image id="image4" url="/mxbook.jpg"
+						alt="Mastering XPages">
+					</xp:image>
+				</xp:link></xp:td>
+			<xp:td valign="top">Mastering XPages: A Step-by-Step Guide to XPages Application
+			Development and the XSP Language
+			<xp:br />
+			By Martin Donnelly, Mark Wallace, Tony McGuckin
+			<xp:br />
+			Published Jan 19, 2011 by IBM Press</xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:link escape="true" id="link2"
+					style="margin-left:10.0px;margin-bottom:15.0px"
+					title="XPages Portable Command Guide: A Compact Resource to XPages Application Development and the XSP Language By Martin Donnelly, Maire Kehoe, Tony McGuckin, Dan O'Connor."
+					value="http://www.ibmpressbooks.com/bookstore/product.asp?isbn=0132943050">
+					<xp:image id="image1" url="/XPCGBook.jpg"
+						alt="XPages Portable Command Guide">
+					</xp:image>
+				</xp:link></xp:td>
+			<xp:td valign="top">
+				XPages Portable Command Guide: A Compact Resource to
+				XPages Application Development and the XSP Language
+				<xp:br />
+				By Martin Donnelly, Maire Kehoe, Tony McGuckin, Dan
+				O'Connor
+				<xp:br />
+				Published Feb 5, 2012 by IBM Press
+			</xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:link escape="true" id="link4"
+					style="margin-left:10.0px;margin-bottom:15.0px"
+					title="XPages Extension Library: A step-by-step guide to the next generation of XPages components by Paul Hannan, Declan Sciolla-Lynch, Jeremy Hodge, Paul Withers, Tim Tripcony."
+					value="http://www.ibmpressbooks.com/bookstore/product.asp?isbn=0132901811">
+					<xp:image id="image5" url="/XELbook.jpg"
+						alt="XPages Extension Library">
+					</xp:image>
+				</xp:link></xp:td>
+			<xp:td valign="top">XPages Extension Library: A Step-by-Step Guide to the Next Generation of XPages Components<xp:br/>
+    By Paul Hannan, Declan Sciolla-Lynch, Jeremy Hodge, Paul Withers, Tim Tripcony<xp:br/>
+    Published May 11, 2012 by IBM Press</xp:td>
+		</xp:tr>
+	</xp:table></xp:view>

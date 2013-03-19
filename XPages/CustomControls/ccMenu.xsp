@@ -1,0 +1,1350 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+	<xp:this.resources>
+
+
+
+		<xp:styleSheet
+			rendered="#{javascript:context.getUserAgent().isIE(0, 6) == true}"
+			href="/iehacks.css">
+		</xp:styleSheet>
+		<xp:styleSheet href="/csscustom.css"></xp:styleSheet>
+		<xp:styleSheet href="/1UIclasses.css"></xp:styleSheet>
+	</xp:this.resources>
+	<xp:panel id="panelColLeft">
+		<xp:panel styleClass="lotusMenu" id="panel4menu1">
+			<xp:panel styleClass="lotusBottomCorner"
+				id="panel4bottomcorner">
+				<xp:panel styleClass="lotusInner" id="panel4inner">
+					<xp:link escape="true" text="Home" id="linkHome"
+						value="/index.xsp" style="padding-left:5px">
+					</xp:link>
+					<xp:panel>
+											
+						<xp:panel id="panelMenuIndex">
+						
+						<xp:panel id="panelACF">
+							<xp:link escape="true" id="link38" text="ACF" styleClass="lotusIndent10" >
+									<xp:eventHandler event="onclick" submit="true" refreshMode="partial" refreshId="panelACF">
+										<xp:this.action>
+											<xp:setValue
+												binding="#{sessionScope.panel4ACF}">
+												<xp:this.value><![CDATA[#{javascript:var poo = sessionScope.panel4ACF;
+if (poo =="on"){"off"
+}
+else{"on"
+}}]]></xp:this.value>
+											</xp:setValue>
+										</xp:this.action></xp:eventHandler>
+								</xp:link>
+											<xp:panel id="panel2">
+												<xp:this.rendered><![CDATA[#{javascript:sessionScope.panel4ACF == "on"}]]></xp:this.rendered>
+												<xp:link escape="true"
+													text="HTML Filter and FilterIn" id="link39" styleClass="lotusIndent15" value="/jsFilterHtmlMain.xsp">
+												</xp:link>
+											</xp:panel>
+								</xp:panel>
+					
+						
+							<xp:panel id="panelAjax">
+								<xp:link escape="true" text="Ajax"
+									id="linkmnAjax" styleClass="lotusIndent10">
+									<xp:eventHandler event="onclick"
+										submit="true" refreshMode="partial" refreshId="panel4Ajax">
+										<xp:this.action>
+											<xp:setValue
+												binding="#{sessionScope.ajax}">
+												<xp:this.value><![CDATA[#{javascript:var poo = sessionScope.ajax;
+if (poo =="on"){"off"
+}
+else{"on"
+}}]]></xp:this.value>
+											</xp:setValue>
+										</xp:this.action>
+									</xp:eventHandler>
+								</xp:link>
+								<xp:panel id="panel4Ajax">
+									<xp:panel>
+										<xp:this.rendered><![CDATA[#{javascript:sessionScope.ajax == "on"}]]></xp:this.rendered>
+										<xp:link escape="true"
+											text="Partial Refresh Quick Test" id="link4PartialRefresh"
+											styleClass="lotusIndent15" value="/ajaxPartialRefresh.xsp">
+										</xp:link>
+										<xp:br/>
+										<xp:link escape="true"
+											text="Partial Refresh Core Controls" id="link10"
+											styleClass="lotusIndent15"
+											value="/ajaxPartialRefreshCore.xsp">
+										</xp:link>
+										<xp:br/>
+										<xp:link escape="true"
+											text="Partial Refresh Containers" id="link11"
+											styleClass="lotusIndent15"
+											value="/ajaxPartialRefreshContainer.xsp">
+										</xp:link>
+										<xp:br/>
+										<xp:link escape="true"
+											text="Partial Refresh Dojo Controls" id="link12"
+											styleClass="lotusIndent15"
+											value="/ajaxPartialRefreshDojo.xsp">
+										</xp:link>
+										<xp:br/>
+										<xp:link escape="true"
+											text="Partial Refresh Main" id="link13"
+											styleClass="lotusIndent15"
+											value="/ajaxPartialRefreshMain.xsp">
+										</xp:link>
+										<xp:br/>
+										<xp:link escape="true"
+											text="Partial Refresh Options" id="link14"
+											styleClass="lotusIndent15"
+											value="/ajaxPartialRefreshServer.xsp">
+										</xp:link>
+										<xp:br/>
+										<xp:link escape="true"
+											text="Partial Refresh More Options" id="link28"
+											styleClass="lotusIndent15"
+											value="/ajaxPartialRefreshServerMore.xsp">
+										</xp:link>
+										<xp:br/>
+										<xp:link escape="true"
+											text="Partial Refresh Toggle" id="link29"
+											styleClass="lotusIndent15"
+											value="/ajaxPartialRefreshDoc.xsp">
+										</xp:link>
+										<xp:br/>
+
+										<xp:link escape="true"
+											text="Type Ahead" id="link4TypeAhead"
+											styleClass="lotusIndent15" value="/ajaxTypeAhead.xsp">
+										</xp:link>
+									</xp:panel>
+								</xp:panel>
+							</xp:panel>
+							<xp:panel
+								id="panelControlsBasicProperties">
+								<xp:link escape="true"
+									id="linkmnControlProperties" text="Basic Properties"
+									styleClass="lotusIndent10"
+									title="Basic Properties on various controls">
+									<xp:eventHandler event="onclick"
+										submit="true" refreshMode="partial"
+										refreshId="panel4ControlProperties">
+										<xp:this.action>
+											<xp:setValue
+												binding="#{sessionScope.controlProp}">
+												<xp:this.value><![CDATA[#{javascript:var poo = sessionScope.controlProp;
+if (poo =="on"){"off"
+}
+else{"on"
+}}]]></xp:this.value>
+											</xp:setValue>
+										</xp:this.action>
+									</xp:eventHandler>
+								</xp:link>
+								<xp:panel
+									id="panel4ControlProperties">
+									<xp:panel>
+										<xp:this.rendered><![CDATA[#{javascript:sessionScope.controlProp == "on"}]]></xp:this.rendered>
+										<xp:link escape="true"
+											id="link4AccKeys" styleClass="lotusIndent15"
+											text="Accelerator Keys" value="/propAccelerator.xsp">
+										</xp:link>
+										<xp:br></xp:br>
+										<xp:link escape="true"
+											id="link4ButtonProp" styleClass="lotusIndent15"
+											text="Button Properties" value="/propCoreButton.xsp">
+										</xp:link>
+										<xp:br></xp:br>
+										<xp:link escape="true"
+											id="link4EditBoxProp" styleClass="lotusIndent15"
+											text="Edit Box Properties" value="/propCoreEditBox.xsp">
+										</xp:link>
+										<xp:br></xp:br>
+										<xp:link escape="true"
+											text="Link Properties" id="link2" styleClass="lotusIndent15"
+											value="/propCoreLink.xsp">
+										</xp:link>
+										<xp:br></xp:br>
+										<xp:link escape="true"
+											text="List Box Properties" id="link3"
+											styleClass="lotusIndent15" value="/PropCoreListBox.xsp">
+										</xp:link>
+										<xp:br></xp:br>
+										<xp:link escape="true"
+											id="link4MultilineEditBoxProp" styleClass="lotusIndent15"
+											text="Multiline Edit Box Properties"
+											value="/propCoreMultiLineEditBox.xsp">
+										</xp:link>
+										<xp:br></xp:br>
+										<xp:link escape="true"
+											id="link4TabOrder" styleClass="lotusIndent15"
+											text="Tab Order" value="/propTabOrder.xsp">
+										</xp:link>
+										<xp:br></xp:br>
+										<xp:link escape="true"
+											id="link4TimeZone" styleClass="lotusIndent15"
+											text="Time Zone" value="/propTimeZone.xsp">
+										</xp:link>
+										<xp:br></xp:br>
+										<xp:link escape="true"
+											id="link7" styleClass="lotusIndent15" text="Validators"
+											value="/propValidatorsConvertors.xsp">
+										</xp:link>
+										<xp:br></xp:br>
+										<xp:link escape="true"
+											id="link4CatRexView" styleClass="lotusIndent15"
+											text="View Categorisation" value="/propCatResViews.xsp">
+										</xp:link>
+										<xp:br></xp:br>
+										<xp:link escape="true"
+											id="link4ViewHeaderSorting" styleClass="lotusIndent15"
+											text="View Header Sort"
+											value="/propViewsHeaderSorting.xsp">
+										</xp:link>
+									</xp:panel>
+								</xp:panel>
+							</xp:panel>
+
+							<xp:panel id="panelContainer">
+								<xp:link escape="true"
+									text="Container Controls" id="linkmnContainerControls"
+									styleClass="lotusIndent10">
+									<xp:eventHandler event="onclick"
+										submit="true" refreshMode="partial"
+										refreshId="panel4Containers">
+										<xp:this.action>
+											<xp:actionGroup>
+												<xp:setValue
+													binding="#{sessionScope.container01}">
+													<xp:this.value><![CDATA[#{javascript:var poo = sessionScope.container01;
+if (poo =="on"){"off"
+}
+else{"on"
+}}]]></xp:this.value>
+												</xp:setValue>
+												<xp:openPage
+													name="/ctrlsContainer.xsp">
+												</xp:openPage>
+											</xp:actionGroup>
+										</xp:this.action>
+									</xp:eventHandler>
+								</xp:link>
+								<xp:panel id="panel4Containers">
+									<xp:panel>
+										<xp:this.rendered><![CDATA[#{javascript:sessionScope.container01 == "on"}]]></xp:this.rendered>
+										<xp:link escape="true"
+											text="Panel" id="linkNewTestPanel" styleClass="lotusIndent15"
+											value="/ctrlsContainerPanel.xsp">
+										</xp:link>
+										<xp:br></xp:br>
+										<xp:link escape="true"
+											text="Repeat" id="linkNewTestRepeat"
+											styleClass="lotusIndent15">
+											<xp:eventHandler
+												event="onclick" submit="true" refreshMode="complete">
+												<xp:this.action>
+													<xp:openPage
+														name="/ctrlsContainerRepeat.xsp" target="newDocument">
+													</xp:openPage>
+												</xp:this.action>
+											</xp:eventHandler>
+										</xp:link>
+										<xp:br></xp:br>
+										<xp:link escape="true"
+											text="Include Page" id="linkNewTestIncludePage"
+											styleClass="lotusIndent15"
+											value="/ctrlsContainerIncludePage.xsp">
+										</xp:link>
+										<xp:br></xp:br>
+										<xp:link escape="true"
+											text="Table" id="linkNewTestTable" styleClass="lotusIndent15"
+											value="/ctrlsContainerTable.xsp">
+										</xp:link>
+										<xp:br></xp:br>
+										<xp:link escape="true"
+											id="linkNewTestViewPanel" styleClass="lotusIndent15"
+											text="View">
+											<xp:eventHandler
+												event="onclick" submit="true" refreshMode="complete">
+												<xp:this.action>
+													<xp:openPage
+														name="/ctrlsContainerViewPanel.xsp"
+														target="newDocument">
+													</xp:openPage>
+												</xp:this.action>
+											</xp:eventHandler>
+										</xp:link>
+										<xp:br></xp:br>
+										<xp:link escape="true"
+											text="Data Table" id="linkNewTestDataTable"
+											styleClass="lotusIndent15">
+											<xp:eventHandler
+												event="onclick" submit="true" refreshMode="complete">
+												<xp:this.action>
+													<xp:openPage
+														name="/ctrlsContainerDataTable.xsp"
+														target="newDocument">
+													</xp:openPage>
+												</xp:this.action>
+											</xp:eventHandler>
+										</xp:link>
+										<xp:br></xp:br>
+										<xp:link escape="true"
+											text="Tabbed Panel" id="linkNewTestTabbedPanel"
+											styleClass="lotusIndent15"
+											value="/ctrlsContainerTabbedPanel.xsp">
+										</xp:link>
+										<xp:br></xp:br>
+										<xp:link escape="true"
+											id="linkNewTestSection" text="Section"
+											styleClass="lotusIndent15"
+											value="/ctrlsContainerSection.xsp">
+										</xp:link>
+									</xp:panel>
+								</xp:panel>
+							</xp:panel>
+
+
+
+
+							<xp:panel id="panelConvertors">
+								<xp:link escape="true" text="Convertors"
+									id="link16" styleClass="lotusIndent10">
+									<xp:eventHandler event="onclick"
+										submit="true" refreshMode="partial"
+										refreshId="panel4Convertors">
+										<xp:this.action>
+
+											<xp:setValue
+												binding="#{sessionScope.convertors1}">
+												<xp:this.value><![CDATA[#{javascript:var poo = sessionScope.convertors1;
+if (poo =="on"){"off"
+}
+else{"on"
+}}]]></xp:this.value>
+											</xp:setValue>
+
+
+										</xp:this.action>
+									</xp:eventHandler>
+								</xp:link>
+								<xp:panel id="panel4Convertors">
+									<xp:panel>
+										<xp:this.rendered><![CDATA[#{javascript:sessionScope.convertors1 == "on"}]]></xp:this.rendered>
+										<xp:link escape="true"
+											text="Number Convertors" id="linkConvertorsNumbers"
+											styleClass="lotusIndent15">
+
+											<xp:eventHandler
+												event="onclick" submit="true" refreshMode="complete">
+												<xp:this.action>
+													<xp:openPage
+														name="/convertorsNumbers.xsp" target="newDocument">
+													</xp:openPage>
+												</xp:this.action>
+											</xp:eventHandler>
+										</xp:link>
+										<xp:br></xp:br>
+										<xp:link escape="true"
+											text="Date Time Convertors" id="linkConvertorsDateTime"
+											styleClass="lotusIndent15">
+
+											<xp:eventHandler
+												event="onclick" submit="true" refreshMode="complete">
+												<xp:this.action>
+													<xp:openPage
+														name="/convertorsDatesTimes.xsp">
+													</xp:openPage>
+												</xp:this.action>
+											</xp:eventHandler>
+										</xp:link>
+										<xp:br></xp:br>
+										<xp:link escape="true"
+											text="Mask Convertors" id="linkConvertorsMask"
+											styleClass="lotusIndent15">
+
+											<xp:eventHandler
+												event="onclick" submit="true" refreshMode="complete">
+												<xp:this.action>
+													<xp:openPage
+														name="/convertorsPatterns.xsp" target="newDocument">
+													</xp:openPage>
+												</xp:this.action>
+											</xp:eventHandler>
+										</xp:link>
+									</xp:panel>
+								</xp:panel>
+							</xp:panel>
+
+							<xp:panel id="panelCoolStuff">
+								<xp:link escape="true" text="Cool Stuff"
+									id="link34" styleClass="lotusIndent10">
+									<xp:eventHandler event="onclick"
+										submit="true" refreshMode="partial"
+										refreshId="panel4coolstuff">
+										<xp:this.action>
+
+											<xp:setValue
+												binding="#{sessionScope.coolstuff}">
+												<xp:this.value><![CDATA[#{javascript:var poo = sessionScope.coolstuff;
+if (poo =="on"){"off"
+}
+else{"on"
+}}]]></xp:this.value>
+											</xp:setValue>
+
+
+										</xp:this.action>
+									</xp:eventHandler>
+								</xp:link>
+								<xp:panel id="panel4coolstuff">
+									<xp:panel>
+										<xp:this.rendered><![CDATA[#{javascript:sessionScope.coolstuff == "on"}]]></xp:this.rendered>
+										<xp:link escape="true"
+											text="RTE Control in a Column" id="link35"
+											styleClass="lotusIndent15">
+
+											
+										<xp:eventHandler event="onclick" submit="true" refreshMode="complete">
+											<xp:this.action>
+												<xp:openPage
+													name="coolRTEinViewColumn.xsp">
+												</xp:openPage>
+											</xp:this.action></xp:eventHandler></xp:link>
+										<xp:br></xp:br><xp:link escape="true" text="Soft Deletes" id="link37" styleClass="lotusIndent15">
+
+											
+										<xp:eventHandler event="onclick" submit="true" refreshMode="complete">
+											<xp:this.action>
+												<xp:openPage
+													name="/coolSoftDeletes.xsp">
+												</xp:openPage>
+											</xp:this.action></xp:eventHandler></xp:link>
+											
+											<xp:br></xp:br>
+											<xp:link escape="true"
+												text="Multiple RTEs" id="link52" styleClass="lotusIndent15"
+												value="/multipleRTEsMainView.xsp">
+
+											</xp:link>
+
+
+									</xp:panel>
+								</xp:panel>
+							</xp:panel>
+
+							<xp:panel id="panelCore">
+								<xp:link escape="true"
+									text="Core Controls" id="linkmnCoreControls"
+									styleClass="lotusIndent10">
+									<xp:eventHandler event="onclick"
+										submit="true" refreshMode="partial" refreshId="panel4Core">
+										<xp:this.action>
+											<xp:actionGroup>
+												<xp:setValue
+													binding="#{sessionScope.core01}">
+													<xp:this.value><![CDATA[#{javascript:var poo = sessionScope.core01;
+if (poo =="on"){"off"
+}
+else{"on"
+}}]]></xp:this.value>
+												</xp:setValue>
+												<xp:openPage
+													name="/ctrlsCore.xsp">
+												</xp:openPage>
+											</xp:actionGroup>
+										</xp:this.action>
+									</xp:eventHandler>
+								</xp:link>
+								<xp:panel id="panel4Core">
+									<xp:panel>
+										<xp:this.rendered><![CDATA[#{javascript:sessionScope.core01 == "on"}]]></xp:this.rendered>
+										<xp:link escape="true"
+											text="Edit Box" id="linkNewTestEditBox"
+											styleClass="lotusIndent15">
+											<xp:eventHandler
+												event="onclick" submit="true" refreshMode="complete">
+												<xp:this.action>
+													<xp:openPage
+														name="/ctrlsCoreEditBox.xsp" target="newDocument">
+													</xp:openPage>
+												</xp:this.action>
+											</xp:eventHandler>
+										</xp:link>
+										<xp:br></xp:br>
+										<xp:link escape="true"
+											text="Rich Text" id="link5" styleClass="lotusIndent15">
+											<xp:eventHandler
+												event="onclick" submit="true" refreshMode="complete">
+												<xp:this.action>
+													<xp:openPage
+														name="/ctrlsCoreRichText.xsp" target="newDocument">
+													</xp:openPage>
+												</xp:this.action>
+											</xp:eventHandler>
+										</xp:link>
+										<xp:br></xp:br>
+										<xp:link escape="true"
+											text="Multiline Edit Box" id="linkNewTestMultilineEditBox"
+											styleClass="lotusIndent15">
+											<xp:eventHandler
+												event="onclick" submit="true" refreshMode="complete">
+												<xp:this.action>
+													<xp:openPage
+														name="/ctrlsCoreMultilineEditBox.xsp"
+														target="newDocument">
+													</xp:openPage>
+												</xp:this.action>
+											</xp:eventHandler>
+										</xp:link>
+										<xp:br></xp:br>
+										<xp:link escape="true"
+											text="Button" id="linkNewTestButton"
+											styleClass="lotusIndent15" value="/ctrlsCoreButton.xsp">
+										</xp:link>
+										<xp:br></xp:br>
+										<xp:link escape="true"
+											text="List Box" id="link4" styleClass="lotusIndent15">
+											<xp:eventHandler
+												event="onclick" submit="true" refreshMode="complete">
+												<xp:this.action>
+													<xp:openPage
+														name="/ctrlsCoreListBox.xsp" target="newDocument">
+													</xp:openPage>
+												</xp:this.action>
+											</xp:eventHandler>
+										</xp:link>
+										<xp:br></xp:br>
+										<xp:link escape="true"
+											text="Combo Box" id="linkNewTestComboBox"
+											styleClass="lotusIndent15">
+											<xp:eventHandler
+												event="onclick" submit="true" refreshMode="complete">
+												<xp:this.action>
+													<xp:openPage
+														name="/ctrlsCoreComboBox.xsp" target="newDocument">
+													</xp:openPage>
+												</xp:this.action>
+											</xp:eventHandler>
+										</xp:link>
+										<xp:br></xp:br>
+										<xp:link escape="true"
+											text="Check Box" id="linkNewTestCheckBox"
+											styleClass="lotusIndent15">
+											<xp:eventHandler
+												event="onclick" submit="true" refreshMode="complete">
+												<xp:this.action>
+													<xp:openPage
+														name="/ctrlsCoreCheckBox.xsp" target="newDocument">
+													</xp:openPage>
+												</xp:this.action>
+											</xp:eventHandler>
+										</xp:link>
+										<xp:br></xp:br>
+										<xp:link escape="true"
+											text="Radio Button" id="linkNewTestRadioButton"
+											styleClass="lotusIndent15">
+											<xp:eventHandler
+												event="onclick" submit="true" refreshMode="complete">
+												<xp:this.action>
+													<xp:openPage
+														name="/ctrlsCoreRadioButton.xsp" target="newDocument">
+													</xp:openPage>
+												</xp:this.action>
+											</xp:eventHandler>
+										</xp:link>
+										<xp:br></xp:br>
+										<xp:link escape="true"
+											text="Link" id="linkNewTestLink" styleClass="lotusIndent15"
+											value="/ctrlsCoreLink.xsp">
+										</xp:link>
+										<xp:br></xp:br>
+										<xp:link escape="true"
+											text="Label" id="linkNewTestLabel" styleClass="lotusIndent15"
+											value="/ctrlsCoreLabel.xsp">
+										</xp:link>
+										<xp:br></xp:br>
+										<xp:link escape="true"
+											text="Computed Field" id="linkNewTestComputedField"
+											styleClass="lotusIndent15"
+											value="/ctrlsCoreComputedField.xsp">
+										</xp:link>
+										<xp:br></xp:br>
+										<xp:link escape="true"
+											text="Image" id="linkNewTestImage" styleClass="lotusIndent15"
+											value="/ctrlsCoreImage.xsp">
+										</xp:link>
+										<xp:br></xp:br>
+										<xp:link escape="true"
+											id="link6" styleClass="lotusIndent15" text="Attachments">
+											<xp:eventHandler
+												event="onclick" submit="true" refreshMode="complete">
+												<xp:this.action>
+													<xp:openPage
+														name="/ctrlsCoreAttachments.xsp" target="newDocument">
+													</xp:openPage>
+												</xp:this.action>
+											</xp:eventHandler>
+										</xp:link>
+										<xp:br></xp:br>
+										<xp:link escape="true"
+											text="Date Time Picker" id="linkNewTestDateTimePicker"
+											styleClass="lotusIndent15">
+											<xp:eventHandler
+												event="onclick" submit="true" refreshMode="complete">
+												<xp:this.action>
+													<xp:openPage
+														name="/ctrlsCoreDateTimePicker.xsp"
+														target="newDocument">
+													</xp:openPage>
+												</xp:this.action>
+											</xp:eventHandler>
+										</xp:link>
+										<xp:br></xp:br>
+										<xp:link escape="true"
+											text="Display Error" id="linkNewTestDisplayError"
+											styleClass="lotusIndent15">
+											<xp:eventHandler
+												event="onclick" submit="true" refreshMode="complete">
+												<xp:this.action>
+													<xp:openPage
+														name="/ctrlsCoreDisplayError.xsp" target="newDocument">
+													</xp:openPage>
+												</xp:this.action>
+											</xp:eventHandler>
+										</xp:link>
+										<xp:br></xp:br>
+										<xp:link escape="true"
+											text="Display Errors" id="linkNewTestDisplayErrors"
+											styleClass="lotusIndent15">
+											<xp:eventHandler
+												event="onclick" submit="true" refreshMode="complete">
+												<xp:this.action>
+													<xp:openPage
+														name="/ctrlsCoreDisplayErrors.xsp" target="newDocument">
+													</xp:openPage>
+												</xp:this.action>
+											</xp:eventHandler>
+										</xp:link>
+									</xp:panel>
+								</xp:panel>
+							</xp:panel>
+
+							<xp:panel id="panelDOCTYPE">
+							<xp:link escape="true" id="link31" text="DOCTYPE" styleClass="lotusIndent10" >
+									<xp:eventHandler event="onclick" submit="true" refreshMode="partial" refreshId="panel4DocType">
+										<xp:this.action>
+											<xp:setValue
+												binding="#{sessionScope.docType}">
+												<xp:this.value><![CDATA[#{javascript:var poo = sessionScope.docType;
+if (poo =="on"){"off"
+}
+else{"on"
+}}]]></xp:this.value>
+											</xp:setValue>
+										</xp:this.action></xp:eventHandler>
+								</xp:link>
+											<xp:panel id="panel4DocType">
+											<xp:panel>
+												<xp:this.rendered><![CDATA[#{javascript:sessionScope.docType == "on"}]]></xp:this.rendered>
+												
+												<xp:link escape="true"
+													text="Standard" id="link32" styleClass="lotusIndent15" value="/docTypeStandard.xsp">
+												</xp:link><xp:br/>
+												<xp:link escape="true"
+													text="HTML Transitional" id="link33" styleClass="lotusIndent15" value="/docTypeHTMLTrans.xsp">
+												</xp:link><xp:br/>
+												<xp:link escape="true"
+													text="XHTML Transitional" id="link40" styleClass="lotusIndent15" value="/docTypeXHTMLTrans.xsp">
+												</xp:link><xp:br/>
+												<xp:link escape="true"
+													text="XHTML Trans Content" id="link46" styleClass="lotusIndent15" value="/docTypeXHTMLContent.xsp">
+												</xp:link><xp:br/>
+												<xp:link escape="true"
+													text="XHTML Trans Meta" id="link47" styleClass="lotusIndent15" value="/docTypeXHTMLTransMeta.xsp">
+												</xp:link>
+												</xp:panel>
+											</xp:panel>
+								</xp:panel>
+
+
+							<xp:panel id="panelDojo">
+							<xp:link escape="true" id="linkDojo" text="Dojo" styleClass="lotusIndent10" >
+									<xp:eventHandler event="onclick" submit="true" refreshMode="partial" refreshId="panelDojo">
+										<xp:this.action>
+											<xp:setValue
+												binding="#{sessionScope.dojoType}">
+												<xp:this.value><![CDATA[#{javascript:var poo = sessionScope.dojoType;
+if (poo =="on"){"off"
+}
+else{"on"
+}}]]></xp:this.value>
+											</xp:setValue>
+										</xp:this.action></xp:eventHandler>
+								</xp:link>
+											<xp:panel id="panel4Dojo">
+												<xp:this.rendered><![CDATA[#{javascript:sessionScope.dojoType == "on"}]]></xp:this.rendered>
+												<xp:link escape="true"
+													text="Dojo Types" id="linkDojoTypes" styleClass="lotusIndent15" value="/dojoTypeMain.xsp">
+												</xp:link>
+											</xp:panel>
+								</xp:panel>
+
+
+							<xp:panel id="panelEvents">
+								<xp:link escape="true" text="Events"
+									id="link20" styleClass="lotusIndent10">
+									<xp:eventHandler event="onclick"
+										submit="true" refreshMode="partial"
+										refreshId="panel4Events">
+										<xp:this.action>
+											<xp:setValue
+												binding="#{sessionScope.events01}">
+												<xp:this.value><![CDATA[#{javascript:var poo = sessionScope.events01;
+if (poo =="on"){"off"
+}
+else{"on"
+}}]]></xp:this.value>
+											</xp:setValue>
+
+
+										</xp:this.action>
+									</xp:eventHandler>
+								</xp:link>
+								<xp:panel id="panel4Events">
+									<xp:panel>
+										<xp:this.rendered><![CDATA[#{javascript:sessionScope.events01 == "on"}]]></xp:this.rendered>
+
+										<xp:link escape="true"
+											text="Document Events" id="link27" styleClass="lotusIndent15"
+											value="/eventsPageDocument.xsp">
+										</xp:link>
+										<xp:br></xp:br>
+
+
+										<xp:link escape="true"
+											text="Event Handlers" id="link21" styleClass="lotusIndent15"
+											value="/eventsEventHandlers.xsp">
+
+										</xp:link>
+										<xp:br></xp:br>
+										<xp:link escape="true"
+											text="Focus Events" id="link22" styleClass="lotusIndent15"
+											value="/eventsFocus.xsp">
+
+										</xp:link>
+										<xp:br></xp:br>
+										<xp:link escape="true"
+											text="Key Events" id="link23" styleClass="lotusIndent15"
+											value="/eventsKey.xsp">
+
+										</xp:link>
+										<xp:br></xp:br>
+										<xp:link escape="true"
+											text="Mouse Events" id="link24" styleClass="lotusIndent15"
+											value="/eventsMouse.xsp">
+
+										</xp:link>
+										<xp:br></xp:br>
+										<xp:link escape="true"
+											text="Page Events" id="link25" styleClass="lotusIndent15"
+											value="/eventsXPageEvents.xsp">
+
+										</xp:link>
+										<xp:br></xp:br>
+										<xp:link escape="true"
+											text="Select and Change Events" id="link26"
+											styleClass="lotusIndent15" value="/eventsSelectChange.xsp">
+
+										</xp:link>
+									</xp:panel>
+								</xp:panel>
+							</xp:panel>
+<xp:link escape="true" id="link51"
+								styleClass="lotusIndent10" text="Hierarchical Fields"
+								value="/hfview.xsp">
+							</xp:link>
+							<xp:br></xp:br>
+<xp:panel id="panelJavascript">
+								<xp:link escape="true"
+									text="Javascript" id="link30" styleClass="lotusIndent10">
+									<xp:eventHandler event="onclick"
+										submit="true" refreshMode="partial" refreshId="panel4Js">
+										<xp:this.action>
+											
+												<xp:setValue
+													binding="#{sessionScope.js01}">
+													<xp:this.value><![CDATA[#{javascript:var poo = sessionScope.js01;
+if (poo =="on"){"off"
+}
+else{"on"
+}}]]></xp:this.value>
+												</xp:setValue>
+												
+										</xp:this.action>
+									</xp:eventHandler>
+								</xp:link>
+								<xp:panel id="panel4Js">
+									<xp:panel>
+										<xp:link escape="true"
+											text="XSP Context" id="link41" styleClass="lotusIndent15" value="/jsXSPContext.xsp">
+										</xp:link>
+										<xp:this.rendered><![CDATA[#{javascript:sessionScope.js01 == "on"}]]></xp:this.rendered><xp:br></xp:br>
+										<xp:link escape="true"
+											text="XSP Directory User" id="link42" styleClass="lotusIndent15" value="/jsXSPDirectoryUser.xsp">
+										</xp:link>
+										<xp:br></xp:br>
+										<xp:link escape="true"
+											id="link43" styleClass="lotusIndent15"
+											value="/jsXSPDocument.xsp">
+											<xp:this.text><![CDATA[XSP Document&View]]></xp:this.text>
+										</xp:link>
+										<xp:br/>
+										<xp:link escape="true"
+											text="XSP Url" id="link44" styleClass="lotusIndent15"
+											value="/jsXSPUrl.xsp">
+										</xp:link>
+										<xp:br/>
+										<xp:link escape="true"
+											text="XSP User Agent" id="link45" styleClass="lotusIndent15"
+											value="/jsXSPUserAgent.xsp">
+										</xp:link>
+										
+										</xp:panel>
+								</xp:panel>
+							</xp:panel>
+							
+							
+							
+							
+							
+							
+							
+
+
+							<xp:link escape="true" text="Locale Test"
+								id="linklocaletest" styleClass="lotusIndent10"
+								value="/propLocaleTest.xsp">
+							</xp:link>
+							<xp:panel id="panelOther">
+								<xp:link escape="true"
+									text="Other Controls" id="link1" styleClass="lotusIndent10">
+									<xp:eventHandler event="onclick"
+										submit="true" refreshMode="partial" refreshId="panel4Other">
+										<xp:this.action>
+											<xp:actionGroup>
+												<xp:setValue
+													binding="#{sessionScope.other01}">
+													<xp:this.value><![CDATA[#{javascript:var poo = sessionScope.other01;
+if (poo =="on"){"off"
+}
+else{"on"
+}}]]></xp:this.value>
+												</xp:setValue>
+												<xp:openPage
+													name="/ctrlsOther.xsp">
+												</xp:openPage>
+											</xp:actionGroup>
+										</xp:this.action>
+									</xp:eventHandler>
+								</xp:link>
+								<xp:panel id="panel4Other">
+									<xp:panel>
+										<xp:this.rendered><![CDATA[#{javascript:sessionScope.other01 == "on"}]]></xp:this.rendered>
+										<xp:link escape="true"
+											text="Checkbox Group" id="link2GroupCheckbox01"
+											styleClass="lotusIndent15">
+											<xp:eventHandler
+												event="onclick" submit="true" refreshMode="complete">
+												<xp:this.action>
+													<xp:openPage
+														name="/ctrlsOtherCheckBoxGroup.xsp"
+														target="newDocument">
+													</xp:openPage>
+												</xp:this.action>
+											</xp:eventHandler>
+										</xp:link>
+										<xp:br></xp:br>
+										<xp:link escape="true"
+											text="Pagers" id="link4Pagers" styleClass="lotusIndent15">
+											<xp:eventHandler
+												event="onclick" submit="true" refreshMode="complete">
+												<xp:this.action>
+													<xp:openPage
+														name="/ctrlsOtherPager.xsp">
+													</xp:openPage>
+												</xp:this.action>
+											</xp:eventHandler>
+										</xp:link>
+										<xp:br></xp:br>
+										<xp:link escape="true"
+											text="Radio Button Group" id="link9"
+											styleClass="lotusIndent15">
+											<xp:eventHandler
+												event="onclick" submit="true" refreshMode="complete">
+												<xp:this.action>
+													<xp:openPage
+														name="/ctrlsOtherRadioButtonGroup.xsp"
+														target="newDocument">
+													</xp:openPage>
+												</xp:this.action>
+											</xp:eventHandler>
+										</xp:link>
+									</xp:panel>
+								</xp:panel>
+							</xp:panel>
+							<xp:panel id="panelSimpleActions">
+								<xp:link escape="true"
+									text="Simple Actions" id="linkmnSimpleActions"
+									styleClass="lotusIndent10" rendered="false">
+									<xp:eventHandler event="onclick"
+										submit="true" refreshMode="partial"
+										refreshId="panel4SimpleActions">
+										<xp:this.action>
+											<xp:actionGroup>
+												<xp:setValue
+													binding="#{sessionScope.sactions01}">
+													<xp:this.value><![CDATA[#{javascript:var poo = sessionScope.sactions01;
+if (poo =="on"){"off"
+}
+else{"on"
+}}]]></xp:this.value>
+												</xp:setValue>
+												<xp:openPage
+													name="/simpleActions.xsp">
+												</xp:openPage>
+											</xp:actionGroup>
+										</xp:this.action>
+									</xp:eventHandler>
+								</xp:link>
+								<xp:panel id="panel4SimpleActions">
+									<xp:panel>
+										<xp:this.rendered><![CDATA[#{javascript:sessionScope.sactions01 == "on"}]]></xp:this.rendered>
+										<xp:link escape="true"
+											text="Change Document Mode" id="linkChangeDocumentMode"
+											styleClass="lotusIndent15">
+										</xp:link>
+										<xp:br></xp:br>
+										<xp:link escape="true"
+											text="Confirm Action" id="linkConfirmAction"
+											styleClass="lotusIndent15">
+										</xp:link>
+										<xp:br></xp:br>
+										<xp:link escape="true"
+											text="Create Response Document"
+											id="linkCreateResponseDocument" styleClass="lotusIndent15">
+										</xp:link>
+										<xp:br></xp:br>
+										<xp:link escape="true"
+											id="linkDeleteAttachments" styleClass="lotusIndent15"
+											text="Delete Attachments">
+										</xp:link>
+										<xp:br></xp:br>
+										<xp:link escape="true"
+											text="Delete Document" id="linkDeleteDocument"
+											styleClass="lotusIndent15">
+										</xp:link>
+										<xp:br></xp:br>
+										<xp:link escape="true"
+											id="linkDeleteRow" styleClass="lotusIndent15"
+											text="Delete Row">
+										</xp:link>
+										<xp:br></xp:br>
+										<xp:link escape="true"
+											text="Delete Selected Documents"
+											id="linkDeleteSelectedDocuments"
+											styleClass="lotusIndent15">
+										</xp:link>
+										<xp:br></xp:br>
+										<xp:link escape="true"
+											text="Duplicate Row" id="linkDuplicateRow"
+											styleClass="lotusIndent15">
+										</xp:link>
+										<xp:br></xp:br>
+										<xp:link escape="true"
+											id="linkExecuteScript" styleClass="lotusIndent15"
+											text="Execute Script">
+										</xp:link>
+										<xp:br></xp:br>
+										<xp:link escape="true"
+											text="Insert Row" id="linkInsertRow"
+											styleClass="lotusIndent15">
+										</xp:link>
+										<xp:br></xp:br>
+										<xp:link escape="true"
+											text="Invoke Web Services" id="linkInvokeWebServices"
+											styleClass="lotusIndent15">
+										</xp:link>
+										<xp:br></xp:br>
+										<xp:link escape="true"
+											text="Modify Field" id="linkModifyField"
+											styleClass="lotusIndent15">
+										</xp:link>
+										<xp:br></xp:br>
+										<xp:link escape="true"
+											id="linkOpenPage" styleClass="lotusIndent15"
+											text="Open Page">
+										</xp:link>
+										<xp:br></xp:br>
+										<xp:link escape="true"
+											text="Save Data Sources" id="linkSaveDataSources"
+											styleClass="lotusIndent15">
+										</xp:link>
+										<xp:br></xp:br>
+										<xp:link escape="true"
+											text="Save Document" id="linkSaveDocument"
+											styleClass="lotusIndent15">
+										</xp:link>
+										<xp:br></xp:br>
+										<xp:link escape="true"
+											text="Set Broker Property" id="linkSetBrokerProperty"
+											styleClass="lotusIndent15">
+										</xp:link>
+										<xp:br></xp:br>
+										<xp:link escape="true"
+											text="Set Row Index" id="linkSetRowIndex"
+											styleClass="lotusIndent15">
+										</xp:link>
+										<xp:br></xp:br>
+										<xp:link escape="true"
+											id="linkSetValue" styleClass="lotusIndent15"
+											text="Set Value">
+										</xp:link>
+									</xp:panel>
+								</xp:panel>
+							</xp:panel>
+														
+							<xp:link escape="true" id="link50"
+								styleClass="lotusIndent10" text="Search"
+								value="/xpSearch.xsp">
+							</xp:link>
+							
+							<xp:panel id="panelCRUD">
+								<xp:link escape="true"
+									text="Simple CRUD" id="linkmnSimpleCrud"
+									styleClass="lotusIndent10">
+									<xp:eventHandler event="onclick"
+										submit="true" refreshMode="partial" refreshId="panel4CRUD">
+										<xp:this.action>
+											<xp:actionGroup>
+												<xp:setValue
+													binding="#{sessionScope.scrud}">
+													<xp:this.value><![CDATA[#{javascript:var poo = sessionScope.scrud;
+if (poo =="on"){"off"
+}
+else{"on"
+}}]]></xp:this.value>
+												</xp:setValue>
+												<xp:openPage
+													name="/crudSimpleTest.xsp">
+												</xp:openPage>
+											</xp:actionGroup>
+										</xp:this.action>
+									</xp:eventHandler>
+								</xp:link>
+								<xp:panel id="panel4CRUD">
+									<xp:panel>
+										<xp:this.rendered><![CDATA[#{javascript:sessionScope.scrud == "on"}]]></xp:this.rendered>
+										<xp:link escape="true"
+											text="Simple Test" id="linkSimpleCrudTestp"
+											styleClass="lotusIndent15" value="/crudSimpleTest.xsp">
+										</xp:link>
+									</xp:panel>
+								</xp:panel>
+							</xp:panel>
+
+							<xp:link escape="true" id="linktimezone"
+								styleClass="lotusIndent10" text="Time Zone"
+								value="/propTimeZone.xsp">
+							</xp:link>
+							<xp:br></xp:br>
+							<xp:panel id="panelThemes">
+								<xp:link escape="true" text="Themes"
+									id="link8" styleClass="lotusIndent10">
+									<xp:eventHandler event="onclick"
+										submit="true" refreshMode="partial"
+										refreshId="panel4Themes">
+										<xp:this.action>
+
+											<xp:setValue
+												binding="#{sessionScope.themes1}">
+												<xp:this.value><![CDATA[#{javascript:var poo = sessionScope.themes1;
+if (poo =="on"){"off"
+}
+else{"on"
+}}]]></xp:this.value>
+											</xp:setValue>
+
+
+										</xp:this.action>
+									</xp:eventHandler>
+								</xp:link>
+								<xp:panel id="panel4Themes">
+									<xp:panel>
+										<xp:this.rendered><![CDATA[#{javascript:sessionScope.themes1 == "on"}]]></xp:this.rendered>
+
+										<xp:comboBox id="combo1" value="#{sessionScope.possibleTheme}" styleClass="lotusIndent15" style="margin-left:15.0px">
+					<xp:selectItem itemLabel="" />
+					<xp:selectItem itemLabel="notes" />
+					<xp:selectItem itemLabel="webstandard" />
+					<xp:selectItem itemLabel="oneui" />
+					<xp:selectItem itemLabel="oneuiv2" />
+					<xp:selectItem itemLabel="oneuiv2_green" />
+					<xp:selectItem itemLabel="oneuiv2_gold" />
+					<xp:selectItem itemLabel="oneuiv2_metal" />
+					<xp:selectItem itemLabel="oneuiv2_red" />
+					<xp:selectItem itemLabel="oneuiv2.1" />
+					<xp:selectItem itemLabel="oneuiv2.1_blue" />
+					<xp:selectItem itemLabel="oneuiv2.1_gen1" />
+					<xp:selectItem itemLabel="oneuiv2.1_gold" />
+					<xp:selectItem itemLabel="oneuiv2.1_green" />
+					<xp:selectItem itemLabel="oneuiv2.1_onyx" />
+					<xp:selectItem itemLabel="oneuiv2.1_orange" />
+					<xp:selectItem itemLabel="oneuiv2.1_pink" />
+					<xp:selectItem itemLabel="oneuiv2.1_purple" />
+					<xp:selectItem itemLabel="oneuiv2.1_red" />
+					<xp:selectItem itemLabel="oneuiv2.1_silver" />
+					<xp:selectItem itemLabel="oneuiv3.0.2" />
+<!--					<xp:selectItem itemLabel="oneuiv3.0.2_blue" />-->
+					<xp:selectItem itemLabel="oneuiv3.0.2_gen2" />
+<!--					<xp:selectItem itemLabel="oneuiv3.0.2_gold" />-->
+<!--					<xp:selectItem itemLabel="oneuiv3.0.2_green" />-->
+<!--					<xp:selectItem itemLabel="oneuiv3.0.2_onyx" />-->
+<!--					<xp:selectItem itemLabel="oneuiv3.0.2_orange" />-->
+<!--					<xp:selectItem itemLabel="oneuiv3.0.2_pink" />-->
+<!--					<xp:selectItem itemLabel="oneuiv3.0.2_purple" />-->
+<!--					<xp:selectItem itemLabel="oneuiv3.0.2_red" />-->
+					<xp:selectItem itemLabel="oneuiv3.0.2_silver" />
+
+
+
+					<xp:eventHandler event="onchange" submit="true" refreshMode="complete">
+						<xp:this.action><![CDATA[#{javascript:var f = "/"+@RightBack(context.getUrl().getAddress(),"/");
+context.setSessionProperty('xsp.theme', getComponent('combo1').getValue());
+context.redirectToPage(f)}]]></xp:this.action>
+					</xp:eventHandler>
+				</xp:comboBox>
+
+									</xp:panel>
+								</xp:panel>
+							</xp:panel>
+
+
+
+							<xp:link escape="true" id="linkvalidators"
+								styleClass="lotusIndent10" text="Validators"
+								value="/propValidatorsConvertors.xsp">
+							</xp:link>
+							<xp:br></xp:br>
+							<xp:link escape="true"
+								id="linkviewcategorisation" styleClass="lotusIndent10"
+								text="View Categorisation" value="/propCatResViews.xsp">
+							</xp:link>
+							<xp:panel id="panelViewFiltering">
+								<xp:link escape="true"
+									text="View Filtering" id="link15" styleClass="lotusIndent10">
+									<xp:eventHandler event="onclick"
+										submit="true" refreshMode="partial"
+										refreshId="panel4ViewFiltering">
+										<xp:this.action>
+
+
+											<xp:setValue
+												binding="#{sessionScope.vfilter}">
+												<xp:this.value><![CDATA[#{javascript:var poo = sessionScope.vfilter;
+if (poo =="on"){"off"
+}
+else{"on"
+}}]]></xp:this.value>
+											</xp:setValue>
+
+										</xp:this.action>
+									</xp:eventHandler>
+								</xp:link>
+								<xp:panel id="panel4ViewFiltering">
+									<xp:panel>
+										<xp:this.rendered><![CDATA[#{javascript:sessionScope.vfilter == "on"}]]></xp:this.rendered>
+										<xp:link escape="true"
+											text="Category Filter" id="link17" styleClass="lotusIndent15"
+											value="/viewFilteringCategory.xsp">
+										</xp:link>
+										<xp:br />
+										<xp:link escape="true"
+											text="Key" id="link18" styleClass="lotusIndent15"
+											value="/viewFiltering.xsp">
+										</xp:link>
+										<xp:br />
+										<xp:link escape="true"
+											text="Key - Exact Match" id="link19"
+											styleClass="lotusIndent15"
+											value="/viewFilteringExactCase.xsp">
+										</xp:link>
+										<xp:br />
+										<xp:link escape="true"
+											text="Key - by vector" id="link48"
+											styleClass="lotusIndent15"
+											value="/viewFilteringVector.xsp">
+										</xp:link>
+										<xp:br />
+										<xp:link escape="true"
+											text="startKey" id="link36"
+											styleClass="lotusIndent15"
+											value="/viewFilteringStartKey.xsp">
+										</xp:link>
+									</xp:panel>
+								</xp:panel>
+							</xp:panel>
+
+
+
+
+							<xp:link escape="true" id="linkheadersort"
+								styleClass="lotusIndent10" text="View Header Sort"
+								value="/propViewsHeaderSorting.xsp">
+							</xp:link>
+							<xp:br></xp:br>
+							<xp:link escape="true" id="linkunreadmarks"
+								styleClass="lotusIndent10" text="Unread Marks"
+								value="/viewsReadUnreadMarks.xsp">
+							</xp:link>
+							<xp:br></xp:br>
+							<xp:link escape="true" id="link49"
+								styleClass="lotusIndent10" text="Window open"
+								value="/xpOpenWindow.xsp">
+							</xp:link>
+
+							<xp:panel id="panelAtFunctions">
+								<xp:link escape="true" text="@Functions"
+									id="linkmnAtFunctions" styleClass="lotusIndent10">
+									<xp:eventHandler event="onclick"
+										submit="true" refreshMode="partial"
+										refreshId="panel4AtFunctions">
+										<xp:this.action>
+											<xp:actionGroup>
+												<xp:setValue
+													binding="#{sessionScope.atFunctions1}">
+													<xp:this.value><![CDATA[#{javascript:var poo = sessionScope.atFunctions1;
+if (poo =="on"){"off"
+}
+else{"on"
+}}]]></xp:this.value>
+												</xp:setValue>
+												<xp:openPage
+													name="/atFunctions.xsp">
+												</xp:openPage>
+											</xp:actionGroup>
+										</xp:this.action>
+									</xp:eventHandler>
+								</xp:link>
+								<xp:panel id="panel4AtFunctions">
+									<xp:panel xp:key="facetAtFunctions"
+										id="panel4facetatfunctions">
+										<xp:this.rendered><![CDATA[#{javascript:sessionScope.atFunctions1 == "on"}]]></xp:this.rendered>
+										<xp:link escape="true"
+											text="@A*" id="linkAtA" styleClass="lotusIndent15"
+											value="/atFunctionsA.xsp">
+										</xp:link>
+										<xp:br></xp:br>
+										<xp:link escape="true"
+											text="@B*" id="linkAtB" styleClass="lotusIndent15"
+											value="/atFunctionsB.xsp">
+										</xp:link>
+										<xp:br></xp:br>
+										<xp:link escape="true"
+											text="@C*" id="linkAtC" styleClass="lotusIndent15"
+											value="/atFunctionsC.xsp">
+										</xp:link>
+										<xp:br></xp:br>
+										<xp:link escape="true"
+											text="@D*" id="linkAtD" styleClass="lotusIndent15"
+											value="/atFunctionsD.xsp">
+										</xp:link>
+										<xp:br></xp:br>
+										<xp:link escape="true"
+											text="@E*" id="linkAtE" styleClass="lotusIndent15"
+											value="/atFunctionsE.xsp">
+										</xp:link>
+										<xp:br></xp:br>
+										<xp:link escape="true"
+											text="@F*" id="linkAtF" styleClass="lotusIndent15"
+											value="/atFunctionsF.xsp">
+										</xp:link>
+										<xp:br></xp:br>
+										<xp:link escape="true"
+											text="@G*" id="linkAtG" styleClass="lotusIndent15"
+											value="/atFunctionsG.xsp">
+										</xp:link>
+										<xp:br></xp:br>
+										<xp:link escape="true"
+											text="@H*" id="linkAtH" styleClass="lotusIndent15"
+											value="/atFunctionsH.xsp">
+										</xp:link>
+										<xp:br></xp:br>
+										<xp:link escape="true"
+											text="@I*" id="linkAtI" styleClass="lotusIndent15"
+											value="/atFunctionsI.xsp">
+										</xp:link>
+										<xp:br></xp:br>
+										<xp:link escape="true"
+											text="@L*" id="linkAtL" styleClass="lotusIndent15"
+											value="/atFunctionsL.xsp">
+										</xp:link>
+										<xp:br></xp:br>
+										<xp:link escape="true"
+											text="@M*" id="linkAtM" styleClass="lotusIndent15"
+											value="/atFunctionsM.xsp">
+										</xp:link>
+										<xp:br></xp:br>
+										<xp:link escape="true"
+											text="@N*" id="linkAtN" styleClass="lotusIndent15"
+											value="/atFunctionsN.xsp">
+										</xp:link>
+										<xp:br></xp:br>
+										<xp:link escape="true"
+											text="@P*" id="linkAtP" styleClass="lotusIndent15"
+											value="/atFunctionsP.xsp">
+										</xp:link>
+										<xp:br></xp:br>
+										<xp:link escape="true"
+											text="@R*" id="linkAtR" styleClass="lotusIndent15"
+											value="/atFunctionsR.xsp">
+										</xp:link>
+										<xp:br></xp:br>
+										<xp:link escape="true"
+											text="@S*" id="linkAtS" styleClass="lotusIndent15"
+											value="/atFunctionsS.xsp">
+										</xp:link>
+										<xp:br></xp:br>
+										<xp:link escape="true"
+											text="@T*" id="linkAtT" styleClass="lotusIndent15"
+											value="/atFunctionsT.xsp">
+										</xp:link>
+										<xp:br></xp:br>
+										<xp:link escape="true"
+											text="@U*" id="linkAtU" styleClass="lotusIndent15"
+											value="/atFunctionsU.xsp">
+										</xp:link>
+										<xp:br></xp:br>
+										<xp:link escape="true"
+											text="@W*" id="linkAtW" styleClass="lotusIndent15"
+											value="/atFunctionsW.xsp">
+										</xp:link>
+										<xp:br></xp:br>
+										<xp:link escape="true"
+											text="@Y*" id="linkAtY" styleClass="lotusIndent15"
+											value="/atFunctionsY.xsp">
+										</xp:link>
+									</xp:panel>
+								</xp:panel>
+							</xp:panel>
+							
+							<xc:ccSPRsMenu></xc:ccSPRsMenu>
+							</xp:panel>
+					</xp:panel>
+				</xp:panel>
+			</xp:panel>
+		</xp:panel>
+	</xp:panel>
+</xp:view>

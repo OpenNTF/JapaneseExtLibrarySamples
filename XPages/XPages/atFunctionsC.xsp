@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+
+
+
+	<XPa:ccLayout id="cc4cclayout" navPath="/events/atfc/">
+		<xp:this.facets>
+			<xc:ccMenu_events xp:key="facetLeft"></xc:ccMenu_events>
+			<xp:panel xp:key="facetMain">
+
+				<xp:panel>
+					<xp:label id="label1" value="@C*: "
+						style="font-weight:bold;font-size:12pt">
+					</xp:label>
+					<xp:comboBox id="comboBoxAtFuncsC"
+						value="#{sessionScope.atFuncsCs}" defaultValue="None">
+						<xp:selectItem itemLabel="None"
+							itemValue="None">
+						</xp:selectItem>
+						<xp:selectItem itemLabel="@Char"
+							itemValue="atFC01">
+						</xp:selectItem>
+						<xp:selectItem itemLabel="@ClientType"
+							itemValue="atFC02">
+						</xp:selectItem>
+						<xp:selectItem itemLabel="@ComputeFields"
+							itemValue="atFC03">
+						</xp:selectItem>
+						<xp:selectItem itemLabel="@Contains"
+							itemValue="atFC04">
+						</xp:selectItem>
+						<xp:selectItem itemLabel="@Count"
+							itemValue="atFC05">
+						</xp:selectItem>
+						<xp:selectItem itemLabel="@Created"
+							itemValue="atFC06">
+						</xp:selectItem>
+
+						<xp:eventHandler event="onchange" submit="true"
+							refreshMode="complete">
+							<xp:this.action>
+								<![CDATA[#{javascript:print("")}]]>
+							</xp:this.action>
+						</xp:eventHandler>
+					</xp:comboBox>
+					<xp:panel>
+
+						<xp:panel>
+							<xp:this.rendered>
+								<![CDATA[#{javascript:sessionScope.atFuncsCs == "atFC01"}]]>
+							</xp:this.rendered>
+							<xp:table styleClass="customTable">
+								<xp:tr>
+									<xp:td>
+										<xp:label value="@Function: "
+											id="label2">
+										</xp:label>
+									</xp:td>
+									<xp:td>
+
+										@Char(code:int) : string
+									</xp:td>
+								</xp:tr>
+								<xp:tr>
+									<xp:td>
+										<xp:label value="Description: "
+											id="label3">
+										</xp:label>
+									</xp:td>
+									<xp:td>
+
+										Returns a character that
+										corresponds to a Unicode value.
+									</xp:td>
+								</xp:tr>
+							</xp:table>
+						</xp:panel>
+
+						<xp:panel>
+							<xp:this.rendered>
+								<![CDATA[#{javascript:sessionScope.atFuncsCs == "atFC02"}]]>
+							</xp:this.rendered>
+							<xp:table styleClass="customTable">
+								<xp:tr>
+									<xp:td>
+										<xp:label value="@Function: "
+											id="label4">
+										</xp:label>
+									</xp:td>
+									<xp:td>
+
+										@ClientType() : string
+									</xp:td>
+								</xp:tr>
+								<xp:tr>
+									<xp:td>
+										<xp:label value="Description: "
+											id="label5">
+										</xp:label>
+									</xp:td>
+									<xp:td>
+
+										Returns the client type.
+									</xp:td>
+								</xp:tr>
+							</xp:table>
+						</xp:panel>
+						<xp:panel>
+							<xp:this.rendered>
+								<![CDATA[#{javascript:sessionScope.atFuncsCs == "atFC03"}]]>
+							</xp:this.rendered>
+							<xp:table styleClass="customTable">
+								<xp:tr>
+									<xp:td>
+										<xp:label value="@Function: "
+											id="label6">
+										</xp:label>
+									</xp:td>
+									<xp:td>
+
+										@ComputeFields() : void
+									</xp:td>
+								</xp:tr>
+								<xp:tr>
+									<xp:td>
+										<xp:label value="Description: "
+											id="label7">
+										</xp:label>
+									</xp:td>
+									<xp:td>
+
+										Recomputes all fields in the
+										current document.
+									</xp:td>
+								</xp:tr>
+							</xp:table>
+						</xp:panel>
+						<xp:panel>
+							<xp:this.rendered>
+								<![CDATA[#{javascript:sessionScope.atFuncsCs == "atFC04"}]]>
+							</xp:this.rendered>
+							<xp:table styleClass="customTable">
+								<xp:tr>
+									<xp:td>
+										<xp:label value="@Function: "
+											id="label8">
+										</xp:label>
+									</xp:td>
+									<xp:td>
+
+										@Contains(value:string,
+										subString:string) : int
+									</xp:td>
+								</xp:tr>
+								<xp:tr>
+									<xp:td>
+										<xp:label value="Description: "
+											id="label9">
+										</xp:label>
+									</xp:td>
+									<xp:td>
+
+										Determines whether a substring
+										is stored within a string, or if
+										a string list contains an item
+										that contains the given
+										substring.
+									</xp:td>
+								</xp:tr>
+							</xp:table>
+						</xp:panel>
+						<xp:panel>
+							<xp:this.rendered>
+								<![CDATA[#{javascript:sessionScope.atFuncsCs == "atFC05"}]]>
+							</xp:this.rendered>
+							<xp:table styleClass="customTable">
+								<xp:tr>
+									<xp:td>
+										<xp:label value="@Function: "
+											id="label10">
+										</xp:label>
+									</xp:td>
+									<xp:td>
+
+										@Count(list:any) : int
+									</xp:td>
+								</xp:tr>
+								<xp:tr>
+									<xp:td>
+										<xp:label value="Description: "
+											id="label11">
+										</xp:label>
+									</xp:td>
+									<xp:td>
+
+										Returns the number of entries in
+										the list.
+									</xp:td>
+								</xp:tr>
+							</xp:table>
+						</xp:panel>
+						<xp:panel>
+							<xp:this.rendered>
+								<![CDATA[#{javascript:sessionScope.atFuncsCs == "atFC06"}]]>
+							</xp:this.rendered>
+							<xp:table styleClass="customTable">
+								<xp:tr>
+									<xp:td>
+										<xp:label value="@Function: "
+											id="label12">
+										</xp:label>
+									</xp:td>
+									<xp:td>
+
+										@Created() : Date
+									</xp:td>
+								</xp:tr>
+								<xp:tr>
+									<xp:td>
+										<xp:label value="Description: "
+											id="label13">
+										</xp:label>
+									</xp:td>
+									<xp:td>
+
+										Returns the creation date and
+										time of the current document.
+									</xp:td>
+								</xp:tr>
+							</xp:table>
+							<xp:panel styleClass="content">
+								<xp:this.data>
+									<xp:dominoDocument var="document1"
+										formName="xspAtFunctions">
+									</xp:dominoDocument>
+									<xp:dominoView var="view1"
+										viewName="xspAtFunctionsView">
+									</xp:dominoView>
+								</xp:this.data>
+
+								Select any of the following link to
+								compute the field below:
+
+
+								<xp:repeat id="repeat2" value="#{view1}"
+									rows="100" var="coll1">
+
+
+									<xp:table id="table2"
+										styleClass="customTable">
+										<xp:tr>
+
+
+											<xp:td>
+												<xp:image
+													url="/actn103.gif" id="image3">
+												</xp:image>
+
+												<xp:link id="link2">
+													<xp:this.text>
+														<![CDATA[#{javascript:coll1.getColumnValue("subject")}]]>
+													</xp:this.text>
+
+													<xp:eventHandler
+														event="onclick" submit="true" refreshMode="complete">
+														<xp:this.action>
+															<xp:openPage
+																name="/atFunctionsC.xsp" target="openDocument"
+																documentId="#{javascript:coll1.getId()}">
+															</xp:openPage>
+														</xp:this.action>
+													</xp:eventHandler>
+												</xp:link>
+											</xp:td>
+
+										</xp:tr>
+									</xp:table>
+								</xp:repeat>
+								<xp:label
+									value="When was this document created: " id="label21"
+									rendered="false">
+								</xp:label>
+								<xp:text escape="true"
+									id="computedField4AtCreated01"
+									style="color:rgb(128,0,255);font-weight:bold"
+									rendered="#{javascript:!document1.isNewNote()}">
+									<xp:this.value><![CDATA[#{javascript://@Explode(@Created(),",")
+var cre = @Created()
+"This document was created: "+ cre+" ("+@Year(cre)+@Month(cre)+@Day(cre)+")"}]]></xp:this.value>
+								</xp:text>
+							</xp:panel>
+
+
+
+						</xp:panel>
+
+
+
+
+
+
+
+
+
+
+					</xp:panel>
+				</xp:panel>
+
+			</xp:panel>
+
+		</xp:this.facets>
+	</XPa:ccLayout>
+
+
+
+
+</xp:view>

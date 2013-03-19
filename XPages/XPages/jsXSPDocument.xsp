@@ -1,0 +1,817 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+
+	<xp:this.data>
+		<xp:dominoDocument var="document1"
+			formName="xspjsNotesXspDocument">
+		</xp:dominoDocument>
+		<xp:dominoView var="view1" viewName="xspjsNotesXspDocument"></xp:dominoView>
+	</xp:this.data>
+
+
+
+	<XPa:ccLayout id="cc4cclayout" navPath="/other/godocument/">
+		<xp:this.facets>
+			<xc:ccMenu_other xp:key="facetLeft"></xc:ccMenu_other>
+			<xp:panel xp:key="facetMain">
+
+				<xp:span style="font-size:12pt;font-weight:bold">
+					JavaScript : NotesXspDocument
+
+				</xp:span>
+				<xp:br style="font-size:12pt"></xp:br>
+				<xp:span style="font-size:12pt;font-weight:bold">
+					<xp:span
+						style="font-size:9pt;color:rgb(0,128,255)">
+						Displays all the Javascript funtions associated
+						with NotesXspDocument
+					</xp:span>
+					<xp:br></xp:br>
+					<xp:span
+						style="font-size:9pt;color:rgb(0,128,255)">
+					</xp:span>
+					<xp:span
+						style="font-size:9pt;color:rgb(0,128,255);font-weight:bold">
+					</xp:span>
+				</xp:span>
+				<xp:br></xp:br>
+
+				<xp:panel>
+					<xp:div style="text-align:left">
+						&#160;
+
+
+
+
+
+
+
+
+
+						<xp:button value="New" id="button1">
+
+							<xp:this.rendered><![CDATA[#{javascript:if(document1.isNewNote()){
+	return false;
+}else{
+	return true;
+}}]]></xp:this.rendered>
+							<xp:eventHandler event="onclick"
+								submit="true" refreshMode="complete" immediate="true"
+								id="eventHandler10">
+								<xp:this.action>
+
+									<xp:actionGroup>
+										<xp:openPage
+											name="/jsXSPDocument.xsp" target="newDocument">
+										</xp:openPage>
+
+
+									</xp:actionGroup>
+								</xp:this.action>
+							</xp:eventHandler>
+						</xp:button>
+						<xp:button value="Save " id="button2">
+							<xp:this.rendered><![CDATA[#{javascript:if(document1.isEditable()){
+	return true;
+}else{
+	return false;
+}}]]></xp:this.rendered>
+							<xp:eventHandler event="onclick"
+								submit="true" refreshMode="complete" id="eventHandler5">
+								<xp:this.action><![CDATA[#{javascript:document1.save()
+context.reloadPage();
+}]]></xp:this.action>
+							</xp:eventHandler>
+						</xp:button>
+						<xp:button value="New Response" id="button5">
+							<xp:this.rendered><![CDATA[#{javascript:if(document1.isNewNote()){
+	return false;
+}else{
+	return true;
+}}]]></xp:this.rendered>
+							<xp:eventHandler event="onclick"
+								submit="true" refreshMode="complete" id="eventHandler11">
+								<xp:this.action>
+									<xp:createResponse
+										parentId="#{javascript:document1.getNoteID()}"
+										name="/jsXSPDocumentResponse.xsp">
+									</xp:createResponse>
+								</xp:this.action>
+							</xp:eventHandler>
+						</xp:button>
+						&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+						<xp:button value="Toggle" id="button3">
+							<xp:this.rendered><![CDATA[#{javascript:if(document1.isNewNote()){
+	return false;
+}else{
+	return true;
+}}]]></xp:this.rendered>
+							<xp:eventHandler event="onclick"
+								submit="true" refreshMode="complete" id="eventHandler9">
+								<xp:this.action>
+									<xp:changeDocumentMode
+										mode="toggle">
+									</xp:changeDocumentMode>
+								</xp:this.action>
+							</xp:eventHandler>
+						</xp:button>
+						<xp:button value="Delete" id="button4">
+							<xp:this.rendered><![CDATA[#{javascript:if(document1.isNewNote()){
+	return false;
+}else{
+	return true;
+}}]]></xp:this.rendered>
+							<xp:eventHandler event="onclick"
+								submit="true" refreshMode="complete" id="eventHandler8">
+								<xp:this.action>
+
+									<xp:actionGroup>
+										<xp:deleteDocument name=""></xp:deleteDocument>
+										<xp:openPage
+											name="/jsXSPDocument.xsp" target="newDocument">
+										</xp:openPage>
+									</xp:actionGroup>
+								</xp:this.action>
+							</xp:eventHandler>
+						</xp:button>
+
+
+
+						                &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;             
+						<xp:div style="text-align:right">
+							<xp:link escape="true" id="link3"
+								value="/jsXSPView.xsp" text="Open NotesXspViewEntry Page"
+								style="font-weight:bold;text-align:right">
+								<xp:this.rendered><![CDATA[#{javascript:if(document1.isNewNote()){
+	return false;
+}else{
+	return true;
+}}]]></xp:this.rendered>
+							</xp:link>
+							   
+						</xp:div>
+						                                     
+
+					</xp:div>
+					<xp:table>
+						<xp:tr>
+							<xp:td>
+
+
+
+							</xp:td>
+							<xp:td>
+
+
+
+
+								&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+
+								&#160;
+
+
+
+
+							</xp:td>
+
+
+							<xp:td></xp:td>
+						</xp:tr>
+						<xp:tr>
+							<xp:td style="font-weight:bold">
+								subject
+							</xp:td>
+							<xp:td>
+								<xp:inputText id="inputText1"
+									value="#{document1.NotesXspDocumentSubject}">
+								</xp:inputText>
+							</xp:td>
+
+
+							<xp:td></xp:td>
+						</xp:tr>
+						<xp:tr>
+							<xp:td style="font-weight:bold">date</xp:td>
+							<xp:td>
+								<xp:inputText id="inputText2"
+									value="#{document1.NotesXspDocumentDate}">
+									<xp:this.converter>
+										<xp:convertDateTime type="both"
+											timeStyle="short" dateStyle="long">
+										</xp:convertDateTime>
+									</xp:this.converter>
+									<xp:dateTimeHelper
+										id="dateTimeHelper1">
+									</xp:dateTimeHelper>
+								</xp:inputText>
+							</xp:td>
+
+
+							<xp:td></xp:td>
+						</xp:tr>
+						<xp:tr>
+							<xp:td style="font-weight:bold">
+								integer
+							</xp:td>
+							<xp:td>
+								<xp:inputText id="inputText4"
+									value="#{document1.NotesXspDocumentInteger}">
+									<xp:this.converter>
+										<xp:convertNumber type="number"
+											integerOnly="true">
+										</xp:convertNumber>
+									</xp:this.converter>
+								</xp:inputText>
+							</xp:td>
+							<xp:td></xp:td>
+						</xp:tr>
+						<xp:tr>
+							<xp:td style="font-weight:bold">
+								double
+							</xp:td>
+							<xp:td>
+								<xp:inputText id="inputText3"
+									value="#{document1.NotesXspDocumentDouble}">
+									<xp:this.converter>
+										<xp:convertNumber
+											type="currency" currencySymbol="$">
+										</xp:convertNumber>
+									</xp:this.converter>
+								</xp:inputText>
+								<xp:messages id="messages1"></xp:messages>
+							</xp:td>
+
+
+							<xp:td></xp:td>
+						</xp:tr>
+
+
+
+						<xp:tr>
+							<xp:td style="font-weight:bold">body</xp:td>
+							<xp:td>
+
+								<xp:inputRichText id="inputRichText1"
+									value="#{document1.NotesXspDocumentBody}">
+								</xp:inputRichText>
+							</xp:td>
+							<xp:td>
+								&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+							</xp:td>
+						</xp:tr>
+					</xp:table>
+
+
+
+
+
+
+					<xp:br></xp:br>
+
+					<xp:br></xp:br>
+					<xp:fileUpload id="fileUpload1"
+						value="#{document1.NotesXspDocumentBody}">
+					</xp:fileUpload>
+					<xp:fileDownload rows="30" id="fileDownload1"
+						displayLastModified="false"
+						value="#{document1.NotesXspDocumentBody}" allowDelete="true">
+					</xp:fileDownload>
+					<xp:div></xp:div>
+				</xp:panel>
+
+
+				<xp:br></xp:br>
+				<xp:dataTable id="dataTable1" rows="30" value="#{view1}"
+					var="coll1"
+					style="border-color:rgb(0,128,255);border-style:solid">
+					<xp:column id="column3"></xp:column>
+					<xp:column id="column1">
+
+					</xp:column>
+					<xp:column id="column2">
+						<xp:link escape="true" id="link1">
+							<xp:this.text><![CDATA[#{javascript:coll1.getColumnValue("Subject")
+}]]></xp:this.text>
+
+							<xp:eventHandler event="onclick"
+								submit="true" refreshMode="complete">
+								<xp:this.action>
+									<xp:openPage
+										name="/jsXSPDocument.xsp" target="openDocument"
+										documentId="#{javascript:coll1.getId()}">
+									</xp:openPage>
+								</xp:this.action>
+							</xp:eventHandler>
+						</xp:link>
+					</xp:column>
+					<xp:column id="column7"></xp:column>
+					<xp:column id="column4">
+						<xp:text escape="true" id="computedField20">
+							<xp:this.value><![CDATA[#{javascript:coll1.getColumnValue("Due Date");}]]></xp:this.value>
+						</xp:text>
+					</xp:column>
+					<xp:column id="column5">
+						<xp:text escape="true" id="computedField21">
+							<xp:this.value><![CDATA[#{javascript:coll1.getColumnValue("Price");}]]></xp:this.value>
+						</xp:text>
+					</xp:column>
+					<xp:column id="column6">
+						<xp:text escape="true" id="computedField22">
+							<xp:this.value><![CDATA[#{javascript:coll1.getColumnValue("Quantity");}]]></xp:this.value>
+						</xp:text>
+					</xp:column>
+				</xp:dataTable>
+				<xp:br></xp:br>
+				<xp:table>
+
+
+
+
+					<xp:tr>
+						<xp:td>getDocument()</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							Gets the document as a NotesDocument object
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:text escape="true" id="computedField2"
+								value="#{javascript:document1.getDocument().isValid()}">
+							</xp:text>
+						</xp:td>
+						<xp:td></xp:td>
+
+
+
+					</xp:tr>
+
+					<xp:tr>
+						<xp:td>getForm()</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							Gets the name of the document's form.
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:text escape="true" id="computedField3"
+								value="#{javascript:document1.getForm()}">
+							</xp:text>
+						</xp:td>
+						<xp:td></xp:td>
+
+
+
+					</xp:tr>
+					<xp:tr>
+						<xp:td>getItemValue()</xp:td>
+						<xp:td></xp:td>
+						<xp:td>Gets the value of an item.</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:text escape="true" id="computedField4"
+								value="#{javascript:document1.getItemValueArray('NotesXspDocumentSubject');}">
+							</xp:text>
+						</xp:td>
+						<xp:td></xp:td>
+
+
+
+					</xp:tr>
+					<xp:tr>
+						<xp:td>getItemValueArray()</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							Gets the value of an item as an array of
+							objects.
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:text escape="true"
+								id="computedField5">
+								<xp:this.value><![CDATA[#{javascript:var subjects = new Array();
+subjects = document1.getItemValueArray('NotesXspDocumentBody').concat();
+return subjects;}]]></xp:this.value>
+							</xp:text>
+						</xp:td>
+						<xp:td></xp:td>
+
+
+
+					</xp:tr>
+					<xp:tr>
+						<xp:td>getItemValueDate()</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							Gets the value of an item as a date.
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:text escape="true" id="computedField6"
+								value="#{javascript:document1.getItemValueDate('NotesXspDocumentDate');}">
+							</xp:text>
+						</xp:td>
+						<xp:td></xp:td>
+
+
+
+					</xp:tr>
+					<xp:tr>
+						<xp:td>getItemValueDateTime()</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							Gets the value of an item as a Notes®
+							date/time.
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:text escape="true" id="computedField7"
+								value="#{javascript:document1.getItemValueDateTime('NotesXspDocumentDate');}">
+							</xp:text>
+						</xp:td>
+						<xp:td></xp:td>
+
+
+
+					</xp:tr>
+					<xp:tr>
+						<xp:td>getItemValueDouble()</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							Gets the value of an item as a double.
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:text escape="true" id="computedField8"
+								value="#{javascript:document1.getItemValueDouble('NotesXspDocumentDouble');}">
+							</xp:text>
+						</xp:td>
+						<xp:td></xp:td>
+
+
+
+					</xp:tr>
+					<xp:tr>
+						<xp:td>getItemValueInteger()</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							Gets the value of an item as a integer.
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:text escape="true" id="computedField9"
+								value="#{javascript:document1.getItemValueInteger('NotesXspDocumentInteger');}">
+							</xp:text>
+						</xp:td>
+						<xp:td></xp:td>
+
+
+
+					</xp:tr>
+					<xp:tr>
+						<xp:td>getItemValueString()</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							Gets the value of an item as a string.
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:text escape="true" id="computedField10"
+								value="#{javascript:document1.getItemValueString('NotesXspDocumentBody')}">
+							</xp:text>
+						</xp:td>
+						<xp:td></xp:td>
+
+
+
+					</xp:tr>
+					<xp:tr>
+						<xp:td>hasItem()</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							Checks if the document contains an item.
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:text escape="true"
+								id="computedField11">
+								<xp:this.value><![CDATA[#{javascript:document1.hasItem('NotesXspDocumentSubject')
+}]]></xp:this.value>
+							</xp:text>
+						</xp:td>
+						<xp:td></xp:td>
+
+
+
+					</xp:tr>
+					<xp:tr>
+						<xp:td>removeItem()</xp:td>
+						<xp:td></xp:td>
+						<xp:td>Removes an item.</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:button value="Remove Item"
+								id="button8">
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="complete" id="eventHandler3">
+									<xp:this.action><![CDATA[#{javascript:document1.removeItem('NotesXspDocumentSubject');}]]></xp:this.action>
+								</xp:eventHandler>
+							</xp:button>
+						</xp:td>
+						<xp:td></xp:td>
+
+
+
+					</xp:tr>
+					<xp:tr>
+						<xp:td>replaceItemValue()</xp:td>
+						<xp:td></xp:td>
+						<xp:td>Replaces the value of an item.</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:button value="Replace Item Value"
+								id="button9">
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="complete" id="eventHandler4">
+									<xp:this.action><![CDATA[#{javascript:document1.replaceItemValue('NotesXspDocumentSubject',"Subject field has been replaced")}]]></xp:this.action>
+								</xp:eventHandler>
+							</xp:button>
+						</xp:td>
+						<xp:td></xp:td>
+
+
+
+					</xp:tr>
+					<xp:tr>
+						<xp:td>getNoteID()</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							Gets the note ID of the current document.
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:text escape="true" id="computedField12"
+								value="#{javascript:document1.getNoteID()}">
+							</xp:text>
+						</xp:td>
+						<xp:td></xp:td>
+
+
+
+					</xp:tr>
+					<xp:tr>
+						<xp:td>getParentDatabase()</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							Gets the parent database of the document
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:text escape="true" id="computedField13"
+								value="#{javascript:document1.getParentDatabase()}">
+							</xp:text>
+						</xp:td>
+						<xp:td></xp:td>
+
+
+
+					</xp:tr>
+
+					<xp:tr>
+						<xp:td>getValue()</xp:td>
+						<xp:td></xp:td>
+						<xp:td>Gets the value of an item.</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:text escape="true" id="computedField14"
+								value="#{javascript:document1.getValue('NotesXspDocumentSubject')}">
+							</xp:text>
+						</xp:td>
+						<xp:td></xp:td>
+
+
+
+					</xp:tr>
+					<xp:tr>
+						<xp:td>setValue()</xp:td>
+						<xp:td></xp:td>
+						<xp:td>Sets the value of an item.</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+
+							<xp:button value="Set Value"
+								id="button10">
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="complete" id="eventHandler6">
+									<xp:this.action><![CDATA[#{javascript:document1.setValue('NotesXspDocumentSubject',"Subject field has been set")}]]></xp:this.action>
+								</xp:eventHandler>
+							</xp:button>
+						</xp:td>
+						<xp:td></xp:td>
+
+
+
+					</xp:tr>
+					<xp:tr>
+						<xp:td>isEditable()</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							Checks if the current document is in edit
+							mode.
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:text escape="true" id="computedField15"
+								value="#{javascript:document1.isEditable()}">
+							</xp:text>
+						</xp:td>
+						<xp:td></xp:td>
+
+
+
+					</xp:tr>
+					<xp:tr>
+						<xp:td>isNewNote()</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							Checks if a new document is being created.
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:text escape="true" id="computedField16"
+								value="#{javascript:document1.isNewNote()}">
+							</xp:text>
+						</xp:td>
+						<xp:td></xp:td>
+
+
+
+					</xp:tr>
+					<xp:tr>
+						<xp:td>isResponse()</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							Checks if the current document is a response
+							document.
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:text escape="true" id="computedField17"
+								value="#{javascript:document1.isResponse()}">
+							</xp:text>
+						</xp:td>
+						<xp:td></xp:td>
+
+
+
+					</xp:tr>
+
+
+
+
+
+
+
+
+					<xp:tr>
+						<xp:td>isDataBeingLoaded()</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							Checks if the current document is being
+							loaded.
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:text escape="true" id="computedField18"
+								value="#{javascript:context.isDataBeingLoaded()}">
+							</xp:text>
+						</xp:td>
+						<xp:td>
+
+						</xp:td>
+
+
+
+					</xp:tr>
+					<xp:tr>
+						<xp:td>isDataBeingSaved()</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							Checks if the current document is being
+							saved.
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:text escape="true" id="computedField19"
+								value="#{javascript:context.isDataBeingSaved()}">
+							</xp:text>
+						</xp:td>
+						<xp:td>
+
+						</xp:td>
+
+
+
+					</xp:tr>
+					<xp:tr>
+						<xp:td>getAttachmentList()</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							Gets the attachments in the document.
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:text escape="true"
+								id="computedField1">
+								<xp:this.value><![CDATA[#{javascript:var attachmentList;// = new Array();
+attachmentList = document1.getAttachmentList('NotesXspDocumentBody').size();
+return attachmentList;}]]></xp:this.value>
+							</xp:text>
+						</xp:td>
+						<xp:td></xp:td>
+
+
+
+					</xp:tr>
+					<xp:tr>
+						<xp:td>removeAttachment()</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							Removes an attachment in the document
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:button value="Remove attachment"
+								id="button11">
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="complete" id="eventHandler2">
+									<xp:this.action><![CDATA[#{javascript:var element = getComponent('inputText5');
+var attachmentName = element.value;
+
+document1.removeAttachment('NotesXspDocumentBody',attachmentName);//"LAKE.GIF");}]]></xp:this.action>
+								</xp:eventHandler>
+							</xp:button>
+						</xp:td>
+						<xp:td>
+							&#160;
+
+						</xp:td>
+
+
+
+					</xp:tr>
+					<xp:tr>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+
+							Name of attachment to remove:
+							<xp:inputText id="inputText5"></xp:inputText>
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>removeAllAttachments()</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							Removes all the attachments in the document.
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:button value="Remove all attachments"
+								id="button12">
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="complete" id="eventHandler1">
+									<xp:this.action><![CDATA[#{javascript:document1.removeAllAttachments('NotesXspDocumentBody')}]]></xp:this.action>
+								</xp:eventHandler>
+							</xp:button>
+						</xp:td>
+						<xp:td></xp:td>
+
+
+
+					</xp:tr>
+					<xp:tr>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+
+
+
+					</xp:tr>
+				</xp:table>
+
+				<xp:br></xp:br>
+
+
+
+			</xp:panel>
+		</xp:this.facets>
+	</XPa:ccLayout>
+</xp:view>

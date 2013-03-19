@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf">
+
+	<XPa:ccLayout><xp:this.facets>
+	<xp:panel xp:key="facetMain">
+	
+	<xp:this.data>
+					<xp:dominoDocument var="document1"
+						formName="xspjsFilterHtml">
+					</xp:dominoDocument>
+				</xp:this.data>
+				<xp:br></xp:br>
+				<xp:span style="font-weight:bold;font-size:16pt">
+					htmlFilter
+				</xp:span>
+				<xp:br style="font-weight:bold"></xp:br>
+				<xp:span style="color:rgb(0,128,255)">
+					htmlFilterIn parses rich text &quot;on the way
+					in&quot; and stroes it that way
+				</xp:span>
+				<xp:br></xp:br><xp:span style="color:rgb(0,128,255)"> &#160;&#160;&#160;&#160;Identity - does no filtering when used
+								as htmlFilter or htmlFilterIn
+							</xp:span>
+	<xp:br style="color:rgb(0,128,255)"></xp:br><xp:span style="color:rgb(0,128,255)"> &#160;&#160;&#160;&#160;Acf - uses the acf library (based on
+							acf-config.xml) to filter when used as
+							htmlFiler or htmlFilterIn
+						
+	</xp:span><xp:br style="color:rgb(0,128,255)"></xp:br> &#160;&#160;&#160;&#160;<xp:span style="color:rgb(0,128,255)">Empty - entire text is stripped out when
+							used as htmlFiler or htmlFilterIn
+						
+	</xp:span><xp:br style="color:rgb(0,128,255)"></xp:br><xp:span style="color:rgb(0,128,255)"> &#160;&#160;&#160;&#160;Striptags - removes all formatting (by
+							stripping out all tags) when used as
+							htmlFiler or htmlFilterIn</xp:span>
+				<xp:br></xp:br>
+				<xp:br></xp:br>
+				<xp:table>
+					<xp:tr>
+						<xp:td>Subject  </xp:td>
+						<xp:td>
+							<xp:div>
+								<xp:inputText id="inputText1"
+									value="#{document1.jsFilterHtmlSubject}"
+									style="text-align:center">
+								</xp:inputText>
+								&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+								
+								&#160;
+
+								<xp:link escape="true"
+									text="Return to Main Page" id="link1"
+									value="/jsFilterHtmlMain.xsp">
+								</xp:link>
+							</xp:div>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td colspan="2">
+							<xp:span
+								style="font-size:12pt;font-weight:bold">
+							</xp:span>
+							<xp:span
+								style="font-size:14pt;font-weight:bold">
+							</xp:span>
+							<xp:span
+								style="font-size:12pt;font-weight:bold">
+							</xp:span>
+							<xp:span
+								style="font-size:14pt;font-weight:bold">
+								htmlFilter:
+							</xp:span>
+							<xp:span
+								style="font-size:12pt;font-weight:bold">
+								Identity
+							</xp:span>
+							<xp:span
+								style="font-size:14pt;font-weight:bold">
+							</xp:span>
+						</xp:td>
+
+					</xp:tr>
+					<xp:tr>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td valign="top" style="font-weight:bold">
+							<xp:span style="font-weight:bold"></xp:span>
+							Before filtering :
+							<xp:span style="font-weight:bold"></xp:span>
+						</xp:td>
+						<xp:td>
+							<xp:text escape="true"
+								id="computedField1">
+								<xp:this.value><![CDATA[#{javascript:var element=getComponent('inputRichText1');
+return element.value;
+//return context.filterHTML(body);}]]></xp:this.value>
+							</xp:text>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td valign="top" style="font-weight:bold">
+							<xp:span>All Properties:</xp:span>
+						</xp:td>
+						<xp:td>
+							<xp:inputRichText id="inputRichText1"
+								value="#{document1.jsFilterHtmlBody}" htmlFilter="identity">
+							</xp:inputRichText>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td valign="top" style="font-weight:bold">
+							<xp:span>JavaScript:</xp:span>
+						</xp:td>
+						<xp:td>
+							<xp:inputRichText id="inputRichText2">
+								<xp:this.value><![CDATA[#{javascript:var body = ""+document1.getValue('jsFilterHtmlBody');
+return context.filterHTML(body,"identity");}]]></xp:this.value>
+							</xp:inputRichText>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td colspan="2">
+							<xp:span
+								style="font-size:14pt;font-weight:bold">
+							</xp:span>
+							<xp:span
+								style="font-size:12pt;font-weight:bold">
+							</xp:span>
+							<xp:span
+								style="font-size:14pt;font-weight:bold">
+								htmlFilter:
+							</xp:span>
+							<xp:span
+								style="font-size:14pt;font-weight:bold">
+							</xp:span>
+							<xp:span
+								style="font-size:14pt;font-weight:bold">
+								acf
+							</xp:span>
+							<xp:span
+								style="font-size:14pt;font-weight:bold">
+							</xp:span>
+						</xp:td>
+
+					</xp:tr>
+					<xp:tr>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td valign="top" style="font-weight:bold">
+							<xp:span>Before filtering :</xp:span>
+						</xp:td>
+						<xp:td>
+							<xp:text escape="true"
+								id="computedField2">
+								<xp:this.value><![CDATA[#{javascript:var element=getComponent('inputRichText2');
+return element.value;
+//return context.filterHTML(body);}]]></xp:this.value>
+							</xp:text>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td valign="top" style="font-weight:bold">
+
+							All Properties:
+						</xp:td>
+						<xp:td>
+							<xp:inputRichText id="inputRichText3"
+								htmlFilter="acf" value="#{document1.jsFilterHtmlBody}">
+							</xp:inputRichText>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td valign="top" style="font-weight:bold">
+							JavaScript:
+						</xp:td>
+						<xp:td>
+							<xp:inputRichText id="inputRichText4">
+								<xp:this.value><![CDATA[#{javascript:var body = ""+document1.getValue('jsFilterHtmlBody');
+return context.filterHTML(body,"acf");}]]></xp:this.value>
+							</xp:inputRichText>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td colspan="2">
+							<xp:span
+								style="font-size:12pt;font-weight:bold">
+							</xp:span>
+							<xp:span
+								style="font-size:14pt;font-weight:bold">
+							</xp:span>
+							<xp:span
+								style="font-size:12pt;font-weight:bold">
+							</xp:span>
+							<xp:span
+								style="font-size:14pt;font-weight:bold">
+								htmlFilter:  empty
+							</xp:span>
+							<xp:span
+								style="font-size:14pt;font-weight:bold">
+							</xp:span>
+							<xp:span
+								style="font-size:14pt;font-weight:bold">
+							</xp:span>
+						</xp:td>
+
+					</xp:tr>
+					<xp:tr>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td valign="top" style="font-weight:bold">
+							Before filtering
+						</xp:td>
+						<xp:td>
+							<xp:text escape="true"
+								id="computedField3">
+								<xp:this.value><![CDATA[#{javascript:var element=getComponent('inputRichText3');
+return element.value;
+//return context.filterHTML(body);}]]></xp:this.value>
+							</xp:text>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td valign="top" style="font-weight:bold">
+							All Properties:
+						</xp:td>
+						<xp:td>
+							<xp:inputRichText id="inputRichText5"
+								htmlFilter="empty" value="#{document1.jsFilterHtmlBody}">
+							</xp:inputRichText>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td valign="top" style="font-weight:bold">
+							JavaScript:
+						</xp:td>
+						<xp:td>
+							<xp:inputRichText id="inputRichText6">
+								<xp:this.value><![CDATA[#{javascript:var body = ""+document1.getValue('jsFilterHtmlBody');
+return context.filterHTML(body,"empty");}]]></xp:this.value>
+							</xp:inputRichText>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td style="font-size:14pt" colspan="2">
+							<xp:span
+								style="font-size:14pt;font-weight:bold">
+							</xp:span>
+							<xp:span
+								style="font-size:12pt;font-weight:bold">
+							</xp:span>
+							<xp:span
+								style="font-size:14pt;font-weight:bold">
+								htmlFilter:  striptags
+							</xp:span>
+							<xp:span
+								style="font-size:14pt;font-weight:bold">
+							</xp:span>
+						</xp:td>
+
+					</xp:tr>
+					<xp:tr>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td valign="top" style="font-weight:bold">
+							Before filtering:
+						</xp:td>
+						<xp:td>
+							<xp:text escape="true"
+								id="computedField4">
+								<xp:this.value><![CDATA[#{javascript:var element=getComponent('inputRichText4');
+return element.value;
+//return context.filterHTML(body);}]]></xp:this.value>
+							</xp:text>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td valign="top" style="font-weight:bold">
+							All Properties:
+						</xp:td>
+						<xp:td>
+							<xp:inputRichText id="inputRichText7"
+								htmlFilter="striptags" value="#{document1.jsFilterHtmlBody}">
+							</xp:inputRichText>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td valign="top" style="font-weight:bold">
+							JavaScript:
+						</xp:td>
+						<xp:td>
+							<xp:inputRichText id="inputRichText8">
+								<xp:this.value><![CDATA[#{javascript:var body = ""+document1.getValue('jsFilterHtmlBody');
+return context.filterHTML(body,"striptags");}]]></xp:this.value>
+							</xp:inputRichText>
+						</xp:td>
+					</xp:tr>
+
+
+
+
+				</xp:table>
+				<b></b>
+
+				<b></b>
+				<xp:span style="font-size:12pt;font-weight:bold"></xp:span>
+				<b></b>
+				<b></b>
+				<xp:br></xp:br>
+	
+	
+	
+	</xp:panel></xp:this.facets></XPa:ccLayout></xp:view>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+
+	<xc:ccWidget><xp:this.facets>
+	<xp:panel xp:key="facet_1">
+		<xp:viewPanel rows="10" id="viewPanel1">
+			<xp:this.facets>
+				<xp:pager partialRefresh="true"
+					layout="Previous Group Next" xp:key="headerPager" id="pager1" panelPosition="left">
+				</xp:pager>
+			</xp:this.facets>
+			<xp:this.data>
+				<xp:dominoView var="xspCountryCity02"
+					viewName="xspCountryCity02">
+				</xp:dominoView>
+			</xp:this.data>
+			<xp:viewColumn columnName="City" id="viewColumn1" displayAs="link" openDocAsReadonly="true">
+				<xp:viewColumnHeader value="City"
+					id="viewColumnHeader1">
+				</xp:viewColumnHeader>
+			<xp:eventHandler event="onclick" submit="true" refreshMode="complete">
+				<xp:this.script>
+					<xp:publishViewColumn type="string" name="pubCity1"
+						columnName="City">
+					</xp:publishViewColumn>
+				</xp:this.script></xp:eventHandler></xp:viewColumn>
+			<xp:viewColumn columnName="Country" id="viewColumn2" displayAs="link" openDocAsReadonly="true">
+				<xp:viewColumnHeader value="Country"
+					id="viewColumnHeader2">
+				</xp:viewColumnHeader>
+			<xp:eventHandler event="onclick" submit="true" refreshMode="complete">
+				<xp:this.script>
+					<xp:publishViewColumn name="pubCountry1"
+						columnName="Country" type="string">
+					</xp:publishViewColumn>
+				</xp:this.script></xp:eventHandler></xp:viewColumn>
+		</xp:viewPanel></xp:panel></xp:this.facets></xc:ccWidget></xp:view>

@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+
+
+	<XPa:ccLayout  navPath="/events/prservermore/">
+		<xp:this.facets>
+			<xc:ccMenu_events xp:key="facetLeft"></xc:ccMenu_events>
+			<xp:panel xp:key="facetMain">
+				<xp:br></xp:br>
+
+
+				<xp:this.data>
+					<xp:dominoDocument var="dominoDocument1"
+						formName="xspPartialRefresh">
+					</xp:dominoDocument>
+					<xp:dominoView var="xspPartialRefresh"
+						viewName="xspPartialRefresh">
+					</xp:dominoView>
+				</xp:this.data>
+
+
+				<xp:span
+					style="color:rgb(0,128,255);font-weight:bold;font-size:16pt">
+					Partial Refresh - More Server Options
+				</xp:span>
+
+				&#160;
+				<xp:link escape="true" text="Return to Previous"
+					id="link1">
+					<xp:eventHandler event="onclick" submit="true"
+						refreshMode="complete" immediate="true">
+						<xp:this.action>
+							<xp:openPage
+								name="/ajaxPartialRefreshMain.xsp">
+							</xp:openPage>
+						</xp:this.action>
+					</xp:eventHandler>
+				</xp:link>
+				<xp:br></xp:br>
+				<xp:span style="font-weight:bold"></xp:span>
+				    
+				<xp:br></xp:br>
+				<xp:span
+					style="font-weight:bold;color:rgb(126,58,65)">
+					Verifys the &quot;Do not validate or update
+					data&quot; server option.
+				</xp:span>
+				<xp:br style="color:rgb(126,58,65)"></xp:br>
+				<xp:span style="color:rgb(126,58,65)">
+					Leave the subject field empty.
+				</xp:span>
+				<xp:br style="color:rgb(126,58,65)"></xp:br>
+				<xp:span style="color:rgb(126,58,65)">
+					Selecting each of the &quot;Do not validate or
+					update data&quot; options, saves the doc but
+				</xp:span>
+				<xp:br></xp:br>
+				<xp:span style="color:rgb(126,58,65)">
+					- does not validate the required subject field -&gt;
+					no &quot;required field&quot; validation error
+					appears
+				</xp:span>
+				<xp:br></xp:br>
+				<xp:span style="color:rgb(126,58,65)">
+					- does not update the data in the repeat
+				</xp:span>
+				<xp:br style="color:rgb(126,58,65)"></xp:br>
+				<xp:span style="color:rgb(126,58,65)">
+					Selecting each of the &quot;Validate and update
+					data&quot; options, saves the doc and
+				</xp:span>
+				<xp:br></xp:br>
+				<xp:span style="color:rgb(126,58,65)">
+					- does validate the required subject field -&gt; the
+					&quot;required field&quot; validation error appears
+				</xp:span>
+				<xp:br></xp:br>
+				<xp:span style="color:rgb(126,58,65)">
+					- does update the data in the repeat
+				</xp:span>
+				<xp:br style="color:rgb(126,58,65)"></xp:br>
+				<xp:br style="color:rgb(126,58,65)"></xp:br>
+				<xp:span
+					style="font-weight:bold;color:rgb(126,58,65)">
+					Verifys the &quot;Partial Execute&quot; server
+					option.
+				</xp:span>
+				<xp:br style="color:rgb(126,58,65)"></xp:br>
+				<xp:span style="color:rgb(126,58,65)"></xp:span>
+				<xp:span style="color:rgb(126,58,65)"></xp:span>
+				<xp:span style="color:rgb(126,58,65)">
+					The &quot;partial execute&quot; server
+				</xp:span>
+				<xp:span
+					style="font-weight:bold;color:rgb(126,58,65)">
+				</xp:span>
+				<xp:span style="color:rgb(126,58,65)">
+					option is selected for the onchange event, therefore
+					entering text in each of the fields and the clicking
+					on any other field
+				</xp:span>
+				<xp:br></xp:br>
+				<xp:span style="color:rgb(126,58,65)">
+					- full update -&gt; the page gets updated and
+					validated
+				</xp:span>
+				<xp:br></xp:br>
+				<xp:span style="color:rgb(126,58,65)">
+					- partial refresh -&gt; only the panel gets updated
+					and validated
+				</xp:span>
+				<xp:span style="color:rgb(126,58,65)"></xp:span>
+				<xp:span style="color:rgb(126,58,65)"></xp:span>
+				<xp:span style="color:rgb(126,58,65)"></xp:span>
+				<xp:span style="color:rgb(126,58,65)"></xp:span>
+				<xp:span style="color:rgb(126,58,65)"></xp:span>
+				<xp:span style="color:rgb(126,58,65)"></xp:span>
+				<xp:span style="color:rgb(126,58,65)"></xp:span>
+				<xp:span style="color:rgb(126,58,65)"></xp:span>
+				<xp:span style="color:rgb(126,58,65)"></xp:span>
+				<xp:span style="color:rgb(126,58,65)"></xp:span>
+				<xp:span style="color:rgb(126,58,65)"></xp:span>
+				<xp:span style="color:rgb(126,58,65)"></xp:span>
+				<xp:span style="color:rgb(126,58,65)"></xp:span>
+				<xp:span style="color:rgb(126,58,65)"></xp:span>
+				<xp:span style="color:rgb(215,83,103)"></xp:span>
+				<xp:br style="color:rgb(215,83,103)"></xp:br>
+				<xp:span style="color:rgb(126,58,65)">
+					- no update -&gt; no update occurs
+				</xp:span>
+				<xp:br></xp:br>
+				<xp:br style="color:rgb(215,83,103)"></xp:br>
+				<xp:button value="New Document" id="button8">
+					<xp:eventHandler event="onclick" submit="true"
+						refreshMode="complete" immediate="true">
+						<xp:this.action>
+							<xp:openPage
+								name="/ajaxPartialRefreshServerMore.xsp" target="newDocument">
+							</xp:openPage>
+						</xp:this.action>
+					</xp:eventHandler>
+				</xp:button>
+				<xp:button value="Return to Main Page" id="button7">
+					<xp:eventHandler event="onclick" submit="true"
+						refreshMode="complete" immediate="true">
+						<xp:this.action>
+							<xp:openPage
+								name="/ajaxPartialRefreshMain.xsp">
+							</xp:openPage>
+						</xp:this.action>
+					</xp:eventHandler>
+				</xp:button>
+				<xp:panel id="panel1"
+					style="border-color:rgb(255,0,0);border-style:solid">
+					<xp:table>
+						<xp:tr>
+							<xp:td style="font-weight:bold">
+								Subject
+							</xp:td>
+							<xp:td></xp:td>
+							<xp:td>
+								<xp:inputText id="inputText1"
+									value="#{dominoDocument1.partialRefreshSubject}"
+									required="true">
+									<xp:this.validators>
+										<xp:validateRequired
+											message="Subject field is required">
+										</xp:validateRequired>
+									</xp:this.validators>
+
+
+								</xp:inputText>
+							</xp:td>
+
+
+
+
+						</xp:tr>
+						<xp:tr>
+							<xp:td>
+								<xp:span style="font-weight:bold">
+									Body
+								</xp:span>
+							</xp:td>
+							<xp:td></xp:td>
+							<xp:td>
+								<xp:inputTextarea id="inputTextarea1"
+									value="#{dominoDocument1.partialRefreshBody}">
+								</xp:inputTextarea>
+							</xp:td>
+
+
+
+
+						</xp:tr>
+
+
+
+
+					</xp:table>
+					<xp:br></xp:br>
+					<xp:pager layout="Previous Group Next" id="pager1"
+						for="repeat1">
+					</xp:pager>
+
+
+					<xp:repeat id="repeat1" value="#{xspPartialRefresh}"
+						var="coll1"
+						style="background-color:rgb(254,252,235);border-color:rgb(128,128,0);border-style:solid;border-width:thin;width:auto;height:auto"
+						styleClass="customTable" rows="5">
+						<xp:table>
+
+
+							<xp:tr>
+								<xp:td>
+
+
+								</xp:td>
+								<xp:td>
+									<xp:link escape="true"
+										id="link15">
+										<xp:this.text><![CDATA[#{javascript:coll1.getColumnValue("partialRefreshSubject")}]]></xp:this.text>
+										<xp:eventHandler event="onclick"
+											submit="true" refreshMode="complete" id="eventHandler1"
+											execMode="partial">
+										</xp:eventHandler>
+									</xp:link>
+								</xp:td>
+								<xp:td>
+									<xp:label id="label1">
+										<xp:this.value><![CDATA[#{javascript:coll1.getColumnValue("partialRefreshBody")}]]></xp:this.value>
+									</xp:label>
+								</xp:td>
+								<xp:td>
+
+								</xp:td>
+								<xp:td></xp:td>
+								<xp:td>
+
+
+									&#160;&#160;
+
+								</xp:td>
+							</xp:tr>
+						</xp:table>
+					</xp:repeat>
+					<xp:br></xp:br>
+					<xp:table>
+						<xp:tr>
+							<xp:td>
+								<xp:span style="font-weight:bold">
+									Test Partial Execute
+								</xp:span>
+							</xp:td>
+							<xp:td>
+								Full Update
+								<xp:inputText id="inputText2">
+									<xp:eventHandler event="onchange"
+										submit="true" refreshMode="complete" execMode="partial">
+									</xp:eventHandler>
+								</xp:inputText>
+							</xp:td>
+							<xp:td>
+								Partial Update
+								<xp:inputText id="inputText3">
+									<xp:eventHandler event="onchange"
+										submit="true" refreshMode="partial" refreshId="panel1"
+										execMode="partial">
+									</xp:eventHandler>
+								</xp:inputText>
+							</xp:td>
+							<xp:td>
+								No Update
+								<xp:inputText id="inputText4">
+									<xp:eventHandler event="onchange"
+										submit="true" refreshMode="norefresh" execMode="partial">
+									</xp:eventHandler>
+								</xp:inputText>
+							</xp:td>
+							<xp:td>
+								<xp:text escape="true"
+									id="computedField19"
+									value="#{javascript:@UpperCase(@Left(@Unique(),5))}"
+									style="font-weight:bold">
+								</xp:text>
+							</xp:td>
+						</xp:tr>
+					</xp:table>
+					<xp:messages id="messages1"></xp:messages>
+					<xp:br></xp:br>
+				</xp:panel>
+				<xp:br></xp:br>
+				<xp:text escape="true" id="computedField1"
+					value="#{javascript:@UpperCase(@Left(@Unique(),5))}"
+					style="font-weight:bold">
+				</xp:text>
+				<xp:br></xp:br>
+				<xp:br></xp:br>
+
+				<xp:button
+					value="Full Update - Do not validate or update data"
+					id="button5">
+					<xp:eventHandler event="onclick" submit="true"
+						refreshMode="complete" immediate="true">
+						<xp:this.action>
+							<xp:saveDocument></xp:saveDocument>
+						</xp:this.action>
+					</xp:eventHandler>
+				</xp:button>
+				<xp:button
+					value="Full Update - Validate and update data" id="button2">
+					<xp:eventHandler event="onclick" submit="true"
+						refreshMode="complete">
+						<xp:this.action>
+							<xp:saveDocument></xp:saveDocument>
+						</xp:this.action>
+					</xp:eventHandler>
+				</xp:button>
+				<xp:br></xp:br>
+				<xp:button
+					value="Partial Refresh - Do not validate or update data"
+					id="button1">
+					<xp:eventHandler event="onclick" submit="true"
+						refreshMode="partial" refreshId="panel1" immediate="true">
+						<xp:this.action>
+							<xp:saveDocument></xp:saveDocument>
+						</xp:this.action>
+					</xp:eventHandler>
+				</xp:button>
+				<xp:button
+					value="Partial Refresh - Validate and update data" id="button3">
+					<xp:eventHandler event="onclick" submit="true"
+						refreshMode="partial" refreshId="panel1">
+						<xp:this.action>
+							<xp:saveDocument></xp:saveDocument>
+						</xp:this.action>
+					</xp:eventHandler>
+				</xp:button>
+				<xp:br></xp:br>
+				<xp:button
+					value="No Update - Do not validate or update data" id="button4">
+					<xp:eventHandler event="onclick" submit="true"
+						refreshMode="norefresh" immediate="true">
+						<xp:this.action>
+							<xp:saveDocument></xp:saveDocument>
+						</xp:this.action>
+					</xp:eventHandler>
+				</xp:button>
+				<xp:button value="No Update - Validate and update data"
+					id="button6">
+					<xp:eventHandler event="onclick" submit="true"
+						refreshMode="norefresh">
+						<xp:this.action>
+							<xp:saveDocument></xp:saveDocument>
+						</xp:this.action>
+					</xp:eventHandler>
+				</xp:button>
+				<xp:br></xp:br>
+
+
+
+				<xp:br></xp:br>
+				<xp:br></xp:br>
+			</xp:panel>
+		</xp:this.facets>
+	</XPa:ccLayout>
+</xp:view>

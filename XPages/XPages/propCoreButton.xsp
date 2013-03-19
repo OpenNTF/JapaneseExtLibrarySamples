@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+	<XPa:ccLayout id="cc4cclayout" navPath="/forms/pbuttonprop/">
+		<xp:this.facets>
+			<xc:ccMenu_forms xp:key="facetLeft"></xc:ccMenu_forms>
+			<xp:table xp:key="facetMain" style="width:719.0px">
+				<xp:tr>
+					<xp:td>Visible Checkbox On</xp:td>
+					<xp:td>
+						<xp:button value="Click Me"
+							id="button_visibleOnStat">
+						</xp:button>
+					</xp:td>
+				</xp:tr>
+				<xp:tr>
+					<xp:td>Visible Checkbox Off</xp:td>
+					<xp:td>
+						<xp:button value="Click Me"
+							id="button_visibleOffStat" rendered="false">
+						</xp:button>
+					</xp:td>
+				</xp:tr>
+				<xp:tr>
+					<xp:td>Visible Computed On</xp:td>
+					<xp:td>
+						<xp:button value="Click Me"
+							id="button_visibleOnComp" rendered="#{javascript:return true}">
+						</xp:button>
+					</xp:td>
+				</xp:tr>
+				<xp:tr>
+					<xp:td>Visible Computed Off</xp:td>
+					<xp:td>
+						<xp:button value="Click Me"
+							id="button_visibleOffComp"
+							rendered="#{javascript:return false}">
+						</xp:button>
+					</xp:td>
+				</xp:tr>
+				<xp:tr>
+					<xp:td>Disabled Checkbox On</xp:td>
+					<xp:td>
+						<xp:button value="Click Me"
+							id="button_disabledOnStat" disabled="true">
+
+							<xp:eventHandler event="onclick"
+								submit="true" refreshMode="complete">
+								<xp:this.action>
+									<xp:setValue
+										binding="#{requestScope.disabledOnStat}"
+										value="Button Clicked (Disabled checkbox on)">
+									</xp:setValue>
+								</xp:this.action>
+							</xp:eventHandler>
+						</xp:button>
+						<xp:text escape="true"
+							id="computedFieldDisabledOnStat"
+							value="#{requestScope.disabledOnStat}">
+						</xp:text>
+					</xp:td>
+				</xp:tr>
+				<xp:tr>
+					<xp:td>Disabled Checkbox Off</xp:td>
+					<xp:td>
+						<xp:button value="Click Me"
+							id="button_disabledOffStat">
+
+							<xp:eventHandler event="onclick"
+								submit="true" refreshMode="complete">
+								<xp:this.action>
+									<xp:setValue
+										binding="#{requestScope.disabledOffStat}"
+										value="Button Clicked (Disabled checkbox off)">
+									</xp:setValue>
+								</xp:this.action>
+							</xp:eventHandler>
+						</xp:button>
+						<xp:text escape="true"
+							id="computedFieldDisabledOffStat"
+							value="#{requestScope.disabledOffStat}">
+						</xp:text>
+					</xp:td>
+				</xp:tr>
+				<xp:tr>
+					<xp:td>Disabled Computed On</xp:td>
+					<xp:td>
+						<xp:button value="Click Me"
+							id="button_disabledOnComp"
+							disabled="#{javascript:return true}">
+
+							<xp:eventHandler event="onclick"
+								submit="true" refreshMode="complete">
+								<xp:this.action>
+									<xp:setValue
+										binding="#{requestScope.disabledOnComp}"
+										value="Button Clicked (Disabled checkbox on, Computed )">
+									</xp:setValue>
+								</xp:this.action>
+							</xp:eventHandler>
+						</xp:button>
+						<xp:text escape="true"
+							id="computedFieldDisabledOnComp"
+							value="#{requestScope.disabledOnComp}">
+						</xp:text>
+					</xp:td>
+				</xp:tr>
+				<xp:tr>
+					<xp:td>Disabled Computed Off</xp:td>
+					<xp:td>
+						<xp:button value="Click Me"
+							id="button_disabledOffComp"
+							disabled="#{javascript:return false}">
+
+							<xp:eventHandler event="onclick"
+								submit="true" refreshMode="complete">
+								<xp:this.action>
+									<xp:setValue
+										binding="#{requestScope.disabledOffComp}"
+										value="Button Clicked (Disabled checkbox off, Computed )">
+									</xp:setValue>
+								</xp:this.action>
+							</xp:eventHandler>
+						</xp:button>
+						<xp:text escape="true"
+							id="computedFieldDisabledOffComp"
+							value="#{requestScope.disabledOffComp}">
+						</xp:text>
+					</xp:td>
+				</xp:tr>
+				<xp:tr>
+					<xp:td>Height - Static Pixels (30)</xp:td>
+					<xp:td>
+						<xp:button value="Click Me"
+							id="button_heightPixStat" style="height:30.0px">
+						</xp:button>
+					</xp:td>
+				</xp:tr>
+				<xp:tr>
+					<xp:td>Height - Static Ems (4)</xp:td>
+					<xp:td>
+						<xp:button value="Click Me"
+							id="button_heightEmsStat" style="height:4em">
+						</xp:button>
+					</xp:td>
+				</xp:tr>
+				<xp:tr>
+					<xp:td>Height - Auto</xp:td>
+					<xp:td>
+						<xp:button value="Click Me"
+							id="button_heightAuto">
+						</xp:button>
+					</xp:td>
+				</xp:tr>
+				<xp:tr>
+					<xp:td>
+						Height - Units Computed (Pixels), Value=40
+					</xp:td>
+					<xp:td>
+						<xp:button value="Click Me"
+							id="button_heightPixCompUnits">
+							<xp:this.style><![CDATA[height:40.0#{javascript:return "px"}]]></xp:this.style>
+						</xp:button>
+					</xp:td>
+				</xp:tr>
+				<xp:tr>
+					<xp:td>
+						Height - Units=Pixels, Value Computed (25)
+					</xp:td>
+					<xp:td>
+						<xp:button value="Click Me"
+							id="button_heightPixCompValue"
+							style="height:#{javascript:return 25}px">
+						</xp:button>
+						<xp:span style="height:40.0px"></xp:span>
+					</xp:td>
+				</xp:tr>
+				<xp:tr>
+					<xp:td>
+						Height - Units Computed (Ems), Value=5
+					</xp:td>
+					<xp:td>
+						<xp:button value="Click Me"
+							id="button_heightEmsCompUnits">
+							<xp:this.style><![CDATA[height:5.0#{javascript:return "em"}]]></xp:this.style>
+						</xp:button>
+					</xp:td>
+				</xp:tr>
+				<xp:tr>
+					<xp:td>
+						Height - Units=Ems , Value Computed (3)
+					</xp:td>
+					<xp:td>
+						<xp:button value="Click Me"
+							id="button_heightEmsCompValue"
+							style="height:#{javascript:return 3}em">
+						</xp:button>
+					</xp:td>
+				</xp:tr>
+				<xp:tr>
+					<xp:td>Width - Static Pixels (80)</xp:td>
+					<xp:td>
+						<xp:button value="Click Me"
+							id="button_widthPixStat" style="width:80.0px">
+						</xp:button>
+					</xp:td>
+				</xp:tr>
+				<xp:tr>
+					<xp:td>Width - Static Ems (8)</xp:td>
+					<xp:td>
+						<xp:button value="Click Me"
+							id="button_widthEmsStat" style="width:8em">
+						</xp:button>
+					</xp:td>
+				</xp:tr>
+				<xp:tr>
+					<xp:td>Width - Static Percent (75)</xp:td>
+					<xp:td>
+						<xp:button value="Click Me"
+							id="button_widthPercentStat" style="width:75%">
+						</xp:button>
+					</xp:td>
+				</xp:tr>
+				<xp:tr>
+					<xp:td>
+						Width - Units Computed (Pixels), Value =80
+					</xp:td>
+					<xp:td>
+						<xp:button value="Click Me"
+							id="button_widthPixCompUnits">
+							<xp:this.style><![CDATA[width:80.0#{javascript:return "px"}]]></xp:this.style>
+						</xp:button>
+					</xp:td>
+				</xp:tr>
+				<xp:tr>
+					<xp:td>
+						Width - Units=Pixels, Value Computed (150)
+					</xp:td>
+					<xp:td>
+						<xp:button value="Click Me"
+							id="button_widthPixCompValue"
+							style="width:#{javascript:return 150}px">
+						</xp:button>
+					</xp:td>
+				</xp:tr>
+				<xp:tr>
+					<xp:td>
+						Width - Units Computed (Ems), Value =10
+					</xp:td>
+					<xp:td>
+						<xp:button value="Click Me"
+							id="button_widthEmsCompUnits">
+							<xp:this.style><![CDATA[width:10.0#{javascript:return "em"}]]></xp:this.style>
+						</xp:button>
+					</xp:td>
+				</xp:tr>
+				<xp:tr>
+					<xp:td>
+						Width - Units=Ems , Value Computed (12)
+					</xp:td>
+					<xp:td>
+						<xp:button value="Click Me"
+							id="button_widthEmsCompValue"
+							style="width:#{javascript:return 12}em">
+						</xp:button>
+					</xp:td>
+				</xp:tr>
+				<xp:tr>
+					<xp:td>
+						Width - Units Computed (Percent), Value=85%
+					</xp:td>
+					<xp:td>
+						<xp:button value="Click Me"
+							id="button_widthPercentCompUnits">
+							<xp:this.style><![CDATA[width:85.0#{javascript:return "%"}]]></xp:this.style>
+						</xp:button>
+					</xp:td>
+				</xp:tr>
+				<xp:tr>
+					<xp:td>
+						Width - Units=Percent, Value Computed (65%)
+					</xp:td>
+					<xp:td>
+						<xp:button value="Click Me"
+							id="button_widthPercentCompValue"
+							style="width:#{javascript:return 65}%">
+						</xp:button>
+					</xp:td>
+				</xp:tr>
+				<xp:tr>
+					<xp:td>Type = Button</xp:td>
+					<xp:td>
+						<xp:button value="Click Me"
+							id="button_typeButton">
+						</xp:button>
+					</xp:td>
+				</xp:tr>
+				<xp:tr>
+					<xp:td>Type=Submit</xp:td>
+					<xp:td>
+						<xp:button value="Click Me"
+							id="button_typeSubmit">
+							<xp:eventHandler event="onclick"
+								submit="true" refreshMode="complete" immediate="false"
+								save="true" id="eventHandler1">
+							</xp:eventHandler>
+						</xp:button>
+					</xp:td>
+				</xp:tr>
+				<xp:tr>
+					<xp:td>Type=Cancel</xp:td>
+					<xp:td>
+						<xp:button value="Click Me"
+							id="button_typeCancel">
+							<xp:eventHandler event="onclick"
+								submit="true" refreshMode="complete" immediate="true"
+								save="false" id="eventHandler2">
+							</xp:eventHandler>
+						</xp:button>
+					</xp:td>
+				</xp:tr>
+				<xp:tr>
+					<xp:td>Label Static</xp:td>
+					<xp:td>
+						<xp:button value="Open" id="button_labelStat"></xp:button>
+					</xp:td>
+				</xp:tr>
+				<xp:tr>
+					<xp:td>Label Computed</xp:td>
+					<xp:td>
+						<xp:button id="button_labelComp">
+							<xp:this.value><![CDATA[#{javascript:return "Save"}]]></xp:this.value>
+						</xp:button>
+					</xp:td>
+				</xp:tr>
+				<xp:tr>
+					<xp:td>
+						Image - No alt text, no image source, label
+					</xp:td>
+					<xp:td>
+						<xp:button id="button_imageNoIconNoAltText"
+							value="Click Me">
+						</xp:button>
+					</xp:td>
+				</xp:tr>
+				<xp:tr>
+					<xp:td>Image - Alt text, image static, label</xp:td>
+					<xp:td>
+						<xp:button id="button_image" icon="/doclink.gif"
+							iconAlt="doc Link" value="Document Link">
+						</xp:button>
+					</xp:td>
+				</xp:tr>
+				<xp:tr>
+					<xp:td>
+
+						Image -Alt text, image computed, no label
+					</xp:td>
+					<xp:td>
+
+						<xp:button id="button_imageComp"
+							iconAlt="Star">
+							<xp:this.icon><![CDATA[#{javascript:return "/vwicn159.gif"}]]></xp:this.icon>
+						</xp:button>
+					</xp:td>
+				</xp:tr>
+				<xp:tr>
+					<xp:td>
+						Image - Alt text static, image not available
+					</xp:td>
+					<xp:td>
+
+						<xp:button id="button_imageAltText"
+							icon="/doclink2.gif" iconAlt="Document Link">
+						</xp:button>
+					</xp:td>
+				</xp:tr>
+				<xp:tr>
+					<xp:td>
+						Image - Alt text computed, image not available
+					</xp:td>
+					<xp:td>
+						<xp:button id="button_imageAltTextComp"
+							icon="/vwicn159a.gif">
+							<xp:this.iconAlt><![CDATA[#{javascript:return "Star Icon"}]]></xp:this.iconAlt>
+						</xp:button>
+					</xp:td>
+				</xp:tr>
+				<xp:tr>
+					<xp:td>Image - Alt text, no image source</xp:td>
+					<xp:td>
+						<xp:button id="button_imageAltTextNoIcon"
+							iconAlt="Open Doc">
+						</xp:button>
+					</xp:td>
+				</xp:tr>
+				<xp:tr>
+					<xp:td>Image - No alt text, image available</xp:td>
+					<xp:td>
+						<xp:button id="button_imageIconNoAltText"
+							icon="/vwicn142.gif">
+						</xp:button>
+					</xp:td>
+				</xp:tr>
+				<xp:tr>
+					<xp:td>
+						Image - No alt text, image not available
+					</xp:td>
+					<xp:td>
+						<xp:button
+							id="button_imageIncorrectIconNoAltText" icon="/doclink3.gif">
+						</xp:button>
+					</xp:td>
+				</xp:tr>
+				<xp:tr>
+					<xp:td>
+
+					</xp:td>
+					<xp:td>
+
+					</xp:td>
+				</xp:tr>
+				<xp:tr>
+					<xp:td></xp:td>
+					<xp:td></xp:td>
+				</xp:tr>
+				<xp:tr>
+					<xp:td></xp:td>
+					<xp:td></xp:td>
+				</xp:tr>
+			</xp:table>
+		</xp:this.facets>
+	</XPa:ccLayout>
+</xp:view>
+
+

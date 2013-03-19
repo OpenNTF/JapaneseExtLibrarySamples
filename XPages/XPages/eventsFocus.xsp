@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+
+	<XPa:ccLayout id="cc4cclayout" navPath="/events/focus/">
+		<xp:this.facets>
+			<xc:ccMenu_events xp:key="facetLeft"></xc:ccMenu_events>
+			<xp:panel xp:key="facetMain" id="panel4Content">
+
+				<xp:label id="labelFocusEvts1"
+					style="font-size:12pt;color:rgb(0,0,0);font-weight:bold">
+					<xp:this.value><![CDATA[This XPage Tests Focus Events - Server & Client side]]></xp:this.value>
+				</xp:label>
+				<xp:br></xp:br>
+				<xp:br></xp:br>
+
+				<xp:table>
+					<xp:tr>
+						<xp:td>
+							<xp:label value="Event Type"
+								id="labelFocusEvts2" style="font-weight:bold">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:label value="Control"
+								id="labelFocusEvts3" style="font-weight:bold">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:label value="Result - Client"
+								id="labelFocusEvts4" style="font-weight:bold">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:label id="labelFocusEvts5"
+								value="Result - Server" style="font-weight:bold">
+							</xp:label>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							<xp:label value="onblur"
+								id="labelFocusEvts6">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:radio text="Radio Button"
+								id="radioFocusEvts1">
+								<xp:eventHandler event="onblur"
+									submit="true">
+									<xp:this.script><![CDATA[XSP.getElementById('#{id:inputTextFocusEvts1}').value += "Client - On Blur\n";]]></xp:this.script>
+									<xp:this.action>
+										<xp:setValue
+											binding="#{requestScope.rqf1}">
+											<xp:this.value><![CDATA[#{javascript:return "Server - On Blur "+@Unique()}]]></xp:this.value>
+										</xp:setValue>
+									</xp:this.action>
+								</xp:eventHandler>
+							</xp:radio>
+						</xp:td>
+						<xp:td>
+							<xp:inputText id="inputTextFocusEvts1"></xp:inputText>
+						</xp:td>
+						<xp:td>
+							<xp:text escape="true"
+								id="computedFieldFocusEvts1" value="#{requestScope.rqf1}">
+							</xp:text>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							<xp:label value="onfocus"
+								id="labelFocusEvts7">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:inputRichText
+								id="inputRichTextFocusEvts1">
+								<xp:eventHandler event="onfocus"
+									submit="true">
+									<xp:this.script><![CDATA[XSP.getElementById('#{id:inputTextFocusEvts2}').value += "Client - On Focus\n";]]></xp:this.script>
+									<xp:this.action>
+										<xp:setValue
+											binding="#{requestScope.rqf2}">
+											<xp:this.value><![CDATA[#{javascript:return "Server - On Focus "+@Unique()}]]></xp:this.value>
+										</xp:setValue>
+									</xp:this.action>
+								</xp:eventHandler>
+							</xp:inputRichText>
+						</xp:td>
+						<xp:td>
+							<xp:inputText id="inputTextFocusEvts2"></xp:inputText>
+						</xp:td>
+						<xp:td>
+							<xp:text escape="true"
+								id="computedFieldFocusEvts2" value="#{requestScope.rqf2}">
+							</xp:text>
+						</xp:td>
+					</xp:tr>
+
+				</xp:table>
+
+
+			</xp:panel>
+		</xp:this.facets>
+	</XPa:ccLayout>
+</xp:view>

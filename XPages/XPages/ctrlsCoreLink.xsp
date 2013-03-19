@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+
+	<XPa:ccLayout id="cc4cclayout" navPath="/basics/link/">
+		<xp:this.facets>
+			<xc:ccMenu_basics xp:key="facetLeft"></xc:ccMenu_basics>
+			<xp:panel xp:key="facetMain" id="panel4facetmain">
+
+				<xp:table>
+					<xp:tr>
+						<xp:td>
+							<xp:label
+								value="This is a link, and an image link" id="label1">
+							</xp:label>
+							<xp:br />
+							<xp:link escape="true" text="L O T U S"
+								id="link1" value="http://www.lotus.com/">
+								<xp:image id="image1"
+									url="/lotus-logo.gif">
+								</xp:image>
+							</xp:link>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td></xp:td>
+					</xp:tr>
+				</xp:table>
+			</xp:panel>
+
+		</xp:this.facets>
+	</XPa:ccLayout>
+</xp:view>

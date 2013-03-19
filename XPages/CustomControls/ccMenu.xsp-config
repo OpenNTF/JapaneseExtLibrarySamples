@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config>
+  <faces-config-extension>
+    <namespace-uri>component/XPages.nsf</namespace-uri>
+    <default-prefix>XPa</default-prefix>
+    <public>true</public>
+  </faces-config-extension>
+  <composite-component>
+    <component-type>ccMenu</component-type>
+    <composite-name>ccMenu</composite-name>
+    <composite-file>/ccMenu.xsp</composite-file>
+    <composite-extension>
+      <designer-extension>
+        <in-palette>true</in-palette>
+        <render-markup>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&#xd;
+&lt;xp:view xmlns:xp="http://www.ibm.com/xsp/core"&gt;&#xd;
+&lt;xp:image url="/XPagesDemoAppMenu2.jpg"/&gt;&#xd;
+&lt;/xp:view&gt;</render-markup>
+      </designer-extension>
+    </composite-extension>
+  </composite-component>
+</faces-config>

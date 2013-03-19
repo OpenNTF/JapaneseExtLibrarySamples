@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+	<xp:this.data>
+		<xp:dominoDocument var="dominoDocument1"
+			formName="xspEditBox">
+			<xp:this.postNewDocument>
+				<xp:actionGroup>
+					<xp:setValue binding="#{dominoDocument1.From}"
+						value="#{javascript:@UserName()}">
+					</xp:setValue>
+					<xp:setValue binding="#{dominoDocument1.Categories}"
+						value="Edit Box Test">
+					</xp:setValue>
+					<xp:setValue
+						binding="#{dominoDocument1.dateTimeCreated}"
+						value="#{javascript:@Now()}">
+					</xp:setValue>
+				</xp:actionGroup>
+			</xp:this.postNewDocument>
+			<xp:this.querySaveDocument>
+				<xp:setValue binding="#{dominoDocument1.Subject}">
+					<xp:this.value>
+						<![CDATA[#{javascript:var s01 = @UserName();
+var s02 = @Text(@Now());
+var s03 = @Text(@Time(@Now()));
+return "Test Doc | Edit Box | Edited by "+ s01+ " on "+ s02}]]>
+					</xp:this.value>
+				</xp:setValue>
+			</xp:this.querySaveDocument>
+		</xp:dominoDocument>
+	</xp:this.data>
+	<XPa:ccLayout id="cc4cclayout" navPath="/basics/editbox/">
+		<xp:this.facets>
+			<xc:ccMenu_basics xp:key="facetLeft"></xc:ccMenu_basics>
+			<XPa:ccContentCoreCtrl xp:key="facetMain"
+				id="cc4cccontentcorectrl">
+				<xp:this.facets>
+					<xp:panel xp:key="facetTestControl"
+						id="panel4testcontrol">
+						<xp:span
+							style="font-weight:bold;font-size:14pt">
+							Edit Box
+						</xp:span>
+						<xp:paragraph id="paragraph1">
+							An edit box displays an input field in which
+							users can enter one line of data (text or
+							numbers) at run time. At design time, when
+							you add an edit box to a page or custom
+							control, the edit box is a rectangle with a
+							default size.
+						</xp:paragraph>
+						<xp:br></xp:br>
+
+
+						<xp:inputText id="inputTextTestEditBox"
+							value="#{dominoDocument1.testEditBox}">
+						</xp:inputText>
+						<xp:br />
+						<xp:checkBox text="More examples..."
+							id="checkBoxMoreExamples01" value="#{sessionScope.hhh01}"
+							checkedValue="show" uncheckedValue="hide" rendered="false">
+							<xp:eventHandler event="onchange"
+								submit="true" refreshMode="complete">
+							</xp:eventHandler>
+						</xp:checkBox>
+						<xp:panel
+							style="width:25.875em;height:270.0px;background-color:rgb(128,0,255)"
+							id="pp">
+							<xp:this.rendered>
+								<![CDATA[#{javascript:sessionScope.hhh01 == "show"}]]>
+							</xp:this.rendered>
+						</xp:panel>
+					</xp:panel>
+				</xp:this.facets>
+			</XPa:ccContentCoreCtrl>
+
+		</xp:this.facets>
+	</XPa:ccLayout>
+</xp:view>

@@ -1,0 +1,729 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+
+
+
+
+
+	<XPa:ccLayout id="cc4cclayout"  navPath="/events/atfa/">
+		<xp:this.facets>
+			<xc:ccMenu_events xp:key="facetLeft"></xc:ccMenu_events>
+			<xp:panel xp:key="facetMain">
+				<xp:panel>
+					<xp:label id="label1" value="@A*: "
+						style="font-weight:bold;font-size:12pt">
+					</xp:label>
+					<xp:comboBox id="comboBox4AtFuncsA"
+						value="#{sessionScope.atFuncsAs}" defaultValue="None">
+						<xp:selectItem itemLabel="None"
+							itemValue="None">
+						</xp:selectItem>
+						<xp:selectItem itemLabel="@Abs"
+							itemValue="atFA01">
+						</xp:selectItem>
+						<xp:selectItem itemLabel="@Abstract"
+							itemValue="atFA02">
+						</xp:selectItem>
+						<xp:selectItem itemLabel="@Adjust"
+							itemValue="atFA03">
+						</xp:selectItem>
+						<xp:selectItem itemLabel="@AttachmentLenght"
+							itemValue="atFA04">
+						</xp:selectItem>
+						<xp:selectItem
+							itemLabel="@AttachmentModifiedTimes" itemValue="atFA05">
+						</xp:selectItem>
+						<xp:selectItem itemLabel="@AttachmentNames"
+							itemValue="atFA06">
+						</xp:selectItem>
+						<xp:selectItem itemLabel="@Attachments"
+							itemValue="atFA07">
+						</xp:selectItem>
+						<xp:selectItem itemLabel="@Author"
+							itemValue="atFA08">
+						</xp:selectItem>
+
+						<xp:eventHandler event="onchange" submit="true"
+							refreshMode="complete">
+							<xp:this.action>
+								<![CDATA[#{javascript:print("")}]]>
+							</xp:this.action>
+						</xp:eventHandler>
+					</xp:comboBox>
+					<xp:panel>
+						<xp:panel>
+							<xp:this.rendered>
+								<![CDATA[#{javascript:sessionScope.atFuncsAs == "atFA01"}]]>
+							</xp:this.rendered>
+							<xp:table styleClass="customTable">
+								<xp:tr>
+									<xp:td>
+										<xp:label value="@Function: "
+											id="label2">
+										</xp:label>
+									</xp:td>
+									<xp:td>
+										@Abs(value:double) : double
+									</xp:td>
+								</xp:tr>
+								<xp:tr>
+									<xp:td>
+										<xp:label value="Description: "
+											id="label3">
+										</xp:label>
+									</xp:td>
+									<xp:td>
+										Returns the absolute (unsigned)
+										value of a number.
+									</xp:td>
+								</xp:tr>
+							</xp:table>
+
+
+							<xp:label
+								value="Returns the difference between the above two numbers:"
+								id="label18">
+							</xp:label>
+
+							<xp:table>
+								<xp:tr>
+									<xp:td>Enter first number:</xp:td>
+									<xp:td>
+										<xp:inputText
+											id="inputTextAtAbs01" value="#{sessionScope.abs01}">
+											<xp:this.converter>
+												<xp:convertNumber></xp:convertNumber>
+											</xp:this.converter>
+										</xp:inputText>
+									</xp:td>
+								</xp:tr>
+								<xp:tr>
+									<xp:td>And a second :</xp:td>
+									<xp:td>
+										<xp:inputText
+											id="inputTextAtAbs02" value="#{sessionScope.abs02}">
+											<xp:this.converter>
+												<xp:convertNumber></xp:convertNumber>
+											</xp:this.converter>
+										</xp:inputText>
+									</xp:td>
+								</xp:tr>
+								<xp:tr>
+									<xp:td>
+
+										<xp:button
+											value="Get difference" id="buttonAtAbs01">
+
+											<xp:eventHandler
+												event="onclick" submit="true" refreshMode="complete">
+											</xp:eventHandler>
+										</xp:button>
+
+									</xp:td>
+									<xp:td>
+										<xp:inputText
+											id="inputTextAtAbs03">
+											<xp:this.value>
+												<![CDATA[#{javascript:var a1 = sessionScope.abs01;
+var a2 = sessionScope.abs02;
+return @Abs(a1 - a2);}]]>
+											</xp:this.value>
+											<xp:this.converter>
+												<xp:convertNumber></xp:convertNumber>
+											</xp:this.converter>
+										</xp:inputText>
+									</xp:td>
+								</xp:tr>
+							</xp:table>
+							Another example:
+							<xp:br></xp:br>
+
+							<xp:text escape="true"
+								id="computedFieldAtAbs01"
+								style="color:rgb(0,0,192);font-weight:bold">
+								<xp:this.value>
+									<![CDATA[#{javascript:var a01 = @Right(@Random(), 2);
+var a02 = @Right(@Random(), 2);
+return "1st number is "+ a01 + " and the 2nd is " +a02+", so the difference is " +  @Abs(a01 - a02);}]]>
+								</xp:this.value>
+
+							</xp:text>
+
+						</xp:panel>
+						<xp:panel>
+							<xp:this.rendered>
+								<![CDATA[#{javascript:sessionScope.atFuncsAs == "atFA02"}]]>
+							</xp:this.rendered>
+							<xp:table>
+								<xp:tr>
+									<xp:td>
+										<xp:label value="@Function: "
+											id="label4">
+										</xp:label>
+									</xp:td>
+									<xp:td>
+										@Abstract(keywords:string,
+										size:int, beginText:string,
+										bodyFields:string) : string
+									</xp:td>
+								</xp:tr>
+								<xp:tr>
+									<xp:td>
+										<xp:label value="Description: "
+											id="label5">
+										</xp:label>
+									</xp:td>
+									<xp:td>
+
+										Abbreviates the content of
+										fields.
+									</xp:td>
+								</xp:tr>
+							</xp:table>
+
+							&#160;
+						</xp:panel>
+						<xp:panel>
+							<xp:this.rendered>
+								<![CDATA[#{javascript:sessionScope.atFuncsAs == "atFA03"}]]>
+							</xp:this.rendered>
+							<xp:table>
+								<xp:tr>
+									<xp:td>
+										<xp:label value="@Function: "
+											id="label6">
+										</xp:label>
+									</xp:td>
+									<xp:td>
+										@Adjust(time:Date, years:int,
+										months:int, days:int, hours:int,
+										minutes:int, seconds:int) : Date
+										<xp:br></xp:br>
+										or
+										<xp:br></xp:br>
+										@Adjust(time:Date, years:int,
+										months:int, days:int, hours:int,
+										minutes:int, seconds:int,
+										keywords:string) : Date
+									</xp:td>
+								</xp:tr>
+								<xp:tr>
+									<xp:td>
+										<xp:label value="Description: "
+											id="label7">
+										</xp:label>
+									</xp:td>
+									<xp:td>
+
+										Adjusts a time and date by
+										years, months, days, hours,
+										minutes, and/or seconds.
+										<xp:br></xp:br>
+										or
+										<xp:br></xp:br>
+										Adjusts a time and date by
+										years, months, days, hours,
+										minutes, and/or seconds, taking
+										daylight saving into account.
+									</xp:td>
+								</xp:tr>
+							</xp:table>
+							<xp:br></xp:br>
+						</xp:panel>
+						<xp:panel>
+							<xp:this.rendered>
+								<![CDATA[#{javascript:sessionScope.atFuncsAs == "atFA04"}]]>
+							</xp:this.rendered>
+							<xp:table>
+								<xp:tr>
+									<xp:td>
+										<xp:label value="@Function: "
+											id="label8">
+										</xp:label>
+									</xp:td>
+									<xp:td>
+										@AttachmentLengths() : any
+									</xp:td>
+								</xp:tr>
+								<xp:tr>
+									<xp:td>
+										<xp:label value="Description: "
+											id="label9">
+										</xp:label>
+									</xp:td>
+									<xp:td>
+
+										Returns the lengths in bytes of
+										the files attached to the
+										current document.
+									</xp:td>
+								</xp:tr>
+							</xp:table>
+							<xp:br></xp:br>
+							<xp:panel styleClass="content">
+								<xp:this.data>
+									<xp:dominoDocument var="document1"
+										formName="xspAtFunctions">
+									</xp:dominoDocument>
+									<xp:dominoView var="view1"
+										viewName="xspAtFunctionsView">
+									</xp:dominoView>
+								</xp:this.data>
+
+								Select any of the following link to
+								compute the field below:
+
+
+								<xp:repeat id="repeat3" value="#{view1}"
+									rows="100" var="coll1">
+
+
+									<xp:table id="table3"
+										styleClass="customTable">
+										<xp:tr>
+
+
+											<xp:td>
+												<xp:image
+													url="/actn103.gif" id="image4">
+												</xp:image>
+
+												<xp:link
+													id="linkAttachmentLenghts01">
+													<xp:this.text>
+														<![CDATA[#{javascript:coll1.getColumnValue("subject")}]]>
+													</xp:this.text>
+
+													<xp:eventHandler
+														event="onclick" submit="true" refreshMode="complete">
+														<xp:this.action>
+															<xp:openPage
+																name="/atFunctionsA.xsp" target="openDocument"
+																documentId="#{javascript:coll1.getId()}">
+															</xp:openPage>
+														</xp:this.action>
+													</xp:eventHandler>
+												</xp:link>
+											</xp:td>
+
+										</xp:tr>
+									</xp:table>
+								</xp:repeat>
+								<xp:label value="Attachment lenghts: "
+									id="label22">
+								</xp:label>
+								<xp:text escape="true"
+									id="computedFieldAttachmentLenghtsResult01"
+									style="color:rgb(128,0,255);font-weight:bold"
+									value="#{javascript:@AttachmentLengths()}"
+									rendered="#{javascript:!document1.isNewNote()}">
+								</xp:text>
+							</xp:panel>
+
+
+
+
+
+
+						</xp:panel>
+						<xp:panel>
+							<xp:this.rendered>
+								<![CDATA[#{javascript:sessionScope.atFuncsAs == "atFA05"}]]>
+							</xp:this.rendered>
+							<xp:table>
+								<xp:tr>
+									<xp:td>
+										<xp:label value="@Function: "
+											id="label10">
+										</xp:label>
+									</xp:td>
+									<xp:td>
+										@AttachmentModifiedTimes() : any
+									</xp:td>
+								</xp:tr>
+								<xp:tr>
+									<xp:td>
+										<xp:label value="Description: "
+											id="label11">
+										</xp:label>
+									</xp:td>
+									<xp:td>
+
+										Returns the modification dates
+										of the files attached to the
+										current document.
+									</xp:td>
+								</xp:tr>
+							</xp:table>
+							<xp:br></xp:br>
+							<xp:panel styleClass="content">
+								<xp:this.data>
+									<xp:dominoDocument var="document1"
+										formName="xspAtFunctions">
+									</xp:dominoDocument>
+									<xp:dominoView var="view1"
+										viewName="xspAtFunctionsView">
+									</xp:dominoView>
+								</xp:this.data>
+
+								Select any of the following link to
+								compute the field below:
+
+
+								<xp:repeat id="repeat2" value="#{view1}"
+									rows="100" var="coll1">
+
+
+									<xp:table id="table2"
+										styleClass="customTable">
+										<xp:tr>
+
+
+											<xp:td>
+												<xp:image
+													url="/actn103.gif" id="image3">
+												</xp:image>
+
+												<xp:link id="link2">
+													<xp:this.text>
+														<![CDATA[#{javascript:coll1.getColumnValue("subject")}]]>
+													</xp:this.text>
+
+													<xp:eventHandler
+														event="onclick" submit="true" refreshMode="complete">
+														<xp:this.action>
+															<xp:openPage
+																name="/atFunctionsA.xsp" target="openDocument"
+																documentId="#{javascript:coll1.getId()}">
+															</xp:openPage>
+														</xp:this.action>
+													</xp:eventHandler>
+												</xp:link>
+											</xp:td>
+
+										</xp:tr>
+									</xp:table>
+								</xp:repeat>
+								<xp:label
+									value="When were these attachment last modified: " id="label21"
+									rendered="false">
+								</xp:label>
+								<xp:text escape="true"
+									id="computedField4AtAttachmentModifiedTimes01"
+									style="color:rgb(128,0,255);font-weight:bold"
+									rendered="#{javascript:!document1.isNewNote()}">
+									<xp:this.value><![CDATA[#{javascript://@Explode(@AttachmentModifiedTimes(),",")
+var amt = @AttachmentModifiedTimes();
+var anm = @AttachmentNames();
+"Attachment "+anm+" was last modified: "+amt+" ("+@Year(amt)+@Month(amt)+@Day(amt)+")."}]]></xp:this.value>
+								</xp:text>
+							</xp:panel>
+
+
+
+
+
+
+
+						</xp:panel>
+						<xp:panel>
+							<xp:this.rendered>
+								<![CDATA[#{javascript:sessionScope.atFuncsAs == "atFA06"}]]>
+							</xp:this.rendered>
+							<xp:table>
+								<xp:tr>
+									<xp:td>
+										<xp:label value="@Function: "
+											id="label12">
+										</xp:label>
+									</xp:td>
+									<xp:td>
+										@AttachmentNames() : any
+									</xp:td>
+								</xp:tr>
+								<xp:tr>
+									<xp:td>
+										<xp:label value="Description: "
+											id="label13">
+										</xp:label>
+									</xp:td>
+									<xp:td>
+
+										Returns the names of the files
+										attached to the current
+										document.
+									</xp:td>
+								</xp:tr>
+							</xp:table>
+							<xp:br></xp:br>
+
+							<xp:panel styleClass="content">
+								<xp:this.data>
+									<xp:dominoDocument var="document1"
+										formName="xspAtFunctions">
+									</xp:dominoDocument>
+									<xp:dominoView var="view1"
+										viewName="xspAtFunctionsView">
+									</xp:dominoView>
+								</xp:this.data>
+
+								Select any of the following link to
+								compute the field below:
+
+
+								<xp:repeat id="repeat1" value="#{view1}"
+									rows="100" var="coll1">
+
+
+									<xp:table id="table1"
+										styleClass="customTable">
+										<xp:tr>
+
+
+											<xp:td>
+												<xp:image
+													url="/actn103.gif" id="image2">
+												</xp:image>
+
+												<xp:link id="link1">
+													<xp:this.text>
+														<![CDATA[#{javascript:coll1.getColumnValue("subject")}]]>
+													</xp:this.text>
+
+													<xp:eventHandler
+														event="onclick" submit="true" refreshMode="complete">
+														<xp:this.action>
+															<xp:openPage
+																name="/atFunctionsA.xsp" target="openDocument"
+																documentId="#{javascript:coll1.getId()}">
+															</xp:openPage>
+														</xp:this.action>
+													</xp:eventHandler>
+												</xp:link>
+											</xp:td>
+
+										</xp:tr>
+									</xp:table>
+								</xp:repeat>
+								<xp:label value="Attachment names: "
+									id="label20">
+								</xp:label>
+								<xp:text escape="true"
+									id="computedField4AtAttachmentNames01"
+									style="color:rgb(128,0,255);font-weight:bold"
+									value="#{javascript:@AttachmentNames()}"
+									rendered="#{javascript:!document1.isNewNote()}">
+								</xp:text>
+							</xp:panel>
+
+
+
+
+
+
+						</xp:panel>
+						<xp:panel>
+							<xp:this.rendered>
+								<![CDATA[#{javascript:sessionScope.atFuncsAs == "atFA07"}]]>
+							</xp:this.rendered>
+
+							<xp:table>
+								<xp:tr>
+									<xp:td>
+										<xp:label value="@Function: "
+											id="label14">
+										</xp:label>
+									</xp:td>
+									<xp:td>@Attachments() : int</xp:td>
+								</xp:tr>
+								<xp:tr>
+									<xp:td>
+										<xp:label value="Description: "
+											id="label15">
+										</xp:label>
+									</xp:td>
+									<xp:td>
+
+										Returns the number of files
+										attached to the current
+										document.
+									</xp:td>
+								</xp:tr>
+							</xp:table>
+
+							<xp:panel styleClass="content">
+								<xp:this.data>
+									<xp:dominoDocument var="document1"
+										formName="xspAtFunctions">
+									</xp:dominoDocument>
+									<xp:dominoView var="view1"
+										viewName="xspAtFunctionsView">
+									</xp:dominoView>
+								</xp:this.data>
+
+								Select any of the following link to
+								compute the field below:
+
+
+								<xp:repeat id="repeatView1" rows="100"
+									value="#{view1}" var="coll1">
+
+
+									<xp:table id="repeatTable1"
+										styleClass="customTable">
+										<xp:tr>
+
+
+											<xp:td>
+												<xp:image
+													url="/actn103.gif" id="image1">
+												</xp:image>
+
+												<xp:link
+													id="linkTopicCol">
+													<xp:this.text>
+														<![CDATA[#{javascript:coll1.getColumnValue("subject")}]]>
+													</xp:this.text>
+
+													<xp:eventHandler
+														event="onclick" submit="true" refreshMode="complete">
+														<xp:this.action>
+															<xp:openPage
+																name="/atFunctionsA.xsp" target="openDocument"
+																documentId="#{javascript:coll1.getId()}">
+															</xp:openPage>
+														</xp:this.action>
+													</xp:eventHandler>
+												</xp:link>
+											</xp:td>
+
+										</xp:tr>
+									</xp:table>
+								</xp:repeat>
+								<xp:label
+									value="Number of attactments: " id="label19">
+								</xp:label>
+								<xp:text escape="true"
+									id="computedField4AtAttachments"
+									style="color:rgb(128,0,255);font-weight:bold"
+									value="#{javascript:@Attachments()}"
+									rendered="#{javascript:!document1.isNewNote()}">
+								</xp:text>
+							</xp:panel>
+
+
+						</xp:panel>
+						<xp:panel>
+							<xp:this.rendered>
+								<![CDATA[#{javascript:sessionScope.atFuncsAs == "atFA08"}]]>
+							</xp:this.rendered>
+							<xp:this.data>
+								<xp:dominoDocument var="document1"
+									formName="MainTopic">
+								</xp:dominoDocument>
+								<xp:dominoView var="view1"
+									viewName="(Default View)">
+								</xp:dominoView>
+							</xp:this.data>
+							<xp:table>
+								<xp:tr>
+									<xp:td>
+										<xp:label value="@Function: "
+											id="label16">
+										</xp:label>
+									</xp:td>
+									<xp:td>@Author() : any</xp:td>
+								</xp:tr>
+								<xp:tr>
+									<xp:td>
+										<xp:label value="Description: "
+											id="label17">
+										</xp:label>
+									</xp:td>
+									<xp:td>
+
+										Returns the names of the authors
+										of the current document.
+									</xp:td>
+								</xp:tr>
+							</xp:table>
+							<xp:panel>
+								<xp:this.data>
+									<xp:dominoDocument var="document1"
+										formName="xspAtFunctions">
+									</xp:dominoDocument>
+									<xp:dominoView var="view1"
+										viewName="xspAtFunctionsView">
+									</xp:dominoView>
+								</xp:this.data>
+
+								Select any of the following link to
+								compute the field below:
+
+
+								<xp:repeat id="repeat4" value="#{view1}"
+									rows="100" var="coll1">
+
+
+									<xp:table id="table4"
+										styleClass="customTable">
+										<xp:tr>
+
+
+											<xp:td>
+												<xp:image
+													url="/actn103.gif" id="image5">
+												</xp:image>
+
+												<xp:link id="link4">
+													<xp:this.text>
+														<![CDATA[#{javascript:coll1.getColumnValue("subject")}]]>
+													</xp:this.text>
+
+													<xp:eventHandler
+														event="onclick" submit="true" refreshMode="complete">
+														<xp:this.action>
+															<xp:openPage
+																name="/atFunctionsA.xsp" target="openDocument"
+																documentId="#{javascript:coll1.getId()}">
+															</xp:openPage>
+														</xp:this.action>
+													</xp:eventHandler>
+												</xp:link>
+											</xp:td>
+
+										</xp:tr>
+									</xp:table>
+								</xp:repeat>
+								<xp:label value="Document authors: "
+									id="label23">
+								</xp:label>
+								<xp:text escape="true"
+									id="computedFieldAtAuthor01"
+									style="color:rgb(128,0,255);font-weight:bold"
+									value="#{javascript:@Author()}"
+									rendered="#{javascript:!document1.isNewNote()}">
+								</xp:text>
+							</xp:panel>
+
+
+
+
+
+
+
+
+						</xp:panel>
+
+					</xp:panel>
+				</xp:panel>
+			</xp:panel>
+
+		</xp:this.facets>
+	</XPa:ccLayout>
+
+
+
+</xp:view>

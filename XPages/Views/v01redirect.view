@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' replicaid='85257A870079CB8F'>
+<noteinfo noteid='892' unid='A4E6E8CDC84CA7FD80257AD80054FFB0' sequence='7'>
+<created><datetime dst='true'>20121218T162824,80+01</datetime></created>
+<modified><datetime dst='true'>20130118T132312,88+01</datetime></modified>
+<revised><datetime dst='true'>20130118T132312,87+01</datetime></revised>
+<lastaccessed><datetime dst='true'>20130118T132312,88+01</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20121218T112822,03-04</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name><name
+>CN=Paul Hannan/OU=Ireland/O=IBM</name></updatedby>
+<revisions><datetime dst='true'>20121218T162824,86+01</datetime><datetime
+ dst='true'>20121218T162824,92+01</datetime></revisions>
+<item name='$FormulaClass' sign='true'><text>1</text></item>
+<item name='$TITLE' sign='true'><text>v01redirect</text></item>
+<item name='$Index' sign='true'><text/></item>
+<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
+aAACAAwAAgAkMGkAAwAFACYAIgAEAAIABwAJAAQAJDBTdWJqZWN0JENvbmZsaWN0JFJFRgQABAAA
+ACQABQAEAEZvcm0BAAsAZjAxcmVkaXJlY3QACgIEAAQAAwAHAAwABQAJM1M0UwA=
+</formula></item>
+<item name='$Collation' summary='true'>
+<rawitemdata type='2'>
+BgAAAABE
+</rawitemdata></item>
+<item name='$VIEWFORMAT' summary='true' sign='true'>
+<rawitemdata type='5'>
+AQACAAIACAAAAFZDAAACAAwADgAAAFAAAQAACgAAAAAAAAAAAAICAAAAVkMAAAcABwAAAAAAUAAB
+AAAKAAAAAAAAAAAAAgIAAAAkMERhdGUgQ3JlYXRlZA4AAgAMAAIAJDBpAAMAU3ViamVjdFN1Ympl
+Y3QmAAEAAAABAQAJAQAACgEBDgoAAAEArSsBAAEAAQAAAAAAAAAAAFdDAQEACQAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAABXQwEBAAkAAAAAAAAAAAAAAAAAAAAAAAAEAAAA
+AAD//wAAAAAAAAAAAAAAAAAAQgAAAAAAAQD///8ABQD///8AAQAAAAAAAAAAAAAAAAABAP///wAB
+AP///wAAAAEAAAAAAAEAAAAAAAEAAAAAAAAACAAAAAAAAQA=
+</rawitemdata></item>
+<item name='$Comment' sign='true'><text/></item>
+<item name='$Flags'><text>Y</text></item>
+<item name='$DesignerVersion' sign='true'><text>8.5.3</text></item>
+<item name='$SelQuery' sign='true'>
+<rawitemdata type='f'>
+gQYAAAAAif8XAAAAAAABAAsAZjAxcmVkaXJlY3QA
+</rawitemdata></item></note>
+

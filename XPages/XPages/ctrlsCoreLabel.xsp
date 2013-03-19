@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+
+	<XPa:ccLayout id="cc4cclayout" navPath="/basics/label/">
+		<xp:this.facets>
+			<xc:ccMenu_basics xp:key="facetLeft"></xc:ccMenu_basics>
+			<xp:panel xp:key="facetMain" id="panel4facetmain">
+
+				<xp:table>
+					<xp:tr>
+						<xp:td>
+							<xp:label
+								value="Label with a static value: " id="label1"
+								style="color:rgb(0,128,64);font-weight:bold">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:label value="This label's label"
+								id="label3" style="color:rgb(0,128,0)">
+							</xp:label>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							<xp:label
+								value="Computed Label (the URL of the page):  " id="label2"
+								style="color:rgb(255,128,0);font-weight:bold">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:label id="label4"
+								style="color:rgb(255,128,0)"
+								value="#{javascript:context.getUrl()}">
+							</xp:label>
+						</xp:td>
+					</xp:tr>
+				</xp:table>
+			</xp:panel>
+
+		</xp:this.facets>
+	</XPa:ccLayout>
+</xp:view>

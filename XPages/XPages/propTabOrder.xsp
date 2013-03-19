@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+	<xp:this.resources>
+		<xp:styleSheet href="/csscustom.css"></xp:styleSheet>
+	</xp:this.resources>
+	<XPa:ccLayout id="cc4cclayout" navPath="/forms/ptaborderprop/">
+		<xp:this.facets>
+			<xc:ccMenu_forms xp:key="facetLeft"></xc:ccMenu_forms>
+			<xp:panel xp:key="facetMain">
+
+				<xp:table styleClass="customTable">
+					<xp:tr style="background-color:rgb(255,252,244)">
+						<xp:td
+							style="font-weight:bold;font-size:12pt">
+							<xp:div style="text-align:center">
+								Control Name:
+							</xp:div>
+						</xp:td>
+						<xp:td
+							style="font-weight:bold;font-size:12pt;padding-left:10.0px">
+							<xp:div style="text-align:center">
+								Control:
+							</xp:div>
+						</xp:td>
+						<xp:td style="font-size:14pt">
+							<xp:div style="text-align:center">
+								<xp:span
+									style="font-weight:bold;font-size:12pt">
+									Tab Order
+								</xp:span>
+								:
+							</xp:div>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>Starting Point</xp:td>
+						<xp:td style="padding-left:10.0px">
+							<xp:inputText id="inputText_start"
+								style="text-align:center" tabindex="1">
+							</xp:inputText>
+						</xp:td>
+						<xp:td style="text-align:center">
+							<xp:div style="text-align:center">1</xp:div>
+						</xp:td>
+					</xp:tr>
+					<xp:tr style="background-color:rgb(241,243,254)">
+						<xp:td>Edit Box</xp:td>
+						<xp:td style="padding-left:10.0px">
+							<xp:inputText id="inputTextTabOrder01"
+								style="text-align:center" tabindex="6">
+							</xp:inputText>
+						</xp:td>
+						<xp:td style="text-align:center">
+							<xp:div style="text-align:center">6</xp:div>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>MultiLine Edit Box</xp:td>
+						<xp:td style="padding-left:10.0px">
+							<xp:inputTextarea
+								id="inputTextareaTabOrder01" style="text-align:center"
+								tabindex="5">
+							</xp:inputTextarea>
+						</xp:td>
+						<xp:td>
+							<xp:div style="text-align:center">5</xp:div>
+						</xp:td>
+					</xp:tr>
+					<xp:tr style="background-color:rgb(241,243,254)">
+						<xp:td>Button</xp:td>
+						<xp:td style="padding-left:10.0px">
+							<xp:button value="Button"
+								id="buttonTabOrder01" style="text-align:center" tabindex="2">
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="complete" id="eventHandler1">
+									<xp:this.action>
+										<xp:setValue
+											binding="#{requestScope.buttonAction}"
+											value="Button Clicked">
+										</xp:setValue>
+									</xp:this.action>
+								</xp:eventHandler>
+							</xp:button>
+							<xp:text escape="true"
+								id="computedFieldButtonAction"
+								value="#{requestScope.buttonAction}">
+							</xp:text>
+						</xp:td>
+						<xp:td style="text-align:center">
+							<xp:div style="text-align:center">2</xp:div>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>List Box</xp:td>
+						<xp:td style="padding-left:10.0px">
+							<xp:listBox id="listBoxTabOrder01"
+								style="text-align:center" tabindex="9">
+								<xp:selectItem itemLabel="Apples"
+									itemValue="Apples" id="selectItem1">
+								</xp:selectItem>
+								<xp:selectItem itemLabel="Oranges"
+									itemValue="Oranges" id="selectItem2">
+								</xp:selectItem>
+								<xp:selectItem itemLabel="Grapes"
+									itemValue="Grapes" id="selectItem3">
+								</xp:selectItem>
+							</xp:listBox>
+						</xp:td>
+						<xp:td style="text-align:center">
+							<xp:div style="text-align:center">9</xp:div>
+						</xp:td>
+					</xp:tr>
+					<xp:tr style="background-color:rgb(241,243,254)">
+						<xp:td>Combo Box</xp:td>
+						<xp:td style="padding-left:10.0px">
+							<xp:comboBox id="comboBoxTabOrder01"
+								tabindex="4">
+								<xp:selectItem itemLabel="Apples"
+									itemValue="Apples" id="selectItem4">
+								</xp:selectItem>
+								<xp:selectItem itemLabel="Oranges"
+									itemValue="Oranges" id="selectItem5">
+								</xp:selectItem>
+								<xp:selectItem itemLabel="Grapes"
+									itemValue="Grapes" id="selectItem6">
+								</xp:selectItem>
+							</xp:comboBox>
+						</xp:td>
+						<xp:td style="text-align:center">
+							<xp:div style="text-align:center">4</xp:div>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>Check Box</xp:td>
+						<xp:td>
+							<xp:checkBox text="Check Box Label"
+								id="checkBoxTabOrder01" style="padding-left:10px"
+								tabindex="7">
+							</xp:checkBox>
+						</xp:td>
+						<xp:td style="text-align:center">
+							<xp:div style="text-align:center">7</xp:div>
+						</xp:td>
+					</xp:tr>
+					<xp:tr style="background-color:rgb(241,243,254)">
+						<xp:td>Radio Button</xp:td>
+						<xp:td style="padding-left:10px">
+							<xp:radio text="Radio Button Label"
+								id="radioTabOrder01" tabindex="8">
+							</xp:radio>
+						</xp:td>
+						<xp:td style="text-align:center">
+							<xp:div style="text-align:center">8</xp:div>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>Link</xp:td>
+						<xp:td style="padding-left:10px">
+							<xp:link escape="true"
+								text="Link to IBM site" id="linkTabOrder01" tabindex="3"
+								value="http://www.ibm.com/ibm/us/en/">
+							</xp:link>
+						</xp:td>
+						<xp:td style="text-align:center">
+							<xp:div style="text-align:center">3</xp:div>
+						</xp:td>
+					</xp:tr>
+					<!-- 
+						<xp:tr>
+						
+						<xp:td>Label</xp:td>
+						<xp:td style="padding-left:10px">
+						<xp:label id="labelTabOrder01" tabindex="14"
+						value="#{javascript:@DbTitle()}">
+						</xp:label>
+						</xp:td>
+						<xp:td style="text-align:center">
+						<xp:div style="text-align:center">
+						14
+						</xp:div>
+						</xp:td>
+						</xp:tr>
+						
+						<xp:tr>
+						<xp:td>Image:</xp:td>
+						<xp:td style="padding-left:10px">
+						<xp:image url="/lotus-logo.gif"
+						id="imageTabOrder01" tabindex="7">
+						</xp:image>
+						</xp:td>
+						<xp:td style="text-align:center">
+						<xp:div style="text-align:center">7</xp:div>
+						</xp:td>
+						</xp:tr>
+					-->
+
+
+
+					<xp:tr style="background-color:rgb(241,243,254)">
+						<xp:td>Section:</xp:td>
+						<xp:td>
+							<xp:section id="sectionTabOrder01"
+								style="padding-left:10px" tabindex="10"
+								header="This is a section" initClosed="true">
+								<xp:button id="buttonTabOrder02_section"
+									value="Button">
+								</xp:button>
+							</xp:section>
+						</xp:td>
+						<xp:td style="text-align:center">
+							<xp:div style="text-align:center">
+								10
+							</xp:div>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>Link with image</xp:td>
+						<xp:td>
+							<xp:link escape="true" id="link1"
+								value="http://www.ibm.com/ibm/us/en/" tabindex="11">
+								<xp:image id="image1"
+									url="/ibm-logo03.gif">
+								</xp:image>
+							</xp:link>
+						</xp:td>
+						<xp:td style="text-align:center">11</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+				</xp:table>
+
+
+
+
+
+
+
+			</xp:panel>
+		</xp:this.facets>
+	</XPa:ccLayout>
+
+</xp:view>

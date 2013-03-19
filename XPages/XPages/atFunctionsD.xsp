@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+
+
+	<XPa:ccLayout id="cc4cclayout" navPath="/events/atfd/">
+		<xp:this.facets>
+			<xc:ccMenu_events xp:key="facetLeft"></xc:ccMenu_events>
+			<xp:panel xp:key="facetMain">
+				<xp:panel>
+					<xp:label id="label1" value="@D*: "
+						style="font-weight:bold;font-size:12pt">
+					</xp:label>
+					<xp:comboBox id="comboBoxAtFuncsD"
+						value="#{sessionScope.atFuncsDs}" defaultValue="None">
+						<xp:selectItem itemLabel="None"
+							itemValue="None">
+						</xp:selectItem>
+						<xp:selectItem itemLabel="@Date"
+							itemValue="atFD01">
+						</xp:selectItem>
+						<xp:selectItem itemLabel="@Day"
+							itemValue="atFD02">
+						</xp:selectItem>
+						<xp:selectItem itemLabel="@DbColumn"
+							itemValue="atFD03">
+						</xp:selectItem>
+						<xp:selectItem itemLabel="@DbLookup"
+							itemValue="atFD04">
+						</xp:selectItem>
+						<xp:selectItem itemLabel="@DbName"
+							itemValue="atFD05">
+						</xp:selectItem>
+						<xp:selectItem itemLabel="@DbTitle"
+							itemValue="atFD06">
+						</xp:selectItem>
+						<xp:selectItem itemLabel="@Do"
+							itemValue="atFD07">
+						</xp:selectItem>
+						<xp:selectItem itemLabel="@DocID"
+							itemValue="atFD08">
+						</xp:selectItem>
+
+						<xp:eventHandler event="onchange" submit="true"
+							refreshMode="complete">
+							<xp:this.action>
+								<![CDATA[#{javascript:print("")}]]>
+							</xp:this.action>
+						</xp:eventHandler>
+					</xp:comboBox>
+					<xp:panel>
+
+						<xp:panel>
+							<xp:this.rendered>
+								<![CDATA[#{javascript:sessionScope.atFuncsDs == "atFD01"}]]>
+							</xp:this.rendered>
+							<xp:table styleClass="customTable">
+								<xp:tr>
+									<xp:td>
+										<xp:label value="@Function: "
+											id="label2">
+										</xp:label>
+									</xp:td>
+									<xp:td>
+										@Date(time:Date) : Date |
+										Creates a date with 0 hours for
+										the time.
+										<xp:br></xp:br>
+										@Date(years:int, months:int,
+										days:int) : Date | Creates a
+										date with 0 hours for the time.
+										<xp:br></xp:br>
+										@Date(years:int, months:int,
+										days:int, hours:int,
+										minutes:int, seconds:int) : Date
+										&#160;| Creates a date and time.
+									</xp:td>
+								</xp:tr>
+								<xp:tr>
+									<xp:td></xp:td>
+									<xp:td></xp:td>
+								</xp:tr>
+							</xp:table>
+						</xp:panel>
+
+						<xp:panel>
+							<xp:this.rendered>
+								<![CDATA[#{javascript:sessionScope.atFuncsDs == "atFD02"}]]>
+							</xp:this.rendered>
+							<xp:table styleClass="customTable">
+								<xp:tr>
+									<xp:td>
+										<xp:label value="@Function: "
+											id="label4">
+										</xp:label>
+									</xp:td>
+									<xp:td>
+										@Day(time:Date) : int | Returns
+										the day from a date and time.
+									</xp:td>
+								</xp:tr>
+								<xp:tr>
+									<xp:td>
+
+									</xp:td>
+									<xp:td></xp:td>
+								</xp:tr>
+							</xp:table>
+						</xp:panel>
+
+						<xp:panel>
+							<xp:this.rendered>
+								<![CDATA[#{javascript:sessionScope.atFuncsDs == "atFD03"}]]>
+							</xp:this.rendered>
+							<xp:table styleClass="customTable">
+								<xp:tr>
+									<xp:td>
+										<xp:label value="@Function: "
+											id="label6">
+										</xp:label>
+									</xp:td>
+									<xp:td>
+										@DbColumn(dbName:string,
+										viewName:string, colNumber:int)
+										: any | Returns the values of a
+										view column.
+									</xp:td>
+								</xp:tr>
+								<xp:tr>
+									<xp:td>
+
+									</xp:td>
+									<xp:td></xp:td>
+								</xp:tr>
+							</xp:table>
+
+							<xp:panel styleClass="content">
+								<xp:image url="/vwicn159.gif"
+									id="image1">
+								</xp:image>
+								The following computed field displays
+								the contents of the 3rd column of the
+								'xspAtFunctionsView' view:
+								<xp:table>
+									<xp:tr>
+										<xp:td>
+
+										</xp:td>
+										<xp:td>
+											<xp:text escape="true"
+												id="computedFieldAtDbColumn01"
+												style="color:rgb(64,0,128)">
+												<xp:this.value>
+													<![CDATA[#{javascript:@DbColumn("","xspAtFunctionsView",3)}]]>
+												</xp:this.value>
+											</xp:text>
+										</xp:td>
+									</xp:tr>
+
+								</xp:table>
+							</xp:panel>
+						</xp:panel>
+
+						<xp:panel>
+							<xp:this.rendered>
+								<![CDATA[#{javascript:sessionScope.atFuncsDs == "atFD04"}]]>
+							</xp:this.rendered>
+							<xp:table styleClass="customTable">
+								<xp:tr>
+									<xp:td>
+										<xp:label value="@Function: "
+											id="label8">
+										</xp:label>
+									</xp:td>
+									<xp:td>
+										@DbLookup(dbName:string,
+										viewName:string, key:string,
+										colNumber:int) : any | Returns
+										view column values that
+										correspond to matched keys in a
+										sorted view column.
+										<xp:br></xp:br>
+										@DbLookup(dbName:string,
+										viewName:string, key:string,
+										fieldName:string) : any |
+										Returns field values that
+										correspond to matched keys in a
+										sorted view column.
+									</xp:td>
+								</xp:tr>
+
+							</xp:table>
+							<xp:panel styleClass="content">
+								<xp:image url="/vwicn159.gif"
+									id="image2">
+								</xp:image>
+								The following computed field displays
+								the content of the 'Subject' field in a
+								specific document from the
+								'xspAtFunctionsView' view:
+								<xp:table>
+									<xp:tr>
+										<xp:td>
+
+										</xp:td>
+										<xp:td>
+											<xp:text escape="true"
+												id="computedFieldAtDbLookup01"
+												style="color:rgb(64,0,128)">
+												<xp:this.value>
+													<![CDATA[#{javascript:@DbLookup("","xspAtFunctionsView","4Sligo", "Subject")}]]>
+												</xp:this.value>
+											</xp:text>
+										</xp:td>
+									</xp:tr>
+
+								</xp:table>
+
+								<xp:image url="/vwicn159.gif"
+									id="image3">
+								</xp:image>
+								The following computed field displays
+								the content of the 10th column on the
+								same document from the
+								'xspAtFunctionsView' view:
+								<xp:table>
+									<xp:tr>
+										<xp:td>
+
+										</xp:td>
+										<xp:td>
+											<xp:text escape="true"
+												id="computedFieldAtDbLookup02"
+												style="color:rgb(64,0,128)">
+												<xp:this.value>
+													<![CDATA[#{javascript:@DbLookup("","xspAtFunctionsView","4Sligo", 10)}]]>
+												</xp:this.value>
+											</xp:text>
+										</xp:td>
+									</xp:tr>
+
+								</xp:table>
+
+							</xp:panel>
+
+						</xp:panel>
+
+						<xp:panel>
+							<xp:this.rendered>
+								<![CDATA[#{javascript:sessionScope.atFuncsDs == "atFD05"}]]>
+							</xp:this.rendered>
+							<xp:table styleClass="customTable">
+								<xp:tr>
+									<xp:td>
+										<xp:label value="@Function: "
+											id="label10">
+										</xp:label>
+									</xp:td>
+									<xp:td>
+										@DbName() : string | Returns the
+										name of the current database.
+									</xp:td>
+								</xp:tr>
+
+							</xp:table>
+
+
+
+							<xp:image url="/vwicn159.gif" id="image4">
+							</xp:image>
+							The following computed field displays the
+							name of this Domino application.
+							<xp:table>
+								<xp:tr>
+									<xp:td>
+
+									</xp:td>
+									<xp:td>
+										<xp:text escape="true"
+											id="computedField4AtDbName01"
+											style="color:rgb(64,0,128);font-weight:bold">
+											<xp:this.value>
+												<![CDATA[#{javascript:@DbName()}]]>
+											</xp:this.value>
+										</xp:text>
+									</xp:td>
+								</xp:tr>
+
+							</xp:table>
+
+
+						</xp:panel>
+
+						<xp:panel>
+							<xp:this.rendered>
+								<![CDATA[#{javascript:sessionScope.atFuncsDs == "atFD06"}]]>
+							</xp:this.rendered>
+							<xp:table styleClass="customTable">
+								<xp:tr>
+									<xp:td>
+										<xp:label value="@Function: "
+											id="label12">
+										</xp:label>
+									</xp:td>
+									<xp:td>
+										@DbTitle() : string | Returns
+										the label of the current
+										database.
+									</xp:td>
+								</xp:tr>
+								<xp:tr>
+									<xp:td>
+
+									</xp:td>
+									<xp:td>
+
+
+									</xp:td>
+								</xp:tr>
+							</xp:table>
+
+							<xp:image url="/vwicn159.gif" id="image5">
+							</xp:image>
+							The following computed field displays the
+							title of this Domino application.
+							<xp:table>
+								<xp:tr>
+									<xp:td>
+
+									</xp:td>
+									<xp:td>
+										<xp:text escape="true"
+											id="computedField4AtDbTitle01"
+											style="color:rgb(64,0,128);font-weight:bold">
+
+											<xp:this.value><![CDATA[#{javascript:"This is "+@DbTitle()}]]></xp:this.value>
+										</xp:text>
+									</xp:td>
+								</xp:tr>
+
+							</xp:table>
+
+
+						</xp:panel>
+
+						<xp:panel>
+							<xp:this.rendered>
+								<![CDATA[#{javascript:sessionScope.atFuncsDs == "atFD07"}]]>
+							</xp:this.rendered>
+							<xp:table styleClass="customTable">
+								<xp:tr>
+									<xp:td>
+										<xp:label value="@Function: "
+											id="label14">
+										</xp:label>
+									</xp:td>
+									<xp:td>
+										@Do(statement, ...) : any |
+										Evaluates a series of @function
+										statements.
+									</xp:td>
+								</xp:tr>
+								<xp:tr>
+									<xp:td>
+
+									</xp:td>
+									<xp:td></xp:td>
+								</xp:tr>
+							</xp:table>
+						</xp:panel>
+
+						<xp:panel>
+							<xp:this.rendered>
+								<![CDATA[#{javascript:sessionScope.atFuncsDs == "atFD08"}]]>
+							</xp:this.rendered>
+							<xp:table styleClass="customTable">
+								<xp:tr>
+									<xp:td>
+										<xp:label value="@Function: "
+											id="label16">
+										</xp:label>
+									</xp:td>
+									<xp:td>
+										@DocID() : string | Returns the
+										ID of the current document.
+									</xp:td>
+								</xp:tr>
+								<xp:tr>
+									<xp:td>
+
+									</xp:td>
+									<xp:td></xp:td>
+								</xp:tr>
+							</xp:table>
+						</xp:panel>
+
+
+					</xp:panel>
+				</xp:panel>
+
+			</xp:panel>
+
+		</xp:this.facets>
+	</XPa:ccLayout>
+
+</xp:view>

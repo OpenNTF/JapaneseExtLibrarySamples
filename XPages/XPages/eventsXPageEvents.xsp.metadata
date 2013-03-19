@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" replicaid="85257A870079CB8F" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="6e2" sequence="26" unid="DF2E4C60AFAB7746802576430042B574">
+<created><datetime dst="true">20091002T130838,28+01</datetime></created>
+<modified><datetime>20130319T214347,49+09</datetime></modified>
+<revised><datetime>20130319T214347,48+09</datetime></revised>
+<lastaccessed><datetime>20130319T214347,49+09</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20120928T180630,88-04</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=Admin/O=LotusLab</name></updatedby>
+<revisions><datetime dst="true">20100603T132256,68+01</datetime><datetime dst="true">20110331T101147,46+01</datetime><datetime dst="true">20121214T162700,99+01</datetime><datetime dst="true">20121214T162701,65+01</datetime></revisions>
+<wassignedby><name>CN=Admin/O=LotusLab</name></wassignedby>
+<item name="$Flags"><text>gC~4K</text></item>
+<item name="$TITLE"><text>eventsXPageEvents.xsp</text></item>
+
+
+
+<item name="$FileNames" sign="true"><text>eventsXPageEvents.xsp</text></item>
+<item name="$DesignerVersion"><text>8.5</text></item>
+
+
+
+
+</note>

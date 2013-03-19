@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf">
+	<XPa:ccLayout><xp:this.facets>
+	<xp:panel xp:key="facetMain">
+		<xp:this.data>
+			<xp:dominoDocument var="document1"
+				formName="xspMultipleRTEs01CD">
+			</xp:dominoDocument>
+		</xp:this.data>
+		<xp:button value="Save Doc" id="button1" rendered="#{javascript:document1.isEditable()}"><xp:eventHandler event="onclick" submit="true" refreshMode="complete">
+	<xp:this.action>
+		<xp:saveDocument var="document1"></xp:saveDocument>
+	</xp:this.action></xp:eventHandler></xp:button>
+		<xp:button id="button2" rendered="#{javascript:document1.isEditable()}"><xp:this.value><![CDATA[Save & Close]]></xp:this.value><xp:eventHandler event="onclick" submit="true" refreshMode="complete">
+	<xp:this.action>
+		<xp:save name="/multipleRTEsMainView.xsp"></xp:save>
+	</xp:this.action></xp:eventHandler></xp:button>
+		<xp:button value="Edit" id="button3" rendered="#{javascript:!document1.isEditable()}"><xp:eventHandler event="onclick" submit="true" refreshMode="complete">
+	<xp:this.action>
+		<xp:changeDocumentMode mode="edit" var="document1"></xp:changeDocumentMode>
+	</xp:this.action></xp:eventHandler></xp:button>
+		<xp:button value="Close" id="button4"><xp:eventHandler event="onclick" submit="true" refreshMode="complete" immediate="true" save="false">
+	<xp:this.action>
+		<xp:openPage name="/multipleRTEsMainView.xsp"></xp:openPage>
+	</xp:this.action></xp:eventHandler></xp:button>
+		
+		<xp:br></xp:br>
+		<xp:table>
+			<xp:tr>
+				<xp:td>
+					<xp:label value="Subject:" id="subject_Label1"
+						for="subject1">
+					</xp:label>
+				</xp:td>
+				<xp:td>
+					<xp:inputText value="#{document1.subject}"
+						id="subject1">
+					</xp:inputText>
+				</xp:td>
+			</xp:tr>
+			<xp:tr style="background-color:rgb(237,241,254)">
+				<xp:td>
+					<xp:label value="Body_1:" id="body_1_Label1"
+						for="body_11">
+					</xp:label>
+				</xp:td>
+				<xp:td>
+					<xp:inputRichText value="#{document1.body_1}"
+						id="body_11">
+					</xp:inputRichText>
+					<hr/>
+					<xp:fileUpload id="fileUpload1"
+						value="#{document1.body_1}">
+					</xp:fileUpload>
+					<xp:fileDownload rows="60" id="fileDownload1"
+						displayLastModified="true" value="#{document1.body_1}" allowDelete="true" hideWhen="true">
+					</xp:fileDownload>
+				</xp:td>
+			</xp:tr>
+			<xp:tr>
+				<xp:td>
+					<xp:label value="Body_2:" id="body_2_Label1"
+						for="body_21">
+					</xp:label>
+				</xp:td>
+				<xp:td>
+					<xp:inputRichText value="#{document1.body_2}"
+						id="body_21">
+					</xp:inputRichText>
+					<hr/>
+					<xp:fileUpload id="fileUpload2"
+						value="#{document1.body_2}">
+					</xp:fileUpload>
+					<xp:fileDownload rows="60" id="fileDownload2"
+						displayLastModified="true" value="#{document1.body_2}" allowDelete="true" hideWhen="true">
+					</xp:fileDownload>
+				</xp:td>
+			</xp:tr>
+			<xp:tr style="background-color:rgb(237,241,254)">
+				<xp:td>
+					<xp:label value="Body_3:" id="body_3_Label1"
+						for="body_31">
+					</xp:label>
+				</xp:td>
+				<xp:td>
+					<xp:inputRichText value="#{document1.body_3}"
+						id="body_31">
+					</xp:inputRichText>
+					<hr/>
+					<xp:fileUpload id="fileUpload3"
+						value="#{document1.body_3}">
+					</xp:fileUpload>
+					<xp:fileDownload rows="60" id="fileDownload3"
+						displayLastModified="true" value="#{document1.body_3}" allowDelete="true" hideWhen="true">
+					</xp:fileDownload>
+				</xp:td>
+			</xp:tr>
+			<xp:tr>
+				<xp:td>
+					<xp:label value="Body_4:" id="body_4_Label1"
+						for="body_41">
+					</xp:label>
+				</xp:td>
+				<xp:td>
+					<xp:inputRichText value="#{document1.body_4}"
+						id="body_41">
+					</xp:inputRichText>
+					<hr/>
+					<xp:fileUpload id="fileUpload4"
+						value="#{document1.body_4}">
+					</xp:fileUpload>
+					<xp:fileDownload rows="60" id="fileDownload4"
+						displayLastModified="true" value="#{document1.body_4}" allowDelete="true" hideWhen="true">
+					</xp:fileDownload>
+				</xp:td>
+			</xp:tr>
+			<xp:tr style="background-color:rgb(237,241,254)">
+				<xp:td>
+					<xp:label value="Body_5:" id="body_5_Label1"
+						for="body_51">
+					</xp:label>
+				</xp:td>
+				<xp:td>
+					<xp:fileUpload id="fileUpload5"
+						value="#{document1.body_5}">
+					</xp:fileUpload>
+					<xp:fileDownload rows="60" id="fileDownload5"
+						displayLastModified="true" value="#{document1.body_5}" allowDelete="true" hideWhen="true">
+					</xp:fileDownload>
+				</xp:td>
+			</xp:tr>
+			<xp:tr>
+				<xp:td>
+					<xp:label value="Body_6:" id="body_6_Label1"
+						for="body_61">
+					</xp:label>
+				</xp:td>
+				<xp:td>
+					<xp:fileUpload id="fileUpload6"
+						value="#{document1.body_6}">
+					</xp:fileUpload>
+					<xp:fileDownload rows="60" id="fileDownload6"
+						displayLastModified="true" value="#{document1.body_6}" allowDelete="true" hideWhen="true">
+					</xp:fileDownload>
+				</xp:td>
+			</xp:tr>
+			<xp:tr style="background-color:rgb(237,241,254)">
+				<xp:td>
+					<xp:label value="Body_7:" id="body_7_Label1"
+						for="body_71">
+					</xp:label>
+				</xp:td>
+				<xp:td>
+					<xp:fileUpload id="fileUpload7"
+						value="#{document1.body_7}">
+					</xp:fileUpload>
+					<xp:fileDownload rows="60" id="fileDownload7"
+						displayLastModified="true" value="#{document1.body_7}" allowDelete="true" hideWhen="true">
+					</xp:fileDownload>
+				</xp:td>
+			</xp:tr>
+			<xp:tr>
+				<xp:td>
+					<xp:label value="Body_8:" id="body_8_Label1"
+						for="body_81">
+					</xp:label>
+				</xp:td>
+				<xp:td>
+					<xp:fileUpload id="fileUpload8"
+						value="#{document1.body_8}">
+					</xp:fileUpload>
+					<xp:fileDownload rows="60" id="fileDownload8"
+						displayLastModified="true" value="#{document1.body_8}" hideWhen="true" allowDelete="true">
+					</xp:fileDownload>
+				</xp:td>
+			</xp:tr>
+		</xp:table>
+		<xp:br></xp:br>
+		<xp:br></xp:br></xp:panel></xp:this.facets></XPa:ccLayout>
+
+</xp:view>

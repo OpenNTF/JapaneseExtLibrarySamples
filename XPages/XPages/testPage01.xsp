@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+
+	<xp:panel id="panel4p1"
+		style="text-align:center;background-color:rgb(254,252,235)">
+		<xp:label value="Page 1" id="label1"
+			style="font-size:18pt;font-weight:bold;color:rgb(0,128,192)">
+		</xp:label>
+		<xp:br></xp:br>
+		<xp:button value="What time is it?" id="button1" styleClass="customButton">
+			<xp:eventHandler event="onclick" submit="true"
+				refreshMode="complete">
+				<xp:this.action>
+					<xp:setValue binding="#{requestScope.p001}"
+						value="#{javascript:new Date()}">
+					</xp:setValue>
+				</xp:this.action>
+			</xp:eventHandler>
+		</xp:button>
+		<xp:br></xp:br>
+		<xp:text escape="true" id="computedField1"
+			value="#{requestScope.p001}"
+			style="color:rgb(0,128,192);font-size:12pt;font-weight:bold">
+			<xp:this.converter>
+				<xp:convertDateTime type="time"></xp:convertDateTime>
+			</xp:this.converter>
+		</xp:text>
+	</xp:panel>
+</xp:view>

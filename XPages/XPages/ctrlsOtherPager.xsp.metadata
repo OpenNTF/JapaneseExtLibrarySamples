@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" replicaid="85257A870079CB8F" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="746" sequence="165" unid="C481AFEA693D8D9180257410004DA2DE">
+<created><datetime dst="true">20080318T150759,66+01</datetime></created>
+<modified><datetime>20130319T214348,09+09</datetime></modified>
+<revised><datetime>20130319T214348,08+09</datetime></revised>
+<lastaccessed><datetime>20130319T214348,09+09</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20120928T180638,07-04</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=Admin/O=LotusLab</name></updatedby>
+<revisions><datetime dst="true">20100527T110303,11+01</datetime></revisions>
+<wassignedby><name>CN=Admin/O=LotusLab</name></wassignedby>
+<item name="$TITLE"><text>ctrlsOtherPager.xsp</text></item>
+
+<item name="$Flags"><text>gCK4</text></item>
+
+
+
+<item name="$FileNames" sign="true"><text>ctrlsOtherPager.xsp</text></item>
+<item name="$DesignerVersion"><text>8.5.1</text></item>
+
+
+
+
+
+
+</note>

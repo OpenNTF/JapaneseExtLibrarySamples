@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+
+
+
+	<XPa:ccLayout id="cc4cclayout" navPath="/basics/section/">
+		<xp:this.facets>
+			<xc:ccMenu_basics xp:key="facetLeft"></xc:ccMenu_basics>
+
+			<xp:panel xp:key="facetMain" id="panel4facetmain">
+
+
+				<xp:section id="section1" header="Default Section"
+					style="background-color:rgb(254,252,235)" initClosed="true">
+					<xp:include pageName="/testPage01.xsp"
+						id="include1">
+					</xp:include>
+				</xp:section>
+				<xp:section id="section2" type="Wide"
+					header="Wide Section" style="background-color:rgb(232,245,255)"
+					initClosed="true">
+					<xp:include pageName="/testPage02.xsp"
+						id="include2">
+					</xp:include>
+				</xp:section>
+				<xp:section id="section3" type="Box"
+					header="Box Section:" style="background-color:rgb(254,252,235)"
+					initClosed="true">
+					<xp:image url="/ibm-logo03.gif" id="image1"></xp:image>
+				</xp:section>
+				<xp:section id="section4" type="Tab"
+					header="Tab Section" style="background-color:rgb(232,245,255)"
+					initClosed="true">
+					<xp:table styleClass="customTable">
+						<xp:tr>
+							<xp:td>
+								<xp:label value="Server:" id="label1"></xp:label>
+							</xp:td>
+							<xp:td>
+								<xp:label
+									value="#{javascript:database.getServer()}" id="label2">
+								</xp:label>
+							</xp:td>
+						</xp:tr>
+						<xp:tr>
+							<xp:td>
+								<xp:label value="Database Title: "
+									id="label3">
+								</xp:label>
+							</xp:td>
+							<xp:td>
+								<xp:label
+									value="#{javascript:database.getTitle()}" id="label10">
+								</xp:label>
+							</xp:td>
+						</xp:tr>
+						<xp:tr>
+							<xp:td>
+								<xp:label value="Notes URL: "
+									id="label4">
+								</xp:label>
+							</xp:td>
+							<xp:td>
+								<xp:label
+									value="#{javascript:database.getURL()}" id="label11">
+								</xp:label>
+							</xp:td>
+						</xp:tr>
+						<xp:tr>
+							<xp:td>
+								<xp:label value="Session URL: "
+									id="label5">
+								</xp:label>
+							</xp:td>
+							<xp:td>
+								<xp:label
+									value="#{javascript:session.getHttpURL()}" id="label12">
+								</xp:label>
+							</xp:td>
+						</xp:tr>
+						<xp:tr>
+							<xp:td>
+								<xp:label value="Server version: "
+									id="label6">
+								</xp:label>
+							</xp:td>
+							<xp:td>
+								<xp:label
+									value="#{javascript:session.getNotesVersion()}" id="label13">
+								</xp:label>
+							</xp:td>
+						</xp:tr>
+						<xp:tr>
+							<xp:td>
+								<xp:label value="User name: "
+									id="label7">
+								</xp:label>
+							</xp:td>
+							<xp:td>
+								<xp:label
+									value="#{javascript:session.getUserName()}" id="label14">
+								</xp:label>
+							</xp:td>
+						</xp:tr>
+						<xp:tr>
+							<xp:td>
+								<xp:label value="Context URL: "
+									id="label8">
+								</xp:label>
+							</xp:td>
+							<xp:td>
+								<xp:label
+									value="#{javascript:context.getUrl()}" id="label15">
+								</xp:label>
+							</xp:td>
+						</xp:tr>
+						<xp:tr>
+							<xp:td>
+								<xp:label value="Locale: "
+									id="label9">
+								</xp:label>
+							</xp:td>
+							<xp:td>
+								<xp:label
+									value="#{javascript:context.getLocale()}" id="label16">
+								</xp:label>
+							</xp:td>
+						</xp:tr>
+					</xp:table>
+				</xp:section>
+
+
+			</xp:panel>
+
+		</xp:this.facets>
+	</XPa:ccLayout>
+</xp:view>

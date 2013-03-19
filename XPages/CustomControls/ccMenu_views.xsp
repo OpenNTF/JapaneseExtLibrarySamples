@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xe="http://www.ibm.com/xsp/coreex">
+
+	<xe:navigator id="navigator1" expandable="true" expandEffect="wipe"
+		keepState="true">
+		
+		<xe:this.treeNodes>
+			<xe:pageTreeNode label="Header Sort"
+				page="/propViewsHeaderSorting.xsp" selection="/views/headersort/">
+			</xe:pageTreeNode>
+			<xe:pageTreeNode label="Categorized Views"
+				page="/propCatResViews.xsp" selection="/views/catresviews/">
+			</xe:pageTreeNode>
+			<xe:basicContainerNode label="Filtering Properties">
+				<xe:this.children>
+					<xe:pageTreeNode label="keys"
+						page="/viewFiltering.xsp" selection="/views/fkeys/" />
+					<xe:pageTreeNode label="categoryFilter"
+						page="/viewFilteringCategory.xsp" selection="/views/fcategory/" />
+					<xe:pageTreeNode label="keysExactMatch"
+						page="/viewFilteringExactCase.xsp" selection="/views/fexact/" />
+					<xe:pageTreeNode label="startKeys"
+						page="/viewFilteringStartKey.xsp" selection="/views/fstartkeys/" />
+					
+					
+					<xe:pageTreeNode label="By Column Vectors"
+						page="/viewFilteringVector.xsp" selection="/views/fvector/" />
+				</xe:this.children>
+			</xe:basicContainerNode>
+			<xe:pageTreeNode label="Unread Marks"
+				page="/viewsReadUnreadMarks.xsp" selection="/views/unreadmarks/">
+			</xe:pageTreeNode>
+			<xe:pageTreeNode label="Full Text Search"
+				page="/xpSearch.xsp" selection="/views/ftsearch/">
+			</xe:pageTreeNode>
+		</xe:this.treeNodes>
+	</xe:navigator></xp:view>

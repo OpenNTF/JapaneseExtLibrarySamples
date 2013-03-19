@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' replicaid='85257A870079CB8F'>
+<noteinfo noteid='792' unid='35C838CF6C144FBC802577300053F6A6' sequence='5'>
+<created><datetime dst='true'>20100527T161706,30+01</datetime></created>
+<modified><datetime dst='true'>20130118T132314,62+01</datetime></modified>
+<revised><datetime dst='true'>20130118T132314,61+01</datetime></revised>
+<lastaccessed><datetime dst='true'>20130118T132314,62+01</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20120928T180643,24-04</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name><name
+>CN=Paul Hannan/OU=Ireland/O=IBM</name></updatedby>
+<revisions><datetime dst='true'>20100527T161706,29+01</datetime></revisions>
+<item name='$Comment' sign='true'><text/></item>
+<item name='numberSpinner' summary='false' sign='true'><number>0</number></item>
+<item name='number' summary='false' sign='true'><number>0</number></item>
+<item name='textboxHiddenNumber' summary='false' sign='true'><number>0</number></item>
+<item name='dojoTypeTextboxHiddenNumber' summary='false' sign='true'><number
+>0</number></item>
+<item name='$HTMLCode' sign='true'>
+<rawitemdata type='1'>
+X/8QAAIADwAHAAAAAAAAAA==
+</rawitemdata></item>
+<item name='$TITLE'><text>xspDojoType</text></item>
+<item name='$INFO' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAQAAAA
+</rawitemdata></item>
+<item name='$Flags'><text/></item>
+<item name='$DesignerVersion' sign='true'><text>8.5.2</text></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>xspDojoType</text></item>
+<item name='dojoTypeSubject' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='dojoTypeBody' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='dojoTypeCheckbox' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='dojoTypeCurrency' summary='false' sign='true'><number>0</number></item>
+<item name='dojoTypeNumberSpinner' summary='false' sign='true'><number>0</number></item>
+<item name='dojoTypeNumber' summary='false' sign='true'><number>0</number></item>
+<item name='dojoTypeRadio' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='dojoTypeTextbox' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='dojoTypeValidationTextbox' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='dojoTypeSimpleTextarea' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='dojoTypeTextarea' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='dojoTypeComboBox' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='dojoTypeFilteringSelect' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='dojoTypeMultiSelect' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='$Fields'><textlist><text>dojoTypeMultiSelect</text><text>dojoTypeFilteringSelect</text><text
+>dojoTypeComboBox</text><text>dojoTypeTextarea</text><text>dojoTypeSimpleTextarea</text><text
+>dojoTypeValidationTextbox</text><text>dojoTypeTextbox</text><text>dojoTypeRadio</text><text
+>dojoTypeNumber</text><text>dojoTypeNumberSpinner</text><text>dojoTypeCurrency</text><text
+>dojoTypeCheckbox</text><text>dojoTypeBody</text><text>dojoTypeSubject</text></textlist></item>
+<item name='$BODY' sign='true'>
+<rawitemdata type='1'>
+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
+CoECgwQBAIX/CAABAAAK
+</rawitemdata></item></note>
+

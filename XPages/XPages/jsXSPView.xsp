@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+
+
+	<xp:this.data>
+		<xp:dominoView var="view2" viewName="xspjsNotesXspDocument"></xp:dominoView>
+
+	</xp:this.data>
+	<XPa:ccLayout id="cc4cclayout" navPath="/other/goview/">
+		<xp:this.facets>
+			<xc:ccMenu_other xp:key="facetLeft"></xc:ccMenu_other>
+			<xp:panel xp:key="facetMain">
+
+
+				<xp:span style="font-size:12pt;font-weight:bold">
+					JavaScript : NotesXspViewEntry
+
+				</xp:span>
+				<xp:br style="font-size:12pt"></xp:br>
+				<xp:span style="font-size:12pt;font-weight:bold">
+					<xp:span
+						style="font-size:9pt;color:rgb(0,128,255)">
+						Displays all the Javascript funtions associated
+						with NotesXspViewEntry
+					</xp:span>
+					<xp:span
+						style="font-size:9pt;color:rgb(0,128,255);font-weight:bold">
+					</xp:span>
+				</xp:span>
+				<xp:br></xp:br>
+				&#160;
+				<xp:br></xp:br>
+				<xp:div style="text-align:right">
+					                     
+
+
+
+
+					<xp:link escape="true"
+						text="Return to NotesXspDocument Page" id="link2"
+						style="font-weight:bold" value="/jsXSPDocument.xsp">
+					</xp:link>
+				</xp:div>
+				<xp:viewPanel rows="30" id="viewPanel1" var="rowData"
+					showUnreadMarks="true">
+					<xp:this.facets>
+						<xp:pager partialRefresh="true"
+							layout="Previous Group Next" xp:key="headerPager" id="pager1">
+						</xp:pager>
+					</xp:this.facets>
+					<xp:this.data>
+						<xp:dominoView var="view1"
+							viewName="xspjsNotesXspDocument">
+						</xp:dominoView>
+					</xp:this.data>
+
+
+					<xp:viewColumn columnName="NotesXspDocumentSubject"
+						id="viewColumn2" displayAs="link" openDocAsReadonly="true">
+
+						<xp:this.pageUrl><![CDATA[#{javascript:var _row:NotesXspViewEntry=rowData;
+var _unid = _row.getUniversalID();
+return "0/" + _unid + "?OpenDocument"}]]></xp:this.pageUrl>
+						<xp:viewColumnHeader value="Subject"
+							id="viewColumnHeader2">
+						</xp:viewColumnHeader>
+
+					</xp:viewColumn>
+					<xp:viewColumn columnName="NotesXspDocumentDate"
+						id="viewColumn3">
+
+						<xp:viewColumnHeader value="Due Date"
+							id="viewColumnHeader3">
+						</xp:viewColumnHeader>
+					</xp:viewColumn>
+					<xp:viewColumn columnName="NotesXspDocumentDouble"
+						id="viewColumn4">
+						<xp:viewColumnHeader value="Price"
+							id="viewColumnHeader4">
+						</xp:viewColumnHeader>
+					</xp:viewColumn>
+					<xp:viewColumn columnName="NotesXspDocumentInteger"
+						id="viewColumn5">
+						<xp:viewColumnHeader value="Quantity"
+							id="viewColumnHeader5">
+						</xp:viewColumnHeader>
+					</xp:viewColumn>
+					<xp:viewColumn id="viewColumn1"
+						value="#{javascript:return rowData;}">
+						<xp:this.facets>
+							<xp:viewColumnHeader xp:key="header"
+								id="viewColumnHeader1">
+							</xp:viewColumnHeader>
+						</xp:this.facets>
+					</xp:viewColumn>
+				</xp:viewPanel>
+				<xp:br></xp:br>
+
+
+				<xp:br></xp:br>
+
+				<xp:table>
+					<xp:tr>
+						<xp:td>getChildCount()</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							Read-only. The number of immediate children
+							belonging to the current view entry.
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:text escape="true"
+								id="computedField1">
+								<xp:this.value><![CDATA[#{javascript:var _row:NotesXspViewEntry;//=rowData;
+var _child = _row.getChildCount();
+return _child
+
+}]]></xp:this.value>
+							</xp:text>
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>getColumnIndentLevel()</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							Read-only. The indent level of a view entry
+							within its column.
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:text escape="true"
+								id="computedField2">
+								<xp:this.value><![CDATA[#{javascript:var _row:NotesXspViewEntry;
+var _columnIndent = _row.getColumnIndentLevel();
+return _columnIndent}]]></xp:this.value>
+							</xp:text>
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>getColumnValue()</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							Read-only. Gets the value of a column in the
+							view entry.
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:text escape="true"
+								id="computedField3">
+								<xp:this.value><![CDATA[#{javascript:var _row:NotesXspViewEntry;//=rowData;
+var _columnValue = _row.getColumnValue('Subject');
+return _columnValue;}]]></xp:this.value>
+							</xp:text>
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>getColumnValues()</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							Read-only. The value of each column in the
+							view entry.
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:text escape="true"
+								id="computedField4">
+								<xp:this.value><![CDATA[#{javascript:var _row:NotesXspViewEntry;//=rowData;
+var _columnValues = _row.getColumnValues();
+return _columnValues;}]]></xp:this.value>
+							</xp:text>
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>getDescendantCount()</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							Read-only. The number of descendants
+							belonging to the current view entry.
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:text escape="true"
+								id="computedField5">
+								<xp:this.value><![CDATA[#{javascript:var _row:NotesXspViewEntry;//=rowData;
+var _descendantCount = _row.getDescendantCount();
+return _descendantCount;}]]></xp:this.value>
+							</xp:text>
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>getDocument()</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							Read-only. The document associated with the
+							view entry.
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:text escape="true"
+								id="computedField6">
+								<xp:this.value><![CDATA[#{javascript:var _row:NotesXspViewEntry;//=rowData;
+var _document = _row.getDocument();
+return _document.getItemValue('NotesXspDocumentSubject');}]]></xp:this.value>
+							</xp:text>
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>getFTSearchScore()</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							Read-only. The full-text search score of a
+							view entry, if it was retrieved as part of a
+							full-text search.
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:text escape="true"
+								id="computedField7">
+								<xp:this.value><![CDATA[#{javascript:var _row:NotesXspViewEntry;//=rowData;
+var _ftSearchScore = _row.getFTSearchScore();
+return _ftSearchScore;}]]></xp:this.value>
+							</xp:text>
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>getIndentLevel()</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							Read-only. The indent level of a view entry
+							within the view.
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:text escape="true"
+								id="computedField8">
+								<xp:this.value><![CDATA[#{javascript:var _row:NotesXspViewEntry;//=rowData;
+var _indentLevel = _row.getIndentLevel();
+return _indentLevel;}]]></xp:this.value>
+							</xp:text>
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>getNavigatorPosition()</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							Gets the position of the entry in the view
+							navigator hierarchy, for example,
+							&quot;2.3&quot; for the third document of
+							the second category.
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:text escape="true"
+								id="computedField9">
+								<xp:this.value><![CDATA[#{javascript:var _row:NotesXspViewEntry;//=rowData;
+var _navPosition = _row.getNavigatorPosition();
+return _navPosition;}]]></xp:this.value>
+							</xp:text>
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>getNoteID()</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							Read-only. The note ID of a view entry of
+							type document.
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:text escape="true"
+								id="computedField10">
+								<xp:this.value><![CDATA[#{javascript:var _row:NotesXspViewEntry;//=rowData;
+var _notesID = _row.getNoteID();
+return _notesID;}]]></xp:this.value>
+							</xp:text>
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+
+					<xp:tr>
+						<xp:td style="color:rgb(255,0,0)">
+							getParent()
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							Read-only. The parent ViewEntryCollection,
+							ViewNavigator, or View object of a view
+							entry.
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:text escape="true"
+								id="computedField11">
+								<xp:this.value><![CDATA[#{javascript:var _row:NotesXspViewEntry;//=rowData;
+var _parentID = _row.getParent().toString();
+return _parentID;}]]></xp:this.value>
+							</xp:text>
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>getPosition()</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							Gets the position of the entry in the view
+							hierarchy, for example, &quot;2.3&quot; for
+							the third document of the second category.
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:text escape="true"
+								id="computedField12">
+								<xp:this.value><![CDATA[#{javascript:var _row:NotesXspViewEntry;//=rowData;
+var _pos = _row.getPosition();
+return _pos;}]]></xp:this.value>
+							</xp:text>
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+
+					<xp:tr>
+						<xp:td>getRead()</xp:td>
+						<xp:td></xp:td>
+						<xp:td>Checks if the document is read.</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:text escape="true"
+								id="computedField13">
+								<xp:this.value><![CDATA[#{javascript:var _row:NotesXspViewEntry;//=rowData;
+var _read = _row.getRead();
+return _read;}]]></xp:this.value>
+							</xp:text>
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+
+					<xp:tr>
+						<xp:td>getSiblingCount()</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							Read-only. The number of siblings belonging
+							to the current view entry.
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:text escape="true"
+								id="computedField14">
+								<xp:this.value><![CDATA[#{javascript:var _row:NotesXspViewEntry;//=rowData;
+var _sibCount = _row.getSiblingCount();
+return _sibCount;}]]></xp:this.value>
+							</xp:text>
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+
+					<xp:tr>
+						<xp:td>isCategory()</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							Read-only. Indicates whether a view entry is
+							a category.
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:text escape="true"
+								id="computedField16">
+								<xp:this.value><![CDATA[#{javascript:var _row:NotesXspViewEntry;//=rowData;
+var _cat = _row.isCategory();
+return _cat;}]]></xp:this.value>
+							</xp:text>
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>isConflict()</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							Read-only. Indicates whether a view entry is
+							for a document on which a replication or
+							save conflict occurred.
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:text escape="true"
+								id="computedField17">
+								<xp:this.value><![CDATA[#{javascript:var _row:NotesXspViewEntry;//=rowData;
+var _conflict = _row.isConflict();
+return _conflict;}]]></xp:this.value>
+							</xp:text>
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>isDocument()</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							Read-only. Indicates whether a view entry is
+							a document.
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:text escape="true"
+								id="computedField18">
+								<xp:this.value><![CDATA[#{javascript:var _row:NotesXspViewEntry;//=rowData;
+var _doc = _row.isDocument();
+return _doc;}]]></xp:this.value>
+							</xp:text>
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>isSelected()</xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:text escape="true"
+								id="computedField19">
+								<xp:this.value><![CDATA[#{javascript:var _row:NotesXspViewEntry;//=rowData;
+var _selected = _row.isSelected();
+return _selected;}]]></xp:this.value>
+							</xp:text>
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>isTotal()</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							Read-only. Indicates whether a view entry is
+							a total.
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:text escape="true"
+								id="computedField20">
+								<xp:this.value><![CDATA[#{javascript:var _row:NotesXspViewEntry;//=rowData;
+var _total = _row.isTotal();
+return _total;}]]></xp:this.value>
+							</xp:text>
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>isValid()</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							Read-only. Indicates whether a view entry is
+							a valid entry and not a deletion stub.
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:text escape="true"
+								id="computedField21">
+								<xp:this.value><![CDATA[#{javascript:var _row:NotesXspViewEntry;//=rowData;
+var _valid = _row.isValid();
+return _valid;}]]></xp:this.value>
+							</xp:text>
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+
+
+
+					<xp:tr>
+						<xp:td>toString()</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							Gets a string representation of the view
+							entry.
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:text escape="true"
+								id="computedField22">
+								<xp:this.value><![CDATA[#{javascript:var _row:NotesXspViewEntry;//=rowData;
+var _value = _row.getColumnValues();
+return _value.toString;
+}]]></xp:this.value>
+							</xp:text>
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>getOpenPageURL()</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							Gets a URL to open a page in the current
+							context.
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+
+							<xp:link escape="true" text="Open Document"
+								id="link1">
+								<xp:this.value><![CDATA[#{javascript:var _row:NotesXspViewEntry;//=rowData;
+var _openPageUrl = _row.getOpenPageURL('\jsXSPDocument.xsp',true);
+return _openPageUrl;}]]></xp:this.value>
+							</xp:link>
+
+
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td style="color:rgb(255,0,0)">
+							recycle()
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+
+
+							<xp:button value="Label" id="button1">
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="complete">
+									<xp:this.action><![CDATA[#{javascript:var _row:NotesXspViewEntry;//=rowData;
+_row.setSelected('true');
+}]]></xp:this.action>
+								</xp:eventHandler>
+							</xp:button>
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td style="color:rgb(255,0,0)">
+							setSelected()
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+
+
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+				</xp:table>
+
+				<xp:br></xp:br>
+
+			</xp:panel>
+		</xp:this.facets>
+	</XPa:ccLayout>
+</xp:view>

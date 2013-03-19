@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xe="http://www.ibm.com/xsp/coreex">
+
+	<xe:navigator id="navigator1" expandable="true" expandEffect="wipe"
+		keepState="true">
+		<xe:this.treeNodes>
+			<xe:pageTreeNode label="Simple CRUD"
+				selection="/basics/simplecrud/" page="/crudSimpleTest.xsp">
+			</xe:pageTreeNode>
+
+
+			<xe:basicContainerNode label="Core Controls"
+				href="/ctrlsCore.xsp">
+				<xe:this.children>
+					<xe:pageTreeNode label="Edit Box"
+						page="/ctrlsCoreEditBox.xsp" selection="/basics/editbox/">
+					</xe:pageTreeNode>
+					<xe:pageTreeNode label="Rich Text"
+						page="/ctrlsCoreRichText.xsp" selection="/basics/richtext/">
+					</xe:pageTreeNode>
+					<xe:pageTreeNode label="Multiline Edit Box"
+						page="/ctrlsCoreMultilineEditBox.xsp"
+						selection="/basics/multilineeditbox/">
+					</xe:pageTreeNode>
+					<xe:pageTreeNode label="Button"
+						page="/ctrlsCoreButton.xsp" selection="/basics/button/">
+					</xe:pageTreeNode>
+					<xe:pageTreeNode label="List Box"
+						page="/ctrlsCoreListBox.xsp" selection="/basics/listbox/">
+					</xe:pageTreeNode>
+					<xe:pageTreeNode label="Combo Box"
+						page="/ctrlsCoreComboBox.xsp" selection="/basics/combobox/">
+					</xe:pageTreeNode>
+					<xe:pageTreeNode label="Check Box"
+						page="/ctrlsCoreCheckBox.xsp" selection="/basics/checkbox/">
+					</xe:pageTreeNode>
+					<xe:pageTreeNode label="Radio Button"
+						page="/ctrlsCoreRadioButton.xsp"
+						selection="/basics/radiobutton/">
+					</xe:pageTreeNode>
+					<xe:pageTreeNode label="Check Box Group"
+						selection="/basics/checkboxgroup/"
+						page="/ctrlsOtherCheckBoxGroup.xsp">
+					</xe:pageTreeNode>
+					<xe:pageTreeNode label="Radio Button Group"
+						selection="/basics/radiobuttongroup/"
+						page="/ctrlsOtherRadioButtonGroup.xsp">
+					</xe:pageTreeNode>
+					<xe:pageTreeNode label="Link"
+						page="/ctrlsCoreLink.xsp" selection="/basics/link/">
+					</xe:pageTreeNode>
+					<xe:pageTreeNode label="Label"
+						page="/ctrlsCoreLabel.xsp" selection="/basics/label/">
+					</xe:pageTreeNode>
+
+					<xe:pageTreeNode label="Computed Field"
+						page="/ctrlsCoreComputedField.xsp"
+						selection="/basics/computedfield/">
+					</xe:pageTreeNode>
+					<xe:pageTreeNode label="Image"
+						page="/ctrlsCoreImage.xsp" selection="/basics/image/">
+					</xe:pageTreeNode>
+					<xe:pageTreeNode label="Attachments"
+						page="/ctrlsCoreAttachments.xsp"
+						selection="/basics/attachments/">
+					</xe:pageTreeNode>
+					<xe:pageTreeNode label="Date Time Picker"
+						page="/ctrlsCoreDateTimePicker.xsp"
+						selection="/basics/datetimepicker/">
+					</xe:pageTreeNode>
+					<xe:pageTreeNode label="Display Error"
+						page="/ctrlsCoreDisplayError.xsp"
+						selection="/basics/displayerror/">
+					</xe:pageTreeNode>
+					<xe:pageTreeNode label="Display Errors"
+						page="/ctrlsCoreDisplayErrors.xsp"
+						selection="/basics/displayerrors/">
+					</xe:pageTreeNode>
+
+
+
+
+				</xe:this.children>
+
+			</xe:basicContainerNode>
+			<xe:basicContainerNode label="Container Controls">
+				<xe:this.children>
+					<xe:pageTreeNode label="Panel"
+						selection="/basics/panel/" page="/ctrlsContainerPanel.xsp" />
+					<xe:pageTreeNode label="Repeat"
+						selection="/basics/repeat/" page="/ctrlsContainerRepeat.xsp" />
+					<xe:pageTreeNode label="Include Page"
+						selection="/basics/includepage/"
+						page="/ctrlsContainerIncludePage.xsp" />
+					<xe:pageTreeNode label="Table"
+						selection="/basics/table/" page="/ctrlsContainerTable.xsp" />
+					<xe:pageTreeNode label="View"
+						selection="/basics/viewpanel/"
+						page="/ctrlsContainerViewPanel.xsp" />
+					<xe:pageTreeNode label="Data Table"
+						selection="/basics/datatable/"
+						page="/ctrlsContainerDataTable.xsp" />
+					<xe:pageTreeNode label="Tabbed Panel"
+						selection="/basics/tabbedpanel/"
+						page="/ctrlsContainerTabbedPanel.xsp" />
+					<xe:pageTreeNode label="Section"
+						selection="/basics/section/" page="/ctrlsContainerSection.xsp" />
+
+				</xe:this.children>
+
+			</xe:basicContainerNode>
+
+		</xe:this.treeNodes>
+	</xe:navigator></xp:view>

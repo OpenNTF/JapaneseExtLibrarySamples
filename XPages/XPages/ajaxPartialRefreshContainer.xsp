@@ -1,0 +1,1082 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+	<xp:this.data>
+
+		<xp:dominoView var="view2" viewName="xspPartialRefresh"></xp:dominoView>
+		<xp:dominoDocument var="document1"
+			formName="xspPartialRefresh">
+		</xp:dominoDocument>
+		<xp:dominoView var="view3" viewName="xspPartialRefresh"></xp:dominoView>
+		<xp:dominoView var="view5" viewName="xspPartialRefresh"></xp:dominoView>
+	</xp:this.data>
+
+
+
+	<XPa:ccLayout  navPath="/events/prcontainer/">
+		<xp:this.facets>
+			<xc:ccMenu_events xp:key="facetLeft"></xc:ccMenu_events>
+			<xp:panel xp:key="facetMain">
+				<xp:panel>
+					<xp:span
+						style="color:rgb(0,128,255);font-weight:bold;font-size:16pt">
+						Partial Refresh - Container Controls
+					</xp:span>
+					&#160;
+					<xp:link escape="true" text="Return to Previous"
+						id="link22">
+						<xp:eventHandler event="onclick" submit="true"
+							refreshMode="complete" immediate="true">
+							<xp:this.action>
+								<xp:openPage
+									name="/ajaxPartialRefreshMain.xsp">
+								</xp:openPage>
+							</xp:this.action>
+						</xp:eventHandler>
+					</xp:link>
+					<xp:br></xp:br>
+
+					<xp:table>
+						<xp:tr>
+							<xp:td>Subject</xp:td>
+							<xp:td>
+								<xp:inputText id="inputText1"
+									value="#{document1.partialRefreshSubject}">
+								</xp:inputText>
+							</xp:td>
+						</xp:tr>
+						<xp:tr>
+							<xp:td>Body</xp:td>
+							<xp:td>
+								<xp:inputTextarea id="inputTextarea1"
+									value="#{document1.partialRefreshBody}">
+								</xp:inputTextarea>
+							</xp:td>
+						</xp:tr>
+					</xp:table>
+					<xp:button value="Save" id="button1">
+
+						<xp:eventHandler event="onclick" submit="true"
+							refreshMode="complete">
+							<xp:this.action>
+								<xp:save></xp:save>
+							</xp:this.action>
+						</xp:eventHandler>
+					</xp:button>
+					<xp:button value="Delete Selected" id="button2">
+
+						<xp:eventHandler event="onclick" submit="true"
+							refreshMode="complete">
+							<xp:this.action>
+								<xp:deleteSelectedDocuments
+									view="viewPanel1" message="Delete All Documents?">
+								</xp:deleteSelectedDocuments>
+							</xp:this.action>
+						</xp:eventHandler>
+					</xp:button>
+					<xp:br style="font-weight:bold"></xp:br>
+
+				</xp:panel>
+				<xp:br></xp:br>
+				<xp:table>
+					<xp:tr>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:span
+								style="font-size:14pt;font-weight:bold">
+								Results
+							</xp:span>
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+
+
+
+						<xp:td valign="top">
+							<xp:span style="font-weight:bold"></xp:span>
+							<xp:span
+								style="font-weight:bold;font-size:14pt">
+								Panel
+							</xp:span>
+							<xp:span style="font-weight:bold"></xp:span>
+							<xp:br id="br4"></xp:br>
+							<xp:link escape="true"
+								text="Partial Refresh Panel" id="link17">
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="partial" refreshId="panel3"
+									id="eventHandler13">
+								</xp:eventHandler>
+							</xp:link>
+							&#160;
+							<xp:br id="br6"></xp:br>
+							<xp:link escape="true" id="link2"
+								text="Partial Refresh Panel with XSP log">
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="partial" immediate="false"
+									save="true" refreshId="panel3"
+									onComplete="XSP.log('onComplete occured\n');"
+									onError="XSP.log('onError occured\n');"
+									onStart="XSP.log('onStart occured\n');" id="eventHandler20">
+								</xp:eventHandler>
+							</xp:link>
+
+							<xp:br id="br1"></xp:br>
+							<xp:link escape="true" id="link18"
+								text="Partial Refresh Green Table">
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="partial" refreshId="table1"
+									id="eventHandler14">
+								</xp:eventHandler>
+							</xp:link>
+							<xp:br id="br2"></xp:br>
+							<xp:link escape="true" id="link19"
+								text="Partial Refresh RED Cell">
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="partial" refreshId="tableCell1"
+									id="eventHandler15">
+								</xp:eventHandler>
+							</xp:link>
+
+							&#160;
+							<xp:br id="br10"></xp:br>
+							<xp:link escape="true"
+								text="Partial Refresh RED Cell using alerts" id="link4">
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="partial" immediate="false"
+									save="true" refreshId="tableCell1" onError="alert('onError')"
+									onComplete="alert('onComplete')" onStart="alert('onStart')"
+									id="eventHandler22">
+
+								</xp:eventHandler>
+							</xp:link>
+
+							<xp:br id="br3"></xp:br>
+							<xp:link escape="true" id="link11"
+								text="Full Update">
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="complete" id="eventHandler23">
+								</xp:eventHandler>
+							</xp:link>
+							<xp:br id="br12"></xp:br>
+							<xp:link escape="true"
+								text="Full Update  with XSP log" id="link21">
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="complete" immediate="false"
+									save="true" onComplete="XSP.log('onComplete occured\n');"
+									onError="XSP.log('onError occured\n');"
+									onStart="XSP.log('onStart occured\n');" id="eventHandler24">
+								</xp:eventHandler>
+							</xp:link>
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+
+
+
+
+
+							<xp:span style="font-weight:bold">
+
+							</xp:span>
+							<xp:panel id="panel3"
+								style="border-color:rgb(0,128,255);border-style:solid;background-color:rgb(254,253,237)">
+								<xp:text escape="true"
+									id="computedField11"
+									value="#{javascript:@UpperCase(@Left(@Unique(),5))}">
+								</xp:text>
+								<xp:br id="br7"></xp:br>
+								<xp:table id="table1"
+									style="border-color:rgb(0,128,128);border-style:solid">
+									<xp:tr>
+										<xp:td id="tableCell1">
+											<xp:text escape="true"
+												id="computedField10"
+												value="#{javascript:@UpperCase(@Left(@Unique(),5))}"
+												style="border-color:rgb(255,0,0);border-style:solid">
+											</xp:text>
+										</xp:td>
+										<xp:td>
+											<xp:text escape="true"
+												id="computedField13"
+												value="#{javascript:@UpperCase(@Left(@Unique(),5))}">
+											</xp:text>
+										</xp:td>
+									</xp:tr>
+									<xp:tr>
+										<xp:td>
+											<xp:text escape="true"
+												id="computedField14"
+												value="#{javascript:@UpperCase(@Left(@Unique(),5))}">
+											</xp:text>
+										</xp:td>
+										<xp:td>
+											<xp:text escape="true"
+												id="computedField12"
+												value="#{javascript:@UpperCase(@Left(@Unique(),5))}">
+											</xp:text>
+										</xp:td>
+									</xp:tr>
+								</xp:table>
+
+								<xp:br></xp:br>
+								<xp:link escape="true"
+									text="Refresh Panel Computed Field" id="link5">
+									<xp:eventHandler event="onclick"
+										submit="true" refreshMode="partial" refreshId="computedField1"
+										id="eventHandler2">
+									</xp:eventHandler>
+								</xp:link>
+								<xp:br id="br14"></xp:br>
+								<xp:br id="br15"></xp:br>
+
+								<xp:button
+									value="Update Panel with alerts" id="button7">
+									<xp:eventHandler event="onclick"
+										submit="true" refreshMode="partial" immediate="false"
+										save="true" refreshId="panel3" id="eventHandler25">
+										<xp:this.onComplete><![CDATA[alert ("onComplete on Panel")]]></xp:this.onComplete>
+										<xp:this.onError><![CDATA[alert ("onError on Panel")]]></xp:this.onError>
+										<xp:this.onStart><![CDATA[alert ("onStart on Panel")]]></xp:this.onStart>
+									</xp:eventHandler>
+								</xp:button>
+								<xp:button
+									value="Update Panel with XSP log" id="button9">
+									<xp:eventHandler event="onclick"
+										submit="true" refreshMode="partial" immediate="false"
+										save="true" refreshId="panel3"
+										onComplete="XSP.log('onComplete occured\n')"
+										onError="XSP.log('onError occured\n')"
+										onStart="XSP.log('onStart occured\n')" id="eventHandler26">
+									</xp:eventHandler>
+								</xp:button>
+								<xp:br id="br16"></xp:br>
+								<xp:button
+									value="Refresh RED Cell using alerts" id="button5">
+									<xp:eventHandler event="onclick"
+										submit="true" refreshMode="partial" immediate="false"
+										save="true" refreshId="tableCell1" onError="alert('onError')"
+										onComplete="alert('onComplete')" onStart="alert('onStart')"
+										id="eventHandler27">
+
+									</xp:eventHandler>
+								</xp:button>
+								<xp:button
+									value="Refresh RED Cell with XSP log" id="button6">
+									<xp:eventHandler event="onclick"
+										submit="true" refreshMode="partial" immediate="false"
+										save="true" refreshId="tableCell1"
+										onError="XSP.log('onError occured\n');"
+										onComplete="XSP.log('onComplete occured\n');"
+										onStart="XSP.log('onStart occured\n');" id="eventHandler28">
+
+									</xp:eventHandler>
+								</xp:button>
+								<xp:br id="br17"></xp:br>
+
+							</xp:panel>
+							<xp:text escape="true" id="computedField22"
+								style="font-weight:bold"
+								value="#{javascript:@UpperCase(@Left(@Unique(),5))}">
+							</xp:text>
+							<xp:br id="br18"></xp:br>
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+
+							<xp:label value="Panel Computed Field"
+								id="label1">
+							</xp:label>
+							<xp:br id="br19"></xp:br>
+							<xp:text escape="true" id="computedField1"
+								value="#{javascript:@UpperCase(@Left(@Unique(),5))}"
+								style="font-weight:bold">
+							</xp:text>
+						</xp:td>
+
+
+					</xp:tr>
+
+
+
+
+
+					<xp:tr>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+
+
+						<xp:td>
+							<xp:link escape="true" id="link3"
+								text="Show\hide 1st panel (Full update)">
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="complete" id="eventHandler19">
+									<xp:this.action>
+										<xp:setValue
+											binding="#{sessionScope.a01}">
+											<xp:this.value><![CDATA[#{javascript:var poo = sessionScope.a01;
+if (poo =="on"){"off"
+}
+else{"on"
+}
+}]]></xp:this.value>
+										</xp:setValue>
+									</xp:this.action>
+								</xp:eventHandler>
+							</xp:link>
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+
+							<xp:panel id="panel1">
+								<xp:panel
+									style="background-color:rgb(233,210,255);width:302.0px;height:124.0px">
+									<xp:this.rendered><![CDATA[#{javascript:sessionScope.a01 =="on"}]]></xp:this.rendered>
+									<xp:text escape="true"
+										id="computedField16">
+										<xp:this.value><![CDATA[#{javascript:"Panel 1 displays"}]]></xp:this.value>
+									</xp:text>
+								</xp:panel>
+							</xp:panel>
+
+
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+
+
+
+					<xp:tr>
+
+
+						<xp:td>
+							<xp:link escape="true" id="link1"
+								text="Show\hide 2nd panel (Partial Refresh)">
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="partial" refreshId="p1"
+									id="eventHandler21">
+									<xp:this.action>
+										<xp:setValue
+											binding="#{sessionScope.a02}">
+											<xp:this.value><![CDATA[#{javascript:var poo = sessionScope.a02;
+if (poo =="on"){"off"
+}
+else{"on"
+}
+}]]></xp:this.value>
+										</xp:setValue>
+									</xp:this.action>
+								</xp:eventHandler>
+							</xp:link>
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:panel id="p1">
+								<xp:panel
+									style="background-color:rgb(168,135,222);width:302.0px;height:124.0px">
+									<xp:this.rendered><![CDATA[#{javascript:sessionScope.a02 =="on"}]]></xp:this.rendered>
+									<xp:text escape="true"
+										id="computedField17">
+										<xp:this.value><![CDATA[#{javascript:"Panel 2 displays"}]]></xp:this.value>
+									</xp:text>
+								</xp:panel>
+							</xp:panel>
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+
+
+
+					<xp:tr>
+
+
+						<xp:td>
+							<xp:br></xp:br>
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							<xp:br></xp:br>
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+
+
+
+						<xp:td valign="top">
+							<xp:span style="font-weight:bold"></xp:span>
+							<xp:span
+								style="font-weight:bold;font-size:14pt">
+								Section
+							</xp:span>
+							<xp:br id="br20"></xp:br>
+							<xp:link escape="true"
+								text="Partially Refresh Section" id="link20">
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="partial" refreshId="computedField15"
+									id="eventHandler3">
+								</xp:eventHandler>
+							</xp:link>
+							<xp:br id="br21"></xp:br>
+							- updates the computed field within the
+							section only
+							<xp:br id="br22"></xp:br>
+							<xp:link escape="true" text="Full Update"
+								id="link23">
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="complete" id="eventHandler29">
+								</xp:eventHandler>
+							</xp:link>
+							<xp:br id="br23"></xp:br>
+							- updates all
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:section id="section1" header="Section 1"
+								style="background-color:rgb(214,233,254)">
+								here is a section with computed field
+								&#160;&#160;
+								<xp:text escape="true"
+									id="computedField15"
+									value="#{javascript:@UpperCase(@Left(@Unique(),5))}"
+									style="font-weight:bold">
+								</xp:text>
+								&#160;&#160;&#160;
+								<xp:br id="br24"></xp:br>
+								<xp:link escape="true"
+									text="Refresh Section Computed Field" id="link13">
+									<xp:eventHandler event="onclick"
+										submit="true" refreshMode="partial" refreshId="computedField9"
+										id="eventHandler7">
+									</xp:eventHandler>
+								</xp:link>
+								<xp:br id="br25"></xp:br>
+								&#160;
+
+
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="partial" refreshId="computedField15"
+									id="eventHandler16">
+								</xp:eventHandler>
+							</xp:section>
+							<xp:text escape="true" id="computedField19"
+								value="#{javascript:@UpperCase(@Left(@Unique(),5))}"
+								style="font-weight:bold">
+							</xp:text>
+							<xp:br id="br26"></xp:br>
+							<xp:span style="color:rgb(188,88,105)">
+								expand/collapse section updates computed
+								field within section
+							</xp:span>
+							<xp:br id="br28"
+								style="color:rgb(188,88,105)">
+							</xp:br>
+							<xp:span style="color:rgb(188,88,105)">
+								selecting link within section updates
+								section computed field
+							</xp:span>
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+
+
+
+							Section Computed Field
+							<xp:br id="br29"></xp:br>
+							<xp:text escape="true" id="computedField9"
+								value="#{javascript:@UpperCase(@Left(@Unique(),5))}"
+								style="font-weight:bold">
+							</xp:text>
+						</xp:td>
+
+					</xp:tr>
+
+
+
+
+
+
+					<xp:tr>
+
+
+						<xp:td>
+							<xp:br></xp:br>
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							<xp:br></xp:br>
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+
+
+						<xp:td valign="top">
+							<xp:span style="font-weight:bold"></xp:span>
+							<xp:span style="font-weight:bold"></xp:span>
+
+							<xp:span style="font-weight:bold"></xp:span>
+							<xp:span
+								style="font-weight:bold;font-size:14pt">
+								View
+							</xp:span>
+							<xp:span style="font-weight:bold"></xp:span>
+							<xp:br id="br30"></xp:br>
+							<xp:link escape="true"
+								text="Partially Refresh View Panel" id="link16">
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="partial" refreshId="viewPanel1"
+									id="eventHandler11">
+								</xp:eventHandler>
+							</xp:link>
+							<xp:br id="br31"></xp:br>
+							- updates computed field within view only
+							<xp:br id="br32"></xp:br>
+							<xp:link escape="true" text="Full Update"
+								id="link24">
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="complete" id="eventHandler30">
+								</xp:eventHandler>
+							</xp:link>
+							<xp:br id="br33"></xp:br>
+							- updates all
+							<xp:br id="br5"></xp:br>
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+
+							<xp:span style="font-weight:bold"></xp:span>
+							<xp:span
+								style="font-weight:bold;font-size:14pt">
+
+							</xp:span>
+							<xp:span style="font-weight:bold"></xp:span>
+							<xp:pager layout="Previous Group Next"
+								id="pager6" for="viewPanel1" partialRefresh="true"
+								style="text-align:left;background-color:rgb(240,255,240);font-weight:bold">
+							</xp:pager>
+							<xp:viewPanel rows="5" id="viewPanel1"
+								viewStyle="background-color:rgb(240,255,240)"
+								pageName="/ajaxPartialRefreshContainer.xsp"
+								value="/ajaxPartialRefreshDoc.xsp">
+								<xp:this.facets>
+									<xp:pager partialRefresh="true"
+										layout="Previous Group Next" xp:key="headerPager"
+										id="pager1">
+									</xp:pager>
+								</xp:this.facets>
+								<xp:this.data>
+									<xp:dominoView var="mainView"
+										viewName="xspPartialRefresh">
+									</xp:dominoView>
+								</xp:this.data>
+
+								<xp:viewColumn id="viewColumn4"
+									showCheckbox="true" displayAs="hidden"
+									value="#{javascript:return null}">
+									<xp:this.facets>
+										<xp:viewColumnHeader
+											xp:key="header" id="viewColumnHeader4">
+										</xp:viewColumnHeader>
+									</xp:this.facets>
+								</xp:viewColumn>
+								<xp:viewColumn id="viewColumn2"
+									columnName="partialRefreshSubject" displayAs="link">
+									<xp:viewColumnHeader
+										id="viewColumnHeader2" value="Subject">
+									</xp:viewColumnHeader>
+									<xp:eventHandler event="onclick"
+										submit="true" refreshMode="partial" id="eventHandler17"
+										refreshId="computedField3">
+									</xp:eventHandler>
+								</xp:viewColumn>
+								<xp:viewColumn id="viewColumn1"
+									value="#{javascript:@UpperCase(@Left(@Unique(),5))}">
+									<xp:this.facets>
+										<xp:viewColumnHeader
+											xp:key="header" id="viewColumnHeader1">
+										</xp:viewColumnHeader>
+									</xp:this.facets>
+								</xp:viewColumn>
+							</xp:viewPanel>
+
+							<xp:span style="font-weight:bold">
+
+							</xp:span>
+
+							<xp:text escape="true" id="computedField2"
+								value="#{javascript:@UpperCase(@Left(@Unique(),5))}"
+								style="font-weight:bold">
+							</xp:text>
+							<xp:div style="text-align:left">
+
+
+								<xp:span style="font-weight:bold"></xp:span>
+								<xp:span
+									style="color:rgb(188,88,105)">
+									select the external pager to
+									partially update the view
+								</xp:span>
+							</xp:div>
+
+							<xp:div style="text-align:left">
+								<xp:span
+									style="color:rgb(188,88,105)">
+									select any of the subjects to update
+									the view computed field
+								</xp:span>
+							</xp:div>
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td id="td1">
+
+							<xp:eventHandler event="onclick"
+								submit="true" refreshMode="partial" id="eventHandler4">
+							</xp:eventHandler>
+
+
+							View Computed Field
+							<xp:br id="br34"></xp:br>
+							<xp:text escape="true" id="computedField3"
+								value="#{javascript:@UpperCase(@Left(@Unique(),5))}"
+								style="font-weight:bold">
+							</xp:text>
+						</xp:td>
+
+						<xp:td>
+							<xp:span
+								style="text-decoration:underline">
+							</xp:span>
+						</xp:td>
+					</xp:tr>
+
+
+					<xp:tr>
+
+
+						<xp:td>
+							<xp:br></xp:br>
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							<xp:br></xp:br>
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+
+
+						<xp:td align="left" valign="top">
+							<xp:span style="font-weight:bold"></xp:span>
+							<xp:span style="font-weight:bold"></xp:span>
+
+							<xp:span
+								style="color:rgb(0,0,0);font-weight:bold">
+							</xp:span>
+							<xp:span
+								style="color:rgb(0,0,0);font-weight:bold;font-size:14pt">
+								Date Table
+							</xp:span>
+							<xp:span
+								style="color:rgb(0,0,0);font-weight:bold">
+							</xp:span>
+							<xp:br id="br35"></xp:br>
+							<xp:link escape="true"
+								text="Partially Refresh Date Table" id="link15">
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="partial" refreshId="dataTable1"
+									id="eventHandler12">
+								</xp:eventHandler>
+							</xp:link>
+							<xp:br id="br36"></xp:br>
+							- updates the data table and the computed
+							field within the data table
+							<xp:br id="br8"></xp:br>
+							<xp:link escape="true"
+								text="Partially Refresh Column" id="link12">
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="partial" refreshId="computedField8"
+									id="eventHandler8">
+								</xp:eventHandler>
+							</xp:link>
+							<xp:br id="br37"></xp:br>
+							-updates the data table column only
+							<xp:br id="br38"></xp:br>
+							<xp:link escape="true" text="Full Update"
+								id="link25">
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="complete" id="eventHandler31">
+								</xp:eventHandler>
+							</xp:link>
+							<xp:br id="br39"></xp:br>
+							- updates all
+						</xp:td>
+						<xp:td>
+							&#160;&#160;&#160;&#160;
+
+							&#160;
+						</xp:td>
+						<xp:td align="left">
+							<xp:span
+								style="color:rgb(0,0,0);font-weight:bold">
+
+							</xp:span>
+
+							<xp:span style="font-weight:bold">
+
+							</xp:span>
+
+
+
+
+							<xp:span style="font-weight:bold"></xp:span>
+							<xp:span
+								style="font-weight:bold;font-size:14pt">
+
+							</xp:span>
+							<xp:span style="font-weight:bold"></xp:span>
+							<xp:pager layout="Previous Group Next"
+								id="pager3" for="dataTable1" partialRefresh="true"
+								partialExecute="true"
+								style="text-align:left;background-color:rgb(225,217,251)">
+							</xp:pager>
+
+							<xp:br id="br9"></xp:br>
+
+							<xp:dataTable id="dataTable1"
+								cellpadding="12" cellspacing="10"
+								style="background-color:rgb(225,217,251);border-color:rgb(128,128,0);border-style:solid;border-width:thin;width:100%"
+								styleClass="customTable" var="view2" rows="5"
+								value="#{view2}">
+								<xp:column id="column3">
+									<xp:this.facets>
+
+										<xp:span xp:key="header">
+											Subject
+										</xp:span>
+									</xp:this.facets>
+									<xp:link escape="true" id="link6">
+										<xp:this.text><![CDATA[#{javascript:view2.getColumnValue("partialRefreshSubject")}]]></xp:this.text>
+										<xp:eventHandler event="onclick"
+											submit="true" refreshMode="partial"
+											refreshId="computedField18" id="eventHandler1">
+										</xp:eventHandler>
+									</xp:link>
+								</xp:column>
+								<xp:column id="column4">
+									<xp:this.facets>
+										<xp:span xp:key="header">
+											Body
+										</xp:span>
+									</xp:this.facets>
+									<xp:text escape="true"
+										id="computedField4">
+										<xp:this.value><![CDATA[#{javascript:view2.getColumnValue("partialRefreshBody")}]]></xp:this.value>
+									</xp:text>
+								</xp:column>
+								<xp:column id="column1">
+									<xp:this.facets></xp:this.facets>
+
+
+									<xp:link escape="true"
+										text="Refresh" id="link9">
+										<xp:eventHandler event="onclick"
+											submit="true" refreshMode="partial"
+											refreshId="computedField8" id="eventHandler6">
+										</xp:eventHandler>
+									</xp:link>
+									&#160;&#160;
+									<xp:text escape="true"
+										id="computedField8"
+										value="#{javascript:@UpperCase(@Left(@Unique(),5))}">
+									</xp:text>
+
+
+								</xp:column>
+							</xp:dataTable>
+							<xp:span style="font-weight:bold">
+
+							</xp:span>
+
+							<xp:text escape="true" id="computedField20"
+								style="font-weight:bold"
+								value="#{javascript:@UpperCase(@Left(@Unique(),5))}">
+							</xp:text>
+							<xp:br id="br40"></xp:br>
+
+							<xp:span style="color:rgb(188,88,105)">
+								select the external pager to partially
+								update the data table
+							</xp:span>
+
+							<xp:div
+								style="text-align:left;color:rgb(188,88,105)">
+								select any of the refresh links to
+								update the individual column values
+							</xp:div>
+							<xp:div style="text-align:left">
+								<xp:span
+									style="color:rgb(188,88,105)">
+									select any of the subjects to update
+									the data table computed field
+								</xp:span>
+							</xp:div>
+						</xp:td>
+						<xp:td>&#160;&#160;&#160;&#160;&#160;</xp:td>
+						<xp:td>
+							Data Table Computed Field
+							<xp:br id="br41"></xp:br>
+							<xp:text escape="true" id="computedField18"
+								value="#{javascript:@UpperCase(@Left(@Unique(),5))}"
+								style="font-weight:bold">
+							</xp:text>
+						</xp:td>
+
+						<xp:td>
+
+						</xp:td>
+					</xp:tr>
+
+
+					<xp:tr>
+
+
+						<xp:td>
+							<xp:br></xp:br>
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							<xp:br></xp:br>
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+
+
+						<xp:td valign="top">
+							<xp:span style="font-weight:bold"></xp:span>
+							<xp:span
+								style="font-weight:bold;font-size:14pt">
+								Repeat
+							</xp:span>
+							<xp:span style="font-weight:bold"></xp:span>
+							<xp:br id="br42"></xp:br>
+							<xp:link escape="true"
+								text="Partially Refresh Repeat" id="link14">
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="partial" refreshId="repeat1"
+									id="eventHandler18">
+								</xp:eventHandler>
+							</xp:link>
+							<xp:br id="br43"></xp:br>
+							- updates the repeat only
+							<xp:br id="br11"></xp:br>
+							<xp:link escape="true"
+								text="Partially Refresh Column" id="link7">
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="partial" refreshId="computedField7"
+									id="eventHandler9">
+								</xp:eventHandler>
+							</xp:link>
+							<xp:br id="br44"></xp:br>
+							- updates the repeat column only
+							<xp:br id="br45"></xp:br>
+							<xp:link escape="true" text="Full Update"
+								id="link26">
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="complete" id="eventHandler32">
+								</xp:eventHandler>
+							</xp:link>
+							<xp:br id="br46"></xp:br>
+							- update all
+						</xp:td>
+						<xp:td>
+
+						</xp:td>
+						<xp:td>
+							<xp:span style="font-weight:bold"></xp:span>
+
+
+
+							<xp:span style="font-weight:bold"></xp:span>
+							<xp:span
+								style="font-weight:bold;font-size:14pt">
+							</xp:span>
+							<xp:pager layout="Previous Group Next"
+								id="pager7" for="repeat1" partialRefresh="true"
+								style="background-color:rgb(254,254,237)">
+							</xp:pager>
+
+							<xp:br id="br13"></xp:br>
+							<xp:repeat id="repeat1" var="coll1"
+								style="background-color:rgb(254,252,235);border-color:rgb(128,128,0);border-style:solid;border-width:thin;width:auto;height:auto"
+								styleClass="customTable" rows="5" value="#{view5}">
+								<xp:table>
+
+
+									<xp:tr>
+										<xp:td>
+											<xp:link escape="true"
+												id="link10">
+												<xp:this.text><![CDATA[#{javascript:coll1.getColumnValue("partialRefreshSubject")}]]></xp:this.text>
+												<xp:eventHandler
+													event="onclick" submit="true" refreshMode="partial"
+													refreshId="computedField5" id="eventHandler10">
+												</xp:eventHandler>
+											</xp:link>
+
+										</xp:td>
+										<xp:td></xp:td>
+										<xp:td>
+											<xp:text escape="true"
+												id="computedField6">
+												<xp:this.value><![CDATA[#{javascript:coll1.getColumnValue("partialRefreshBody")}]]></xp:this.value>
+											</xp:text>
+										</xp:td>
+										<xp:td></xp:td>
+										<xp:td>
+
+											<xp:link escape="true"
+												text="Refresh" id="link8">
+												<xp:eventHandler
+													event="onclick" submit="true" refreshMode="partial"
+													refreshId="computedField7" id="eventHandler5">
+												</xp:eventHandler>
+											</xp:link>
+											&#160;&#160;
+											<xp:text escape="true"
+												id="computedField7"
+												value="#{javascript:@UpperCase(@Left(@Unique(),5))}">
+											</xp:text>
+										</xp:td>
+									</xp:tr>
+								</xp:table>
+							</xp:repeat>
+							<xp:text escape="true" id="computedField21"
+								value="#{javascript:@UpperCase(@Left(@Unique(),5))}"
+								style="font-weight:bold">
+							</xp:text>
+							<xp:br id="br47"></xp:br>
+
+							<xp:span style="color:rgb(188,88,105)">
+								select the external pager to partially
+								update the repeat
+							</xp:span>
+
+							<xp:div
+								style="text-align:left;color:rgb(188,88,105)">
+								select any of the refresh links to
+								update the individual column values
+							</xp:div>
+							<xp:div style="text-align:left">
+
+								<xp:span
+									style="color:rgb(188,88,105)">
+									select any of the subjects to update
+									the repeat computed field
+								</xp:span>
+							</xp:div>
+							<xp:div style="text-align:left"></xp:div>
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+
+							Repeat Computed Field
+							<xp:br id="br48"></xp:br>
+							<xp:text escape="true" id="computedField5"
+								value="#{javascript:@UpperCase(@Left(@Unique(),5))}"
+								style="font-weight:bold">
+							</xp:text>
+						</xp:td>
+
+						<xp:td>
+
+						</xp:td>
+					</xp:tr>
+
+
+
+
+
+
+
+
+
+
+
+
+					<xp:tr>
+
+
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+
+
+				</xp:table>
+			</xp:panel>
+		</xp:this.facets>
+	</XPa:ccLayout>
+</xp:view>

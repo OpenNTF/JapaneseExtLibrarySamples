@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+	<xp:this.data>
+		<xp:dominoDocument var="document1"
+			formName="xspGroupCheckBox">
+		</xp:dominoDocument>
+	</xp:this.data>
+
+
+	<XPa:ccLayout id="cc4cclayout" navPath="/basics/checkboxgroup/">
+		<xp:this.facets>
+			<xc:ccMenu_basics xp:key="facetLeft"></xc:ccMenu_basics>
+			<xp:panel xp:key="facetMain">
+
+				<xp:panel>
+					<xp:button value="Submit"
+						id="buttonCheckboxGroupSubmit" rendered="#{javascript:document1.isEditable()}">
+						<xp:eventHandler event="onclick" submit="true"
+							refreshMode="complete" immediate="false" save="true">
+						</xp:eventHandler>
+					</xp:button>
+					<xp:button value="Cancel"
+						id="buttonCheckboxGroupCancel" rendered="#{javascript:document1.isEditable()}">
+						<xp:eventHandler event="onclick" submit="true"
+							refreshMode="complete" immediate="true" save="false">
+						</xp:eventHandler>
+					</xp:button>
+					<xp:button value="New" id="buttonCheckboxGroupNew">
+						<xp:eventHandler event="onclick" submit="true"
+							refreshMode="complete">
+							<xp:this.action>
+								<xp:openPage
+									name="/ctrlsOtherCheckBoxGroup.xsp" target="newDocument">
+								</xp:openPage>
+							</xp:this.action>
+						</xp:eventHandler>
+					</xp:button>
+					<xp:button value="Edit" id="buttonCheckboxGroupEdit"
+						rendered="#{javascript:!document1.isEditable()}">
+						<xp:eventHandler event="onclick" submit="true"
+							refreshMode="complete">
+							<xp:this.action>
+								<xp:changeDocumentMode mode="edit"></xp:changeDocumentMode>
+							</xp:this.action>
+						</xp:eventHandler>
+					</xp:button>
+				</xp:panel>
+				<xp:panel>
+					<xp:table>
+						<xp:tr>
+							<xp:td>
+								<xp:label value="Subject: "
+									id="label4checkboxGroupSubject">
+								</xp:label>
+							</xp:td>
+							<xp:td>
+								<xp:inputText
+									id="inputTextCheckBoxGroupSubject"
+									value="#{document1.Subject}">
+								</xp:inputText>
+							</xp:td>
+						</xp:tr>
+						<xp:tr>
+							<xp:td>
+								<xp:label value="Checkbox Group: "
+									id="label4CheckBoxGroup">
+								</xp:label>
+								<xp:br></xp:br>
+								A control that displays multiple check
+								boxes.
+							</xp:td>
+							<xp:td>
+								<xp:checkBoxGroup
+									id="checkBoxGroupTest01"
+									value="#{document1.testGroupCheckbox}">
+									<xp:selectItem itemLabel="Athens"
+										itemValue="Athens">
+									</xp:selectItem>
+									<xp:selectItem itemLabel="Barcelona"
+										itemValue="Barcelona">
+									</xp:selectItem>
+									<xp:selectItems>
+										<xp:this.value><![CDATA[${javascript:return ["Cork","Dijon"]}]]></xp:this.value>
+									</xp:selectItems>
+
+								</xp:checkBoxGroup>
+							</xp:td>
+						</xp:tr>
+					</xp:table>
+				</xp:panel>
+				<xp:panel>
+					<xp:button id="button1" value="Delete selected">
+						<xp:eventHandler event="onclick" submit="true"
+							refreshMode="complete">
+							<xp:this.action>
+								<xp:deleteSelectedDocuments
+									view="viewPanel1"
+									message="This action will delete the selected documents">
+								</xp:deleteSelectedDocuments>
+							</xp:this.action>
+						</xp:eventHandler>
+					</xp:button>
+					<xp:viewPanel rows="30" id="viewPanel1"
+						pageName="/ctrlsOtherCheckBoxGroup.xsp">
+
+						<xp:this.data>
+							<xp:dominoView var="xspViewGroupCheckBox"
+								viewName="xspViewGroupCheckBox">
+							</xp:dominoView>
+						</xp:this.data>
+						<xp:viewColumn columnName="Date"
+							id="viewColumn1">
+							<xp:viewColumnHeader value="Date"
+								id="viewColumnHeader1">
+							</xp:viewColumnHeader>
+						</xp:viewColumn>
+						<xp:viewColumn columnName="Subject"
+							id="viewColumn2" displayAs="link" showCheckbox="true"
+							openDocAsReadonly="true">
+							<xp:viewColumnHeader value="Subject"
+								id="viewColumnHeader2" showCheckbox="true">
+							</xp:viewColumnHeader>
+						</xp:viewColumn>
+						<xp:viewColumn columnName="Test Value"
+							id="viewColumn3">
+							<xp:viewColumnHeader value="Test Value"
+								id="viewColumnHeader3">
+							</xp:viewColumnHeader>
+						</xp:viewColumn>
+					</xp:viewPanel>
+				</xp:panel>
+
+
+
+			</xp:panel>
+		</xp:this.facets>
+	</XPa:ccLayout>
+</xp:view>

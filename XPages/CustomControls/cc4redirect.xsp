@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+	<xp:text escape="true" id="computedField1" value="#{javascript:context.getUserAgent().getUserAgent()}"></xp:text>
+	<xp:br></xp:br>
+	<xp:text escape="true" id="computedField4" style="color:rgb(64,128,128)"><xp:this.value><![CDATA[#{javascript:context.getUserAgent().getBrowser()+" "+context.getUserAgent().getBrowserVersion()+" "+context.getUserAgent().getBrowserVersionNumber()}]]></xp:this.value></xp:text>
+	<xp:br></xp:br>
+	<xp:text escape="true" id="computedField2" value="#{javascript:context.getUrl()}"></xp:text>
+	<xp:br></xp:br><xp:text escape="true" id="computedField3" value="#{javascript:session.getNotesVersion()}"></xp:text>
+	<xp:br></xp:br><xp:text escape="true" id="computedField5"><xp:this.value><![CDATA[#{javascript:"The Client Type is "+@ClientType()}]]></xp:this.value></xp:text>
+	<xp:br></xp:br><xp:text escape="true" id="computedField6"><xp:this.value><![CDATA[#{javascript:var m = context.getUserAgent().getUserAgent();
+@If(@Contains(m,"Mobile"),true,false)}]]></xp:this.value></xp:text>
+	<hr/>
+</xp:view>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" replicaid="85257A870079CB8F" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="2c6" sequence="8" unid="1E9DF562625AF04E802576B10032237E">
+<created><datetime dst="true">20100120T100738,86+01</datetime></created>
+<modified><datetime dst="true">20130118T132313,56+01</datetime></modified>
+<revised><datetime dst="true">20130118T132313,55+01</datetime></revised>
+<lastaccessed><datetime dst="true">20130118T132313,56+01</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20120928T180556,30-04</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name></updatedby>
+<item name="$TITLE"><text>xpagesDemoAppViewColumnReceiveCountry.component</text></item>
+<item name="$Flags"><text>345CgQ_</text></item>
+
+
+<item name="$FileNames" sign="true"><text>xpagesDemoAppViewColumnReceiveCountry.component</text></item></note>

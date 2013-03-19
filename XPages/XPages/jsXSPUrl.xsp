@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+
+	<XPa:ccLayout navPath="/other/gourl/">
+		<xp:this.facets>
+			<xc:ccMenu_other xp:key="facetLeft"></xc:ccMenu_other>
+			<xp:panel xp:key="facetMain">
+				<xp:span style="font-weight:bold;font-size:12pt">
+					JavaScript : XSPURL
+				</xp:span>
+				<xp:br></xp:br>
+				<xp:br></xp:br>
+				<xp:span style="color:rgb(0,128,255)">
+					Displays all the Javascript funtions associated with
+					XSPURL
+				</xp:span>
+				<xp:br></xp:br>
+				<xp:br></xp:br>
+				<xp:text escape="true" id="computedField9">
+					<xp:this.value><![CDATA[#{javascript:var url = context.getUrl().toString()
+
+return "Current url : " + url;}]]></xp:this.value>
+				</xp:text>
+				<xp:br></xp:br>
+				<xp:br></xp:br>
+				<xp:inputTextarea id="inputTextarea1">
+					<xp:this.value><![CDATA[#{javascript:var url = context.getUrl();
+url.setAddress("http://host1.ibm.com:10001/test1.xsp");
+url.setFragment("Preface");
+url.setHost("host2.ibm.com");
+url.setPath("/test3.xsp");
+url.setPort(10002);
+url.setScheme("https");
+
+
+return "Set url : " + url + "\n\n" +
+"getAddress : " + url.getAddress()+ "\n" +
+"getFragment : " + url.getFragment()+ "\n" +
+"getHost : " + url.getHost()+ "\n" +
+"getPath : " + url.getPath()+ "\n" +
+"getPort : " + url.getPort()+ "\n" +
+"getQueryString : " + url.getQueryString()+ "\n" +
+"getScheme : " + url.getScheme()+ "\n" +
+"getSiteRelativeAddress : " + url.getSiteRelativeAddress(context)+ "\n" +
+"toSiteRelativeString : " + url.toSiteRelativeString(context);
+
+}]]></xp:this.value>
+				</xp:inputTextarea>
+				<xp:br></xp:br>
+				<xp:br></xp:br>
+				<xp:text escape="true" id="computedField1">
+					<xp:this.value><![CDATA[#{javascript:var url = context.getUrl();
+url.setAddress("http://host1.ibm.com:10001/test1.xsp");
+url.setFragment("Preface");
+url.setHost("host2.ibm.com");
+url.setPath("/test3.xsp");
+url.setPort(10002);
+url.setScheme("https");
+
+url.setParameter("database", "db_test1")
+
+
+if(url.hasParameter("database")) {
+	return "hasParameter : database parameter found = " + url.getParameter("database");
+}else{
+	return "hasParameter : " + "no \"datbase\" parameter found";
+}}]]></xp:this.value>
+				</xp:text>
+				<xp:br></xp:br>
+				<xp:text escape="true" id="computedField3">
+					<xp:this.value><![CDATA[#{javascript:var url = context.getUrl();
+url.setAddress("http://host1.ibm.com:10001/test1.xsp");
+url.setFragment("Preface");
+url.setHost("host2.ibm.com");
+url.setPath("/test3.xsp");
+url.setPort(10002);
+url.setScheme("https");
+
+url.setParameter("database", "db_test2");
+name = url.getParameterName(0);
+return "getParameterName = " + name + " and getParameter = " + url.getParameter(name);
+
+
+}]]></xp:this.value>
+				</xp:text>
+				<xp:br></xp:br>
+				<xp:text escape="true" id="computedField4">
+					<xp:this.value><![CDATA[#{javascript:var url = context.getUrl();
+url.setAddress("http://host1.ibm.com:10001/test1.xsp");
+url.setFragment("Preface");
+url.setHost("host2.ibm.com");
+url.setPath("/test3.xsp");
+url.setPort(10002);
+url.setScheme("https");
+
+
+url.setParameter("database", "db_test3");
+return "decodeParameter : " + url.decodeParameter("database");
+}]]></xp:this.value>
+				</xp:text>
+				<xp:br></xp:br>
+				<xp:text escape="true" id="computedField5">
+					<xp:this.value><![CDATA[#{javascript:var url = context.getUrl();
+url.setAddress("http://host1.ibm.com:10001/test1.xsp");
+url.setFragment("Preface");
+url.setHost("host2.ibm.com");
+url.setPath("/test3.xsp");
+url.setPort(10002);
+url.setScheme("https");
+
+
+url.setParameter("database", "db_test4");
+return "encodeParameter : " + url.encodeParameter("database") + "\n";}]]></xp:this.value>
+				</xp:text>
+				<xp:br></xp:br>
+				<xp:text escape="true" id="computedField6">
+					<xp:this.value><![CDATA[#{javascript:var url = context.getUrl();
+url.setAddress("http://host1.ibm.com:10001/test1.xsp");
+url.setFragment("Preface");
+url.setHost("host2.ibm.com");
+url.setPath("/test3.xsp");
+url.setPort(10002);
+url.setScheme("https");
+
+
+url.setParameter("database", "db_test5");
+url.setParameter("action", "openDocument")
+url.setParameter("database", "db_test1")
+url.setParameter("schema", "Schema_form1")
+url.setParameter("id", "3fb66696c9e31")
+url.setParameter("autoedit", "true");
+
+var oldCount = url.getParametersCount();
+url.removeParameter("database");
+var newCount = url.getParametersCount();
+return "removeParameter - count before = " + oldCount + " and count after = " + newCount + "\n";
+
+}]]></xp:this.value>
+				</xp:text>
+				<xp:br></xp:br>
+				<xp:text escape="true" id="computedField7">
+					<xp:this.value><![CDATA[#{javascript:var url = context.getUrl();
+url.setAddress("http://host1.ibm.com:10001/test1.xsp");
+url.setFragment("Preface");
+url.setHost("host2.ibm.com");
+url.setPath("/test3.xsp");
+url.setPort(10002);
+url.setScheme("https");
+
+
+url.setParameter("database", "db_test5");
+url.setParameter("action", "openDocument")
+url.setParameter("database", "db_test1")
+url.setParameter("schema", "Schema_form1")
+url.setParameter("id", "3fb66696c9e31")
+url.setParameter("autoedit", "true");
+
+var oldCount = url.getParametersCount();
+url.removeAllParameters()
+var newCount = url.getParametersCount();
+return "removeAllParameter - count before = " + oldCount + " and count after = " + newCount + "\n";
+
+
+
+}]]></xp:this.value>
+				</xp:text>
+				<xp:br></xp:br>
+
+				<xp:br></xp:br>
+
+				<xp:br></xp:br>
+			</xp:panel>
+		</xp:this.facets>
+	</XPa:ccLayout>
+</xp:view>

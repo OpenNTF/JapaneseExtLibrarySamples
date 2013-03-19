@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf">
+
+	<XPa:ccLayout><xp:this.facets>
+	<xp:panel xp:key="facetMain">
+	
+	
+			<xp:span style="font-weight:bold;font-size:16pt">Active Content Filtering : htmlFilter &amp; htmlFilterIn</xp:span> 
+ &#160;
+ <xp:br></xp:br> <xp:span style="font-weight:bold"></xp:span><xp:span style="color:rgb(0,128,255)">Active content filtering which  filters out potentially nasty html </xp:span>
+ <xp:br style="font-weight:bold"></xp:br>
+ <xp:span style="color:rgb(0,128,255)"></xp:span><xp:span style="color:rgb(0,128,255)"></xp:span><xp:span style="color:rgb(0,128,255)"></xp:span><xp:span style="color:rgb(0,128,255);font-weight:bold"></xp:span><xp:span style="color:rgb(0,128,255)"></xp:span><xp:br></xp:br>
+	
+				<xp:button value="New Rich Text Document" id="button1">
+					<xp:eventHandler event="onclick" submit="true"
+						refreshMode="complete">
+						<xp:this.action>
+							<xp:openPage name="/jsFilterHtmlNew.xsp">
+							</xp:openPage>
+						</xp:this.action>
+					</xp:eventHandler>
+				</xp:button>
+				<xp:button value="Delete Selected" id="button2"><xp:eventHandler event="onclick" submit="true" refreshMode="complete">
+	<xp:this.action>
+		<xp:deleteSelectedDocuments view="viewPanel1"
+			message="delete all documents?">
+		</xp:deleteSelectedDocuments>
+	</xp:this.action></xp:eventHandler></xp:button>
+	<xp:br></xp:br>
+	<xp:viewPanel rows="30" id="viewPanel1" pageName="/jsFilterHtml.xsp">
+		<xp:this.facets>
+			<xp:pager partialRefresh="true" layout="Previous Group Next"
+				xp:key="headerPager" id="pager1">
+			</xp:pager>
+		</xp:this.facets>
+		<xp:this.data>
+			<xp:dominoView var="view1" viewName="xspjsFilterHtml"></xp:dominoView>
+		</xp:this.data>
+		<xp:viewColumn id="viewColumn3" value="#{javascript:return null}" showCheckbox="true" displayAs="hidden">
+			<xp:this.facets>
+				<xp:viewColumnHeader xp:key="header"
+					id="viewColumnHeader3">
+				</xp:viewColumnHeader>
+			</xp:this.facets>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="$124" id="viewColumn1">
+			<xp:viewColumnHeader value="Date" id="viewColumnHeader1"></xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="jsFilterHtmlSubject"
+			id="viewColumn2" displayAs="link" openDocAsReadonly="true">
+			<xp:viewColumnHeader value="Subject (htmlFilter)"
+				id="viewColumnHeader2">
+			</xp:viewColumnHeader>
+		</xp:viewColumn>
+	</xp:viewPanel>
+	
+	
+	</xp:panel></xp:this.facets></XPa:ccLayout></xp:view>

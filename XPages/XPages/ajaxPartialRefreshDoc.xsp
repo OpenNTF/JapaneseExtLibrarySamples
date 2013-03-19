@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+
+	<xp:this.data>
+		<xp:dominoDocument var="document1"
+			formName="xspPartialRefresh">
+		</xp:dominoDocument>
+	</xp:this.data>
+	<!-- toggled out because of TMON7V2JHB	<xp:this.resources>-->
+	<!--		<xp:script clientSide="true">-->
+	<!--			<xp:this.src><![CDATA[#{javascript:return "/.ibmxspres/dojoroot/ibm/xsp/widget/layout/DateTimeTextBoxContainer.js"}]]></xp:this.src>-->
+	<!--		</xp:script>-->
+	<!--	</xp:this.resources>-->
+
+
+
+	<XPa:ccLayout navPath="/events/prdoc/">
+		<xp:this.facets>
+			<xc:ccMenu_events xp:key="facetLeft"></xc:ccMenu_events>
+			<xp:panel xp:key="facetMain">
+
+
+
+
+
+				<xp:span
+					style="color:rgb(0,128,255);font-weight:bold;font-size:12pt">
+					Partial Refresh - Toggle Docs from Edit to Read-Only
+					Mode
+				</xp:span>
+				&#160;
+				<hr />
+				<xp:link escape="true" text="Return to Previous"
+					id="link22">
+					<xp:eventHandler event="onclick" submit="true"
+						refreshMode="complete" immediate="true">
+						<xp:this.action>
+							<xp:openPage
+								name="/ajaxPartialRefreshMain.xsp">
+							</xp:openPage>
+						</xp:this.action>
+					</xp:eventHandler>
+				</xp:link>
+				<xp:br></xp:br>
+				<xp:button value="Save" id="button2">
+
+					<xp:eventHandler event="onclick" submit="true"
+						refreshMode="complete">
+						<xp:this.action>
+							<xp:save
+								name="/ajaxPartialRefreshMain.xsp">
+							</xp:save>
+						</xp:this.action>
+					</xp:eventHandler>
+				</xp:button>
+				<xp:button value="Cancel" id="button3">
+
+					<xp:eventHandler event="onclick" submit="true"
+						refreshMode="complete">
+						<xp:this.action>
+							<xp:openPage
+								name="/ajaxPartialRefreshMain.xsp">
+							</xp:openPage>
+						</xp:this.action>
+					</xp:eventHandler>
+				</xp:button>
+
+				<xp:table id="table1"
+					style="border-color:rgb(0,128,255);border-style:solid;border-width:medium">
+					<xp:tr>
+						<xp:td>Subject</xp:td>
+						<xp:td>
+							<xp:inputText id="inputText3"
+								value="#{document1.partialRefreshSubject}" required="true">
+							</xp:inputText>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>Date:</xp:td>
+						<xp:td>
+							<xp:inputText id="inputText1"
+								value="#{document1.partialRefreshDate1}" required="true">
+								<xp:dateTimeHelper
+									id="dateTimeHelper1">
+								</xp:dateTimeHelper>
+								<xp:this.converter>
+									<xp:convertDateTime type="date"
+										dateStyle="short">
+									</xp:convertDateTime>
+								</xp:this.converter>
+							</xp:inputText>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>Date/Time:</xp:td>
+						<xp:td>
+							<xp:inputText id="inputText2"
+								value="#{document1.partialRefreshDate2}" required="true">
+								<xp:dateTimeHelper
+									id="dateTimeHelper2">
+								</xp:dateTimeHelper>
+
+								<xp:this.converter>
+									<xp:convertDateTime type="date"
+										dateStyle="short">
+									</xp:convertDateTime>
+								</xp:this.converter>
+							</xp:inputText>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>Body</xp:td>
+						<xp:td>
+
+							<xp:inputTextarea id="inputTextarea1"
+								value="#{document1.partialRefreshBody}" required="true">
+							</xp:inputTextarea>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:text escape="true" id="computedField1"
+								value="#{javascript:@UpperCase(@Left(@Unique(),5))}"
+								style="font-weight:bold">
+							</xp:text>
+						</xp:td>
+					</xp:tr>
+
+				</xp:table>
+				<xp:text escape="true" id="computedField2"
+					style="font-weight:bold"
+					value="#{javascript:@UpperCase(@Left(@Unique(),5))}">
+				</xp:text>
+				<xp:br></xp:br>
+				<xp:br></xp:br>
+				<xp:button value="Toggle + Partially Refresh Table"
+					id="button1">
+					<xp:eventHandler event="onclick" submit="true"
+						refreshMode="partial" refreshId="table1">
+						<xp:this.action>
+							<xp:changeDocumentMode mode="toggle"></xp:changeDocumentMode>
+						</xp:this.action>
+					</xp:eventHandler>
+				</xp:button>
+				<xp:button value="Update Table" id="button4">
+					<xp:eventHandler event="onclick" submit="true"
+						refreshMode="partial" refreshId="table1">
+					</xp:eventHandler>
+				</xp:button>
+				<xp:button value="Toggle + Full Update" id="button5">
+					<xp:eventHandler event="onclick" submit="true"
+						refreshMode="complete">
+						<xp:this.action>
+							<xp:changeDocumentMode mode="toggle"></xp:changeDocumentMode>
+						</xp:this.action>
+					</xp:eventHandler>
+				</xp:button>
+				<xp:br></xp:br>
+				<xp:br></xp:br>
+
+				<xp:button
+					value="Change to Edit Mode + Partially Refresh Table"
+					id="button6">
+					<xp:eventHandler event="onclick" submit="true"
+						refreshMode="partial" refreshId="table1">
+						<xp:this.action>
+							<xp:changeDocumentMode mode="edit"></xp:changeDocumentMode>
+						</xp:this.action>
+					</xp:eventHandler>
+				</xp:button>
+				<xp:button
+					value="Change to Read Mode + Full Update Table" id="button7">
+					<xp:eventHandler event="onclick" submit="true"
+						refreshMode="partial" refreshId="table1">
+						<xp:this.action>
+							<xp:changeDocumentMode mode="readOnly"></xp:changeDocumentMode>
+						</xp:this.action>
+					</xp:eventHandler>
+				</xp:button>
+
+			</xp:panel>
+		</xp:this.facets>
+	</XPa:ccLayout>
+</xp:view>

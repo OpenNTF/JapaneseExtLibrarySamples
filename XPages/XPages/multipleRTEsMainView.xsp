@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf">
+
+	<XPa:ccLayout><xp:this.facets>
+	<xp:tabbedPanel id="tabbedPanel1" xp:key="facetMain">
+		<xp:tabPanel label="Stored as CD" id="tabPanel1" image="/actn103.gif">
+			<xp:button value="New Multiple RTE doc - CD" id="button1"><xp:eventHandler event="onclick" submit="true" refreshMode="complete">
+	<xp:this.action>
+		<xp:openPage name="/multipleRTEs01CD.xsp"
+			target="newDocument">
+		</xp:openPage>
+	</xp:this.action></xp:eventHandler></xp:button>
+			<xp:button value="Delete selected" id="button2"><xp:eventHandler event="onclick" submit="true" refreshMode="complete">
+	<xp:this.action>
+		<xp:deleteSelectedDocuments view="viewPanel1"
+			message="Delete selected?">
+		</xp:deleteSelectedDocuments>
+	</xp:this.action></xp:eventHandler></xp:button>
+			<xp:viewPanel rows="30" id="viewPanel1" pageName="/multipleRTEs01CD.xsp">
+				<xp:this.facets>
+					<xp:pager partialRefresh="true"
+						layout="Previous Group Next" xp:key="headerPager" id="pager1">
+					</xp:pager>
+				</xp:this.facets>
+				<xp:this.data>
+					<xp:dominoView var="view1"
+						viewName="vMultipleRTEs01CD">
+					</xp:dominoView>
+				</xp:this.data>
+				<xp:viewColumn columnName="$1" id="viewColumn1">
+					<xp:viewColumnHeader value="created"
+						id="viewColumnHeader1">
+					</xp:viewColumnHeader>
+				</xp:viewColumn>
+				<xp:viewColumn columnName="Subject" id="viewColumn2" displayAs="link" openDocAsReadonly="true" showCheckbox="true">
+					<xp:viewColumnHeader value="subject"
+						id="viewColumnHeader2">
+					</xp:viewColumnHeader>
+				</xp:viewColumn>
+				<xp:viewColumn columnName="$3" id="viewColumn3">
+					<xp:viewColumnHeader value="Attachment names"
+						id="viewColumnHeader3">
+					</xp:viewColumnHeader>
+				</xp:viewColumn>
+				<xp:viewColumn columnName="$4" id="viewColumn4">
+					<xp:viewColumnHeader value="Attachment Lengths"
+						id="viewColumnHeader4">
+					</xp:viewColumnHeader>
+				</xp:viewColumn>
+				<xp:viewColumn columnName="$5" id="viewColumn5">
+					<xp:viewColumnHeader value="Attachments"
+						id="viewColumnHeader5">
+					</xp:viewColumnHeader>
+				</xp:viewColumn>
+				<xp:viewColumn columnName="$6" id="viewColumn6">
+					<xp:viewColumnHeader value="size"
+						id="viewColumnHeader6">
+					</xp:viewColumnHeader>
+				</xp:viewColumn>
+			</xp:viewPanel></xp:tabPanel>
+		<xp:tabPanel label="Stored as MIME" id="tabPanel2" image="/intprof.gif">
+			<xp:button value="New Multiple RTE doc MIME" id="button3"><xp:eventHandler event="onclick" submit="true" refreshMode="complete">
+	<xp:this.action>
+		<xp:openPage name="/multipleRTEs02MIME.xsp"
+			target="newDocument">
+		</xp:openPage>
+	</xp:this.action></xp:eventHandler></xp:button>
+			<xp:button value="Delete selected" id="button4"><xp:eventHandler event="onclick" submit="true" refreshMode="complete">
+	<xp:this.action>
+		<xp:deleteSelectedDocuments view="viewPanel2"
+			message="Delete selected??">
+		</xp:deleteSelectedDocuments>
+	</xp:this.action></xp:eventHandler></xp:button>
+			<xp:viewPanel rows="30" id="viewPanel2" pageName="/multipleRTEs02MIME.xsp">
+				<xp:this.facets>
+					<xp:pager partialRefresh="true"
+						layout="Previous Group Next" xp:key="headerPager" id="pager2">
+					</xp:pager>
+				</xp:this.facets>
+				<xp:this.data>
+					<xp:dominoView var="view2"
+						viewName="vMultipleRTEs02MIME">
+					</xp:dominoView>
+				</xp:this.data>
+				<xp:viewColumn columnName="$1" id="viewColumn7">
+					<xp:viewColumnHeader value="created"
+						id="viewColumnHeader7">
+					</xp:viewColumnHeader>
+				</xp:viewColumn>
+				<xp:viewColumn columnName="Subject" id="viewColumn8" displayAs="link" openDocAsReadonly="true" showCheckbox="true">
+					<xp:viewColumnHeader value="subject"
+						id="viewColumnHeader8">
+					</xp:viewColumnHeader>
+				</xp:viewColumn>
+				<xp:viewColumn columnName="$3" id="viewColumn9">
+					<xp:viewColumnHeader value="Attachment names"
+						id="viewColumnHeader9">
+					</xp:viewColumnHeader>
+				</xp:viewColumn>
+				<xp:viewColumn columnName="$4" id="viewColumn10">
+					<xp:viewColumnHeader value="Attachment Lengths"
+						id="viewColumnHeader10">
+					</xp:viewColumnHeader>
+				</xp:viewColumn>
+				<xp:viewColumn columnName="$5" id="viewColumn11">
+					<xp:viewColumnHeader value="Attachments"
+						id="viewColumnHeader11">
+					</xp:viewColumnHeader>
+				</xp:viewColumn>
+				<xp:viewColumn columnName="$6" id="viewColumn12">
+					<xp:viewColumnHeader value="size"
+						id="viewColumnHeader12">
+					</xp:viewColumnHeader>
+				</xp:viewColumn>
+			</xp:viewPanel></xp:tabPanel>
+	</xp:tabbedPanel></xp:this.facets></XPa:ccLayout></xp:view>

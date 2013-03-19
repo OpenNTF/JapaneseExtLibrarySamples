@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" replicaid="85257A870079CB8F" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="65e" sequence="110" unid="F539D9826C1C7AEB8025748F002D9C44">
+<created><datetime dst="true">20080723T091811,24+01</datetime></created>
+<modified><datetime>20130319T214345,61+09</datetime></modified>
+<revised><datetime>20130319T214345,60+09</datetime></revised>
+<lastaccessed><datetime>20130319T214345,61+09</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20120928T180624,56-04</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=Admin/O=LotusLab</name></updatedby>
+<revisions><datetime dst="true">20110331T101235,90+01</datetime><datetime dst="true">20121129T153549,22+01</datetime><datetime dst="true">20121129T153549,67+01</datetime><datetime dst="true">20130118T123326,07+01</datetime><datetime dst="true">20130118T123327,21+01</datetime></revisions>
+<wassignedby><name>CN=Admin/O=LotusLab</name></wassignedby>
+<item name="$TITLE"><text>propTimeZone.xsp</text></item>
+
+<item name="$Flags"><text>gCK4</text></item>
+
+
+<item name="$FileNames" sign="true"><text>propTimeZone.xsp</text></item>
+<item name="$DesignerVersion"><text>8.5</text></item>
+
+
+
+</note>

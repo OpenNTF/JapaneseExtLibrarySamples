@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+	<xp:this.data>
+		<xp:dominoDocument var="document1" formName="MainTopic">
+			<xp:this.queryOpenDocument>
+				<xp:setValue binding="#{requestScope.rd2}">
+					<xp:this.value><![CDATA[#{javascript:return "Query Open Document Event is used"}]]></xp:this.value>
+				</xp:setValue>
+			</xp:this.queryOpenDocument>
+			<xp:this.querySaveDocument>
+				<xp:setValue binding="#{requestScope.rd3}">
+					<xp:this.value><![CDATA[#{javascript:return "Query Save Document Event is used"}]]></xp:this.value>
+				</xp:setValue>
+			</xp:this.querySaveDocument>
+			<xp:this.postNewDocument>
+				<xp:setValue binding="#{requestScope.rd4}">
+					<xp:this.value><![CDATA[#{javascript:return "Post New Document Event is used"}]]></xp:this.value>
+				</xp:setValue>
+			</xp:this.postNewDocument>
+			<xp:this.postOpenDocument>
+				<xp:setValue binding="#{requestScope.rd5}">
+					<xp:this.value><![CDATA[#{javascript:return "Post Open Document Event is used"}]]></xp:this.value>
+				</xp:setValue>
+			</xp:this.postOpenDocument>
+			<xp:this.postSaveDocument>
+				<xp:setValue binding="#{requestScope.rd6}">
+					<xp:this.value><![CDATA[#{javascript:return "Post Save Document Event is used"}]]></xp:this.value>
+				</xp:setValue>
+			</xp:this.postSaveDocument>
+			<xp:this.computeDocument>
+				<xp:setValue binding="#{requestScope.rd7}">
+					<xp:this.value><![CDATA[#{javascript:return "Computed Document Event is used"}]]></xp:this.value>
+				</xp:setValue>
+			</xp:this.computeDocument>
+			<xp:this.queryNewDocument>
+				<xp:setValue binding="#{requestScope.rd1}">
+					<xp:this.value><![CDATA[#{javascript:return "Query New Document Event is used"}]]></xp:this.value>
+				</xp:setValue>
+			</xp:this.queryNewDocument>
+		</xp:dominoDocument>
+	</xp:this.data>
+
+	<XPa:ccLayout id="cc4cclayout"  navPath="/events/document/">
+		<xp:this.facets>
+			<xc:ccMenu_events xp:key="facetLeft"></xc:ccMenu_events>
+			<xp:panel xp:key="facetMain" id="panel4Content">
+				<xp:label
+					value="This XPage Tests Document Events - These are Server side only Events"
+					id="labelTitleJsDoc1"
+					style="font-size:12pt;color:rgb(0,0,0);font-weight:bold">
+				</xp:label>
+
+				<xp:table
+					style="border-style:solid;border-color:rgb(0,0,255)">
+					<xp:tr>
+						<xp:td>
+
+							<xp:label value="Event Type"
+								id="labelEventTypeJSDoc1" style="font-weight:bold">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:label value="Result"
+								id="labelResultJSDoc1" style="font-weight:bold">
+							</xp:label>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							<xp:label value="QueryNewDocument"
+								id="labelQNDJSDoc1">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:text escape="true"
+								id="computedFieldJSDoc1" value="#{requestScope.rd1}">
+							</xp:text>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							<xp:label value="QueryOpenDocument"
+								id="labelQODJSDoc1">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:text escape="true"
+								id="computedFieldJSDoc2" value="#{requestScope.rd2}">
+							</xp:text>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							<xp:label value="QuerySaveDocument"
+								id="labelQSDJSDoc1">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:text escape="true"
+								id="computedFieldJSDoc3" value="#{requestScope.rd3}">
+							</xp:text>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							<xp:label value="postNewDocument"
+								id="labelPNDJSDoc1">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:text escape="true"
+								id="computedFieldJSDoc4" value="#{requestScope.rd4}">
+							</xp:text>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							<xp:label value="postOpenDocument"
+								id="labelPODJSDoc1">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:text escape="true"
+								id="computedFieldJSDoc5" value="#{requestScope.rd5}">
+							</xp:text>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							<xp:label value="postSaveDocument"
+								id="labelPSDJSDoc1">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:text escape="true"
+								id="computedFieldJSDoc6" value="#{requestScope.rd6}">
+							</xp:text>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							<xp:label id="labelCDJSDoc1"
+								value="computeDocument">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:text escape="true"
+								id="computedFieldJSDoc7" value="#{requestScope.rd7}">
+							</xp:text>
+						</xp:td>
+					</xp:tr>
+				</xp:table>
+
+				<xp:panel xp:key="facetMain" id="panelJSDoc2">
+					<xp:br></xp:br>
+					<xp:br></xp:br>
+					<xp:br></xp:br>
+					<xp:button value="Save and Close"
+						id="buttonSaveCloseJSDoc" styleClass="customButton">
+
+						<xp:eventHandler event="onclick" submit="true"
+							refreshMode="complete">
+							<xp:this.action>
+								<xp:save
+									name="/eventsXPageEvents.xsp">
+								</xp:save>
+							</xp:this.action>
+						</xp:eventHandler>
+					</xp:button>
+
+					<xp:button value="Edit" id="buttonEditJSDoc"
+						styleClass="customButton">
+						<xp:eventHandler event="onclick" submit="true"
+							refreshMode="complete">
+							<xp:this.action>
+								<xp:changeDocumentMode mode="edit"></xp:changeDocumentMode>
+							</xp:this.action>
+						</xp:eventHandler>
+					</xp:button>
+					<xp:button value="Delete" id="buttonDeleteJSDoc"
+						styleClass="customButton">
+
+						<xp:eventHandler event="onclick" submit="true"
+							refreshMode="complete">
+							<xp:this.action>
+								<xp:deleteDocument
+									name="/eventsXPageEvents.xsp"
+									message="This action will delete this document.">
+								</xp:deleteDocument>
+							</xp:this.action>
+						</xp:eventHandler>
+					</xp:button>
+
+					<xp:button value="Save" styleClass="customButton"
+						id="buttonSaveJSDoc">
+						<xp:eventHandler event="onclick" submit="true"
+							refreshMode="complete">
+							<xp:this.action>
+								<xp:save></xp:save>
+							</xp:this.action>
+						</xp:eventHandler>
+					</xp:button>
+					<xp:button value="Close" id="buttonCloseJSDoc"
+						styleClass="customButton">
+						<xp:eventHandler event="onclick" submit="true"
+							refreshMode="complete" immediate="true" save="false">
+							<xp:this.action>
+								<xp:openPage
+									name="/eventsXPageEvents.xsp">
+								</xp:openPage>
+							</xp:this.action>
+						</xp:eventHandler>
+					</xp:button>
+					<xp:table id="tableJSDocmain1"
+						style="margin-top:10px">
+						<xp:tr>
+							<xp:td>
+								<xp:label value="Subject:"
+									id="labelJSDocSubject" for="inputTextCRUDSubject">
+								</xp:label>
+							</xp:td>
+							<xp:td>
+								<xp:inputText id="inputTextJSDocSubject"
+									value="#{document1.Subject}">
+								</xp:inputText>
+							</xp:td>
+						</xp:tr>
+						<xp:tr>
+							<xp:td>
+								<xp:label value="Category: "
+									id="labelJSDocCategory" for="inputTextCRUDCategories">
+								</xp:label>
+							</xp:td>
+							<xp:td>
+								<xp:inputText
+									id="inputTextJSDocCategories"
+									value="#{document1.Categories}">
+								</xp:inputText>
+							</xp:td>
+						</xp:tr>
+						<xp:tr>
+							<xp:td>
+								<xp:label value="Body: "
+									id="labelJSDocBody" for="inputTextareaCRUDBody">
+								</xp:label>
+							</xp:td>
+							<xp:td>
+
+								<xp:inputTextarea
+									id="inputTextarea1JSDoc" value="#{document1.Body}">
+								</xp:inputTextarea>
+							</xp:td>
+						</xp:tr>
+						<xp:tr>
+							<xp:td>
+								<xp:label value="Author: "
+									id="labelJSDocAuthor" for="computedFieldCRUDAuthor">
+								</xp:label>
+							</xp:td>
+							<xp:td>
+								<xp:text escape="true"
+									id="computedFieldJSDocAuthor"
+									value="#{dominoDocument1.From}">
+								</xp:text>
+							</xp:td>
+						</xp:tr>
+						<xp:tr>
+							<xp:td>
+								<xp:label value="You are: "
+									id="labelyouare1JSDoc" for="labelCRUDYouAre">
+								</xp:label>
+							</xp:td>
+							<xp:td>
+
+								<xp:label
+									value="#{javascript:@UserName()}" id="labelJSDocYouAre">
+								</xp:label>
+							</xp:td>
+						</xp:tr>
+					</xp:table>
+				</xp:panel>
+
+			</xp:panel>
+		</xp:this.facets>
+	</XPa:ccLayout>
+</xp:view>

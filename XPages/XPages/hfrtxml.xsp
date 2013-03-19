@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:XPa="component/XPages.nsf">
+
+	<xp:this.data>
+		<xp:dominoDocument var="document1" formName="xphfrtx" computeWithForm="both"></xp:dominoDocument>
+	</xp:this.data>
+	<XPa:ccLayout id="cc4cclayout">
+		<xp:this.facets>
+			<xp:panel xp:key="facetMain">
+				<xp:panel id="panelContent">
+					<xp:table>
+						<xp:tr>
+							<xp:td>
+								<xp:label value="Subject:" id="labelSubject" for="title1">
+								</xp:label>
+							</xp:td>
+							<xp:td>
+								<xp:inputText value="#{document1.subject}" id="title1"
+									required="true">
+								</xp:inputText>
+							</xp:td>
+						</xp:tr>
+					</xp:table>
+					<xp:panel>
+						<xp:this.dataContexts>
+							<xp:dataContext var="xml">
+								<xp:this.value><![CDATA[#{javascript:document1.getFieldAsXml("hfrtxml")}]]></xp:this.value>
+							</xp:dataContext>
+						</xp:this.dataContexts>
+						<xp:table>
+							<xp:tr>
+								<xp:td>
+									<xp:label value="First Name:" id="label1" for="inputTextFirstNam">
+									</xp:label>
+								</xp:td>
+								<xp:td>
+									<xp:inputText value="#{xpath:xml:/root/firstName}" id="inputTextFirstName" disabled="#{javascript:!document1.isEditable()}">
+									</xp:inputText>
+								</xp:td>
+								<xp:td></xp:td>
+								<xp:td>
+									<xp:label value="Last Name:" id="label2" for="inputTextLastName">
+									</xp:label>
+								</xp:td>
+								<xp:td>
+									<xp:inputText value="#{xpath:xml:/root/lastName}" id="inputTextLastName" disabled="#{javascript:!document1.isEditable()}">
+									</xp:inputText>
+								</xp:td>
+							</xp:tr>
+							
+						</xp:table>
+						<xp:panel id="refreshPanel">
+							<xp:dataTable id="dataTable1"
+								value="#{xpath:xml:/root/addr}" var="addr" indexVar="idx">
+								<xp:column id="column5">
+									<xp:text escape="true"
+										id="computedField2">
+										<xp:this.value><![CDATA[#{javascript:var ix = idx+1; 
+ix.toString()}]]></xp:this.value>
+									</xp:text></xp:column>
+								<xp:column id="Country">
+									<xp:this.facets>
+										<xp:span xp:key="header">
+											Country
+										</xp:span>
+									</xp:this.facets>
+
+									<xp:comboBox id="comboBoxCountry"
+										value="#{xpath:xml:country}" disabled="#{javascript:!document1.isEditable()}">
+										<xp:selectItem
+											itemLabel="none selected" id="selectItem1">
+										</xp:selectItem>
+										<xp:selectItems
+											id="selectItems1">
+											<xp:this.value><![CDATA[#{javascript:@Unique(@DbColumn(@DbName(),"xspCountryCityView",1)).sort()}]]></xp:this.value>
+										</xp:selectItems>
+									</xp:comboBox>
+								</xp:column>
+								<xp:column id="column2">
+									<xp:this.facets>
+
+										<xp:span xp:key="header">
+											Text (type 'P', 'Q' or 'R')
+										</xp:span>
+									</xp:this.facets>
+									<xp:inputText value="#{xpath:xml:txt}"
+										id="inputTextTxt" multipleTrim="true" multipleSeparator="," disabled="#{javascript:!document1.isEditable()}">
+										<xp:typeAhead mode="full"
+											minChars="1" ignoreCase="true" valueListSeparator=","
+											id="typeAhead1">
+											<xp:this.valueList><![CDATA[#{javascript:@Unique(@DbColumn(@DbName(),"xspFiltersView",3)).sort()}]]></xp:this.valueList>
+										</xp:typeAhead>
+									</xp:inputText>
+								</xp:column>
+								<xp:column id="column1">
+
+									<xp:inputText
+										id="inputTextValDateTimeRange01"
+										value="#{xpath:xml:correctDate}" disabled="#{javascript:!document1.isEditable()}">
+										<xp:this.converter>
+											<xp:convertDateTime
+												type="date">
+											</xp:convertDateTime>
+										</xp:this.converter>
+										<xp:this.validators>
+											<xp:validateDateTimeRange
+												minimum="#{javascript:@Yesterday()}"
+												maximum="#{javascript:@Tomorrow()}"
+												message="Valid date must be between yesterday and tomorrow.">
+											</xp:validateDateTimeRange>
+										</xp:this.validators>
+										<xp:dateTimeHelper
+											id="dateTimeHelper1">
+										</xp:dateTimeHelper>
+									</xp:inputText>
+
+
+									<xp:this.facets>
+
+										<xp:span xp:key="header">
+											Valid&#160;date
+										</xp:span>
+									</xp:this.facets>
+								</xp:column>
+								<xp:column id="column3">
+									<xp:this.facets>
+
+										<xp:span xp:key="header">
+											Rate it out of 100
+										</xp:span>
+									</xp:this.facets>
+									<xp:inputText id="inputTextNumber"
+										value="#{xpath:xml:number1}" required="true" disabled="#{javascript:!document1.isEditable()}">
+										<xp:this.converter>
+											<xp:convertNumber
+												type="number" integerOnly="true">
+											</xp:convertNumber>
+										</xp:this.converter>
+										<xp:this.validators>
+											<xp:validateLongRange
+												maximum="100" minimum="0"
+												message="Number must be between 0 and 100">
+											</xp:validateLongRange>
+
+											<xp:validateRequired
+												message="Enter a rating!">
+											</xp:validateRequired>
+										</xp:this.validators>
+									</xp:inputText>
+								</xp:column>
+								<xp:column id="column4">
+									<xp:messages id="messages1"></xp:messages>
+								</xp:column>
+							</xp:dataTable>
+							
+							<xp:button value="Add Record" id="button5" rendered="#{javascript:document1.isEditable()}">
+						<xp:eventHandler event="onclick" submit="true"
+							refreshMode="partial" refreshId="refreshPanel">
+							<xp:this.action><![CDATA[#{javascript:xml.getDocumentElement().appendChild(xml.createElement('addr'))}]]></xp:this.action>
+						</xp:eventHandler>
+					</xp:button>
+							
+							
+							<xp:table>
+								<xp:tr>
+									<xp:td>
+										<xp:label value="XML as RICH Text"
+											id="label3" for="title1">
+										</xp:label>
+									</xp:td>
+								</xp:tr>
+								<xp:tr>
+									<xp:td>
+																				
+										<xp:inputRichText
+											id="inputRichText1" value="#{document1.hfrtxml}" readonly="true" showReadonlyAsDisabled="true"
+											style="font-family:Courier New">
+										</xp:inputRichText>
+
+									</xp:td>
+								</xp:tr>
+							</xp:table>
+						</xp:panel>
+					<xp:button value="Save" id="buttonSave" rendered="#{javascript:document1.isEditable()}">
+							<xp:eventHandler event="onclick"
+								submit="true" refreshMode="complete" immediate="false"
+								save="true">
+							</xp:eventHandler>
+						</xp:button>
+						<xp:button value="Cancel" id="buttonCancel">
+							<xp:eventHandler event="onclick"
+								submit="true" refreshMode="complete" immediate="true"
+								save="false">
+							</xp:eventHandler>
+						</xp:button>
+						<xp:button value="Edit" id="buttonEdit" rendered="#{javascript:!document1.isEditable()}"><xp:eventHandler event="onclick" submit="true" refreshMode="complete">
+	<xp:this.action>
+		<xp:changeDocumentMode mode="edit" var="document1"></xp:changeDocumentMode>
+	</xp:this.action></xp:eventHandler></xp:button><hr/>
+					</xp:panel>
+					
+					<xp:button value="Roundtrip" id="button1" rendered="#{javascript:document1.isEditable()}">
+						<xp:eventHandler event="onclick" submit="true"
+							refreshMode="partial" refreshId="refreshPanel">
+						</xp:eventHandler>
+					</xp:button>
+					<br />
+					<xp:label value="XML:" id="Labelxml"
+						>
+					</xp:label>
+					<br />
+					<xp:text escape="true" id="computedField1" style="color:rgb(128,128,192);font-weight:bold">
+						<xp:this.value><![CDATA[#{javascript:document1.getFieldAsXml("hfrtxml").getXMLString()}]]></xp:this.value>
+					</xp:text>
+
+
+				</xp:panel>
+
+
+
+
+			</xp:panel>
+		</xp:this.facets>
+	</XPa:ccLayout>
+<xp:this.navigationRules><xp:navigationRule outcome="xsp-success" viewId="/hfview.xsp"></xp:navigationRule></xp:this.navigationRules></xp:view>
+

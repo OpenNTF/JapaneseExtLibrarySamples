@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+
+	<xp:this.resources>
+		<xp:styleSheet href="/csscustom.css"></xp:styleSheet>
+	</xp:this.resources>
+
+	<XPa:ccLayout id="cc4cclayout"  navPath="/forms/peditboxprop/">
+		<xp:this.facets>
+			<xc:ccMenu_forms xp:key="facetLeft"></xc:ccMenu_forms>
+			<xp:table styleClass="customTable" xp:key="facetMain">
+				<xp:tr>
+					<xp:td>Visable Checkbox On</xp:td>
+					<xp:td>
+						<xp:inputText id="inputTextPropVisibleOn01"
+							tabindex="1">
+						</xp:inputText>
+					</xp:td>
+					<xp:td></xp:td>
+				</xp:tr>
+				<xp:tr>
+					<xp:td>Visable Checkbox Off</xp:td>
+					<xp:td>
+						<xp:inputText id="inputTextPropVisibleOff01"
+							rendered="false">
+						</xp:inputText>
+					</xp:td>
+					<xp:td></xp:td>
+				</xp:tr>
+				<xp:tr>
+					<xp:td>Visable Computed On</xp:td>
+					<xp:td>
+						<xp:inputText id="inputTextPropVisibleOnComp01"
+							rendered="#{javascript:return true}">
+						</xp:inputText>
+					</xp:td>
+					<xp:td></xp:td>
+				</xp:tr>
+				<xp:tr>
+					<xp:td>Visable Computed Off</xp:td>
+					<xp:td>
+						<xp:inputText id="inputTextPropVisibleOffComp01"
+							rendered="#{javascript:return false}">
+						</xp:inputText>
+					</xp:td>
+					<xp:td></xp:td>
+				</xp:tr>
+				<xp:tr>
+					<xp:td>Read Only Checkbox On</xp:td>
+					<xp:td>
+						<xp:inputText id="inputTextPropReadOnlyOn01"
+							readonly="true" value="#{sessionScope.pcebroon01}"
+							defaultValue="R O Checked On">
+						</xp:inputText>
+					</xp:td>
+					<xp:td></xp:td>
+				</xp:tr>
+				<xp:tr>
+					<xp:td>Read Only Checkbox Off</xp:td>
+					<xp:td>
+						<xp:inputText id="inputTextPropReadOnlyOff01">
+						</xp:inputText>
+					</xp:td>
+					<xp:td></xp:td>
+				</xp:tr>
+				<xp:tr>
+					<xp:td>Read Only Computed On</xp:td>
+					<xp:td>
+						<xp:inputText id="inputTextPropReadOnlyOnComp01"
+							readonly="#{javascript:return true}"
+							value="#{sessionScope.pcebroon02}"
+							defaultValue="R O Computed On">
+						</xp:inputText>
+					</xp:td>
+					<xp:td></xp:td>
+				</xp:tr>
+				<xp:tr>
+					<xp:td>Read Only Computed Off</xp:td>
+					<xp:td>
+						<xp:inputText
+							id="inputTextPropReadOnlyOffComp01"
+							readonly="#{javascript:return false}">
+						</xp:inputText>
+					</xp:td>
+					<xp:td></xp:td>
+				</xp:tr>
+				<xp:tr>
+					<xp:td>Disabled CheckBox On</xp:td>
+					<xp:td>
+						<xp:inputText id="inputTextPropDisabledOn01"
+							disabled="true" value="#{sessionScope.pcebdischon01}"
+							defaultValue="This box is disabled">
+						</xp:inputText>
+					</xp:td>
+					<xp:td></xp:td>
+				</xp:tr>
+				<xp:tr>
+					<xp:td>Disabled CheckBox Off</xp:td>
+					<xp:td>
+						<xp:inputText id="inputTextPropDisabledOff01"
+							tabindex="3" value="#{sessionScope.pcebdischoff01}"
+							defaultValue="This box is not disabled">
+						</xp:inputText>
+					</xp:td>
+					<xp:td></xp:td>
+				</xp:tr>
+				<xp:tr>
+					<xp:td>Disabled Computed On</xp:td>
+					<xp:td>
+						<xp:inputText id="inputTextPropDisabledOnComp01"
+							disabled="#{javascript:return true}"
+							value="#{sessionScope.pcebdischon02}"
+							defaultValue="This box is disabled">
+						</xp:inputText>
+					</xp:td>
+					<xp:td></xp:td>
+				</xp:tr>
+				<xp:tr>
+					<xp:td>Disabled &#160;Computed Off</xp:td>
+					<xp:td>
+						<xp:inputText
+							id="inputTextPropDisabledOffComp01"
+							disabled="#{javascript:return false}"
+							value="#{sessionScope.pcebdischoff02}"
+							defaultValue="This box is not disabled">
+						</xp:inputText>
+					</xp:td>
+					<xp:td></xp:td>
+				</xp:tr>
+				<xp:tr>
+					<xp:td>Height - Pixels(30) - Static</xp:td>
+					<xp:td>
+						<xp:inputText id="inputTextHeightPixStat01"
+							tabindex="4" style="height:30px">
+						</xp:inputText>
+					</xp:td>
+					<xp:td></xp:td>
+				</xp:tr>
+				<xp:tr>
+					<xp:td>Height - Ems (5) - Static</xp:td>
+					<xp:td>
+						<xp:inputText id="inputTextHeightEmsStat01"
+							style="height:5em">
+						</xp:inputText>
+					</xp:td>
+					<xp:td></xp:td>
+				</xp:tr>
+				<xp:tr>
+					<xp:td>Height - Auto - Static</xp:td>
+					<xp:td>
+						<xp:inputText id="inputTextHeightAutoStat01"></xp:inputText>
+					</xp:td>
+					<xp:td></xp:td>
+				</xp:tr>
+				<xp:tr>
+					<xp:td>
+						Height - Pixels - Computed - Units (30)
+					</xp:td>
+					<xp:td>
+						<xp:inputText
+							id="inputTextHeightPix01CompUnits">
+							<xp:this.style><![CDATA[height:30.0#{javascript:return "px"}]]></xp:this.style>
+						</xp:inputText>
+					</xp:td>
+					<xp:td></xp:td>
+				</xp:tr>
+				<xp:tr>
+					<xp:td>
+						Height - Pixels - Computed - Value (25)
+					</xp:td>
+					<xp:td>
+						<xp:inputText id="inputTextHeightPix01CompValue"
+							style="height:#{javascript:return 25}px">
+						</xp:inputText>
+					</xp:td>
+					<xp:td></xp:td>
+				</xp:tr>
+				<xp:tr>
+					<xp:td>Height - Ems - Computed - Units (6)</xp:td>
+					<xp:td>
+						<xp:inputText
+							id="inputTextHeightEms01CompUnits">
+							<xp:this.style><![CDATA[height:6.0#{javascript:return "em"}]]></xp:this.style>
+						</xp:inputText>
+					</xp:td>
+					<xp:td></xp:td>
+				</xp:tr>
+				<xp:tr>
+					<xp:td>Height - Ems - Computed - Value (4)</xp:td>
+					<xp:td>
+						<xp:inputText id="inputTextHeightEms01CompValue"
+							style="height:#{javascript:return 4}em">
+						</xp:inputText>
+					</xp:td>
+					<xp:td></xp:td>
+				</xp:tr>
+
+
+				<xp:tr>
+					<xp:td>Width - Pixels (250) - Static</xp:td>
+					<xp:td>
+						<xp:inputText id="inputTextWidthPixStat01"
+							tabindex="5" style="width:250.0px">
+						</xp:inputText>
+					</xp:td>
+					<xp:td></xp:td>
+				</xp:tr>
+				<xp:tr>
+					<xp:td>Width - Ems (15)- Static</xp:td>
+					<xp:td>
+						<xp:inputText id="inputTextWidthEmsStat01"
+							style="width:15em">
+						</xp:inputText>
+					</xp:td>
+					<xp:td></xp:td>
+				</xp:tr>
+				<xp:tr>
+					<xp:td>Width - Percent (20%) - Static</xp:td>
+					<xp:td>
+						<xp:inputText id="inputTextWidthPercentStat01"
+							style="width:20%">
+						</xp:inputText>
+					</xp:td>
+					<xp:td></xp:td>
+				</xp:tr>
+				<xp:tr>
+					<xp:td>Width - Auto - Static</xp:td>
+					<xp:td>
+						<xp:inputText id="inputTextWidthAutoStat01"></xp:inputText>
+					</xp:td>
+					<xp:td></xp:td>
+				</xp:tr>
+				<xp:tr>
+					<xp:td>
+						Width - Pixels - Computed - Units (100)
+					</xp:td>
+					<xp:td>
+						<xp:inputText
+							id="inputTextWidthPix01CompUnits">
+							<xp:this.style><![CDATA[width:100.0#{javascript:return "px"}]]></xp:this.style>
+						</xp:inputText>
+					</xp:td>
+					<xp:td></xp:td>
+				</xp:tr>
+				<xp:tr>
+					<xp:td>
+						Width - Pixels - Computed - Value (180)
+					</xp:td>
+					<xp:td>
+						<xp:inputText id="inputTextWidthPix01CompValue"
+							style="width:#{javascript:return 180}px">
+						</xp:inputText>
+					</xp:td>
+					<xp:td></xp:td>
+				</xp:tr>
+				<xp:tr>
+					<xp:td>
+						Width - Ems - Computed - Units
+
+						(15)
+					</xp:td>
+					<xp:td>
+						<xp:inputText
+							id="inputTextWidthEms01CompUnits">
+							<xp:this.style><![CDATA[width:15.0#{javascript:return "em"}]]></xp:this.style>
+						</xp:inputText>
+					</xp:td>
+					<xp:td></xp:td>
+				</xp:tr>
+				<xp:tr>
+					<xp:td>Width - Ems - Computed - Value (8)</xp:td>
+					<xp:td>
+						<xp:inputText id="inputTextWidthEms01CompValue"
+							style="width:#{javascript:return 8}em">
+						</xp:inputText>
+					</xp:td>
+					<xp:td></xp:td>
+				</xp:tr>
+				<xp:tr>
+					<xp:td>
+						Width - Percent - Computed - Units (60%)
+					</xp:td>
+					<xp:td>
+						<xp:inputText
+							id="inputTextWidthPercent01CompUnits">
+							<xp:this.style><![CDATA[width:60.0#{javascript:return "%"}]]></xp:this.style>
+						</xp:inputText>
+					</xp:td>
+					<xp:td></xp:td>
+				</xp:tr>
+				<xp:tr>
+					<xp:td>
+						Width - Percent - Computed - Value (50)
+					</xp:td>
+					<xp:td>
+						<xp:inputText
+							id="inputTextWidthPercent01CompValue"
+							style="width:#{javascript:return 50}%">
+						</xp:inputText>
+					</xp:td>
+					<xp:td></xp:td>
+				</xp:tr>
+
+
+
+				<xp:tr>
+					<xp:td>Password - Checked</xp:td>
+					<xp:td>
+
+						<xp:inputText id="inputTextPassword01Stat"
+							password="true" defaultValue="pppppp">
+						</xp:inputText>
+					</xp:td>
+					<xp:td></xp:td>
+				</xp:tr>
+				<xp:tr>
+					<xp:td>Password - Computed</xp:td>
+					<xp:td>
+						<xp:inputText id="inputTextPassword01Comp"
+							password="${javascript:return true}">
+						</xp:inputText>
+					</xp:td>
+					<xp:td></xp:td>
+				</xp:tr>
+				<xp:tr>
+					<xp:td>Maximum Length - 15 Characters</xp:td>
+					<xp:td>
+						<xp:inputText id="inputTextMaxlength01Stat"
+							maxlength="15">
+						</xp:inputText>
+					</xp:td>
+					<xp:td></xp:td>
+				</xp:tr>
+				<xp:tr>
+					<xp:td>Maximum Length - 10 Characters</xp:td>
+					<xp:td>
+						<xp:inputText id="inputTextMaxlength01Comp"
+							maxlength="#{javascript:return 10}">
+						</xp:inputText>
+					</xp:td>
+					<xp:td></xp:td>
+				</xp:tr>
+				<xp:tr>
+					<xp:td>Size (15) - Checked</xp:td>
+					<xp:td>
+						<xp:inputText id="inputTextSize01Stat"
+							size="15">
+						</xp:inputText>
+					</xp:td>
+					<xp:td></xp:td>
+				</xp:tr>
+				<xp:tr>
+					<xp:td>Size (30) - Computed</xp:td>
+					<xp:td>
+						<xp:inputText id="inputTextSize01Comp"
+							size="#{javascript:return 30}">
+						</xp:inputText>
+					</xp:td>
+					<xp:td></xp:td>
+				</xp:tr>
+
+			</xp:table>
+		</xp:this.facets>
+	</XPa:ccLayout>
+</xp:view>

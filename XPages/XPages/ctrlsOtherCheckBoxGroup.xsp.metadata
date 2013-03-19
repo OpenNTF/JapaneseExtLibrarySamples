@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" replicaid="85257A870079CB8F" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="66a" sequence="113" unid="8A4308A6F7556EA18025748E005539D2">
+<created><datetime dst="true">20080722T163053,62+01</datetime></created>
+<modified><datetime>20130319T214348,13+09</datetime></modified>
+<revised><datetime>20130319T214348,12+09</datetime></revised>
+<lastaccessed><datetime>20130319T214348,13+09</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20120928T180625,16-04</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=Admin/O=LotusLab</name></updatedby>
+<revisions><datetime dst="true">20110331T101114,41+01</datetime><datetime dst="true">20121212T115931,96+01</datetime><datetime dst="true">20121212T115932,46+01</datetime><datetime dst="true">20121212T115932,48+01</datetime><datetime dst="true">20121212T121321,88+01</datetime></revisions>
+<wassignedby><name>CN=Admin/O=LotusLab</name></wassignedby>
+<item name="$TITLE"><text>ctrlsOtherCheckBoxGroup.xsp</text></item>
+
+<item name="$Flags"><text>gCK4</text></item>
+
+
+<item name="$FileNames" sign="true"><text>ctrlsOtherCheckBoxGroup.xsp</text></item>
+<item name="$DesignerVersion"><text>8.5</text></item>
+
+
+
+</note>

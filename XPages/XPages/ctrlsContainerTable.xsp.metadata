@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" replicaid="85257A870079CB8F" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="5a6" sequence="127" unid="C8E09DC81C27EF95802573DB003E4C36">
+<created><datetime dst="true">20080125T122027,42+01</datetime></created>
+<modified><datetime>20130319T214348,93+09</datetime></modified>
+<revised><datetime>20130319T214348,92+09</datetime></revised>
+<lastaccessed><datetime>20130319T214348,93+09</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20120928T180617,36-04</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=Admin/O=LotusLab</name></updatedby>
+<revisions><datetime dst="true">20110331T101041,32+01</datetime><datetime dst="true">20121212T105146,79+01</datetime><datetime dst="true">20121212T105147,30+01</datetime></revisions>
+<wassignedby><name>CN=Admin/O=LotusLab</name></wassignedby>
+<item name="$TITLE"><text>ctrlsContainerTable.xsp</text></item>
+
+<item name="$Flags"><text>gK4</text></item>
+
+
+<item name="$FileNames" sign="true"><text>ctrlsContainerTable.xsp</text></item>
+<item name="$DesignerVersion"><text>8.5</text></item>
+
+
+
+</note>

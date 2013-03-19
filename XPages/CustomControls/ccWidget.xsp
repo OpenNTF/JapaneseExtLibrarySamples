@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+
+	<xp:this.resources>
+		<xp:styleSheet href="/1UIclasses.css"></xp:styleSheet>
+		
+		<xp:styleSheet href="/iehacks.css"></xp:styleSheet>
+		<xp:bundle var="xstr" src="strings.properties"></xp:bundle>
+	</xp:this.resources>
+	<xp:panel id="frame"
+		 styleClass="lotusSection2 lotusPortlet">
+		<xp:panel id="toolbar" styleClass="lotusSectionHeader">
+
+			<xp:panel>
+				<xp:panel>
+					<xp:label value="#{javascript:@DbTitle()}" id="labelXPagesDemoAppLabel"
+						styleClass="widgetTitle" style="padding:0 0 0 5px;float:left;font-size:1em;line-height:2em;letter-spacing:0;font-weight:bolder;color:#fff">
+					</xp:label>
+
+				</xp:panel>
+			</xp:panel>
+		</xp:panel>
+		<xp:panel styleClass="lotusSectionBody">
+
+			<xp:callback facetName="facet_1" id="callbackWidget"></xp:callback>
+		</xp:panel>
+	<xp:panel styleClass="lotusSectionFooter">
+		<xp:image url="/ibmlogosmall.gif" id="image1"></xp:image>
+		<xp:label id="labelCopyrightLabel" style="font-size:8pt">
+			<xp:this.value>
+				<![CDATA[#{javascript:" Copyright IBM Corporation 2010. All rights reserved."}]]>
+			</xp:this.value>
+		</xp:label>
+		<xp:br></xp:br><xp:label id="label4AppVersion" style="font-size:x-small;color:rgb(128,128,128)">
+						<xp:this.value><![CDATA[#{javascript:xstr.getString("app.version")}]]></xp:this.value>
+					</xp:label></xp:panel></xp:panel>
+	
+
+
+</xp:view>

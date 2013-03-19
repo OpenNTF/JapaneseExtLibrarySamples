@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+
+	<XPa:ccLayout id="cc4cclayout" navPath="/events/eventhandlers/">
+		<xp:this.facets>
+			<xc:ccMenu_events xp:key="facetLeft"></xc:ccMenu_events>
+			<xp:panel xp:key="facetMain" id="panel4Content">
+				<xp:label id="labelEHEvts5"
+					style="font-size:12pt;color:rgb(0,0,0);font-weight:bold"
+					value="This XPage Tests Event Handler Events - Client side">
+				</xp:label>
+
+
+				<xp:table>
+					<xp:tr>
+						<xp:td>
+							<xp:label value="Event Type"
+								id="labelEHEvts1" style="font-weight:bold">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:label value="Control" id="labelEHEvts2"
+								style="font-weight:bold">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+
+							<xp:label value="Result Client Side"
+								id="labelEHEvts3" style="font-weight:bold">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+
+						</xp:td>
+
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							<xp:label value="onStart"
+								id="labelEHEvts6">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:button value="Press Me"
+								id="buttonEHEvts1" styleClass="customButton">
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="partial"
+									refreshId="inputTextEHEvts1"
+									onStart="XSP.getElementById('#{id:inputTextEHEvts1}').value += 'Client - On Start\n'">
+								</xp:eventHandler>
+							</xp:button>
+						</xp:td>
+						<xp:td>
+							<xp:inputText id="inputTextEHEvts1">
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="partial" id="eventHandler1">
+								</xp:eventHandler>
+							</xp:inputText>
+						</xp:td>
+						<xp:td>
+
+						</xp:td>
+
+
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							<xp:label value="onComplete"
+								id="labelEHEvts7">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:button value="Press Me"
+								id="buttonEHEvts2" styleClass="customButton">
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="partial"
+									refreshId="inputTextEHEvts2"
+									onComplete="XSP.getElementById('#{id:inputTextEHEvts2}').value += 'Client - On Complete\n'">
+								</xp:eventHandler>
+							</xp:button>
+						</xp:td>
+						<xp:td>
+							<xp:inputText id="inputTextEHEvts2"></xp:inputText>
+						</xp:td>
+						<xp:td>
+
+						</xp:td>
+
+
+					</xp:tr>
+
+					<xp:tr>
+						<xp:td>
+							<xp:label value="onError"
+								id="labelEHEvts8">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:button
+								value="Delete Edit Box from Browser" id="buttonEHEvts3"
+								styleClass="customButton">
+								<xp:eventHandler event="onclick"
+									submit="false">
+									<xp:this.script><![CDATA[
+var editBox = XSP.getElementById('#{id:inputTextEHEvts3}');
+editBox.parentNode.removeChild(editBox);]]></xp:this.script>
+								</xp:eventHandler>
+							</xp:button>
+						</xp:td>
+						<xp:td>
+
+							<xp:inputText id="inputTextEHEvts3"></xp:inputText>
+						</xp:td>
+						<xp:td>
+
+							<xp:button value="Update inputText1"
+								id="buttonEHEvts4" styleClass="customButton">
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="partial"
+									refreshId="inputTextEHEvts3"
+									onError="alert('onError occurred');">
+								</xp:eventHandler>
+							</xp:button>
+						</xp:td>
+
+
+					</xp:tr>
+				</xp:table>
+
+			</xp:panel>
+		</xp:this.facets>
+	</XPa:ccLayout>
+</xp:view>

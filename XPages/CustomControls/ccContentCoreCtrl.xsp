@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+	<xp:this.resources>
+		<xp:styleSheet href="/csscustom.css"></xp:styleSheet>
+	</xp:this.resources>
+
+
+	<xp:panel id="panelActions">
+		<xp:button id="buttonCoreSaveClose" value="Save and Close">
+			<xp:eventHandler event="onclick" submit="true"
+				refreshMode="complete">
+				<xp:this.action>
+					<xp:save name="/ctrlsCore.xsp"></xp:save>
+				</xp:this.action>
+			</xp:eventHandler>
+		</xp:button>
+		<xp:button value="Cancel" id="buttonCoreCancel">
+			<xp:eventHandler event="onclick" submit="true"
+				refreshMode="complete" immediate="true" save="false">
+				<xp:this.action>
+					<xp:openPage name="/ctrlsCore.xsp"></xp:openPage>
+				</xp:this.action>
+			</xp:eventHandler>
+		</xp:button>
+		<xp:button value="Edit" id="buttonCoreEdit">
+			<xp:eventHandler event="onclick" submit="true"
+				refreshMode="complete">
+				<xp:this.action>
+					<xp:changeDocumentMode mode="edit"></xp:changeDocumentMode>
+				</xp:this.action>
+			</xp:eventHandler>
+		</xp:button>
+		<xp:button value="Read Mode" id="buttonCoreReadMode">
+
+			<xp:eventHandler event="onclick" submit="true"
+				refreshMode="complete">
+				<xp:this.action>
+					<xp:changeDocumentMode mode="readOnly"></xp:changeDocumentMode>
+				</xp:this.action>
+			</xp:eventHandler>
+		</xp:button>
+		<xp:button value="Delete" id="buttonCoreDelete">
+			<xp:eventHandler event="onclick" submit="true"
+				refreshMode="complete">
+				<xp:this.action>
+					<xp:deleteDocument name="/ctrlsCore.xsp"
+						message="This action will delete this document">
+					</xp:deleteDocument>
+				</xp:this.action>
+			</xp:eventHandler>
+		</xp:button>
+		<xp:button value="Go to Core Controls View" id="buttonGoToCoreViewPage">
+
+			<xp:eventHandler event="onclick" submit="true"
+				refreshMode="complete">
+				<xp:this.action>
+					<xp:openPage name="/ctrlsCore.xsp"></xp:openPage>
+				</xp:this.action>
+			</xp:eventHandler>
+		</xp:button>
+	</xp:panel>
+	<xp:panel id="panelContent" style="width:50%">
+		<xp:table styleClass="table">
+			<xp:tr>
+				<xp:td style="width:20%" valign="top">
+					<xp:label id="labelCoreTestControl" value="Test Control:">
+					</xp:label>
+				</xp:td>
+				<xp:td style="background-color:rgb(235,248,254)">
+					<xp:callback facetName="facetTestControl" id="callbackTestControl">
+					</xp:callback>
+				</xp:td>
+			</xp:tr>
+			<xp:tr>
+				<xp:td style="width:20%">
+					<xp:label value="Subject:" id="labelCoreSubject"></xp:label>
+				</xp:td>
+				<xp:td>
+					<xp:text escape="true" id="computedField1" value="#{dominoDocument1.Subject}">
+					</xp:text>
+				</xp:td>
+			</xp:tr>
+			<xp:tr>
+				<xp:td style="width:20%">
+					<xp:label value="Category:" id="labelCoreCategory"></xp:label>
+				</xp:td>
+				<xp:td>
+					<xp:text escape="true" id="computedField2" value="#{dominoDocument1.Categories}">
+					</xp:text>
+				</xp:td>
+			</xp:tr>
+			<xp:tr>
+				<xp:td style="width:20%">
+					<xp:label id="labelCoreCreated" value="Created: "></xp:label>
+				</xp:td>
+				<xp:td>
+					<xp:text escape="true" id="computedFieldCoreDateTimeCreated"
+						value="#{dominoDocument1.dateTimeCreated}">
+						<xp:this.converter>
+							<xp:convertDateTime type="both" dateStyle="short"
+								timeStyle="short">
+							</xp:convertDateTime>
+						</xp:this.converter>
+					</xp:text>
+				</xp:td>
+			</xp:tr>
+			<xp:tr>
+				<xp:td style="width:20%">
+					<xp:label value="Author:" id="label4"></xp:label>
+				</xp:td>
+				<xp:td>
+					<xp:text escape="true" id="computedFieldCoreFrom" value="#{dominoDocument1.From}">
+					</xp:text>
+				</xp:td>
+			</xp:tr>
+			<xp:tr>
+				<xp:td style="width:20%">
+					<xp:label value="You are: " id="labelCoreYouAre"></xp:label>
+				</xp:td>
+				<xp:td>
+					<xp:label value="#{javascript:@UserName()}" id="labelCoreUserName">
+					</xp:label>
+				</xp:td>
+			</xp:tr>
+			<xp:tr>
+				<xp:td></xp:td>
+				<xp:td></xp:td>
+			</xp:tr>
+		</xp:table>
+	</xp:panel>
+</xp:view>
+

@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+
+	<XPa:ccLayout id="cc4cclayout" navPath="/events/mouse/">
+		<xp:this.facets>
+			<xc:ccMenu_events xp:key="facetLeft"></xc:ccMenu_events>
+			<xp:panel xp:key="facetMain" id="panel4Content">
+
+				<xp:label id="label8"
+					style="font-size:12pt;color:rgb(0,0,0);font-weight:bold">
+					<xp:this.value><![CDATA[This XPage Tests Mouse Events - Server & Client side ]]></xp:this.value>
+				</xp:label>
+				<xp:table>
+					<xp:tr>
+						<xp:td>
+							<xp:label value="Event Type"
+								id="labelMouseEvts1" style="font-weight:bold">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:label id="labelMouseEvts2"
+								value="Control" style="font-weight:bold">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:label value="Result Client Side"
+								id="labelMouseEvts3" style="font-weight:bold">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:label value="Result Server Side"
+								id="labelMouseEvts12" style="font-weight:bold">
+							</xp:label>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							<xp:label value="onclick"
+								id="labelMouseEvts4">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:button value="Press Me"
+								id="buttonMouseEvts1">
+								<xp:eventHandler event="onclick"
+									submit="true" id="eventHandler1">
+									<xp:this.script><![CDATA[XSP.getElementById('#{id:inputTextMouseEvts2}').value += "Client - On Click\n";]]></xp:this.script>
+
+
+									<xp:this.action>
+										<xp:setValue
+											binding="#{requestScope.rqm1}">
+											<xp:this.value><![CDATA[#{javascript:return "Server - On Click " +@Unique()}]]></xp:this.value>
+										</xp:setValue>
+									</xp:this.action>
+								</xp:eventHandler>
+							</xp:button>
+						</xp:td>
+						<xp:td>
+							<xp:inputText id="inputTextMouseEvts2"></xp:inputText>
+						</xp:td>
+						<xp:td>
+							<xp:text escape="true"
+								id="computedFieldMouseEvts1" value="#{requestScope.rqm1}">
+							</xp:text>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							<xp:label value="ondblclick"
+								id="labelMouseEvts5">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:inputText id="inputTextMouseEvts1">
+								<xp:eventHandler event="ondblclick"
+									submit="true">
+									<xp:this.script><![CDATA[XSP.getElementById('#{id:inputTextMouseEvts3}').value += "Client - On dbl Click\n";]]></xp:this.script>
+									<xp:this.action>
+										<xp:setValue
+											binding="#{requestScope.rqm2}">
+											<xp:this.value><![CDATA[#{javascript:return "Server - On Dbl Click " +@Unique()}]]></xp:this.value>
+										</xp:setValue>
+									</xp:this.action>
+								</xp:eventHandler>
+							</xp:inputText>
+						</xp:td>
+						<xp:td>
+							<xp:inputText id="inputTextMouseEvts3"></xp:inputText>
+						</xp:td>
+						<xp:td>
+							<xp:text escape="true"
+								id="computedFieldMouseEvts2" value="#{requestScope.rqm2}">
+							</xp:text>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							<xp:label value="onmousedown"
+								id="labelMouseEvts6">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:comboBox id="comboBoxMouseEvts1">
+								<xp:selectItem itemLabel="Apples"
+									itemValue="Apples">
+								</xp:selectItem>
+								<xp:selectItem itemLabel="Oranges"
+									itemValue="Oranges">
+								</xp:selectItem>
+								<xp:selectItem itemLabel="Bananas"
+									itemValue="Bananas">
+								</xp:selectItem>
+								<xp:eventHandler event="onmousedown"
+									submit="true">
+									<xp:this.script><![CDATA[XSP.getElementById('#{id:inputTextMouseEvts4}').value += "Client - On Mouse Down\n";]]></xp:this.script>
+									<xp:this.action>
+										<xp:setValue
+											binding="#{requestScope.rqm3}">
+											<xp:this.value><![CDATA[#{javascript:return "Server - On Mouse Down " +@Unique()}]]></xp:this.value>
+										</xp:setValue>
+									</xp:this.action>
+								</xp:eventHandler>
+							</xp:comboBox>
+						</xp:td>
+						<xp:td>
+							<xp:inputText id="inputTextMouseEvts4"></xp:inputText>
+						</xp:td>
+						<xp:td>
+							<xp:text escape="true"
+								id="computedFieldMouseEvts3" value="#{requestScope.rqm3}">
+							</xp:text>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							<xp:label value="onmousemove"
+								id="labelMouseEvts7">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+
+							<xp:link escape="true" text="IBM"
+								id="linkMouseEvts1" value="http://www.ibm.com">
+								<xp:eventHandler event="onmousemove"
+									submit="true">
+									<xp:this.script><![CDATA[XSP.getElementById('#{id:inputTextMouseEvts5}').value += "Client - On Mouse Move\n";]]></xp:this.script>
+									<xp:this.action>
+										<xp:setValue
+											binding="#{requestScope.rqm4}">
+											<xp:this.value><![CDATA[#{javascript:return "Server - On Mouse Move " + @Unique()}]]></xp:this.value>
+										</xp:setValue>
+									</xp:this.action>
+								</xp:eventHandler>
+							</xp:link>
+						</xp:td>
+						<xp:td>
+							<xp:inputText id="inputTextMouseEvts5"></xp:inputText>
+						</xp:td>
+						<xp:td>
+							<xp:text escape="true"
+								id="computedFieldMouseEvts4" value="#{requestScope.rqm4}">
+							</xp:text>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							<xp:label value="onmouseout"
+								id="labelMouseEvts9">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:listBox id="listBoxMouseEvts1">
+								<xp:selectItem itemLabel="Apples"></xp:selectItem>
+								<xp:selectItem itemLabel="Oranges"></xp:selectItem>
+								<xp:selectItem itemLabel="Bananas"></xp:selectItem>
+								<xp:eventHandler event="onmouseout"
+									submit="true">
+									<xp:this.script><![CDATA[XSP.getElementById('#{id:inputTextMouseEvts6}').value += "Client - On Mouse Out\n";]]></xp:this.script>
+									<xp:this.action>
+										<xp:setValue
+											binding="#{requestScope.rqm5}">
+											<xp:this.value><![CDATA[#{javascript:return "Server - On Mouse Out " + @Unique() }]]></xp:this.value>
+										</xp:setValue>
+									</xp:this.action>
+								</xp:eventHandler>
+							</xp:listBox>
+						</xp:td>
+						<xp:td>
+							<xp:inputText id="inputTextMouseEvts6"></xp:inputText>
+						</xp:td>
+						<xp:td>
+							<xp:text escape="true"
+								id="computedFieldMouseEvts5" value="#{requestScope.rqm5}">
+							</xp:text>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							<xp:label value="onmouseover"
+								id="labelMouseEvts10">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:checkBox id="checkBoxMouseEvts1"
+								text="Check box">
+								<xp:eventHandler event="onmouseover"
+									submit="true">
+									<xp:this.script><![CDATA[XSP.getElementById('#{id:inputTextMouseEvts7}').value += "Client - On Mouse Over\n";]]></xp:this.script>
+									<xp:this.action>
+										<xp:setValue
+											binding="#{requestScope.rqm6}">
+											<xp:this.value><![CDATA[#{javascript:return "Server - On Mouse Over " +@Unique()}]]></xp:this.value>
+										</xp:setValue>
+									</xp:this.action>
+								</xp:eventHandler>
+							</xp:checkBox>
+						</xp:td>
+						<xp:td>
+							<xp:inputText id="inputTextMouseEvts7"></xp:inputText>
+						</xp:td>
+						<xp:td>
+							<xp:text escape="true"
+								id="computedFieldMouseEvts6" value="#{requestScope.rqm6}">
+							</xp:text>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							<xp:label value="onmouseup"
+								id="labelMouseEvts11">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+
+							<xp:fileUpload id="fileUpload1">
+								<xp:eventHandler event="onmouseup"
+									submit="true">
+									<xp:this.script><![CDATA[XSP.getElementById('#{id:inputTextMouseEvts8}').value += "Client - On Mouse UP\n";]]></xp:this.script>
+									<xp:this.action>
+										<xp:setValue
+											binding="#{requestScope.rqm7}">
+											<xp:this.value><![CDATA[#{javascript:return "Server - On Mouse UP "+@Unique()}]]></xp:this.value>
+										</xp:setValue>
+									</xp:this.action>
+								</xp:eventHandler>
+							</xp:fileUpload>
+						</xp:td>
+						<xp:td>
+							<xp:inputText id="inputTextMouseEvts8"></xp:inputText>
+						</xp:td>
+						<xp:td>
+							<xp:text escape="true"
+								id="computedFieldMouseEvts7" value="#{requestScope.rqm7}">
+							</xp:text>
+						</xp:td>
+					</xp:tr>
+				</xp:table>
+
+
+			</xp:panel>
+		</xp:this.facets>
+	</XPa:ccLayout>
+</xp:view>

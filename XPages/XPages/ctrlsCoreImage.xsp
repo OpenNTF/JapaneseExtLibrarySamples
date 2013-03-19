@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+
+	<XPa:ccLayout id="cc4cclayout" navPath="/basics/image/">
+		<xp:this.facets>
+			<xc:ccMenu_basics xp:key="facetLeft"></xc:ccMenu_basics>
+			<xp:panel xp:key="facetMain" id="panel4facetmain">
+				<xp:table styleClass="table">
+					<xp:tr>
+						<xp:td>
+							<xp:label value="Internal Image:"
+								id="labelInImage">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:image url="/imageIBMChip.jpg"
+								id="imageInternal" alt="Image control with Internal source">
+							</xp:image>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							<xp:label value="External Image:"
+								id="labelExImage">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:image
+								url="http://upload.wikimedia.org/wikipedia/commons/e/e6/Broadwaycpu.JPG"
+								id="imageExternal" alt="Image control with External source">
+							</xp:image>
+						</xp:td>
+					</xp:tr>
+				</xp:table>
+
+
+
+			</xp:panel>
+
+		</xp:this.facets>
+	</XPa:ccLayout>
+
+
+
+</xp:view>

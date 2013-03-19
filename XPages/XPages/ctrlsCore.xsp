@@ -1,0 +1,840 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+
+	<XPa:ccLayout id="cc4cclayout" navPath="/basics/core/">
+		<xp:this.facets>
+			<xc:ccMenu_basics xp:key="facetLeft"></xc:ccMenu_basics>
+			<xp:panel xp:key="facetMain" id="panelcoreAllControls">
+				<xp:panel id="panelCollectionEditBox">
+					<xp:this.data>
+						<xp:dominoView var="dominoView1"
+							viewName="xspEditbox view">
+						</xp:dominoView>
+					</xp:this.data>
+
+					<xp:repeat id="repeatView1" value="#{dominoView1}"
+						rows="100" var="coll1">
+						<xp:table id="repeatTable1"
+							styleClass="customTable">
+							<xp:tr>
+								<!--  
+									<xp:td style="width:12.0%">
+									<xp:text escape="true">
+									<xp:this.value>
+									<![CDATA[#{javascript:coll1.getColumnValue("Date")}]]>
+									</xp:this.value>
+									<xp:this.converter>
+									<xp:convertDateTime
+									dateStyle="short" type="both" timeStyle="short">
+									</xp:convertDateTime>
+									</xp:this.converter>
+									</xp:text>
+									</xp:td>
+								-->
+
+								<xp:td style="width:12.0%">
+									<xp:link id="linkTopicCol">
+										<xp:this.text>
+											<![CDATA[#{javascript:coll1.getColumnValue("category")}]]>
+										</xp:this.text>
+										<xp:eventHandler event="onclick"
+											submit="true" refreshMode="complete">
+											<xp:this.action>
+												<xp:openPage
+													name="/ctrlsCoreEditBox.xsp" target="openDocument"
+													documentId="#{javascript:coll1.getId()}">
+												</xp:openPage>
+											</xp:this.action>
+										</xp:eventHandler>
+									</xp:link>
+								</xp:td>
+								<xp:td style="width:25.0%">
+									<xp:link id="link2">
+										<xp:this.text>
+											<![CDATA[#{javascript:coll1.getColumnValue("test control")}]]>
+										</xp:this.text>
+										<xp:eventHandler event="onclick"
+											submit="true" refreshMode="complete">
+											<xp:this.action>
+												<xp:openPage
+													name="/ctrlsCoreEditBox.xsp" target="openDocument"
+													documentId="#{javascript:coll1.getId()}">
+												</xp:openPage>
+											</xp:this.action>
+										</xp:eventHandler>
+									</xp:link>
+								</xp:td>
+								<!--  
+									
+									
+									<xp:td>
+									
+									<xp:text escape="true"
+									id="computedFieldByCol">
+									<xp:this.value>
+									<![CDATA[#{javascript:coll1.getColumnValue("subject")}]]>
+									</xp:this.value>
+									</xp:text>
+									</xp:td>
+								-->
+
+							</xp:tr>
+						</xp:table>
+					</xp:repeat>
+				</xp:panel>
+
+				<xp:panel id="panel4MultilineEditBox">
+					<xp:this.data>
+						<xp:dominoView var="dominoView1"
+							viewName="xspMultilineEditbox view">
+						</xp:dominoView>
+					</xp:this.data>
+
+					<xp:repeat id="repeat1" value="#{dominoView1}"
+						rows="100" var="coll1">
+
+						<xp:table id="table1"
+							styleClass="customTable">
+							<xp:tr>
+								<!--  
+									<xp:td style="width:12.0%">
+									<xp:text escape="true">
+									<xp:this.value>
+									<![CDATA[#{javascript:coll1.getColumnValue("Date")}]]>
+									</xp:this.value>
+									<xp:this.converter>
+									<xp:convertDateTime
+									dateStyle="short" type="both" timeStyle="short">
+									</xp:convertDateTime>
+									</xp:this.converter>
+									</xp:text>
+									</xp:td>
+								-->
+
+								<xp:td style="width:12.0%">
+									<xp:link id="link1">
+										<xp:this.text>
+											<![CDATA[#{javascript:coll1.getColumnValue("category")}]]>
+										</xp:this.text>
+										<xp:eventHandler event="onclick"
+											submit="true" refreshMode="complete">
+											<xp:this.action>
+												<xp:openPage
+													name="/ctrlsCoreMultilineEditBox.xsp" target="openDocument"
+													documentId="#{javascript:coll1.getId()}">
+												</xp:openPage>
+											</xp:this.action>
+										</xp:eventHandler>
+									</xp:link>
+								</xp:td>
+								<xp:td style="width:25.0%">
+									<xp:link id="link3">
+										<xp:this.text>
+											<![CDATA[#{javascript:coll1.getColumnValue("test control")}]]>
+										</xp:this.text>
+										<xp:eventHandler event="onclick"
+											submit="true" refreshMode="complete">
+											<xp:this.action>
+												<xp:openPage
+													name="/ctrlsCoreMultilineEditBox.xsp" target="openDocument"
+													documentId="#{javascript:coll1.getId()}">
+												</xp:openPage>
+											</xp:this.action>
+										</xp:eventHandler>
+									</xp:link>
+								</xp:td>
+
+								<!--  
+									<xp:td>
+									
+									<xp:text escape="true"
+									id="computedField1">
+									<xp:this.value>
+									<![CDATA[#{javascript:coll1.getColumnValue("subject")}]]>
+									</xp:this.value>
+									</xp:text>
+								-->
+							</xp:tr>
+						</xp:table>
+
+
+
+					</xp:repeat>
+				</xp:panel>
+
+				<xp:panel id="panelListBoxView">
+					<xp:this.data>
+						<xp:dominoView var="dominoView1"
+							viewName="xspListBoxView">
+						</xp:dominoView>
+					</xp:this.data>
+
+					<xp:repeat id="repeat2" value="#{dominoView1}"
+						rows="100" var="coll1">
+
+						<xp:table id="table2"
+							styleClass="customTable">
+							<xp:tr>
+								<!--  
+									<xp:td style="width:12.0%">
+									<xp:text escape="true">
+									<xp:this.value>
+									<![CDATA[#{javascript:coll1.getColumnValue("Date")}]]>
+									</xp:this.value>
+									<xp:this.converter>
+									<xp:convertDateTime
+									dateStyle="short" type="both" timeStyle="short">
+									</xp:convertDateTime>
+									</xp:this.converter>
+									</xp:text>
+									</xp:td>
+								-->
+
+								<xp:td style="width:12.0%">
+									<xp:link id="link4">
+										<xp:this.text>
+											<![CDATA[#{javascript:coll1.getColumnValue("category")}]]>
+										</xp:this.text>
+										<xp:eventHandler event="onclick"
+											submit="true" refreshMode="complete">
+											<xp:this.action>
+												<xp:openPage
+													name="/ctrlsCoreListBox.xsp" target="openDocument"
+													documentId="#{javascript:coll1.getId()}">
+												</xp:openPage>
+											</xp:this.action>
+										</xp:eventHandler>
+									</xp:link>
+								</xp:td>
+								<xp:td style="width:25.0%">
+									<xp:link id="link5">
+										<xp:this.text>
+											<![CDATA[#{javascript:coll1.getColumnValue("test control")}]]>
+										</xp:this.text>
+										<xp:eventHandler event="onclick"
+											submit="true" refreshMode="complete">
+											<xp:this.action>
+												<xp:openPage
+													name="/ctrlsCoreListBox.xsp" target="openDocument"
+													documentId="#{javascript:coll1.getId()}">
+												</xp:openPage>
+											</xp:this.action>
+										</xp:eventHandler>
+									</xp:link>
+								</xp:td>
+								<!--  
+									<xp:td>
+									
+									<xp:text escape="true"
+									id="computedField2">
+									<xp:this.value>
+									<![CDATA[#{javascript:coll1.getColumnValue("Subject")}]]>
+									</xp:this.value>
+									</xp:text>
+									</xp:td>
+								-->
+
+							</xp:tr>
+						</xp:table>
+
+
+
+					</xp:repeat>
+				</xp:panel>
+
+				<xp:panel id="panelComboBoxView">
+					<xp:this.data>
+						<xp:dominoView var="dominoView1"
+							viewName="xspComboBoxView">
+						</xp:dominoView>
+					</xp:this.data>
+
+					<xp:repeat id="repeat3" value="#{dominoView1}"
+						rows="100" var="coll1">
+
+						<xp:table id="table3"
+							styleClass="customTable">
+							<xp:tr>
+								<!--  
+									<xp:td style="width:12.0%">
+									<xp:text escape="true">
+									<xp:this.value>
+									<![CDATA[#{javascript:coll1.getColumnValue("Date")}]]>
+									</xp:this.value>
+									<xp:this.converter>
+									<xp:convertDateTime
+									dateStyle="short" type="both" timeStyle="short">
+									</xp:convertDateTime>
+									</xp:this.converter>
+									</xp:text>
+									</xp:td>
+								-->
+
+								<xp:td style="width:12.0%">
+									<xp:link id="link6">
+										<xp:this.text>
+											<![CDATA[#{javascript:coll1.getColumnValue("category")}]]>
+										</xp:this.text>
+										<xp:eventHandler event="onclick"
+											submit="true" refreshMode="complete">
+											<xp:this.action>
+												<xp:openPage
+													name="/ctrlsCoreComboBox.xsp" target="openDocument"
+													documentId="#{javascript:coll1.getId()}">
+												</xp:openPage>
+											</xp:this.action>
+										</xp:eventHandler>
+									</xp:link>
+								</xp:td>
+								<xp:td style="width:25.0%">
+									<xp:link id="link7">
+										<xp:this.text>
+											<![CDATA[#{javascript:coll1.getColumnValue("test control")}]]>
+										</xp:this.text>
+										<xp:eventHandler event="onclick"
+											submit="true" refreshMode="complete">
+											<xp:this.action>
+												<xp:openPage
+													name="/ctrlsCoreComboBox.xsp" target="openDocument"
+													documentId="#{javascript:coll1.getId()}">
+												</xp:openPage>
+											</xp:this.action>
+										</xp:eventHandler>
+									</xp:link>
+								</xp:td>
+								<!--  
+									<xp:td>
+									
+									<xp:text escape="true"
+									id="computedField3">
+									<xp:this.value>
+									<![CDATA[#{javascript:coll1.getColumnValue("Subject")}]]>
+									</xp:this.value>
+									</xp:text>
+									</xp:td>
+								-->
+
+							</xp:tr>
+						</xp:table>
+					</xp:repeat>
+				</xp:panel>
+
+				<xp:panel id="panelCheckBoxView">
+					<xp:this.data>
+						<xp:dominoView var="dominoView1"
+							viewName="xspCheckBoxView">
+						</xp:dominoView>
+					</xp:this.data>
+
+					<xp:repeat id="repeat4" value="#{dominoView1}"
+						rows="100" var="coll1">
+
+						<xp:table id="table4"
+							styleClass="customTable">
+							<xp:tr>
+								<!--  
+									<xp:td style="width:12.0%">
+									<xp:text escape="true">
+									<xp:this.value>
+									<![CDATA[#{javascript:coll1.getColumnValue("Date")}]]>
+									</xp:this.value>
+									<xp:this.converter>
+									<xp:convertDateTime
+									dateStyle="short" type="both" timeStyle="short">
+									</xp:convertDateTime>
+									</xp:this.converter>
+									</xp:text>
+									</xp:td>
+								-->
+
+								<xp:td style="width:12.0%">
+									<xp:link id="link8">
+										<xp:this.text>
+											<![CDATA[#{javascript:coll1.getColumnValue("category")}]]>
+										</xp:this.text>
+										<xp:eventHandler event="onclick"
+											submit="true" refreshMode="complete">
+											<xp:this.action>
+												<xp:openPage
+													name="/ctrlsCoreCheckBox.xsp" target="openDocument"
+													documentId="#{javascript:coll1.getId()}">
+												</xp:openPage>
+											</xp:this.action>
+										</xp:eventHandler>
+									</xp:link>
+								</xp:td>
+								<xp:td style="width:25.0%">
+									<xp:link id="link9">
+										<xp:this.text>
+											<![CDATA[#{javascript:coll1.getColumnValue("test control")}]]>
+										</xp:this.text>
+										<xp:eventHandler event="onclick"
+											submit="true" refreshMode="complete">
+											<xp:this.action>
+												<xp:openPage
+													name="/ctrlsCoreCheckBox.xsp" target="openDocument"
+													documentId="#{javascript:coll1.getId()}">
+												</xp:openPage>
+											</xp:this.action>
+										</xp:eventHandler>
+									</xp:link>
+								</xp:td>
+
+								<!--  
+									
+									
+									<xp:td>
+									
+									<xp:text escape="true"
+									id="computedField4">
+									<xp:this.value>
+									<![CDATA[#{javascript:coll1.getColumnValue("Subject")}]]>
+									</xp:this.value>
+									</xp:text>
+									</xp:td>
+								-->
+
+							</xp:tr>
+						</xp:table>
+
+
+
+					</xp:repeat>
+				</xp:panel>
+
+				<xp:panel id="panelRadioButtonView">
+					<xp:this.data>
+						<xp:dominoView var="dominoView1"
+							viewName="xspRadioButtonView">
+						</xp:dominoView>
+					</xp:this.data>
+
+					<xp:repeat id="repeat5" value="#{dominoView1}"
+						rows="100" var="coll1">
+
+						<xp:table id="table5"
+							styleClass="customTable">
+							<xp:tr>
+								<!--  
+									<xp:td style="width:12.0%">
+									<xp:text escape="true">
+									<xp:this.value>
+									<![CDATA[#{javascript:coll1.getColumnValue("Date")}]]>
+									</xp:this.value>
+									<xp:this.converter>
+									<xp:convertDateTime
+									dateStyle="short" type="both" timeStyle="short">
+									</xp:convertDateTime>
+									</xp:this.converter>
+									</xp:text>
+									</xp:td>
+								-->
+
+								<xp:td style="width:12.0%">
+									<xp:link id="link10">
+										<xp:this.text>
+											<![CDATA[#{javascript:coll1.getColumnValue("category")}]]>
+										</xp:this.text>
+										<xp:eventHandler event="onclick"
+											submit="true" refreshMode="complete">
+											<xp:this.action>
+												<xp:openPage
+													name="/ctrlsCoreRadioButton.xsp" target="openDocument"
+													documentId="#{javascript:coll1.getId()}">
+												</xp:openPage>
+											</xp:this.action>
+										</xp:eventHandler>
+									</xp:link>
+								</xp:td>
+								<xp:td style="width:25.0%">
+									<xp:link id="link11">
+										<xp:this.text>
+											<![CDATA[#{javascript:coll1.getColumnValue("test control")}]]>
+										</xp:this.text>
+										<xp:eventHandler event="onclick"
+											submit="true" refreshMode="complete">
+											<xp:this.action>
+												<xp:openPage
+													name="/ctrlsCoreRadioButton.xsp" target="openDocument"
+													documentId="#{javascript:coll1.getId()}">
+												</xp:openPage>
+											</xp:this.action>
+										</xp:eventHandler>
+									</xp:link>
+								</xp:td>
+								<!--  
+									<xp:td>
+									
+									<xp:text escape="true"
+									id="computedField5">
+									<xp:this.value>
+									<![CDATA[#{javascript:coll1.getColumnValue("Subject")}]]>
+									</xp:this.value>
+									</xp:text>
+									</xp:td>
+								-->
+
+							</xp:tr>
+						</xp:table>
+
+
+
+					</xp:repeat>
+				</xp:panel>
+
+				<xp:panel id="panelDateTimePickerView">
+					<xp:this.data>
+						<xp:dominoView var="dominoView1"
+							viewName="xspDateTimePickerView">
+						</xp:dominoView>
+					</xp:this.data>
+
+					<xp:repeat id="repeat6" value="#{dominoView1}"
+						rows="100" var="coll1">
+
+						<xp:table id="table6"
+							styleClass="customTable">
+							<xp:tr>
+								<!--  
+									<xp:td style="width:12.0%">
+									<xp:text escape="true">
+									<xp:this.value>
+									<![CDATA[#{javascript:coll1.getColumnValue("Date")}]]>
+									</xp:this.value>
+									<xp:this.converter>
+									<xp:convertDateTime
+									dateStyle="short" type="both" timeStyle="short">
+									</xp:convertDateTime>
+									</xp:this.converter>
+									</xp:text>
+									</xp:td>
+								-->
+
+								<xp:td style="width:12.0%">
+									<xp:link id="link12">
+										<xp:this.text>
+											<![CDATA[#{javascript:coll1.getColumnValue("category")}]]>
+										</xp:this.text>
+										<xp:eventHandler event="onclick"
+											submit="true" refreshMode="complete" id="eventHandler1">
+											<xp:this.action>
+												<xp:openPage
+													name="/ctrlsCoreDateTimePicker.xsp" target="openDocument"
+													documentId="#{javascript:coll1.getId()}">
+												</xp:openPage>
+											</xp:this.action>
+										</xp:eventHandler>
+									</xp:link>
+								</xp:td>
+
+
+								<xp:td>
+									<xp:link id="link21">
+										<xp:this.text>
+											<![CDATA[#{javascript:coll1.getColumnValue("Subject")}]]>
+										</xp:this.text>
+										<xp:eventHandler event="onclick"
+											submit="true" refreshMode="complete" id="eventHandler2">
+											<xp:this.action>
+												<xp:openPage
+													name="/ctrlsCoreDateTimePicker.xsp" target="openDocument"
+													documentId="#{javascript:coll1.getId()}">
+												</xp:openPage>
+											</xp:this.action>
+										</xp:eventHandler>
+									</xp:link>
+								</xp:td>
+								<xp:td>
+
+									<xp:text escape="true"
+										id="computedField1">
+										<xp:this.value>
+											<![CDATA[#{javascript:coll1.getColumnValue("test control Date")}]]>
+										</xp:this.value>
+										<xp:this.converter>
+											<xp:convertDateTime
+												dateStyle="medium" type="date">
+											</xp:convertDateTime>
+										</xp:this.converter>
+									</xp:text>
+									<!--  
+										<xp:link id="link13"
+										text="Date">
+										<xp:eventHandler event="onclick"
+										submit="true" refreshMode="complete">
+										<xp:this.action>
+										<xp:openPage
+										name="/ctrlsCoreDateTimePicker.xsp" target="openDocument"
+										documentId="#{javascript:coll1.getId()}">
+										</xp:openPage>
+										</xp:this.action>
+										</xp:eventHandler>
+										</xp:link>
+									-->
+
+
+								</xp:td>
+
+
+
+								<xp:td>
+
+									<xp:text escape="true"
+										id="computedField2">
+										<xp:this.value>
+											<![CDATA[#{javascript:coll1.getColumnValue("test control Time")}]]>
+										</xp:this.value>
+										<xp:this.converter>
+											<xp:convertDateTime
+												type="time" timeStyle="medium">
+											</xp:convertDateTime>
+										</xp:this.converter>
+									</xp:text>
+								</xp:td>
+
+
+
+								<xp:td>
+
+
+								</xp:td>
+
+								<!--  
+									
+									<xp:td>
+									
+									<xp:text escape="true"
+									id="computedField6">
+									<xp:this.value>
+									<![CDATA[#{javascript:coll1.getColumnValue("Subject")}]]>
+									</xp:this.value>
+									</xp:text>
+									</xp:td>
+									
+								-->
+
+							</xp:tr>
+						</xp:table>
+
+
+
+					</xp:repeat>
+				</xp:panel>
+
+				<xp:panel id="panel4DisplayErrorDocs">
+					<xp:this.data>
+						<xp:dominoView var="dominoView1"
+							viewName="xspDisplayErrorView">
+						</xp:dominoView>
+					</xp:this.data>
+
+					<xp:repeat id="repeat7" value="#{dominoView1}"
+						rows="100" var="coll1">
+						<xp:table id="table7"
+							styleClass="customTable">
+							<xp:tr>
+
+								<xp:td style="width:12.0%">
+									<xp:link id="link13">
+										<xp:this.text>
+											<![CDATA[#{javascript:coll1.getColumnValue("category")}]]>
+										</xp:this.text>
+										<xp:eventHandler event="onclick"
+											submit="true" refreshMode="complete">
+											<xp:this.action>
+												<xp:openPage
+													name="/ctrlsCoreDisplayError.xsp" target="openDocument"
+													documentId="#{javascript:coll1.getId()}">
+												</xp:openPage>
+											</xp:this.action>
+										</xp:eventHandler>
+									</xp:link>
+								</xp:td>
+								<xp:td style="width:25.0%">
+									<xp:link id="link14">
+										<xp:this.text>
+											<![CDATA[#{javascript:coll1.getColumnValue("test control")}]]>
+										</xp:this.text>
+										<xp:eventHandler event="onclick"
+											submit="true" refreshMode="complete">
+											<xp:this.action>
+												<xp:openPage
+													name="/ctrlsCoreDisplayError.xsp" target="openDocument"
+													documentId="#{javascript:coll1.getId()}">
+												</xp:openPage>
+											</xp:this.action>
+										</xp:eventHandler>
+									</xp:link>
+								</xp:td>
+
+							</xp:tr>
+						</xp:table>
+					</xp:repeat>
+				</xp:panel>
+
+				<xp:panel id="panel4DisplayErrorsDoc">
+					<xp:this.data>
+						<xp:dominoView var="dominoView1"
+							viewName="xspDisplayErrorsView">
+						</xp:dominoView>
+					</xp:this.data>
+
+					<xp:repeat id="repeat8" value="#{dominoView1}"
+						rows="100" var="coll1">
+						<xp:table id="table8"
+							styleClass="customTable">
+							<xp:tr>
+
+								<xp:td style="width:12.0%">
+									<xp:link id="link15">
+										<xp:this.text>
+											<![CDATA[#{javascript:coll1.getColumnValue("category")}]]>
+										</xp:this.text>
+										<xp:eventHandler event="onclick"
+											submit="true" refreshMode="complete">
+											<xp:this.action>
+												<xp:openPage
+													name="/ctrlsCoreDisplayErrors.xsp" target="openDocument"
+													documentId="#{javascript:coll1.getId()}">
+												</xp:openPage>
+											</xp:this.action>
+										</xp:eventHandler>
+									</xp:link>
+								</xp:td>
+								<xp:td style="width:25.0%">
+									<xp:link id="link16">
+										<xp:this.text>
+											<![CDATA[#{javascript:coll1.getColumnValue("test control")}]]>
+										</xp:this.text>
+										<xp:eventHandler event="onclick"
+											submit="true" refreshMode="complete">
+											<xp:this.action>
+												<xp:openPage
+													name="/ctrlsCoreDisplayErrors.xsp" target="openDocument"
+													documentId="#{javascript:coll1.getId()}">
+												</xp:openPage>
+											</xp:this.action>
+										</xp:eventHandler>
+									</xp:link>
+								</xp:td>
+
+							</xp:tr>
+						</xp:table>
+					</xp:repeat>
+				</xp:panel>
+
+				<xp:panel id="panel12RichTextView">
+					<xp:this.data>
+						<xp:dominoView var="dominoView1"
+							viewName="xspRichText View">
+						</xp:dominoView>
+					</xp:this.data>
+
+
+					<xp:repeat id="repeatRichText"
+						value="#{dominoView1}" rows="100" var="coll1">
+						<xp:table id="table9"
+							styleClass="customTable">
+							<xp:tr>
+
+								<xp:td style="width:12.0%">
+									<xp:link id="link17">
+										<xp:this.text>
+											<![CDATA[#{javascript:coll1.getColumnValue("category")}]]>
+										</xp:this.text>
+										<xp:eventHandler event="onclick"
+											submit="true" refreshMode="complete">
+											<xp:this.action>
+												<xp:openPage
+													name="/ctrlsCoreRichText.xsp" target="openDocument"
+													documentId="#{javascript:coll1.getId()}">
+												</xp:openPage>
+											</xp:this.action>
+										</xp:eventHandler>
+									</xp:link>
+								</xp:td>
+								<xp:td style="width:25.0%">
+									<xp:link id="link18">
+										<xp:this.text>
+											<![CDATA[#{javascript:coll1.getColumnValue("subject")}]]>
+										</xp:this.text>
+										<xp:eventHandler event="onclick"
+											submit="true" refreshMode="complete">
+											<xp:this.action>
+												<xp:openPage
+													name="/ctrlsCoreRichText.xsp" target="openDocument"
+													documentId="#{javascript:coll1.getId()}">
+												</xp:openPage>
+											</xp:this.action>
+										</xp:eventHandler>
+									</xp:link>
+								</xp:td>
+
+							</xp:tr>
+						</xp:table>
+					</xp:repeat>
+				</xp:panel>
+
+				<xp:panel id="panelAttachments">
+					<xp:this.data>
+						<xp:dominoView var="dominoView1"
+							viewName="xspAttachmentsView">
+						</xp:dominoView>
+					</xp:this.data>
+
+
+					<xp:repeat id="repeatAttachments"
+						value="#{dominoView1}" rows="100" var="coll1">
+						<xp:table id="table10"
+							styleClass="customTable">
+							<xp:tr>
+
+								<xp:td style="width:12.0%">
+									<xp:link id="link19">
+										<xp:this.text>
+											<![CDATA[#{javascript:coll1.getColumnValue("category")}]]>
+										</xp:this.text>
+										<xp:eventHandler event="onclick"
+											submit="true" refreshMode="complete">
+											<xp:this.action>
+												<xp:openPage
+													name="/ctrlsCoreAttachments.xsp" target="openDocument"
+													documentId="#{javascript:coll1.getId()}">
+												</xp:openPage>
+											</xp:this.action>
+										</xp:eventHandler>
+									</xp:link>
+								</xp:td>
+								<xp:td style="width:25.0%">
+									<xp:link id="link20">
+										<xp:this.text>
+											<![CDATA[#{javascript:coll1.getColumnValue("Subject")}]]>
+										</xp:this.text>
+										<xp:eventHandler event="onclick"
+											submit="true" refreshMode="complete">
+											<xp:this.action>
+												<xp:openPage
+													name="/ctrlsCoreAttachments.xsp" target="openDocument"
+													documentId="#{javascript:coll1.getId()}">
+												</xp:openPage>
+											</xp:this.action>
+										</xp:eventHandler>
+									</xp:link>
+								</xp:td>
+
+							</xp:tr>
+						</xp:table>
+					</xp:repeat>
+				</xp:panel>
+
+
+
+			</xp:panel>
+
+		</xp:this.facets>
+	</XPa:ccLayout>
+
+
+</xp:view>

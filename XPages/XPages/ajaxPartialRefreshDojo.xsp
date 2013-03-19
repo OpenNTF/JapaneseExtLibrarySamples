@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf" dojoParseOnLoad="true"
+	dojoTheme="true" xmlns:xc="http://www.ibm.com/xsp/custom">
+
+	<xp:this.resources>
+		<xp:dojoModule name="dijit.layout.ContentPane"></xp:dojoModule>
+		<xp:dojoModule name="dijit.layout.BorderContainer"></xp:dojoModule>
+		<!--		<xp:script clientSide="true"-->
+		<!--			src="/.ibmxspres/dojoroot/dijit/layout/BorderContainer.js">-->
+		<!--		</xp:script>-->
+	</xp:this.resources>
+
+	<XPa:ccLayout  navPath="/events/prdojo/">
+		<xp:this.facets>
+			<xc:ccMenu_events xp:key="facetLeft"></xc:ccMenu_events>
+			<xp:panel xp:key="facetMain">
+				<xp:panel id="outerPanel" style="height:900px">
+
+					<xp:span
+						style="color:rgb(0,128,255);font-weight:bold;font-size:16pt">
+						Partial Refresh - Multilevel Dojo Controls
+					</xp:span>
+					&#160;
+					<xp:link escape="true"
+						text="Return to Previous Page" id="link1">
+						<xp:eventHandler event="onclick" submit="true"
+							refreshMode="complete" immediate="true">
+							<xp:this.action>
+								<xp:openPage
+									name="/ajaxPartialRefreshMain.xsp">
+								</xp:openPage>
+							</xp:this.action>
+						</xp:eventHandler>
+					</xp:link>
+					<xp:br></xp:br>
+					<xp:br></xp:br>
+					<xp:scriptBlock id="scriptBlock1">
+						<xp:this.value><![CDATA[dojo.addOnLoad
+(
+ function()
+ {
+  var layout = new dijit.layout.BorderContainer({style: 'width: 100%; height: 100%;' }, '#{id:body}');
+  
+  new dijit.layout.ContentPane({region: 'top'}, '#{id:top}');
+  new dijit.layout.ContentPane({region: 'left', splitter: true, minSize: 200, style: 'width: 350px' }, '#{id:left}');
+  new dijit.layout.ContentPane({region: 'center'}, '#{id:center}');
+  new dijit.layout.ContentPane({region: 'bottom'}, '#{id:bottom}');
+  
+  layout.startup()
+ }
+);]]></xp:this.value>
+					</xp:scriptBlock>
+
+					<xp:panel id="body">
+
+						<xp:panel id="top">Top</xp:panel>
+
+						<xp:panel id="left">Left</xp:panel>
+
+						<xp:panel id="center">
+							Centre
+
+							<xp:button value="Partial refresh of body"
+								id="button1">
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="partial" refreshId="body">
+								</xp:eventHandler>
+							</xp:button>
+
+						</xp:panel>
+
+						<xp:panel id="bottom">Bottom</xp:panel>
+
+					</xp:panel>
+				</xp:panel>
+
+			</xp:panel>
+		</xp:this.facets>
+	</XPa:ccLayout>
+</xp:view>

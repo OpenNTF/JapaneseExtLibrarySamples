@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+
+	<xp:this.data>
+		<xp:dominoDocument var="dominoDocument1"
+			formName="xspDisplayErrors">
+			<xp:this.postNewDocument>
+
+				<xp:actionGroup>
+					<xp:setValue binding="#{dominoDocument1.From}"
+						value="#{javascript:@UserName()}">
+					</xp:setValue>
+					<xp:setValue binding="#{dominoDocument1.Categories}"
+						value="Display Errors Test">
+					</xp:setValue>
+
+
+					<xp:setValue
+						binding="#{dominoDocument1.dateTimeCreated}"
+						value="#{javascript:new Date()}">
+					</xp:setValue>
+				</xp:actionGroup>
+			</xp:this.postNewDocument>
+
+			<xp:this.querySaveDocument>
+				<xp:setValue binding="#{dominoDocument1.Subject}">
+					<xp:this.value>
+						<![CDATA[#{javascript:var s01 = @UserName();
+var s02 = @Text(@Now());
+var s03 = @Text(@Time(@Now()));
+return "Test Doc | Display Errors | Edited by "+ s01+ " on "+ s02}]]>
+					</xp:this.value>
+				</xp:setValue>
+			</xp:this.querySaveDocument>
+		</xp:dominoDocument>
+	</xp:this.data>
+	<XPa:ccLayout id="cc4cclayout" navPath="/basics/displayerrors/">
+		<xp:this.facets>
+			<xc:ccMenu_basics xp:key="facetLeft"></xc:ccMenu_basics>
+			<XPa:ccContentCoreCtrl xp:key="facetMain"
+				id="cc4cccontentcorectrl">
+				<xp:this.facets>
+					<xp:panel xp:key="facetTestControl"
+						id="panel4testcontrol">
+
+						<xp:table>
+							<xp:tr>
+								<xp:td>
+									Save with blank edit box.
+									<xp:br></xp:br>
+									Then add text,
+									<xp:br></xp:br>
+									and then finally a number...
+									<xp:br></xp:br>
+									(validation is done server side)
+								</xp:td>
+								<xp:td>
+									<xp:inputText
+										id="inputTextTestEditBox"
+										value="#{dominoDocument1.testDisplayErrors}"
+										required="true">
+
+										<xp:this.converter>
+											<xp:convertNumber></xp:convertNumber>
+										</xp:this.converter>
+									</xp:inputText>
+								</xp:td>
+							</xp:tr>
+							<xp:tr>
+								<xp:td>
+									<xp:label value="Errors: "
+										id="label1" style="color:rgb(255,128,64);font-weight:bold">
+									</xp:label>
+								</xp:td>
+								<xp:td>
+
+									<xp:messages id="messages1">
+									</xp:messages>
+
+								</xp:td>
+							</xp:tr>
+						</xp:table>
+					</xp:panel>
+				</xp:this.facets>
+
+
+			</XPa:ccContentCoreCtrl>
+
+		</xp:this.facets>
+	</XPa:ccLayout>
+
+</xp:view>

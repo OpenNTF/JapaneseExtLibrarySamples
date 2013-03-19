@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+
+	<xp:this.data>
+		<xp:dominoDocument var="dominoDocument1"
+			formName="xspRadioButton">
+			<xp:this.postNewDocument>
+
+				<xp:actionGroup>
+					<xp:setValue binding="#{dominoDocument1.From}"
+						value="#{javascript:@UserName()}">
+					</xp:setValue>
+					<xp:setValue binding="#{dominoDocument1.Categories}"
+						value="Radio Button Test">
+					</xp:setValue>
+
+					<xp:setValue
+						binding="#{dominoDocument1.dateTimeCreated}"
+						value="#{javascript:@Now()}">
+					</xp:setValue>
+				</xp:actionGroup>
+			</xp:this.postNewDocument>
+
+			<xp:this.querySaveDocument>
+				<xp:setValue binding="#{dominoDocument1.Subject}">
+					<xp:this.value>
+						<![CDATA[#{javascript:var s01 = @UserName();
+var s02 = @Text(@Now());
+var s03 = @Text(@Time(@Now()));
+return "Test Doc | Radio Button | Edited by "+ s01+ " on "+ s02}]]>
+					</xp:this.value>
+				</xp:setValue>
+			</xp:this.querySaveDocument>
+
+
+
+		</xp:dominoDocument>
+	</xp:this.data>
+	<XPa:ccLayout id="cc4cclayout" navPath="/basics/radiobutton/">
+		<xp:this.facets>
+			<xc:ccMenu_basics xp:key="facetLeft"></xc:ccMenu_basics>
+			<XPa:ccContentCoreCtrl xp:key="facetMain"
+				id="cc4cccontentcorectrl">
+
+				<xp:this.facets>
+					<xp:panel xp:key="facetTestControl"
+						id="panelTest001">
+
+						<xp:radio text="Radio I" id="radioTestRadio01"
+							groupName="rgroup" defaultSelected="true"
+							value="#{dominoDocument1.testRadioButton}"
+							selectedValue="Radio I">
+						</xp:radio>
+						<xp:br></xp:br>
+						<xp:radio text="Radio II" id="radioTestRadio02"
+							groupName="rgroup" value="#{dominoDocument1.testRadioButton}"
+							selectedValue="Radio II">
+						</xp:radio>
+						<xp:br></xp:br>
+						<xp:radio text="Radio III" id="radioTestRadio03"
+							groupName="rgroup" value="#{dominoDocument1.testRadioButton}"
+							selectedValue="Radio III">
+						</xp:radio>
+
+
+
+
+					</xp:panel>
+				</xp:this.facets>
+			</XPa:ccContentCoreCtrl>
+
+		</xp:this.facets>
+	</XPa:ccLayout>
+</xp:view>

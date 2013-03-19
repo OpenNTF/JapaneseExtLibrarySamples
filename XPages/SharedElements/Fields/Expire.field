@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='sharedfield' xmlns='http://www.lotus.com/dxl' version='9.0' replicaid='85257A870079CB8F'>
+<noteinfo noteid='1ce' unid='0F084728C2FF0C888525668A003B2ECF' sequence='11'>
+<created><datetime dst='true'>19980925T064626,07-04</datetime></created>
+<modified><datetime dst='true'>20130118T132308,84+01</datetime></modified>
+<revised><datetime dst='true'>20130118T132308,83+01</datetime></revised>
+<lastaccessed><datetime dst='true'>20130118T132308,84+01</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20120928T180551,06-04</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name><name
+>CN=Paul Hannan/OU=Ireland/O=IBM</name></updatedby>
+<item name='$TITLE'><text>Expire</text></item>
+<item name='$INFO' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAAAAAA
+</rawitemdata></item>
+<item name='$Flags'><text/></item>
+<item name='$BODY' summary='true' sign='true'>
+<rawitemdata type='1'>
+gQKC/1IAAQAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAABAAAAAJQHAAAAAAAAAAAAAAAAgwQBAIX/CAABAAAK3QYAAIr//v9QAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAACK/4gAgAEABQAwAgAAAAAAAAABAQAJXgAAAAAAAAAGAAAAAABeAAAAUgAFAAoA
+ZXhwaXJlZGF0ZQEAAAAKAq8ANgAKAAEAAACuACwAAQALAEV4cGlyZWQgb24gAAUACgBleHBpcmVk
+YXRlSwFWASICrgAEALUDAwAHAAoAAwAJN1MARXhwaXJlev8gAAYAAAAAAAAAAAAAAAAAAAAAAAAA
+AABFeHBpcmXeBgAAiv+F/wgAAQAACg==
+</rawitemdata></item>
+<item name='$LANGUAGE' sign='true'><text>en</text></item></note>
+

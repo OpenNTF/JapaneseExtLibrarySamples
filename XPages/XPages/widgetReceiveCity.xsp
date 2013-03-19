@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xc="http://www.ibm.com/xsp/custom">
+
+	<xc:ccWidget>
+		<xp:this.facets>
+			<xp:panel xp:key="facet_1">
+				<xp:label value="City: " id="label1" style="font-weight:bold"></xp:label>
+				<xp:text escape="true" id="computedFieldCity">
+				</xp:text>
+				</xp:panel>
+		</xp:this.facets>
+	</xc:ccWidget>
+	<xp:platformEvent id="platformEvent1" eventName="recCity">
+		<xp:eventHandler event="onevent" submit="true"
+			refreshMode="complete">
+			<xp:this.action><![CDATA[#{javascript:var element=getComponent('computedFieldCity');
+element.value=@DbLookup(@DbName(),"xspCountryCity02",context.getSubmittedValue(),"textCityFacts")
+ }]]></xp:this.action>
+		</xp:eventHandler>
+	</xp:platformEvent>
+</xp:view>

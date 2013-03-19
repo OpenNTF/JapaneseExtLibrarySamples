@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+
+	<XPa:ccLayout id="cc4cclayout" navPath="/views/unreadmarks/">
+		<xp:this.facets>
+			<xc:ccMenu_views xp:key="facetLeft"></xc:ccMenu_views>
+			<xp:panel xp:key="facetMain">
+				<xp:this.data>
+					<xp:dominoDocument var="document1"
+						formName="xspMainTopic">
+					</xp:dominoDocument>
+				</xp:this.data>
+				<xp:br></xp:br>
+				<xp:viewPanel rows="30" id="viewPanel1" var="vp01"
+					showUnreadMarks="true" pageName="/viewsReadUnreadMarks.xsp">
+
+					<xp:this.data>
+						<xp:dominoView
+							var="xSPCategoryAndResponsesUnreadMarks"
+							viewName="XSP Category and Responses\Unread Marks">
+						</xp:dominoView>
+					</xp:this.data>
+					<xp:viewColumn columnName="Date" id="viewColumn1">
+						<xp:viewColumnHeader value="Date"
+							id="viewColumnHeader1">
+						</xp:viewColumnHeader>
+					</xp:viewColumn>
+					<xp:viewColumn columnName="Category"
+						id="viewColumn2">
+						<xp:viewColumnHeader value="Category"
+							id="viewColumnHeader2">
+						</xp:viewColumnHeader>
+					</xp:viewColumn>
+					<xp:viewColumn columnName="Fruit"
+						id="viewColumn3">
+						<xp:viewColumnHeader value="Fruit"
+							id="viewColumnHeader3">
+						</xp:viewColumnHeader>
+					</xp:viewColumn>
+					<xp:viewColumn columnName="Veg" id="viewColumn4">
+						<xp:viewColumnHeader value="Veg"
+							id="viewColumnHeader4">
+						</xp:viewColumnHeader>
+					</xp:viewColumn>
+					<xp:viewColumn columnName="Topic" id="viewColumn5"
+						displayAs="link" openDocAsReadonly="true" rendered="false">
+						<xp:viewColumnHeader value="Topic"
+							id="viewColumnHeader5">
+						</xp:viewColumnHeader>
+					</xp:viewColumn>
+					<xp:this.facets>
+						<xp:pager layout="Previous Group Next"
+							xp:key="headerPager" id="pager1">
+						</xp:pager>
+
+					</xp:this.facets>
+					<xp:viewColumn id="viewColumn6" value="">
+						<xp:this.facets>
+							<xp:viewColumnHeader xp:key="header"
+								id="viewColumnHeader6">
+							</xp:viewColumnHeader>
+						</xp:this.facets>
+
+
+						<xp:link escape="true"
+							text="#{javascript:vp01.getColumnValue('Topic')}"
+							id="link4Topic">
+
+							<xp:eventHandler event="onclick"
+								submit="true" refreshMode="complete">
+								<xp:this.action>
+									<xp:openPage
+										name="/viewsReadUnreadMarks.xsp" target="openDocument"
+										documentId="#{javascript:vp01.getNoteID()}">
+									</xp:openPage>
+								</xp:this.action>
+							</xp:eventHandler>
+						</xp:link>
+
+					</xp:viewColumn>
+				</xp:viewPanel>
+				<xp:br></xp:br>
+				<xp:button value="Mark this document as read"
+					id="markReadButton">
+					<xp:eventHandler event="onclick" submit="true"
+						refreshMode="complete">
+						<xp:this.action><![CDATA[#{javascript:document1.getDocument().markRead()}]]></xp:this.action>
+					</xp:eventHandler>
+				</xp:button>
+				<xp:button value="Mark this documet as unread"
+					id="markUnreadButton">
+					<xp:eventHandler event="onclick" submit="true"
+						refreshMode="complete">
+						<xp:this.action><![CDATA[#{javascript:document1.getDocument().markUnread()}]]></xp:this.action>
+					</xp:eventHandler>
+				</xp:button>
+				<xp:table>
+					<xp:tr>
+						<xp:td>
+							<xp:label value="Categories:"
+								id="Categories_Label1" for="Categories1">
+							</xp:label>
+						</xp:td>
+						<xp:td></xp:td>
+						<td>
+							<xp:inputText
+								value="#{document1.Categories}" id="Categories1">
+							</xp:inputText>
+						</td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							<xp:label value="Fruit:" id="Fruit_Label1"
+								for="Fruit1">
+							</xp:label>
+						</xp:td>
+						<xp:td></xp:td>
+						<td>
+							<xp:inputText value="#{document1.Fruit}"
+								id="Fruit1">
+							</xp:inputText>
+						</td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							<xp:label value="Vegetables:"
+								id="Vegetables_Label1" for="Vegetables1">
+							</xp:label>
+						</xp:td>
+						<xp:td></xp:td>
+						<td>
+							<xp:inputText
+								value="#{document1.Vegetables}" id="Vegetables1">
+							</xp:inputText>
+						</td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							<xp:label value="Subject:"
+								id="Subject_Label1" for="Subject1">
+							</xp:label>
+						</xp:td>
+						<xp:td></xp:td>
+						<td>
+							<xp:inputText value="#{document1.Subject}"
+								id="Subject1">
+							</xp:inputText>
+						</td>
+					</xp:tr>
+
+					<xp:tr>
+						<xp:td>
+							<xp:label value="Read? :" id="Read_Label1"
+								for="Read1">
+							</xp:label>
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:text
+								value="#{javascript:document1.getDocument().getRead()}"
+								id="Read1">
+							</xp:text>
+						</xp:td>
+					</xp:tr>
+
+
+					<xp:tr>
+						<xp:td>UniversalID</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:text escape="true" id="computedField1"
+								value="#{javascript:document1.getDocument().getUniversalID()}">
+							</xp:text>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:text escape="true" id="computedField2"
+								value="#{javascript:document1.getParentDatabase().getHttpURL()}">
+							</xp:text>
+						</xp:td>
+					</xp:tr>
+				</xp:table>
+				<xp:br></xp:br>
+				<xp:br></xp:br>
+				<xp:br></xp:br>
+			</xp:panel>
+		</xp:this.facets>
+	</XPa:ccLayout>
+</xp:view>

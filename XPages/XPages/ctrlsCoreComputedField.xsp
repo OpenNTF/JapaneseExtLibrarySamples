@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+
+	<xp:this.resources>
+		<xp:styleSheet href="/csscustom.css"></xp:styleSheet>
+	</xp:this.resources>
+	<XPa:ccLayout id="cc4cclayout" navPath="/basics/computedfield/">
+		<xp:this.facets>
+			<xc:ccMenu_basics xp:key="facetLeft"></xc:ccMenu_basics>
+			<xp:panel xp:key="facetMain" id="panel4facetmain">
+
+				<xp:button value="Press" id="button2TestComputedField">
+					<xp:eventHandler event="onclick" submit="true"
+						refreshMode="complete">
+						<xp:this.action>
+							<xp:setValue binding="#{requestScope.a001}"
+								value="This computed field shows that the button has been clicked.">
+							</xp:setValue>
+						</xp:this.action>
+					</xp:eventHandler>
+				</xp:button>
+				<xp:br />
+
+
+
+
+				<xp:text escape="true"
+					id="computedFieldTestComputedField" value="#{requestScope.a001}">
+				</xp:text>
+
+			</xp:panel>
+
+		</xp:this.facets>
+	</XPa:ccLayout>
+
+
+</xp:view>

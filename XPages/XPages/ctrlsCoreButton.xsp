@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+
+	<XPa:ccLayout id="cc4cclayout" navPath="/basics/button/">
+		<xp:this.facets>
+			<xc:ccMenu_basics xp:key="facetLeft"></xc:ccMenu_basics>
+			<xp:panel xp:key="facetMain" id="panel4facetmain">
+
+				<xp:button value="Press" id="buttonTestButton01"
+					styleClass="customButton">
+					<xp:eventHandler event="onclick" submit="true"
+						refreshMode="complete">
+						<xp:this.action>
+							<xp:setValue binding="#{requestScope.a002}"
+								value="Button clicked.">
+							</xp:setValue>
+						</xp:this.action>
+					</xp:eventHandler>
+				</xp:button>
+				<xp:br />
+
+
+
+
+				<xp:text escape="true" id="computedField4TestButton01"
+					value="#{requestScope.a002}">
+				</xp:text>
+
+
+
+			</xp:panel>
+
+		</xp:this.facets>
+	</XPa:ccLayout>
+</xp:view>

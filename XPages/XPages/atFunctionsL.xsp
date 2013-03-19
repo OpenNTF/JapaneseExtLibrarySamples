@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+
+
+	<XPa:ccLayout id="cc4cclayout" navPath="/events/atfl/">
+		<xp:this.facets>
+			<xc:ccMenu_events xp:key="facetLeft"></xc:ccMenu_events>
+
+			<xp:panel xp:key="facetMain">
+				<xp:panel>
+					<xp:label id="label1" value="@L*: "
+						style="font-weight:bold;font-size:12pt">
+					</xp:label>
+					<xp:comboBox id="comboBoxAtFuncsL"
+						value="#{sessionScope.atFuncsLs}" defaultValue="None">
+						<xp:selectItem itemLabel="None"
+							itemValue="None">
+						</xp:selectItem>
+						<xp:selectItem itemLabel="@Left"
+							itemValue="atFL01">
+						</xp:selectItem>
+						<xp:selectItem itemLabel="@LeftBack"
+							itemValue="atFL02">
+						</xp:selectItem>
+						<xp:selectItem itemLabel="@Length"
+							itemValue="atFL03">
+						</xp:selectItem>
+						<xp:selectItem itemLabel="@List"
+							itemValue="atFL04">
+						</xp:selectItem>
+						<xp:selectItem itemLabel="@LowerCase"
+							itemValue="atFL05">
+						</xp:selectItem>
+
+
+						<xp:eventHandler event="onchange" submit="true"
+							refreshMode="complete">
+							<xp:this.action>
+								<![CDATA[#{javascript:print("")}]]>
+							</xp:this.action>
+						</xp:eventHandler>
+					</xp:comboBox>
+					<xp:panel>
+
+						<xp:panel>
+							<xp:this.rendered>
+								<![CDATA[#{javascript:sessionScope.atFuncsLs == "atFL01"}]]>
+							</xp:this.rendered>
+							<xp:table styleClass="customTable">
+								<xp:tr>
+									<xp:td>
+										<xp:label value="@Function: "
+											id="label2">
+										</xp:label>
+									</xp:td>
+									<xp:td>
+										@Left(value:string, n:int) :
+										string | Returns the leftmost
+										characters of a string for the
+										number of characters specified.
+										<xp:br></xp:br>
+										@Left(value:string,
+										subString:string) : string |
+										Returns the leftmost characters
+										of a string up to and excluding
+										a substring.
+									</xp:td>
+								</xp:tr>
+							</xp:table>
+							<xp:br />
+						</xp:panel>
+
+						<xp:panel>
+							<xp:this.rendered>
+								<![CDATA[#{javascript:sessionScope.atFuncsLs == "atFL02"}]]>
+							</xp:this.rendered>
+							<xp:table styleClass="customTable">
+								<xp:tr>
+									<xp:td>
+										<xp:label value="@Function: "
+											id="label3">
+										</xp:label>
+									</xp:td>
+									<xp:td>
+										@LeftBack(value:string, n:int) :
+										string &#160;| Returns the
+										leftmost characters of a string
+										minus the number of characters
+										specified.
+										<xp:br></xp:br>
+										@LeftBack(value:string,
+										subString:string) : string |
+										Returns the leftmost characters
+										of a string up to and excluding
+										the last occurrence of a
+										substring.
+									</xp:td>
+								</xp:tr>
+							</xp:table>
+							<xp:br />
+						</xp:panel>
+
+						<xp:panel>
+							<xp:this.rendered>
+								<![CDATA[#{javascript:sessionScope.atFuncsLs == "atFL03"}]]>
+							</xp:this.rendered>
+							<xp:table styleClass="customTable">
+								<xp:tr>
+									<xp:td>
+										<xp:label value="@Function: "
+											id="label4">
+										</xp:label>
+									</xp:td>
+									<xp:td>
+										@Length(value:string) : int
+										Returns the number of characters
+										in a string.
+									</xp:td>
+								</xp:tr>
+							</xp:table>
+							<xp:br />
+						</xp:panel>
+
+						<xp:panel>
+							<xp:this.rendered>
+								<![CDATA[#{javascript:sessionScope.atFuncsLs == "atFL04"}]]>
+							</xp:this.rendered>
+							<xp:table styleClass="customTable">
+								<xp:tr>
+									<xp:td>
+										<xp:label value="@Function: "
+											id="label5">
+										</xp:label>
+									</xp:td>
+									<xp:td>
+										@List(values:...) : any Creates
+										a list.
+									</xp:td>
+								</xp:tr>
+							</xp:table>
+							<xp:br />
+						</xp:panel>
+
+						<xp:panel>
+							<xp:this.rendered>
+								<![CDATA[#{javascript:sessionScope.atFuncsLs == "atFL05"}]]>
+							</xp:this.rendered>
+							<xp:table styleClass="customTable">
+								<xp:tr>
+									<xp:td>
+										<xp:label value="@Function: "
+											id="label6">
+										</xp:label>
+									</xp:td>
+									<xp:td>
+										@LowerCase(value:string) :
+										string Converts a string to
+										lowercase.
+									</xp:td>
+								</xp:tr>
+							</xp:table>
+							<xp:br />
+						</xp:panel>
+
+
+
+
+					</xp:panel>
+				</xp:panel>
+			</xp:panel>
+
+		</xp:this.facets>
+	</XPa:ccLayout>
+</xp:view>

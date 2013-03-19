@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+
+	
+	<XPa:ccLayout id="cc4cclayout"  navPath="/views/headersort/">
+		<xp:this.facets>
+			<xc:ccMenu_views xp:key="facetLeft"></xc:ccMenu_views>
+			<xp:panel xp:key="facetMain">
+				<xp:panel id="panel4doc">
+					<xp:this.data>
+						<xp:dominoDocument var="document1"
+							formName="xspHeaderSortingForm">
+						</xp:dominoDocument>
+					</xp:this.data>
+
+					<xp:button value="Cancel"
+						id="buttonHeaderSortDocCancel">
+						<xp:eventHandler event="onclick" submit="true"
+							refreshMode="complete" immediate="true" save="false">
+						</xp:eventHandler>
+					</xp:button>
+					<xp:button value="Edit" id="buttonHeaderSortDocEdit">
+
+						<xp:eventHandler event="onclick" submit="true"
+							refreshMode="complete">
+							<xp:this.action>
+								<xp:changeDocumentMode mode="edit"></xp:changeDocumentMode>
+							</xp:this.action>
+						</xp:eventHandler>
+					</xp:button>
+					<xp:button value="Delete"
+						id="buttonHeaderSortDocDelete">
+
+						<xp:eventHandler event="onclick" submit="true"
+							refreshMode="complete">
+							<xp:this.action>
+								<xp:deleteDocument
+									name="/propViewsHeaderSorting.xsp"
+									message="This action will delete this document.">
+								</xp:deleteDocument>
+							</xp:this.action>
+						</xp:eventHandler>
+					</xp:button>
+					<xp:button value="Save" id="buttonHeaderSortDocSave">
+
+						<xp:eventHandler event="onclick" submit="true"
+							refreshMode="complete">
+							<xp:this.action>
+								<xp:save
+									name="/propViewsHeaderSorting.xsp">
+								</xp:save>
+							</xp:this.action>
+						</xp:eventHandler>
+					</xp:button>
+					<xp:table>
+						<xp:tr>
+							<xp:td>
+								<xp:label value="Subject:"
+									id="label1">
+								</xp:label>
+							</xp:td>
+							<xp:td>
+								<xp:inputText id="inputText1"
+									value="#{document1.Subject}">
+								</xp:inputText>
+							</xp:td>
+						</xp:tr>
+						<xp:tr>
+							<xp:td>
+								<xp:label value="Sample Text: "
+									id="label2">
+								</xp:label>
+							</xp:td>
+							<xp:td>
+								<xp:inputText id="inputText2"
+									value="#{document1.SortText}">
+								</xp:inputText>
+							</xp:td>
+						</xp:tr>
+						<xp:tr>
+							<xp:td>
+								<xp:label value="Sample Number:"
+									id="label3">
+								</xp:label>
+							</xp:td>
+							<xp:td>
+								<xp:inputText id="inputText3"
+									value="#{document1.SortNumber}">
+									<xp:this.converter>
+										<xp:convertNumber></xp:convertNumber>
+									</xp:this.converter>
+								</xp:inputText>
+							</xp:td>
+						</xp:tr>
+						<xp:tr>
+							<xp:td>
+								<xp:label value="Sample Date: "
+									id="label4">
+								</xp:label>
+							</xp:td>
+							<xp:td>
+								<xp:inputText id="inputText4"
+									value="#{document1.SortDate}">
+									<xp:this.converter>
+										<xp:convertDateTime type="date"
+											dateStyle="short">
+										</xp:convertDateTime>
+									</xp:this.converter>
+									<xp:dateTimeHelper></xp:dateTimeHelper>
+								</xp:inputText>
+							</xp:td>
+						</xp:tr>
+					</xp:table>
+				</xp:panel>
+				<xp:panel id="panel4view">
+					<xp:button value="New" id="buttonHeaderSortViewNew">
+
+
+						<xp:eventHandler event="onclick" submit="true"
+							refreshMode="complete">
+							<xp:this.action>
+								<xp:openPage
+									name="/propViewsHeaderSorting.xsp" target="newDocument">
+								</xp:openPage>
+							</xp:this.action>
+						</xp:eventHandler>
+					</xp:button>
+					<xp:button value="Delete selected"
+						id="buttonHeaderSortViewDelete">
+
+						<xp:eventHandler event="onclick" submit="true"
+							refreshMode="complete">
+							<xp:this.action>
+								<xp:deleteSelectedDocuments
+									view="viewPanel1"
+									message="This action will delete the selected documents in the view panel.">
+								</xp:deleteSelectedDocuments>
+							</xp:this.action>
+						</xp:eventHandler>
+					</xp:button>
+
+					<xp:viewPanel rows="7" id="viewPanel1"
+						pageName="/propViewsHeaderSorting.xsp" viewStyle="width:100%">
+						<xp:this.facets>
+							<xp:pager layout="Previous Group Next"
+								xp:key="headerPager" id="pager1" panelPosition="left">
+							</xp:pager>
+							<xp:viewTitle xp:key="viewTitle"
+								id="viewTitle1" value="7 rows per page">
+							</xp:viewTitle>
+						</xp:this.facets>
+						<xp:this.data>
+							<xp:dominoView var="xspHearerSortingView"
+								viewName="xspHearerSortingView">
+							</xp:dominoView>
+						</xp:this.data>
+						<xp:viewColumn columnName="Subject"
+							id="viewColumn1" showCheckbox="true" displayAs="link"
+							openDocAsReadonly="true">
+							<xp:viewColumnHeader value="Subject"
+								id="viewColumnHeader1" sortable="true" showCheckbox="true">
+							</xp:viewColumnHeader>
+						</xp:viewColumn>
+						<xp:viewColumn columnName="Text"
+							id="viewColumn2">
+							<xp:viewColumnHeader value="Text"
+								id="viewColumnHeader2" sortable="true">
+							</xp:viewColumnHeader>
+						</xp:viewColumn>
+						<xp:viewColumn columnName="Number"
+							id="viewColumn3">
+							<xp:viewColumnHeader value="Number"
+								id="viewColumnHeader3" sortable="true">
+							</xp:viewColumnHeader>
+						</xp:viewColumn>
+						<xp:viewColumn columnName="Date"
+							id="viewColumn4">
+							<xp:viewColumnHeader value="Date"
+								id="viewColumnHeader4" sortable="true">
+							</xp:viewColumnHeader>
+						</xp:viewColumn>
+					</xp:viewPanel>
+				</xp:panel>
+			</xp:panel>
+		</xp:this.facets>
+	</XPa:ccLayout>
+</xp:view>

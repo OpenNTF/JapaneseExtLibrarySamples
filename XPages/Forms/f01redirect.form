@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' replicaid='85257A870079CB8F'>
+<noteinfo noteid='88e' unid='4C2784EB779896A380257AD80054BEA3' sequence='8'>
+<created><datetime dst='true'>20121218T162538,27+01</datetime></created>
+<modified><datetime dst='true'>20130118T132308,86+01</datetime></modified>
+<revised><datetime dst='true'>20130118T132308,85+01</datetime></revised>
+<lastaccessed><datetime dst='true'>20130118T132308,86+01</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20121218T112537,02-04</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name><name
+>CN=Paul Hannan/OU=Ireland/O=IBM</name></updatedby>
+<revisions><datetime dst='true'>20121218T162539,21+01</datetime><datetime
+ dst='true'>20121218T162742,24+01</datetime><datetime dst='true'>20121218T171208,96+01</datetime><datetime
+ dst='true'>20130109T115432,49+01</datetime></revisions>
+<item name='$Comment' sign='true'><text/></item>
+<item name='$HTMLCode' sign='true'>
+<rawitemdata type='1'>
+X/8QAAIADwAHAAAAAAAAAA==
+</rawitemdata></item>
+<item name='$TITLE'><text>f01redirect</text></item>
+<item name='$INFO' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAQAAAA
+</rawitemdata></item>
+<item name='$Flags'><text/></item>
+<item name='$XPageAlt' sign='true'><text>p02redirect.xsp</text></item>
+<item name='$XPageAltClient' sign='true'><text>p02redirect.xsp</text></item>
+<item name='$DesignerVersion' sign='true'><text>8.5.3</text></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>f01redirect</text></item>
+<item name='Subject' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='category' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='Body' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='$Fields'><textlist><text>body</text><text>category</text><text
+>subject</text></textlist></item>
+<item name='$BODY' sign='true'>
+<rawitemdata type='1'>
+gQKC/1oAAQAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAABAAAAAJSHAAAAAAAAAAAAAAAAAQAAAAQAAACDBAEAhf8RAAEAAApTdWJqZWN0OiAA
+3QYAAIr//v9QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAeAB4AAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACK/ywAigAABQAwAgAAAAAAAAIBAQAKAAAAAAAA
+AAAHAAAAAABzdWJqZWN0AGIOAQCEAAAAAAAAAAAA3gYAAIr/hf8IAAEAAAqBAoMEAQCF/xIAAQAA
+CkNhdGVnb3J5OiDdBgAAiv/+/1AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4
+AHgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIr/LACKAAAFADACAAAAAAAA
+AgEAAAoAAAAAAAAAAAgAAAAAAGNhdGVnb3J5Yg4BAIQAAAAAAAAAAADeBgAAiv+F/wgAAQAACoEC
+gwQBAIX/CAABAAAK3QYAAIr//v9QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+eAB4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACK/ygAggABAAAAAgAAAAAA
+AAIBAAAKAAAAAAAAAAAEAAAAAABib2R5Yg4BAIQAAAAAAAEAAADeBgAAiv+F/wgAAQAACg==
+</rawitemdata></item></note>
+

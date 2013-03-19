@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+
+	<xp:this.data>
+		<xp:dominoDocument var="document1" formName="MainTopic"></xp:dominoDocument>
+		<xp:dominoView var="view1" viewName="(Default View)">
+
+
+			<xp:this.queryOpenView>
+				<xp:setValue binding="#{requestScope.rq6}">
+					<xp:this.value><![CDATA[#{javascript:return "Query Open View Event is used " + @Unique()}]]></xp:this.value>
+				</xp:setValue>
+			</xp:this.queryOpenView>
+			<xp:this.postOpenView>
+				<xp:setValue binding="#{viewScope.vs2}">
+					<xp:this.value><![CDATA[#{javascript:return "POST Open View Event is used " + @Unique()}]]></xp:this.value>
+				</xp:setValue>
+			</xp:this.postOpenView>
+		</xp:dominoView>
+	</xp:this.data>
+
+	<xp:this.beforePageLoad>
+
+
+		<xp:actionGroup>
+			<xp:actionGroup>
+
+				<xp:setValue binding="#{requestScope.rq1}">
+					<xp:this.value><![CDATA[#{javascript:return "Before Page Load Event is used    "+ @Unique() }]]></xp:this.value>
+				</xp:setValue>
+			</xp:actionGroup>
+
+		</xp:actionGroup>
+	</xp:this.beforePageLoad>
+	<xp:this.afterPageLoad>
+		<xp:setValue binding="#{requestScope.rq2}">
+			<xp:this.value><![CDATA[#{javascript:return "After Page load Event is used    "+ @Unique() }]]></xp:this.value>
+		</xp:setValue>
+	</xp:this.afterPageLoad>
+	<xp:this.afterRestoreView>
+		<xp:setValue binding="#{requestScope.rq3}">
+			<xp:this.value><![CDATA[#{javascript:return "After Restore View Event is used     "+ @Unique() }]]></xp:this.value>
+		</xp:setValue>
+	</xp:this.afterRestoreView>
+	<xp:this.beforeRenderResponse>
+		<xp:setValue binding="#{requestScope.rq4}">
+			<xp:this.value><![CDATA[#{javascript:return "Before Render Response Event is used     "+ @Unique() }]]></xp:this.value>
+		</xp:setValue>
+	</xp:this.beforeRenderResponse>
+	<xp:this.afterRenderResponse>
+		<xp:setValue binding="#{viewScope.vs1}">
+			<xp:this.value><![CDATA[#{javascript:return "After Render Response Event is used     "+ @Unique() }]]></xp:this.value>
+		</xp:setValue>
+	</xp:this.afterRenderResponse>
+	<xp:this.resources>
+
+		<xp:styleSheet href="/csscustom.css"></xp:styleSheet>
+	</xp:this.resources>
+	<XPa:ccLayout navPath="/events/page/">
+		<xp:this.facets>
+			<xc:ccMenu_events xp:key="facetLeft"></xc:ccMenu_events>
+			<xp:panel xp:key="facetMain" id="panelJSPage1">
+				<xp:label id="labelTitleJSPage1"
+					style="font-size:12pt;color:rgb(0,0,0);font-weight:bold">
+					<xp:this.value><![CDATA[This XPage Tests Page & View Events - These are Server side only Events]]></xp:this.value>
+				</xp:label>
+				<xp:br></xp:br>
+				<xp:text escape="true" id="computedField2"></xp:text>
+
+				<xp:br></xp:br>
+
+				<xp:button value="New Document" id="buttonJSPage1">
+
+					<xp:eventHandler event="onclick" submit="true"
+						refreshMode="complete">
+						<xp:this.action>
+							<xp:openPage name="/eventsPageDocument.xsp"
+								target="newDocument">
+							</xp:openPage>
+						</xp:this.action>
+					</xp:eventHandler>
+				</xp:button>
+				<xp:button value="Delete Selected" id="buttonJSPage2">
+
+					<xp:eventHandler event="onclick" submit="true"
+						refreshMode="complete">
+						<xp:this.action>
+							<xp:deleteSelectedDocuments
+								view="viewPanelJSPage1"
+								message="Are you sure you wanna delete this document?">
+							</xp:deleteSelectedDocuments>
+						</xp:this.action>
+					</xp:eventHandler>
+				</xp:button>
+
+				<xp:viewPanel rows="30" id="viewPanelJSPage1"
+					viewStyle="width:auto" pageName="/eventsPageDocument.xsp">
+					<xp:this.facets>
+						<xp:pager partialRefresh="true"
+							layout="Previous Group Next" xp:key="headerPager" id="pager1">
+						</xp:pager>
+					</xp:this.facets>
+					<xp:this.data>
+						<xp:dominoView var="defaultView"
+							viewName="(Default View)">
+						</xp:dominoView>
+					</xp:this.data>
+					<xp:viewColumn columnName="Date" id="viewColumn1">
+						<xp:viewColumnHeader value="Date"
+							id="viewColumnHeader1">
+						</xp:viewColumnHeader>
+					</xp:viewColumn>
+					<xp:viewColumn columnName="Topic" id="viewColumn2"
+						showCheckbox="true" displayAs="link" openDocAsReadonly="true">
+						<xp:viewColumnHeader value="Topic"
+							id="viewColumnHeader2">
+						</xp:viewColumnHeader>
+					</xp:viewColumn>
+					<xp:viewColumn columnName="By" id="viewColumn3">
+						<xp:viewColumnHeader value="By"
+							id="viewColumnHeader3">
+						</xp:viewColumnHeader>
+					</xp:viewColumn>
+				</xp:viewPanel>
+
+				<xp:table>
+					<xp:tr>
+						<xp:td>
+							<xp:label value="Event Type"
+								id="labelJSPage1" style="font-weight:bold">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:label value="Result" id="labelJSPage2"
+								style="font-weight:bold">
+							</xp:label>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							<xp:label value="BeforePageLoad"
+								id="labelJSPage3">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:text escape="true"
+								id="computedFieldJSPage1" value="#{requestScope.rq1}">
+							</xp:text>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							<xp:label value="afterPageLoad"
+								id="labelJSPage4">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:text escape="true"
+								id="computedFieldJSPage2" value="#{requestScope.rq2}">
+							</xp:text>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							<xp:label id="labelJSPage5"
+								value="afterRestoreView">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:text escape="true"
+								id="computedFieldJSPage3" value="#{requestScope.rq3}">
+							</xp:text>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							<xp:label value="beforeRenderResponse"
+								id="labelJSPage6">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:text escape="true"
+								id="computedFieldJSPage4" value="#{requestScope.rq4}">
+							</xp:text>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							<xp:label value="afterRenderResponse"
+								id="labelJSPage7">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:text escape="true"
+								id="computedFieldJSPage5" value="#{viewScope.vs1}">
+							</xp:text>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							<xp:label value="queryOpenView"
+								id="labelJSPage8">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:text escape="true"
+								id="computedFieldJSPage6" value="#{requestScope.rq6}">
+							</xp:text>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							<xp:label value="postOpenView"
+								id="labelJSPage9">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:text escape="true"
+								id="computedFieldJSPage7" value="#{viewScope.vs2}">
+							</xp:text>
+						</xp:td>
+					</xp:tr>
+				</xp:table>
+
+			</xp:panel>
+		</xp:this.facets>
+	</XPa:ccLayout>
+</xp:view>
+

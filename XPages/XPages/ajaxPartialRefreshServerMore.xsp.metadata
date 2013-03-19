@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" replicaid="85257A870079CB8F" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="70e" sequence="22" unid="AC99F7CB9B86DBE28025767A004C8F26">
+<created><datetime dst="true">20091126T145613,82+01</datetime></created>
+<modified><datetime>20130319T214351,13+09</datetime></modified>
+<revised><datetime>20130319T214351,12+09</datetime></revised>
+<lastaccessed><datetime>20130319T214351,13+09</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20120928T180633,55-04</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=Admin/O=LotusLab</name></updatedby>
+<revisions><datetime dst="true">20100527T110302,33+01</datetime><datetime dst="true">20110331T100924,72+01</datetime><datetime dst="true">20121214T124835,05+01</datetime><datetime dst="true">20121214T124835,87+01</datetime></revisions>
+<wassignedby><name>CN=Admin/O=LotusLab</name></wassignedby>
+<item name="$TITLE"><text>ajaxPartialRefreshServerMore.xsp</text></item>
+<item name="$Flags"><text>gC~4K</text></item>
+
+
+
+<item name="$FileNames" sign="true"><text>ajaxPartialRefreshServerMore.xsp</text></item>
+<item name="$DesignerVersion"><text>8.5.1</text></item>
+
+
+
+
+</note>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xe="http://www.ibm.com/xsp/coreex">
+
+	<xe:navigator id="navigator1" keepState="true" expandable="true"
+		expandEffect="wipe">
+		<xe:this.treeNodes>
+			<xe:basicContainerNode label="Partial Refresh">
+				<xe:this.children>
+					<xe:pageTreeNode label="Basic Demo"
+						page="/ajaxPartialRefresh.xsp" selection="/events/prbasicdemo/" />
+					<xe:pageTreeNode label="Advanced Demo"
+						page="/ajaxPartialRefreshMain.xsp" selection="/events/prmain/" />
+					<xe:pageTreeNode label="Core Controls"
+						page="/ajaxPartialRefreshCore.xsp" selection="/events/prcore/" />
+					<xe:pageTreeNode label="Container Controls"
+						page="/ajaxPartialRefreshContainer.xsp"
+						selection="/events/prcontainer/" />
+					<xe:pageTreeNode label="Dojo Controls"
+						page="/ajaxPartialRefreshDojo.xsp" selection="/events/prdojo/">
+					</xe:pageTreeNode>
+					<xe:pageTreeNode label="Server Options"
+						page="/ajaxPartialRefreshServer.xsp"
+						selection="/events/prserver/" />
+					<xe:pageTreeNode label="More Server Options"
+						page="/ajaxPartialRefreshServerMore.xsp"
+						selection="/events/prservermore/" />
+					<xe:pageTreeNode label="Toggle"
+						page="/ajaxPartialRefreshDoc.xsp" selection="/events/prdoc/" />
+
+					<xe:pageTreeNode label="Listbox ComboBOx"
+						page="/ajaxPartialRefreshListCombo.xsp"
+						selection="/events/prlistcombo/">
+					</xe:pageTreeNode>
+				</xe:this.children>
+			</xe:basicContainerNode>
+			<xe:pageTreeNode label="Type Ahead"
+				page="/ajaxTypeAhead.xsp" selection="/events/typeahead/">
+			</xe:pageTreeNode>
+			<xe:basicContainerNode label="@Functions">
+				<xe:this.children>
+					<xe:pageTreeNode label="@A*"
+						page="/atFunctionsA.xsp" selection="/events/atfa/" />
+					<xe:pageTreeNode label="@B*"
+						page="/atFunctionsB.xsp" selection="/events/atfb/" />
+
+					<xe:pageTreeNode label="@C*"
+						page="/atFunctionsC.xsp" selection="/events/atfc/" />
+
+					<xe:pageTreeNode label="@D*"
+						page="/atFunctionsD.xsp" selection="/events/atfd/" />
+
+					<xe:pageTreeNode label="@E*"
+						page="/atFunctionsE.xsp" selection="/events/atfe/" />
+
+					<xe:pageTreeNode label="@F*"
+						page="/atFunctionsF.xsp" selection="/events/atff/" />
+
+					<xe:pageTreeNode label="@G*"
+						page="/atFunctionsG.xsp" selection="/events/atfg/" />
+
+					<xe:pageTreeNode label="@H*"
+						page="/atFunctionsH.xsp" selection="/events/atfh/" />
+
+					<xe:pageTreeNode label="@I*"
+						page="/atFunctionsI.xsp" selection="/events/atfi/" />
+
+					<xe:pageTreeNode label="@L*"
+						page="/atFunctionsL.xsp" selection="/events/atfl/" />
+
+					<xe:pageTreeNode label="@M*"
+						page="/atFunctionsM.xsp" selection="/events/atfm/" />
+
+					<xe:pageTreeNode label="@N*"
+						page="/atFunctionsN.xsp" selection="/events/atfn/" />
+
+					<xe:pageTreeNode label="@P*"
+						page="/atFunctionsP.xsp" selection="/events/atfp/" />
+
+					<xe:pageTreeNode label="@R*"
+						page="/atFunctionsR.xsp" selection="/events/atfr/" />
+
+					<xe:pageTreeNode label="@S*"
+						page="/atFunctionsS.xsp" selection="/events/atfs/" />
+
+					<xe:pageTreeNode label="@T*"
+						page="/atFunctionsT.xsp" selection="/events/atft/" />
+
+					<xe:pageTreeNode label="@U*"
+						page="/atFunctionsU.xsp" selection="/events/atfu/" />
+
+					<xe:pageTreeNode label="@W*"
+						page="/atFunctionsW.xsp" selection="/events/atfw/" />
+
+					<xe:pageTreeNode label="@Y*"
+						page="/atFunctionsY.xsp" selection="/events/atfy/" />
+
+
+
+
+				</xe:this.children>
+			</xe:basicContainerNode>
+			<xe:basicContainerNode label="Events">
+				<xe:this.children>
+					<xe:pageTreeNode label="Document"
+						page="/eventsPageDocument.xsp" selection="/events/document/" />
+					<xe:pageTreeNode label="Event Handler"
+						page="/eventsEventHandlers.xsp"
+						selection="/events/eventhandlers/" />
+					<xe:pageTreeNode label="Focus"
+						page="/eventsFocus.xsp" selection="/events/focus/" />
+					<xe:pageTreeNode label="Key" page="/eventsKey.xsp"
+						selection="/events/key/" />
+					<xe:pageTreeNode label="Mouse"
+						page="/eventsMouse.xsp" selection="/events/mouse/" />
+					<xe:pageTreeNode label="Page"
+						page="/eventsXPageEvents.xsp" selection="/events/page/" />
+					<xe:pageTreeNode label="Select Change"
+						page="/eventsSelectChange.xsp" selection="/events/selectchange/" />
+
+				</xe:this.children>
+			</xe:basicContainerNode>
+		</xe:this.treeNodes>
+	</xe:navigator></xp:view>

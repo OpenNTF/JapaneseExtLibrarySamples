@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+
+	<xc:ccWidget id="cc4ccwidget">
+		<xp:this.facets>
+			<xp:panel xp:key="facet_1">
+				<xp:table style="font-size:8pt">
+					<xp:tr>
+						<xp:td>Receive String:</xp:td>
+						<xp:td>
+							<xp:text escape="true" id="computedField1"
+								style="color:rgb(0,64,128)">
+							</xp:text>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>Receive Boolean:</xp:td>
+						<xp:td>
+							<xp:text escape="true"
+								id="computedField2" style="color:rgb(0,128,192)">
+							</xp:text>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>Receive Number:</xp:td>
+						<xp:td>
+							<xp:text escape="true"
+								id="computedField3" style="color:rgb(0,128,255)">
+							</xp:text>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>Receive JSON</xp:td>
+						<xp:td>
+							<xp:text escape="true"
+								id="computedField4" style="color:rgb(128,128,192)">
+							</xp:text>
+						</xp:td>
+					</xp:tr>
+				</xp:table>
+			</xp:panel>
+		</xp:this.facets>
+	</xc:ccWidget>
+	<xp:platformEvent id="platformEvent1" eventName="rec01">
+		<xp:eventHandler event="onevent" submit="true"
+			refreshMode="complete">
+			<xp:this.action><![CDATA[#{javascript:var element=getComponent('computedField1');
+element.value=context.getSubmittedValue();}]]></xp:this.action>
+		</xp:eventHandler>
+	</xp:platformEvent>
+	<xp:platformEvent id="platformEvent2" eventName="rec02Boolean">
+		<xp:eventHandler event="onevent" submit="true"
+			refreshMode="complete">
+			<xp:this.action><![CDATA[#{javascript:var element=getComponent('computedField2');
+element.value=context.getSubmittedValue();}]]></xp:this.action>
+<!--			<xp:this.script><![CDATA[return thisEvent.value;]]></xp:this.script>-->
+		</xp:eventHandler></xp:platformEvent>
+	<xp:platformEvent id="platformEvent3" eventName="rec03Number">
+		<xp:eventHandler event="onevent" submit="true"
+			refreshMode="complete">
+			<xp:this.action><![CDATA[#{javascript:var element=getComponent('computedField3');
+element.value=context.getSubmittedValue();}]]></xp:this.action>
+		</xp:eventHandler></xp:platformEvent>
+<xp:platformEvent id="platformEvent4" eventName="rec04JSON">
+	<xp:eventHandler event="onevent" submit="true"
+		refreshMode="complete">
+		<xp:this.action><![CDATA[#{javascript:var element=getComponent('computedField4');
+element.value=context.getSubmittedValue();}]]></xp:this.action>
+		<xp:this.script><![CDATA[return "Test value: " + thisEvent.value.testValue;]]></xp:this.script>
+	</xp:eventHandler></xp:platformEvent></xp:view>

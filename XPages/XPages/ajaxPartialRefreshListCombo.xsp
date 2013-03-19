@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+
+	<XPa:ccLayout  navPath="/events/prlistcombo/">
+		<xp:this.facets>
+			<xc:ccMenu_events xp:key="facetLeft"></xc:ccMenu_events>
+			<xp:panel xp:key="facetMain">
+				<xp:span
+					style="color:rgb(0,128,255);font-weight:bold;font-size:16pt">
+					Partial Refresh - Core Controls - List and Combo Box
+				</xp:span>
+				&#160;&#160;
+				<xp:link escape="true" text="Return to Previous"
+					id="link2">
+					<xp:eventHandler event="onclick" submit="true"
+						refreshMode="complete" immediate="true">
+						<xp:this.action>
+							<xp:openPage
+								name="/ajaxPartialRefreshCore.xsp">
+							</xp:openPage>
+						</xp:this.action>
+					</xp:eventHandler>
+				</xp:link>
+				<xp:br></xp:br>
+				<xp:br></xp:br>
+				<xp:br></xp:br>
+				<xp:table>
+					<xp:tr>
+						<xp:td>
+							<xp:span
+								style="color:rgb(255,0,0);font-weight:bold">
+							</xp:span>
+							<xp:span
+								style="font-weight:bold;font-size:14pt">
+								List Box
+							</xp:span>
+							<xp:span style="font-weight:bold"></xp:span>
+							<xp:br id="br12"></xp:br>
+							<xp:link
+								text="Set List Box Values (Partial Refresh)" id="button9">
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="partial" refreshId="listBox1"
+									id="eventHandler28">
+									<xp:this.action><![CDATA[#{javascript:var v = new java.util.Vector();
+					v.add("list1")
+					v.add("list2")
+					v.add("list3")
+					requestScope.put("listBoxValues",v);}]]></xp:this.action>
+								</xp:eventHandler>
+							</xp:link>
+							<xp:br id="br1"></xp:br>
+							- updates 1st list box with values only
+							<xp:br id="br32"></xp:br>
+							<xp:link
+								text="Set List Box Values (Full Update)" id="button13">
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="complete" id="eventHandler30">
+									<xp:this.action><![CDATA[#{javascript:var v = new java.util.Vector();
+					v.add("list1")
+					v.add("list2")
+					v.add("list3")
+					requestScope.put("listBoxValues",v);}]]></xp:this.action>
+								</xp:eventHandler>
+							</xp:link>
+							<xp:br id="br2"></xp:br>
+							- updates 1st list box with values and list
+							box computed field
+							<xp:br id="br3"></xp:br>
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:listBox id="listBox1">
+
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="partial" id="eventHandler4"
+									refreshId="listboxCompField">
+								</xp:eventHandler>
+								<xp:eventHandler event="onchange"
+									submit="true" refreshMode="partial"
+									refreshId="listboxCompField" id="eventHandler15">
+								</xp:eventHandler>
+
+								<xp:selectItems id="selectItems1">
+									<xp:this.value><![CDATA[#{javascript:if(requestScope.get("listBoxValues")!=null){
+					return requestScope.get("listBoxValues");
+					};}]]></xp:this.value>
+								</xp:selectItems>
+							</xp:listBox>
+							<xp:listBox id="listBox2">
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="partial" id="eventHandler17"
+									refreshId="listboxCompField">
+								</xp:eventHandler>
+								<xp:eventHandler event="onchange"
+									submit="true" refreshMode="partial"
+									refreshId="listboxCompField" id="eventHandler47">
+								</xp:eventHandler>
+								<xp:selectItem itemLabel="one"
+									itemValue="one" id="selectItem8">
+								</xp:selectItem>
+								<xp:selectItem itemLabel="two"
+									itemValue="two" id="selectItem9">
+								</xp:selectItem>
+								<xp:selectItem itemLabel="three"
+									itemValue="three" id="selectItem10">
+								</xp:selectItem>
+							</xp:listBox>
+							<xp:br id="br4"></xp:br>
+							<xp:br id="br5"></xp:br>
+							<xp:span style="color:rgb(188,88,105)">
+								selecting values from the second list
+								box updates ths listbox computed field
+							</xp:span>
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							ListBox Computed Field
+							<xp:br id="br34"></xp:br>
+							<xp:text escape="true" id="listboxCompField"
+								style="font-weight:bold">
+								<xp:this.value><![CDATA[#{javascript:var element = getComponent('listBox2');
+					element.value}]]></xp:this.value>
+							</xp:text>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							<xp:span
+								style="color:rgb(255,0,0);font-weight:bold">
+							</xp:span>
+							<xp:span
+								style="font-weight:bold;font-size:14pt">
+								Combo Box
+							</xp:span>
+							<xp:span
+								style="color:rgb(255,0,0);font-weight:bold">
+							</xp:span>
+							<xp:span style="color:rgb(255,0,0)"></xp:span>
+							<xp:br id="br35"></xp:br>
+							<xp:link text="Set Combo Box Values"
+								id="button70">
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="partial" refreshId="comboBox1"
+									id="eventHandler31">
+									<xp:this.action><![CDATA[#{javascript:var w = new java.util.Vector();
+					w.add("combo1")
+					w.add("combo2")
+					w.add("combo3")
+					requestScope.put("comboBoxValues",w);}]]></xp:this.action>
+								</xp:eventHandler>
+							</xp:link>
+							<xp:br id="br6"></xp:br>
+							-updates 1st combo box with values only
+							<xp:br id="br54"></xp:br>
+							<xp:link text="Set Combo Box Values"
+								id="button16">
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="complete" id="eventHandler32">
+									<xp:this.action><![CDATA[#{javascript:var w = new java.util.Vector();
+					w.add("combo1")
+					w.add("combo2")
+					w.add("combo3")
+					requestScope.put("comboBoxValues",w);}]]></xp:this.action>
+								</xp:eventHandler>
+							</xp:link>
+							<xp:br id="br7"></xp:br>
+							- updates 1st combo box with values and
+							combobox computed field
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:comboBox id="comboBox1">
+
+
+
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="partial" id="eventHandler5"
+									refreshId="comboboxCompField">
+								</xp:eventHandler>
+								<xp:eventHandler event="onchange"
+									submit="true" refreshMode="partial"
+									refreshId="comboboxCompField" id="eventHandler16">
+								</xp:eventHandler>
+
+								<xp:selectItems id="selectItems2">
+									<xp:this.value><![CDATA[#{javascript:if(requestScope.get("comboBoxValues")!=null){
+					return requestScope.get("comboBoxValues");
+					};}]]></xp:this.value>
+								</xp:selectItems>
+							</xp:comboBox>
+							<xp:comboBox id="comboBox2">
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="partial"
+									refreshId="comboboxCompField" id="eventHandler48">
+								</xp:eventHandler>
+								<xp:selectItem itemLabel="apple"
+									itemValue="apple" id="selectItem12">
+								</xp:selectItem>
+								<xp:selectItem itemLabel="banana"
+									itemValue="banana" id="selectItem13">
+								</xp:selectItem>
+								<xp:selectItem itemLabel="carrot"
+									itemValue="carrot" id="selectItem14">
+								</xp:selectItem>
+							</xp:comboBox>
+							<xp:br id="br8"></xp:br>
+							<xp:br id="br9"></xp:br>
+							<xp:span style="color:rgb(188,88,105)">
+								selecting values from the second combo
+								box updates the combo box computed field
+							</xp:span>
+						</xp:td>
+						<xp:td
+							style="font-weight:bold;font-size:10pt">
+							<xp:span style="color:rgb(255,0,0)">
+								&#160;
+							</xp:span>
+						</xp:td>
+						<xp:td>
+							ComboBox Computed Field
+							<xp:br id="br64"></xp:br>
+							<xp:text escape="true"
+								id="comboboxCompField" style="font-weight:bold">
+								<xp:this.value><![CDATA[#{javascript:var element = getComponent('comboBox2');
+					element.value}]]></xp:this.value>
+							</xp:text>
+						</xp:td>
+					</xp:tr>
+				</xp:table>
+
+			</xp:panel>
+		</xp:this.facets>
+	</XPa:ccLayout>
+</xp:view>

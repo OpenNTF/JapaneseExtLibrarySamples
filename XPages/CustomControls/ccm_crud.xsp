@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xe="http://www.ibm.com/xsp/coreex">
+
+	<xp:this.resources>
+		<xp:script src="/smartphonetest.jss" clientSide="false"></xp:script>
+	</xp:this.resources>
+	<xe:appPage id="appPage1" pageName="crudhome">
+		<xe:dataView id="dataView1" pageName="#cruddocview"
+			openDocAsReadonly="true" rows="9">
+			<xp:this.facets>
+				<xp:panel xp:key="pagerBottom">
+					<xp:pager partialRefresh="true" id="pager2">
+						<xp:pagerControl type="Previous"
+							id="pagerControl1">
+						</xp:pagerControl>
+						<xp:pagerControl type="Next"
+							id="pagerControl2">
+						</xp:pagerControl>
+					</xp:pager>
+
+					<xp:link escape="true" text="Add Rows" id="link1">
+						<xp:eventHandler event="onclick"
+							submit="false">
+							<xp:this.script>
+								<xe:addRows for="dataView1" rowCount="5"
+									state="true">
+								</xe:addRows>
+							</xp:this.script>
+						</xp:eventHandler>
+					</xp:link>
+				</xp:panel>
+			</xp:this.facets>
+			<xe:this.data>
+				<xp:dominoView var="viewXSPdatecreated"
+					viewName="XSP Category and Responses\Date Created"
+					expandLevel="2">
+				</xp:dominoView>
+			</xe:this.data>
+			<xe:this.summaryColumn>
+				<xe:viewSummaryColumn columnName="$115"></xe:viewSummaryColumn>
+			</xe:this.summaryColumn>
+		</xe:dataView>
+		<xe:djxmHeading id="djxmHeading1" label="Basic CRUD" back="Home"
+			moveTo="home">
+			<xp:this.facets>
+				<xe:toolBarButton id="toolBarButton1"
+					xp:key="actionFacet" label="New" arrow="right" moveTo="cruddocview"
+					transition="slide" transitionDir="ltr">
+				</xe:toolBarButton>
+			</xp:this.facets>
+		</xe:djxmHeading>
+	</xe:appPage>
+	<xe:appPage id="appPage2" pageName="cruddocview"
+		resetContent="true">
+		<xp:panel>
+			<xe:djxmHeading id="djxmHeading2" label="Topic"
+				back="Cancel" moveTo="crudhome">
+				<xp:this.facets>
+					<xp:panel xp:key="actionFacet">
+						<xe:toolBarButton id="toolBarButton3"
+							label="Save" rendered="#{javascript:document1.isEditable()}">
+							<xp:eventHandler event="onClick"
+								submit="true" refreshMode="complete">
+								<xe:this.action>
+									<xe:moveTo direction="Right to Left"
+										forceFullRefresh="true" saveDocument="true"
+										transitionType="slide" targetPage="crudhome">
+									</xe:moveTo>
+								</xe:this.action>
+							</xp:eventHandler>
+						</xe:toolBarButton>
+						<xe:toolBarButton id="toolBarButton2"
+							label="Edit" rendered="#{javascript:!document1.isEditable()}">
+							<xp:eventHandler event="onClick"
+								submit="true" refreshMode="complete">
+								<xe:this.action>
+									<xp:changeDocumentMode mode="edit"
+										var="document1">
+									</xp:changeDocumentMode>
+								</xe:this.action>
+							</xp:eventHandler>
+						</xe:toolBarButton>
+					</xp:panel>
+				</xp:this.facets>
+			</xe:djxmHeading>
+
+			<xp:this.data>
+				<xp:dominoDocument var="document1"
+					formName="xspMainTopic">
+				</xp:dominoDocument>
+			</xp:this.data>
+			<xe:formTable id="formTable1">
+				<xp:this.facets></xp:this.facets>
+				<xe:formRow id="formRow3" label="Subject: ">
+					<xp:inputText id="inputText1"
+						value="#{document1.Subject}">
+					</xp:inputText>
+				</xe:formRow>
+				<xe:formRow id="formRow2" label="Category: ">
+					<xp:inputText id="inputText2"
+						value="#{document1.Categories}">
+					</xp:inputText>
+				</xe:formRow>
+				<xe:formRow id="formRow1">
+					<xp:inputRichText id="inputRichText1"
+						value="#{document1.Body}" rendered="#{javascript:!isSmartphone()}">
+					</xp:inputRichText><xp:br/>
+					<xp:inputTextarea id="inputTextarea1" value="#{document1.Body}" rendered="#{javascript:isSmartphone()}"></xp:inputTextarea>
+				</xe:formRow>
+			</xe:formTable>
+			<xp:label value="#{javascript:context.getUserAgent().getUserAgent()}" id="label1"></xp:label></xp:panel>
+
+
+	</xe:appPage>
+
+
+
+
+
+
+
+</xp:view>

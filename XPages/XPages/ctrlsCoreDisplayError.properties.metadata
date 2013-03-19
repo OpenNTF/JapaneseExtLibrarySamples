@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" replicaid="85257A870079CB8F" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="1296" sequence="2" unid="C39B4FDB57C9B92249257B330045E7B7">
+<created><datetime>20130319T214333,03+09</datetime></created>
+<modified><datetime>20130319T214334,63+09</datetime></modified>
+<revised><datetime>20130319T214334,62+09</datetime></revised>
+<lastaccessed><datetime>20130319T214334,63+09</datetime></lastaccessed>
+<addedtofile><datetime>20130319T214334,61+09</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Admin/O=LotusLab</name></updatedby>
+<wassignedby><name>CN=Admin/O=LotusLab</name></wassignedby>
+<item name="$Flags"><text>gC~4K2</text></item>
+<item name="$TITLE"><text>ctrlsCoreDisplayError.properties</text></item>
+
+
+<item name="$FileNames" sign="true"><text>ctrlsCoreDisplayError.properties</text></item></note>

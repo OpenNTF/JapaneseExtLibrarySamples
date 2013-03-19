@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" replicaid="85257A870079CB8F" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="6be" sequence="138" unid="8ACED75F51EF031D802573DB003E4C28">
+<created><datetime dst="true">20080125T122027,28+01</datetime></created>
+<modified><datetime>20130319T214349,17+09</datetime></modified>
+<revised><datetime>20130319T214349,16+09</datetime></revised>
+<lastaccessed><datetime>20130319T214349,17+09</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20120928T180628,86-04</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=Admin/O=LotusLab</name></updatedby>
+<revisions><datetime dst="true">20100527T110304,02+01</datetime><datetime dst="true">20110331T101030,81+01</datetime><datetime dst="true">20121126T174613,19+01</datetime><datetime dst="true">20121126T174613,79+01</datetime><datetime dst="true">20121211T110218,45+01</datetime><datetime dst="true">20121211T110219,09+01</datetime><datetime dst="true">20121211T110219,11+01</datetime><datetime dst="true">20121212T124133,45+01</datetime></revisions>
+<wassignedby><name>CN=Admin/O=LotusLab</name></wassignedby>
+<item name="$TITLE"><text>ctrlsContainerDataTable.xsp</text></item>
+
+<item name="$Flags"><text>gK4</text></item>
+
+
+<item name="$FileNames" sign="true"><text>ctrlsContainerDataTable.xsp</text></item>
+<item name="$DesignerVersion"><text>8.5</text></item>
+
+
+
+
+</note>

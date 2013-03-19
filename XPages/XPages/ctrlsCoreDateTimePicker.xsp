@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+
+	<xp:this.data>
+		<xp:dominoDocument var="dominoDocument1"
+			formName="xspDateTimePicker">
+			<xp:this.postNewDocument>
+
+				<xp:actionGroup>
+					<xp:setValue binding="#{dominoDocument1.From}"
+						value="#{javascript:@UserName()}">
+					</xp:setValue>
+					<xp:setValue binding="#{dominoDocument1.Categories}"
+						value="Date Time Picker Test">
+					</xp:setValue>
+
+					<xp:setValue
+						binding="#{dominoDocument1.dateTimeCreated}"
+						value="#{javascript:@Now()}">
+					</xp:setValue>
+				</xp:actionGroup>
+			</xp:this.postNewDocument>
+			<!-- 
+				<xp:this.querySaveDocument>
+				<xp:setValue binding="#{dominoDocument1.Subject}">
+				<xp:this.value>
+				<![CDATA[#{javascript:var s01 = @UserName();
+				var s02 = @Text(@Now());
+				var s03 = @Text(@Time(@Now()));
+				return "Test Doc | Date Time Picker | Edited by "+ s01+ " on "+ s02}]]>
+				</xp:this.value>
+				</xp:setValue>
+				</xp:this.querySaveDocument>
+			-->
+
+
+
+		</xp:dominoDocument>
+	</xp:this.data>
+
+
+	<XPa:ccLayout id="cc4cclayout" navPath="/basics/datetimepicker/">
+		<xp:this.facets>
+			<xc:ccMenu_basics xp:key="facetLeft"></xc:ccMenu_basics>
+			<XPa:ccContentCoreCtrl xp:key="facetMain"
+				id="cc4cccontentcorectrl">
+				<xp:this.facets>
+					<xp:panel xp:key="facetTestControl"
+						id="panelTest001">
+						<xp:table>
+							<xp:tr>
+								<xp:td>
+									<xp:label value="Subject: "
+										id="label1">
+									</xp:label>
+								</xp:td>
+								<xp:td>
+									<xp:inputText
+										id="dateTimePickerSubject"
+										value="#{dominoDocument1.Subject}">
+									</xp:inputText>
+								</xp:td>
+							</xp:tr>
+							<xp:tr>
+								<xp:td>
+									<xp:label value="Date: "
+										id="labelDate">
+									</xp:label>
+								</xp:td>
+								<xp:td>
+
+									<xp:inputText
+										id="dateTimePickerTestDate"
+										value="#{dominoDocument1.testDate}">
+
+										<xp:dateTimeHelper
+											id="dateTimeHelper1">
+										</xp:dateTimeHelper>
+										<xp:this.converter>
+											<xp:convertDateTime
+												type="date" dateStyle="short">
+											</xp:convertDateTime>
+										</xp:this.converter>
+									</xp:inputText>
+								</xp:td>
+							</xp:tr>
+							<xp:tr>
+								<xp:td>
+									<xp:label value="Time: "
+										id="labelTime">
+									</xp:label>
+								</xp:td>
+								<xp:td>
+
+									<xp:inputText
+										id="dateTimePickerTestTime"
+										value="#{dominoDocument1.testTime}">
+
+										<xp:dateTimeHelper
+											id="dateTimeHelper2">
+										</xp:dateTimeHelper>
+										<xp:this.converter>
+											<xp:convertDateTime
+												type="time" timeStyle="medium">
+											</xp:convertDateTime>
+										</xp:this.converter>
+									</xp:inputText>
+								</xp:td>
+							</xp:tr>
+							<xp:tr>
+								<xp:td>
+									<xp:label value="Both: "
+										id="labelBoth">
+									</xp:label>
+								</xp:td>
+								<xp:td>
+
+									<xp:inputText id="inputText1"
+										value="#{dominoDocument1.testDateTime}">
+
+										<xp:dateTimeHelper
+											id="dateTimePickerTestDataTime">
+										</xp:dateTimeHelper>
+
+										<xp:this.converter>
+											<xp:convertDateTime
+												type="both" dateStyle="short" timeStyle="short">
+											</xp:convertDateTime>
+										</xp:this.converter>
+									</xp:inputText>
+								</xp:td>
+							</xp:tr>
+						</xp:table>
+
+
+
+
+
+
+					</xp:panel>
+				</xp:this.facets>
+			</XPa:ccContentCoreCtrl>
+
+		</xp:this.facets>
+	</XPa:ccLayout>
+
+</xp:view>

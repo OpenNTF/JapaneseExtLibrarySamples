@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" replicaid="85257A870079CB8F" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="80e" sequence="43" unid="822B781490921FF58025788D004294F0">
+<created><datetime dst="true">20110511T130715,04+01</datetime></created>
+<modified><datetime>20130319T214347,29+09</datetime></modified>
+<revised><datetime>20130319T214347,28+09</datetime></revised>
+<lastaccessed><datetime>20130319T214347,29+09</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20120928T180648,38-04</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=Admin/O=LotusLab</name></updatedby>
+<revisions><datetime dst="true">20110511T130715,04+01</datetime><datetime dst="true">20110511T130715,09+01</datetime><datetime dst="true">20110511T130719,59+01</datetime><datetime dst="true">20110511T130719,62+01</datetime><datetime dst="true">20110511T131455,35+01</datetime><datetime dst="true">20110511T131455,74+01</datetime><datetime dst="true">20110511T131455,81+01</datetime><datetime dst="true">20110531T143647,10+01</datetime><datetime dst="true">20110531T143647,50+01</datetime><datetime dst="true">20110531T143647,52+01</datetime><datetime dst="true">20110531T143822,89+01</datetime><datetime dst="true">20110531T143823,27+01</datetime><datetime dst="true">20110531T143823,30+01</datetime><datetime dst="true">20110531T150151,42+01</datetime><datetime dst="true">20110531T150151,86+01</datetime><datetime dst="true">20110531T150528,77+01</datetime><datetime dst="true">20110531T150529,07+01</datetime><datetime dst="true">20110531T150905,19+01</datetime><datetime dst="true">20110531T150905,57+01</datetime><datetime dst="true">20110531T150905,59+01</datetime><datetime dst="true">20110531T151124,80+01</datetime><datetime dst="true">20110531T151125,17+01</datetime><datetime dst="true">20110531T151717,72+01</datetime><datetime dst="true">20110531T151718,07+01</datetime><datetime dst="true">20110531T152617,91+01</datetime><datetime dst="true">20110531T152618,24+01</datetime><datetime dst="true">20110531T152948,36+01</datetime><datetime dst="true">20110531T152948,69+01</datetime><datetime dst="true">20110531T153034,80+01</datetime><datetime dst="true">20110531T153035,10+01</datetime><datetime dst="true">20110531T153157,58+01</datetime><datetime dst="true">20110531T153157,89+01</datetime><datetime dst="true">20110531T153157,92+01</datetime><datetime dst="true">20110531T153601,56+01</datetime><datetime dst="true">20110531T153601,88+01</datetime><datetime dst="true">20110531T153601,91+01</datetime><datetime dst="true">20110531T155750,83+01</datetime></revisions>
+<wassignedby><name>CN=Admin/O=LotusLab</name></wassignedby>
+<item name="$Flags"><text>gC~4K</text></item>
+<item name="$TITLE"><text>hfview.xsp</text></item>
+
+
+
+<item name="$FileNames" sign="true"><text>hfview.xsp</text></item>
+<item name="$DesignerVersion"><text>8.5</text></item>
+
+
+
+</note>

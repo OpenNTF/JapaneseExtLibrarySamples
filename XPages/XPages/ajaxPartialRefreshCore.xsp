@@ -1,0 +1,1366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+
+
+	<xp:this.beforePageLoad><![CDATA[#{javascript:var w = new java.util.Vector();
+w.add("default1")
+w.add("default2")
+w.add("default3")
+requestScope.put("checkboxValues",w);
+
+}]]></xp:this.beforePageLoad>
+	<XPa:ccLayout  navPath="/events/prcore/">
+		<xp:this.facets>
+			<xc:ccMenu_events xp:key="facetLeft"></xc:ccMenu_events>
+
+			<xp:panel xp:key="facetMain">
+				<xp:span
+					style="color:rgb(0,128,255);font-weight:bold;font-size:16pt">
+					Partial Refresh - Core Controls
+				</xp:span>
+				&#160;&#160;
+				<xp:link escape="true" text="Return to Previous"
+					id="link2">
+					<xp:eventHandler event="onclick" submit="true"
+						refreshMode="complete" immediate="true">
+						<xp:this.action>
+							<xp:openPage
+								name="/ajaxPartialRefreshMain.xsp">
+							</xp:openPage>
+						</xp:this.action>
+					</xp:eventHandler>
+				</xp:link>
+				<xp:br></xp:br>
+				<xp:br></xp:br>
+				<xp:br></xp:br>
+				<xp:table>
+					<xp:tr>
+
+
+
+						<xp:td></xp:td>
+						<xp:td style="font-weight:bold">
+							<xp:span
+								style="font-size:14pt;font-weight:bold">
+							</xp:span>
+							<xp:span
+								style="font-size:12pt;font-weight:bold">
+							</xp:span>
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td
+							style="font-size:14pt;font-weight:bold">
+							<xp:span
+								style="font-size:14pt;font-weight:bold">
+								Results
+							</xp:span>
+						</xp:td>
+
+
+
+
+
+
+
+					</xp:tr>
+					<xp:tr>
+
+
+
+						<xp:td>
+							<xp:span
+								style="font-weight:bold;font-size:14pt">
+								Button
+							</xp:span>
+						</xp:td>
+						<xp:td>
+							<xp:button id="button1" value="Button">
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="partial" refreshId="buttonCompField"
+									id="eventHandler29" immediate="false" save="true">
+								</xp:eventHandler>
+							</xp:button>
+						</xp:td>
+						<xp:td>&#160;&#160;&#160;&#160;&#160;</xp:td>
+						<xp:td>
+							Button Computed Field
+							<xp:br id="br13"></xp:br>
+							<xp:text escape="true" id="buttonCompField"
+								value="#{javascript:@UpperCase(@Left(@Unique(),5))}"
+								style="font-weight:bold">
+							</xp:text>
+						</xp:td>
+
+
+
+
+
+
+
+					</xp:tr>
+
+
+					<xp:tr>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+
+
+
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							<xp:span style="font-weight:bold"></xp:span>
+							<xp:span
+								style="font-weight:bold;font-size:14pt">
+								Computed
+
+								Field
+							</xp:span>
+							<xp:span style="font-weight:bold"></xp:span>
+							<xp:br id="br37"></xp:br>
+							<xp:link escape="true"
+								text="Update Computed Field" id="button8">
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="partial" refreshId="computedField8"
+									id="eventHandler24">
+								</xp:eventHandler>
+							</xp:link>
+						</xp:td>
+						<xp:td>
+							<xp:text escape="true" id="computedField8"
+								value="#{javascript:@UpperCase(@Left(@Unique(),5))}"
+								style="font-weight:bold">
+							</xp:text>
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+
+
+
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+
+
+
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+
+
+
+						<xp:td>
+
+							<xp:span style="font-weight:bold"></xp:span>
+							<xp:span
+								style="font-weight:bold;font-size:14pt">
+								Multiline
+							</xp:span>
+							<xp:span
+								style="font-weight:bold;font-size:14pt">
+								Edit Box
+							</xp:span>
+							<xp:br id="br8"></xp:br>
+							<xp:link escape="true"
+								text="Update Multiline Edit Box Text (Partial Refresh)"
+								id="link3">
+
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="partial" refreshId="inputTextarea1"
+									id="eventHandler10">
+									<xp:this.action><![CDATA[#{javascript:var element = getComponent('inputTextarea1');
+element.value = "partial update multiline edit box text";}]]></xp:this.action>
+								</xp:eventHandler>
+
+
+							</xp:link>
+							<xp:br id="br14"></xp:br>
+							- updates multiline edit box only
+							<xp:br id="br9"></xp:br>
+							<xp:link escape="true"
+								text="Update Multiline Edit Box Text (Full Update)"
+								id="button15">
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="complete" id="eventHandler34">
+									<xp:this.action><![CDATA[#{javascript:var element = getComponent('inputTextarea1');
+element.value = "full update multiline edit box text";}]]></xp:this.action>
+								</xp:eventHandler>
+							</xp:link>
+							<xp:br id="br16"></xp:br>
+							- update multiline edit box and multiline
+							computed field
+						</xp:td>
+						<xp:td>
+							<xp:inputTextarea id="inputTextarea1">
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="norefresh" id="eventHandler3">
+								</xp:eventHandler>
+								<xp:eventHandler event="onchange"
+									submit="true" refreshMode="partial"
+									refreshId="multilineCompField" id="eventHandler8">
+								</xp:eventHandler>
+							</xp:inputTextarea>
+							<xp:br id="br38"></xp:br>
+							<xp:span style="color:rgb(188,88,105)">
+								Enter text and multiline computed field
+								gets updated
+							</xp:span>
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							Multiline Computed Field
+							<xp:br id="br39"></xp:br>
+							<xp:text escape="true"
+								id="multilineCompField" style="font-weight:bold">
+								<xp:this.value><![CDATA[#{javascript:var element = getComponent('inputTextarea1');
+element.value}]]></xp:this.value>
+							</xp:text>
+						</xp:td>
+
+
+
+
+
+
+
+					</xp:tr>
+
+					<xp:tr>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+
+
+
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+
+
+
+						<xp:td>
+							<xp:span
+								style="font-weight:bold;font-size:14pt">
+								Edit Box
+							</xp:span>
+							<xp:br id="br10"></xp:br>
+							<xp:link escape="true"
+								text="Update Edit Box Text (Partial Refresh)" id="button3">
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="partial" refreshId="inputText1"
+									id="eventHandler14">
+									<xp:this.action><![CDATA[#{javascript:var element = getComponent('inputText1');
+element.value = "partial update edit box text";}]]></xp:this.action>
+								</xp:eventHandler>
+							</xp:link>
+							<xp:br id="br17"></xp:br>
+							- updates edit box only
+							<xp:br id="br11"></xp:br>
+							<xp:link escape="true"
+								text="Update Edit Box Text (Full Update)" id="button14">
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="complete" id="eventHandler33">
+									<xp:this.action><![CDATA[#{javascript:var element = getComponent('inputText1');
+element.value = "full update edit box text";}]]></xp:this.action>
+								</xp:eventHandler>
+							</xp:link>
+							&#160;
+							<xp:br id="br31"></xp:br>
+							- updates edit box and edit box computed
+							field
+						</xp:td>
+						<xp:td>
+							<xp:inputText id="inputText1">
+
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="norefresh" id="eventHandler1">
+								</xp:eventHandler>
+								<xp:eventHandler event="onchange"
+									submit="true" refreshMode="partial"
+									refreshId="editboxCompField" id="eventHandler11">
+								</xp:eventHandler>
+							</xp:inputText>
+							<xp:br id="br40"></xp:br>
+							<xp:span style="color:rgb(188,88,105)">
+								Enter text and edit box computed field
+								gets updated
+							</xp:span>
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							Edit box Computed Field
+							<xp:br id="br41"></xp:br>
+							<xp:text escape="true" id="editboxCompField"
+								style="font-weight:bold">
+								<xp:this.value><![CDATA[#{javascript:var element = getComponent('inputText1');
+element.value}]]></xp:this.value>
+							</xp:text>
+						</xp:td>
+
+
+
+
+
+
+					</xp:tr>
+
+
+					<xp:tr>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+
+
+
+						<xp:td></xp:td>
+					</xp:tr>
+
+
+
+
+
+
+
+					<xp:tr>
+
+
+
+						<xp:td>
+							<xp:span style="font-weight:bold"></xp:span>
+							<xp:span
+								style="font-weight:bold;font-size:14pt">
+								Check Box
+							</xp:span>
+							<xp:span style="font-weight:bold"></xp:span>
+							<xp:br id="br42"></xp:br>
+							<xp:link escape="true"
+								text="Select checkbox (Partial Update)" id="button5">
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="partial" refreshId="checkBox1"
+									id="eventHandler42">
+									<xp:this.action><![CDATA[#{javascript:var element = getComponent('checkBox1');
+element.value ="checked";}]]></xp:this.action>
+								</xp:eventHandler>
+							</xp:link>
+							<xp:br id="br65"></xp:br>
+							- updates check box only
+							<xp:br id="br43"></xp:br>
+							<xp:link escape="true"
+								text="Select checkbox (Full Update)" id="link4">
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="complete" id="eventHandler43">
+									<xp:this.action><![CDATA[#{javascript:var element = getComponent('checkBox1');
+element.value ="checked";}]]></xp:this.action>
+								</xp:eventHandler>
+							</xp:link>
+							&#160;
+							<xp:br id="br66"></xp:br>
+							- updates check box and check box computed
+							field
+						</xp:td>
+						<xp:td>
+							<xp:checkBox text="checkbox" id="checkBox1"
+								defaultChecked="true">
+								<xp:this.checkedValue><![CDATA[#{javascript:"checked"}]]></xp:this.checkedValue>
+								<xp:this.uncheckedValue><![CDATA[#{javascript:"unchecked"}]]></xp:this.uncheckedValue>
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="partial"
+									refreshId="checkboxCompField" id="eventHandler6">
+								</xp:eventHandler>
+							</xp:checkBox>
+							&#160;&#160;&#160;
+							<xp:br id="br44"></xp:br>
+							<xp:span style="color:rgb(188,88,105)">
+								Select/Unselect check box and check box
+								computed field gets updated
+							</xp:span>
+							<xp:br id="br45"></xp:br>
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							Checkbox Computed Field
+							<xp:br id="br46"></xp:br>
+							<xp:text escape="true"
+								id="checkboxCompField" style="font-weight:bold">
+								<xp:this.value><![CDATA[#{javascript:var element = getComponent('checkBox1');
+element.value}]]></xp:this.value>
+							</xp:text>
+						</xp:td>
+
+
+
+						<xp:td></xp:td>
+					</xp:tr>
+
+					<xp:tr>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+
+
+
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+
+
+
+						<xp:td>
+							<xp:span
+								style="font-weight:bold;color:rgb(255,0,0)">
+							</xp:span>
+							<xp:span style="font-weight:bold"></xp:span>
+							<xp:span
+								style="font-weight:bold;font-size:14pt">
+								Check Box Group
+							</xp:span>
+							<xp:span style="font-weight:bold"></xp:span>
+							<xp:span
+								style="font-weight:bold;color:rgb(255,0,0)">
+							</xp:span>
+							<xp:br id="br15"></xp:br>
+							<xp:link escape="true"
+								text="Select checkbox group (Partial Update) - second"
+								id="button6">
+
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="partial" refreshId="checkBoxGroup1"
+									id="eventHandler20">
+									<xp:this.action><![CDATA[#{javascript:var w = new java.util.Vector();
+requestScope.remove("checkboxValues");
+
+w.add("first")
+w.add("second")
+w.add("third")
+
+requestScope.put("checkboxValues",w);
+
+}]]></xp:this.action>
+								</xp:eventHandler>
+							</xp:link>
+							<xp:br id="br67"></xp:br>
+							- updates checkbox group only
+							<xp:br id="br47"></xp:br>
+							<xp:link escape="true"
+								text="Select checkbox group (Full Update) - second"
+								id="link5">
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="complete" id="eventHandler44">
+									<xp:this.action><![CDATA[#{javascript://var w = new java.util.Vector();
+//requestScope.remove("checkboxValues");
+//w.add("one")
+//w.add("two")
+//w.add("three")
+//requestScope.put("checkboxValues",w);
+
+var w = new java.util.Vector();
+requestScope.remove("checkboxValues");
+
+w.add("default2");
+
+requestScope.put("checkboxValues",w);
+
+}]]></xp:this.action>
+								</xp:eventHandler>
+							</xp:link>
+							<xp:br id="br68"></xp:br>
+							- updates check box group and checkbox group
+							computed field
+						</xp:td>
+						<xp:td>
+							<xp:checkBoxGroup id="checkBoxGroup1"
+								layout="lineDirection" value="#{requestScope.checkboxValues}">
+
+
+
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="partial"
+									refreshId="checkboxGroupCompField" id="eventHandler19">
+								</xp:eventHandler>
+
+
+
+								<xp:selectItems>
+									<xp:this.value><![CDATA[${javascript:if(requestScope.get("checkboxValues")!=null){
+return requestScope.get("checkboxValues");
+};
+
+
+
+}]]></xp:this.value>
+								</xp:selectItems>
+
+
+
+
+
+							</xp:checkBoxGroup>
+							<xp:span style="color:rgb(188,88,105)">
+								Select/Unselect check box and check box
+								computed field gets updated
+							</xp:span>
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							Checkbox Group
+							<xp:br id="br48"></xp:br>
+							<xp:text escape="true"
+								id="checkboxGroupCompField" style="font-weight:bold">
+								<xp:this.value><![CDATA[#{javascript:var element = getComponent('checkBoxGroup1');
+element.value
+
+}]]></xp:this.value>
+							</xp:text>
+							<xp:br></xp:br>
+							<xp:br></xp:br>
+						</xp:td>
+
+
+
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+
+
+
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+
+
+
+						<xp:td>
+							<xp:span style="font-weight:bold"></xp:span>
+							<xp:span
+								style="font-weight:bold;font-size:14pt">
+								Radio Button
+							</xp:span>
+							<xp:span style="font-weight:bold"></xp:span>
+							<xp:br id="br18"></xp:br>
+							<xp:link escape="true"
+								text="radio button (Partial Refresh) - radio 2" id="button4">
+
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="partial" refreshId="radio2"
+									id="eventHandler21">
+									<xp:this.action><![CDATA[#{javascript:var element = getComponent('radio2');
+element.checked;
+element.value = "radio 2 selected";
+}]]></xp:this.action>
+								</xp:eventHandler>
+							</xp:link>
+							<xp:br id="br69"></xp:br>
+							- updates radio button only
+							<xp:br id="br49"></xp:br>
+							<xp:link escape="true"
+								text="radio button (Full Update) - radio 2" id="link6">
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="complete" id="eventHandler45">
+									<xp:this.action><![CDATA[#{javascript:var element = getComponent('radio2');
+element.checked;
+element.value = "radio 2 selected";
+}]]></xp:this.action>
+								</xp:eventHandler>
+							</xp:link>
+							<xp:br id="br70"></xp:br>
+							- updates radio button and radio button
+							computed field
+						</xp:td>
+						<xp:td>
+							<xp:radio text="radio 1" id="radio1"
+								defaultSelected="true" groupName="radio">
+
+								<xp:this.selectedValue><![CDATA[#{javascript:"radio 1 selected"}]]></xp:this.selectedValue>
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="partial" refreshId="radioCompField"
+									id="eventHandler7">
+								</xp:eventHandler>
+							</xp:radio>
+							<xp:br id="br3"></xp:br>
+							<xp:radio text="radio 2" id="radio2"
+								groupName="radio">
+								<xp:this.selectedValue><![CDATA[#{javascript:"radio 2 selected"}]]></xp:this.selectedValue>
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="partial" refreshId="radioCompField"
+									id="eventHandler9">
+								</xp:eventHandler>
+							</xp:radio>
+							<xp:br id="br50"></xp:br>
+
+							<xp:span style="color:rgb(188,88,105)">
+								Select/Unselect radio button and radio
+								button computed field gets updated
+							</xp:span>
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							Radio Button
+							<xp:br id="br51"></xp:br>
+							<xp:text escape="true" id="radioCompField"
+								style="font-weight:bold">
+								<xp:this.value><![CDATA[#{javascript:var element = getComponent('radio1');
+element.value}]]></xp:this.value>
+							</xp:text>
+						</xp:td>
+
+
+
+						<xp:td></xp:td>
+					</xp:tr>
+
+					<xp:tr>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+
+
+
+						<xp:td>
+							<xp:span style="font-weight:bold"></xp:span>
+							<xp:span
+								style="font-weight:bold;font-size:14pt">
+								Radio Button Group
+							</xp:span>
+							<xp:span style="font-weight:bold"></xp:span>
+							<xp:br id="br19"></xp:br>
+							<xp:link escape="true"
+								text="Radio Button Group (Partial Update) - select maybe"
+								id="button7">
+
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="partial" refreshId="radioGroup1"
+									id="eventHandler23">
+									<xp:this.action><![CDATA[#{javascript:var element = getComponent('radioGroup1');
+element.value = "maybe";}]]></xp:this.action>
+								</xp:eventHandler>
+							</xp:link>
+							<xp:br id="br71"></xp:br>
+							- updates radio button group only
+							<xp:br id="br52"></xp:br>
+							<xp:link escape="true"
+								text="Radio Button Group (Full Update) - select maybe"
+								id="link7">
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="complete" id="eventHandler46">
+									<xp:this.action><![CDATA[#{javascript:var element = getComponent('radioGroup1');
+element.value = "maybe";}]]></xp:this.action>
+								</xp:eventHandler>
+							</xp:link>
+							<xp:br id="br72"></xp:br>
+							- updates radio button group and radio
+							button group computed field
+						</xp:td>
+						<xp:td>
+							<xp:radioGroup id="radioGroup1"
+								layout="lineDirection">
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="partial"
+									refreshId="radioGroupCompField" id="eventHandler22">
+								</xp:eventHandler>
+								<xp:selectItem itemLabel="yes"
+									itemValue="yes" id="selectItem4">
+								</xp:selectItem>
+								<xp:selectItem itemLabel="no"
+									itemValue="no" id="selectItem5">
+								</xp:selectItem>
+								<xp:selectItem itemLabel="maybe"
+									itemValue="maybe" id="selectItem6">
+								</xp:selectItem>
+							</xp:radioGroup>
+							<xp:span style="color:rgb(188,88,105)">
+								Select/Unselect radio button group and
+								radio button group computed field gets
+								updated
+							</xp:span>
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							Radio Button Group
+							<xp:br id="br53"></xp:br>
+							<xp:text escape="true"
+								id="radioGroupCompField" style="font-weight:bold">
+								<xp:this.value><![CDATA[#{javascript:var element = getComponent('radioGroup1');
+element.value}]]></xp:this.value>
+							</xp:text>
+						</xp:td>
+
+
+
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+
+
+
+						<xp:td>
+							<xp:span style="font-weight:bold">
+
+							</xp:span>
+							<xp:br id="br20"></xp:br>
+
+						</xp:td>
+						<xp:td>
+
+
+
+
+
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+
+
+
+						</xp:td>
+
+
+
+						<xp:td></xp:td>
+					</xp:tr>
+
+
+
+
+					<xp:tr>
+
+
+
+						<xp:td>
+							<b style="font-size:14pt">
+								Date Time Picker
+							</b>
+							<xp:br id="br21"></xp:br>
+							<xp:link escape="true"
+								text="Update Panel (Partial Refresh)" id="button23">
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="partial" refreshId="orangePanel"
+									id="eventHandler26">
+								</xp:eventHandler>
+							</xp:link>
+							<xp:br id="br73"></xp:br>
+							- updates panel and panel computed field
+							<xp:br id="br22"></xp:br>
+							<xp:link escape="true"
+								text="Update Date (Partial Refresh) - 13 Nov 2009"
+								id="button10">
+
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="partial" refreshId="inputText2"
+									id="eventHandler36">
+									<xp:this.action><![CDATA[#{javascript:var element = getComponent('inputText2');
+element.value = "2009-11-13"}]]></xp:this.action>
+								</xp:eventHandler>
+							</xp:link>
+							<xp:br id="br74"></xp:br>
+							- updates date only
+							<xp:br id="br23"></xp:br>
+							<xp:link escape="true"
+								text="Update Time (Partial Refresh) - 23:55:00" id="button18">
+
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="partial" refreshId="inputText5"
+									id="eventHandler38">
+									<xp:this.action><![CDATA[#{javascript:var element = getComponent('inputText5');
+element.value = "T23:55:00"}]]></xp:this.action>
+								</xp:eventHandler>
+							</xp:link>
+							<xp:br id="br75"></xp:br>
+							- updates time only
+							<xp:br id="br24"></xp:br>
+							<xp:link escape="true" id="button19">
+
+								<xp:this.text><![CDATA[Update Date & Time (Partial Refresh) - 12 Oct 2009 18:25:00]]></xp:this.text>
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="partial" refreshId="inputText3"
+									id="eventHandler40">
+									<xp:this.action><![CDATA[#{javascript:var element = getComponent('inputText3');
+element.value = "2009-10-12T18:25:00"}]]></xp:this.action>
+								</xp:eventHandler>
+							</xp:link>
+							<xp:br id="br76"></xp:br>
+							- updates date &amp; time only
+							<xp:br id="br25"></xp:br>
+							<xp:br id="br26"></xp:br>
+							<xp:br id="br27"></xp:br>
+							<xp:link escape="true"
+								text="Update Panel (Full Update)" id="button26">
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="complete" id="eventHandler41">
+								</xp:eventHandler>
+							</xp:link>
+							<xp:br id="br77"></xp:br>
+							- updates panel and date/timel computed
+							field
+							<xp:br id="br28"></xp:br>
+							<xp:link escape="true"
+								text="Update Date (Full Update) - 13 Nov 2010" id="button29">
+
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="complete" id="eventHandler53">
+									<xp:this.action><![CDATA[#{javascript:var element = getComponent('inputText2');
+element.value = "2010-11-13"}]]></xp:this.action>
+								</xp:eventHandler>
+							</xp:link>
+							<xp:br id="br78"></xp:br>
+							- updates date and date/time
+
+							computed field
+							<xp:br id="br29"></xp:br>
+							<xp:link escape="true"
+								text="Update Time (Full Update) - 00:00:00" id="button11">
+
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="complete" id="eventHandler54">
+									<xp:this.action><![CDATA[#{javascript:var element = getComponent('inputText5');
+element.value = "T00:00:00"}]]></xp:this.action>
+								</xp:eventHandler>
+							</xp:link>
+							<xp:br id="br79"></xp:br>
+							- updates time and date/time computed field
+							<xp:br id="br30"></xp:br>
+							<xp:link escape="true" id="button12">
+
+								<xp:this.text><![CDATA["Update Date&Time (Full Update) 12 Oct 2010 24:00:00"	]]></xp:this.text>
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="complete" id="eventHandler35">
+									<xp:this.action><![CDATA[#{javascript:var element = getComponent('inputText3');
+element.value = "2010-10-12T24:00:00"}]]></xp:this.action>
+								</xp:eventHandler>
+							</xp:link>
+							&#160;
+							<xp:br id="br80"></xp:br>
+							- updates date&amp;time and date/time
+							computed field
+						</xp:td>
+						<xp:td>
+							<xp:panel
+								style="border-color:rgb(255,128,64);border-style:solid;border-width:medium"
+								id="orangePanel">
+								<xp:inputText id="inputText2">
+									<xp:dateTimeHelper
+										id="dateTimeHelper1">
+									</xp:dateTimeHelper>
+									<xp:this.converter>
+										<xp:convertDateTime
+											type="date">
+										</xp:convertDateTime>
+									</xp:this.converter>
+									<xp:eventHandler event="onclick"
+										submit="true" refreshMode="partial" id="eventHandler12"
+										refreshId="DTPDateCompField">
+									</xp:eventHandler>
+									<xp:eventHandler event="onchange"
+										submit="true" refreshMode="partial"
+										refreshId="DTPDateCompField" id="eventHandler25">
+									</xp:eventHandler>
+								</xp:inputText>
+								<xp:br id="br1"></xp:br>
+								<xp:inputText id="inputText5">
+									<xp:dateTimeHelper
+										id="dateTimeHelper2">
+									</xp:dateTimeHelper>
+									<xp:this.converter>
+										<xp:convertDateTime
+											type="time">
+										</xp:convertDateTime>
+									</xp:this.converter>
+									<xp:eventHandler event="onclick"
+										submit="true" refreshMode="partial"
+										refreshId="DTPTimeCompField" id="eventHandler50">
+									</xp:eventHandler>
+								</xp:inputText>
+								<xp:br id="br2"></xp:br>
+								<xp:inputText id="inputText3">
+									<xp:dateTimeHelper
+										id="dateTimeHelper3">
+									</xp:dateTimeHelper>
+									<xp:this.converter>
+										<xp:convertDateTime
+											type="both">
+										</xp:convertDateTime>
+									</xp:this.converter>
+									<xp:eventHandler event="onclick"
+										submit="true" refreshMode="partial"
+										refreshId="DTPDateTimeCompField" id="eventHandler65">
+									</xp:eventHandler>
+								</xp:inputText>
+								<xp:br id="br4"></xp:br>
+								<xp:br id="br5"></xp:br>
+								<xp:text escape="true"
+									id="computedField66"
+									value="#{javascript:@UpperCase(@Left(@Unique(),5))}">
+								</xp:text>
+							</xp:panel>
+							<xp:br id="br55"></xp:br>
+							<xp:span style="color:rgb(188,88,105)">
+								Select any time/date and the
+								corresponding date/time computed field
+								gets updated
+							</xp:span>
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							Date/Time Computed Field
+							<xp:br id="br56"></xp:br>
+							<xp:text escape="true" id="DTPDateCompField"
+								style="font-weight:bold">
+								<xp:this.value><![CDATA[#{javascript:var element = getComponent('inputText2');
+element.value}]]></xp:this.value>
+							</xp:text>
+							<xp:br id="br6"></xp:br>
+							<xp:text escape="true" id="DTPTimeCompField"
+								style="font-weight:bold">
+								<xp:this.value><![CDATA[#{javascript:var element = getComponent('inputText5');
+element.value}]]></xp:this.value>
+							</xp:text>
+							<xp:br id="br7"></xp:br>
+							<xp:text escape="true"
+								id="DTPDateTimeCompField" style="font-weight:bold">
+								<xp:this.value><![CDATA[#{javascript:var element = getComponent('inputText3');
+element.value}]]></xp:this.value>
+							</xp:text>
+						</xp:td>
+
+
+
+						<xp:td>
+
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+
+
+
+						<xp:td></xp:td>
+						<xp:td>
+
+
+
+
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+
+
+
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+
+
+
+						<xp:td valign="top">
+
+							<xp:span style="font-weight:bold"></xp:span>
+							<xp:span
+								style="font-weight:bold;font-size:14pt">
+								Rich Text Editor
+							</xp:span>
+						</xp:td>
+						<xp:td>
+
+
+							<xp:inputRichText id="inputRichText1"
+								style="width:295.0px">
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="norefresh" id="eventHandler2">
+								</xp:eventHandler>
+								<xp:eventHandler event="onchange"
+									submit="true" refreshMode="partial" refreshId="RTECompField"
+									id="eventHandler27">
+								</xp:eventHandler>
+							</xp:inputRichText>
+							<xp:br></xp:br>
+							<xp:span style="color:rgb(188,88,105)">
+								Enter text and rich text computed field
+								gets updated
+							</xp:span>
+							<xp:br></xp:br>
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							Rich Text Computed Field
+							<xp:br id="br58"></xp:br>
+							<xp:text escape="true" id="RTECompField"
+								style="font-weight:bold">
+								<xp:this.value><![CDATA[#{javascript:var element = getComponent('inputRichText1');
+element.value}]]></xp:this.value>
+							</xp:text>
+						</xp:td>
+
+
+
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+
+
+
+						<xp:td></xp:td>
+						<xp:td>
+
+
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+
+						</xp:td>
+
+
+
+						<xp:td></xp:td>
+					</xp:tr>
+
+					<xp:tr>
+
+
+
+						<xp:td valign="top">
+							<xp:span
+								style="font-weight:bold;font-size:14pt">
+								Image
+							</xp:span>
+						</xp:td>
+						<xp:td>
+							<xp:span style="font-weight:bold"></xp:span>
+							<xp:image url="/ibm-logo03.gif" id="image2"
+								style="background-color:rgb(0,128,255)" alt="hello">
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="partial" refreshId="imageCompField"
+									id="eventHandler18">
+								</xp:eventHandler>
+							</xp:image>
+							<xp:br></xp:br>
+							<xp:span style="color:rgb(188,88,105)">
+								Select image and image computed field
+								gets updated
+							</xp:span>
+							<xp:br></xp:br>
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							Image Computed Field
+							<xp:br id="br60"></xp:br>
+							<xp:text escape="true" id="imageCompField"
+								value="#{javascript:@UpperCase(@Left(@Unique(),5))}"
+								style="font-weight:bold">
+							</xp:text>
+						</xp:td>
+
+
+
+						<xp:td></xp:td>
+					</xp:tr>
+
+					<xp:tr>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+
+
+
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+
+
+
+						<xp:td style="font-weight:bold;font-size:14pt"
+							valign="top">
+							Link
+						</xp:td>
+						<xp:td>
+							<xp:link escape="true" text="Refresh Link"
+								id="link1" style="font-weight:bold">
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="partial" refreshId="linkCompField"
+									id="eventHandler13">
+								</xp:eventHandler>
+							</xp:link>
+							<xp:br></xp:br>
+							<xp:span style="color:rgb(188,88,105)">
+								Select link and link computed field gets
+								updated
+							</xp:span>
+							<xp:br></xp:br>
+							<xp:span style="color:rgb(188,88,105)">
+							</xp:span>
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							Link Computed Field
+							<xp:br id="br62"></xp:br>
+							<xp:text escape="true" id="linkCompField"
+								value="#{javascript:@UpperCase(@Left(@Unique(),5))}"
+								style="font-weight:bold">
+							</xp:text>
+						</xp:td>
+
+
+
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+
+
+
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+
+
+
+						<xp:td valign="top">
+							<xp:span style="font-weight:bold"></xp:span>
+							<xp:span
+								style="font-weight:bold;font-size:14pt">
+								TypeAhead
+							</xp:span>
+							<xp:span
+								style="font-weight:bold;font-size:14pt">
+								and Panel
+							</xp:span>
+						</xp:td>
+						<xp:td>
+							<xp:button value="Show or Hide"
+								id="button17">
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="partial" refreshId="bluePanel"
+									id="eventHandler68">
+									<xp:this.action>
+										<xp:executeScript>
+											<xp:this.script><![CDATA[#{javascript:
+var wasShown = (null != viewScope.showField1) && viewScope.showField1.booleanValue();
+viewScope.showField1 = !wasShown;
+}]]></xp:this.script>
+										</xp:executeScript>
+									</xp:this.action>
+								</xp:eventHandler>
+							</xp:button>
+							<xp:br id="br33"></xp:br>
+							<xp:panel id="bluePanel"
+								style="border-color:rgb(0,128,255);border-style:solid;border-width:medium">
+								<xp:inputText id="inputText4"
+									value="#{requestScope.field1}"
+									rendered="#{javascript:viewScope.showField1}">
+									<xp:typeAhead mode="full"
+										minChars="1" id="typeAhead1">
+										<xp:this.valueList><![CDATA[aaa
+aab
+aba
+abb]]></xp:this.valueList>
+									</xp:typeAhead>
+									<xp:eventHandler event="onclick"
+										submit="true" refreshMode="partial"
+										refreshId="typeaheadPanelCompField" id="eventHandler37">
+									</xp:eventHandler>
+									<xp:eventHandler event="onchange"
+										submit="true" refreshMode="partial"
+										refreshId="typeaheadPanelCompField" id="eventHandler4">
+									</xp:eventHandler>
+								</xp:inputText>
+							</xp:panel>
+							<xp:span style="color:rgb(188,88,105)">
+								A Partial Refresh of the blue panel,
+								which also shows or hides the edit box
+								it contains.
+							</xp:span>
+							<xp:br id="br81"
+								style="color:rgb(188,88,105)">
+							</xp:br>
+							<xp:span style="color:rgb(188,88,105)">
+								Type &quot;a&quot; to get a list of all
+								drop down values and update typeahead
+								panel computed field
+							</xp:span>
+							<xp:br></xp:br>
+							<xp:span style="color:rgb(188,88,105)"></xp:span>
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							Typeahead Computed Field
+							<xp:br id="br12"></xp:br>
+							<xp:text escape="true"
+								id="typeaheadPanelCompField" style="font-weight:bold">
+								<xp:this.value><![CDATA[#{javascript:var element = getComponent('inputText4');
+element.value}]]></xp:this.value>
+							</xp:text>
+						</xp:td>
+
+
+
+						<xp:td></xp:td>
+					</xp:tr>
+
+
+					<xp:tr>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+
+
+
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+
+
+
+						<xp:td valign="top">
+							<xp:span style="font-weight:bold"></xp:span>
+							<xp:span
+								style="font-weight:bold;font-size:14pt">
+								Date Time Picker
+							</xp:span>
+							<xp:span style="font-weight:bold"></xp:span>
+							<xp:span
+								style="font-weight:bold;font-size:14pt">
+								and Panel
+							</xp:span>
+							<xp:span style="font-weight:bold"></xp:span>
+						</xp:td>
+						<xp:td>
+							<xp:button value="Show or Hide"
+								id="button20">
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="partial" refreshId="greenPanel"
+									id="eventHandler39">
+									<xp:this.action>
+										<xp:executeScript>
+											<xp:this.script><![CDATA[#{javascript:
+var wasShown = (null != viewScope.showField2) && viewScope.showField2.booleanValue();
+viewScope.showField2 = !wasShown;
+}]]></xp:this.script>
+										</xp:executeScript>
+									</xp:this.action>
+								</xp:eventHandler>
+							</xp:button>
+							<xp:br id="br36"></xp:br>
+							<xp:panel
+								style="border-color:rgb(0,255,0);border-style:solid;border-width:medium"
+								id="greenPanel">
+								<xp:inputText id="inputText6"
+									value="#{requestScope.field2}"
+									rendered="#{javascript:viewScope.showField2}"
+									defaultValue="#{javascript:@Now()}">
+									<xp:this.converter>
+										<xp:convertDateTime
+											type="date">
+										</xp:convertDateTime>
+									</xp:this.converter>
+									<xp:dateTimeHelper
+										id="dateTimeHelper4">
+									</xp:dateTimeHelper>
+									<xp:eventHandler event="onclick"
+										submit="true" refreshMode="partial"
+										refreshId="DTPpanelCompField" id="eventHandler69">
+									</xp:eventHandler>
+									<xp:eventHandler event="onchange"
+										submit="true" refreshMode="partial"
+										refreshId="DTPpanelCompField" id="eventHandler5">
+									</xp:eventHandler>
+								</xp:inputText>
+
+							</xp:panel>
+							<xp:span style="color:rgb(188,88,105)">
+								A Partial Refresh of the green panel,
+								which also shows or hides the edit box
+								it contains.
+							</xp:span>
+							<xp:br id="br32"
+								style="color:rgb(188,88,105)">
+							</xp:br>
+							<xp:span style="color:rgb(188,88,105)">
+								Select a date to update date time picker
+								computed field
+							</xp:span>
+							<xp:br></xp:br>
+							<xp:span style="color:rgb(188,88,105)"></xp:span>
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							Date Time Picker Computed Field
+							<xp:br id="br34"></xp:br>
+							<xp:text escape="true"
+								style="font-weight:bold" id="DTPpanelCompField">
+								<xp:this.value><![CDATA[#{javascript:var element = getComponent('inputText6');
+element.value}]]></xp:this.value>
+							</xp:text>
+						</xp:td>
+
+
+
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+
+
+
+						<xp:td></xp:td>
+						<xp:td>
+
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+
+
+
+						<xp:td></xp:td>
+					</xp:tr>
+
+
+
+
+
+
+					<xp:tr>
+						<xp:td>
+							<xp:link escape="true" id="link8"
+								style="font-weight:bold;font-size:14pt">
+								<xp:this.text><![CDATA[List & Combo Box]]></xp:this.text>
+								<xp:eventHandler event="onclick"
+									submit="true" refreshMode="complete" id="eventHandler15">
+									<xp:this.action>
+										<xp:openPage
+											name="/ajaxPartialRefreshListCombo.xsp">
+										</xp:openPage>
+									</xp:this.action>
+								</xp:eventHandler>
+							</xp:link>
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+				</xp:table>
+			</xp:panel>
+		</xp:this.facets>
+	</XPa:ccLayout>
+</xp:view>

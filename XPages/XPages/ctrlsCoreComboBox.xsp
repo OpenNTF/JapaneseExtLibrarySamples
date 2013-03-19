@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+
+	<xp:this.data>
+		<xp:dominoDocument var="dominoDocument1"
+			formName="xspComboBox">
+			<xp:this.postNewDocument>
+
+				<xp:actionGroup>
+					<xp:setValue binding="#{dominoDocument1.From}"
+						value="#{javascript:@UserName()}">
+					</xp:setValue>
+					<xp:setValue binding="#{dominoDocument1.Categories}"
+						value="Combo Box Test">
+					</xp:setValue>
+
+					<xp:setValue
+						binding="#{dominoDocument1.dateTimeCreated}"
+						value="#{javascript:@Now()}">
+					</xp:setValue>
+				</xp:actionGroup>
+			</xp:this.postNewDocument>
+
+			<xp:this.querySaveDocument>
+				<xp:setValue binding="#{dominoDocument1.Subject}">
+					<xp:this.value>
+						<![CDATA[#{javascript:var s01 = @UserName();
+var s02 = @Text(@Now());
+var s03 = @Text(@Time(@Now()));
+return "Test Doc | Combo Box | Edited by "+ s01+ " on "+ s02}]]>
+					</xp:this.value>
+				</xp:setValue>
+			</xp:this.querySaveDocument>
+
+
+
+		</xp:dominoDocument>
+	</xp:this.data>
+	<XPa:ccLayout id="cc4cclayout" navPath="/basics/combobox/">
+		<xp:this.facets>
+			<xc:ccMenu_basics xp:key="facetLeft"></xc:ccMenu_basics>
+			<XPa:ccContentCoreCtrl xp:key="facetMain"
+				id="cc4cccontentcorectrl">
+				<xp:this.facets>
+					<xp:panel xp:key="facetTestControl"
+						id="panelTest001">
+
+
+
+						<xp:comboBox id="comboBoxTestComboBox"
+							value="#{dominoDocument1.testComboBox}">
+							<xp:selectItem itemLabel="Combo Box Item A"
+								itemValue="Combo Box Item A">
+							</xp:selectItem>
+							<xp:selectItem itemLabel="Combo Box Item B"
+								itemValue="Combo Box Item B">
+							</xp:selectItem>
+							<xp:selectItem itemLabel="Combo Box Item C"
+								itemValue="Combo Box Item C">
+							</xp:selectItem>
+						</xp:comboBox>
+
+
+						<xp:section id="sectionComboBoxExample"
+							initClosed="true" header="A Computed Combo Box Example">
+							<xp:div id="pComboBox">
+								<xp:table>
+									<xp:tr>
+										<xp:td>
+											<xp:label value="Country:"
+												id="label1">
+											</xp:label>
+										</xp:td>
+										<xp:td>
+											<xp:comboBox
+												id="comboBoxCountry1" value="#{requestScope.r01}">
+												<xp:selectItem
+													itemLabel="Select a country">
+												</xp:selectItem>
+												<xp:selectItems>
+													<xp:this.value><![CDATA[${javascript:@Unique(@DbColumn(@DbName(),"xspCountryCityView",1))}]]></xp:this.value>
+												</xp:selectItems>
+
+												<xp:eventHandler
+													event="onchange" submit="true" refreshMode="partial"
+													refreshId="comboBoxCity1">
+												</xp:eventHandler>
+											</xp:comboBox>
+										</xp:td>
+									</xp:tr>
+									<xp:tr>
+										<xp:td>
+											<xp:label value="City:"
+												id="label2">
+											</xp:label>
+										</xp:td>
+										<xp:td>
+											<xp:comboBox
+												id="comboBoxCity1" value="#{requestScope.r02}">
+												<xp:selectItem
+													itemLabel="Select a City">
+												</xp:selectItem>
+												<xp:selectItems>
+													<xp:this.value><![CDATA[#{javascript:var ctry = getComponent("comboBoxCountry1").getValue();
+@DbLookup(@DbName(),"xspCountryCityView",ctry,2)}]]></xp:this.value>
+												</xp:selectItems>
+												<xp:eventHandler
+													event="onchange" submit="true" refreshMode="partial"
+													refreshId="computedFieldCityFacts1">
+												</xp:eventHandler>
+											</xp:comboBox>
+										</xp:td>
+									</xp:tr>
+								</xp:table>
+
+
+
+
+								<xp:text escape="true"
+									id="computedFieldCityFacts1">
+									<xp:this.value><![CDATA[#{javascript:var city = getComponent("comboBoxCity1").getValue();
+@DbLookup(@DbName(),"xspCountryCity02",city,"textCityFacts")
+}]]></xp:this.value>
+								</xp:text>
+							</xp:div>
+
+
+						</xp:section>
+					</xp:panel>
+				</xp:this.facets>
+			</XPa:ccContentCoreCtrl>
+
+		</xp:this.facets>
+	</XPa:ccLayout>
+</xp:view>

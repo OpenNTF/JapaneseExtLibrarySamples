@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" replicaid="85257A870079CB8F" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="71e" sequence="122" unid="D8ADEF61E7887F958025742B004FD077">
+<created><datetime dst="true">20080414T153147,11+01</datetime></created>
+<modified><datetime>20130319T214345,85+09</datetime></modified>
+<revised><datetime>20130319T214345,84+09</datetime></revised>
+<lastaccessed><datetime>20130319T214345,85+09</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20120928T180634,85-04</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=Admin/O=LotusLab</name></updatedby>
+<revisions><datetime dst="true">20110331T101222,29+01</datetime><datetime dst="true">20121212T171253,54+01</datetime><datetime dst="true">20121212T171254,41+01</datetime></revisions>
+<wassignedby><name>CN=Admin/O=LotusLab</name></wassignedby>
+<item name="$TITLE"><text>propCoreEditBox.xsp</text></item>
+
+<item name="$Flags"><text>gCK4</text></item>
+
+
+<item name="$FileNames" sign="true"><text>propCoreEditBox.xsp</text></item>
+<item name="$DesignerVersion"><text>8.5</text></item>
+
+
+
+
+
+</note>
