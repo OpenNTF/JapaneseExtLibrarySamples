@@ -1,4 +1,4 @@
-XPages Extension Library サンプル NSF 日本語翻訳プロジェクト
+﻿XPages Extension Library サンプル NSF 日本語翻訳プロジェクト
 ============================================================
 
 内容
@@ -30,6 +30,35 @@ XPages Extension Library サンプル NSF 日本語翻訳プロジェクト
   * Generic Services (Stackoverflow と Redmine)
   * Utilities (User Bean, @Functions, JSON DataNavigator) 
 
+  使用するにはいくつかの準備が必要です。
+  1. このサンプルは Domino サーバーで使用します。Domino Designer のプリビューでは動作しません
+  2. 動作には「OAuth Token Store」アプリケーション (WebSecurityStore.nsf) が必要です。
+     このアプリケーションを作成するためのテンプレート (WebSecurityStore.ntf) は
+     オリジナルの XPages Extension Library プロジェクト (http://extlib.openntf.org/) のリリースに含まれます。
+  3. 接続対象のサービスでのユーザーアカウントが必要です。
+     また OAuth による認証を行うサービスでは連携アプリケーションの登録が必要です。
+  * IBM Sametime、IBM Connections  ･･･ Lotus Greenhouse のアカウント
+  * Twitter ･･･ Twitter のアカウントと https://dev.twitter.com/apps でのアプリケーション登録
+  * Dropbox ･･･ Dropbox のアカウントと https://www.dropbox.com/developers/apps でのアプリケーション登録
+
+  参考文献
+
+  * ビデオで見る XPages Extension Library のインストール方法
+    http://bit.ly/TDUi1h
+  * ビデオで見る XPages Social Enabler
+    http://bit.ly/TDUgXg
+  * XPages Social Enabler で Twitter と連携する方法
+    http://bit.ly/TDUxcN
+  * XPages Social Enabler で DropBox と連携する方法
+    http://bit.ly/TDUwW8
+  * XPages Extension Library の Social Enabler Sametime コントロールの使い方
+    http://bit.ly/UcCygn
+  * XPages Social Enabler で IBM Connections と連携する方法
+    http://bit.ly/YulFjy
+  * XPages: Social Tools cheatshee (英語) の「XPages: Social Tools」リンク先の文書に
+    XPages Social Enabler の設定がまとめられています。(英語)
+    http://xpagescheatsheet.com/cheatsheet.nsf
+
 現在、ベースとしている XPages Extension Library モジュールのバージョンは、[853.20121217-1354](http://www.openntf.org/internal/home.nsf/release.xsp?documentId=2C31F7B202B31DCA86257ADA0054AED0&action=openDocument) です。
 
 
@@ -57,6 +86,22 @@ For more details, please see [XPages Extension Library Japan Project page](http:
   * Twitter
   * Generic Services (Stackoverflow and Redmine)
   * Utilities (User Bean, @Functions, JSON DataNavigator) 
+
+  Some preparations are required to use this sample.
+  1. This sample works on Domino server. Preview on Domino Designer would not work.
+  2. "OAuth Token Store" application (WebSecurityStore.nsf) is required.
+     The template (WebSecurityStore.ntf) for this application is included in
+     the original XPages Extension Library project (http://extlib.openntf.org/) Release
+  3. Accounts for the services the sample is connecting to are required. 
+     And application registration on the services which require OAuth authoritarian are also required.
+  * IBM Sametime、IBM Connections  ... Account on Lotus Greenhouse 
+  * Twitter ･･･ Account on Twitter and application registration on https://dev.twitter.com/apps 
+  * Dropbox ･･･ Account on Dropbox and application registration on https://www.dropbox.com/developers/apps
+
+  Reference
+  * XPages: Social Tools cheatshee
+    Detail configuration for XPages Social Enabler are summarized in document liked with "XPages: Social Tools" link.
+    http://xpagescheatsheet.com/cheatsheet.nsf
 
 Currently, it is based on the version [853.20121217-1354](http://www.openntf.org/internal/home.nsf/release.xsp?documentId=2C31F7B202B31DCA86257ADA0054AED0&action=openDocument) of XPages Extension Library module.
 
