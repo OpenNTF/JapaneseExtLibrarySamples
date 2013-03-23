@@ -42,14 +42,17 @@
   * Dropbox ･･･ Dropbox のアカウントと https://www.dropbox.com/developers/apps でのアプリケーション登録
 
   参考文献
-
+
+
   * ビデオで見る XPages Extension Library のインストール方法
     http://bit.ly/TDUi1h
-  * ビデオで見る XPages Social Enabler
+  * 
+ビデオで見る XPages Social Enabler
     http://bit.ly/TDUgXg
   * XPages Social Enabler で Twitter と連携する方法
     http://bit.ly/TDUxcN
-  * XPages Social Enabler で DropBox と連携する方法
+
+  * XPages Social Enabler で DropBox と連携する方法
     http://bit.ly/TDUwW8
   * XPages Extension Library の Social Enabler Sametime コントロールの使い方
     http://bit.ly/UcCygn
@@ -57,7 +60,7 @@
     http://bit.ly/YulFjy
   * XPages: Social Tools cheatshee (英語) の「XPages: Social Tools」リンク先の文書に
     XPages Social Enabler の設定がまとめられています。(英語)
-    http://xpagescheatsheet.com/cheatsheet.nsf
+    http://xpagescheatsheet.com/cheatsheet.nsf
 
 現在、ベースとしている XPages Extension Library モジュールのバージョンは、[853.20121217-1354](http://www.openntf.org/internal/home.nsf/release.xsp?documentId=2C31F7B202B31DCA86257ADA0054AED0&action=openDocument) です。
 
@@ -101,7 +104,7 @@ For more details, please see [XPages Extension Library Japan Project page](http:
   Reference
   * XPages: Social Tools cheatshee
     Detail configuration for XPages Social Enabler are summarized in document liked with "XPages: Social Tools" link.
-    http://xpagescheatsheet.com/cheatsheet.nsf
+    http://xpagescheatsheet.com/cheatsheet.nsf
 
 Currently, it is based on the version [853.20121217-1354](http://www.openntf.org/internal/home.nsf/release.xsp?documentId=2C31F7B202B31DCA86257ADA0054AED0&action=openDocument) of XPages Extension Library module.
 
