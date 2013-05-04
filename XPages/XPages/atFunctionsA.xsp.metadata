@@ -1,22 +1,21 @@
-<?xml version="1.0" encoding="UTF-8"?><note class="form" replicaid="85257A870079CB8F" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="73a" sequence="260" unid="1C61AD6CEB46B034802573E700384604">
-<created><datetime dst="true">20080206T111439,40+01</datetime></created>
-<modified><datetime>20130319T214351,01+09</datetime></modified>
-<revised><datetime>20130319T214351,00+09</datetime></revised>
-<lastaccessed><datetime>20130319T214351,01+09</datetime></lastaccessed>
-<addedtofile><datetime dst="true">20120928T180637,04-04</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=Admin/O=LotusLab</name></updatedby>
-<revisions><datetime dst="true">20110331T100934,46+01</datetime><datetime dst="true">20121126T173742,13+01</datetime><datetime dst="true">20121126T173742,77+01</datetime><datetime dst="true">20121214T130533,37+01</datetime><datetime dst="true">20121214T130534,13+01</datetime></revisions>
-<wassignedby><name>CN=Admin/O=LotusLab</name></wassignedby>
+<?xml version="1.0" encoding="UTF-8"?><note class="form" replicaid="49257B61002C88D8" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="812" sequence="8" unid="C87FF0391C23DE4249257B61002CA975">
+<created><datetime>20130504T170749,65+09</datetime></created>
+<modified><datetime>20130504T170857,66+09</datetime></modified>
+<revised><datetime>20130504T170857,65+09</datetime></revised>
+<lastaccessed><datetime>20130504T170857,66+09</datetime></lastaccessed>
+<addedtofile><datetime>20130504T170749,66+09</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Domino Administrator/O=EFLAB</name></updatedby>
+<wassignedby><name>CN=Domino Administrator/O=EFLAB</name></wassignedby>
 <item name="$TITLE"><text>atFunctionsA.xsp</text></item>
-
 <item name="$Flags"><text>gK4</text></item>
 
 
 <item name="$FileNames" sign="true"><text>atFunctionsA.xsp</text></item>
+
+
+
 <item name="$DesignerVersion"><text>8.5</text></item>
-
-
 
 
 
