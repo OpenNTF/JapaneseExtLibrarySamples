@@ -62,7 +62,7 @@
     XPages Social Enabler の設定がまとめられています。(英語)
     http://xpagescheatsheet.com/cheatsheet.nsf
 
-現在、ベースとしている XPages Extension Library モジュールのバージョンは、[853.20121217-1354](http://www.openntf.org/internal/home.nsf/release.xsp?documentId=2C31F7B202B31DCA86257ADA0054AED0&action=openDocument) です。
+現在、ベースとしている XPages Extension Library モジュールのバージョンは、[853.20130215-1516](http://www.openntf.org/internal/home.nsf/release.xsp?documentId=AFE8FEF0ED29F85D86257B1E0031BCB7&action=openDocument) です。
 
 
 Content
@@ -106,7 +106,7 @@ For more details, please see [XPages Extension Library Japan Project page](http:
     Detail configuration for XPages Social Enabler are summarized in document liked with "XPages: Social Tools" link.
     http://xpagescheatsheet.com/cheatsheet.nsf
 
-Currently, it is based on the version [853.20121217-1354](http://www.openntf.org/internal/home.nsf/release.xsp?documentId=2C31F7B202B31DCA86257ADA0054AED0&action=openDocument) of XPages Extension Library module.
+Currently, it is based on the version [853.20130215-1516](http://www.openntf.org/internal/home.nsf/release.xsp?documentId=AFE8FEF0ED29F85D86257B1E0031BCB7&action=openDocument) of XPages Extension Library module.
 
 
 
