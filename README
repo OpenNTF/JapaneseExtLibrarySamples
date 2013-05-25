@@ -3,7 +3,7 @@
 
 内容
 ----
-XPages Extension Library Japan プロジェクト Beta 3 では、以下の翻訳済みサンプルアプリケーションを提供しています。
+XPages Extension Library Japan プロジェクト Release 1.0 では、以下の翻訳済みサンプルアプリケーションおよび翻訳済みのコントロールを提供しています。
 
 ・XPages Extension Library Demo (XPagesExt.nsf)
 	XPages Extension Library が提供している機能を試すことができます。
@@ -54,13 +54,16 @@ XPages Extension Library Japan プロジェクト Beta 3 では、以下の翻�
 	XPages Social Enabler の設定がまとめられています。(英語)
 	http://xpagescheatsheet.com/cheatsheet.nsf
 
+・翻訳済み XPages Extension Library モジュール (extlib853ja-updatesite.zip)
 
-現在、ベースとしている XPages Extension Library モジュールのバージョンは、[853.20130215-1516](http://www.openntf.org/internal/home.nsf/release.xsp?documentId=AFE8FEF0ED29F85D86257B1E0031BCB7&action=openDocument) です。
+・Domino Designer 用翻訳済み XPages Extension Library モジュール (extlib853ja-designer-updatesite.zip)
 
+現在、ベースとしている XPages Extension Library モジュールのバージョンは、[853.20130315-0724](http://www.openntf.org/internal/home.nsf/release.xsp?databaseName=CN=NotesOSS2/O=NotesOSS!!Projects\pmt.nsf&documentId=56832E9BD6A0615186257B4300349C59&action=openDocument) です。
+本モジュールを利用するためには、対象バージョンの XPages Extension Library を導入する必要があります。
 
 Content
 -------
-Beta 3 of Xpages Extension Library Japan Project release following translated sample applications.
+Release 1.0 of Xpages Extension Library Japan Project release following translated sample applications.
 
 * XPages Extension Library Demo (XPagesExt.nsf)
 	You can try the functions of XPages Extension Library with this application.
@@ -93,9 +96,12 @@ Beta 3 of Xpages Extension Library Japan Project release following translated sa
 	Detail configuration for XPages Social Enabler are summarized in document liked with "XPages: Social Tools" link.
 	http://xpagescheatsheet.com/cheatsheet.nsf
 
+* Localized XPages Extension Library Modules (extlib853ja-updatesite.zip)
 
-Currently, it is based on the version [853.20130215-1516](http://www.openntf.org/internal/home.nsf/release.xsp?documentId=AFE8FEF0ED29F85D86257B1E0031BCB7&action=openDocument) of XPages Extension Library module.
+* Localized XPages Extension Library Modules for Domino Designer (extlib853ja-designer-updatesite.zip)
 
+Currently, it is based on the version [853.20130315-0724](http://www.openntf.org/internal/home.nsf/release.xsp?databaseName=CN=NotesOSS2/O=NotesOSS!!Projects\pmt.nsf&documentId=56832E9BD6A0615186257B4300349C59&action=openDocument) of XPages Extension Library module.
+Before using Extension Library Japan modules, you have to install target version of Extension Library modules.
 
 OPENNTF
 
