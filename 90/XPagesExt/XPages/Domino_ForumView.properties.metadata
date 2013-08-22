@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" replicaid="80257A9F004BC20A" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="66a" sequence="2" unid="CE49183244354CBC49257BCF00561965">
+<created><datetime>20130823T004025,97+09</datetime></created>
+<modified><datetime>20130823T004028,89+09</datetime></modified>
+<revised><datetime>20130823T004028,88+09</datetime></revised>
+<lastaccessed><datetime>20130823T004028,89+09</datetime></lastaccessed>
+<addedtofile><datetime>20130823T004028,87+09</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Admin/O=lotuslab</name></updatedby>
+<wassignedby><name>CN=Admin/O=lotuslab</name></wassignedby>
+<item name="$Flags"><text>gC~4K2</text></item>
+<item name="$TITLE"><text>Domino_ForumView.properties</text></item>
+
+
+<item name="$FileNames" sign="true"><text>Domino_ForumView.properties</text></item></note>

@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' replicaid='80257A9F004BC20A'>
+<noteinfo noteid='286' unid='C5B675BD602A76068525786500660C1A' sequence='4'>
+<created><datetime dst='true'>20110401T143437,70-04</datetime></created>
+<modified><datetime dst='true'>20121025T135436,52+01</datetime></modified>
+<revised><datetime dst='true'>20121025T135436,51+01</datetime></revised>
+<lastaccessed><datetime dst='true'>20121025T135436,52+01</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20121022T144742,51+01</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=admin/O=acme</name></updatedby>
+<item name='$FormulaClass' sign='true'><text>1</text></item>
+<item name='$TITLE' sign='true'><text>AllContactsByState</text></item>
+<item name='$Index' sign='true'><text/></item>
+<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
+MAECACAACQBGaXJzdE5hbWUABQAJAEZpcnN0TmFtZQADAAIAHAAIAExhc3ROYW1lBQAIAExhc3RO
+YW1lAwACABgABQBFTWFpbAAFAAUARU1haWwAAwACABQABABDaXR5BQAEAENpdHkDAAIAEgAHAGNy
+ZWF0ZWQAaQADAAIAMAADACQxMAAFAAkARmlyc3ROYW1lAAEAAQAgACICBQAIAExhc3ROYW1lIgID
+AAUAVABQAAoABQACAAkACAAFAAQABwADAAkABABTdGF0ZUlkRmlyc3ROYW1lTGFzdE5hbWVFTWFp
+bENpdHljcmVhdGVkJDEwJENvbmZsaWN0JFJFRgQABAAAACAABQAEAEZvcm0BAAcAQ29udGFjdAAK
+AgQABAADAAcADAAFAAkzUzRTAA==
+</formula></item>
+<item name='$Collation' summary='true'>
+<rawitemdata type='2'>
+EgABAABEiGYHAAAFAFN0YXRl
+</rawitemdata></item>
+<item name='$Collation1' summary='true'>
+<rawitemdata type='2'>
+FgABAABEgGYAAAAJAEZpcnN0TmFtZQ==
+</rawitemdata></item>
+<item name='$Collation2' summary='true'>
+<rawitemdata type='2'>
+FgABAABEgWYAAAAJAEZpcnN0TmFtZQ==
+</rawitemdata></item>
+<item name='$Collation3' summary='true'>
+<rawitemdata type='2'>
+FQABAABEgGYAAAAIAExhc3ROYW1l
+</rawitemdata></item>
+<item name='$Collation4' summary='true'>
+<rawitemdata type='2'>
+FQABAABEgWYAAAAIAExhc3ROYW1l
+</rawitemdata></item>
+<item name='$Collation5' summary='true'>
+<rawitemdata type='2'>
+EQABAABEgWYAAAAEAENpdHk=
+</rawitemdata></item>
+<item name='$Collation6' summary='true'>
+<rawitemdata type='2'>
+EAABAABEgGYAAAADACQxMA==
+</rawitemdata></item>
+<item name='$Collation7' summary='true'>
+<rawitemdata type='2'>
+EAABAABEgWYAAAADACQxMA==
+</rawitemdata></item>
+<item name='$Comment' sign='true'><text/></item>
+<item name='$Flags'><text>PY</text></item>
+<item name='$WebFlags'><text>A</text></item>
+<item name='$DesignerVersion'><text>8.5.3</text></item>
+<item name='$SelQuery' sign='true'>
+<rawitemdata type='f'>
+gQYAAAAAif8TAAAAAAABAAcAQ29udGFjdAA=
+</rawitemdata></item>
+<item name='$ViewFormat' sign='true'>
+<rawitemdata type='5'>
+AQAJAA0ACAAAAFZDAAACAAEACgAKACQAAQAACgAAAAAAAAAAAAICAAAAVkMDAAUABQAAAAAAdAAB
+AAAKAAEAAAAAAAAAAgIAAABWQwAAAgACAAAAAABQAAEAAAoAAAAAAAAAAAACAgAAAFZDAAMJAAoA
+IgAAAFAAAQAACgAAAAAAAAAAAAICAAAAVkMAAwgACQAeAAAAZQABAAAKAAAAAAAAAAAAAgIAAABW
+QwAABQAFABoAAACFAAEAAAoAAAAAAAAAAAACAgAAAFZDAAIEAAQAFgAAAFAAAQAACgAAAAAAAAAA
+AAICAAAAVkMAAAcABwAUAAAAcgABAAAKAAAAAAAAAAAAAgIAAABWQwADAwAEAD4AAADcAAEAAAoA
+AAAAAAAAAAACAgAAACQwIwoAAAAIAJIAAwABBQEABAB/QTD/U3RhdGVTdGF0ZUlkSWRGaXJzdE5h
+bWVGaXJzdCBOYW1lIgACACAACQBGaXJzdE5hbWUABQAJAEZpcnN0TmFtZQADAExhc3ROYW1lTGFz
+dCBOYW1lHgACABwACABMYXN0TmFtZQUACABMYXN0TmFtZQMARU1haWxFTWFpbBoAAgAYAAUARU1h
+aWwABQAFAEVNYWlsAAMAQ2l0eUNpdHkWAAIAFAAEAENpdHkFAAQAQ2l0eQMAY3JlYXRlZENyZWF0
+ZWQUAAIAEgAHAGNyZWF0ZWQAaQADACQxME5hbWU+AAIAMAADACQxMAAFAAkARmlyc3ROYW1lAAEA
+AQAgACICBQAIAExhc3ROYW1lIgIDAAcADAAFAAkwUzBFACYAAQAAAAEBAAkBAAAKAQEOCgAAAQCt
+KwEAAQABAAAAAAAAAAAAV0MBAQAJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAA
+AAAAAFdDAQEACQAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAP//AAAAAAAAAAAAAAAAAABXQwEBAAkA
+AAAAAAAAAAAAAAAAAAAAAAAEAAAAAAD//wAAAAAAAAAAAAAAAAAAV0MBAQAJAAAAAAAAAAAAAAAA
+AAAAAAAABAAAAAAA//8AAAAAAAAAAAAAAAAAAFdDAQEACQAAAAAAAAAAAAAAAAAAAAAAAAQAAAAA
+AP//AAAAAAAAAAAAAAAAAABXQwEBAAkAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAD//wAAAAAAAAAA
+AAAAAAAAV0MBAQAJAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAA//8AAAAAAAAAAAAAAAAAAFdDAQEA
+CQAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAP//AAAAAAAAAAAAAAAAAABXQwEBAAkAAAAAAAAAAAAA
+AAAAAAAAAAAEAAAAAAD//wAAAAAAAAAAAAAAAAAAQgAAAAAAAQD///8ABQD///8AAQAAAAAAAAAA
+AAAAAAABAP///wABAP///wAAAAEAAAAAAAEAAAAAAAEAAAAAAAAACAAAAAAAAQA=
+</rawitemdata></item></note>
+

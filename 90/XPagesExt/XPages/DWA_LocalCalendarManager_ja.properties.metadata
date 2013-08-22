@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" replicaid="80257A9F004BC20A" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="686" sequence="2" unid="4C5D11E2BFA0E0A549257BCF00561973">
+<created><datetime>20130823T004026,11+09</datetime></created>
+<modified><datetime>20130823T004029,17+09</datetime></modified>
+<revised><datetime>20130823T004029,16+09</datetime></revised>
+<lastaccessed><datetime>20130823T004029,17+09</datetime></lastaccessed>
+<addedtofile><datetime>20130823T004029,15+09</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Admin/O=lotuslab</name></updatedby>
+<wassignedby><name>CN=Admin/O=lotuslab</name></wassignedby>
+<item name="$Flags"><text>gC~4K2</text></item>
+<item name="$TITLE"><text>DWA_LocalCalendarManager_ja.properties</text></item>
+
+
+<item name="$FileNames" sign="true"><text>DWA_LocalCalendarManager_ja.properties</text></item></note>

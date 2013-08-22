@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" replicaid="80257A9F004BC20A" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="5b6" sequence="2" unid="3092351B2CA5BA6B49257BCF00561915">
+<created><datetime>20130823T004025,17+09</datetime></created>
+<modified><datetime>20130823T004027,09+09</datetime></modified>
+<revised><datetime>20130823T004027,08+09</datetime></revised>
+<lastaccessed><datetime>20130823T004027,09+09</datetime></lastaccessed>
+<addedtofile><datetime>20130823T004027,07+09</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Admin/O=lotuslab</name></updatedby>
+<wassignedby><name>CN=Admin/O=lotuslab</name></wassignedby>
+<item name="$Flags"><text>gC~4;2</text></item>
+<item name="$TITLE"><text>LeftDomino_ja.properties</text></item>
+
+
+<item name="$FileNames" sign="true"><text>LeftDomino_ja.properties</text></item></note>

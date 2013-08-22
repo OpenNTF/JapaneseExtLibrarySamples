@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" replicaid="80257A9F004BC20A" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="3b2" sequence="24" unid="D11A5BE65688D487852579900008DE87">
+<created><datetime dst="true">20120124T213652,55-04</datetime></created>
+<modified><datetime dst="true">20121025T141913,19+01</datetime></modified>
+<revised><datetime dst="true">20121025T141913,18+01</datetime></revised>
+<lastaccessed><datetime dst="true">20121025T141913,19+01</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20121022T144753,17+01</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=admin/O=acme</name></updatedby>
+<item name="$Flags"><text>34567Cg~[</text></item>
+<item name="$TITLE"><text>extlib/services/MemberDataProvider.java</text></item>
+<item name="$DesignerVersion"><text>8.5.3</text></item>
+
+
+<item name="$FileNames" sign="true"><text>extlib/services/MemberDataProvider.java</text></item>
+
+
+
+
+</note>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" replicaid="80257A9F004BC20A" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="31a" sequence="6" unid="B33B2EBA8B53FF2A852578EA005063D6">
+<created><datetime dst="true">20110812T103804,38-04</datetime></created>
+<modified><datetime dst="true">20121025T135438,69+01</datetime></modified>
+<revised><datetime dst="true">20121025T135438,68+01</datetime></revised>
+<lastaccessed><datetime dst="true">20121025T135438,69+01</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20121022T144747,07+01</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=admin/O=acme</name></updatedby>
+<item name="$TITLE"><text>dojoNotesPeek.html</text></item>
+<item name="$MimeType"><text>text/html</text></item>
+<item name="$Flags"><text>345Cg&gt;Q</text></item>
+<item name="$MimeCharSet"><text>UTF-8</text></item>
+<item name="$DesignerVersion"><text>8.5.3</text></item>
+
+
+<item name="$FileNames" sign="true"><text>dojoNotesPeek.html</text></item></note>
