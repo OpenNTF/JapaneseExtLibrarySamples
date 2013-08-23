@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="3.0" replicaid="80257A15003960C3" version="8.5" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="306" sequence="2" unid="973E718247ADCADD80257AA2004CF2F7">
+<created><datetime dst="true">20121025T150029,35+01</datetime></created>
+<modified><datetime dst="true">20121025T150030,72+01</datetime></modified>
+<revised><datetime dst="true">20121025T150030,71+01</datetime></revised>
+<lastaccessed><datetime dst="true">20121025T150030,72+01</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20121025T150030,70+01</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=admin/O=acme</name></updatedby>
+<item name="$Flags"><text>gC~4K</text></item>
+<item name="$TITLE"><text>.copyarea.db</text></item>
+
+
+<item name="$FileNames" sign="true"><text>.copyarea.db</text></item></note>

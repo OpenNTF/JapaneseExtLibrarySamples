@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" replicaid="80257A15003960C3" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="52a" sequence="2" unid="8665AB0E05D13D2249257BD0004609DC">
+<created><datetime>20130823T214500,44+09</datetime></created>
+<modified><datetime>20130823T214500,54+09</datetime></modified>
+<revised><datetime>20130823T214500,53+09</datetime></revised>
+<lastaccessed><datetime>20130823T214500,54+09</datetime></lastaccessed>
+<addedtofile><datetime>20130823T214500,52+09</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Admin/O=lotuslab</name></updatedby>
+<wassignedby><name>CN=Admin/O=lotuslab</name></wassignedby>
+<item name="$Flags"><text>gC~4;2</text></item>
+<item name="$TITLE"><text>LeftDropbox_ja.properties</text></item>
+
+
+<item name="$FileNames" sign="true"><text>LeftDropbox_ja.properties</text></item></note>

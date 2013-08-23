@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" replicaid="80257A15003960C3" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="27a" sequence="16" unid="CAD3D4172EE5C22680257A15003967A3">
+<created><datetime dst="true">20120606T112700,83+01</datetime></created>
+<modified><datetime>20130823T214504,52+09</datetime></modified>
+<revised><datetime>20130823T214504,51+09</datetime></revised>
+<lastaccessed><datetime>20130823T214504,52+09</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20120606T112700,83+01</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=admin/O=acme</name><name>CN=Admin/O=lotuslab</name></updatedby>
+<wassignedby><name>CN=Admin/O=lotuslab</name></wassignedby>
+<item name="$TITLE"><text>sbtLotusLiveCommunities.xsp</text></item>
+<item name="$Flags"><text>gC~4;</text></item>
+
+
+
+
+<item name="$FileNames" sign="true"><text>sbtLotusLiveCommunities.xsp</text></item>
+
+<item name="$DesignerVersion"><text>8.5</text></item>
+
+
+
+</note>

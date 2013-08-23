@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" replicaid="80257A15003960C3" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="5d6" sequence="2" unid="DD71EBB9732E563E49257BD000460A2B">
+<created><datetime>20130823T214501,23+09</datetime></created>
+<modified><datetime>20130823T214502,26+09</datetime></modified>
+<revised><datetime>20130823T214502,25+09</datetime></revised>
+<lastaccessed><datetime>20130823T214502,26+09</datetime></lastaccessed>
+<addedtofile><datetime>20130823T214502,24+09</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Admin/O=lotuslab</name></updatedby>
+<wassignedby><name>CN=Admin/O=lotuslab</name></wassignedby>
+<item name="$Flags"><text>gC~4K2</text></item>
+<item name="$TITLE"><text>SBTActivityStreamsMobile_ja.properties</text></item>
+
+
+<item name="$FileNames" sign="true"><text>SBTActivityStreamsMobile_ja.properties</text></item></note>
