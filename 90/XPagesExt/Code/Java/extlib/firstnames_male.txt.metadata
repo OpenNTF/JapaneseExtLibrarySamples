@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="80257BAB00519000" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="6b2" sequence="2" unid="A60591B0404E71F049257C4B004C451C">
+<created><datetime>20131224T225304,28+09</datetime></created>
+<modified><datetime>20131224T225304,33+09</datetime></modified>
+<revised><datetime>20131224T225304,32+09</datetime></revised>
+<lastaccessed><datetime>20131224T225304,33+09</datetime></lastaccessed>
+<addedtofile><datetime>20131224T225304,31+09</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Admin/O=lotuslab</name></updatedby>
+<wassignedby><name>CN=Admin/O=lotuslab</name></wassignedby>
+<item name="$Flags"><text>34567Cg~[</text></item>
+<item name="$TITLE"><text>extlib/firstnames_male.txt</text></item>
+<item name="$MimeType"><text>text/plain</text></item>
+<item name="$DesignerVersion"><text>8.5.3</text></item>
+
+
+<item name="$FileNames" sign="true"><text>extlib/firstnames_male.txt</text></item></note>
