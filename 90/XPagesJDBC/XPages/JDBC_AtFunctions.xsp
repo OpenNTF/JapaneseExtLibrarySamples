@@ -5,7 +5,6 @@
 		<xp:this.facets>
 			<xc:LeftJDBC xp:key="LeftColumn"></xc:LeftJDBC>
 		</xp:this.facets>
-		
 		<xp:panel id="main">
 			<xp:panel>
 				<xp:label id="label5" style="font-weight:bold"

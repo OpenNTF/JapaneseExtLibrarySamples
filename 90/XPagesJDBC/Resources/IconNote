@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <note default='true' class='icon' xmlns='http://www.lotus.com/dxl' version='9.0'
- replicaid='80257980003A8C3F'>
+ maintenanceversion='1.0' replicaid='80257980003A8C3F'>
 <noteinfo noteid='11a' unid='62542FCAEC8F492480257980003A8C4A' sequence='18'>
 <created><datetime dst='true'>20120109T113930,02+01</datetime></created>
 <modified><datetime>20130823T211443,79+09</datetime></modified>
@@ -8,9 +8,6 @@
 <lastaccessed><datetime>20130823T211443,79+09</datetime></lastaccessed>
 <addedtofile><datetime dst='true'>20120109T113930,05+01</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Number One/O=ibm</name><name>CN=Admin/O=lotuslab</name></updatedby>
-<item name='$Daos'><text>0</text></item>
-<item name='$DBTheme'><text>oneuiv2</text></item>
-<item name='$DefaultXPage'><text>JDBC_Home.xsp</text></item>
 <item name='IconBitmap' summary='true'>
 <rawitemdata type='6'>
 AiAgAQAA///////wD///4Af//8AD//4AAH/8AAA/+AAAH/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAA
@@ -26,6 +23,9 @@ d30fAAAAAPHXd33Xd3d913d9HwAAAADx13d913d3fdd3fR8AAAAA8R3d0dd3d30d3dEfAAAAAA8R
 EREdd3fRERER8AAAAAAA////Ed3dEf///wAAAAAAAAAAAPERER8AAAAAAAAAAAAAAAAP///wAAAA
 AAAAUEECICABAAD/////+A4DgA==
 </rawitemdata></item>
+<item name='$Daos'><text>0</text></item>
+<item name='$DBTheme'><text>oneuiv2</text></item>
+<item name='$DefaultXPage'><text>JDBC_Home.xsp</text></item>
 <item name='$TITLE'><text>XPagesJDBC
 </text></item>
 <item name='$Flags'><text>J!</text></item>
