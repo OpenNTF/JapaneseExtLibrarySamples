@@ -29,8 +29,7 @@
 			</xp:label>
 			<xp:br></xp:br>
 			<xp:panel id='viewRefreshPanel'>
-				<xp:viewPanel id="viewPanel1" rows="7" var="row"
-					role="presentation">
+				<xp:viewPanel id="viewPanel1" rows="7" var="row">
 					<xp:this.facets>
 						<xp:pager partialRefresh="true"
 							layout="Previous Group Next" xp:key="headerPager" id="pager1">
@@ -124,9 +123,6 @@ pane.setTabUniqueKey(document1.getNoteID())
 											</xp:label>
 										</xp:td>
 										<xp:td>
-											<xp:inputRichText
-												id="inputRichText1">
-											</xp:inputRichText>
 											<xp:inputText
 												value="#{document1.FirstName}" id="firstName1"
 												required="true">

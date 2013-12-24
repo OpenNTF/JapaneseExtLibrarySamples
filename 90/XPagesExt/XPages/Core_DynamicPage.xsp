@@ -156,8 +156,7 @@ c.show("contact",{action:'editDocument',documentId:dataAccess.firstContactID})}]
 				<xe:this.beforeContentLoad><![CDATA[#{javascript:print("DynamicContent: Before Content Load, facet="+this.getCurrentFacet())}]]></xe:this.beforeContentLoad>
 				<xp:this.facets>
 					<xp:panel xp:key="view" id="panel1">
-						<xp:viewPanel rows="10" id="viewPanel1"
-							var="row" role="presentation">
+						<xp:viewPanel rows="10" id="viewPanel1"	var="row">
 							<xp:this.facets>
 								<xp:pager partialRefresh="true"
 									layout="Previous Group Next" xp:key="headerPager"

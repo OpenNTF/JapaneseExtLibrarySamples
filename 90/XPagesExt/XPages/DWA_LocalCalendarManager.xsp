@@ -38,7 +38,7 @@
 				</xp:eventHandler>
 			</xp:button>
 			<xp:viewPanel rows="30" id="viewPanel1"
-				pageName="/DWA_LocalCalendarViewEntry.xsp" role="presentation">
+				pageName="/DWA_LocalCalendarViewEntry.xsp">
 				<xp:this.facets>
 					<xp:pager partialRefresh="true" layout="Previous Group Next"
 						xp:key="headerPager" id="pager1">

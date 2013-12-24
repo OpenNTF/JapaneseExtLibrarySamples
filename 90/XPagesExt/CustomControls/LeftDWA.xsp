@@ -2,7 +2,7 @@
 <xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xe="http://www.ibm.com/xsp/coreex">
 	<xe:navigator id="outline">
 		<xe:this.treeNodes>
-			<xe:pageTreeNode page="DWA_Home" label="Home"
+			<xe:pageTreeNode page="DWA_Home" label="DWA (iNotes) Home"
 				selection="/DWA/Home">
 			</xe:pageTreeNode>
 			<xe:separatorTreeNode></xe:separatorTreeNode>

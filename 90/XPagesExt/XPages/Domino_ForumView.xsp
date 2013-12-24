@@ -27,7 +27,7 @@
 					<xe:pagerSaveState id="pagerSaveState2" for="dataView5"
 						globalRows="true">
 					</xe:pagerSaveState>
-					<xe:forumView id="dataView5" var="viewEntry" rows="10">
+					<xe:forumView id="dataView5" var="viewEntry" rows="10" pageName="/Domino_ViewStateForm.xsp">
 						<xe:this.summaryColumn>
 							<xe:viewSummaryColumn columnName="Title"
 								columnTitle="Title">
@@ -93,7 +93,7 @@
 						globalRows="true">
 					</xe:pagerSaveState>
 					<xe:forumView id="forumView1" var="viewEntry" rows="10"
-						expandedDetail="true">
+						expandedDetail="true" pageName="/Domino_ViewStateForm.xsp">
 						<xe:this.summaryColumn>
 							<xe:viewSummaryColumn columnName="Title"
 								columnTitle="Title">
@@ -155,7 +155,7 @@
 					</xp:button>
 					<xp:br></xp:br>
 					<xe:forumView id="forumView2" var="viewEntry"
-						collapsibleDetail="true" rows="10">
+						collapsibleDetail="true" rows="10" pageName="/Domino_ViewStateForm.xsp">
 						<xe:this.summaryColumn>
 							<xe:viewSummaryColumn columnName="Title"
 								columnTitle="Title">
@@ -220,7 +220,7 @@
 					</xp:button>
 					<xp:br></xp:br>
 					<xe:forumView id="forumView4" var="viewEntry"
-						collapsibleDetail="true" rows="10" detailsOnClient="true">
+						collapsibleDetail="true" rows="10" detailsOnClient="true" pageName="/Domino_ViewStateForm.xsp">
 						<xe:this.summaryColumn>
 							<xe:viewSummaryColumn columnName="Title"
 								columnTitle="Title">
@@ -284,7 +284,7 @@
 					</xp:button>
 					<xp:br></xp:br>
 					<xe:forumView id="forumView3" var="viewEntry"
-						collapsibleDetail="true" rows="10" expandedDetail="true">
+						collapsibleDetail="true" rows="10" expandedDetail="true" pageName="/Domino_ViewStateForm.xsp">
 						<xe:this.summaryColumn>
 							<xe:viewSummaryColumn columnName="Title"
 								columnTitle="Title">

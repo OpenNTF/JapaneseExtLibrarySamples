@@ -35,7 +35,7 @@ return a}]]></xp:this.value>
 					</xp:comboBox>
 					<br />
 					<xp:div style="overflow-y : auto">
-						<xe:dynamicViewPanel role="presentation" rows="10" id="dynamicViewPanel1">
+						<xe:dynamicViewPanel rows="10" id="dynamicViewPanel1">
 							<xe:this.facets>
 								<xp:pager partialRefresh="true" layout="Previous Group Next"
 									xp:key="headerPager" id="pager1">
@@ -64,7 +64,7 @@ return a}]]></xp:this.value>
 					</xp:comboBox>
 					<br />
 					<xe:dynamicViewPanel rows="10"
-						id="dynamicViewPanel2" var="viewEntry" role="presentation">
+						id="dynamicViewPanel2" var="viewEntry">
 						<xe:this.facets>
 							<xp:pager partialRefresh="true"
 								layout="Previous Group Next" xp:key="headerPager" id="pager2">

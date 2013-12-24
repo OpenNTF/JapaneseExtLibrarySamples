@@ -14,13 +14,13 @@
 		<xp:br></xp:br>
 		<xe:breadCrumbs id="outline" label="You are in: ">
 			<xe:this.treeNodes>
-				<xe:pageTreeNode page="Domino_Home" label="Home">
+				<xe:pageTreeNode page="Core_Home" label="Home">
 				</xe:pageTreeNode>
-				<xe:pageTreeNode page="Domino_UserBean"
-					label="User Bean">
+				<xe:pageTreeNode page="OneUI_Home"
+					label="OneUI">
 				</xe:pageTreeNode>
-				<xe:pageTreeNode page="Domino_ViewState"
-					label="View State">
+				<xe:pageTreeNode page="OneUI_BreadCrumbs"
+					label="Bread Crumbs">
 				</xe:pageTreeNode>
 			</xe:this.treeNodes>
 		</xe:breadCrumbs>

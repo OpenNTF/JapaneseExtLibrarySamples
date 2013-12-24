@@ -193,7 +193,7 @@ return calendarView1.getDate();}]]></xp:this.value>
 						</xp:table>
 				</xp:panel>
 				Existing:
-				<xp:viewPanel rows="30" id="viewPanel1" pageName="/DWA_CalendarView.xsp" role="presentation">
+				<xp:viewPanel rows="30" id="viewPanel1" pageName="/DWA_CalendarView.xsp">
 					<xp:this.facets>
 						<xp:pager partialRefresh="true" layout="Previous Group Next"
 							xp:key="headerPager" id="pager1">

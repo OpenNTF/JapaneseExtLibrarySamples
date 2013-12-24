@@ -298,7 +298,7 @@ if (calendarView1 != null) {
 				</xp:panel>
 				Existing:
 				<xp:viewPanel rows="30" id="viewPanel1"
-					pageName="/DWA_CalendarView.xsp" role="presentation">
+					pageName="/DWA_CalendarView.xsp">
 					<xp:this.facets>
 						<xp:pager partialRefresh="true"
 							layout="Previous Group Next" xp:key="headerPager" id="pager1">

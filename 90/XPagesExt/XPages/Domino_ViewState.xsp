@@ -19,7 +19,7 @@
 				globalRows="true">
 			</xe:pagerSaveState>
 			<xp:viewPanel rows="10" id="viewPanel1"
-				pageName="/Domino_ViewStateForm.xsp" role="presentation">
+				pageName="/Domino_ViewStateForm.xsp">
 				<xp:this.facets>
 					<xp:panel xp:key="headerPager" id="panel2">
 						<xe:pagerExpand id="pagerExpand1"

@@ -23,7 +23,7 @@
 				useHash="true">
 				<xp:this.facets>
 					<xp:panel xp:key="byauthor" id="byauthor">
-						<xp:viewPanel rows="30" id="viewPanel2" role="presentation">
+						<xp:viewPanel rows="30" id="viewPanel2">
 							<xp:this.facets>
 								<xp:pager partialRefresh="true" layout="Previous Group Next"
 									xp:key="headerPager" id="pager4">
@@ -49,7 +49,7 @@
 						</xp:viewPanel>
 					</xp:panel>
 					<xp:panel xp:key="bydate" id="bydate">
-						<xp:viewPanel rows="30" id="viewPanel3" role="presentation">
+						<xp:viewPanel rows="30" id="viewPanel3">
 							<xp:this.facets>
 								<xp:pager partialRefresh="true" layout="Previous Group Next"
 									xp:key="headerPager" id="pager5">
