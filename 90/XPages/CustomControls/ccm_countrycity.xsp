@@ -11,10 +11,16 @@
 		<xp:pagerControl type="Previous" id="pagerControl1"></xp:pagerControl>
 		<xp:pagerControl type="Next" id="pagerControl2"></xp:pagerControl>
 	</xp:pager>
-	<xp:button value="Add Rows" id="button1"><xp:eventHandler event="onclick" submit="false">
-	<xp:this.script>
-		<xe:addRows for="dataView1" rowCount="5" state="true"></xe:addRows>
-	</xp:this.script></xp:eventHandler></xp:button>
+			<xp:link escape="true" text="Add Rows" id="link1">
+						<xp:eventHandler event="onclick"
+							submit="false">
+							<xp:this.script>
+								<xe:addRows for="dataView1" rowCount="5"
+									state="true">
+								</xe:addRows>
+							</xp:this.script>
+						</xp:eventHandler>
+					</xp:link>
 			</xp:panel>
 	</xp:this.facets>
 			<xe:this.data>

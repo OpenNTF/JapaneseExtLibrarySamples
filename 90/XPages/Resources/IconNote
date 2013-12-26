@@ -1,24 +1,24 @@
 <?xml version='1.0' encoding='utf-8'?>
 <note default='true' class='icon' xmlns='http://www.lotus.com/dxl' version='9.0'
- replicaid='85257A870079CB8F'>
-<noteinfo noteid='116' unid='85255A0A0010AC8E85254BD4001E8D43' sequence='14'>
+ maintenanceversion='1.0' replicaid='80257C350049C2B7'>
+<noteinfo noteid='11a' unid='85255A0A0010AC8E85254BD4001E8D43' sequence='19'>
 <created><datetime dst='true'>19800105T013342,43-04</datetime></created>
-<modified><datetime>20130319T214317,08+09</datetime></modified>
-<revised><datetime>20130319T214317,07+09</datetime></revised>
-<lastaccessed><datetime>20130319T214317,08+09</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20120928T180546,88-04</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=Admin/O=LotusLab</name></updatedby>
-<revisions><datetime dst='true'>20110126T161912,46-04</datetime><datetime
- dst='true'>20110126T161912,50-04</datetime><datetime dst='true'>20110126T161912,52-04</datetime><datetime
- dst='true'>20110126T161925,33-04</datetime><datetime dst='true'>20110127T152040,57+01</datetime><datetime
- dst='true'>20110127T152140,25+01</datetime><datetime dst='true'>20110308T131428,17+01</datetime><datetime
- dst='true'>20110308T131646,46+01</datetime><datetime dst='true'>20110308T131646,49+01</datetime><datetime
- dst='true'>20110308T131646,51+01</datetime><datetime dst='true'>20110308T131646,53+01</datetime><datetime
- dst='true'>20110308T131646,55+01</datetime><datetime dst='true'>20110308T131815,92+01</datetime><datetime
- dst='true'>20110411T160040,10+01</datetime><datetime dst='true'>20120928T180649,27-04</datetime><datetime
- dst='true'>20121005T112632,93+01</datetime><datetime dst='true'>20121126T120155,43+01</datetime><datetime
- dst='true'>20121126T161842,62+01</datetime><datetime dst='true'>20121203T160052,17+01</datetime><datetime
- dst='true'>20121212T120518,10+01</datetime><datetime dst='true'>20121212T120518,26+01</datetime></revisions>
+<modified><datetime>20131225T164101,64+09</datetime></modified>
+<revised><datetime>20131225T164101,63+09</datetime></revised>
+<lastaccessed><datetime>20131225T164101,64+09</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20131202T142539,96+01</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=a admin/O=ibm</name><name
+>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=Scott O'Keefe/OU=Westford/O=IBM</name><name
+>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=Thomas Gumz/OU=Westford/O=IBM</name><name
+>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=Ana Kapetanakis/OU=Westford/O=IBM</name><name
+>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=a admin/O=ibm</name><name
+>CN=Admin/O=lotuslab</name></updatedby>
+<revisions><datetime dst='true'>20131009T135813,37-04</datetime><datetime
+ dst='true'>20131009T140713,07-04</datetime><datetime dst='true'>20131009T140713,54-04</datetime><datetime
+ dst='true'>20131009T140713,58-04</datetime><datetime dst='true'>20131009T140713,60-04</datetime><datetime
+ dst='true'>20131010T121327,68+01</datetime><datetime dst='true'>20131010T121645,65+01</datetime><datetime
+ dst='true'>20131015T161921,38+01</datetime><datetime dst='true'>20131015T163043,78+01</datetime><datetime
+ dst='true'>20131127T160403,76+01</datetime><datetime dst='true'>20131127T160631,06+01</datetime></revisions>
 <item name='$DefaultNavigator'><text>Main Navigator</text></item>
 <item name='$DefaultWebNavigator'><text>All Documents</text></item>
 <item name='$LaunchWebViewName'><text>($All)</text></item>
@@ -34,23 +34,23 @@
 <item name='$DBTheme'><text>oneuiv2.1</text></item>
 <item name='$DefaultXPage'><text>home_basics.xsp</text></item>
 <item name='$DefaultClientXPage'><text>home_basics.xsp</text></item>
-<item name='$Daos'><text>0</text></item>
 <item name='IconBitmap' summary='true'>
 <rawitemdata type='6'>
 AiAgAgUA///////AB///AAH//AAAf/gAAD/wAAAf8AAAH+AAAA/gAAAPwAAAB8AAAAfAAAAHwAAA
 B8AAAAfAAAAHwAAAB8AAAAeAAAADgAAAA4AAAAOAAAADgAAAA4AAAAOAAAADgAAAA4AAAAPAAAAH
-8AAAH/wAAH//AAH//+AP//////8AAAAAAAAAAAAAAAAAAAAAAAAAAADu7u7u7uAAAAAAAAAAAADu
-EREREREe4AAAAAAAAADuERERHdERER7gAAAAAAAOERHdEd3dEd0RHgAAAAAA4REd3dHd3R3d0RHg
-AAAAAOERHd3R3d0d3dER4AAAAA4RER3d0d3dHd3RER4AAAAOEREd3dHd3R3d0REeAAAA4RERHd3R
-3d0d3dEREeAAAOERHd3d0d3dHd3d0RHgAADhEd3d3dHd3R3d3d0R4AAA4RHd3d0RHdER3d3dEeAA
-AOERERERERERERERERHgAADhERER3REd0RHdERER4AAA4RERHd3R3d0d3dEREeAAAOERER3d0d3d
-Hd3RERHgAA4RERER3REd0RHdERERHgAOERERERERERERERERER4ADhEREREREREREREREREeAA4R
-0dHREdHR3dHd0d0RHgAOEdHR0RHR0dHR0RER0R4ADhEdEd0R0dHR0dER3dEeAA4R0dHR0dHR0dHd
-EdERHgAOEdHR0dHd0dHR0REd0R4ADhEREdHR0dHREdEREREeAADuERHdEdHR0RHd0REe4AAAAO4R
-ERHR0dEREREe4AAAAAAA7hERHRHd0REe4AAAAAAAAADu4RERERHu4AAAAAAAAAAAAA7u7u7uAAAA
+8AAAH/wAAH//AAH//+AP//////8AAAAAAAAAAAAAAAAAAAAAAAAAAABmZmZmZmAAAAAAAAAAAABm
+7u7u7u7mYAAAAAAAAABm7u7u5m7u7uZgAAAAAAAG7u5m7mZm7mbu5gAAAAAAbu7mZm5mZuZmbu5g
+AAAAAG7u5mZuZmbmZm7uYAAAAAbu7uZmbmZm5mZu7uYAAAAG7u7mZm5mZuZmbu7mAAAAbu7u5mZu
+ZmbmZm7u7mAAAG7u5mZmbmZm5mZmbu5gAABu7mZmZm5mZuZmZmbuYAAAbu5mZmbu5m7uZmZm7mAA
+AG7u7u7u7u7u7u7u7u5gAABu7u7uZu7mbu5m7u7uYAAAbu7u5mZuZmbmZm7u7mAAAG7u7uZmbmZm
+5mZu7u5gAAbu7u7uZu7mbu5m7u7u5gAG7u7u7u7u7u7u7u7u7uYABu7u7u7u7u7u7u7u7u7mAAbu
+Hh4e7h4eER4RHhHu5gAG7h4eHu4eHh4eHu7uHuYABu7h7hHuHh4eHh7uER7mAAbuHh4eHh4eHh4R
+7h7u5gAG7h4eHh4RHh4eHu7hHuYABu7u7h4eHh4e7h7u7u7mAABm7u4R7h4eHu4RHu7mYAAAAGbu
+7u4eHh7u7u7mYAAAAAAAZu7u4e4RHu7mYAAAAAAAAABmbu7u7u5mYAAAAAAAAAAAAAZmZmZmAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAA==
 </rawitemdata></item>
-<item name='$TITLE'><text>Demonstration Application for XPages in IBM Notes Domino R9.0.0
+<item name='$Daos'><text>0</text></item>
+<item name='$TITLE'><text>XPages Demonstration Application for Notes Domino 9.0.1
 XPAGES</text></item>
 <item name='$Flags'><text>R74!?</text></item>
 <item name='$LaunchXPageRunOnServer'><text>0</text></item>

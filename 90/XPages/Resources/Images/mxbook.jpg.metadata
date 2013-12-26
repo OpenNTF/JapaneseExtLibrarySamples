@@ -1,14 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?><note class="form" replicaid="85257A870079CB8F" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="82a" sequence="4" unid="C355265B10203AB78025791B00411E49">
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="80257C350049C2B7" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="5c2" sequence="4" unid="C355265B10203AB78025791B00411E49">
 <created><datetime dst="true">20110930T125115,93+01</datetime></created>
-<modified><datetime dst="true">20130118T132309,82+01</datetime></modified>
-<revised><datetime dst="true">20130118T132309,81+01</datetime></revised>
-<lastaccessed><datetime dst="true">20130118T132309,82+01</datetime></lastaccessed>
-<addedtofile><datetime dst="true">20120928T180649,01-04</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name></updatedby>
+<modified><datetime dst="true">20131202T143736,03+01</datetime></modified>
+<revised><datetime dst="true">20131202T143736,02+01</datetime></revised>
+<lastaccessed><datetime dst="true">20131202T143736,03+01</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20131202T142545,90+01</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=a admin/O=ibm</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name></updatedby>
 <item name="$TITLE"><text>mxbook.jpg</text></item>
 <item name="$Flags"><text>D34CiQ</text></item>
-<item name="$FlagsExt" sign="true"><text>D</text></item>
+<item name="$FlagsExt"><text>D</text></item>
 <item name="$ImagesWide" sign="true"><number>1</number></item>
 <item name="$ImagesHigh" sign="true"><number>1</number></item>
 <item name="$ImagesColorize" sign="true"><number>0</number></item>
@@ -17,4 +17,4 @@
 <item name="$MimeType" sign="true"><text>image/jpeg</text></item>
 <item name="$FileModDT" sign="true"><datetime dst="true">20110930T120840,60+01</datetime></item>
 <item name="$ImageNames" sign="true"><text>mxbook.jpg</text></item>
-<item name="$DesignerVersion" sign="true"><text>8.5.3</text></item></note>
+<item name="$DesignerVersion"><text>8.5.3</text></item></note>

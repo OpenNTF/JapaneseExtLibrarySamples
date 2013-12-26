@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?><note class="form" replicaid="85257A870079CB8F" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="1aa" sequence="7" unid="B011971B5072B0928025767800528927">
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="80257C350049C2B7" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="13e" sequence="7" unid="B011971B5072B0928025767800528927">
 <created><datetime dst="true">20091124T160130,63+01</datetime></created>
-<modified><datetime dst="true">20130118T132309,48+01</datetime></modified>
-<revised><datetime dst="true">20130118T132309,47+01</datetime></revised>
-<lastaccessed><datetime dst="true">20130118T132309,48+01</datetime></lastaccessed>
-<addedtofile><datetime dst="true">20120928T180550,19-04</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name></updatedby>
+<modified><datetime dst="true">20131202T143735,85+01</datetime></modified>
+<revised><datetime dst="true">20131202T143735,84+01</datetime></revised>
+<lastaccessed><datetime dst="true">20131202T143735,85+01</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20131202T142540,14+01</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name><name>CN=a admin/O=ibm</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=a admin/O=ibm</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name></updatedby>
 <item name="$Flags"><text>gC~4K2</text></item>
 <item name="$TITLE"><text>jsXSPUrl_fr_FR.properties</text></item>
 

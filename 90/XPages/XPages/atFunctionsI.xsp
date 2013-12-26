@@ -1,313 +1,336 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xp:view xmlns:xp="http://www.ibm.com/xsp/core"
-	xmlns:XPa="component/XPages.nsf"
-	xmlns:xc="http://www.ibm.com/xsp/custom">
+  xmlns:XPa="component/XPages.nsf"
+  xmlns:xc="http://www.ibm.com/xsp/custom">
 
-	<XPa:ccLayout id="cc4cclayout" navPath="/events/atfi/">
-		<xp:this.facets>
-			<xc:ccMenu_events xp:key="facetLeft"></xc:ccMenu_events>
-			<xp:panel xp:key="facetMain">
-				<xp:panel>
-					<xp:label id="label1" value="@I*: "
-						style="font-weight:bold;font-size:12pt">
-					</xp:label>
-					<xp:comboBox id="comboBoxAtFuncsI"
-						value="#{sessionScope.atFuncsIs}" defaultValue="None">
-						<xp:selectItem itemLabel="None"
-							itemValue="None">
-						</xp:selectItem>
-						<xp:selectItem itemLabel="@If"
-							itemValue="atFI01">
-						</xp:selectItem>
-						<xp:selectItem itemLabel="@Implode"
-							itemValue="atFI02">
-						</xp:selectItem>
-						<xp:selectItem itemLabel="@Integer"
-							itemValue="atFI03">
-						</xp:selectItem>
-						<xp:selectItem itemLabel="@IsAvailable"
-							itemValue="atFI04">
-						</xp:selectItem>
-						<xp:selectItem itemLabel="@IsDocBeingLoaded"
-							itemValue="atFI05">
-						</xp:selectItem>
-						<xp:selectItem itemLabel="@IsDocBeingSaved"
-							itemValue="atFI06">
-						</xp:selectItem>
-						<xp:selectItem itemLabel="@IsError"
-							itemValue="atFI07">
-						</xp:selectItem>
-						<xp:selectItem itemLabel="@IsMember"
-							itemValue="atFI08">
-						</xp:selectItem>
-						<xp:selectItem itemLabel="@IsNewDoc"
-							itemValue="atFI09">
-						</xp:selectItem>
-						<xp:selectItem itemLabel="@IsNotMember"
-							itemValue="atFI10">
-						</xp:selectItem>
-						<xp:selectItem itemLabel="@IsNull"
-							itemValue="atFI11">
-						</xp:selectItem>
-						<xp:selectItem itemLabel="@IsNumber"
-							itemValue="atFI12">
-						</xp:selectItem>
-						<xp:selectItem itemLabel="@IsResponseDoc"
-							itemValue="atFI13">
-						</xp:selectItem>
-						<xp:selectItem itemLabel="@IsText"
-							itemValue="atFI14">
-						</xp:selectItem>
-						<xp:selectItem itemLabel="@IsTime"
-							itemValue="atFI15">
-						</xp:selectItem>
-						<xp:selectItem itemLabel="@IsUnavailable"
-							itemValue="atFI16">
-						</xp:selectItem>
-						<xp:selectItem itemLabel="@IsWebClient"
-							itemValue="atFI17">
-						</xp:selectItem>
-						<xp:eventHandler event="onchange" submit="true"
-							refreshMode="complete">
-							<xp:this.action>
-								<![CDATA[#{javascript:print("")}]]>
-							</xp:this.action>
-						</xp:eventHandler>
-					</xp:comboBox>
-					<xp:panel>
-						<xp:panel>
-							<xp:this.rendered>
-								<![CDATA[#{javascript:sessionScope.atFuncsIs == "atFI01"}]]>
-							</xp:this.rendered>
-							<xp:table styleClass="customTable">
-								<xp:tr>
-									<xp:td>
-										<xp:label value="@Function: "
-											id="label2">
-										</xp:label>
-									</xp:td>
-									<xp:td>
-										@If&#160;| Executes a statement
-										based on a conditional test.
-									</xp:td>
-								</xp:tr>
-							</xp:table>
-							<xp:br />
-						</xp:panel>
-						<xp:panel>
-							<xp:this.rendered>
-								<![CDATA[#{javascript:sessionScope.atFuncsIs == "atFI02"}]]>
-							</xp:this.rendered>
-							<xp:table styleClass="customTable">
-								<xp:tr>
-									<xp:td>
-										<xp:label value="@Function: "
-											id="label3">
-										</xp:label>
-									</xp:td>
-									<xp:td>
-										@Implode(textList:any) : string
-										| Concatenates elements of a
-										text list into a string with
-										elements separated by the space.
-										<xp:br></xp:br>
-										@Implode(textList:any,
-										sep:string) : string |
-										Concatenates elements of a text
-										list into a string with elements
-										separated by a specified
-										separator.
-									</xp:td>
-								</xp:tr>
-							</xp:table>
-							<xp:br />
-						</xp:panel>
+  <XPa:ccLayout id="cc4cclayout" navPath="/events/atfi/">
+    <xp:this.facets>
+      <xc:ccMenu_events xp:key="facetLeft"></xc:ccMenu_events>
+      <xp:panel xp:key="facetMain">
+        <xp:panel>
+          <xp:label id="label1" value="@I*: "
+            style="font-weight:bold;font-size:12pt">
+          </xp:label>
+          <xp:comboBox id="comboBoxAtFuncsI"
+            value="#{sessionScope.atFuncsIs}" defaultValue="None">
+            <xp:selectItem itemLabel="None"
+              itemValue="None">
+            </xp:selectItem>
+            <xp:selectItem itemLabel="@If"
+              itemValue="atFI01">
+            </xp:selectItem>
+            <xp:selectItem itemLabel="@Implode"
+              itemValue="atFI02">
+            </xp:selectItem>
+            <xp:selectItem itemLabel="@Integer"
+              itemValue="atFI03">
+            </xp:selectItem>
+            <xp:selectItem itemLabel="@IsAvailable"
+              itemValue="atFI04">
+            </xp:selectItem>
+            <xp:selectItem itemLabel="@IsDocBeingLoaded"
+              itemValue="atFI05">
+            </xp:selectItem>
+            <xp:selectItem itemLabel="@IsDocBeingSaved"
+              itemValue="atFI06">
+            </xp:selectItem>
+            <xp:selectItem itemLabel="@IsError"
+              itemValue="atFI07">
+            </xp:selectItem>
+            <xp:selectItem itemLabel="@IsMember"
+              itemValue="atFI08">
+            </xp:selectItem>
+            <xp:selectItem itemLabel="@IsNewDoc"
+              itemValue="atFI09">
+            </xp:selectItem>
+            <xp:selectItem itemLabel="@IsNotMember"
+              itemValue="atFI10">
+            </xp:selectItem>
+            <xp:selectItem itemLabel="@IsNull"
+              itemValue="atFI11">
+            </xp:selectItem>
+            <xp:selectItem itemLabel="@IsNumber"
+              itemValue="atFI12">
+            </xp:selectItem>
+            <xp:selectItem itemLabel="@IsResponseDoc"
+              itemValue="atFI13">
+            </xp:selectItem>
+            <xp:selectItem itemLabel="@IsText"
+              itemValue="atFI14">
+            </xp:selectItem>
+            <xp:selectItem itemLabel="@IsTime"
+              itemValue="atFI15">
+            </xp:selectItem>
+            <xp:selectItem itemLabel="@IsUnavailable"
+              itemValue="atFI16">
+            </xp:selectItem>
+            <xp:selectItem itemLabel="@IsWebClient"
+              itemValue="atFI17">
+            </xp:selectItem>
+            <xp:eventHandler event="onchange" submit="true"
+              refreshMode="complete">
+              <xp:this.action>
+                <![CDATA[#{javascript:print("")}]]>
+              </xp:this.action>
+            </xp:eventHandler>
+          </xp:comboBox>
+          <xp:panel>
+            <xp:panel>
+              <xp:this.rendered>
+                <![CDATA[#{javascript:sessionScope.atFuncsIs == "atFI01"}]]>
+              </xp:this.rendered>
+              <xp:table styleClass="customTable">
+                <xp:tr>
+                  <xp:td>
+                    <xp:label value="@Function: "
+                      id="label2">
+                    </xp:label>
+                  </xp:td>
+                  <xp:td>
+                    @If
+                  </xp:td>
+                </xp:tr>
+                <xp:tr>
+                  <xp:td>Description:</xp:td>
+                  <xp:td> Executes a statement
+                    based on a conditional test.
+                  </xp:td>
+                </xp:tr>
+              </xp:table>
+              <xp:br />
+            </xp:panel>
+            <xp:panel>
+              <xp:this.rendered>
+                <![CDATA[#{javascript:sessionScope.atFuncsIs == "atFI02"}]]>
+              </xp:this.rendered>
+              <xp:table styleClass="customTable">
+                <xp:tr>
+                  <xp:td>
+                    <xp:label value="@Function: "
+                      id="label3">
+                    </xp:label>
+                  </xp:td>
+                  <xp:td>
+                    @Implode(textList:any) : string
+                    | Concatenates elements of a
+                    text list into a string with
+                    elements separated by the space.
+                    <xp:br></xp:br>
+                    <xp:br></xp:br>
+                    Description:&#160;Concatenates elements of a
+                    text list into a string with
+                    elements separated by the space.
+                    <xp:br></xp:br>
+                    <xp:br></xp:br>@Implode(textList:any,
+                    sep:string) : string .<xp:br></xp:br><xp:br></xp:br>Description:&#160;Concatenates elements of a text
+                    list into a string with elements
+                    separated by a specified
+                    separator</xp:td>
+                </xp:tr>
+                <xp:tr>
+                  <xp:td>Description:</xp:td>
+                  <xp:td></xp:td>
+                </xp:tr>
+              </xp:table>
+              <xp:br />
+            </xp:panel>
 
-						<xp:panel>
-							<xp:this.rendered>
-								<![CDATA[#{javascript:sessionScope.atFuncsIs == "atFI03"}]]>
-							</xp:this.rendered>
-							<xp:table styleClass="customTable">
-								<xp:tr>
-									<xp:td>
-										<xp:label value="@Function: "
-											id="label4">
-										</xp:label>
-									</xp:td>
-									<xp:td>
-										@Integer(value:double) : double
-										| Truncates the values in a
-										number or number list at the
-										whole number, leaving off any
-										decimals.
-									</xp:td>
-								</xp:tr>
-							</xp:table>
-							<xp:br />
-						</xp:panel>
+            <xp:panel>
+              <xp:this.rendered>
+                <![CDATA[#{javascript:sessionScope.atFuncsIs == "atFI03"}]]>
+              </xp:this.rendered>
+              <xp:table styleClass="customTable">
+                <xp:tr>
+                  <xp:td>
+                    <xp:label value="@Function: "
+                      id="label4">
+                    </xp:label>
+                  </xp:td>
+                  <xp:td>
+                    @Integer(value:double) : double
+                    </xp:td>
+                </xp:tr>
+                <xp:tr>
+                  <xp:td>Description:</xp:td>
+                  <xp:td>Truncates the values in a
+                    number or number list at the
+                    whole number, leaving off any
+                    decimals.
+                  </xp:td>
+                </xp:tr>
+              </xp:table>
+              <xp:br />
+            </xp:panel>
 
-						<xp:panel>
-							<xp:this.rendered>
-								<![CDATA[#{javascript:sessionScope.atFuncsIs == "atFI04"}]]>
-							</xp:this.rendered>
-							<xp:table styleClass="customTable">
-								<xp:tr>
-									<xp:td>
-										<xp:label value="@Function: "
-											id="label5">
-										</xp:label>
-									</xp:td>
-									<xp:td>
-										@IsAvailable(name:string) : int
-										| Indicates if the given field
-										exists in the current document.
-									</xp:td>
-								</xp:tr>
-							</xp:table>
-							<xp:br />
-							<xp:panel styleClass="content">
-								<xp:this.data>
-									<xp:dominoDocument var="document1"
-										formName="xspAtFunctions">
-									</xp:dominoDocument>
-									<xp:dominoView var="view1"
-										viewName="xspAtFunctionsView">
-									</xp:dominoView>
-								</xp:this.data>
-
-
-								Select any of the following link to
-								compute the field below:
-
-
-
-								<xp:repeat id="repeat3" value="#{view1}"
-									rows="100" var="coll1">
-
-
-									<xp:table id="table3"
-										styleClass="customTable">
-										<xp:tr>
+            <xp:panel>
+              <xp:this.rendered>
+                <![CDATA[#{javascript:sessionScope.atFuncsIs == "atFI04"}]]>
+              </xp:this.rendered>
+              <xp:table styleClass="customTable">
+                <xp:tr>
+                  <xp:td>
+                    <xp:label value="@Function: "
+                      id="label5">
+                    </xp:label>
+                  </xp:td>
+                  <xp:td>
+                    @IsAvailable(name:string) : int
+                    
+                  </xp:td>
+                </xp:tr>
+                <xp:tr>
+                  <xp:td>Description:</xp:td><xp:td>Indicates if the given field
+                    exists in the current document.
+                  </xp:td>
+                </xp:tr>
+              </xp:table>
+              <xp:br />
+              <xp:panel styleClass="content">
+                <xp:this.data>
+                  <xp:dominoDocument var="document1"
+                    formName="xspAtFunctions">
+                  </xp:dominoDocument>
+                  <xp:dominoView var="view1"
+                    viewName="xspAtFunctionsView">
+                  </xp:dominoView>
+                </xp:this.data>
 
 
-											<xp:td>
-												<xp:image
-													url="/actn103.gif" id="image4">
-												</xp:image>
+                Select any of the following link to
+                compute the field below:
 
-												<xp:link
-													id="linkAttachmentLenghts01">
-													<xp:this.text>
-														<![CDATA[#{javascript:coll1.getColumnValue("subject")}]]>
-													</xp:this.text>
 
-													<xp:eventHandler
-														event="onclick" submit="true" refreshMode="complete">
-														<xp:this.action>
-															<xp:openPage
-																name="/atFunctionsI.xsp" target="openDocument"
-																documentId="#{javascript:coll1.getId()}">
-															</xp:openPage>
-														</xp:this.action>
-													</xp:eventHandler>
-												</xp:link>
-											</xp:td>
 
-										</xp:tr>
-									</xp:table>
-								</xp:repeat>
+                <xp:repeat id="repeat3" value="#{view1}"
+                  rows="100" var="coll1">
 
-								<xp:label value="Subject = "
-									id="label19">
-								</xp:label>
-								<xp:text escape="true"
-									id="computedField2" value="#{document1.Subject}"
-									style="font-weight:bold">
-								</xp:text>
-								<xp:br></xp:br>
-								<xp:text escape="true"
-									id="computedField4AtIsAvailable"
-									style="font-weight:bold;color:rgb(128,0,255)">
-									<xp:this.value><![CDATA[#{javascript:if(@IsAvailable("Subject")== true)
+
+                  <xp:table id="table3"
+                    styleClass="customTable">
+                    <xp:tr>
+
+
+                      <xp:td>
+                        <xp:image
+                          url="/actn103.gif" id="image4">
+                        </xp:image>
+
+                        <xp:link
+                          id="linkAttachmentLenghts01">
+                          <xp:this.text>
+                            <![CDATA[#{javascript:coll1.getColumnValue("subject")}]]>
+                          </xp:this.text>
+
+                          <xp:eventHandler
+                            event="onclick" submit="true" refreshMode="complete">
+                            <xp:this.action>
+                              <xp:openPage
+                                name="/atFunctionsI.xsp" target="openDocument"
+                                documentId="#{javascript:coll1.getId()}">
+                              </xp:openPage>
+                            </xp:this.action>
+                          </xp:eventHandler>
+                        </xp:link>
+                      </xp:td>
+
+                    </xp:tr>
+                  </xp:table>
+                </xp:repeat>
+
+                <xp:label value="Subject = "
+                  id="label19">
+                </xp:label>
+                <xp:text escape="true"
+                  id="computedField2" value="#{document1.Subject}"
+                  style="font-weight:bold">
+                </xp:text>
+                <xp:br></xp:br>
+                <xp:text escape="true"
+                  id="computedField4AtIsAvailable"
+                  style="font-weight:bold;color:rgb(128,0,255)">
+                  <xp:this.value><![CDATA[#{javascript:if(@IsAvailable("Subject")== true)
 {
 @IsAvailable("Subject")+" Subject field is available";
 }
 else {
 @IsAvailable("Subject")+" Subject field not available";
 }}]]></xp:this.value>
-								</xp:text>
+                </xp:text>
 
-								<xp:br></xp:br>
-							</xp:panel>
-
-
+                <xp:br></xp:br>
+              </xp:panel>
 
 
 
 
-						</xp:panel>
 
-						<xp:panel>
-							<xp:this.rendered>
-								<![CDATA[#{javascript:sessionScope.atFuncsIs == "atFI05"}]]>
-							</xp:this.rendered>
-							<xp:table styleClass="customTable">
-								<xp:tr>
-									<xp:td>
-										<xp:label value="@Function: "
-											id="label6">
-										</xp:label>
-									</xp:td>
-									<xp:td>
-										@IsDocBeingLoaded() : int |
-										Indicates if the current
-										document is being loaded.
-									</xp:td>
-								</xp:tr>
-							</xp:table>
-							<xp:br />
 
-							<xp:panel styleClass="content">
-								<xp:this.data>
-									<xp:dominoDocument var="document1"
-										formName="xspAtFunctions">
-									</xp:dominoDocument>
-									<xp:dominoView var="view1"
-										viewName="xspAtFunctionsView">
-									</xp:dominoView>
-								</xp:this.data>
-								Select any of the following link to
-								compute the field below:
-								<xp:repeat id="repeat2" value="#{view1}"
-									rows="100" var="coll1">
-									<xp:table id="table2"
-										styleClass="customTable">
-										<xp:tr>
-											<xp:td>
-												<xp:image
-													url="/actn103.gif" id="image2">
-												</xp:image>
-												<xp:link id="link2">
-													<xp:this.text>
-														<![CDATA[#{javascript:coll1.getColumnValue("subject")}]]>
-													</xp:this.text>
-													<xp:eventHandler
-														event="onclick" submit="true" refreshMode="complete">
-														<xp:this.action>
-															<xp:openPage
-																name="/atFunctionsI.xsp" target="openDocument"
-																documentId="#{javascript:coll1.getId()}">
-															</xp:openPage>
-														</xp:this.action>
-													</xp:eventHandler>
-												</xp:link>
-											</xp:td>
-										</xp:tr>
-									</xp:table>
-								</xp:repeat>
-								<xp:text escape="true"
-									id="computedField4AtIsDocBeingLoaded">
-									<xp:this.value><![CDATA[#{javascript:
+            </xp:panel>
+
+            <xp:panel>
+              <xp:this.rendered>
+                <![CDATA[#{javascript:sessionScope.atFuncsIs == "atFI05"}]]>
+              </xp:this.rendered>
+              <xp:table styleClass="customTable">
+                <xp:tr>
+                  <xp:td>
+                    <xp:label value="@Function: "
+                      id="label6">
+                    </xp:label>
+                  </xp:td>
+                  <xp:td>
+                    @IsDocBeingLoaded() : int
+                  </xp:td>
+                </xp:tr>
+                <xp:tr>
+                  <xp:td>Description:</xp:td><xp:td>Indicates if the current
+                    document is being loaded.
+                  </xp:td>
+                </xp:tr>
+              </xp:table>
+              <xp:br />
+
+              <xp:panel styleClass="content">
+                <xp:this.data>
+                  <xp:dominoDocument var="document1"
+                    formName="xspAtFunctions">
+                  </xp:dominoDocument>
+                  <xp:dominoView var="view1"
+                    viewName="xspAtFunctionsView">
+                  </xp:dominoView>
+                </xp:this.data>
+                Select any of the following link to
+                compute the field below:
+                <xp:repeat id="repeat2" value="#{view1}"
+                  rows="100" var="coll1">
+                  <xp:table id="table2"
+                    styleClass="customTable">
+                    <xp:tr>
+                      <xp:td>
+                        <xp:image
+                          url="/actn103.gif" id="image2">
+                        </xp:image>
+                        <xp:link id="link2">
+                          <xp:this.text>
+                            <![CDATA[#{javascript:coll1.getColumnValue("subject")}]]>
+                          </xp:this.text>
+                          <xp:eventHandler
+                            event="onclick" submit="true" refreshMode="complete">
+                            <xp:this.action>
+                              <xp:openPage
+                                name="/atFunctionsI.xsp" target="openDocument"
+                                documentId="#{javascript:coll1.getId()}">
+                              </xp:openPage>
+                            </xp:this.action>
+                          </xp:eventHandler>
+                        </xp:link>
+                      </xp:td>
+                    </xp:tr>
+                  </xp:table>
+                </xp:repeat>
+                <xp:text escape="true"
+                  id="computedField4AtIsDocBeingLoaded">
+                  <xp:this.value><![CDATA[#{javascript:
 if(@IsDocBeingLoaded()==false)
 {
 @IsDocBeingLoaded()+" @IsDocBeingLoaded()=false";
@@ -315,75 +338,77 @@ if(@IsDocBeingLoaded()==false)
 else {
 @IsDocBeingLoaded()+"@IsDocBeingLoaded()=true";
 }}]]></xp:this.value>
-								</xp:text>
-								<xp:br></xp:br>
-							</xp:panel>
+                </xp:text>
+                <xp:br></xp:br>
+              </xp:panel>
 
 
 
 
-						</xp:panel>
+            </xp:panel>
 
-						<xp:panel>
-							<xp:this.rendered>
-								<![CDATA[#{javascript:sessionScope.atFuncsIs == "atFI06"}]]>
-							</xp:this.rendered>
-							<xp:table styleClass="customTable">
-								<xp:tr>
-									<xp:td>
-										<xp:label value="@Function: "
-											id="label7">
-										</xp:label>
-									</xp:td>
-									<xp:td>
-										@IsDocBeingSaved() : int |
-										Indicates if the current
-										document is being saved.
-									</xp:td>
-								</xp:tr>
-							</xp:table>
-							<xp:br />
-							<xp:panel styleClass="content">
-								<xp:this.data>
-									<xp:dominoDocument var="document1"
-										formName="xspAtFunctions">
-									</xp:dominoDocument>
-									<xp:dominoView var="view1"
-										viewName="xspAtFunctionsView">
-									</xp:dominoView>
-								</xp:this.data>
-								Select any of the following link to
-								compute the field below:
-								<xp:repeat id="repeat4" value="#{view1}"
-									rows="100" var="coll1">
-									<xp:table id="table4"
-										styleClass="customTable">
-										<xp:tr>
-											<xp:td>
-												<xp:image
-													url="/actn103.gif" id="image3">
-												</xp:image>
-												<xp:link id="link3">
-													<xp:this.text>
-														<![CDATA[#{javascript:coll1.getColumnValue("subject")}]]>
-													</xp:this.text>
-													<xp:eventHandler
-														event="onclick" submit="true" refreshMode="complete">
-														<xp:this.action>
-															<xp:openPage
-																name="/atFunctionsI.xsp" target="openDocument"
-																documentId="#{javascript:coll1.getId()}">
-															</xp:openPage>
-														</xp:this.action>
-													</xp:eventHandler>
-												</xp:link>
-											</xp:td>
-										</xp:tr>
-									</xp:table>
-								</xp:repeat>
-								<xp:text escape="true"
-									id="computedField4AtIsDocBeingSaved">
-									<xp:this.value><![CDATA[#{javascript:
+            <xp:panel>
+              <xp:this.rendered>
+                <![CDATA[#{javascript:sessionScope.atFuncsIs == "atFI06"}]]>
+              </xp:this.rendered>
+              <xp:table styleClass="customTable">
+                <xp:tr>
+                  <xp:td>
+                    <xp:label value="@Function: "
+                      id="label7">
+                    </xp:label>
+                  </xp:td>
+                  <xp:td>
+                    @IsDocBeingSaved() : int
+                  </xp:td>
+                </xp:tr>
+                <xp:tr>
+                  <xp:td>Description:</xp:td><xp:td>Indicates if the current
+                    document is being saved.</xp:td>
+                </xp:tr>
+              </xp:table>
+              <xp:br />
+              <xp:panel styleClass="content">
+                <xp:this.data>
+                  <xp:dominoDocument var="document1"
+                    formName="xspAtFunctions">
+                  </xp:dominoDocument>
+                  <xp:dominoView var="view1"
+                    viewName="xspAtFunctionsView">
+                  </xp:dominoView>
+                </xp:this.data>
+                Select any of the following link to
+                compute the field below:
+                <xp:repeat id="repeat4" value="#{view1}"
+                  rows="100" var="coll1">
+                  <xp:table id="table4"
+                    styleClass="customTable">
+                    <xp:tr>
+                      <xp:td>
+                        <xp:image
+                          url="/actn103.gif" id="image3">
+                        </xp:image>
+                        <xp:link id="link3">
+                          <xp:this.text>
+                            <![CDATA[#{javascript:coll1.getColumnValue("subject")}]]>
+                          </xp:this.text>
+                          <xp:eventHandler
+                            event="onclick" submit="true" refreshMode="complete">
+                            <xp:this.action>
+                              <xp:openPage
+                                name="/atFunctionsI.xsp" target="openDocument"
+                                documentId="#{javascript:coll1.getId()}">
+                              </xp:openPage>
+                            </xp:this.action>
+                          </xp:eventHandler>
+                        </xp:link>
+                      </xp:td>
+                    </xp:tr>
+                  </xp:table>
+                </xp:repeat>
+                <xp:text escape="true"
+                  id="computedField4AtIsDocBeingSaved">
+                  <xp:this.value><![CDATA[#{javascript:
 if(@IsDocBeingSaved()==false)
 {
 @IsDocBeingSaved()+" @IsDocBeingSaved()=false";
@@ -391,133 +416,140 @@ if(@IsDocBeingSaved()==false)
 else {
 @IsDocBeingSaved()+"@IsDocBeingSaved()=true";
 }}]]></xp:this.value>
-								</xp:text>
-								<xp:br></xp:br>
-							</xp:panel>
+                </xp:text>
+                <xp:br></xp:br>
+              </xp:panel>
 
 
 
 
-						</xp:panel>
+            </xp:panel>
 
-						<xp:panel>
-							<xp:this.rendered>
-								<![CDATA[#{javascript:sessionScope.atFuncsIs == "atFI07"}]]>
-							</xp:this.rendered>
-							<xp:table styleClass="customTable">
-								<xp:tr>
-									<xp:td>
-										<xp:label value="@Function: "
-											id="label8">
-										</xp:label>
-									</xp:td>
-									<xp:td>
-										@IsError(value:any) : int |
-										Indicates if a value is an error
-										condition.
-									</xp:td>
-								</xp:tr>
-							</xp:table>
-							<xp:br />
-						</xp:panel>
+            <xp:panel>
+              <xp:this.rendered>
+                <![CDATA[#{javascript:sessionScope.atFuncsIs == "atFI07"}]]>
+              </xp:this.rendered>
+              <xp:table styleClass="customTable">
+                <xp:tr>
+                  <xp:td>
+                    <xp:label value="@Function: "
+                      id="label8">
+                    </xp:label>
+                  </xp:td>
+                  <xp:td>
+                    @IsError(value:any) : int |
+                    Indicates if a value is an error
+                    condition.
+                  </xp:td>
+                </xp:tr>
+                <xp:tr>
+                  <xp:td>Description:</xp:td>
+                  <xp:td></xp:td>
+                </xp:tr>
+              </xp:table>
+              <xp:br />
+            </xp:panel>
 
-						<xp:panel>
-							<xp:this.rendered>
-								<![CDATA[#{javascript:sessionScope.atFuncsIs == "atFI08"}]]>
-							</xp:this.rendered>
-							<xp:table styleClass="customTable">
-								<xp:tr>
-									<xp:td>
-										<xp:label value="@Function: "
-											id="label9">
-										</xp:label>
-									</xp:td>
-									<xp:td>
-										@IsMember(value:any, list:any) :
-										int | Indicates if a list
-										contains all strings in another
-										list.
-										<xp:br></xp:br>
-										@IsMember(value:string,
-										list:any) : int | Indicates if a
-										list contains a string.
-									</xp:td>
-								</xp:tr>
-							</xp:table>
-							<xp:br />
-						</xp:panel>
+            <xp:panel>
+              <xp:this.rendered>
+                <![CDATA[#{javascript:sessionScope.atFuncsIs == "atFI08"}]]>
+              </xp:this.rendered>
+              <xp:table styleClass="customTable">
+                <xp:tr>
+                  <xp:td>
+                    <xp:label value="@Function: "
+                      id="label9">
+                    </xp:label>
+                  </xp:td>
+                  <xp:td>
+                    @IsMember(value:any, list:any) :
+                    int<xp:br></xp:br><xp:br></xp:br>Description:&#160;Indicates if a list
+                    contains all strings in another
+                    list.<xp:br></xp:br>
+                    <xp:br></xp:br>
+                    @IsMember(value:string,
+                    list:any) : int.
+                    <xp:br></xp:br>
+                    <xp:br></xp:br>Description:Indicates if a
+                    list contains a string</xp:td>
+                </xp:tr>
+                
+              </xp:table>
+              <xp:br />
+            </xp:panel>
 
-						<xp:panel>
-							<xp:this.rendered>
-								<![CDATA[#{javascript:sessionScope.atFuncsIs == "atFI09"}]]>
-							</xp:this.rendered>
+            <xp:panel>
+              <xp:this.rendered>
+                <![CDATA[#{javascript:sessionScope.atFuncsIs == "atFI09"}]]>
+              </xp:this.rendered>
 
-							<xp:table styleClass="customTable">
-								<xp:tr>
-									<xp:td>
-										<xp:label value="@Function: "
-											id="label10">
-										</xp:label>
-									</xp:td>
-									<xp:td>
-										@IsNewDoc() : int | Indicates if
-										the current document is a new
-										document.
-									</xp:td>
-								</xp:tr>
-							</xp:table>
-							<xp:br />
+              <xp:table styleClass="customTable">
+                <xp:tr>
+                  <xp:td>
+                    <xp:label value="@Function: "
+                      id="label10">
+                    </xp:label>
+                  </xp:td>
+                  <xp:td>
+                    @IsNewDoc() : int
+                  </xp:td>
+                </xp:tr>
+                <xp:tr>
+                  <xp:td>Description:</xp:td><xp:td>Indicates if
+                    the current document is a new
+                    document.</xp:td>
+                </xp:tr>
+              </xp:table>
+              <xp:br />
 
-							<xp:panel>
-								<xp:this.data>
-									<xp:dominoDocument var="document2"
-										formName="MainTopic">
-									</xp:dominoDocument>
-									<xp:dominoView var="view2"
-										viewName="(Default View)">
-									</xp:dominoView>
-								</xp:this.data>
+              <xp:panel>
+                <xp:this.data>
+                  <xp:dominoDocument var="document2"
+                    formName="MainTopic">
+                  </xp:dominoDocument>
+                  <xp:dominoView var="view2"
+                    viewName="(Default View)">
+                  </xp:dominoView>
+                </xp:this.data>
 
-								<xp:button value="New Document"
-									id="buttonNewCRUDDoc">
+                <xp:button value="New Document"
+                  id="buttonNewCRUDDoc">
 
-									<xp:eventHandler event="onclick"
-										submit="true" refreshMode="complete">
-										<xp:this.action>
-											<xp:openPage
-												name="/atFunctionsI.xsp" target="newDocument">
-											</xp:openPage>
-										</xp:this.action>
-									</xp:eventHandler>
-								</xp:button>
-
-
-								<xp:button value="Save"
-									id="buttonSaveCloseCRUD">
-
-									<xp:eventHandler event="onclick"
-										submit="true" refreshMode="complete">
-										<xp:this.action>
-											<xp:saveDocument></xp:saveDocument>
-										</xp:this.action>
-									</xp:eventHandler>
-								</xp:button>
-
-								<xp:button value="Delete"
-									id="buttonDeleteCRUD">
-
-									<xp:eventHandler event="onclick"
-										submit="true" refreshMode="complete">
-										<xp:this.action>
-											<xp:deleteDocument
-												name="/atFunctionsI.xsp"
-												message="This action will delete this document.">
-											</xp:deleteDocument>
-										</xp:this.action>
-									</xp:eventHandler>
-								</xp:button>
+                  <xp:eventHandler event="onclick"
+                    submit="true" refreshMode="complete">
+                    <xp:this.action>
+                      <xp:openPage
+                        name="/atFunctionsI.xsp" target="newDocument">
+                      </xp:openPage>
+                    </xp:this.action>
+                  </xp:eventHandler>
+                </xp:button>
 
 
+                <xp:button value="Save"
+                  id="buttonSaveCloseCRUD">
+
+                  <xp:eventHandler event="onclick"
+                    submit="true" refreshMode="complete">
+                    <xp:this.action>
+                      <xp:saveDocument></xp:saveDocument>
+                    </xp:this.action>
+                  </xp:eventHandler>
+                </xp:button>
+
+                <xp:button value="Delete"
+                  id="buttonDeleteCRUD">
+
+                  <xp:eventHandler event="onclick"
+                    submit="true" refreshMode="complete">
+                    <xp:this.action>
+                      <xp:deleteDocument
+                        name="/atFunctionsI.xsp"
+                        message="This action will delete this document.">
+                      </xp:deleteDocument>
+                    </xp:this.action>
+                  </xp:eventHandler>
+                </xp:button>
 
 
 
@@ -527,18 +559,20 @@ else {
 
 
 
-								<xp:table>
-									<xp:tr>
-										<xp:td>
-											<xp:label value="Test: "
-												id="label21" style="color:rgb(128,0,255)">
-											</xp:label>
-										</xp:td>
-										<xp:td>
-											<xp:text escape="true"
-												id="computedField4AtIsNewDoc"
-												style="font-weight:bold;color:rgb(128,0,255)">
-												<xp:this.value><![CDATA[#{javascript:if(@IsNewDoc()==false)
+
+
+                <xp:table>
+                  <xp:tr>
+                    <xp:td>
+                      <xp:label value="Test: "
+                        id="label21" style="color:rgb(128,0,255)">
+                      </xp:label>
+                    </xp:td>
+                    <xp:td>
+                      <xp:text escape="true"
+                        id="computedField4AtIsNewDoc"
+                        style="font-weight:bold;color:rgb(128,0,255)">
+                        <xp:this.value><![CDATA[#{javascript:if(@IsNewDoc()==false)
 {
 @IsNewDoc()+" @IsNewDoc()=false - This is an existing document.";
 }
@@ -546,245 +580,253 @@ else {
 @IsNewDoc()+" @IsNewDoc()=true - This is a new document.";
 }
 }]]></xp:this.value>
-											</xp:text>
-										</xp:td>
-									</xp:tr>
-									<xp:tr>
-										<xp:td>
-											<xp:label value="Subject: "
-												id="label22">
-											</xp:label>
-										</xp:td>
-										<xp:td>
-											<xp:inputText
-												id="inputTextCRUDSubject" value="#{document2.Subject}">
-											</xp:inputText>
-										</xp:td>
-									</xp:tr>
-									<xp:tr>
-										<xp:td>
-											<xp:label value="Category: "
-												id="label23">
-											</xp:label>
-										</xp:td>
-										<xp:td>
-											<xp:inputText
-												id="inputTextCRUDCategories"
-												value="#{document2.Categories}">
-											</xp:inputText>
-										</xp:td>
-									</xp:tr>
-									<xp:tr>
-										<xp:td>
-											<xp:label value="Body: "
-												id="label24">
-											</xp:label>
-										</xp:td>
-										<xp:td>
-											<xp:inputTextarea
-												id="inputTextareaCRUDBody" value="#{document2.Body}">
-											</xp:inputTextarea>
-										</xp:td>
-									</xp:tr>
-								</xp:table>
-								<xp:repeat rows="30" value="#{view2}"
-									var="coll1">
-									<xp:table>
-										<xp:tr>
-											<xp:td>
-												<xp:image
-													url="/vwicn142.gif" id="image5">
-												</xp:image>
-											</xp:td>
-											<xp:td>
+                      </xp:text>
+                    </xp:td>
+                  </xp:tr>
+                  <xp:tr>
+                    <xp:td>
+                      <xp:label value="Subject: "
+                        id="label22">
+                      </xp:label>
+                    </xp:td>
+                    <xp:td>
+                      <xp:inputText
+                        id="inputTextCRUDSubject" value="#{document2.Subject}">
+                      </xp:inputText>
+                    </xp:td>
+                  </xp:tr>
+                  <xp:tr>
+                    <xp:td>
+                      <xp:label value="Category: "
+                        id="label23">
+                      </xp:label>
+                    </xp:td>
+                    <xp:td>
+                      <xp:inputText
+                        id="inputTextCRUDCategories"
+                        value="#{document2.Categories}">
+                      </xp:inputText>
+                    </xp:td>
+                  </xp:tr>
+                  <xp:tr>
+                    <xp:td>
+                      <xp:label value="Body: "
+                        id="label24">
+                      </xp:label>
+                    </xp:td>
+                    <xp:td>
+                      <xp:inputTextarea
+                        id="inputTextareaCRUDBody" value="#{document2.Body}">
+                      </xp:inputTextarea>
+                    </xp:td>
+                  </xp:tr>
+                </xp:table>
+                <xp:repeat rows="30" value="#{view2}"
+                  var="coll1">
+                  <xp:table>
+                    <xp:tr>
+                      <xp:td>
+                        <xp:image
+                          url="/vwicn142.gif" id="image5">
+                        </xp:image>
+                      </xp:td>
+                      <xp:td>
 
 
-												<xp:link escape="true"
-													id="link4">
-													<xp:this.text><![CDATA[#{javascript:coll1.getColumnValue("Topic")}]]></xp:this.text>
-													<xp:eventHandler
-														event="onclick" submit="true" refreshMode="complete">
-														<xp:this.action>
-															<xp:openPage
-																name="/atFunctionsI.xsp" target="openDocument"
-																documentId="#{javascript:coll1.getId()}">
-															</xp:openPage>
-														</xp:this.action>
-													</xp:eventHandler>
-												</xp:link>
-											</xp:td>
-											<xp:td></xp:td>
-										</xp:tr>
-									</xp:table>
-								</xp:repeat>
-
-
-
-
-							</xp:panel>
-
-						</xp:panel>
-
-						<xp:panel>
-							<xp:this.rendered>
-								<![CDATA[#{javascript:sessionScope.atFuncsIs == "atFI10"}]]>
-							</xp:this.rendered>
-							<xp:table styleClass="customTable">
-								<xp:tr>
-									<xp:td>
-										<xp:label value="@Function: "
-											id="label11">
-										</xp:label>
-									</xp:td>
-									<xp:td>
-										@IsNotMember(value:any,
-										list:any) : int | Indicates if a
-										list does not contain all
-										strings in another list.
-										<xp:br></xp:br>
-										@IsNotMember(value:string,
-										list:any) : int | Indicates if a
-										list does not contain a string.
-									</xp:td>
-								</xp:tr>
-							</xp:table>
-							<xp:br />
-						</xp:panel>
-
-						<xp:panel>
-							<xp:this.rendered>
-								<![CDATA[#{javascript:sessionScope.atFuncsIs == "atFI11"}]]>
-							</xp:this.rendered>
-							<xp:table styleClass="customTable">
-								<xp:tr>
-									<xp:td>
-										<xp:label value="@Function: "
-											id="label12">
-										</xp:label>
-									</xp:td>
-									<xp:td>
-										@IsNull(value:any) : int |
-										Indicates if a value is an empty
-										string or list of empty strings.
-									</xp:td>
-								</xp:tr>
-							</xp:table>
-							<xp:br />
-						</xp:panel>
-
-						<xp:panel>
-							<xp:this.rendered>
-								<![CDATA[#{javascript:sessionScope.atFuncsIs == "atFI12"}]]>
-							</xp:this.rendered>
-							<xp:table styleClass="customTable">
-								<xp:tr>
-									<xp:td>
-										<xp:label value="@Function: "
-											id="label13">
-										</xp:label>
-									</xp:td>
-									<xp:td>
-										@IsNumber(value:any) : int |
-										Indicates if a value is a
-										number.
-									</xp:td>
-								</xp:tr>
-							</xp:table>
-							<xp:br />
-						</xp:panel>
-
-						<xp:panel>
-							<xp:this.rendered>
-								<![CDATA[#{javascript:sessionScope.atFuncsIs == "atFI13"}]]>
-							</xp:this.rendered>
-							<xp:table styleClass="customTable">
-								<xp:tr>
-									<xp:td>
-										<xp:label value="@Function: "
-											id="label14">
-										</xp:label>
-									</xp:td>
-									<xp:td>
-										@IsResponseDoc() : int |
-										Indicates if the current
-										document is a response document.
-									</xp:td>
-								</xp:tr>
-							</xp:table>
-							<xp:br />
+                        <xp:link escape="true"
+                          id="link4">
+                          <xp:this.text><![CDATA[#{javascript:coll1.getColumnValue("Topic")}]]></xp:this.text>
+                          <xp:eventHandler
+                            event="onclick" submit="true" refreshMode="complete">
+                            <xp:this.action>
+                              <xp:openPage
+                                name="/atFunctionsI.xsp" target="openDocument"
+                                documentId="#{javascript:coll1.getId()}">
+                              </xp:openPage>
+                            </xp:this.action>
+                          </xp:eventHandler>
+                        </xp:link>
+                      </xp:td>
+                      <xp:td></xp:td>
+                    </xp:tr>
+                  </xp:table>
+                </xp:repeat>
 
 
 
 
+              </xp:panel>
+
+            </xp:panel>
+
+            <xp:panel>
+              <xp:this.rendered>
+                <![CDATA[#{javascript:sessionScope.atFuncsIs == "atFI10"}]]>
+              </xp:this.rendered>
+              <xp:table styleClass="customTable">
+                <xp:tr>
+                  <xp:td>
+                    <xp:label value="@Function: "
+                      id="label11">
+                    </xp:label>
+                  </xp:td>
+                  <xp:td>
+                    @IsNotMember(value:any,
+                    list:any) : int<xp:br></xp:br><xp:br></xp:br>Description:
+                     Indicates if a
+                    list does not contain all
+                    strings in another list.<xp:br></xp:br><xp:br></xp:br>
+                    @IsNotMember(value:string,
+                    list:any) : int
+                    <xp:br></xp:br>
+                    <xp:br></xp:br>Description:&#160;Indicates if a
+                    list does not contain a string.</xp:td>
+                </xp:tr>
+                
+              </xp:table>
+              <xp:br />
+            </xp:panel>
+
+            <xp:panel>
+              <xp:this.rendered>
+                <![CDATA[#{javascript:sessionScope.atFuncsIs == "atFI11"}]]>
+              </xp:this.rendered>
+              <xp:table styleClass="customTable">
+                <xp:tr>
+                  <xp:td>
+                    <xp:label value="@Function: "
+                      id="label12">
+                    </xp:label>
+                  </xp:td>
+                  <xp:td>
+                    @IsNull(value:any) : int
+                  </xp:td>
+                </xp:tr>
+                <xp:tr>
+                  <xp:td>Description:</xp:td><xp:td>Indicates if a value is an empty
+                    string or list of empty strings.</xp:td>
+                </xp:tr>
+              </xp:table>
+              <xp:br />
+            </xp:panel>
+
+            <xp:panel>
+              <xp:this.rendered>
+                <![CDATA[#{javascript:sessionScope.atFuncsIs == "atFI12"}]]>
+              </xp:this.rendered>
+              <xp:table styleClass="customTable">
+                <xp:tr>
+                  <xp:td>
+                    <xp:label value="@Function: "
+                      id="label13">
+                    </xp:label>
+                  </xp:td>
+                  <xp:td>
+                    @IsNumber(value:any) : int </xp:td>
+                </xp:tr>
+                <xp:tr>
+                  <xp:td>Description:</xp:td>
+                  <xp:td>Indicates if a value is a
+                    number.
+                  </xp:td>
+                </xp:tr>
+              </xp:table>
+              <xp:br />
+            </xp:panel>
+
+            <xp:panel>
+              <xp:this.rendered>
+                <![CDATA[#{javascript:sessionScope.atFuncsIs == "atFI13"}]]>
+              </xp:this.rendered>
+              <xp:table styleClass="customTable">
+                <xp:tr>
+                  <xp:td>
+                    <xp:label value="@Function: "
+                      id="label14">
+                    </xp:label>
+                  </xp:td>
+                  <xp:td>
+                    @IsResponseDoc() : int 
+                  </xp:td>
+                </xp:tr>
+                <xp:tr>
+                  <xp:td>Description:</xp:td>
+                  <xp:td>Indicates if the current
+                    document is a response document.</xp:td>
+                </xp:tr>
+              </xp:table>
+              <xp:br />
 
 
 
-							<xp:panel>
-								<xp:this.data>
 
 
-									<xp:dominoDocument
-										var="document3">
-										<xp:this.formName><![CDATA[#{javascript:if (@IsResponseDoc() == true){"Response"
+
+
+              <xp:panel>
+                <xp:this.data>
+
+
+                  <xp:dominoDocument
+                    var="document3">
+                    <xp:this.formName><![CDATA[#{javascript:if (@IsResponseDoc() == true){"Response"
 }
 else ("MainTopic")}]]></xp:this.formName>
-									</xp:dominoDocument>
-									<xp:dominoView var="view3"
-										viewName="(Default View)">
-									</xp:dominoView>
-								</xp:this.data>
+                  </xp:dominoDocument>
+                  <xp:dominoView var="view3"
+                    viewName="(Default View)">
+                  </xp:dominoView>
+                </xp:this.data>
 
-								<xp:button value="New Document"
-									id="buttonAtIsResDocNewDocument" styleClass="customButton">
+                <xp:button value="New Document"
+                  id="buttonAtIsResDocNewDocument" styleClass="customButton">
 
-									<xp:eventHandler event="onclick"
-										submit="true" refreshMode="complete">
-										<xp:this.action>
-											<xp:openPage
-												name="/atFunctionsI.xsp" target="newDocument">
-											</xp:openPage>
-										</xp:this.action>
-									</xp:eventHandler>
-								</xp:button>
-
-
-								<xp:button value="Save"
-									id="buttonAtIsResDocSave" styleClass="customButton">
+                  <xp:eventHandler event="onclick"
+                    submit="true" refreshMode="complete">
+                    <xp:this.action>
+                      <xp:openPage
+                        name="/atFunctionsI.xsp" target="newDocument">
+                      </xp:openPage>
+                    </xp:this.action>
+                  </xp:eventHandler>
+                </xp:button>
 
 
-									<xp:eventHandler event="onclick"
-										submit="true" refreshMode="complete">
-										<xp:this.action>
-
-											<xp:actionGroup>
-												<xp:saveDocument></xp:saveDocument>
+                <xp:button value="Save"
+                  id="buttonAtIsResDocSave" styleClass="customButton">
 
 
+                  <xp:eventHandler event="onclick"
+                    submit="true" refreshMode="complete">
+                    <xp:this.action>
 
-												<xp:openPage
-													name="/atFunctionsI.xsp" target="openDocument"
-													documentId="#{javascript:document3.getNoteID()}">
-												</xp:openPage>
-											</xp:actionGroup>
-										</xp:this.action>
-									</xp:eventHandler>
-								</xp:button>
-
-								<xp:button value="Delete"
-									id="buttonAtIsResDocDeleteDoc" styleClass="customButton">
-
-									<xp:eventHandler event="onclick"
-										submit="true" refreshMode="complete">
-										<xp:this.action>
-											<xp:deleteDocument
-												name="/atFunctionsI.xsp"
-												message="This action will delete this document.">
-											</xp:deleteDocument>
-										</xp:this.action>
-									</xp:eventHandler>
-								</xp:button>
+                      <xp:actionGroup>
+                        <xp:saveDocument></xp:saveDocument>
 
 
+
+                        <xp:openPage
+                          name="/atFunctionsI.xsp" target="openDocument"
+                          documentId="#{javascript:document3.getNoteID()}">
+                        </xp:openPage>
+                      </xp:actionGroup>
+                    </xp:this.action>
+                  </xp:eventHandler>
+                </xp:button>
+
+                <xp:button value="Delete"
+                  id="buttonAtIsResDocDeleteDoc" styleClass="customButton">
+
+                  <xp:eventHandler event="onclick"
+                    submit="true" refreshMode="complete">
+                    <xp:this.action>
+                      <xp:deleteDocument
+                        name="/atFunctionsI.xsp"
+                        message="This action will delete this document.">
+                      </xp:deleteDocument>
+                    </xp:this.action>
+                  </xp:eventHandler>
+                </xp:button>
 
 
 
@@ -794,31 +836,33 @@ else ("MainTopic")}]]></xp:this.formName>
 
 
 
-								<xp:button value="Reponse"
-									id="buttonAtIsResDocCreateResponseDoc"
-									styleClass="customButton"
-									rendered="#{javascript:!@IsResponseDoc()}">
 
-									<xp:eventHandler event="onclick"
-										submit="true" refreshMode="complete">
-										<xp:this.action>
-											<xp:createResponse
-												name="/atFunctionsI.xsp"
-												parentId="#{javascript:document3.getNoteID()}">
-											</xp:createResponse>
-										</xp:this.action>
-									</xp:eventHandler>
-								</xp:button>
-								<xp:table>
-									<xp:tr>
-										<xp:td>
 
-										</xp:td>
-										<xp:td>
-											<xp:text escape="true"
-												id="computedField4IsResponseDoc"
-												style="font-weight:bold;color:rgb(128,0,255)">
-												<xp:this.value><![CDATA[#{javascript:if(@IsResponseDoc()==false)
+                <xp:button value="Reponse"
+                  id="buttonAtIsResDocCreateResponseDoc"
+                  styleClass="customButton"
+                  rendered="#{javascript:!@IsResponseDoc()}">
+
+                  <xp:eventHandler event="onclick"
+                    submit="true" refreshMode="complete">
+                    <xp:this.action>
+                      <xp:createResponse
+                        name="/atFunctionsI.xsp"
+                        parentId="#{javascript:document3.getNoteID()}">
+                      </xp:createResponse>
+                    </xp:this.action>
+                  </xp:eventHandler>
+                </xp:button>
+                <xp:table>
+                  <xp:tr>
+                    <xp:td>
+
+                    </xp:td>
+                    <xp:td>
+                      <xp:text escape="true"
+                        id="computedField4IsResponseDoc"
+                        style="font-weight:bold;color:rgb(128,0,255)">
+                        <xp:this.value><![CDATA[#{javascript:if(@IsResponseDoc()==false)
 {
 @IsResponseDoc()+" @IsResponseDoc()=false - This is not a response document.";
 }
@@ -826,258 +870,273 @@ else {
 @IsResponseDoc()+" @IsResponseDoc()=true - This is a Response document.";
 }
 }]]></xp:this.value>
-											</xp:text>
-										</xp:td>
-									</xp:tr>
-									<xp:tr>
-										<xp:td>
-											<xp:label value="Subject: "
-												id="label30">
-											</xp:label>
-										</xp:td>
-										<xp:td>
-											<xp:inputText
-												id="inputTextAtIsResDocSubject"
-												value="#{document3.Subject}">
-											</xp:inputText>
-										</xp:td>
-									</xp:tr>
-									<xp:tr>
-										<xp:td>
-											<xp:label value="Category: "
-												id="label31"
-												rendered="#{javascript:@IsResponseDoc() == false}">
-											</xp:label>
-										</xp:td>
-										<xp:td>
-											<xp:inputText
-												id="inputTextAtIsResDocCategory"
-												value="#{document3.Categories}"
-												rendered="#{javascript:@IsResponseDoc() == false}">
-											</xp:inputText>
-										</xp:td>
-									</xp:tr>
-									<xp:tr>
-										<xp:td>
-											<xp:label value="Body: "
-												id="label32">
-											</xp:label>
-										</xp:td>
-										<xp:td>
-											<xp:inputTextarea
-												id="inputTextareaAtIsResDocBody"
-												value="#{document3.Body}">
-											</xp:inputTextarea>
-										</xp:td>
-									</xp:tr>
-								</xp:table>
-								<xp:repeat rows="30" value="#{view3}"
-									var="coll1">
-									<xp:table>
-										<xp:tr>
-											<xp:td>
-												<xp:image
-													url="/vwicn142.gif" id="image7">
-												</xp:image>
-											</xp:td>
-											<xp:td>
+                      </xp:text>
+                    </xp:td>
+                  </xp:tr>
+                  <xp:tr>
+                    <xp:td>
+                      <xp:label value="Subject: "
+                        id="label30">
+                      </xp:label>
+                    </xp:td>
+                    <xp:td>
+                      <xp:inputText
+                        id="inputTextAtIsResDocSubject"
+                        value="#{document3.Subject}">
+                      </xp:inputText>
+                    </xp:td>
+                  </xp:tr>
+                  <xp:tr>
+                    <xp:td>
+                      <xp:label value="Category: "
+                        id="label31"
+                        rendered="#{javascript:@IsResponseDoc() == false}">
+                      </xp:label>
+                    </xp:td>
+                    <xp:td>
+                      <xp:inputText
+                        id="inputTextAtIsResDocCategory"
+                        value="#{document3.Categories}"
+                        rendered="#{javascript:@IsResponseDoc() == false}">
+                      </xp:inputText>
+                    </xp:td>
+                  </xp:tr>
+                  <xp:tr>
+                    <xp:td>
+                      <xp:label value="Body: "
+                        id="label32">
+                      </xp:label>
+                    </xp:td>
+                    <xp:td>
+                      <xp:inputTextarea
+                        id="inputTextareaAtIsResDocBody"
+                        value="#{document3.Body}">
+                      </xp:inputTextarea>
+                    </xp:td>
+                  </xp:tr>
+                </xp:table>
+                <xp:repeat rows="30" value="#{view3}"
+                  var="coll1">
+                  <xp:table>
+                    <xp:tr>
+                      <xp:td>
+                        <xp:image
+                          url="/vwicn142.gif" id="image7">
+                        </xp:image>
+                      </xp:td>
+                      <xp:td>
 
 
-												<xp:link escape="true"
-													id="link6">
-													<xp:this.text><![CDATA[#{javascript:coll1.getColumnValue("Topic")}]]></xp:this.text>
-													<xp:eventHandler
-														event="onclick" submit="true" refreshMode="complete">
-														<xp:this.action>
-															<xp:openPage
-																name="/atFunctionsI.xsp" target="openDocument"
-																documentId="#{javascript:coll1.getId()}">
-															</xp:openPage>
-														</xp:this.action>
-													</xp:eventHandler>
-												</xp:link>
-											</xp:td>
-											<xp:td></xp:td>
-										</xp:tr>
-									</xp:table>
-								</xp:repeat>
-
-
-
-
-							</xp:panel>
-						</xp:panel>
-
-						<xp:panel>
-							<xp:this.rendered>
-								<![CDATA[#{javascript:sessionScope.atFuncsIs == "atFI14"}]]>
-							</xp:this.rendered>
-							<xp:table styleClass="customTable">
-								<xp:tr>
-									<xp:td>
-										<xp:label value="@Function: "
-											id="label15">
-										</xp:label>
-									</xp:td>
-									<xp:td>
-										@IsText(value:any) : int |
-										Indicates if a value is a
-										string.
-									</xp:td>
-								</xp:tr>
-							</xp:table>
-							<xp:br />
-						</xp:panel>
-
-						<xp:panel>
-							<xp:this.rendered>
-								<![CDATA[#{javascript:sessionScope.atFuncsIs == "atFI15"}]]>
-							</xp:this.rendered>
-							<xp:table styleClass="customTable">
-								<xp:tr>
-									<xp:td>
-										<xp:label value="@Function: "
-											id="label16">
-										</xp:label>
-									</xp:td>
-									<xp:td>
-										@IsTime(value:any) : int |
-										Indicates if a value is a date
-										and time.
-									</xp:td>
-								</xp:tr>
-							</xp:table>
-							<xp:br />
-						</xp:panel>
-
-						<xp:panel>
-							<xp:this.rendered>
-								<![CDATA[#{javascript:sessionScope.atFuncsIs == "atFI16"}]]>
-							</xp:this.rendered>
-							<xp:table styleClass="customTable">
-								<xp:tr>
-									<xp:td>
-										<xp:label value="@Function: "
-											id="label17">
-										</xp:label>
-									</xp:td>
-									<xp:td>
-										@IsUnavailable(name:string) :
-										int | Returns 0 if the given
-										field exists in the current
-										document.
-									</xp:td>
-								</xp:tr>
-							</xp:table>
-							<xp:br />
-
-							<xp:panel styleClass="content">
-								<xp:this.data>
-									<xp:dominoDocument var="document1"
-										formName="xspAtFunctions">
-									</xp:dominoDocument>
-									<xp:dominoView var="view1"
-										viewName="xspAtFunctionsView">
-									</xp:dominoView>
-								</xp:this.data>
-
-
-								Select any of the following link to
-								compute the field below:
+                        <xp:link escape="true"
+                          id="link6">
+                          <xp:this.text><![CDATA[#{javascript:coll1.getColumnValue("Topic")}]]></xp:this.text>
+                          <xp:eventHandler
+                            event="onclick" submit="true" refreshMode="complete">
+                            <xp:this.action>
+                              <xp:openPage
+                                name="/atFunctionsI.xsp" target="openDocument"
+                                documentId="#{javascript:coll1.getId()}">
+                              </xp:openPage>
+                            </xp:this.action>
+                          </xp:eventHandler>
+                        </xp:link>
+                      </xp:td>
+                      <xp:td></xp:td>
+                    </xp:tr>
+                  </xp:table>
+                </xp:repeat>
 
 
 
 
-								<xp:repeat id="repeat1" value="#{view1}"
-									rows="100" var="coll1">
+              </xp:panel>
+            </xp:panel>
+
+            <xp:panel>
+              <xp:this.rendered>
+                <![CDATA[#{javascript:sessionScope.atFuncsIs == "atFI14"}]]>
+              </xp:this.rendered>
+              <xp:table styleClass="customTable">
+                <xp:tr>
+                  <xp:td>
+                    <xp:label value="@Function: "
+                      id="label15">
+                    </xp:label>
+                  </xp:td>
+                  <xp:td>
+                    @IsText(value:any) : int
+                  </xp:td>
+                </xp:tr>
+                <xp:tr>
+                  <xp:td>Description:</xp:td>
+                  <xp:td> Indicates if a value is a
+                    string.</xp:td>
+                </xp:tr>
+              </xp:table>
+              <xp:br />
+            </xp:panel>
+
+            <xp:panel>
+              <xp:this.rendered>
+                <![CDATA[#{javascript:sessionScope.atFuncsIs == "atFI15"}]]>
+              </xp:this.rendered>
+              <xp:table styleClass="customTable">
+                <xp:tr>
+                  <xp:td>
+                    <xp:label value="@Function: "
+                      id="label16">
+                    </xp:label>
+                  </xp:td>
+                  <xp:td>
+                    @IsTime(value:any) : int .
+                  </xp:td>
+                </xp:tr>
+                <xp:tr>
+                  <xp:td>Description:</xp:td>
+                  <xp:td>Indicates if a value is a date
+                    and time</xp:td>
+                </xp:tr>
+              </xp:table>
+              <xp:br />
+            </xp:panel>
+
+            <xp:panel>
+              <xp:this.rendered>
+                <![CDATA[#{javascript:sessionScope.atFuncsIs == "atFI16"}]]>
+              </xp:this.rendered>
+              <xp:table styleClass="customTable">
+                <xp:tr>
+                  <xp:td>
+                    <xp:label value="@Function: "
+                      id="label17">
+                    </xp:label>
+                  </xp:td>
+                  <xp:td>
+                    @IsUnavailable(name:string) :
+                    int 
+                  </xp:td>
+                </xp:tr>
+                <xp:tr>
+                  <xp:td>Description:</xp:td>
+                  <xp:td>Returns 0 if the given
+                    field exists in the current
+                    document.</xp:td>
+                </xp:tr>
+              </xp:table>
+              <xp:br />
+
+              <xp:panel styleClass="content">
+                <xp:this.data>
+                  <xp:dominoDocument var="document1"
+                    formName="xspAtFunctions">
+                  </xp:dominoDocument>
+                  <xp:dominoView var="view1"
+                    viewName="xspAtFunctionsView">
+                  </xp:dominoView>
+                </xp:this.data>
 
 
-									<xp:table id="table1"
-										styleClass="customTable">
-										<xp:tr>
+                Select any of the following link to
+                compute the field below:
 
 
-											<xp:td>
-												<xp:image
-													url="/actn103.gif" id="image1">
-												</xp:image>
 
-												<xp:link id="link1">
-													<xp:this.text>
-														<![CDATA[#{javascript:coll1.getColumnValue("subject")}]]>
-													</xp:this.text>
 
-													<xp:eventHandler
-														event="onclick" submit="true" refreshMode="complete">
-														<xp:this.action>
-															<xp:openPage
-																name="/atFunctionsI.xsp" target="openDocument"
-																documentId="#{javascript:coll1.getId()}">
-															</xp:openPage>
-														</xp:this.action>
-													</xp:eventHandler>
-												</xp:link>
-											</xp:td>
+                <xp:repeat id="repeat1" value="#{view1}"
+                  rows="100" var="coll1">
 
-										</xp:tr>
-									</xp:table>
-								</xp:repeat>
 
-								<xp:label value="Subject = "
-									id="label20">
-								</xp:label>
-								<xp:text escape="true"
-									id="computedField3" value="#{document1.Subject}"
-									style="font-weight:bold">
-								</xp:text>
-								<xp:br></xp:br>
-								<xp:text escape="true"
-									id="computedField4AtIsunavailable01"
-									style="font-weight:bold;color:rgb(255,0,128)">
-									<xp:this.value><![CDATA[#{javascript:if(@IsUnavailable("Subject")== true)
+                  <xp:table id="table1"
+                    styleClass="customTable">
+                    <xp:tr>
+
+
+                      <xp:td>
+                        <xp:image
+                          url="/actn103.gif" id="image1">
+                        </xp:image>
+
+                        <xp:link id="link1">
+                          <xp:this.text>
+                            <![CDATA[#{javascript:coll1.getColumnValue("subject")}]]>
+                          </xp:this.text>
+
+                          <xp:eventHandler
+                            event="onclick" submit="true" refreshMode="complete">
+                            <xp:this.action>
+                              <xp:openPage
+                                name="/atFunctionsI.xsp" target="openDocument"
+                                documentId="#{javascript:coll1.getId()}">
+                              </xp:openPage>
+                            </xp:this.action>
+                          </xp:eventHandler>
+                        </xp:link>
+                      </xp:td>
+
+                    </xp:tr>
+                  </xp:table>
+                </xp:repeat>
+
+                <xp:label value="Subject = "
+                  id="label20">
+                </xp:label>
+                <xp:text escape="true"
+                  id="computedField3" value="#{document1.Subject}"
+                  style="font-weight:bold">
+                </xp:text>
+                <xp:br></xp:br>
+                <xp:text escape="true"
+                  id="computedField4AtIsunavailable01"
+                  style="font-weight:bold;color:rgb(255,0,128)">
+                  <xp:this.value><![CDATA[#{javascript:if(@IsUnavailable("Subject")== true)
 {
 @IsUnavailable("Subject")+" Subject field is unavailable";
 }
 else {
 @IsUnavailable("Subject")+" Subject field not unavailable";
 }}]]></xp:this.value>
-								</xp:text>
+                </xp:text>
 
-								<xp:br></xp:br>
-							</xp:panel>
-
-
+                <xp:br></xp:br>
+              </xp:panel>
 
 
-						</xp:panel>
-
-						<xp:panel>
-							<xp:this.rendered>
-								<![CDATA[#{javascript:sessionScope.atFuncsIs == "atFI17"}]]>
-							</xp:this.rendered>
-							<xp:table styleClass="customTable">
-								<xp:tr>
-									<xp:td>
-										<xp:label value="@Function: "
-											id="label18">
-										</xp:label>
-									</xp:td>
-									<xp:td>
-										@IsWebClient() : int | Indicates
-										if the execution environment is
-										a Web browser.
-									</xp:td>
-								</xp:tr>
-							</xp:table>
-							<xp:br />
-						</xp:panel>
 
 
-					</xp:panel>
-				</xp:panel>
+            </xp:panel>
 
-			</xp:panel>
+            <xp:panel>
+              <xp:this.rendered>
+                <![CDATA[#{javascript:sessionScope.atFuncsIs == "atFI17"}]]>
+              </xp:this.rendered>
+              <xp:table styleClass="customTable">
+                <xp:tr>
+                  <xp:td>
+                    <xp:label value="@Function: "
+                      id="label18">
+                    </xp:label>
+                  </xp:td>
+                  <xp:td>
+                    @IsWebClient() : int 
+                  </xp:td>
+                </xp:tr>
+                <xp:tr>
+                  <xp:td>Description:</xp:td>
+                  <xp:td>Indicates
+                    if the execution environment is
+                    a Web browser.
+                  </xp:td>
+                </xp:tr>
+              </xp:table>
+              <xp:br />
+            </xp:panel>
 
-		</xp:this.facets>
-	</XPa:ccLayout>
+
+          </xp:panel>
+        </xp:panel>
+
+      </xp:panel>
+
+    </xp:this.facets>
+  </XPa:ccLayout>
 </xp:view>

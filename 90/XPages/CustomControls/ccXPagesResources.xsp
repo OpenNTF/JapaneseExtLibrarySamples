@@ -65,4 +65,12 @@
     By Paul Hannan, Declan Sciolla-Lynch, Jeremy Hodge, Paul Withers, Tim Tripcony<xp:br/>
     Published May 11, 2012 by IBM Press</xp:td>
 		</xp:tr>
-	</xp:table></xp:view>
+	<xp:tr><xp:td>
+  <xp:image
+    url="http://ecx.images-amazon.com/images/I/51DB8vCLQCL._SY300_.jpg"
+    id="image2" style="height:100.0px;width:75.0px">
+  </xp:image></xp:td><xp:td>Mastering XPages: A Step-by-Step Guide to XPages Application
+			Development and the XSP Language
+			(2nd Edition)<xp:br />
+			By Martin Donnelly, Mark Wallace, Tony McGuckin
+			<xp:br />April 2014 by IBM Press</xp:td></xp:tr></xp:table></xp:view>

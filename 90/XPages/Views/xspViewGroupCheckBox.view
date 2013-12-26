@@ -1,13 +1,15 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' replicaid='85257A870079CB8F'>
-<noteinfo noteid='442' unid='F061CFD477F5AE9D8025748E006A7A46' sequence='13'>
+<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='80257C350049C2B7'>
+<noteinfo noteid='29e' unid='F061CFD477F5AE9D8025748E006A7A46' sequence='13'>
 <created><datetime dst='true'>20080722T202301,18+01</datetime></created>
-<modified><datetime dst='true'>20130118T132315,74+01</datetime></modified>
-<revised><datetime dst='true'>20130118T132315,73+01</datetime></revised>
-<lastaccessed><datetime dst='true'>20130118T132315,74+01</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20120928T180605,58-04</datetime></addedtofile></noteinfo>
+<modified><datetime dst='true'>20131202T143739,53+01</datetime></modified>
+<revised><datetime dst='true'>20131202T143739,52+01</datetime></revised>
+<lastaccessed><datetime dst='true'>20131202T143739,53+01</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20131202T142541,90+01</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name><name
->CN=Paul Hannan/OU=Ireland/O=IBM</name></updatedby>
+>CN=a admin/O=ibm</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name
+>CN=a admin/O=ibm</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name></updatedby>
 <revisions><datetime dst='true'>20080722T202301,21+01</datetime><datetime
  dst='true'>20080722T202301,29+01</datetime><datetime dst='true'>20100527T110307,65+01</datetime></revisions>
 <item name='$FormatNote' summary='true' sign='true'>

@@ -1,334 +1,437 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
-	xmlns:XPa="component/XPages.nsf"
-	xmlns:xc="http://www.ibm.com/xsp/custom">
+<xp:view
+  xmlns:xp="http://www.ibm.com/xsp/core"
+  xmlns:XPa="component/XPages.nsf"
+  xmlns:xc="http://www.ibm.com/xsp/custom">
+  <XPa:ccLayout
+    id="cc4cclayout"
+    navPath="/events/atfs/">
+    <xp:this.facets>
+      <xc:ccMenu_events
+        xp:key="facetLeft"></xc:ccMenu_events>
+      <xp:panel
+        xp:key="facetMain">
+        <xp:panel>
+          <xp:label
+            id="label001"
+            value="@S*: "
+            style="font-weight:bold;font-size:12pt">
+          </xp:label>
+          <xp:comboBox
+            id="comboBoxAtFuncsS"
+            value="#{sessionScope.atFuncsSs}"
+            defaultValue="None">
+            <xp:selectItem
+              itemLabel="None"
+              itemValue="None">
+            </xp:selectItem>
+            <xp:selectItem
+              itemLabel="@Second"
+              itemValue="atFS01">
+            </xp:selectItem>
+            <xp:selectItem
+              itemLabel="@Select"
+              itemValue="atFS02">
+            </xp:selectItem>
+            <xp:selectItem
+              itemLabel="@SetDateField"
+              itemValue="atFS03">
+            </xp:selectItem>
+            <xp:selectItem
+              itemLabel="@SetEditorField"
+              itemValue="atFS04">
+            </xp:selectItem>
+            <xp:selectItem
+              itemLabel="@SetField"
+              itemValue="atFS05">
+            </xp:selectItem>
+            <xp:selectItem
+              itemLabel="@SetNumberField"
+              itemValue="atFS06">
+            </xp:selectItem>
+            <xp:selectItem
+              itemLabel="@SetReaderField"
+              itemValue="atFS07">
+            </xp:selectItem>
+            <xp:selectItem
+              itemLabel="@SetTextField"
+              itemValue="atFS08">
+            </xp:selectItem>
+            <xp:selectItem
+              itemLabel="@Subset"
+              itemValue="atFS09">
+            </xp:selectItem>
+            <xp:selectItem
+              itemLabel="@Success"
+              itemValue="atFS10">
+            </xp:selectItem>
+            <xp:selectItem
+              itemLabel="@Sum"
+              itemValue="atFS11">
+            </xp:selectItem>
 
 
+            <xp:eventHandler
+              event="onchange"
+              submit="true"
+              refreshMode="complete">
+              <xp:this.action>
+                <![CDATA[#{javascript:print("")}]]>
+              </xp:this.action>
+            </xp:eventHandler>
+          </xp:comboBox>
+          <xp:panel>
 
-	<XPa:ccLayout id="cc4cclayout" navPath="/events/atfs/">
-		<xp:this.facets>
-			<xc:ccMenu_events xp:key="facetLeft"></xc:ccMenu_events>
-			<xp:panel xp:key="facetMain">
-				<xp:panel>
-					<xp:label id="label001" value="@S*: "
-						style="font-weight:bold;font-size:12pt">
-					</xp:label>
-					<xp:comboBox id="comboBoxAtFuncsS"
-						value="#{sessionScope.atFuncsSs}" defaultValue="None">
-						<xp:selectItem itemLabel="None"
-							itemValue="None">
-						</xp:selectItem>
-						<xp:selectItem itemLabel="@Second"
-							itemValue="atFS01">
-						</xp:selectItem>
-						<xp:selectItem itemLabel="@Select"
-							itemValue="atFS02">
-						</xp:selectItem>
-						<xp:selectItem itemLabel="@SetDateField"
-							itemValue="atFS03">
-						</xp:selectItem>
-						<xp:selectItem itemLabel="@SetEditorField"
-							itemValue="atFS04">
-						</xp:selectItem>
-						<xp:selectItem itemLabel="@SetField"
-							itemValue="atFS05">
-						</xp:selectItem>
-						<xp:selectItem itemLabel="@SetNumberField"
-							itemValue="atFS06">
-						</xp:selectItem>
-						<xp:selectItem itemLabel="@SetReaderField"
-							itemValue="atFS07">
-						</xp:selectItem>
-						<xp:selectItem itemLabel="@SetTextField"
-							itemValue="atFS08">
-						</xp:selectItem>
-						<xp:selectItem itemLabel="@Subset"
-							itemValue="atFS09">
-						</xp:selectItem>
-						<xp:selectItem itemLabel="@Success"
-							itemValue="atFS10">
-						</xp:selectItem>
-						<xp:selectItem itemLabel="@Sum"
-							itemValue="atFS11">
-						</xp:selectItem>
+            <xp:panel>
+              <xp:this.rendered>
+                <![CDATA[#{javascript:sessionScope.atFuncsSs == "atFS01"}]]>
+              </xp:this.rendered>
+              <xp:table
+                styleClass="customTable">
+                <xp:tr>
+                  <xp:td>
+                    <xp:label
+                      value="@Function: "
+                      id="label1">
+                    </xp:label>
+                  </xp:td>
+                  <xp:td>
+                    @Second(time:Date) : int
+                  </xp:td>
+                </xp:tr>
+                <xp:tr>
+                  <xp:td>Description:</xp:td>
+                  <xp:td>Returns the second from a date
+                    and time.
+                  </xp:td>
+                </xp:tr>
+              </xp:table>
+              <xp:br />
+            </xp:panel>
+            <xp:panel>
+              <xp:this.rendered>
+                <![CDATA[#{javascript:sessionScope.atFuncsSs == "atFS02"}]]>
+              </xp:this.rendered>
+              <xp:table
+                styleClass="customTable">
+                <xp:tr>
+                  <xp:td>
+                    <xp:label
+                      value="@Function: "
+                      id="label2">
+                    </xp:label>
+                  </xp:td>
+                  <xp:td>
+                    @Select(position:int, list:...)
+                    : string </xp:td>
+                </xp:tr>
+                <xp:tr>
+                  <xp:td>Description:</xp:td>
+                  <xp:td>Returns a value from
+                    a parameter list.
+                  </xp:td>
+                </xp:tr>
+              </xp:table>
+              <xp:br />
+            </xp:panel>
+            <xp:panel>
+              <xp:this.rendered>
+                <![CDATA[#{javascript:sessionScope.atFuncsSs == "atFS03"}]]>
+              </xp:this.rendered>
+              <xp:table
+                styleClass="customTable">
+                <xp:tr>
+                  <xp:td>
+                    <xp:label
+                      value="@Function: "
+                      id="label3">
+                    </xp:label>
+                  </xp:td>
+                  <xp:td>
+                    @SetDateField(name:string,
+                    value:Date) : void
+                  </xp:td>
+                </xp:tr>
+                <xp:tr>
+                  <xp:td>Description:</xp:td>
+                  <xp:td> Sets a
+                    field on the current page to a
+                    date and
+                    time value.
+                  </xp:td>
+                </xp:tr>
+              </xp:table>
+              <xp:br />
+            </xp:panel>
+            <xp:panel>
+              <xp:this.rendered>
+                <![CDATA[#{javascript:sessionScope.atFuncsSs == "atFS04"}]]>
+              </xp:this.rendered>
 
+              <xp:table
+                styleClass="customTable">
+                <xp:tr>
+                  <xp:td>
+                    <xp:label
+                      value="@Function: "
+                      id="label4">
+                    </xp:label>
+                  </xp:td>
+                  <xp:td>
+                    @SetEditorField(name:string,
+                    value:string) :
+                    void
+                  </xp:td>
+                </xp:tr>
+                <xp:tr>
+                  <xp:td>Description:</xp:td>
+                  <xp:td> Set the
+                    given value to the given editor
+                    field.
+                  </xp:td>
+                </xp:tr>
+              </xp:table>
 
-						<xp:eventHandler event="onchange" submit="true"
-							refreshMode="complete">
-							<xp:this.action>
-								<![CDATA[#{javascript:print("")}]]>
-							</xp:this.action>
-						</xp:eventHandler>
-					</xp:comboBox>
-					<xp:panel>
+              <xp:br />
+            </xp:panel>
+            <xp:panel>
+              <xp:this.data>
+                <xp:dominoDocument
+                  var="document1"
+                  formName="MainTopic">
+                </xp:dominoDocument>
+              </xp:this.data>
+              <xp:this.rendered>
+                <![CDATA[#{javascript:sessionScope.atFuncsSs == "atFS05"}]]>
+              </xp:this.rendered>
+              <xp:table
+                styleClass="customTable">
+                <xp:tr>
+                  <xp:td>
+                    <xp:label
+                      value="@Function: "
+                      id="label5">
+                    </xp:label>
+                  </xp:td>
+                  <xp:td>
+                    @SetField(name:string,
+                    value:any) : void
+                  </xp:td>
+                </xp:tr>
+                <xp:tr>
+                  <xp:td>Description:</xp:td>
+                  <xp:td> Sets a field
+                    on the current page to a value.
+                  </xp:td>
+                </xp:tr>
+              </xp:table>
 
-						<xp:panel>
-							<xp:this.rendered>
-								<![CDATA[#{javascript:sessionScope.atFuncsSs == "atFS01"}]]>
-							</xp:this.rendered>
-							<xp:table styleClass="customTable">
-								<xp:tr>
-									<xp:td>
-										<xp:label value="@Function: "
-											id="label1">
-										</xp:label>
-									</xp:td>
-									<xp:td>
-										@Second(time:Date) : int |
-										Returns the second from a date
-										and time.
-									</xp:td>
-								</xp:tr>
-							</xp:table>
-							<xp:br />
-						</xp:panel>
-						<xp:panel>
-							<xp:this.rendered>
-								<![CDATA[#{javascript:sessionScope.atFuncsSs == "atFS02"}]]>
-							</xp:this.rendered>
-							<xp:table styleClass="customTable">
-								<xp:tr>
-									<xp:td>
-										<xp:label value="@Function: "
-											id="label2">
-										</xp:label>
-									</xp:td>
-									<xp:td>
-										@Select(position:int, list:...)
-										: string | Returns a value from
-										a parameter list.
-									</xp:td>
-								</xp:tr>
-							</xp:table>
-							<xp:br />
-						</xp:panel>
-						<xp:panel>
-							<xp:this.rendered>
-								<![CDATA[#{javascript:sessionScope.atFuncsSs == "atFS03"}]]>
-							</xp:this.rendered>
-							<xp:table styleClass="customTable">
-								<xp:tr>
-									<xp:td>
-										<xp:label value="@Function: "
-											id="label3">
-										</xp:label>
-									</xp:td>
-									<xp:td>
-										@SetDateField(name:string,
-										value:Date) : void | Sets a
-										field on the current page to a
-										date and time value.
-									</xp:td>
-								</xp:tr>
-							</xp:table>
-							<xp:br />
-						</xp:panel>
-						<xp:panel>
-							<xp:this.rendered>
-								<![CDATA[#{javascript:sessionScope.atFuncsSs == "atFS04"}]]>
-							</xp:this.rendered>
+              <xp:table>
+                <xp:tr>
+                  <xp:td>
+                    <xp:label
+                      value="Enter text here then press the button:"
+                      id="label12">
+                    </xp:label>
+                  </xp:td>
+                  <xp:td>
 
-							<xp:table styleClass="customTable">
-								<xp:tr>
-									<xp:td>
-										<xp:label value="@Function: "
-											id="label4">
-										</xp:label>
-									</xp:td>
-									<xp:td>
-										@SetEditorField(name:string,
-										value:string) : void | Set the
-										given value to the given editor
-										field.
-									</xp:td>
-								</xp:tr>
-							</xp:table>
-
-							<xp:br />
-						</xp:panel>
-						<xp:panel>
-							<xp:this.data>
-								<xp:dominoDocument var="document1"
-									formName="MainTopic">
-								</xp:dominoDocument>
-							</xp:this.data>
-							<xp:this.rendered>
-								<![CDATA[#{javascript:sessionScope.atFuncsSs == "atFS05"}]]>
-							</xp:this.rendered>
-							<xp:table styleClass="customTable">
-								<xp:tr>
-									<xp:td>
-										<xp:label value="@Function: "
-											id="label5">
-										</xp:label>
-									</xp:td>
-									<xp:td>
-										@SetField(name:string,
-										value:any) : void | Sets a field
-										on the current page to a value.
-									</xp:td>
-								</xp:tr>
-							</xp:table>
-
-							<xp:table>
-								<xp:tr>
-									<xp:td>
-										<xp:label
-											value="Enter text here then press the button:"
-											id="label12">
-										</xp:label>
-									</xp:td>
-									<xp:td>
-
-										<xp:inputText
-											id="inputTextAtSetField01" value="#{requestScope.a0001}">
-										</xp:inputText>
-									</xp:td>
-								</xp:tr>
-								<xp:tr>
-									<xp:td>
-										<xp:button value="@SetField"
-											id="buttonAtSetField01">
-											<xp:eventHandler
-												event="onclick" submit="true" refreshMode="complete">
-												<xp:this.action>
-													<![CDATA[#{javascript:var nte = requestScope.a0001;
+                    <xp:inputText
+                      id="inputTextAtSetField01"
+                      value="#{requestScope.a0001}">
+                    </xp:inputText>
+                  </xp:td>
+                </xp:tr>
+                <xp:tr>
+                  <xp:td>
+                    <xp:button
+                      value="@SetField"
+                      id="buttonAtSetField01">
+                      <xp:eventHandler
+                        event="onclick"
+                        submit="true"
+                        refreshMode="complete">
+                        <xp:this.action>
+                          <![CDATA[#{javascript:var nte = requestScope.a0001;
 @SetField("Categories",nte)}]]>
-												</xp:this.action>
-											</xp:eventHandler>
-										</xp:button>
-									</xp:td>
-									<xp:td>
-										<xp:inputText
-											id="inputTextAtSetField02" value="#{document1.Categories}">
-										</xp:inputText>
-									</xp:td>
-								</xp:tr>
-							</xp:table>
+                        </xp:this.action>
+                      </xp:eventHandler>
+                    </xp:button>
+                  </xp:td>
+                  <xp:td>
+                    <xp:inputText
+                      id="inputTextAtSetField02"
+                      value="#{document1.Categories}">
+                    </xp:inputText>
+                  </xp:td>
+                </xp:tr>
+              </xp:table>
 
 
-							<xp:br />
-						</xp:panel>
-						<xp:panel>
-							<xp:this.rendered>
-								<![CDATA[#{javascript:sessionScope.atFuncsSs == "atFS06"}]]>
-							</xp:this.rendered>
-							<xp:table styleClass="customTable">
-								<xp:tr>
-									<xp:td>
-										<xp:label value="@Function: "
-											id="label6">
-										</xp:label>
-									</xp:td>
-									<xp:td>
-										@SetNumberField(name:string,
-										value:double) : void | Sets a
-										field on the current page to a
-										number value.
-									</xp:td>
-								</xp:tr>
-							</xp:table>
-							<xp:br />
-						</xp:panel>
-						<xp:panel>
-							<xp:this.rendered>
-								<![CDATA[#{javascript:sessionScope.atFuncsSs == "atFS07"}]]>
-							</xp:this.rendered>
-							<xp:table styleClass="customTable">
-								<xp:tr>
-									<xp:td>
-										<xp:label value="@Function: "
-											id="label7">
-										</xp:label>
-									</xp:td>
-									<xp:td>
-										@SetReaderField(name:string,
-										value:string) : void | Set the
-										given value to the reader field.
-									</xp:td>
-								</xp:tr>
-							</xp:table>
-							<xp:br />
-						</xp:panel>
-						<xp:panel>
-							<xp:this.rendered>
-								<![CDATA[#{javascript:sessionScope.atFuncsSs == "atFS08"}]]>
-							</xp:this.rendered>
-							<xp:table styleClass="customTable">
-								<xp:tr>
-									<xp:td>
-										<xp:label value="@Function: "
-											id="label8">
-										</xp:label>
-									</xp:td>
-									<xp:td>
-										@SetTextField(name:string,
-										value:string) : void | Sets a
-										field on the current page to a
-										string value.
-									</xp:td>
-								</xp:tr>
-							</xp:table>
-							<xp:br />
-						</xp:panel>
-						<xp:panel>
-							<xp:this.rendered>
-								<![CDATA[#{javascript:sessionScope.atFuncsSs == "atFS09"}]]>
-							</xp:this.rendered>
-							<xp:table styleClass="customTable">
-								<xp:tr>
-									<xp:td>
-										<xp:label value="@Function: "
-											id="label9">
-										</xp:label>
-									</xp:td>
-									<xp:td>
-										@Subset(list:any, length:int) :
-										any | Subsets a list from left
-										to right.
-									</xp:td>
-								</xp:tr>
-							</xp:table>
-							<xp:br />
-						</xp:panel>
-						<xp:panel>
-							<xp:this.rendered>
-								<![CDATA[#{javascript:sessionScope.atFuncsSs == "atFS10"}]]>
-							</xp:this.rendered>
-							<xp:table styleClass="customTable">
-								<xp:tr>
-									<xp:td>
-										<xp:label value="@Function: "
-											id="label10">
-										</xp:label>
-									</xp:td>
-									<xp:td>
-										@Success() : int | Returns 1
-										(true).
-									</xp:td>
-								</xp:tr>
-							</xp:table>
-							<xp:br />
-						</xp:panel>
-						<xp:panel>
-							<xp:this.rendered>
-								<![CDATA[#{javascript:sessionScope.atFuncsSs == "atFS11"}]]>
-							</xp:this.rendered>
-							<xp:table styleClass="customTable">
-								<xp:tr>
-									<xp:td>
-										<xp:label value="@Function: "
-											id="label11">
-										</xp:label>
-									</xp:td>
-									<xp:td>
-										@Sum(value:...) : any | Sums
-										numbers.
-									</xp:td>
-								</xp:tr>
-							</xp:table>
-							<xp:br />
-						</xp:panel>
+              <xp:br />
+            </xp:panel>
+            <xp:panel>
+              <xp:this.rendered>
+                <![CDATA[#{javascript:sessionScope.atFuncsSs == "atFS06"}]]>
+              </xp:this.rendered>
+              <xp:table
+                styleClass="customTable">
+                <xp:tr>
+                  <xp:td>
+                    <xp:label
+                      value="@Function: "
+                      id="label6">
+                    </xp:label>
+                  </xp:td>
+                  <xp:td>
+                    @SetNumberField(name:string,
+                    value:double) :
+                    void 
+                  </xp:td>
+                </xp:tr>
+                <xp:tr>
+                  <xp:td>Description:</xp:td>
+                  <xp:td>Sets a
+                    field on the current page to a
+                    number
+                    value.</xp:td>
+                </xp:tr>
+              </xp:table>
+              <xp:br />
+            </xp:panel>
+            <xp:panel>
+              <xp:this.rendered>
+                <![CDATA[#{javascript:sessionScope.atFuncsSs == "atFS07"}]]>
+              </xp:this.rendered>
+              <xp:table
+                styleClass="customTable">
+                <xp:tr>
+                  <xp:td>
+                    <xp:label
+                      value="@Function: "
+                      id="label7">
+                    </xp:label>
+                  </xp:td>
+                  <xp:td>
+                    @SetReaderField(name:string,
+                    value:string) :
+                    void 
+                  </xp:td>
+                </xp:tr>
+                <xp:tr>
+                  <xp:td>Description:</xp:td>
+                  <xp:td>Set the
+                    given value to the reader field.
+                  </xp:td>
+                </xp:tr>
+              </xp:table>
+              <xp:br />
+            </xp:panel>
+            <xp:panel>
+              <xp:this.rendered>
+                <![CDATA[#{javascript:sessionScope.atFuncsSs == "atFS08"}]]>
+              </xp:this.rendered>
+              <xp:table
+                styleClass="customTable">
+                <xp:tr>
+                  <xp:td>
+                    <xp:label
+                      value="@Function: "
+                      id="label8">
+                    </xp:label>
+                  </xp:td>
+                  <xp:td>
+                    @SetTextField(name:string,
+                    value:string) : void
+                  </xp:td>
+                </xp:tr>
+                <xp:tr>
+                  <xp:td>Description:</xp:td>
+                  <xp:td>Sets a
+                    field on the current page to a
+                    string
+                    value.
+                  </xp:td>
+                </xp:tr>
+              </xp:table>
+              <xp:br />
+            </xp:panel>
+            <xp:panel>
+              <xp:this.rendered>
+                <![CDATA[#{javascript:sessionScope.atFuncsSs == "atFS09"}]]>
+              </xp:this.rendered>
+              <xp:table
+                styleClass="customTable">
+                <xp:tr>
+                  <xp:td>
+                    <xp:label
+                      value="@Function: "
+                      id="label9">
+                    </xp:label>
+                  </xp:td>
+                  <xp:td>
+                    @Subset(list:any, length:int) :
+                    any </xp:td>
+                </xp:tr>
+                <xp:tr>
+                  <xp:td>Description:</xp:td>
+                  <xp:td>Subsets a list from left
+                    to right.
+                  </xp:td>
+                </xp:tr>
+              </xp:table>
+              <xp:br />
+            </xp:panel>
+            <xp:panel>
+              <xp:this.rendered>
+                <![CDATA[#{javascript:sessionScope.atFuncsSs == "atFS10"}]]>
+              </xp:this.rendered>
+              <xp:table
+                styleClass="customTable">
+                <xp:tr>
+                  <xp:td>
+                    <xp:label
+                      value="@Function: "
+                      id="label10">
+                    </xp:label>
+                  </xp:td>
+                  <xp:td>
+                    @Success() : int</xp:td>
+                </xp:tr>
+                <xp:tr>
+                  <xp:td>Description:</xp:td>
+                  <xp:td> Returns 1
+                    (true).
+                  </xp:td>
+                </xp:tr>
+              </xp:table>
+              <xp:br />
+            </xp:panel>
+            <xp:panel>
+              <xp:this.rendered>
+                <![CDATA[#{javascript:sessionScope.atFuncsSs == "atFS11"}]]>
+              </xp:this.rendered>
+              <xp:table
+                styleClass="customTable">
+                <xp:tr>
+                  <xp:td>
+                    <xp:label
+                      value="@Function: "
+                      id="label11">
+                    </xp:label>
+                  </xp:td>
+                  <xp:td>
+                    @Sum(value:...) : any 
+                  </xp:td>
+                </xp:tr>
+                <xp:tr>
+                  <xp:td>Description:</xp:td>
+                  <xp:td>Sums
+                    numbers.</xp:td>
+                </xp:tr>
+              </xp:table>
+              <xp:br />
+            </xp:panel>
 
 
 
@@ -338,11 +441,11 @@
 
 
 
-					</xp:panel>
-				</xp:panel>
+          </xp:panel>
+        </xp:panel>
 
-			</xp:panel>
+      </xp:panel>
 
-		</xp:this.facets>
-	</XPa:ccLayout>
+    </xp:this.facets>
+  </XPa:ccLayout>
 </xp:view>

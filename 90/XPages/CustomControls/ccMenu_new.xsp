@@ -3,12 +3,38 @@
 	xmlns:xe="http://www.ibm.com/xsp/coreex">
 
 	<xe:navigator id="navigator1">
-		<xe:this.treeNodes>
-			<xe:pageTreeNode label="Redirect control"
-				page="/p01redirect.xsp" selection="/new/redirect/">
-			</xe:pageTreeNode>
-			<xe:pageTreeNode label="Send Mail "
-				page="/simpleActionSendMail.xsp" selection="/new/sendmail/">
-			</xe:pageTreeNode>
-		</xe:this.treeNodes>
+	  <xe:this.treeNodes>
+	    <xe:pageTreeNode
+	      label="Redirect control"
+	      page="/p01redirect.xsp"
+	      selection="/new/redirect/">
+	    </xe:pageTreeNode>
+	    <xe:pageTreeNode
+	      label="Send Mail "
+	      page="/simpleActionSendMail.xsp"
+	      selection="/new/sendmail/">
+	    </xe:pageTreeNode>
+	    <xe:pageTreeNode
+	      label="deviceBean"
+	      page="/deviceBean.xsp"
+	      selection="/new/devicebean/">
+	    </xe:pageTreeNode>
+	    <xe:basicContainerNode
+	      label="View Navigation"
+	      expanded="true"
+	      enabled="true">
+	      <xe:this.children>
+	        <xe:pageTreeNode
+	          label="By Position"
+	          selection="/new/navp/"
+	          page="/navByPosition.xsp">
+	        </xe:pageTreeNode>
+	        <xe:pageTreeNode
+	          label="By Note Id"
+	          page="/navByNoteId.xsp"
+	          selection="/new/navn/">
+	        </xe:pageTreeNode>
+	      </xe:this.children>
+	    </xe:basicContainerNode>
+	  </xe:this.treeNodes>
 	</xe:navigator></xp:view>

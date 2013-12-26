@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?><note class="form" replicaid="85257A870079CB8F" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="746" sequence="165" unid="C481AFEA693D8D9180257410004DA2DE">
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="80257C350049C2B7" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="4f2" sequence="220" unid="C481AFEA693D8D9180257410004DA2DE">
 <created><datetime dst="true">20080318T150759,66+01</datetime></created>
-<modified><datetime>20130319T214348,09+09</datetime></modified>
-<revised><datetime>20130319T214348,08+09</datetime></revised>
-<lastaccessed><datetime>20130319T214348,09+09</datetime></lastaccessed>
-<addedtofile><datetime dst="true">20120928T180638,07-04</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=Admin/O=LotusLab</name></updatedby>
-<revisions><datetime dst="true">20100527T110303,11+01</datetime></revisions>
-<wassignedby><name>CN=Admin/O=LotusLab</name></wassignedby>
+<modified><datetime>20131225T164158,75+09</datetime></modified>
+<revised><datetime>20131225T164158,74+09</datetime></revised>
+<lastaccessed><datetime>20131225T164158,75+09</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20131202T142544,88+01</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=a admin/O=ibm</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=a admin/O=ibm</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=Admin/O=lotuslab</name></updatedby>
+<revisions><datetime dst="true">20131010T133543,26+01</datetime><datetime dst="true">20131010T133543,73+01</datetime><datetime dst="true">20131010T133543,78+01</datetime><datetime dst="true">20131014T155928,55+01</datetime><datetime dst="true">20131014T155928,94+01</datetime><datetime dst="true">20131014T155928,99+01</datetime><datetime dst="true">20131014T164257,12+01</datetime><datetime dst="true">20131014T164257,71+01</datetime><datetime dst="true">20131014T164445,39+01</datetime><datetime dst="true">20131014T164445,76+01</datetime><datetime dst="true">20131014T164716,69+01</datetime><datetime dst="true">20131014T164717,07+01</datetime><datetime dst="true">20131014T195704,85+01</datetime><datetime dst="true">20131014T195708,11+01</datetime><datetime dst="true">20131014T195708,14+01</datetime><datetime dst="true">20131014T195911,73+01</datetime><datetime dst="true">20131014T195912,12+01</datetime><datetime dst="true">20131014T200212,81+01</datetime><datetime dst="true">20131014T200213,39+01</datetime><datetime dst="true">20131014T200251,37+01</datetime><datetime dst="true">20131014T200251,79+01</datetime><datetime dst="true">20131014T200323,95+01</datetime><datetime dst="true">20131014T200324,31+01</datetime><datetime dst="true">20131014T201022,76+01</datetime><datetime dst="true">20131014T201023,15+01</datetime><datetime dst="true">20131014T201801,48+01</datetime><datetime dst="true">20131014T201801,93+01</datetime><datetime dst="true">20131014T202001,13+01</datetime><datetime dst="true">20131014T202001,52+01</datetime><datetime dst="true">20131014T202045,23+01</datetime><datetime dst="true">20131014T202045,65+01</datetime><datetime dst="true">20131014T202327,23+01</datetime><datetime dst="true">20131014T202327,64+01</datetime><datetime dst="true">20131014T202458,41+01</datetime><datetime dst="true">20131014T202458,75+01</datetime><datetime dst="true">20131014T202458,78+01</datetime><datetime dst="true">20131014T202614,59+01</datetime><datetime dst="true">20131014T202614,95+01</datetime><datetime dst="true">20131014T202614,99+01</datetime><datetime dst="true">20131014T202657,64+01</datetime><datetime dst="true">20131014T202658,03+01</datetime><datetime dst="true">20131014T202844,33+01</datetime><datetime dst="true">20131014T202844,66+01</datetime><datetime dst="true">20131015T150554,93+01</datetime></revisions>
+<wassignedby><name>CN=Admin/O=lotuslab</name></wassignedby>
 <item name="$TITLE"><text>ctrlsOtherPager.xsp</text></item>
 
 <item name="$Flags"><text>gCK4</text></item>
@@ -15,7 +15,7 @@
 
 
 <item name="$FileNames" sign="true"><text>ctrlsOtherPager.xsp</text></item>
-<item name="$DesignerVersion"><text>8.5.1</text></item>
+<item name="$DesignerVersion"><text>8.5.2</text></item>
 
 
 

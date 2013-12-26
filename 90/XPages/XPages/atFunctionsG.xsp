@@ -1,258 +1,281 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xp:view xmlns:xp="http://www.ibm.com/xsp/core"
-	xmlns:XPa="component/XPages.nsf"
-	xmlns:xc="http://www.ibm.com/xsp/custom">
+  xmlns:XPa="component/XPages.nsf"
+  xmlns:xc="http://www.ibm.com/xsp/custom">
 
 
-	<XPa:ccLayout id="cc4cclayout" navPath="/events/atfg/">
-		<xp:this.facets>
-			<xc:ccMenu_events xp:key="facetLeft"></xc:ccMenu_events>
-			<xp:panel xp:key="facetMain">
-				<xp:panel>
-					<xp:label id="label1" value="@G*: "
-						style="font-weight:bold;font-size:12pt">
-					</xp:label>
-					<xp:comboBox id="comboBoxAtFuncsG"
-						value="#{sessionScope.atFuncsGs}" defaultValue="None">
-						<xp:selectItem itemLabel="None"
-							itemValue="None">
-						</xp:selectItem>
-						<xp:selectItem itemLabel="@GetDateField"
-							itemValue="atFG01">
-						</xp:selectItem>
-						<xp:selectItem itemLabel="@GetEditorField"
-							itemValue="atFG02">
-						</xp:selectItem>
-						<xp:selectItem itemLabel="@GetField"
-							itemValue="atFG03">
-						</xp:selectItem>
-						<xp:selectItem itemLabel="@GetNumberField"
-							itemValue="atFG04">
-						</xp:selectItem>
-						<xp:selectItem itemLabel="@GetReaderField"
-							itemValue="atFG05">
-						</xp:selectItem>
-						<xp:selectItem itemLabel="@GetTextField"
-							itemValue="atFG06">
-						</xp:selectItem>
-
-
-
-						<xp:eventHandler event="onchange" submit="true"
-							refreshMode="complete">
-							<xp:this.action>
-								<![CDATA[#{javascript:print("")}]]>
-							</xp:this.action>
-						</xp:eventHandler>
-					</xp:comboBox>
-					<xp:panel>
-
-						<xp:panel>
-							<xp:this.rendered>
-								<![CDATA[#{javascript:sessionScope.atFuncsGs == "atFG01"}]]>
-							</xp:this.rendered>
-							<xp:table styleClass="customTable">
-								<xp:tr>
-									<xp:td>
-										<xp:label value="@Function: "
-											id="label2">
-										</xp:label>
-									</xp:td>
-									<xp:td>
-										@GetDateField(name:string) :
-										Date Returns the date and time
-										value of a field on the current
-										page.
-									</xp:td>
-								</xp:tr>
-							</xp:table>
-							<xp:br />
-						</xp:panel>
-						<xp:panel>
-							<xp:this.rendered>
-								<![CDATA[#{javascript:sessionScope.atFuncsGs == "atFG02"}]]>
-							</xp:this.rendered>
-							<xp:table styleClass="customTable">
-								<xp:tr>
-									<xp:td>
-										<xp:label value="@Function: "
-											id="label3">
-										</xp:label>
-									</xp:td>
-									<xp:td>
-										@GetEditorField(name:string) :
-										string Returns the value of an
-										editor field on the current
-										page.
-									</xp:td>
-								</xp:tr>
-							</xp:table>
-							<xp:br />
-						</xp:panel>
-						<xp:panel>
-							<xp:this.rendered>
-								<![CDATA[#{javascript:sessionScope.atFuncsGs == "atFG03"}]]>
-							</xp:this.rendered>
-							<xp:table styleClass="customTable">
-								<xp:tr>
-									<xp:td>
-										<xp:label value="@Function: "
-											id="label4">
-										</xp:label>
-									</xp:td>
-									<xp:td>
-										@GetField(name:string) : any
-										Returns the value of a field on
-										the current page.
-									</xp:td>
-								</xp:tr>
-							</xp:table>
-							<xp:br />
-							<xp:panel styleClass="content">
-								<xp:this.data>
-									<xp:dominoDocument var="document1"
-										formName="xspAtFunctions">
-									</xp:dominoDocument>
-									<xp:dominoView var="view1"
-										viewName="xspAtFunctionsView">
-									</xp:dominoView>
-								</xp:this.data>
-
-								Select any of the following link to
-								compute the field below:
-
-
-								<xp:repeat id="repeat3" value="#{view1}"
-									rows="100" var="coll1">
-
-
-									<xp:table id="table3"
-										styleClass="customTable">
-										<xp:tr>
-
-
-											<xp:td>
-												<xp:image
-													url="/actn103.gif" id="image4">
-												</xp:image>
-
-												<xp:link id="link3">
-													<xp:this.text>
-														<![CDATA[#{javascript:coll1.getColumnValue("subject")}]]>
-													</xp:this.text>
-
-													<xp:eventHandler
-														event="onclick" submit="true" refreshMode="complete">
-														<xp:this.action>
-															<xp:openPage
-																name="/atFunctionsG.xsp" target="openDocument"
-																documentId="#{javascript:coll1.getId()}">
-															</xp:openPage>
-														</xp:this.action>
-													</xp:eventHandler>
-												</xp:link>
-											</xp:td>
-
-										</xp:tr>
-									</xp:table>
-								</xp:repeat>
-								<xp:image url="/vwicn159.gif"
-									id="image2">
-								</xp:image>
-								<xp:label
-									value="The following computed field displays who has updated the selected documents from the '$UpdatedBy' field: "
-									id="label22">
-								</xp:label>
-								<xp:br></xp:br>
-								<xp:text escape="true"
-									id="computedField4AtGetField01"
-									style="color:rgb(128,0,255);font-weight:bold"
-									rendered="#{javascript:!document1.isNewNote()}">
-									<xp:this.value>
-										<![CDATA[#{javascript:@GetField("$UpdatedBy")}]]>
-									</xp:this.value>
-								</xp:text>
-							</xp:panel>
+  <XPa:ccLayout id="cc4cclayout" navPath="/events/atfg/">
+    <xp:this.facets>
+      <xc:ccMenu_events xp:key="facetLeft"></xc:ccMenu_events>
+      <xp:panel xp:key="facetMain">
+        <xp:panel>
+          <xp:label id="label1" value="@G*: "
+            style="font-weight:bold;font-size:12pt">
+          </xp:label>
+          <xp:comboBox id="comboBoxAtFuncsG"
+            value="#{sessionScope.atFuncsGs}" defaultValue="None">
+            <xp:selectItem itemLabel="None"
+              itemValue="None">
+            </xp:selectItem>
+            <xp:selectItem itemLabel="@GetDateField"
+              itemValue="atFG01">
+            </xp:selectItem>
+            <xp:selectItem itemLabel="@GetEditorField"
+              itemValue="atFG02">
+            </xp:selectItem>
+            <xp:selectItem itemLabel="@GetField"
+              itemValue="atFG03">
+            </xp:selectItem>
+            <xp:selectItem itemLabel="@GetNumberField"
+              itemValue="atFG04">
+            </xp:selectItem>
+            <xp:selectItem itemLabel="@GetReaderField"
+              itemValue="atFG05">
+            </xp:selectItem>
+            <xp:selectItem itemLabel="@GetTextField"
+              itemValue="atFG06">
+            </xp:selectItem>
 
 
 
+            <xp:eventHandler event="onchange" submit="true"
+              refreshMode="complete">
+              <xp:this.action>
+                <![CDATA[#{javascript:print("")}]]>
+              </xp:this.action>
+            </xp:eventHandler>
+          </xp:comboBox>
+          <xp:panel>
+
+            <xp:panel>
+              <xp:this.rendered>
+                <![CDATA[#{javascript:sessionScope.atFuncsGs == "atFG01"}]]>
+              </xp:this.rendered>
+              <xp:table styleClass="customTable">
+                <xp:tr>
+                  <xp:td>
+                    <xp:label value="@Function: "
+                      id="label2">
+                    </xp:label>
+                  </xp:td>
+                  <xp:td>
+                    @GetDateField(name:string) </xp:td>
+                </xp:tr>
+                <xp:tr>
+                  <xp:td>Description:</xp:td>
+                  <xp:td>Date Returns the date and time
+                    value of a field on the current
+                    page.
+                  </xp:td>
+                </xp:tr>
+              </xp:table>
+              <xp:br />
+            </xp:panel>
+            <xp:panel>
+              <xp:this.rendered>
+                <![CDATA[#{javascript:sessionScope.atFuncsGs == "atFG02"}]]>
+              </xp:this.rendered>
+              <xp:table styleClass="customTable">
+                <xp:tr>
+                  <xp:td>
+                    <xp:label value="@Function: "
+                      id="label3">
+                    </xp:label>
+                  </xp:td>
+                  <xp:td>
+                    @GetEditorField(name:string) :
+                    string</xp:td>
+                </xp:tr>
+                <xp:tr>
+                  <xp:td>Description:</xp:td>
+                  <xp:td>Returns the value of an
+                    editor field on the current
+                    page.
+                  </xp:td>
+                </xp:tr>
+              </xp:table>
+              <xp:br />
+            </xp:panel>
+            <xp:panel>
+              <xp:this.rendered>
+                <![CDATA[#{javascript:sessionScope.atFuncsGs == "atFG03"}]]>
+              </xp:this.rendered>
+              <xp:table styleClass="customTable">
+                <xp:tr>
+                  <xp:td>
+                    <xp:label value="@Function: "
+                      id="label4">
+                    </xp:label>
+                  </xp:td>
+                  <xp:td>
+                    @GetField(name:string) : any
+                    </xp:td>
+                </xp:tr>
+                <xp:tr>
+                  <xp:td>Description:</xp:td>
+                  <xp:td>Returns the value of an
+                    editor field on the current
+                    page.
+                  </xp:td>
+                </xp:tr>
+              </xp:table>
+              <xp:br />
+              <xp:panel styleClass="content">
+                <xp:this.data>
+                  <xp:dominoDocument var="document1"
+                    formName="xspAtFunctions">
+                  </xp:dominoDocument>
+                  <xp:dominoView var="view1"
+                    viewName="xspAtFunctionsView">
+                  </xp:dominoView>
+                </xp:this.data>
+
+                Select any of the following link to
+                compute the field below:
 
 
-						</xp:panel>
-						<xp:panel>
-							<xp:this.rendered>
-								<![CDATA[#{javascript:sessionScope.atFuncsGs == "atFG04"}]]>
-							</xp:this.rendered>
-							<xp:table styleClass="customTable">
-								<xp:tr>
-									<xp:td>
-										<xp:label value="@Function: "
-											id="label5">
-										</xp:label>
-									</xp:td>
-									<xp:td>
-										@GetNumberField(name:string) :
-										double Returns the number value
-										of a field on the current page.
-									</xp:td>
-								</xp:tr>
-							</xp:table>
-							<xp:br />
-						</xp:panel>
-						<xp:panel>
-							<xp:this.rendered>
-								<![CDATA[#{javascript:sessionScope.atFuncsGs == "atFG05"}]]>
-							</xp:this.rendered>
-							<xp:table styleClass="customTable">
-								<xp:tr>
-									<xp:td>
-										<xp:label value="@Function: "
-											id="label6">
-										</xp:label>
-									</xp:td>
-									<xp:td>
-										@GetReaderField(name:string) :
-										string Returns the value of a
-										reader field on the current
-										page.
-									</xp:td>
-								</xp:tr>
-							</xp:table>
-							<xp:br />
-						</xp:panel>
-						<xp:panel>
-							<xp:this.rendered>
-								<![CDATA[#{javascript:sessionScope.atFuncsGs == "atFG06"}]]>
-							</xp:this.rendered>
-							<xp:table styleClass="customTable">
-								<xp:tr>
-									<xp:td>
-										<xp:label value="@Function: "
-											id="label7">
-										</xp:label>
-									</xp:td>
-									<xp:td>
-										@GetTextField(name:string) :
-										string Returns the string value
-										of a field on the current page.
-									</xp:td>
-								</xp:tr>
-							</xp:table>
-							<xp:br />
-						</xp:panel>
+                <xp:repeat id="repeat3" value="#{view1}"
+                  rows="100" var="coll1">
+
+
+                  <xp:table id="table3"
+                    styleClass="customTable">
+                    <xp:tr>
+
+
+                      <xp:td>
+                        <xp:image
+                          url="/actn103.gif" id="image4">
+                        </xp:image>
+
+                        <xp:link id="link3">
+                          <xp:this.text>
+                            <![CDATA[#{javascript:coll1.getColumnValue("subject")}]]>
+                          </xp:this.text>
+
+                          <xp:eventHandler
+                            event="onclick" submit="true" refreshMode="complete">
+                            <xp:this.action>
+                              <xp:openPage
+                                name="/atFunctionsG.xsp" target="openDocument"
+                                documentId="#{javascript:coll1.getId()}">
+                              </xp:openPage>
+                            </xp:this.action>
+                          </xp:eventHandler>
+                        </xp:link>
+                      </xp:td>
+
+                    </xp:tr>
+                  </xp:table>
+                </xp:repeat>
+                <xp:image url="/vwicn159.gif"
+                  id="image2">
+                </xp:image>
+                <xp:label
+                  value="The following computed field displays who has updated the selected documents from the '$UpdatedBy' field: "
+                  id="label22">
+                </xp:label>
+                <xp:br></xp:br>
+                <xp:text escape="true"
+                  id="computedField4AtGetField01"
+                  style="color:rgb(128,0,255);font-weight:bold"
+                  rendered="#{javascript:!document1.isNewNote()}">
+                  <xp:this.value>
+                    <![CDATA[#{javascript:@GetField("$UpdatedBy")}]]>
+                  </xp:this.value>
+                </xp:text>
+              </xp:panel>
 
 
 
 
 
+            </xp:panel>
+            <xp:panel>
+              <xp:this.rendered>
+                <![CDATA[#{javascript:sessionScope.atFuncsGs == "atFG04"}]]>
+              </xp:this.rendered>
+              <xp:table styleClass="customTable">
+                <xp:tr>
+                  <xp:td>
+                    <xp:label value="@Function: "
+                      id="label5">
+                    </xp:label>
+                  </xp:td>
+                  <xp:td>
+                    @GetNumberField(name:string) :
+                    double 
+                  </xp:td>
+                </xp:tr>
+                <xp:tr>
+                  <xp:td>Description:</xp:td>
+                  <xp:td>Returns the number value
+                    of a field on the current page.</xp:td>
+                </xp:tr>
+              </xp:table>
+              <xp:br />
+            </xp:panel>
+            <xp:panel>
+              <xp:this.rendered>
+                <![CDATA[#{javascript:sessionScope.atFuncsGs == "atFG05"}]]>
+              </xp:this.rendered>
+              <xp:table styleClass="customTable">
+                <xp:tr>
+                  <xp:td>
+                    <xp:label value="@Function: "
+                      id="label6">
+                    </xp:label>
+                  </xp:td>
+                  <xp:td>
+                    @GetReaderField(name:string) :
+                    string 
+                  </xp:td>
+                </xp:tr>
+                <xp:tr>
+                  <xp:td>Description:</xp:td>
+                  <xp:td>Returns the value of a
+                    reader field on the current
+                    page.</xp:td>
+                </xp:tr>
+              </xp:table>
+              <xp:br />
+            </xp:panel>
+            <xp:panel>
+              <xp:this.rendered>
+                <![CDATA[#{javascript:sessionScope.atFuncsGs == "atFG06"}]]>
+              </xp:this.rendered>
+              <xp:table styleClass="customTable">
+                <xp:tr>
+                  <xp:td>
+                    <xp:label value="@Function: "
+                      id="label7">
+                    </xp:label>
+                  </xp:td>
+                  <xp:td>
+                    @GetTextField(name:string) :
+                    string </xp:td>
+                </xp:tr>
+                <xp:tr>
+                  <xp:td>Description:</xp:td>
+                  <xp:td>Returns the string value
+                    of a field on the current page</xp:td>
+                </xp:tr>
+              </xp:table>
+              <xp:br />
+            </xp:panel>
 
 
-					</xp:panel>
-				</xp:panel>
 
 
-			</xp:panel>
 
-		</xp:this.facets>
-	</XPa:ccLayout>
+
+
+          </xp:panel>
+        </xp:panel>
+
+
+      </xp:panel>
+
+    </xp:this.facets>
+  </XPa:ccLayout>
 </xp:view>

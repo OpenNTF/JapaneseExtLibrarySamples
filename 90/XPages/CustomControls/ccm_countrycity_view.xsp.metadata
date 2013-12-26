@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="80257C350049C2B7" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="69a" sequence="32" unid="AF6A0DEF6288C83880257C300048E061">
+<created><datetime dst="true">20131127T141600,33+01</datetime></created>
+<modified><datetime>20131226T000214,64+09</datetime></modified>
+<revised><datetime>20131226T000214,63+09</datetime></revised>
+<lastaccessed><datetime>20131226T000214,64+09</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20131202T142546,98+01</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=a admin/O=ibm</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=Admin/O=lotuslab</name></updatedby>
+<revisions><datetime dst="true">20131127T141600,35+01</datetime><datetime dst="true">20131127T141600,40+01</datetime><datetime dst="true">20131127T141600,74+01</datetime><datetime dst="true">20131127T141600,85+01</datetime><datetime dst="true">20131127T141603,14+01</datetime><datetime dst="true">20131127T141603,16+01</datetime><datetime dst="true">20131127T141603,18+01</datetime><datetime dst="true">20131127T141603,20+01</datetime><datetime dst="true">20131127T141625,47+01</datetime><datetime dst="true">20131127T141625,55+01</datetime><datetime dst="true">20131127T141625,72+01</datetime><datetime dst="true">20131127T141625,74+01</datetime><datetime dst="true">20131127T141628,87+01</datetime><datetime dst="true">20131127T141628,89+01</datetime><datetime dst="true">20131127T141628,91+01</datetime><datetime dst="true">20131127T141628,93+01</datetime><datetime dst="true">20131127T141829,75+01</datetime><datetime dst="true">20131127T141829,94+01</datetime><datetime dst="true">20131127T141829,96+01</datetime><datetime dst="true">20131127T142957,29+01</datetime><datetime dst="true">20131127T142957,49+01</datetime><datetime dst="true">20131127T142957,51+01</datetime><datetime dst="true">20131127T144858,37+01</datetime><datetime dst="true">20131127T144858,57+01</datetime><datetime dst="true">20131127T144858,59+01</datetime></revisions>
+<wassignedby><name>CN=Admin/O=lotuslab</name></wassignedby>
+<item name="$Flags"><text>gC~4;</text></item>
+
+
+<item name="$TITLE" sign="true"><text>ccm_countrycity_view.xsp</text></item>
+
+
+
+<item name="$FileNames" sign="true"><text>ccm_countrycity_view.xsp</text></item>
+
+
+<item name="$DesignerVersion"><text>8.5.1</text></item>
+
+</note>

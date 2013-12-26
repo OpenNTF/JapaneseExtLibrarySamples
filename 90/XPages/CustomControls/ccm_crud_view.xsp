@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view
+  xmlns:xp="http://www.ibm.com/xsp/core"
+  xmlns:xe="http://www.ibm.com/xsp/coreex">
+
+  <xe:djxmHeading
+    id="djxmHeading1"
+    label="Basic CRUD"
+    back="Home"
+    moveTo="home">
+    <xp:this.facets>
+      <xe:toolBarButton
+        id="toolBarButton1"
+        xp:key="actionFacet"
+        label="New"
+        arrow="right"
+        moveTo="cruddocview"
+        transition="slide"
+        transitionDir="ltr">
+      </xe:toolBarButton>
+    </xp:this.facets>
+  </xe:djxmHeading>
+
+
+
+  <xe:dataView
+    id="dataView1"
+    pageName="#cruddocview"
+    openDocAsReadonly="true"
+    rows="9">
+    <xp:this.facets>
+
+      <xp:pager
+        partialRefresh="true"
+        id="pager1"
+        xp:key="pagerBottomLeft">
+        <xp:pagerControl
+          type="Previous"
+          id="pagerControl3">
+        </xp:pagerControl>
+
+      </xp:pager>
+      <xp:pager
+        partialRefresh="true"
+        id="pager3"
+        xp:key="pagerBottom">
+
+        <xp:pagerControl
+          type="Next"
+          id="pagerControl6">
+        </xp:pagerControl>
+      </xp:pager>
+      <xp:link
+        escape="true"
+        text="Add 5 Rows"
+        id="link2"
+        xp:key="pagerBottomRight">
+        <xp:eventHandler
+          event="onclick"
+          submit="false">
+          <xp:this.script>
+            <xe:addRows
+              for="dataView1"
+              rowCount="5"
+              state="true">
+            </xe:addRows>
+          </xp:this.script>
+        </xp:eventHandler>
+      </xp:link>
+
+
+
+
+    </xp:this.facets>
+    <xe:this.data>
+      <xp:dominoView
+        var="viewXSPdatecreated"
+        viewName="XSP Category and Responses\Date Created"
+        expandLevel="2">
+      </xp:dominoView>
+    </xe:this.data>
+    <xe:this.summaryColumn>
+      <xe:viewSummaryColumn
+        columnName="$115"></xe:viewSummaryColumn>
+    </xe:this.summaryColumn>
+  </xe:dataView>
+
+
+</xp:view>

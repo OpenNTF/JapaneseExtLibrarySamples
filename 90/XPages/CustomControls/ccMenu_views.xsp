@@ -4,7 +4,7 @@
 
 	<xe:navigator id="navigator1" expandable="true" expandEffect="wipe"
 		keepState="true">
-		
+
 		<xe:this.treeNodes>
 			<xe:pageTreeNode label="Header Sort"
 				page="/propViewsHeaderSorting.xsp" selection="/views/headersort/">
@@ -22,8 +22,8 @@
 						page="/viewFilteringExactCase.xsp" selection="/views/fexact/" />
 					<xe:pageTreeNode label="startKeys"
 						page="/viewFilteringStartKey.xsp" selection="/views/fstartkeys/" />
-					
-					
+
+
 					<xe:pageTreeNode label="By Column Vectors"
 						page="/viewFilteringVector.xsp" selection="/views/fvector/" />
 				</xe:this.children>
@@ -34,5 +34,11 @@
 			<xe:pageTreeNode label="Full Text Search"
 				page="/xpSearch.xsp" selection="/views/ftsearch/">
 			</xe:pageTreeNode>
+			<xe:basicContainerNode label="Pagers">
+				<xe:this.children>
+					<xe:pageTreeNode label="Other Pagers"
+						page="/ctrlsOtherPager.xsp" selection="/views/otherpagers/">
+					</xe:pageTreeNode>
+				</xe:this.children></xe:basicContainerNode>
 		</xe:this.treeNodes>
 	</xe:navigator></xp:view>

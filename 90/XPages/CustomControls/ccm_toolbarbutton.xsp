@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xe="http://www.ibm.com/xsp/coreex">
+
+	<xe:appPage id="appPagetbb" pageName="toolbarbutton">
+		
+		<xe:djxmHeading id="djxmHeading1" label="Tool Bar Button"
+			back="Home" moveTo="home">
+		</xe:djxmHeading>
+		<xe:djxmRoundRectList id="djxmRoundRectList1">
+			<xp:panel>
+				<xp:label id="label1" value="Tool bar button with a label set: "></xp:label>
+				<xe:toolBarButton id="toolBarButton1" label="Tool Bar Button"></xe:toolBarButton>
+				<xp:br></xp:br><xp:label id="label2" value="Back property set:  "></xp:label>
+				<xe:toolBarButton id="toolBarButton2"
+					label="Go back to previous page" back="true">
+				</xe:toolBarButton>
+				<xp:br></xp:br><xp:label id="label3" value="Href and href target properties set: "></xp:label>
+				<xe:toolBarButton id="toolBarButton3"
+					label="Launch an external site" href="http://www.lotus.com"
+					hrefTarget="_blank">
+				</xe:toolBarButton>
+				<xp:br></xp:br><xp:label id="label4" value="Properties icon and iconPos set: "></xp:label>
+				<xe:toolBarButton id="toolBarButton4" label="icon"
+					icon="/.ibmxspres/.extlib/icons/iconValuePicker.png" iconPos="0,0,20,20">
+				</xe:toolBarButton>
+				<xp:br></xp:br>
+				<xp:label id="label5" value="MoveTo property set: "></xp:label>
+				<xe:toolBarButton id="toolBarButton5" label="home"
+					moveTo="home">
+				</xe:toolBarButton>
+				<xp:br></xp:br>
+				<xp:label id="label6"
+					value="Transition property set to fade: ">
+				</xp:label>
+				<xe:toolBarButton id="toolBarButton6" label="Fade"
+					transition="fade" moveTo="toolbb2">
+				</xe:toolBarButton>
+				<xp:br></xp:br>
+				<xp:label id="label9"
+					value="Transition property set to flip: ">
+				</xp:label>
+				<xe:toolBarButton id="toolBarButton9" label="Flip"
+					transition="flip" moveTo="toolbb2">
+				</xe:toolBarButton>
+				
+				<xp:br></xp:br>
+				<xp:label id="label10"
+					value="Transitiondir property set to slide rtl: ">
+				</xp:label>
+				<xe:toolBarButton id="toolBarButton10" label="slide rtl"
+					transition="slide" moveTo="toolbb2" transitionDir="rtl">
+				</xe:toolBarButton>
+				
+				<xp:br></xp:br><xp:label id="label7" value="Onclick event"></xp:label>
+				<xe:toolBarButton id="toolBarButton7"
+					label="onClick event">
+					<xe:this.onClick><![CDATA[console.log("Tool Bar Button clicked");
+alert("Tool Bar Button clicked")]]></xe:this.onClick>
+				</xe:toolBarButton>
+				<xp:br></xp:br>
+				<xp:label id="label8"
+					value="Arrow property set to 'previous': ">
+				</xp:label>
+				<xe:toolBarButton id="toolBarButton8"
+					label="Tool Bar Button" arrow="previous">
+				</xe:toolBarButton>
+				<xp:br></xp:br>
+				<xp:label id="label15" value="Arrow property set to 'next': ">
+				</xp:label>
+				<xe:toolBarButton id="toolBarButton15"
+					label="Tool Bar Button" arrow="next">
+				</xe:toolBarButton>
+				<xp:br></xp:br>
+				<xp:label id="label16" value="Arrow property set to 'left': ">
+				</xp:label>
+				<xe:toolBarButton id="toolBarButton16"
+					label="Tool Bar Button" arrow="left">
+				</xe:toolBarButton>
+				<xp:br></xp:br>
+				<xp:label id="label17"
+					value="Arrow property set to 'right': ">
+				</xp:label>
+				<xe:toolBarButton id="toolBarButton17"
+					label="Tool Bar Button" arrow="right">
+				</xe:toolBarButton>
+				
+				<xp:br></xp:br>
+				<xp:label id="label11"
+					value="Light property set to true: ">
+				</xp:label>
+				<xe:toolBarButton id="toolBarButton11"
+					label="Tool Bar Button" light="true">
+				</xe:toolBarButton>
+				<xp:br></xp:br><xp:label id="label12" value="Selected property set: "></xp:label>
+				<xe:toolBarButton id="toolBarButton12"
+					label="Tool Bar Button" selected="true">
+				</xe:toolBarButton>
+				<xp:br></xp:br><xp:label id="label13" value="Toggle property set: "></xp:label>
+				<xe:toolBarButton id="toolBarButton13"
+					label="Tool Bar Button" toggle="true">
+				</xe:toolBarButton>
+				<xp:br></xp:br></xp:panel></xe:djxmRoundRectList></xe:appPage>
+				
+				<xe:appPage id="appPage1" pageName="toolbb2">
+			<xe:djxmHeading id="djxmHeading2" moveTo="toolbarbutton"
+				back="Back">
+			</xe:djxmHeading>
+			<xe:djxmRoundRectList id="djxmRoundRectList2">
+				<xe:djxmLineItem id="djxmLineItem1"
+					label="Testing 1 2 1 2">
+				</xe:djxmLineItem>
+			</xe:djxmRoundRectList>
+		</xe:appPage>
+				</xp:view>

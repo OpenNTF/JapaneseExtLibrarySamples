@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?><note class="form" replicaid="85257A870079CB8F" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="882" sequence="26" unid="B70067B36E7F2C4680257ACD00543B57">
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="80257C350049C2B7" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="616" sequence="26" unid="B70067B36E7F2C4680257ACD00543B57">
 <created><datetime dst="true">20121207T162002,15+01</datetime></created>
-<modified><datetime>20130319T214347,09+09</datetime></modified>
-<revised><datetime>20130319T214347,08+09</datetime></revised>
-<lastaccessed><datetime>20130319T214347,09+09</datetime></lastaccessed>
-<addedtofile><datetime dst="true">20121207T112119,64-04</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=Admin/O=LotusLab</name></updatedby>
+<modified><datetime>20131225T164156,70+09</datetime></modified>
+<revised><datetime>20131225T164156,69+09</datetime></revised>
+<lastaccessed><datetime>20131225T164156,70+09</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20131202T142546,32+01</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=a admin/O=ibm</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=Admin/O=lotuslab</name></updatedby>
 <revisions><datetime dst="true">20121207T162002,15+01</datetime><datetime dst="true">20121207T162002,17+01</datetime><datetime dst="true">20121207T162003,82+01</datetime><datetime dst="true">20121207T162003,84+01</datetime><datetime dst="true">20121207T162003,86+01</datetime><datetime dst="true">20121207T162003,88+01</datetime><datetime dst="true">20121207T162145,73+01</datetime><datetime dst="true">20121207T162145,94+01</datetime><datetime dst="true">20121207T162145,96+01</datetime><datetime dst="true">20121207T162147,79+01</datetime><datetime dst="true">20121207T162147,81+01</datetime><datetime dst="true">20121207T162147,83+01</datetime><datetime dst="true">20121207T162147,85+01</datetime><datetime dst="true">20121207T183358,16+01</datetime><datetime dst="true">20121207T183358,44+01</datetime><datetime dst="true">20121207T183358,46+01</datetime><datetime dst="true">20121207T183703,16+01</datetime><datetime dst="true">20121207T183703,43+01</datetime><datetime dst="true">20121217T181859,05+01</datetime><datetime dst="true">20121217T181859,50+01</datetime></revisions>
-<wassignedby><name>CN=Admin/O=LotusLab</name></wassignedby>
+<wassignedby><name>CN=Admin/O=lotuslab</name></wassignedby>
 <item name="$Flags"><text>gC~4K</text></item>
 <item name="$TITLE" sign="true"><text>home_other.xsp</text></item>
 

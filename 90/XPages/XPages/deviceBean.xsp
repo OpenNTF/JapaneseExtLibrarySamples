@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:XPa="component/XPages.nsf"
+  xmlns:xc="http://www.ibm.com/xsp/custom" xmlns:xe="http://www.ibm.com/xsp/coreex">
+
+  <XPa:ccLayout navPath="/new/devicebean/">
+    <xp:this.facets>
+      <xp:panel xp:key="facetMain">
+        <xe:formTable id="formTable1" formTitle="deviceBean"
+          formDescription="Provides an easy to use and easy to program way of identifying a popular range of mobile and tablet devices. With the information provided by this bean, you will be able to make programming decisions whether to load or unload parts of an application page based on the requesting device or browser."><xp:this.facets>
+  <xp:label value="Label?" id="label1" xp:key="header"></xp:label>
+  <xp:text escape="true" id="computedFieldfooter" xp:key="footer">
+    <xp:this.value><![CDATA[#{javascript:"User Agent: "+context.getUserAgent().getUserAgent()}]]></xp:this.value>
+  </xp:text></xp:this.facets>
+          
+          <xe:formRow id="formRow1" label="EL: deviceBean.mobile">
+            <xp:text escape="true" id="computedField1"
+              value="#{deviceBean.mobile}" style="font-weight:bold">
+            </xp:text>
+          </xe:formRow>
+          <xe:formRow id="formRow2" label="deviceBean.isMobile()">
+            <xp:text escape="true" id="computedField2"
+              value="#{javascript:deviceBean.isMobile()}" style="font-weight:bold">
+            </xp:text>
+          </xe:formRow>
+          <xe:formRow id="formRow3" label="EL: deviceBean.tablet">
+            <xp:text escape="true" id="computedField3"
+              value="#{deviceBean.tablet}" style="font-weight:bold">
+            </xp:text>
+          </xe:formRow>
+          <xe:formRow id="formRow4" label="deviceBean.isTablet()">
+            <xp:text escape="true" id="computedField4"
+              value="#{javascript:deviceBean.isTablet()}" style="font-weight:bold">
+            </xp:text>
+          </xe:formRow>
+          <xe:formRow id="formRow5" label="EL: deviceBean.iphone">
+            <xp:text escape="true" id="computedField5"
+              value="#{deviceBean.iphone}" style="font-weight:bold">
+            </xp:text>
+          </xe:formRow>
+          <xe:formRow id="formRow6" label="deviceBean.isIphone()">
+            <xp:text escape="true" id="computedField6"
+              value="#{javascript:deviceBean.isIphone()}" style="font-weight:bold">
+            </xp:text>
+          </xe:formRow>
+          <xe:formRow id="formRow7" label="EL: deviceBean.ipad">
+            <xp:text escape="true" id="computedField7"
+              value="#{deviceBean.ipad}" style="font-weight:bold">
+            </xp:text>
+          </xe:formRow>
+          <xe:formRow id="formRow8" label="deviceBean.isIpad()">
+            <xp:text escape="true" id="computedField8"
+              value="#{javascript:deviceBean.isIpad()}" style="font-weight:bold">
+            </xp:text>
+          </xe:formRow>
+          <xe:formRow id="formRow9" label="EL: deviceBean.android">
+            <xp:text escape="true" id="computedField9"
+              value="#{deviceBean.android}" style="font-weight:bold">
+            </xp:text>
+          </xe:formRow>
+          <xe:formRow id="formRow10" label="deviceBean.isAndroid()">
+            <xp:text escape="true" id="computedField10"
+              value="#{javascript:deviceBean.isAndroid()}" style="font-weight:bold">
+            </xp:text>
+          </xe:formRow>
+          <xe:formRow id="formRow11" label="EL: deviceBean.blackberry">
+            <xp:text escape="true" id="computedField11"
+              value="#{deviceBean.blackberry}" style="font-weight:bold">
+            </xp:text>
+          </xe:formRow>
+          <xe:formRow id="formRow12" label="deviceBean.isBlackberry()">
+            <xp:text escape="true" id="computedField12"
+              value="#{javascript:deviceBean.isBlackberry()}" style="font-weight:bold">
+            </xp:text>
+          </xe:formRow>
+          <xe:formRow id="formRow13" label="EL: deviceBean.windows">
+            <xp:text escape="true" id="computedField13"
+              value="#{deviceBean.windows}" style="font-weight:bold">
+            </xp:text>
+          </xe:formRow>
+          <xe:formRow id="formRow14" label="deviceBean.isWindows()">
+            <xp:text escape="true" id="computedField14"
+              value="#{javascript:deviceBean.isWindows()}" style="font-weight:bold">
+            </xp:text>
+          </xe:formRow>
+          <xe:formRow id="formRow15" label="deviceBean.getVersion('iphone')">
+            <xp:text escape="true" id="computedField15"
+              value="#{javascript:deviceBean.getVersion('iphone')}" style="font-weight:bold">
+            </xp:text>
+          </xe:formRow>
+          <xe:formRow id="formRow16" label="deviceBean.getVersion('ipad')">
+            <xp:text escape="true" id="computedField16"
+              value="#{javascript:deviceBean.getVersion('ipad')}" style="font-weight:bold">
+            </xp:text>
+          </xe:formRow>
+          <xe:formRow id="formRow17" label="deviceBean.getVersion('android')">
+            <xp:text escape="true" id="computedField17"
+              value="#{javascript:deviceBean.getVersion('android')}" style="font-weight:bold">
+            </xp:text>
+          </xe:formRow>
+          <xe:formRow id="formRow18" label="deviceBean.getValue('android')">
+            <xp:text escape="true" id="computedField18"
+              value="#{javascript:deviceBean.getValue('android')}" style="font-weight:bold">
+            </xp:text>
+          </xe:formRow>
+          <xe:formRow id="formRow19" label="deviceBean.getValue('iphone)">
+            <xp:text escape="true" id="computedField19"
+              value="#{javascript:deviceBean.getValue('iphone')}" style="font-weight:bold">
+            </xp:text>
+          </xe:formRow>
+          <xe:formRow id="formRow20" label="deviceBean.getValue('ipod')">
+            <xp:text escape="true" id="computedField20"
+              value="#{javascript:deviceBean.getValue('ipod')}" style="font-weight:bold">
+            </xp:text>
+          </xe:formRow>
+          <xe:formRow id="formRow21" label="deviceBean.getValue('ipad')">
+            <xp:text escape="true" id="computedField21"
+              value="#{javascript:deviceBean.getValue('ipad')}" style="font-weight:bold">
+            </xp:text>
+          </xe:formRow>
+          <xe:formRow id="formRow22" label="deviceBean.getValue('chrome')">
+            <xp:text escape="true" id="computedField22"
+              value="#{javascript:deviceBean.getValue('chrome')}" style="font-weight:bold">
+            </xp:text>
+          </xe:formRow>
+          <xe:formRow id="formRow23" label="deviceBean.getValue('firefox')">
+            <xp:text escape="true" id="computedField23"
+              value="#{javascript:deviceBean.getValue('firefox')}" style="font-weight:bold">
+            </xp:text>
+          </xe:formRow>
+          <xe:formRow id="formRow24" label="deviceBean.getValue('safari')">
+            <xp:text escape="true" id="computedField24"
+              value="#{javascript:deviceBean.getValue('safari')}" style="font-weight:bold">
+            </xp:text>
+          </xe:formRow>
+          <xe:formRow id="formRow25" label="deviceBean.getValue('windows')">
+            <xp:text escape="true" id="computedField25"
+              value="#{javascript:deviceBean.getValue('windows')}" style="font-weight:bold">
+            </xp:text>
+          </xe:formRow>
+          <xe:formRow id="formRow26" label="deviceBean.getValue('ie')">
+            <xp:text escape="true" id="computedField26"
+              value="#{javascript:deviceBean.getValue('ie')}" style="font-weight:bold">
+            </xp:text>
+          </xe:formRow>
+          <xe:formRow id="formRow27" label="deviceBean.getValue('opera')">
+            <xp:text escape="true" id="computedField27"
+              value="#{javascript:deviceBean.getValue('opera')}" style="font-weight:bold">
+            </xp:text>
+          </xe:formRow>
+          <xe:formRow id="formRow28" label="deviceBean.getValue('blackberry')">
+            <xp:text escape="true" id="computedField28"
+              value="#{javascript:deviceBean.getValue('blackberry')}" style="font-weight:bold">
+            </xp:text>
+          </xe:formRow>
+          <xe:formRow id="formRow29" label="deviceBean.getValue('blahblahblah')">
+            <xp:text escape="true" id="computedField29"
+              value="#{javascript:deviceBean.getValue('blahblahblah')}" style="font-weight:bold">
+            </xp:text>
+          </xe:formRow>
+          
+          
+          
+        
+
+          </xe:formTable>
+          <xp:text escape="true" id="computedFieldfoot2">
+    <xp:this.value><![CDATA[#{javascript:"User Agent: "+context.getUserAgent().getUserAgent()}]]></xp:this.value>
+  </xp:text>
+      </xp:panel>
+      <xc:ccMenu_new xp:key="facetLeft"></xc:ccMenu_new>
+    </xp:this.facets>
+  </XPa:ccLayout>
+</xp:view>

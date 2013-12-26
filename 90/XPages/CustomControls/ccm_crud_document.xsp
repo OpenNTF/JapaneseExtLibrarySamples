@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view
+  xmlns:xp="http://www.ibm.com/xsp/core"
+  xmlns:xe="http://www.ibm.com/xsp/coreex">
+
+
+  <xp:panel>
+    <xe:djxmHeading
+      id="djxmHeading2"
+      label="Topic"
+      back="Cancel"
+      moveTo="crudhome">
+      <xp:this.facets>
+        <xp:panel
+          xp:key="actionFacet">
+          <xe:toolBarButton
+            id="toolBarButton3"
+            label="Save"
+            rendered="#{javascript:document1.isEditable()}">
+            <xp:eventHandler
+              event="onClick"
+              submit="true"
+              refreshMode="complete">
+              <xe:this.action>
+                <xe:moveTo
+                  direction="Right to Left"
+                  forceFullRefresh="true"
+                  saveDocument="true"
+                  transitionType="slide"
+                  targetPage="crudhome">
+                </xe:moveTo>
+              </xe:this.action>
+            </xp:eventHandler>
+          </xe:toolBarButton>
+          <xe:toolBarButton
+            id="toolBarButton2"
+            label="Edit"
+            rendered="#{javascript:!document1.isEditable()}">
+            <xp:eventHandler
+              event="onClick"
+              submit="true"
+              refreshMode="complete">
+              <xe:this.action>
+                <xp:changeDocumentMode
+                  mode="edit"
+                  var="document1">
+                </xp:changeDocumentMode>
+              </xe:this.action>
+            </xp:eventHandler>
+          </xe:toolBarButton>
+        </xp:panel>
+      </xp:this.facets>
+    </xe:djxmHeading>
+
+    <xp:this.data>
+      <xp:dominoDocument
+        var="document1"
+        formName="xspMainTopic">
+      </xp:dominoDocument>
+    </xp:this.data>
+    <xe:formTable
+      id="formTable1">
+      <xp:this.facets></xp:this.facets>
+      <xe:formRow
+        id="formRow3"
+        label="Subject: ">
+        <xp:inputText
+          id="inputText1"
+          value="#{document1.Subject}">
+        </xp:inputText>
+      </xe:formRow>
+      <xe:formRow
+        id="formRow2"
+        label="Category: ">
+        <xp:inputText
+          id="inputText2"
+          value="#{document1.Categories}">
+        </xp:inputText>
+      </xe:formRow>
+      <xe:formRow
+        id="formRow1" labelPosition="none">
+        <xp:inputRichText
+          id="inputRichText1"
+          value="#{document1.Body}"
+          loaded="${javascript:deviceBean.isTablet()}">
+        </xp:inputRichText>
+        <xp:br />
+        <xp:inputTextarea
+          id="inputTextarea1"
+          value="#{document1.Body}"
+          loaded="${javascript:deviceBean.isMobile()}">
+        </xp:inputTextarea>
+      </xe:formRow>
+    </xe:formTable>
+    <xe:tabBar
+          id="tabBar1"
+          barType="segmentedControl">
+          <xe:tabBarButton
+            id="tabBarButton1"
+            label="Delete"
+            rendered="#{javascript:!document1.isNewNote()}">
+            <xp:eventHandler
+              event="onClick"
+              submit="true"
+              refreshMode="complete">
+              <xe:this.action>
+
+                <xp:actionGroup>
+
+
+                	<xp:deleteDocument name=""
+                		message="This action will delete the current document."
+                		var="document1">
+                	</xp:deleteDocument>
+
+                	<xe:moveTo direction="Right to Left"
+                		forceFullRefresh="true" targetPage="crudhome"
+                		transitionType="slide">
+                	</xe:moveTo>
+                </xp:actionGroup>
+              </xe:this.action>
+            </xp:eventHandler>
+          </xe:tabBarButton>
+        </xe:tabBar>
+    
+    <hr/>
+    <xp:label
+      id="label1"
+      style="font-size:8pt">
+      <xp:this.value><![CDATA[#{javascript:"Web Browser's User Agent: "+context.getUserAgent().getUserAgent()}]]></xp:this.value>
+    </xp:label>
+  </xp:panel>
+
+
+</xp:view>

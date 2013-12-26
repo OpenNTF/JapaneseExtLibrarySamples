@@ -14,23 +14,15 @@
 			<xp:panel xp:key="facetMain">
 
 
-				<xp:span style="font-size:12pt;font-weight:bold">
+				
 					JavaScript : NotesXspViewEntry
 
-				</xp:span>
-				<xp:br style="font-size:12pt"></xp:br>
-				<xp:span style="font-size:12pt;font-weight:bold">
-					<xp:span
-						style="font-size:9pt;color:rgb(0,128,255)">
+				
+				<xp:br></xp:br>
+				
 						Displays all the Javascript funtions associated
 						with NotesXspViewEntry
-					</xp:span>
-					<xp:span
-						style="font-size:9pt;color:rgb(0,128,255);font-weight:bold">
-					</xp:span>
-				</xp:span>
-				<xp:br></xp:br>
-				&#160;
+				
 				<xp:br></xp:br>
 				<xp:div style="text-align:right">
 					                     
@@ -99,7 +91,7 @@ return "0/" + _unid + "?OpenDocument"}]]></xp:this.pageUrl>
 				<xp:br></xp:br>
 
 
-				<xp:br></xp:br>
+				<hr/>
 
 				<xp:table>
 					<xp:tr>
@@ -365,6 +357,19 @@ return _sibCount;}]]></xp:this.value>
 					</xp:tr>
 
 					<xp:tr>
+						<xp:td>placeholderrow</xp:td>
+						<xp:td></xp:td>
+						<xp:td>to&#160;Correct's index number</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+						<xp:text escape="true"
+								id="computedField15">
+								<xp:this.value></xp:this.value>
+							</xp:text>
+						</xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
 						<xp:td>isCategory()</xp:td>
 						<xp:td></xp:td>
 						<xp:td>
@@ -525,7 +530,7 @@ return _openPageUrl;}]]></xp:this.value>
 
 							<xp:button value="Label" id="button1">
 								<xp:eventHandler event="onclick"
-									submit="true" refreshMode="complete">
+									submit="true" refreshMode="complete" id="eventHandler1">
 									<xp:this.action><![CDATA[#{javascript:var _row:NotesXspViewEntry;//=rowData;
 _row.setSelected('true');
 }]]></xp:this.action>

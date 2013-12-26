@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?><note class="form" replicaid="85257A870079CB8F" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="4f6" sequence="118" unid="157D8B3D352C0EEA802573DB003E4C1F">
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="80257C350049C2B7" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="322" sequence="118" unid="157D8B3D352C0EEA802573DB003E4C1F">
 <created><datetime dst="true">20080125T122027,19+01</datetime></created>
-<modified><datetime>20130319T214345,29+09</datetime></modified>
-<revised><datetime>20130319T214345,28+09</datetime></revised>
-<lastaccessed><datetime>20130319T214345,29+09</datetime></lastaccessed>
-<addedtofile><datetime dst="true">20120928T180610,75-04</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=Admin/O=LotusLab</name></updatedby>
+<modified><datetime>20131225T164151,30+09</datetime></modified>
+<revised><datetime>20131225T164151,29+09</datetime></revised>
+<lastaccessed><datetime>20131225T164151,30+09</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20131202T142542,56+01</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=a admin/O=ibm</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=a admin/O=ibm</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=Admin/O=lotuslab</name></updatedby>
 <revisions><datetime dst="true">20090610T103008,76+01</datetime><datetime dst="true">20090610T103010,87+01</datetime><datetime dst="true">20090610T103011,99+01</datetime><datetime dst="true">20090610T103012,01+01</datetime><datetime dst="true">20090723T164253,56+01</datetime><datetime dst="true">20090723T164255,16+01</datetime><datetime dst="true">20090723T164257,28+01</datetime><datetime dst="true">20090723T164257,31+01</datetime><datetime dst="true">20090723T200456,64+01</datetime><datetime dst="true">20090723T200456,66+01</datetime><datetime dst="true">20090727T152139,86+01</datetime><datetime dst="true">20090727T152142,66+01</datetime><datetime dst="true">20090727T152147,59+01</datetime><datetime dst="true">20090727T152147,62+01</datetime><datetime dst="true">20090806T210343,02+01</datetime><datetime dst="true">20090806T210346,16+01</datetime><datetime dst="true">20090806T210348,04+01</datetime><datetime dst="true">20090806T210348,07+01</datetime><datetime dst="true">20090826T113837,46+01</datetime><datetime dst="true">20090826T113840,39+01</datetime><datetime dst="true">20090826T113841,91+01</datetime><datetime dst="true">20090826T113841,93+01</datetime><datetime dst="true">20090826T113905,02+01</datetime><datetime dst="true">20090826T113907,37+01</datetime><datetime dst="true">20090826T113909,19+01</datetime><datetime dst="true">20100527T110306,11+01</datetime></revisions>
-<wassignedby><name>CN=Admin/O=LotusLab</name></wassignedby>
+<wassignedby><name>CN=Admin/O=lotuslab</name></wassignedby>
 <item name="$TITLE"><text>testPage02.xsp</text></item>
 <item name="$Flags"><text>gK</text></item>
 

@@ -1,13 +1,14 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' replicaid='85257A870079CB8F'>
-<noteinfo noteid='792' unid='35C838CF6C144FBC802577300053F6A6' sequence='5'>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='80257C350049C2B7'>
+<noteinfo noteid='53e' unid='35C838CF6C144FBC802577300053F6A6' sequence='5'>
 <created><datetime dst='true'>20100527T161706,30+01</datetime></created>
-<modified><datetime dst='true'>20130118T132314,62+01</datetime></modified>
-<revised><datetime dst='true'>20130118T132314,61+01</datetime></revised>
-<lastaccessed><datetime dst='true'>20130118T132314,62+01</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20120928T180643,24-04</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name><name
->CN=Paul Hannan/OU=Ireland/O=IBM</name></updatedby>
+<modified><datetime dst='true'>20131202T143738,45+01</datetime></modified>
+<revised><datetime dst='true'>20131202T143738,44+01</datetime></revised>
+<lastaccessed><datetime dst='true'>20131202T143738,45+01</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20131202T142545,24+01</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=a admin/O=ibm</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name
+>CN=a admin/O=ibm</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name></updatedby>
 <revisions><datetime dst='true'>20100527T161706,29+01</datetime></revisions>
 <item name='$Comment' sign='true'><text/></item>
 <item name='numberSpinner' summary='false' sign='true'><number>0</number></item>
@@ -25,7 +26,7 @@ X/8QAAIADwAHAAAAAAAAAA==
 hhgBAIAAAAAAgAAAAQABAP///wAQAAAA
 </rawitemdata></item>
 <item name='$Flags'><text/></item>
-<item name='$DesignerVersion' sign='true'><text>8.5.2</text></item>
+<item name='$DesignerVersion'><text>8.5.2</text></item>
 <item name='$$ScriptName' summary='false' sign='true'><text>xspDojoType</text></item>
 <item name='dojoTypeSubject' placeholder='true'>
 <rawitemdata type='0'>
@@ -36,9 +37,9 @@ hhgBAIAAAAAAgAAAAQABAP///wAQAAAA
 <item name='dojoTypeCheckbox' placeholder='true'>
 <rawitemdata type='0'>
 </rawitemdata></item>
-<item name='dojoTypeCurrency' summary='false' sign='true'><number>0</number></item>
-<item name='dojoTypeNumberSpinner' summary='false' sign='true'><number>0</number></item>
-<item name='dojoTypeNumber' summary='false' sign='true'><number>0</number></item>
+<item name='dojoTypeCurrency' summary='false'><number>0</number></item>
+<item name='dojoTypeNumberSpinner' summary='false'><number>0</number></item>
+<item name='dojoTypeNumber' summary='false'><number>0</number></item>
 <item name='dojoTypeRadio' placeholder='true'>
 <rawitemdata type='0'>
 </rawitemdata></item>

@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?><note class="form" replicaid="85257A870079CB8F" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="5ce" sequence="61" unid="432B9AD5BF4BE028802575FC0068FD96">
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="80257C350049C2B7" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="3ae" sequence="61" unid="432B9AD5BF4BE028802575FC0068FD96">
 <created><datetime dst="true">20090723T200646,62+01</datetime></created>
-<modified><datetime>20130319T214345,13+09</datetime></modified>
-<revised><datetime>20130319T214345,12+09</datetime></revised>
-<lastaccessed><datetime>20130319T214345,13+09</datetime></lastaccessed>
-<addedtofile><datetime dst="true">20120928T180618,80-04</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=Admin/O=LotusLab</name></updatedby>
+<modified><datetime>20131225T164150,41+09</datetime></modified>
+<revised><datetime>20131225T164150,40+09</datetime></revised>
+<lastaccessed><datetime>20131225T164150,41+09</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20131202T142543,26+01</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name><name>CN=a admin/O=ibm</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=a admin/O=ibm</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=Admin/O=lotuslab</name></updatedby>
 <revisions><datetime dst="true">20100603T132254,88+01</datetime><datetime dst="true">20110331T101351,06+01</datetime><datetime dst="true">20121213T110943,27+01</datetime><datetime dst="true">20121213T110943,91+01</datetime></revisions>
-<wassignedby><name>CN=Admin/O=LotusLab</name></wassignedby>
+<wassignedby><name>CN=Admin/O=lotuslab</name></wassignedby>
 <item name="$TITLE"><text>viewFilteringExactCase.xsp</text></item>
 
 <item name="$Flags"><text>gC~K4</text></item>

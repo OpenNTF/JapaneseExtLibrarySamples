@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xe="http://www.ibm.com/xsp/coreex">
+
+	
+
+		<xp:panel>
+		<xe:djxmHeading id="djxmHeading2" label="Attachment"
+				back="Cancel" moveTo="fileuploadView">
+				<xp:this.facets>
+					<xp:panel xp:key="actionFacet">
+						<xe:toolBarButton id="toolBarButton2"
+							label="Save" rendered="#{javascript:document1.isEditable()}">
+							<xp:eventHandler event="onClick"
+								submit="true" refreshMode="complete">
+								<xe:this.action>
+									<xe:moveTo direction="Right to Left"
+										forceFullRefresh="true" saveDocument="true"
+										targetPage="fileuploadView" transitionType="slide">
+									</xe:moveTo>
+								</xe:this.action>
+							</xp:eventHandler>
+						</xe:toolBarButton>
+						<xe:toolBarButton id="toolBarButton3"
+							label="Edit" rendered="#{javascript:!document1.isEditable()}">
+							<xp:eventHandler event="onClick"
+								submit="true" refreshMode="complete">
+								<xe:this.action>
+									<xp:changeDocumentMode mode="edit"
+										var="document1">
+									</xp:changeDocumentMode>
+								</xe:this.action>
+							</xp:eventHandler>
+						</xe:toolBarButton>
+						
+					</xp:panel>
+				</xp:this.facets>
+			</xe:djxmHeading>
+			<xp:this.data>
+				<xp:dominoDocument var="document1" formName="MainTopic"
+					computeWithForm="onsave">
+				</xp:dominoDocument>
+			</xp:this.data>
+		
+		
+		
+			<xe:formTable id="formTable1"
+				formTitle="Mobile App File Upload ">
+				<xe:formRow id="formRow1" label="Title: ">
+					<xp:inputText id="inputText1"
+						value="#{document1.Subject}">
+					</xp:inputText>
+				</xe:formRow>
+				<xe:formRow id="formRow2">
+					<xp:fileDownload
+					  rows="30"
+					  id="fileDownload1"
+					  displayLastModified="false"
+					  value="#{document1.Body}"
+					  displayCreated="false"
+					  displayType="false"
+					  allowDelete="true">
+					</xp:fileDownload>
+				</xe:formRow>
+				<xe:formRow id="formRow3">
+					<xp:fileUpload id="fileUpload1"
+						value="#{document1.Body}">
+					</xp:fileUpload>
+				</xe:formRow>
+			</xe:formTable>
+			
+		</xp:panel>
+		</xp:view>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xe="http://www.ibm.com/xsp/coreex">
+
+	<xp:this.beforePageLoad><![CDATA[#{javascript:var r = @Right(@Random(),2);
+viewScope.r01 = r}]]></xp:this.beforePageLoad>
+	<xe:singlePageApp id="singlePageApp1" selectedPageName="resize1">
+		<!--<xe:this.onResize><![CDATA[console.log("onOrientationChange Event | " +"Orientation: "+window.orientation)]]></xe:this.onResize>
+		-->
+		<xe:this.onOrientationChange><![CDATA[switch(window.orientation) 
+    {  
+      case -90:
+      case 90:
+        console.log('landscape');
+        break; 
+      default:
+        console.log('portrait');
+        break; 
+    }]]></xe:this.onOrientationChange>
+		<xe:appPage id="appPage1" pageName="resize1" preload="true">
+			<xe:djxmHeading id="djxmHeading1"
+				label="Orientation Change Page">
+			</xe:djxmHeading>
+			<xe:djxmRoundRectList id="djxmRoundRectList1">
+
+				<xe:djxmLineItem id="djxmLineItem2">
+					<xe:toolBarButton id="toolBarButton1" label="Back"
+						arrow="previous">
+						<xp:eventHandler event="onClick" submit="true"
+							refreshMode="complete">
+							<xe:this.action>
+								<xp:openPage name="/m_home.xsp"></xp:openPage>
+							</xe:this.action>
+						</xp:eventHandler>
+					</xe:toolBarButton>
+				</xe:djxmLineItem>
+				<xe:djxmLineItem id="djxmLineItem1"
+					label="This number changes on orientation change: "
+					rightText="#{javascript:viewScope.r01}">
+				</xe:djxmLineItem>
+
+				<xe:djxmLineItem id="djxmLineItem3"
+					label="This number will not change: "
+					rightText="#{javascript:@Right(@Random(),2)}">
+				</xe:djxmLineItem>
+
+			</xe:djxmRoundRectList>
+
+		</xe:appPage>
+		<xp:eventHandler event="onOrientationChange" submit="true"
+			refreshMode="partial" refreshId="djxmLineItem1">
+			<xe:this.action><![CDATA[#{javascript:var x = context.getUrl();
+var r = @Right(@Random(),2);
+viewScope.r01 = r;
+println("onOrientationChange Event - New number = "+r)}]]></xe:this.action>
+		</xp:eventHandler>
+	</xe:singlePageApp></xp:view>

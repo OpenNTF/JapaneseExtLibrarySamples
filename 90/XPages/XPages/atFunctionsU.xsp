@@ -1,114 +1,111 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xp:view xmlns:xp="http://www.ibm.com/xsp/core"
-	xmlns:XPa="component/XPages.nsf"
-	xmlns:xc="http://www.ibm.com/xsp/custom">
+  xmlns:XPa="component/XPages.nsf"
+  xmlns:xc="http://www.ibm.com/xsp/custom">
+<XPa:ccLayout id="cc4cclayout" navPath="/events/atfu/">
+    <xp:this.facets>
+      <xc:ccMenu_events xp:key="facetLeft"></xc:ccMenu_events>
+      <xp:panel xp:key="facetMain">
+        <xp:panel>
+          <xp:label id="label001" value="@U*: "
+            style="font-weight:bold;font-size:12pt">
+          </xp:label>
+          <xp:comboBox id="comboBoxAtFuncsU"
+            value="#{sessionScope.atFuncsUs}" defaultValue="None">
+            <xp:selectItem itemLabel="None"
+              itemValue="None">
+            </xp:selectItem>
+            <xp:selectItem itemLabel="@Unique"
+              itemValue="atFU01">
+            </xp:selectItem>
+            <xp:selectItem itemLabel="@UpperCase"
+              itemValue="atFU02">
+            </xp:selectItem>
+            <xp:selectItem itemLabel="@UserName"
+              itemValue="atFU03">
+            </xp:selectItem>
 
+            <xp:eventHandler event="onchange" submit="true"
+              refreshMode="complete">
+              <xp:this.action>
+                <![CDATA[#{javascript:print("")}]]>
+              </xp:this.action>
+            </xp:eventHandler>
+          </xp:comboBox>
+          <xp:panel>
 
-
-	<XPa:ccLayout id="cc4cclayout" navPath="/events/atfu/">
-		<xp:this.facets>
-			<xc:ccMenu_events xp:key="facetLeft"></xc:ccMenu_events>
-			<xp:panel xp:key="facetMain">
-				<xp:panel>
-					<xp:label id="label001" value="@U*: "
-						style="font-weight:bold;font-size:12pt">
-					</xp:label>
-					<xp:comboBox id="comboBoxAtFuncsU"
-						value="#{sessionScope.atFuncsUs}" defaultValue="None">
-						<xp:selectItem itemLabel="None"
-							itemValue="None">
-						</xp:selectItem>
-						<xp:selectItem itemLabel="@Unique"
-							itemValue="atFU01">
-						</xp:selectItem>
-						<xp:selectItem itemLabel="@UpperCase"
-							itemValue="atFU02">
-						</xp:selectItem>
-						<xp:selectItem itemLabel="@UserName"
-							itemValue="atFU03">
-						</xp:selectItem>
-
-						<xp:eventHandler event="onchange" submit="true"
-							refreshMode="complete">
-							<xp:this.action>
-								<![CDATA[#{javascript:print("")}]]>
-							</xp:this.action>
-						</xp:eventHandler>
-					</xp:comboBox>
-					<xp:panel>
-
-						<xp:panel>
-							<xp:this.rendered>
-								<![CDATA[#{javascript:sessionScope.atFuncsUs == "atFU01"}]]>
-							</xp:this.rendered>
-							<xp:table styleClass="customTable">
-								<xp:tr>
-									<xp:td>
-										<xp:label value="@Function: "
-											id="label1">
-										</xp:label>
-									</xp:td>
-									<xp:td>
-										@Unique() : string | Returns a
-										random, unique text value.
-										<xp:br></xp:br>
-										@Unique(list:any) : any |
-										Removes duplicate values from a
-										list.
-									</xp:td>
-								</xp:tr>
-							</xp:table>
-							<xp:br />
-						</xp:panel>
-						<xp:panel>
-							<xp:this.rendered>
-								<![CDATA[#{javascript:sessionScope.atFuncsUs == "atFU02"}]]>
-							</xp:this.rendered>
-							<xp:table styleClass="customTable">
-								<xp:tr>
-									<xp:td>
-										<xp:label value="@Function: "
-											id="label2">
-										</xp:label>
-									</xp:td>
-									<xp:td>
-										@UpperCase(value:string) :
-										string | Converts a string to
-										uppercase.
-									</xp:td>
-								</xp:tr>
-							</xp:table>
-							<xp:br />
-						</xp:panel>
-						<xp:panel>
-							<xp:this.rendered>
-								<![CDATA[#{javascript:sessionScope.atFuncsUs == "atFU03"}]]>
-							</xp:this.rendered>
-							<xp:table styleClass="customTable">
-								<xp:tr>
-									<xp:td>
-										<xp:label value="@Function: "
-											id="label3">
-										</xp:label>
-									</xp:td>
-									<xp:td>
-										@UserName() : string | Returns
-										the distinguished name of the
-										current user.
-										<xp:br></xp:br>
-										@UserName(index:int) : string |
-										Returns the distinguished name
-										of the current user.
-									</xp:td>
-								</xp:tr>
-							</xp:table>
-							<xp:text escape="true"
-								id="computedField4AtUserName"
-								style="color:rgb(128,0,255);font-weight:bold">
-								<xp:this.value><![CDATA[#{javascript:"Your user name is "+@UserName()}]]></xp:this.value>
-							</xp:text>
-							<xp:br />
-						</xp:panel>
+            <xp:panel>
+              <xp:this.rendered>
+                <![CDATA[#{javascript:sessionScope.atFuncsUs == "atFU01"}]]>
+              </xp:this.rendered>
+              <xp:table styleClass="customTable">
+                <xp:tr>
+                  <xp:td>
+                    <xp:label value="@Function: "
+                      id="label1">
+                    </xp:label>
+                  </xp:td>
+                  <xp:td>
+                    @Unique() : string  <xp:br></xp:br><xp:br></xp:br>Description:&#160;Returns a
+                    random, unique text value.
+                    <xp:br></xp:br>
+                    <xp:br></xp:br>
+                    @Unique(list:any) : any <xp:br></xp:br><xp:br></xp:br>Description:&#160;Removes duplicate values from a
+                    list<xp:br></xp:br>
+                  </xp:td>
+                </xp:tr>
+              </xp:table>
+              <xp:br />
+            </xp:panel>
+            <xp:panel>
+              <xp:this.rendered>
+                <![CDATA[#{javascript:sessionScope.atFuncsUs == "atFU02"}]]>
+              </xp:this.rendered>
+              <xp:table styleClass="customTable">
+                <xp:tr>
+                  <xp:td>
+                    <xp:label value="@Function: "
+                      id="label2">
+                    </xp:label>
+                  </xp:td>
+                  <xp:td>
+                    @UpperCase(value:string) :
+                    string | Converts a string to
+                    uppercase.
+                  </xp:td>
+                </xp:tr>
+              </xp:table>
+              <xp:br />
+            </xp:panel>
+            <xp:panel>
+              <xp:this.rendered>
+                <![CDATA[#{javascript:sessionScope.atFuncsUs == "atFU03"}]]>
+              </xp:this.rendered>
+              <xp:table styleClass="customTable">
+                <xp:tr>
+                  <xp:td>
+                    <xp:label value="@Function: "
+                      id="label3">
+                    </xp:label>
+                  </xp:td>
+                  <xp:td>
+                    @UserName() : string | Returns
+                    the distinguished name of the
+                    current user.
+                    <xp:br></xp:br>
+                    @UserName(index:int) : string |
+                    Returns the distinguished name
+                    of the current user.
+                  </xp:td>
+                </xp:tr>
+              </xp:table>
+              <xp:text escape="true"
+                id="computedField4AtUserName"
+                style="color:rgb(128,0,255);font-weight:bold">
+                <xp:this.value><![CDATA[#{javascript:"Your user name is "+@UserName()}]]></xp:this.value>
+              </xp:text>
+              <xp:br />
+            </xp:panel>
 
 
 
@@ -118,10 +115,10 @@
 
 
 
-					</xp:panel>
-				</xp:panel>
-			</xp:panel>
+          </xp:panel>
+        </xp:panel>
+      </xp:panel>
 
-		</xp:this.facets>
-	</XPa:ccLayout>
+    </xp:this.facets>
+  </XPa:ccLayout>
 </xp:view>

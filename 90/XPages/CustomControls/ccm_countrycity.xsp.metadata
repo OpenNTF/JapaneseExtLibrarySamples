@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?><note class="form" replicaid="85257A870079CB8F" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="8ca" sequence="47" unid="75DD01CB10FA43AD80257AED00544B35">
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="80257C350049C2B7" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="65e" sequence="51" unid="75DD01CB10FA43AD80257AED00544B35">
 <created><datetime dst="true">20130108T162042,77+01</datetime></created>
-<modified><datetime>20130319T214349,61+09</datetime></modified>
-<revised><datetime>20130319T214349,60+09</datetime></revised>
-<lastaccessed><datetime>20130319T214349,61+09</datetime></lastaccessed>
-<addedtofile><datetime dst="true">20130108T112107,60-04</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=Admin/O=LotusLab</name></updatedby>
-<revisions><datetime dst="true">20130108T162042,79+01</datetime><datetime dst="true">20130108T162042,90+01</datetime><datetime dst="true">20130108T162043,15+01</datetime><datetime dst="true">20130108T162053,98+01</datetime><datetime dst="true">20130108T162054,00+01</datetime><datetime dst="true">20130108T162054,02+01</datetime><datetime dst="true">20130108T162054,04+01</datetime><datetime dst="true">20130108T162436,95+01</datetime><datetime dst="true">20130108T162437,07+01</datetime><datetime dst="true">20130108T162439,01+01</datetime><datetime dst="true">20130108T162439,03+01</datetime><datetime dst="true">20130108T162928,99+01</datetime><datetime dst="true">20130108T162929,49+01</datetime><datetime dst="true">20130108T163316,68+01</datetime><datetime dst="true">20130108T163317,68+01</datetime><datetime dst="true">20130108T163317,70+01</datetime><datetime dst="true">20130108T163444,81+01</datetime><datetime dst="true">20130108T163445,42+01</datetime><datetime dst="true">20130108T163539,15+01</datetime><datetime dst="true">20130108T163539,74+01</datetime><datetime dst="true">20130108T163756,96+01</datetime><datetime dst="true">20130108T163757,42+01</datetime><datetime dst="true">20130108T164234,96+01</datetime><datetime dst="true">20130108T164235,48+01</datetime><datetime dst="true">20130108T165456,86+01</datetime><datetime dst="true">20130108T165457,47+01</datetime><datetime dst="true">20130108T165457,50+01</datetime><datetime dst="true">20130108T165803,00+01</datetime><datetime dst="true">20130108T165803,49+01</datetime><datetime dst="true">20130108T170604,66+01</datetime><datetime dst="true">20130108T170605,16+01</datetime><datetime dst="true">20130108T171029,06+01</datetime><datetime dst="true">20130108T171029,61+01</datetime><datetime dst="true">20130108T171029,64+01</datetime><datetime dst="true">20130108T171230,05+01</datetime><datetime dst="true">20130108T171230,63+01</datetime><datetime dst="true">20130108T171230,66+01</datetime><datetime dst="true">20130108T171248,05+01</datetime><datetime dst="true">20130108T171248,36+01</datetime><datetime dst="true">20130109T124727,39+01</datetime><datetime dst="true">20130109T124728,15+01</datetime></revisions>
-<wassignedby><name>CN=Admin/O=LotusLab</name></wassignedby>
+<modified><datetime>20131226T000444,36+09</datetime></modified>
+<revised><datetime>20131226T000444,35+09</datetime></revised>
+<lastaccessed><datetime>20131226T000444,36+09</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20131202T142546,68+01</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=a admin/O=ibm</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=Admin/O=lotuslab</name></updatedby>
+<revisions><datetime dst="true">20130109T124728,18+01</datetime><datetime dst="true">20131113T160721,79+01</datetime></revisions>
+<wassignedby><name>CN=Admin/O=lotuslab</name></wassignedby>
 <item name="$Flags"><text>gC~4;</text></item>
 <item name="$TITLE"><text>ccm_countrycity.xsp</text></item>
 
@@ -16,8 +16,8 @@
 
 
 <item name="$FileNames" sign="true"><text>ccm_countrycity.xsp</text></item>
+
+
 <item name="$DesignerVersion"><text>8.5.1</text></item>
-
-
 
 </note>

@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?><note class="form" replicaid="85257A870079CB8F" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="552" sequence="124" unid="A0A242E5713C135780257646003B3345">
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="80257C350049C2B7" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="362" sequence="124" unid="A0A242E5713C135780257646003B3345">
 <created><datetime dst="true">20091005T114637,49+01</datetime></created>
-<modified><datetime>20130319T214349,69+09</datetime></modified>
-<revised><datetime>20130319T214349,68+09</datetime></revised>
-<lastaccessed><datetime>20130319T214349,69+09</datetime></lastaccessed>
-<addedtofile><datetime dst="true">20120928T180613,83-04</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=Admin/O=LotusLab</name></updatedby>
+<modified><datetime>20131225T164200,75+09</datetime></modified>
+<revised><datetime>20131225T164200,74+09</datetime></revised>
+<lastaccessed><datetime>20131225T164200,75+09</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20131202T142542,88+01</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=a admin/O=ibm</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=a admin/O=ibm</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=Admin/O=lotuslab</name></updatedby>
 <revisions><datetime dst="true">20100603T132258,12+01</datetime><datetime dst="true">20110331T102404,41+01</datetime><datetime dst="true">20121204T160943,72+01</datetime><datetime dst="true">20121204T160949,27+01</datetime><datetime dst="true">20121204T161159,44+01</datetime></revisions>
-<wassignedby><name>CN=Admin/O=LotusLab</name></wassignedby>
+<wassignedby><name>CN=Admin/O=lotuslab</name></wassignedby>
 <item name="$Flags"><text>gC~4;</text></item>
 <item name="$TITLE"><text>ccWidget.xsp</text></item>
 

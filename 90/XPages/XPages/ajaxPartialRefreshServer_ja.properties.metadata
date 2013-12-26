@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><note class="form" replicaid="85257A870079CB8F" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="12da" sequence="2" unid="F51837F59FF525EA49257B330045E7DB">
-<created><datetime>20130319T214333,39+09</datetime></created>
-<modified><datetime>20130319T214335,31+09</datetime></modified>
-<revised><datetime>20130319T214335,30+09</datetime></revised>
-<lastaccessed><datetime>20130319T214335,31+09</datetime></lastaccessed>
-<addedtofile><datetime>20130319T214335,29+09</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Admin/O=LotusLab</name></updatedby>
-<wassignedby><name>CN=Admin/O=LotusLab</name></wassignedby>
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="80257C350049C2B7" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="8ee" sequence="2" unid="D45C43AC1CADFF1B49257C4C002A3D33">
+<created><datetime>20131225T164121,79+09</datetime></created>
+<modified><datetime>20131225T164123,13+09</datetime></modified>
+<revised><datetime>20131225T164123,12+09</datetime></revised>
+<lastaccessed><datetime>20131225T164123,13+09</datetime></lastaccessed>
+<addedtofile><datetime>20131225T164123,11+09</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Admin/O=lotuslab</name></updatedby>
+<wassignedby><name>CN=Admin/O=lotuslab</name></wassignedby>
 <item name="$Flags"><text>gC~4K2</text></item>
 <item name="$TITLE"><text>ajaxPartialRefreshServer_ja.properties</text></item>
 

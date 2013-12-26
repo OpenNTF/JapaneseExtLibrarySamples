@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view
+  xmlns:xp="http://www.ibm.com/xsp/core"
+  xmlns:xe="http://www.ibm.com/xsp/coreex">
+
+  <xe:djxmHeading
+    id="djxmHeading1"
+    back="Home"
+    moveTo="home"
+    label="Country City">
+  </xe:djxmHeading>
+
+  <xe:dataView
+    id="dataView1"
+    openDocAsReadonly="true"
+    collapsibleCategory="true"
+    pageName="#doccity"
+    rows="5">
+    <xp:this.facets>
+
+      <xp:pager
+        partialRefresh="true"
+        id="pager2"
+        xp:key="pagerBottomLeft">
+        <xp:pagerControl
+          type="Previous"
+          id="pagerControl1"></xp:pagerControl>
+      </xp:pager>
+      <xp:pager
+        partialRefresh="true"
+        id="pager1"
+        xp:key="pagerBottom">
+        <xp:pagerControl
+          type="Next"
+          id="pagerControl4"></xp:pagerControl>
+      </xp:pager>
+      <xp:link
+        escape="true"
+        text="Add 5 Rows"
+        id="link1"
+        xp:key="pagerBottomRight">
+        <xp:eventHandler
+          event="onclick"
+          submit="false">
+          <xp:this.script>
+            <xe:addRows
+              for="dataView1"
+              rowCount="5"
+              state="true">
+            </xe:addRows>
+          </xp:this.script>
+        </xp:eventHandler>
+      </xp:link>
+
+    </xp:this.facets>
+    <xe:this.data>
+      <xp:dominoView
+        var="view1"
+        viewName="xspCountryCityView03"
+        expandLevel="1"></xp:dominoView>
+    </xe:this.data>
+    <xe:this.summaryColumn>
+      <xe:viewSummaryColumn
+        columnName="City"></xe:viewSummaryColumn>
+    </xe:this.summaryColumn>
+    <xe:this.categoryColumn>
+      <xe:viewCategoryColumn
+        columnName="Country"></xe:viewCategoryColumn>
+    </xe:this.categoryColumn>
+  </xe:dataView>
+
+
+
+</xp:view>

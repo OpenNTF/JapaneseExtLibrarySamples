@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?><note class="form" replicaid="85257A870079CB8F" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="722" sequence="46" unid="9F0E3448820580CC8025760A006DC111">
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="80257C350049C2B7" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="4ce" sequence="46" unid="9F0E3448820580CC8025760A006DC111">
 <created><datetime dst="true">20090806T205848,49+01</datetime></created>
-<modified><datetime>20130319T214349,45+09</datetime></modified>
-<revised><datetime>20130319T214349,44+09</datetime></revised>
-<lastaccessed><datetime>20130319T214349,45+09</datetime></lastaccessed>
-<addedtofile><datetime dst="true">20120928T180635,16-04</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=Admin/O=LotusLab</name></updatedby>
+<modified><datetime>20131225T164200,11+09</datetime></modified>
+<revised><datetime>20131225T164200,10+09</datetime></revised>
+<lastaccessed><datetime>20131225T164200,11+09</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20131202T142544,70+01</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=a admin/O=ibm</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=a admin/O=ibm</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=Admin/O=lotuslab</name></updatedby>
 <revisions><datetime dst="true">20121126T174347,57+01</datetime><datetime dst="true">20121126T174348,33+01</datetime><datetime dst="true">20121212T163147,01+01</datetime><datetime dst="true">20121212T163147,82+01</datetime><datetime dst="true">20121212T163147,85+01</datetime><datetime dst="true">20121212T170157,04+01</datetime></revisions>
-<wassignedby><name>CN=Admin/O=LotusLab</name></wassignedby>
+<wassignedby><name>CN=Admin/O=lotuslab</name></wassignedby>
 <item name="$TITLE"><text>convertorsNumbers.xsp</text></item>
 
 <item name="$Flags"><text>gC~K4</text></item>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="80257C350049C2B7" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="686" sequence="17" unid="F14DCDC26F2DB7DD80257C1D005CC8C4">
+<created><datetime dst="true">20131108T175327,08+01</datetime></created>
+<modified><datetime>20131226T001252,29+09</datetime></modified>
+<revised><datetime>20131226T001252,28+09</datetime></revised>
+<lastaccessed><datetime>20131226T001252,29+09</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20131202T142546,88+01</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=a admin/O=ibm</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=Admin/O=lotuslab</name></updatedby>
+<revisions><datetime dst="true">20131108T175327,09+01</datetime><datetime dst="true">20131108T175327,12+01</datetime><datetime dst="true">20131108T175327,20+01</datetime><datetime dst="true">20131108T175332,36+01</datetime><datetime dst="true">20131108T175332,38+01</datetime><datetime dst="true">20131108T175332,40+01</datetime><datetime dst="true">20131108T175332,42+01</datetime><datetime dst="true">20131108T175518,19+01</datetime><datetime dst="true">20131108T175518,62+01</datetime><datetime dst="true">20131108T175520,36+01</datetime></revisions>
+<wassignedby><name>CN=Admin/O=lotuslab</name></wassignedby>
+<item name="$Flags"><text>gC~4;</text></item>
+<item name="$TITLE"><text>ccm_fileupload.xsp</text></item>
+
+
+
+<item name="$FileNames" sign="true"><text>ccm_fileupload.xsp</text></item>
+
+
+<item name="$DesignerVersion"><text>8.5</text></item>
+
+
+
+</note>

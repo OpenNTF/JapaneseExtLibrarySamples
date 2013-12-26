@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view
+  xmlns:xp="http://www.ibm.com/xsp/core"
+  xmlns:XPa="component/XPages.nsf"
+  xmlns:xc="http://www.ibm.com/xsp/custom"
+  
+  xmlns:xe="http://www.ibm.com/xsp/coreex"
+  >
+  <xp:this.properties>
+    <xp:parameter name="xsp.domino.view.navigator"
+      value="ByNoteId">
+    </xp:parameter>
+  </xp:this.properties>
+  <XPa:ccLayout navPath="/new/navn/">
+    <xp:this.facets>
+      <xp:panel xp:key="facetMain">
+      <xp:label
+          value="View Navigation - By Note Id"
+          id="label1"
+          style="font-weight:bold;font-size:12pt">
+        </xp:label>
+        <xp:br></xp:br>
+        <xe:pagerExpand
+          id="pagerExpand1"
+          for="viewPanel1">
+        </xe:pagerExpand>
+        <xp:viewPanel
+          rows="15"
+          id="viewPanel1"
+          viewStyle="width:99.0%"
+          indexVar="rowNumber"
+          var="rowData">
+          <xp:this.facets>
+            <xp:pager
+              partialRefresh="true"
+              xp:key="headerPager"
+              id="pager1"
+              panelPosition="left"
+              alwaysCalculateLast="true">
+              <xp:pagerControl
+                type="First"
+                id="pagerControl1">
+              </xp:pagerControl>
+              <xp:pagerControl
+                type="Separator"
+                id="pagerControl2">
+              </xp:pagerControl>
+              <xp:pagerControl
+                type="Previous"
+                id="pagerControl3">
+              </xp:pagerControl>
+              <xp:pagerControl
+                type="Separator"
+                id="pagerControl9">
+              </xp:pagerControl>
+              <xp:pagerControl
+                type="Group"
+                id="pagerControl8">
+              </xp:pagerControl>
+              <xp:pagerControl
+                type="Separator"
+                id="pagerControl4">
+              </xp:pagerControl>
+              <xp:pagerControl
+                type="Next"
+                id="pagerControl5">
+              </xp:pagerControl>
+              <xp:pagerControl
+                type="Separator"
+                id="pagerControl6">
+              </xp:pagerControl>
+              <xp:pagerControl
+                type="Last"
+                id="pagerControl7">
+              </xp:pagerControl>
+            </xp:pager>
+          </xp:this.facets>
+          <xp:this.data>
+            <xp:dominoView
+              var="view1"
+              viewName="XSP Category and Responses\3 Categories"
+              expandLevel="1">
+            </xp:dominoView>
+          </xp:this.data>
+          <xp:viewColumn
+            columnName="Categories"
+            id="viewColumn1">
+            <xp:viewColumnHeader
+              value="Categories"
+              id="viewColumnHeader1">
+            </xp:viewColumnHeader>
+          </xp:viewColumn>
+          <xp:viewColumn
+            columnName="Fruit"
+            id="viewColumn2">
+            <xp:viewColumnHeader
+              value="Fruit"
+              id="viewColumnHeader2">
+            </xp:viewColumnHeader>
+          </xp:viewColumn>
+          <xp:viewColumn
+            columnName="Vegetables"
+            id="viewColumn3">
+            <xp:viewColumnHeader
+              value="Vegetables"
+              id="viewColumnHeader3">
+            </xp:viewColumnHeader>
+          </xp:viewColumn>
+
+
+
+
+          <xp:viewColumn
+            columnName="$115"
+            id="viewColumn8"
+            indentResponses="true">
+            <xp:viewColumnHeader
+              value="Topic"
+              id="viewColumnHeader8">
+            </xp:viewColumnHeader>
+          </xp:viewColumn>
+
+          <xp:viewColumn
+            id="viewColumn100"
+            value="#{javascript:rowNumber.toPrecision(0);}">
+            <xp:this.facets>
+              <xp:viewColumnHeader
+                xp:key="header"
+                id="viewColumnHeader100"
+                value="Row #">
+              </xp:viewColumnHeader>
+            </xp:this.facets>
+          </xp:viewColumn>
+          <xp:viewColumn
+            id="viewColumn101"
+            value="#{javascript:rowData.getPosition('.');}">
+            <xp:this.facets>
+              <xp:viewColumnHeader
+                xp:key="header"
+                id="viewColumnHeader101"
+                value="Position">
+              </xp:viewColumnHeader>
+            </xp:this.facets>
+          </xp:viewColumn>
+
+
+        </xp:viewPanel>
+      
+      </xp:panel>
+      <xc:ccMenu_new xp:key="facetLeft"></xc:ccMenu_new>
+    </xp:this.facets>
+  </XPa:ccLayout>
+</xp:view>

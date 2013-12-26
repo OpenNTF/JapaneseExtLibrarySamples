@@ -1,270 +1,235 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:XPa="component/XPages.nsf"
-	xmlns:xe="http://www.ibm.com/xsp/coreex">
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf"
+	xmlns:xe="http://www.ibm.com/xsp/coreex"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
 	<xp:this.resources>
 		<!--<xp:styleSheet href="/csscustom.css"></xp:styleSheet>
-		<xp:styleSheet href="/1UIclasses.css"></xp:styleSheet>
-		--><xp:bundle var="xstr" src="strings.properties"></xp:bundle>
+			<xp:styleSheet href="/1UIclasses.css"></xp:styleSheet>
+		-->
+		<xp:bundle var="xstr" src="strings.properties"></xp:bundle>
 	</xp:this.resources>
 	<xe:applicationLayout id="panelFrame">
-		<xp:panel>
-			<!-- MAIN -->
-			<xp:panel id="panel4Maincc">
-				<xp:panel id="panel3">
-					<xp:callback facetName="facetMain" id="callback1">
-					</xp:callback>
-					<xp:br />
-					<xp:messages id="messages2"></xp:messages>
-				</xp:panel>
-			</xp:panel>
-			<!-- MAIN -->
-		</xp:panel>
-		<xe:this.facets>
-			<xp:callback facetName="facetLeft" id="facetLeft"
-				xp:key="LeftColumn">
-			</xp:callback>
-			<xp:panel xp:key="RightColumn">
-				<xp:panel id="panel1">
-					<xe:widgetContainer id="widgetContainer2"
-						titleBar="true" titleBarText="Your environment">
 
-						<xp:div>
-							<xp:label id="label4AppVersion"
-								style="font-size:x-small">
-								<xp:this.value><![CDATA[#{javascript:xstr.getString("app.version")}]]></xp:this.value>
-							</xp:label>
-							<xp:br />
-							<xp:label id="label4DominoVersion"
-								style="font-size:x-small">
-								<xp:this.value><![CDATA[#{javascript:var v2 = session.getNotesVersion();
+	  <xp:panel>
+	    <!-- MAIN -->
+	    <xp:panel id="panel4Maincc">
+	      <xp:panel id="panel3">
+	        <xp:callback
+	          facetName="facetMain"
+	          id="callback1">
+	        </xp:callback>
+	        <xp:br />
+	        <xp:messages id="messages2"></xp:messages>
+	      </xp:panel>
+	    </xp:panel>
+	    <!-- MAIN -->
+	  </xp:panel>
+	  <xe:this.facets>
+	    <xp:callback
+	      facetName="facetLeft"
+	      id="facetLeft"
+	      xp:key="LeftColumn">
+	    </xp:callback>
+	    <xp:panel xp:key="RightColumn">
+	      <xp:panel id="panel1">
+	        <xe:widgetContainer
+	          id="widgetContainer2"
+	          titleBar="true"
+	          titleBarText="Your environment">
+
+	          <xp:div>
+	            <xp:label
+	              id="label4AppVersion"
+	              style="font-size:x-small">
+	              <xp:this.value><![CDATA[#{javascript:xstr.getString("app.version")}]]></xp:this.value>
+	            </xp:label>
+	            <xp:br />
+	            <xp:label
+	              id="label4DominoVersion"
+	              style="font-size:x-small">
+	              <xp:this.value><![CDATA[#{javascript:var v2 = session.getNotesVersion();
 "Runtime Version: "+v2}]]></xp:this.value>
-							</xp:label>
-							<xp:br />
-							<xp:label id="label4XLversion"
-								style="font-size:x-small">
-								<xp:this.value><![CDATA[#{javascript:var v1 = com.ibm.xsp.extlib.util.ExtLibUtil.getExtLibVersion();
+	            </xp:label>
+	            <xp:br />
+	            <xp:label
+	              id="label4XLversion"
+	              style="font-size:x-small">
+	              <xp:this.value><![CDATA[#{javascript:var v1 = com.ibm.xsp.extlib.util.ExtLibUtil.getExtLibVersion();
 "ExtLib Version: "+v1 }]]></xp:this.value>
-							</xp:label>
-							<xp:br />
-							<xp:label
-								id="label4ServerPlatform" style="font-size:x-small">
-							<xp:this.value><![CDATA[#{javascript:"Runtime platform: "+session.getPlatform()}]]></xp:this.value></xp:label>
-							<xp:br />
-							<xp:label id="label4Browser"
-								style="font-size:x-small">
-								<xp:this.value><![CDATA[#{javascript:var br = context.getUserAgent().getBrowser();
+	            </xp:label>
+	            <xp:br />
+	            <xp:label
+	              id="label4ServerPlatform"
+	              style="font-size:x-small">
+	              <xp:this.value><![CDATA[#{javascript:"Runtime platform: "+session.getPlatform()}]]></xp:this.value>
+	            </xp:label>
+	            <xp:br />
+	            <xp:label
+	              id="label4Browser"
+	              style="font-size:x-small">
+	              <xp:this.value><![CDATA[#{javascript:var br = context.getUserAgent().getBrowser();
 var bv = context.getUserAgent().getBrowserVersion();
 "Browser: "+ @UpperCase(br)+" "+bv}]]></xp:this.value>
-							</xp:label>
-							<xp:br />
-							<xp:label id="label4YourLocale"
-								style="font-size:x-small">
-							<xp:this.value><![CDATA[#{javascript:"Browser locale: "+context.getLocale().getDisplayName()}]]></xp:this.value></xp:label>
-							<xp:br />
-							<xp:label id="label4"
-								style="font-size:x-small">
-								<xp:this.value><![CDATA[#{javascript:var url = context.getUrl().getPath();
+	            </xp:label>
+	            <xp:br />
+	            <xp:label
+	              id="label4YourLocale"
+	              style="font-size:x-small">
+	              <xp:this.value><![CDATA[#{javascript:"Browser locale: "+context.getLocale().getDisplayName()}]]></xp:this.value>
+	            </xp:label>
+	            <xp:br />
+	            <xp:label
+	              id="label4"
+	              style="font-size:x-small">
+	              <xp:this.value><![CDATA[#{javascript:var url = context.getUrl().getPath();
 "XPage: "+@Right(url, ".nsf")}]]></xp:this.value>
-							</xp:label>
+	            </xp:label>
 
 
 
-						</xp:div>
-					</xe:widgetContainer>
-					<xe:widgetContainer id="widgetContainer1"
-						titleBar="true" titleBarText="On the fly" type="standard">
-						<xp:label value="Change the Theme: " id="label1"
-							for="comboBox1">
-						</xp:label>
-						<xp:comboBox id="comboBox1"
-							value="#{sessionScope.themeSet}" defaultValue="default">
-							<xp:selectItem itemLabel="default"></xp:selectItem>
-							<xp:selectItem itemLabel="webstandard"
-								itemValue="webstandard" />
-							<xp:selectItem itemLabel="oneui"
-								itemValue="oneui" />
-							<xp:selectItem itemLabel="oneuiv2"
-								itemValue="oneuiv2" />
-							<xp:selectItem itemLabel="oneuiv2.1"
-								itemValue="oneuiv2.1" />
-							<xp:selectItem itemLabel="oneuiv3.0.2"
-								itemValue="oneuiv3.0.2" />
+	          </xp:div>
+	        </xe:widgetContainer>
+	        <xc:ccOnTheFly></xc:ccOnTheFly>
 
 
 
-							<xp:eventHandler event="onchange"
-								submit="true" refreshMode="complete">
-								<xp:this.action><![CDATA[#{javascript:var f = "/"+@RightBack(context.getUrl().getAddress(),"/");
-context.setSessionProperty('xsp.theme', getComponent('comboBox1').getValue());
-context.redirectToPage(f)}]]></xp:this.action>
-							</xp:eventHandler>
-						</xp:comboBox>
-						<xp:br />
-						<xp:label value="Timezone: " id="label3" />
-						<xp:comboBox id="comboBox2"
-							value="#{sessionScope.tz2}" defaultValue="None">
+	      </xp:panel>
+	    </xp:panel>
+	    <!--
+	      The Olde Worlde Menu
+	      <XPa:ccMenu xp:key="LeftColumn"></XPa:ccMenu>		
+	      
+	      
+	    -->
+	  </xe:this.facets>
+	  <xe:this.configuration>
+	    <xe:oneuiApplication
+	      productLogo="/xpageslogoBlue05.gif"
+	      productLogoAlt="XPages unofficial logo"
+	      legalLogo="/ibmlogosmall.gif"
+	      placeBar="false"
+	      titleBarName="XPages Demo App"
+	      navigationPath="#{javascript:compositeData.navPath}">
+	      <xe:this.footerLinks>
+	        <xe:basicContainerNode
+	          label="XPages Demonstration Application for IBM Notes Domino 9.0.0">
+	          <xe:this.children>
+	            <xe:basicLeafNode label="OpenNTF Project">
+	              <xe:this.href><![CDATA[http://www.openntf.org/internal/home.nsf/project.xsp?action=openDocument&name=Demonstration%20Application%20for%20XPages]]></xe:this.href>
+	            </xe:basicLeafNode>
+
+	          </xe:this.children>
+	        </xe:basicContainerNode>
 
 
-							<xp:selectItem itemLabel="None"
-								itemValue="">
-							</xp:selectItem>
-							<xp:selectItems>
-								<xp:this.value><![CDATA[${javascript:TimeZone.getAvailableIDs().sort()}]]></xp:this.value>
-							</xp:selectItems>
+	        <xe:basicContainerNode label="XPages Resources">
+	          <xe:this.children>
+	            <xe:basicLeafNode
+	              label="XPages.INFO"
+	              href="http://xpages.info">
+	            </xe:basicLeafNode>
+	            <xe:basicLeafNode
+	              label="App Dev Wiki"
+	              href="http://www-10.lotus.com/ldd/ddwiki.nsf">
+	            </xe:basicLeafNode>
+	          </xe:this.children>
+	        </xe:basicContainerNode>
+	        <xe:basicContainerNode
+	          label="XPages Books from IBM Press">
+	          <xe:this.children>
+	            <xe:basicLeafNode
+	              label="Mastering XPages"
+	              href="http://www.ibmpressbooks.com/store/mastering-xpages-a-step-by-step-guide-to-xpages-application-9780132486316">
+	            </xe:basicLeafNode>
+	            <xe:basicLeafNode
+	              label="XPages Portable Command Guide"
+	              href="http://www.ibmpressbooks.com/store/xpages-portable-command-guide-a-compact-resource-to-9780132943055">
+	            </xe:basicLeafNode>
+	            <xe:basicLeafNode
+	              label="XPages Extension Library"
+	              href="http://www.ibmpressbooks.com/store/xpages-extension-library-a-step-by-step-guide-to-the-9780132901819">
+	            </xe:basicLeafNode>
+	          </xe:this.children>
+	        </xe:basicContainerNode>
+	      </xe:this.footerLinks>
 
-							<xp:eventHandler event="onchange"
-								submit="true" refreshMode="complete">
-								<xp:this.action><![CDATA[#{javascript:var tz = sessionScope.tz2;
-context.setTimeZoneString(tz)
-//context.setTimeZone(tz)}]]></xp:this.action>
-							</xp:eventHandler>
-
-						</xp:comboBox>
-						<xp:button value="Reset" id="button6">
-							<xp:eventHandler event="onclick"
-								submit="true" refreshMode="complete">
-								<xp:this.action><![CDATA[#{javascript:context.setTimeZoneString("")}]]></xp:this.action>
-							</xp:eventHandler>
-						</xp:button>
-						<xp:br />
-
-						<xp:label value="Locale: " id="label2" />
-						<xp:comboBox id="comboBoxChangeLocale"
-							value="#{sessionScope.lc2}">
-							<xp:selectItem itemLabel="default"
-								itemValue="">
-							</xp:selectItem>
-							<xp:selectItems>
-								<xp:this.value><![CDATA[${javascript:context.getLocale().getAvailableLocales().sort()}]]></xp:this.value>
-							</xp:selectItems>
-							<xp:eventHandler event="onchange"
-								submit="true" refreshMode="complete">
-								<xp:this.action><![CDATA[#{javascript:var lc2 = sessionScope.lc2;
-var lng = @If(@Contains(lc2,"_"),@Left(lc2,"_"),"");
-var cty = @If(@Contains(lc2,"_"),@Right(lc2,"_"),"");
-@If(
-@Contains(lc2,"_"), 
-context.setLocale(new Locale(lng, cty)) , 
-context.setLocaleString(lc2))
-context.reloadPage()}]]></xp:this.action>
-							</xp:eventHandler>
-						</xp:comboBox>
-						<xp:button value="Reset" id="button3">
-							<xp:eventHandler event="onclick"
-								submit="true" refreshMode="complete">
-								<xp:this.action><![CDATA[#{javascript:context.setLocaleString("")
-context.reloadPage()}]]></xp:this.action>
-							</xp:eventHandler>
-						</xp:button>
-
-					</xe:widgetContainer>
-
-
-				</xp:panel>
-			</xp:panel>
-			<!--
-				The Olde Worlde Menu
-				<XPa:ccMenu xp:key="LeftColumn"></XPa:ccMenu>		
-				
-				
-			-->
-		</xe:this.facets>
-		<xe:this.configuration>
-			<xe:oneuiApplication productLogo="/xpageslogoBlue05.gif"
-				productLogoAlt="XPages unofficial logo"
-				legalLogo="/ibmlogosmall.gif" placeBar="false"
-				titleBarName="XPages Demo App"
-				navigationPath="#{javascript:compositeData.navPath}">
-				<xe:this.footerLinks>
-					<xe:basicContainerNode
-						label="XPages Demonstration Application for IBM Notes Domino 9.0.0">
-						<xe:this.children>
-							<xe:basicLeafNode label="OpenNTF Project">
-								<xe:this.href><![CDATA[http://www.openntf.org/internal/home.nsf/project.xsp?action=openDocument&name=Demonstration%20Application%20for%20XPages]]></xe:this.href>
-							</xe:basicLeafNode>
-
-						</xe:this.children>
-					</xe:basicContainerNode>
-
-
-					<xe:basicContainerNode label="XPages Resources">
-						<xe:this.children>
-							<xe:basicLeafNode label="XPages.INFO"
-								href="http://xpages.info">
-							</xe:basicLeafNode>
-							<xe:basicLeafNode label="App Dev Wiki"
-								href="http://www-10.lotus.com/ldd/ddwiki.nsf">
-							</xe:basicLeafNode>
-						</xe:this.children>
-					</xe:basicContainerNode>
-					<xe:basicContainerNode label="XPages Books">
-						<xe:this.children>
-							<xe:basicLeafNode label="Mastering XPages"
-								href="http://www.ibmpressbooks.com/store/mastering-xpages-a-step-by-step-guide-to-xpages-application-9780132486316">
-							</xe:basicLeafNode>
-							<xe:basicLeafNode
-								label="XPages Portable Command Guide"
-								href="http://www.ibmpressbooks.com/store/xpages-portable-command-guide-a-compact-resource-to-9780132943055">
-							</xe:basicLeafNode>
-							<xe:basicLeafNode
-								label="XPages Extension Library"
-								href="http://www.ibmpressbooks.com/store/xpages-extension-library-a-step-by-step-guide-to-the-9780132901819">
-							</xe:basicLeafNode>
-						</xe:this.children>
-					</xe:basicContainerNode>
-				</xe:this.footerLinks>
-				<xe:this.bannerApplicationLinks>
+	      <xe:this.bannerApplicationLinks>
 
 
 
 
-					<xe:pageTreeNode label="Home"
-						page="/home_basics.xsp">
-					</xe:pageTreeNode>
-					<xe:pageTreeNode label="Mobile" page="/m_home.xsp"
-						rendered="true">
+	        <xe:pageTreeNode
+	          label="Home"
+	          page="/home_basics.xsp">
+	        </xe:pageTreeNode>
+	        <xe:pageTreeNode
+	          label="Mobile"
+	          page="/m_home.xsp"
+	          rendered="true">
 
-					</xe:pageTreeNode>
-					<xe:pageTreeNode label="Composite App"
-						rendered="false">
+	        </xe:pageTreeNode>
 
-					</xe:pageTreeNode>
-				</xe:this.bannerApplicationLinks>
-
-
-				<xe:this.placeBarActions>
+	      </xe:this.bannerApplicationLinks>
 
 
-				</xe:this.placeBarActions>
-				<xe:this.bannerUtilityLinks>
-					<xe:userTreeNode></xe:userTreeNode>
-					<xe:loginTreeNode></xe:loginTreeNode>
+	      <xe:this.placeBarActions>
 
-				</xe:this.bannerUtilityLinks>
-				<xe:this.titleBarTabs>
 
-					<xe:pageTreeNode label="Basics"
-						page="/home_basics.xsp" selection="/basics/.*">
-					</xe:pageTreeNode>
-					<xe:pageTreeNode label="Forms"
-						page="/home_forms.xsp" selection="/forms/.*">
-					</xe:pageTreeNode>
-					<xe:pageTreeNode label="Views"
-						page="/home_views.xsp" selection="/views/.*">
-					</xe:pageTreeNode>
-					<xe:pageTreeNode label="Events"
-						page="/home_events.xsp" selection="/events/.*">
-					</xe:pageTreeNode>
-					<xe:pageTreeNode label="Other"
-						page="/home_other.xsp" selection="/other/.*">
-					</xe:pageTreeNode>
-					
-					<xe:pageTreeNode label="New to 9.0.0"
-						selection="/new/.*" page="/home_newstuff.xsp">
-					</xe:pageTreeNode>
-				</xe:this.titleBarTabs>
-			</xe:oneuiApplication>
-		</xe:this.configuration>
+	      </xe:this.placeBarActions>
+	      <xe:this.bannerUtilityLinks>
+	        <xe:pageTreeNode
+	          label="Administration"
+	          page="/adminer.xsp"
+	          rendered="false"
+	          style="height:20.0px">
+	        </xe:pageTreeNode>
+	        <xe:userTreeNode></xe:userTreeNode>
+
+	        <xe:loginTreeNode></xe:loginTreeNode>
+
+
+	      </xe:this.bannerUtilityLinks>
+	      <xe:this.titleBarTabs>
+
+	        <xe:pageTreeNode
+	          label="Basics"
+	          page="/home_basics.xsp"
+	          selection="/basics/.*">
+	        </xe:pageTreeNode>
+	        <xe:pageTreeNode
+	          label="Forms"
+	          page="/home_forms.xsp"
+	          selection="/forms/.*">
+	        </xe:pageTreeNode>
+	        <xe:pageTreeNode
+	          label="Views"
+	          page="/home_views.xsp"
+	          selection="/views/.*">
+	        </xe:pageTreeNode>
+	        <xe:pageTreeNode
+	          label="Events"
+	          page="/home_events.xsp"
+	          selection="/events/.*">
+	        </xe:pageTreeNode>
+	        <xe:pageTreeNode
+	          label="Other"
+	          page="/home_other.xsp"
+	          selection="/other/.*">
+	        </xe:pageTreeNode>
+
+	        <xe:pageTreeNode
+	          label="New to 9.0.x"
+	          selection="/new/.*"
+	          page="/home_newstuff.xsp">
+	        </xe:pageTreeNode>
+	      </xe:this.titleBarTabs>
+
+	      <xe:this.searchBar>
+	        <xe:appSearchBar pageName="/xpSearch.xsp" rendered="#{javascript:database.isFTIndexed()}"></xe:appSearchBar>
+	      </xe:this.searchBar>
+	    </xe:oneuiApplication>
+	  </xe:this.configuration>
 	</xe:applicationLayout>
 
 

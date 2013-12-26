@@ -1,12 +1,14 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='filter' xmlns='http://www.lotus.com/dxl' version='9.0' replicaid='85257A870079CB8F'>
-<noteinfo noteid='772' unid='0B822996021E4B09802576EA005BC200' sequence='7'>
+<note class='filter' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='80257C350049C2B7'>
+<noteinfo noteid='51e' unid='0B822996021E4B09802576EA005BC200' sequence='7'>
 <created><datetime dst='true'>20100318T174214,40+01</datetime></created>
-<modified><datetime dst='true'>20130118T132310,42+01</datetime></modified>
-<revised><datetime dst='true'>20130118T132310,41+01</datetime></revised>
-<lastaccessed><datetime dst='true'>20130118T132310,42+01</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20120928T180642,04-04</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name><name
+<modified><datetime dst='true'>20131202T143736,69+01</datetime></modified>
+<revised><datetime dst='true'>20131202T143736,68+01</datetime></revised>
+<lastaccessed><datetime dst='true'>20131202T143736,69+01</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20131202T142545,08+01</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=a admin/O=ibm</name><name
+>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=a admin/O=ibm</name><name
 >CN=Paul Hannan/OU=Ireland/O=IBM</name></updatedby>
 <item name='$TITLE' sign='true'><text>restoreAllSoftDeletes</text></item>
 <item name='$AssistType' sign='true'><number>65412</number></item>
@@ -17,7 +19,7 @@ AAAAAAAAAAA=
 <item name='$AssistDocCount' sign='true'><number>0</number></item>
 <item name='$FlagsExt' sign='true'><text/></item>
 <item name='$AssistFlags' sign='true'><text>Eu</text></item>
-<item name='$AssistTrigger' sign='true'><text>4</text></item>
+<item name='$AssistTrigger'><text>4</text></item>
 <item name='$AssistInfo' sign='true'>
 <rawitemdata type='11'>
 AQAEAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -39,10 +41,10 @@ gQI=
 </rawitemdata></item>
 <item name='$Restricted' sign='true'><number>1</number></item>
 <item name='$Flags'><text>f3u</text></item>
-<item name='$DesignerVersion' sign='true'><text>8.5.2</text></item>
+<item name='$DesignerVersion'><text>8.5.2</text></item>
 <item name='$AssistRunInfo' summary='true'>
 <rawitemdata type='3'>
-BgAAAgAACABuBwAAAAAAAAUAAAAwAAAAAAAAAAAAAAAAAAAAtAAAAAAAAAAAAAAAAAAAAAAAAAAA
+BgAAAgAACAAaBQAAAAAAAAUAAAAwAAAAAAAAAAAAAAAAAAAAtAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAtExTAOt2JYAAAAAACtxcAOp2JYAtO08A4HYlgAAAAAAAAAAAAAAAAAAAAAAAAAAAU3RhcnRl
 ZCBydW5uaW5nIGFnZW50ICdyZXN0b3JlQWxsU29mdERlbGV0ZXMnIG9uIDE5LzAzLzIwMTAgMTU6
 MDk6NTANCjAgZG9jdW1lbnQocykgd2VyZSBtb2RpZmllZCBieSBmb3JtdWxhDQpEb25lIHJ1bm5p
@@ -62,5 +64,5 @@ p/p1bGTsJmMvUd8g7AXglMkdPKwfRLB6XFFpg5SosUlfOYOZivi10A9Aarl6mMJvhk9wd/YJ/OWK
 Y4vLxxP78vNgx0fwy0S2yC85H7kejy6Suvnb4FoelW64Lu4yH8MJrzAs5MppM9yU+nVHoV7OUoRM
 iHSdlF3HsJSfBiLuWFY04qrs
 </rawitemdata></item>
-<item name='$AssistVersion'><datetime dst='true'>20130118T132308,04+01</datetime></item></note>
+<item name='$AssistVersion'><datetime dst='true'>20131202T143734,32+01</datetime></item></note>
 

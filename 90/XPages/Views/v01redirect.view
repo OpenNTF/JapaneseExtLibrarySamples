@@ -1,12 +1,13 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' replicaid='85257A870079CB8F'>
-<noteinfo noteid='892' unid='A4E6E8CDC84CA7FD80257AD80054FFB0' sequence='7'>
+<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='80257C350049C2B7'>
+<noteinfo noteid='626' unid='A4E6E8CDC84CA7FD80257AD80054FFB0' sequence='7'>
 <created><datetime dst='true'>20121218T162824,80+01</datetime></created>
-<modified><datetime dst='true'>20130118T132312,88+01</datetime></modified>
-<revised><datetime dst='true'>20130118T132312,87+01</datetime></revised>
-<lastaccessed><datetime dst='true'>20130118T132312,88+01</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20121218T112822,03-04</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name><name
+<modified><datetime dst='true'>20131202T143736,91+01</datetime></modified>
+<revised><datetime dst='true'>20131202T143736,90+01</datetime></revised>
+<lastaccessed><datetime dst='true'>20131202T143736,91+01</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20131202T142546,40+01</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=a admin/O=ibm</name><name
 >CN=Paul Hannan/OU=Ireland/O=IBM</name></updatedby>
 <revisions><datetime dst='true'>20121218T162824,86+01</datetime><datetime
  dst='true'>20121218T162824,92+01</datetime></revisions>
@@ -32,7 +33,7 @@ AP///wAAAAEAAAAAAAEAAAAAAAEAAAAAAAAACAAAAAAAAQA=
 </rawitemdata></item>
 <item name='$Comment' sign='true'><text/></item>
 <item name='$Flags'><text>Y</text></item>
-<item name='$DesignerVersion' sign='true'><text>8.5.3</text></item>
+<item name='$DesignerVersion'><text>8.5.3</text></item>
 <item name='$SelQuery' sign='true'>
 <rawitemdata type='f'>
 gQYAAAAAif8XAAAAAAABAAsAZjAxcmVkaXJlY3QA

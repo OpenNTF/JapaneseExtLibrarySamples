@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><note class="form" replicaid="85257A870079CB8F" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="1562" sequence="2" unid="04754014CAC478F949257B330045E92F">
-<created><datetime>20130319T214336,79+09</datetime></created>
-<modified><datetime>20130319T214341,79+09</datetime></modified>
-<revised><datetime>20130319T214341,78+09</datetime></revised>
-<lastaccessed><datetime>20130319T214341,79+09</datetime></lastaccessed>
-<addedtofile><datetime>20130319T214341,77+09</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Admin/O=LotusLab</name></updatedby>
-<wassignedby><name>CN=Admin/O=LotusLab</name></wassignedby>
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="80257C350049C2B7" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="13a6" sequence="2" unid="CE6E52084117A41349257C4C002A43A3">
+<created><datetime>20131225T164138,27+09</datetime></created>
+<modified><datetime>20131225T164138,30+09</datetime></modified>
+<revised><datetime>20131225T164138,29+09</datetime></revised>
+<lastaccessed><datetime>20131225T164138,30+09</datetime></lastaccessed>
+<addedtofile><datetime>20131225T164138,28+09</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Admin/O=lotuslab</name></updatedby>
+<wassignedby><name>CN=Admin/O=lotuslab</name></wassignedby>
 <item name="$Flags"><text>gC~4K2</text></item>
 <item name="$TITLE"><text>convertorsNumbers_ja.properties</text></item>
 

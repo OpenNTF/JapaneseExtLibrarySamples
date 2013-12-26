@@ -1,14 +1,15 @@
 <?xml version='1.0' encoding='utf-8'?>
 <note default='true' class='form' xmlns='http://www.lotus.com/dxl' version='9.0'
- replicaid='85257A870079CB8F'>
-<noteinfo noteid='6da' unid='8FE52A1D5DE957318525663900486C63' sequence='212'>
+ maintenanceversion='1.0' replicaid='80257C350049C2B7'>
+<noteinfo noteid='486' unid='8FE52A1D5DE957318525663900486C63' sequence='212'>
 <created><datetime dst='true'>19980706T091103,39-04</datetime></created>
-<modified><datetime dst='true'>20130118T132309,68+01</datetime></modified>
-<revised><datetime dst='true'>20130118T132309,67+01</datetime></revised>
-<lastaccessed><datetime dst='true'>20130118T132309,68+01</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20120928T180630,40-04</datetime></addedtofile></noteinfo>
+<modified><datetime dst='true'>20131202T143735,95+01</datetime></modified>
+<revised><datetime dst='true'>20131202T143735,94+01</datetime></revised>
+<lastaccessed><datetime dst='true'>20131202T143735,95+01</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20131202T142544,34+01</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name><name
->CN=Paul Hannan/OU=Ireland/O=IBM</name></updatedby>
+>CN=a admin/O=ibm</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name
+>CN=a admin/O=ibm</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name></updatedby>
 <revisions><datetime dst='true'>20080328T112201,60+01</datetime><datetime
  dst='true'>20100527T110304,24+01</datetime></revisions>
 <item name='offset' summary='false' sign='true'><number>0</number></item>

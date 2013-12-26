@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="80257C350049C2B7" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="67e" sequence="24" unid="CEA95F1019C76A5B80257C05004DDF88">
+<created><datetime dst="true">20131015T151034,96+01</datetime></created>
+<modified><datetime>20131225T164154,02+09</datetime></modified>
+<revised><datetime>20131225T164154,01+09</datetime></revised>
+<lastaccessed><datetime>20131225T164154,02+09</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20131202T142546,84+01</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=a admin/O=ibm</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=Admin/O=lotuslab</name></updatedby>
+<revisions><datetime dst="true">20131015T151034,96+01</datetime><datetime dst="true">20131015T151034,98+01</datetime><datetime dst="true">20131015T151040,17+01</datetime><datetime dst="true">20131015T151040,19+01</datetime><datetime dst="true">20131015T151040,21+01</datetime><datetime dst="true">20131015T151040,23+01</datetime><datetime dst="true">20131015T151416,47+01</datetime><datetime dst="true">20131015T151416,67+01</datetime><datetime dst="true">20131015T151416,69+01</datetime><datetime dst="true">20131015T151606,84+01</datetime><datetime dst="true">20131015T151607,01+01</datetime><datetime dst="true">20131015T151607,03+01</datetime><datetime dst="true">20131015T152532,39+01</datetime><datetime dst="true">20131015T152532,57+01</datetime><datetime dst="true">20131015T152532,59+01</datetime><datetime dst="true">20131015T154212,92+01</datetime><datetime dst="true">20131015T154259,40+01</datetime><datetime dst="true">20131015T154259,91+01</datetime></revisions>
+<wassignedby><name>CN=Admin/O=lotuslab</name></wassignedby>
+<item name="$Flags"><text>gC~4K</text></item>
+<item name="$TITLE"><text>navByNoteId.xsp</text></item>
+
+
+
+<item name="$FileNames" sign="true"><text>navByNoteId.xsp</text></item>
+<item name="$DesignerVersion"><text>8.5.2</text></item>
+
+
+
+</note>

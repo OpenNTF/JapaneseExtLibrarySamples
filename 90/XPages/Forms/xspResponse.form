@@ -1,13 +1,15 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' replicaid='85257A870079CB8F'>
-<noteinfo noteid='63a' unid='F1D509E850962618802574410072FCC5' sequence='12'>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='80257C350049C2B7'>
+<noteinfo noteid='3fa' unid='F1D509E850962618802574410072FCC5' sequence='12'>
 <created><datetime dst='true'>20080506T215558,13+01</datetime></created>
-<modified><datetime dst='true'>20130118T132315,54+01</datetime></modified>
-<revised><datetime dst='true'>20130118T132315,53+01</datetime></revised>
-<lastaccessed><datetime dst='true'>20130118T132315,54+01</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20120928T180623,13-04</datetime></addedtofile></noteinfo>
+<modified><datetime dst='true'>20131202T143739,33+01</datetime></modified>
+<revised><datetime dst='true'>20131202T143739,32+01</datetime></revised>
+<lastaccessed><datetime dst='true'>20131202T143739,33+01</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20131202T142543,64+01</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name><name
->CN=Paul Hannan/OU=Ireland/O=IBM</name></updatedby>
+>CN=a admin/O=ibm</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name
+>CN=a admin/O=ibm</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name></updatedby>
 <revisions><datetime dst='true'>20080506T215558,16+01</datetime><datetime
  dst='true'>20100527T110304,87+01</datetime><datetime dst='true'>20110331T091055,83+01</datetime></revisions>
 <item name='$HTMLDocumentStyles' summary='true' sign='true'>
@@ -51,7 +53,7 @@ DQl9DQl9AABf/xAAAgAPAAcAAAAAAAAAX/8QAAIADQAHAAAAAAAAAF//EAACAA4ABwAAAAAAAAA=
 <rawitemdata type='1'>
 hhgHAIkAAAAAgAAAGAABAODx/wAAAAAA
 </rawitemdata></item>
-<item name='$SubForms' sign='true'><textlist><text>Shared Response Header</text><text
+<item name='$SubForms'><textlist><text>Shared Response Header</text><text
 >RespBanner</text></textlist></item>
 <item name='$SubForm_RepIDs' sign='true'><textlist><text>0000000000000000</text><text
 >0000000000000000</text></textlist></item>
@@ -59,8 +61,8 @@ hhgHAIkAAAAAgAAAGAABAODx/wAAAAAA
 StandardTitle := "Response to \"" + OriginalSubject + "\"";
 @If(@IsNewDoc; NewDocTitle; StandardTitle)</formula></item>
 <item name='$Flags'><text/></item>
-<item name='$WebFlags' sign='true'><text>F</text></item>
-<item name='$DesignerVersion' sign='true'><text>8.5.3</text></item>
+<item name='$WebFlags'><text>F</text></item>
+<item name='$DesignerVersion'><text>8.5.3</text></item>
 <item name='$$ScriptName' summary='false' sign='true'><text>xspResponse</text></item>
 <item name='From' placeholder='true'>
 <rawitemdata type='0'>
@@ -98,7 +100,7 @@ StandardTitle := "Response to \"" + OriginalSubject + "\"";
 <item name='NewsLetterSubject' placeholder='true'>
 <rawitemdata type='0'>
 </rawitemdata></item>
-<item name='ExpireDate' summary='false' sign='true'>
+<item name='ExpireDate' summary='false'>
 <rawitemdata type='400'>
 AAAAAAAAAAA=
 </rawitemdata></item>
@@ -117,11 +119,11 @@ AAAAAAAAAAA=
 <item name='Body' placeholder='true'>
 <rawitemdata type='0'>
 </rawitemdata></item>
-<item name='tdate_1' summary='false' sign='true'>
+<item name='tdate_1' summary='false'>
 <rawitemdata type='400'>
 AAAAAAAAAAA=
 </rawitemdata></item>
-<item name='Num_4' summary='false' sign='true'><number>0</number></item>
+<item name='Num_4' summary='false'><number>0</number></item>
 <item name='$Fields'><textlist><text>Num_4</text><text>tdate_1</text><text
 >Body</text><text>Categories</text><text>ParentSubject</text><text>Subject</text><text
 >AltLang</text><text>ExpireDate</text><text>NewsLetterSubject</text><text

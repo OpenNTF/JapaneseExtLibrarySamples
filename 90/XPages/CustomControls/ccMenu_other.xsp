@@ -2,58 +2,104 @@
 <xp:view xmlns:xp="http://www.ibm.com/xsp/core"
 	xmlns:xe="http://www.ibm.com/xsp/coreex">
 
-	<xe:navigator id="navigator1">
-		<xe:this.treeNodes>
-			<xe:pageTreeNode label="Rich Text in a View Panel"
-				page="/coolRTEinViewColumn.xsp" selection="/other/rteview/">
-			</xe:pageTreeNode>
-			<xe:pageTreeNode label="Soft Deletes"
-				page="/coolSoftDeletes.xsp" selection="/other/softdeletes/">
-			</xe:pageTreeNode>
-			<xe:basicContainerNode label="DOCTYPE">
-				<xe:this.children>
-					<xe:pageTreeNode label="Standard"
-						page="/docTypeStandard.xsp" selection="/other/dtstandard/" />
-					<xe:pageTreeNode label="HTML Transitional"
-						page="/docTypeHTMLTrans.xsp" selection="/other/dthtmltrans/" />
-					<xe:pageTreeNode label="XHTML Transitional"
-						page="/docTypeXHTMLTrans.xsp" selection="/other/dtxhtmltrans/" />
-					<xe:pageTreeNode
-						label=" XHTML Transitional with Content Type Set"
-						page="/docTypeXHTMLContent.xsp" selection="/other/dtxcontent/" />
-					<xe:pageTreeNode
-						label=" XHTML Transitional and Meta Tag Set"
-						page="/docTypeXHTMLTransMeta.xsp" selection="/other/dtmeta/" />
+	<xe:navigator
+	  id="navigator1"
+	  expandable="true">
+	  <xe:this.treeNodes>
+	    <xe:pageTreeNode
+	      label="Rich Text in a View Panel"
+	      page="/coolRTEinViewColumn.xsp"
+	      selection="/other/rteview/">
+	    </xe:pageTreeNode>
+	    <xe:pageTreeNode
+	      label="Soft Deletes"
+	      page="/coolSoftDeletes.xsp"
+	      selection="/other/softdeletes/">
+	    </xe:pageTreeNode>
+	    <xe:basicContainerNode label="DOCTYPE">
+	      <xe:this.children>
+	        <xe:pageTreeNode
+	          label="Standard"
+	          page="/docTypeStandard.xsp"
+	          selection="/other/dtstandard/" />
+	        <xe:pageTreeNode
+	          label="HTML Transitional"
+	          page="/docTypeHTMLTrans.xsp"
+	          selection="/other/dthtmltrans/" />
+	        <xe:pageTreeNode
+	          label="XHTML Transitional"
+	          page="/docTypeXHTMLTrans.xsp"
+	          selection="/other/dtxhtmltrans/" />
+	        <xe:pageTreeNode
+	          label=" XHTML Transitional with Content Type Set"
+	          page="/docTypeXHTMLContent.xsp"
+	          selection="/other/dtxcontent/" />
+	        <xe:pageTreeNode
+	          label=" XHTML Transitional and Meta Tag Set"
+	          page="/docTypeXHTMLTransMeta.xsp"
+	          selection="/other/dtmeta/" />
 
-				</xe:this.children>
-			</xe:basicContainerNode>
+	      </xe:this.children>
+	    </xe:basicContainerNode>
 
-			<xe:pageTreeNode label="Dojo Input Types"
-				page="/dojoTypeMain.xsp" selection="/other/dojoin/">
-			</xe:pageTreeNode>
-			<xe:basicContainerNode label="Global Objects">
-				<xe:this.children>
-					<xe:pageTreeNode label="XSP Context"
-						page="/jsXSPContext.xsp" selection="/other/gocontext/" />
-					<xe:pageTreeNode label="XSP Directory User"
-						page="/jsXSPDirectoryUser.xsp" selection="/other/godirectory/" />
-					<xe:pageTreeNode label="XSP Document"
-						page="/jsXSPDocument.xsp" selection="/other/godocument/" />
-					<xe:pageTreeNode label="XSP URL"
-						page="/jsXSPUrl.xsp" selection="/other/gourl/" />
-					<xe:pageTreeNode label="XSP User Agent"
-						page="/jsXSPUserAgent.xsp" selection="/other/gouseragent/" />
-					<xe:pageTreeNode label="XSP View Entry"
-						page="/jsXSPView.xsp" selection="/other/goview/" />
+	    <xe:pageTreeNode
+	      label="Dojo Input Types"
+	      page="/dojoTypeMain.xsp"
+	      selection="/other/dojoin/">
+	    </xe:pageTreeNode>
+	    <xe:basicContainerNode label="Global Objects">
+	      <xe:this.children>
+	        <xe:pageTreeNode
+	          label="XSP Context"
+	          page="/jsXSPContext.xsp"
+	          selection="/other/gocontext/" />
+	        <xe:pageTreeNode
+	          label="XSP Directory User"
+	          page="/jsXSPDirectoryUser.xsp"
+	          selection="/other/godirectory/" />
+	        <xe:pageTreeNode
+	          label="XSP Document"
+	          page="/jsXSPDocument.xsp"
+	          selection="/other/godocument/" />
+	        <xe:pageTreeNode
+	          label="XSP URL"
+	          page="/jsXSPUrl.xsp"
+	          selection="/other/gourl/" />
+	        <xe:pageTreeNode
+	          label="XSP User Agent"
+	          page="/jsXSPUserAgent.xsp"
+	          selection="/other/gouseragent/" />
+	        <xe:pageTreeNode
+	          label="XSP View Entry"
+	          page="/jsXSPView.xsp"
+	          selection="/other/goview/" />
 
 
-				</xe:this.children>
-			</xe:basicContainerNode>
-			<xe:pageTreeNode label="Time Zones" page="/propTimeZone.xsp"
-				selection="/other/timezone/">
-			</xe:pageTreeNode>
-			<xe:pageTreeNode label="Locale" page="/propLocaleTest.xsp"
-				selection="/other/locale/">
-			</xe:pageTreeNode>
-		</xe:this.treeNodes>
+	      </xe:this.children>
+	    </xe:basicContainerNode>
+	    <xe:pageTreeNode
+	      label="Time Zones"
+	      page="/propTimeZone.xsp"
+	      selection="/other/timezone/">
+	    </xe:pageTreeNode>
+	    <xe:pageTreeNode
+	      label="Locale"
+	      page="/propLocaleTest.xsp"
+	      selection="/other/locale/">
+	    </xe:pageTreeNode>
+	    <xe:basicContainerNode label="Multiple Rich Text Controls">
+	      <xe:this.children>
+	        <xe:pageTreeNode
+	          label="Multiple RTEs and File Uploads"
+	          page="/multipleRTEsMainView.xsp"
+	          selection="/other/mrte/">
+	        </xe:pageTreeNode>
+	      </xe:this.children>
+	    </xe:basicContainerNode>
+	    <xe:pageTreeNode
+	      label="Messageboxes"
+	      page="/otherXPiNCmessageboxes.xsp"
+	      selection="/other/mb/">
+	    </xe:pageTreeNode>
+	  </xe:this.treeNodes>
 	</xe:navigator></xp:view>

@@ -1,13 +1,15 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' replicaid='85257A870079CB8F'>
-<noteinfo noteid='55a' unid='6A0FEBBC01A4573E802575FB006D6F37' sequence='13'>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='80257C350049C2B7'>
+<noteinfo noteid='366' unid='6A0FEBBC01A4573E802575FB006D6F37' sequence='13'>
 <created><datetime dst='true'>20090722T205518,95+01</datetime></created>
-<modified><datetime dst='true'>20130118T132314,70+01</datetime></modified>
-<revised><datetime dst='true'>20130118T132314,69+01</datetime></revised>
-<lastaccessed><datetime dst='true'>20130118T132314,70+01</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20120928T180614,02-04</datetime></addedtofile></noteinfo>
+<modified><datetime dst='true'>20131202T143738,53+01</datetime></modified>
+<revised><datetime dst='true'>20131202T143738,52+01</datetime></revised>
+<lastaccessed><datetime dst='true'>20131202T143738,53+01</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20131202T142542,90+01</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name><name
->CN=Paul Hannan/OU=Ireland/O=IBM</name></updatedby>
+>CN=a admin/O=ibm</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name
+>CN=a admin/O=ibm</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name></updatedby>
 <revisions><datetime dst='true'>20090722T205519,45+01</datetime><datetime
  dst='true'>20090722T205639,09+01</datetime><datetime dst='true'>20100527T110306,49+01</datetime></revisions>
 <item name='$HTMLCode' sign='true'>
@@ -20,7 +22,7 @@ X/8QAAIADwAHAAAAAAAAAA==
 hhgBAIAAAAAAgAAAAQABAP///wAQAAAA
 </rawitemdata></item>
 <item name='$Flags'><text/></item>
-<item name='$DesignerVersion' sign='true'><text>8.5.3</text></item>
+<item name='$DesignerVersion'><text>8.5.3</text></item>
 <item name='$$ScriptName' summary='false' sign='true'><text>xspFilter</text></item>
 <item name='Txt_1' placeholder='true'>
 <rawitemdata type='0'>
@@ -37,43 +39,43 @@ hhgBAIAAAAAAgAAAAQABAP///wAQAAAA
 <item name='Txtnum_1' placeholder='true'>
 <rawitemdata type='0'>
 </rawitemdata></item>
-<item name='Num_1' summary='false' sign='true'><number>0</number></item>
-<item name='Num_2' summary='false' sign='true'><number>0</number></item>
-<item name='Num_3' summary='false' sign='true'><number>0</number></item>
-<item name='Num_4' summary='false' sign='true'><number>0</number></item>
-<item name='tdate_1' summary='false' sign='true'>
+<item name='Num_1' summary='false'><number>0</number></item>
+<item name='Num_2' summary='false'><number>0</number></item>
+<item name='Num_3' summary='false'><number>0</number></item>
+<item name='Num_4' summary='false'><number>0</number></item>
+<item name='tdate_1' summary='false'>
 <rawitemdata type='400'>
 AAAAAAAAAAA=
 </rawitemdata></item>
-<item name='tdate_2' summary='false' sign='true'>
+<item name='tdate_2' summary='false'>
 <rawitemdata type='400'>
 AAAAAAAAAAA=
 </rawitemdata></item>
-<item name='tdate_3' summary='false' sign='true'>
+<item name='tdate_3' summary='false'>
 <rawitemdata type='400'>
 AAAAAAAAAAA=
 </rawitemdata></item>
-<item name='ttime_1' summary='false' sign='true'>
+<item name='ttime_1' summary='false'>
 <rawitemdata type='400'>
 AAAAAAAAAAA=
 </rawitemdata></item>
-<item name='ttime_2' summary='false' sign='true'>
+<item name='ttime_2' summary='false'>
 <rawitemdata type='400'>
 AAAAAAAAAAA=
 </rawitemdata></item>
-<item name='ttime_3' summary='false' sign='true'>
+<item name='ttime_3' summary='false'>
 <rawitemdata type='400'>
 AAAAAAAAAAA=
 </rawitemdata></item>
-<item name='tdatetime_1' summary='false' sign='true'>
+<item name='tdatetime_1' summary='false'>
 <rawitemdata type='400'>
 AAAAAAAAAAA=
 </rawitemdata></item>
-<item name='tdatetime_2' summary='false' sign='true'>
+<item name='tdatetime_2' summary='false'>
 <rawitemdata type='400'>
 AAAAAAAAAAA=
 </rawitemdata></item>
-<item name='tdatetime_3' summary='false' sign='true'>
+<item name='tdatetime_3' summary='false'>
 <rawitemdata type='400'>
 AAAAAAAAAAA=
 </rawitemdata></item>

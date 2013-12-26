@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?><note class="form" replicaid="85257A870079CB8F" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="766" sequence="85" unid="B285E6DEE87C05A5802576E400720BB0">
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="80257C350049C2B7" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="512" sequence="85" unid="B285E6DEE87C05A5802576E400720BB0">
 <created><datetime dst="true">20100312T214540,96+01</datetime></created>
-<modified><datetime>20130319T214349,33+09</datetime></modified>
-<revised><datetime>20130319T214349,32+09</datetime></revised>
-<lastaccessed><datetime>20130319T214349,33+09</datetime></lastaccessed>
-<addedtofile><datetime dst="true">20120928T180641,82-04</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=Admin/O=LotusLab</name></updatedby>
+<modified><datetime>20131225T164159,99+09</datetime></modified>
+<revised><datetime>20131225T164159,98+09</datetime></revised>
+<lastaccessed><datetime>20131225T164159,99+09</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20131202T142545,04+01</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=a admin/O=ibm</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=a admin/O=ibm</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=Admin/O=lotuslab</name></updatedby>
 <revisions><datetime dst="true">20100527T110303,83+01</datetime><datetime dst="true">20110331T101025,63+01</datetime><datetime dst="true">20121217T170820,63+01</datetime><datetime dst="true">20121217T170821,39+01</datetime><datetime dst="true">20121217T170821,41+01</datetime><datetime dst="true">20121217T170833,97+01</datetime></revisions>
-<wassignedby><name>CN=Admin/O=LotusLab</name></wassignedby>
+<wassignedby><name>CN=Admin/O=lotuslab</name></wassignedby>
 <item name="$Flags"><text>gC~4K</text></item>
 <item name="$TITLE"><text>coolSoftDeletes.xsp</text></item>
 

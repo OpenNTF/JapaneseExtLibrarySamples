@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xe="http://www.ibm.com/xsp/coreex">
+
+	<xe:appPage id="appPage1" pageName="devicebean1" preload="true"
+		resetContent="true" >
+		<xe:djxmHeading id="djxmHeading1" label="deviceBean Page"
+			back="Back" moveTo="home">
+		</xe:djxmHeading>
+		<xe:djxmRoundRectList id="djxmRoundRectList1">
+			<xp:label id="label1">
+				<xp:this.value><![CDATA[#{javascript:"User Agent: "+context.getUserAgent().getUserAgent()}]]></xp:this.value>
+			</xp:label>
+			<hr/>
+			<xe:djxmLineItem id="djxmLineItem1"
+				rightText="#{javascript:deviceBean.isMobile()}"
+				label="deviceBean.isMobile()">
+			</xe:djxmLineItem>
+			<xe:djxmLineItem id="djxmLineItem2"
+				rightText="#{javascript:deviceBean.isTablet()}"
+				label="deviceBean.isTablet() ">
+			</xe:djxmLineItem>
+			<xe:djxmLineItem id="djxmLineItem3"
+				rightText="#{javascript:deviceBean.isIphone()}"
+				label="deviceBean.isIphone()">
+			</xe:djxmLineItem>
+			<xe:djxmLineItem id="djxmLineItem4"
+				rightText="#{javascript:deviceBean.isIpad()}"
+				label="deviceBean.isIpad()">
+			</xe:djxmLineItem>
+			<xe:djxmLineItem id="djxmLineItem5"
+				rightText="#{javascript:deviceBean.isAndroid()}"
+				label="deviceBean.isAndroid()">
+			</xe:djxmLineItem>
+			<xe:djxmLineItem id="djxmLineItem6"
+				rightText="#{javascript:deviceBean.isBlackberry()}"
+				label="deviceBean.isBlackberry() ">
+			</xe:djxmLineItem>
+			<xe:djxmLineItem id="djxmLineItem7"
+				rightText="#{javascript:deviceBean.isWindows()}"
+				label="deviceBean.isWindows()">
+			</xe:djxmLineItem>
+			<xe:djxmLineItem id="djxmLineItem8"
+				rightText="#{javascript:deviceBean.getVersion('ipad')}"
+				label="deviceBean.getVersion('ipad')">
+			</xe:djxmLineItem>
+			<xe:djxmLineItem id="djxmLineItem9"
+				rightText="#{javascript:deviceBean.getVersion('iphone')}"
+				label="deviceBean.getVersion('iphone')">
+			</xe:djxmLineItem>
+			<xe:djxmLineItem id="djxmLineItem10"
+				rightText="#{javascript:deviceBean.getVersion('android')}"
+				label="deviceBean.getVersion('android')">
+			</xe:djxmLineItem>
+			<xe:djxmLineItem id="djxmLineItem11"
+				rightText="#{javascript:deviceBean.getValue('android')}"
+				label="deviceBean.getValue('android')">
+			</xe:djxmLineItem>
+						<xe:djxmLineItem id="djxmLineItem12"
+				rightText="#{javascript:deviceBean.getValue('apple')}"
+				label="deviceBean.getValue('apple')">
+			</xe:djxmLineItem>
+						<xe:djxmLineItem id="djxmLineItem13"
+				rightText="#{javascript:deviceBean.getValue('windows')}"
+				label="deviceBean.getValue('windows')">
+			</xe:djxmLineItem>
+
+
+
+		</xe:djxmRoundRectList>
+	</xe:appPage></xp:view>

@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?><note class="form" replicaid="85257A870079CB8F" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="67a" sequence="113" unid="9A94BE59370FB1BC8025748E00554529">
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="80257C350049C2B7" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="42e" sequence="113" unid="9A94BE59370FB1BC8025748E00554529">
 <created><datetime dst="true">20080722T163122,65+01</datetime></created>
-<modified><datetime>20130319T214348,05+09</datetime></modified>
-<revised><datetime>20130319T214348,04+09</datetime></revised>
-<lastaccessed><datetime>20130319T214348,05+09</datetime></lastaccessed>
-<addedtofile><datetime dst="true">20120928T180625,86-04</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=Admin/O=LotusLab</name></updatedby>
+<modified><datetime>20131225T164158,71+09</datetime></modified>
+<revised><datetime>20131225T164158,70+09</datetime></revised>
+<lastaccessed><datetime>20131225T164158,71+09</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20131202T142543,90+01</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=a admin/O=ibm</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=a admin/O=ibm</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=Admin/O=lotuslab</name></updatedby>
 <revisions><datetime dst="true">20110331T101119,22+01</datetime><datetime dst="true">20121212T120030,36+01</datetime><datetime dst="true">20121212T120030,90+01</datetime><datetime dst="true">20121212T120030,92+01</datetime><datetime dst="true">20121212T121458,48+01</datetime></revisions>
-<wassignedby><name>CN=Admin/O=LotusLab</name></wassignedby>
+<wassignedby><name>CN=Admin/O=lotuslab</name></wassignedby>
 <item name="$TITLE"><text>ctrlsOtherRadioButtonGroup.xsp</text></item>
 
 <item name="$Flags"><text>gCK4</text></item>

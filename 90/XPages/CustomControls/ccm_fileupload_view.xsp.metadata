@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="80257C350049C2B7" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="6ae" sequence="28" unid="585376E5CD07373080257C30004D9FC1">
+<created><datetime dst="true">20131127T150751,69+01</datetime></created>
+<modified><datetime>20131226T001311,49+09</datetime></modified>
+<revised><datetime>20131226T001311,48+09</datetime></revised>
+<lastaccessed><datetime>20131226T001311,49+09</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20131202T142547,08+01</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=a admin/O=ibm</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=Admin/O=lotuslab</name></updatedby>
+<revisions><datetime dst="true">20131127T150751,69+01</datetime><datetime dst="true">20131127T150751,71+01</datetime><datetime dst="true">20131127T150751,98+01</datetime><datetime dst="true">20131127T150752,02+01</datetime><datetime dst="true">20131127T150753,65+01</datetime><datetime dst="true">20131127T150753,67+01</datetime><datetime dst="true">20131127T150753,69+01</datetime><datetime dst="true">20131127T150753,71+01</datetime><datetime dst="true">20131127T150827,83+01</datetime><datetime dst="true">20131127T150827,88+01</datetime><datetime dst="true">20131127T150828,06+01</datetime><datetime dst="true">20131127T150828,09+01</datetime><datetime dst="true">20131127T150831,01+01</datetime><datetime dst="true">20131127T150831,03+01</datetime><datetime dst="true">20131127T150831,05+01</datetime><datetime dst="true">20131127T150831,07+01</datetime><datetime dst="true">20131127T151018,13+01</datetime><datetime dst="true">20131127T151018,32+01</datetime><datetime dst="true">20131127T151018,34+01</datetime><datetime dst="true">20131127T151233,09+01</datetime><datetime dst="true">20131127T151233,27+01</datetime></revisions>
+<wassignedby><name>CN=Admin/O=lotuslab</name></wassignedby>
+<item name="$Flags"><text>gC~4;</text></item>
+
+
+<item name="$TITLE" sign="true"><text>ccm_fileupload_view.xsp</text></item>
+
+
+
+<item name="$FileNames" sign="true"><text>ccm_fileupload_view.xsp</text></item>
+
+
+<item name="$DesignerVersion"><text>8.5</text></item>
+
+</note>

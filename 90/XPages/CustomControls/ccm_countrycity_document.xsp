@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view
+  xmlns:xp="http://www.ibm.com/xsp/core"
+  xmlns:xe="http://www.ibm.com/xsp/coreex">
+
+  <xp:panel>
+    <xe:djxmHeading
+      id="djxmHeading2"
+      back="back"
+      moveTo="viewcountry"
+      label="City">
+    </xe:djxmHeading>
+
+    <xp:this.data>
+      <xp:dominoDocument
+        var="document1"
+        formName="xspCountryCity">
+      </xp:dominoDocument>
+    </xp:this.data>
+    <xe:formTable
+      id="formTable1">
+      <xe:formRow
+        id="formRow1">
+        <xp:inputText
+          id="inputText1"
+          value="#{document1.City}"></xp:inputText>
+      </xe:formRow>
+      <xe:formRow
+        id="formRow2">
+        <xp:inputRichText
+          id="inputRichText1"
+          value="#{document1.CityFacts}"></xp:inputRichText>
+      </xe:formRow>
+    </xe:formTable>
+  </xp:panel>
+
+
+</xp:view>

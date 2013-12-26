@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf" xmlns:xe="http://www.ibm.com/xsp/coreex">
+	
+		<xp:this.resources>
+		
+		<xp:bundle var="xstr" src="strings.properties"></xp:bundle>
+	</xp:this.resources>
+
+		<xe:applicationLayout id="panelFrame">
+			<xp:panel>
+				<xp:label id="label1"><xp:this.value><![CDATA[<<<<PLACEHOLDER>>>>]]></xp:this.value></xp:label></xp:panel>
+
+
+			<xe:this.configuration>
+			<xe:oneuiApplication productLogo="/xpageslogoBlue05.gif"
+				productLogoAlt="XPages unofficial logo"
+				legalLogo="/ibmlogosmall.gif" placeBar="false"
+				titleBarName="XPages Demo App">
+				<xe:this.footerLinks>
+					<xe:basicContainerNode
+						label="XPages Demonstration Application for IBM Notes Domino 9.0.0">
+						<xe:this.children>
+							<xe:basicLeafNode label="OpenNTF Project">
+								<xe:this.href><![CDATA[http://www.openntf.org/internal/home.nsf/project.xsp?action=openDocument&name=Demonstration%20Application%20for%20XPages]]></xe:this.href>
+							</xe:basicLeafNode>
+
+						</xe:this.children>
+					</xe:basicContainerNode>
+
+
+					<xe:basicContainerNode label="XPages Resources">
+						<xe:this.children>
+							<xe:basicLeafNode label="XPages.INFO"
+								href="http://xpages.info">
+							</xe:basicLeafNode>
+							<xe:basicLeafNode label="App Dev Wiki"
+								href="http://www-10.lotus.com/ldd/ddwiki.nsf">
+							</xe:basicLeafNode>
+						</xe:this.children>
+					</xe:basicContainerNode>
+					<xe:basicContainerNode label="XPages Books">
+						<xe:this.children>
+							<xe:basicLeafNode label="Mastering XPages"
+								href="http://www.ibmpressbooks.com/store/mastering-xpages-a-step-by-step-guide-to-xpages-application-9780132486316">
+							</xe:basicLeafNode>
+							<xe:basicLeafNode
+								label="XPages Portable Command Guide"
+								href="http://www.ibmpressbooks.com/store/xpages-portable-command-guide-a-compact-resource-to-9780132943055">
+							</xe:basicLeafNode>
+							<xe:basicLeafNode
+								label="XPages Extension Library"
+								href="http://www.ibmpressbooks.com/store/xpages-extension-library-a-step-by-step-guide-to-the-9780132901819">
+							</xe:basicLeafNode>
+						</xe:this.children>
+					</xe:basicContainerNode>
+				</xe:this.footerLinks>
+				<xe:this.bannerApplicationLinks>
+
+
+
+
+					<xe:pageTreeNode label="Home"
+						page="/home_basics.xsp">
+					</xe:pageTreeNode>
+					<xe:pageTreeNode label="Mobile" page="/m_home.xsp"
+						rendered="true">
+
+					</xe:pageTreeNode>
+					
+				</xe:this.bannerApplicationLinks>
+
+
+				<xe:this.placeBarActions>
+
+
+				</xe:this.placeBarActions>
+				<xe:this.bannerUtilityLinks>
+					<xe:pageTreeNode label="Administration"
+						page="/adminer.xsp">
+					</xe:pageTreeNode>
+					<xe:userTreeNode></xe:userTreeNode>
+
+					<xe:loginTreeNode></xe:loginTreeNode>
+
+
+				</xe:this.bannerUtilityLinks>
+				
+			</xe:oneuiApplication>
+			</xe:this.configuration>
+		</xe:applicationLayout>
+
+
+</xp:view>

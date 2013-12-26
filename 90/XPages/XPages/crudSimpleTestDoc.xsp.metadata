@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?><note class="form" replicaid="85257A870079CB8F" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="662" sequence="131" unid="BB1CDB24B70F03C8802573DB003E4C22">
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="80257C350049C2B7" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="41e" sequence="131" unid="BB1CDB24B70F03C8802573DB003E4C22">
 <created><datetime dst="true">20080125T122027,22+01</datetime></created>
-<modified><datetime>20130319T214349,25+09</datetime></modified>
-<revised><datetime>20130319T214349,24+09</datetime></revised>
-<lastaccessed><datetime>20130319T214349,25+09</datetime></lastaccessed>
-<addedtofile><datetime dst="true">20120928T180624,78-04</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=Admin/O=LotusLab</name></updatedby>
+<modified><datetime>20131225T164159,91+09</datetime></modified>
+<revised><datetime>20131225T164159,90+09</datetime></revised>
+<lastaccessed><datetime>20131225T164159,91+09</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20131202T142543,82+01</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=a admin/O=ibm</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=a admin/O=ibm</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=Admin/O=lotuslab</name></updatedby>
 <revisions><datetime dst="true">20100527T110305,11+01</datetime><datetime dst="true">20110331T101027,38+01</datetime><datetime dst="true">20121126T174512,24+01</datetime><datetime dst="true">20121126T174512,64+01</datetime><datetime dst="true">20121211T105826,60+01</datetime><datetime dst="true">20121211T105827,29+01</datetime></revisions>
-<wassignedby><name>CN=Admin/O=LotusLab</name></wassignedby>
+<wassignedby><name>CN=Admin/O=lotuslab</name></wassignedby>
 <item name="$TITLE"><text>crudSimpleTestDoc.xsp</text></item>
 
 <item name="$Flags"><text>gK4</text></item>

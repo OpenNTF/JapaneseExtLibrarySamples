@@ -1,12 +1,14 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' replicaid='85257A870079CB8F'>
-<noteinfo noteid='48e' unid='E48E98913509232D8025742E00423E1E' sequence='12'>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='80257C350049C2B7'>
+<noteinfo noteid='2de' unid='E48E98913509232D8025742E00423E1E' sequence='12'>
 <created><datetime dst='true'>20080417T130332,78+01</datetime></created>
-<modified><datetime dst='true'>20130118T132314,20+01</datetime></modified>
-<revised><datetime dst='true'>20130118T132314,19+01</datetime></revised>
-<lastaccessed><datetime dst='true'>20130118T132314,20+01</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20120928T180607,75-04</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name><name
+<modified><datetime dst='true'>20131202T143738,03+01</datetime></modified>
+<revised><datetime dst='true'>20131202T143738,02+01</datetime></revised>
+<lastaccessed><datetime dst='true'>20131202T143738,03+01</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20131202T142542,22+01</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=a admin/O=ibm</name><name
+>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=a admin/O=ibm</name><name
 >CN=Paul Hannan/OU=Ireland/O=IBM</name></updatedby>
 <revisions><datetime dst='true'>20080417T130929,25+01</datetime><datetime
  dst='true'>20100527T110306,83+01</datetime></revisions>
@@ -21,7 +23,7 @@ hhgBAIAAAAAAgAAAAQABAP///wAQAAAA
 </rawitemdata></item>
 <item name='$WINDOWTITLE' sign='true'><formula>"XPages Ajax Type Ahead"</formula></item>
 <item name='$Flags'><text/></item>
-<item name='$DesignerVersion' sign='true'><text>8.5.2</text></item>
+<item name='$DesignerVersion'><text>8.5.2</text></item>
 <item name='$$ScriptName' summary='false' sign='true'><text>xspAjaxTypeAhead</text></item>
 <item name='From' placeholder='true'>
 <rawitemdata type='0'>
@@ -32,7 +34,7 @@ hhgBAIAAAAAAgAAAAQABAP///wAQAAAA
 <item name='Categories' placeholder='true'>
 <rawitemdata type='0'>
 </rawitemdata></item>
-<item name='dateTimeCreated' summary='false' sign='true'>
+<item name='dateTimeCreated' summary='false'>
 <rawitemdata type='400'>
 AAAAAAAAAAA=
 </rawitemdata></item>

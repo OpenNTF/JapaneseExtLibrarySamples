@@ -1,20 +1,125 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
-	xmlns:xe="http://www.ibm.com/xsp/coreex"
-	xmlns:xc="http://www.ibm.com/xsp/custom">
-
-	<xe:singlePageApp id="singlePageApp1" selectedPageName="home">
-		
-		<xe:appPage pageName="home" id="HomePage">
-			<xe:djxmRoundRectList id="djxmRoundRectList1">
-				<xe:djxmLineItem id="djxmLineItem2" label="Basic CRUD" moveTo="crudhome"></xe:djxmLineItem>
-				<xe:djxmLineItem id="djxmLineItem1"
-					label="Countries and Cities" moveTo="viewcountry">
-				</xe:djxmLineItem>
-			</xe:djxmRoundRectList>
-			<xe:djxmHeading id="djxmHeading1" label="XPages Demo App"></xe:djxmHeading>
-		</xe:appPage>
-		<xc:ccm_countrycity></xc:ccm_countrycity>
-		
-		<xc:ccm_crud></xc:ccm_crud></xe:singlePageApp>
+<xp:view
+  xmlns:xp="http://www.ibm.com/xsp/core"
+  xmlns:xe="http://www.ibm.com/xsp/coreex"
+  xmlns:xc="http://www.ibm.com/xsp/custom">
+  <xp:this.resources>
+    <xp:script
+      src="/smartphonetest.jss"
+      clientSide="false"></xp:script>
+  </xp:this.resources>
+  <xe:singlePageApp
+    id="singlePageApp1"
+    selectedPageName="home">
+    <xe:appPage
+      pageName="home"
+      id="HomePage">
+      <xe:djxmRoundRectList
+        id="djxmRoundRectList1">
+        <xe:djxmLineItem
+          id="djxmLineItem2"
+          label="Basic CRUD"
+          moveTo="crudhome"></xe:djxmLineItem>
+        <xe:djxmLineItem
+          id="djxmLineItem1"
+          label="Countries and Cities"
+          moveTo="viewcountry">
+        </xe:djxmLineItem>
+        <xe:djxmLineItem
+          id="djxmLineItem6"
+          label="deviceBean"
+          moveTo="devicebean1">
+        </xe:djxmLineItem>
+        <xe:djxmLineItem
+          id="djxmLineItem4"
+          label="File Upload on Mobile"
+          moveTo="fileuploadView">
+        </xe:djxmLineItem>
+        <xe:djxmLineItem
+          id="djxmLineItem3"
+          label="Tool Bar Button"
+          moveTo="toolbarbutton">
+        </xe:djxmLineItem>
+        <xe:djxmLineItem
+          id="djxmLineItem5"
+          label="Transition Events"
+          moveTo="transhome">
+        </xe:djxmLineItem>
+        <xe:djxmLineItem
+          id="djxmLineItem9">
+          <xe:toolBarButton
+            id="toolBarButton1"
+            label="On Resize Event"
+            transition="flip">
+            <xp:eventHandler
+              event="onClick"
+              submit="true"
+              refreshMode="complete">
+              <xe:this.action>
+                <xp:openPage
+                  name="/m_resize.xsp"></xp:openPage>
+              </xe:this.action>
+            </xp:eventHandler>
+          </xe:toolBarButton>
+        </xe:djxmLineItem>
+        <xe:djxmLineItem
+          id="djxmLineItem8">
+          <xe:toolBarButton
+            id="toolBarButton2"
+            label="On Orientation Change Event">
+            <xp:eventHandler
+              event="onClick"
+              submit="true"
+              refreshMode="complete">
+              <xe:this.action>
+                <xp:openPage
+                  name="/m_orientation.xsp"></xp:openPage>
+              </xe:this.action>
+            </xp:eventHandler>
+          </xe:toolBarButton>
+        </xe:djxmLineItem>
+      </xe:djxmRoundRectList>
+      <xe:djxmHeading
+        id="djxmHeading1"
+        label="XPages Demo App"></xe:djxmHeading>
+    </xe:appPage>
+    <xe:appPage
+      id="CountryView"
+      pageName="viewcountry">
+      <xc:ccm_countrycity_view></xc:ccm_countrycity_view>
+    </xe:appPage>
+    <xe:appPage
+      id="CityDocument"
+      pageName="doccity"
+      resetContent="true">
+      <xc:ccm_countrycity_document></xc:ccm_countrycity_document>
+    </xe:appPage>
+    <xe:appPage
+      id="crudHome"
+      pageName="crudhome"
+      resetContent="true">
+      <xc:ccm_crud_view></xc:ccm_crud_view>
+    </xe:appPage>
+    <xe:appPage
+      id="crudDoc"
+      pageName="cruddocview"
+      resetContent="true">
+      <xc:ccm_crud_document></xc:ccm_crud_document>
+    </xe:appPage>
+    <xe:appPage
+      id="appPageFileUploadView"
+      pageName="fileuploadView"
+      resetContent="true">
+      <xc:ccm_fileupload_view></xc:ccm_fileupload_view>
+    </xe:appPage>
+    <xe:appPage
+      id="appPageFileUploadDoc"
+      pageName="fileuploadDoc"
+      resetContent="true">
+      <xc:ccm_fileupload_document></xc:ccm_fileupload_document>
+    </xe:appPage>
+    <xc:ccm_toolbarbutton></xc:ccm_toolbarbutton>
+    <xc:ccm_devicebean></xc:ccm_devicebean>
+    <xc:ccm_transitionevents></xc:ccm_transitionevents>
+  </xe:singlePageApp>
 </xp:view>

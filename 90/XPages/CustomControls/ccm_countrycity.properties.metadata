@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><note class="form" replicaid="85257A870079CB8F" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="146e" sequence="2" unid="83610B931040ECE949257B330045E89B">
-<created><datetime>20130319T214335,31+09</datetime></created>
-<modified><datetime>20130319T214339,35+09</datetime></modified>
-<revised><datetime>20130319T214339,34+09</datetime></revised>
-<lastaccessed><datetime>20130319T214339,35+09</datetime></lastaccessed>
-<addedtofile><datetime>20130319T214339,33+09</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Admin/O=LotusLab</name></updatedby>
-<wassignedby><name>CN=Admin/O=LotusLab</name></wassignedby>
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="80257C350049C2B7" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="129a" sequence="2" unid="045A7DA69661FAE449257C4C002A4075">
+<created><datetime>20131225T164130,13+09</datetime></created>
+<modified><datetime>20131225T164130,16+09</datetime></modified>
+<revised><datetime>20131225T164130,15+09</datetime></revised>
+<lastaccessed><datetime>20131225T164130,16+09</datetime></lastaccessed>
+<addedtofile><datetime>20131225T164130,13+09</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Admin/O=lotuslab</name></updatedby>
+<wassignedby><name>CN=Admin/O=lotuslab</name></wassignedby>
 <item name="$Flags"><text>gC~4;2</text></item>
 <item name="$TITLE"><text>ccm_countrycity.properties</text></item>
 

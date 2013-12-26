@@ -1,15 +1,17 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' replicaid='85257A870079CB8F'>
-<noteinfo noteid='3de' unid='9578F92E3BC2CB03802576790031FCE7' sequence='7'>
+<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='80257C350049C2B7'>
+<noteinfo noteid='24e' unid='9578F92E3BC2CB03802576790031FCE7' sequence='7'>
 <created><datetime dst='true'>20091125T100600,07+01</datetime></created>
-<modified><datetime dst='true'>20130118T132315,02+01</datetime></modified>
-<revised><datetime dst='true'>20130118T132315,01+01</datetime></revised>
-<lastaccessed><datetime dst='true'>20130118T132315,02+01</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20120928T180602,77-04</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name><name
->CN=Paul Hannan/OU=Ireland/O=IBM</name></updatedby>
+<modified><datetime dst='true'>20131202T143738,85+01</datetime></modified>
+<revised><datetime dst='true'>20131202T143738,84+01</datetime></revised>
+<lastaccessed><datetime dst='true'>20131202T143738,85+01</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20131202T142541,50+01</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=a admin/O=ibm</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name
+>CN=a admin/O=ibm</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name
+>CN=a admin/O=ibm</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name></updatedby>
 <revisions><datetime dst='true'>20100527T110307,95+01</datetime></revisions>
-<item name='$FormatNote' summary='true' sign='true'>
+<item name='$FormatNote' summary='true'>
 <rawitemdata type='4'>
 AQBrmx5LwbF4gZ/+YgBPYiWF
 </rawitemdata></item>
@@ -39,8 +41,8 @@ AAABAAEA////AAEA////AAAAAQCAAAAAAQAAAP8AAQAAAAAAAAAIAAAAAAABAA==
 </rawitemdata></item>
 <item name='$Comment' sign='true'><text/></item>
 <item name='$Flags'><text>Y</text></item>
-<item name='$WebFlags' sign='true'><text>S</text></item>
-<item name='$DesignerVersion' sign='true'><text>8.5</text></item>
+<item name='$WebFlags'><text>S</text></item>
+<item name='$DesignerVersion'><text>8.5</text></item>
 <item name='$SelQuery' sign='true'>
 <rawitemdata type='f'>
 gQYAAAAAif8hAAAAAAABABUAeHNwanNFdmVudHNXaXRoTG9jYWxlAA==

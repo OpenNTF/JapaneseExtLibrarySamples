@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?><note class="form" replicaid="85257A870079CB8F" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="5aa" sequence="73" unid="B4D5BBBAEC3BF360802575FC0054DE45">
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="80257C350049C2B7" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="38a" sequence="73" unid="B4D5BBBAEC3BF360802575FC0054DE45">
 <created><datetime dst="true">20090723T162659,25+01</datetime></created>
-<modified><datetime>20130319T214345,25+09</datetime></modified>
-<revised><datetime>20130319T214345,24+09</datetime></revised>
-<lastaccessed><datetime>20130319T214345,25+09</datetime></lastaccessed>
-<addedtofile><datetime dst="true">20120928T180617,45-04</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=Admin/O=LotusLab</name></updatedby>
+<modified><datetime>20131225T164151,13+09</datetime></modified>
+<revised><datetime>20131225T164151,12+09</datetime></revised>
+<lastaccessed><datetime>20131225T164151,13+09</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20131202T142543,08+01</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name><name>CN=a admin/O=ibm</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=a admin/O=ibm</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=Admin/O=lotuslab</name></updatedby>
 <revisions><datetime dst="true">20100603T132254,92+01</datetime><datetime dst="true">20110331T101357,45+01</datetime><datetime dst="true">20121213T105756,85+01</datetime><datetime dst="true">20121213T105757,65+01</datetime><datetime dst="true">20121213T110058,80+01</datetime><datetime dst="true">20121213T110059,30+01</datetime></revisions>
-<wassignedby><name>CN=Admin/O=LotusLab</name></wassignedby>
+<wassignedby><name>CN=Admin/O=lotuslab</name></wassignedby>
 <item name="$TITLE"><text>viewFiltering.xsp</text></item>
 
 <item name="$Flags"><text>gC~K4</text></item>

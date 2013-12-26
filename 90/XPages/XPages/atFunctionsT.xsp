@@ -1,238 +1,316 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
-	xmlns:XPa="component/XPages.nsf"
-	xmlns:xc="http://www.ibm.com/xsp/custom">
+<xp:view
+  xmlns:xp="http://www.ibm.com/xsp/core"
+  xmlns:XPa="component/XPages.nsf"
+  xmlns:xc="http://www.ibm.com/xsp/custom">
+  <XPa:ccLayout
+    id="cc4cclayout"
+    navPath="/events/atft/">
+    <xp:this.facets>
+      <xc:ccMenu_events
+        xp:key="facetLeft"></xc:ccMenu_events>
+      <xp:panel
+        xp:key="facetMain">
+        <xp:panel>
+          <xp:label
+            id="label001"
+            value="@T*: "
+            style="font-weight:bold;font-size:12pt">
+          </xp:label>
+          <xp:comboBox
+            id="comboBoxAtFuncsT"
+            value="#{sessionScope.atFuncsTs}"
+            defaultValue="None">
+            <xp:selectItem
+              itemLabel="None"
+              itemValue="None">
+            </xp:selectItem>
+            <xp:selectItem
+              itemLabel="@Text"
+              itemValue="atFT01">
+            </xp:selectItem>
+            <xp:selectItem
+              itemLabel="@TextToNumber"
+              itemValue="atFT02">
+            </xp:selectItem>
+            <xp:selectItem
+              itemLabel="@TextToTime"
+              itemValue="atFT03">
+            </xp:selectItem>
+            <xp:selectItem
+              itemLabel="@Time"
+              itemValue="atFT04">
+            </xp:selectItem>
+            <xp:selectItem
+              itemLabel="@Today"
+              itemValue="atFT05">
+            </xp:selectItem>
+            <xp:selectItem
+              itemLabel="@Tomorrow"
+              itemValue="atFT06">
+            </xp:selectItem>
+            <xp:selectItem
+              itemLabel="@Trim"
+              itemValue="atFT07">
+            </xp:selectItem>
+            <xp:selectItem
+              itemLabel="@True"
+              itemValue="atFT08">
+            </xp:selectItem>
+
+
+            <xp:eventHandler
+              event="onchange"
+              submit="true"
+              refreshMode="complete">
+              <xp:this.action>
+                <![CDATA[#{javascript:print("")}]]>
+              </xp:this.action>
+            </xp:eventHandler>
+          </xp:comboBox>
+          <xp:panel>
+
+            <xp:panel>
+              <xp:this.rendered>
+                <![CDATA[#{javascript:sessionScope.atFuncsTs == "atFT01"}]]>
+              </xp:this.rendered>
+              <xp:table
+                styleClass="customTable">
+                <xp:tr>
+                  <xp:td>
+                    <xp:label
+                      value="@Function: "
+                      id="label1">
+                    </xp:label>
+                  </xp:td>
+                  <xp:td>
+                    @Text(value:any) : string</xp:td>
+                </xp:tr>
+                <xp:tr>
+                  <xp:td>Description:</xp:td>
+                  <xp:td> Converts a value to a string.
+                  </xp:td>
+                </xp:tr>
+              </xp:table>
+              <xp:br />
+            </xp:panel>
+            <xp:panel>
+              <xp:this.rendered>
+                <![CDATA[#{javascript:sessionScope.atFuncsTs == "atFT02"}]]>
+              </xp:this.rendered>
+              <xp:table
+                styleClass="customTable">
+                <xp:tr>
+                  <xp:td>
+                    <xp:label
+                      value="@Function: "
+                      id="label2">
+                    </xp:label>
+                  </xp:td>
+                  <xp:td>
+                    @TextToNumber(value:string) :
+                    double
+                  </xp:td>
+                </xp:tr>
+                <xp:tr>
+                  <xp:td>Description:</xp:td>
+                  <xp:td>Converts a string to a
+                    number.
+                  </xp:td>
+                </xp:tr>
+              </xp:table>
+              <xp:br />
+            </xp:panel>
+            <xp:panel>
+              <xp:this.rendered>
+                <![CDATA[#{javascript:sessionScope.atFuncsTs == "atFT03"}]]>
+              </xp:this.rendered>
+              <xp:table
+                styleClass="customTable">
+                <xp:tr>
+                  <xp:td>
+                    <xp:label
+                      value="@Function: "
+                      id="label3">
+                    </xp:label>
+                  </xp:td>
+                  <xp:td>
+                    @TextToTime(value:string) : Date
+                  </xp:td>
+                </xp:tr>
+                <xp:tr>
+                  <xp:td>Description:</xp:td>
+                  <xp:td>
+                    Converts a string to a date
+                    and time.
+                  </xp:td>
+                </xp:tr>
+              </xp:table>
+              <xp:br />
+            </xp:panel>
+            <xp:panel>
+              <xp:this.rendered>
+                <![CDATA[#{javascript:sessionScope.atFuncsTs == "atFT04"}]]>
+              </xp:this.rendered>
+              <xp:table
+                styleClass="customTable">
+                <xp:tr>
+                  <xp:td>
+                    <xp:label
+                      value="@Function: "
+                      id="label4">
+                    </xp:label>
+                  </xp:td>
+                  <xp:td>
+                    @Time(hours:int, minutes:int,
+                    seconds:int) :
+
+                    Date
+                    <xp:br></xp:br>
+                    <xp:br></xp:br>
+                    Description:&#160;Creates a
+                    time with 1/1/1900 for
+                    the date.
+                    <xp:br></xp:br>
+                    <xp:br></xp:br>
+                    @Time(date:Date) : Date
+                    <xp:br></xp:br>
+                    <xp:br></xp:br>
+                    Description:&#160;Creates a time with 1/1/1900 for
+                    the date.
+                    <xp:br></xp:br>
+                    <xp:br></xp:br>
+                    @Time(years:int, months:int,
+                    days:int, hours:int,
+                    minutes:int, seconds:int) : Date
+                    .
+                    <xp:br></xp:br>
+                    <xp:br></xp:br>
+                    Description:&#160;Creates a date and time
+                  </xp:td>
+                </xp:tr>
+
+              </xp:table>
+              <xp:br />
+            </xp:panel>
+            <xp:panel>
+              <xp:this.rendered>
+                <![CDATA[#{javascript:sessionScope.atFuncsTs == "atFT05"}]]>
+              </xp:this.rendered>
+              <xp:table
+                styleClass="customTable">
+                <xp:tr>
+                  <xp:td>
+                    <xp:label
+                      value="@Function: "
+                      id="label5">
+                    </xp:label>
+                  </xp:td>
+                  <xp:td>
+                    @Today() : Date
+                  </xp:td>
+                </xp:tr>
+                <xp:tr>
+                  <xp:td>Description:</xp:td>
+                  <xp:td> Returns
+                    today's date.
+                  </xp:td>
+                </xp:tr>
+              </xp:table>
+              <xp:br />
+            </xp:panel>
+            <xp:panel>
+              <xp:this.rendered>
+                <![CDATA[#{javascript:sessionScope.atFuncsTs == "atFT06"}]]>
+              </xp:this.rendered>
+              <xp:table
+                styleClass="customTable">
+                <xp:tr>
+                  <xp:td>
+                    <xp:label
+                      value="@Function: "
+                      id="label6">
+                    </xp:label>
+                  </xp:td>
+                  <xp:td>
+                    @Tomorrow() : Date</xp:td>
+                </xp:tr>
+                <xp:tr>
+                  <xp:td>Description:</xp:td>
+                  <xp:td> Returns
+                    tomorrow's date.
+                  </xp:td>
+                </xp:tr>
+              </xp:table>
+              <xp:br />
+            </xp:panel>
+            <xp:panel>
+              <xp:this.rendered>
+                <![CDATA[#{javascript:sessionScope.atFuncsTs == "atFT07"}]]>
+              </xp:this.rendered>
+              <xp:table
+                styleClass="customTable">
+                <xp:tr>
+                  <xp:td>
+                    <xp:label
+                      value="@Function: "
+                      id="label7">
+                    </xp:label>
+                  </xp:td>
+                  <xp:td>
+                    @Trim(value:string) : string
+                  </xp:td>
+                </xp:tr>
+                <xp:tr>
+                  <xp:td>Description:</xp:td>
+                  <xp:td> Removes leading, trailing, and
+                    redundant spaces
+                    from the given
+                    string, or from each element of
+                    the
+                    given string list.</xp:td>
+                </xp:tr>
+              </xp:table>
+              <xp:br />
+            </xp:panel>
+            <xp:panel>
+              <xp:this.rendered>
+                <![CDATA[#{javascript:sessionScope.atFuncsTs == "atFT08"}]]>
+              </xp:this.rendered>
+              <xp:table
+                styleClass="customTable">
+                <xp:tr>
+                  <xp:td>
+                    <xp:label
+                      value="@Function: "
+                      id="label8">
+                    </xp:label>
+                  </xp:td>
+                  <xp:td>
+                    @True() : int </xp:td>
+                </xp:tr>
+                <xp:tr>
+                  <xp:td>Description:</xp:td>
+                  <xp:td>Returns the
+                    number 1.
+                  </xp:td>
+                </xp:tr>
+              </xp:table>
+              <xp:br />
+            </xp:panel>
 
 
 
-	<XPa:ccLayout id="cc4cclayout" navPath="/events/atft/">
-		<xp:this.facets>
-			<xc:ccMenu_events xp:key="facetLeft"></xc:ccMenu_events>
-			<xp:panel xp:key="facetMain">
-				<xp:panel>
-					<xp:label id="label001" value="@T*: "
-						style="font-weight:bold;font-size:12pt">
-					</xp:label>
-					<xp:comboBox id="comboBoxAtFuncsT"
-						value="#{sessionScope.atFuncsTs}" defaultValue="None">
-						<xp:selectItem itemLabel="None"
-							itemValue="None">
-						</xp:selectItem>
-						<xp:selectItem itemLabel="@Text"
-							itemValue="atFT01">
-						</xp:selectItem>
-						<xp:selectItem itemLabel="@TextToNumber"
-							itemValue="atFT02">
-						</xp:selectItem>
-						<xp:selectItem itemLabel="@TextToTime"
-							itemValue="atFT03">
-						</xp:selectItem>
-						<xp:selectItem itemLabel="@Time"
-							itemValue="atFT04">
-						</xp:selectItem>
-						<xp:selectItem itemLabel="@Today"
-							itemValue="atFT05">
-						</xp:selectItem>
-						<xp:selectItem itemLabel="@Tomorrow"
-							itemValue="atFT06">
-						</xp:selectItem>
-						<xp:selectItem itemLabel="@Trim"
-							itemValue="atFT07">
-						</xp:selectItem>
-						<xp:selectItem itemLabel="@True"
-							itemValue="atFT08">
-						</xp:selectItem>
-
-
-						<xp:eventHandler event="onchange" submit="true"
-							refreshMode="complete">
-							<xp:this.action>
-								<![CDATA[#{javascript:print("")}]]>
-							</xp:this.action>
-						</xp:eventHandler>
-					</xp:comboBox>
-					<xp:panel>
-
-						<xp:panel>
-							<xp:this.rendered>
-								<![CDATA[#{javascript:sessionScope.atFuncsTs == "atFT01"}]]>
-							</xp:this.rendered>
-							<xp:table styleClass="customTable">
-								<xp:tr>
-									<xp:td>
-										<xp:label value="@Function: "
-											id="label1">
-										</xp:label>
-									</xp:td>
-									<xp:td>
-										@Text(value:any) : string |
-										Converts a value to a string.
-									</xp:td>
-								</xp:tr>
-							</xp:table>
-							<xp:br />
-						</xp:panel>
-						<xp:panel>
-							<xp:this.rendered>
-								<![CDATA[#{javascript:sessionScope.atFuncsTs == "atFT02"}]]>
-							</xp:this.rendered>
-							<xp:table styleClass="customTable">
-								<xp:tr>
-									<xp:td>
-										<xp:label value="@Function: "
-											id="label2">
-										</xp:label>
-									</xp:td>
-									<xp:td>
-										@TextToNumber(value:string) :
-										double | Converts a string to a
-										number.
-									</xp:td>
-								</xp:tr>
-							</xp:table>
-							<xp:br />
-						</xp:panel>
-						<xp:panel>
-							<xp:this.rendered>
-								<![CDATA[#{javascript:sessionScope.atFuncsTs == "atFT03"}]]>
-							</xp:this.rendered>
-							<xp:table styleClass="customTable">
-								<xp:tr>
-									<xp:td>
-										<xp:label value="@Function: "
-											id="label3">
-										</xp:label>
-									</xp:td>
-									<xp:td>
-										@TextToTime(value:string) : Date
-										| Converts a string to a date
-										and time.
-									</xp:td>
-								</xp:tr>
-							</xp:table>
-							<xp:br />
-						</xp:panel>
-						<xp:panel>
-							<xp:this.rendered>
-								<![CDATA[#{javascript:sessionScope.atFuncsTs == "atFT04"}]]>
-							</xp:this.rendered>
-							<xp:table styleClass="customTable">
-								<xp:tr>
-									<xp:td>
-										<xp:label value="@Function: "
-											id="label4">
-										</xp:label>
-									</xp:td>
-									<xp:td>
-										@Time(hours:int, minutes:int,
-										seconds:int) : Date | Creates a
-										time with 1/1/1900 for the date.
-										<xp:br></xp:br>
-										@Time(date:Date) : Date |
-										Creates a time with 1/1/1900 for
-										the date.
-										<xp:br></xp:br>
-										@Time(years:int, months:int,
-										days:int, hours:int,
-										minutes:int, seconds:int) : Date
-										| Creates a date and time.
-									</xp:td>
-								</xp:tr>
-							</xp:table>
-							<xp:br />
-						</xp:panel>
-						<xp:panel>
-							<xp:this.rendered>
-								<![CDATA[#{javascript:sessionScope.atFuncsTs == "atFT05"}]]>
-							</xp:this.rendered>
-							<xp:table styleClass="customTable">
-								<xp:tr>
-									<xp:td>
-										<xp:label value="@Function: "
-											id="label5">
-										</xp:label>
-									</xp:td>
-									<xp:td>
-										@Today() : Date | Returns
-										today's date.
-									</xp:td>
-								</xp:tr>
-							</xp:table>
-							<xp:br />
-						</xp:panel>
-						<xp:panel>
-							<xp:this.rendered>
-								<![CDATA[#{javascript:sessionScope.atFuncsTs == "atFT06"}]]>
-							</xp:this.rendered>
-							<xp:table styleClass="customTable">
-								<xp:tr>
-									<xp:td>
-										<xp:label value="@Function: "
-											id="label6">
-										</xp:label>
-									</xp:td>
-									<xp:td>
-										@Tomorrow() : Date | Returns
-										tomorrow's date.
-									</xp:td>
-								</xp:tr>
-							</xp:table>
-							<xp:br />
-						</xp:panel>
-						<xp:panel>
-							<xp:this.rendered>
-								<![CDATA[#{javascript:sessionScope.atFuncsTs == "atFT07"}]]>
-							</xp:this.rendered>
-							<xp:table styleClass="customTable">
-								<xp:tr>
-									<xp:td>
-										<xp:label value="@Function: "
-											id="label7">
-										</xp:label>
-									</xp:td>
-									<xp:td>
-										@Trim(value:string) : string |
-										Removes leading, trailing, and
-										redundant spaces from the given
-										string, or from each element of
-										the given string list.
-									</xp:td>
-								</xp:tr>
-							</xp:table>
-							<xp:br />
-						</xp:panel>
-						<xp:panel>
-							<xp:this.rendered>
-								<![CDATA[#{javascript:sessionScope.atFuncsTs == "atFT08"}]]>
-							</xp:this.rendered>
-							<xp:table styleClass="customTable">
-								<xp:tr>
-									<xp:td>
-										<xp:label value="@Function: "
-											id="label8">
-										</xp:label>
-									</xp:td>
-									<xp:td>
-										@True() : int | Returns the
-										number 1.
-									</xp:td>
-								</xp:tr>
-							</xp:table>
-							<xp:br />
-						</xp:panel>
 
 
 
 
 
+          </xp:panel>
+        </xp:panel>
+      </xp:panel>
 
-
-
-					</xp:panel>
-				</xp:panel>
-			</xp:panel>
-
-		</xp:this.facets>
-	</XPa:ccLayout>
+    </xp:this.facets>
+  </XPa:ccLayout>
 
 </xp:view>

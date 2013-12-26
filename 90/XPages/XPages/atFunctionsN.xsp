@@ -1,243 +1,260 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xp:view xmlns:xp="http://www.ibm.com/xsp/core"
-	xmlns:XPa="component/XPages.nsf"
-	xmlns:xc="http://www.ibm.com/xsp/custom">
+  xmlns:XPa="component/XPages.nsf"
+  xmlns:xc="http://www.ibm.com/xsp/custom">
 
 
 
-	<XPa:ccLayout id="cc4cclayout" navPath="/events/atfn/">
-		<xp:this.facets>
-			<xc:ccMenu_events xp:key="facetLeft"></xc:ccMenu_events>
-			<xp:panel xp:key="facetMain">
-				<xp:panel>
-					<xp:label id="label1" value="@N*: "
-						style="font-weight:bold;font-size:12pt">
-					</xp:label>
-					<xp:comboBox id="comboBoxAtFuncsN"
-						value="#{sessionScope.atFuncsNs}" defaultValue="None">
-						<xp:selectItem itemLabel="None"
-							itemValue="None">
-						</xp:selectItem>
-						<xp:selectItem itemLabel="@Name"
-							itemValue="atFN01">
-						</xp:selectItem>
-						<xp:selectItem itemLabel="@NewLine"
-							itemValue="atFN02">
-						</xp:selectItem>
-						<xp:selectItem itemLabel="@No"
-							itemValue="atFN03">
-						</xp:selectItem>
-						<xp:selectItem itemLabel="@Now"
-							itemValue="atFN04">
-						</xp:selectItem>
-						<xp:selectItem itemLabel="@Null"
-							itemValue="atFN05">
-						</xp:selectItem>
-						<xp:eventHandler event="onchange" submit="true"
-							refreshMode="complete">
-							<xp:this.action>
-								<![CDATA[#{javascript:print("")}]]>
-							</xp:this.action>
-						</xp:eventHandler>
-					</xp:comboBox>
-					<xp:panel>
-						<xp:panel>
-							<xp:this.rendered>
-								<![CDATA[#{javascript:sessionScope.atFuncsNs == "atFN01"}]]>
-							</xp:this.rendered>
-							<xp:table styleClass="customTable">
-								<xp:tr>
-									<xp:td>
-										<xp:label value="@Function: "
-											id="label2">
-										</xp:label>
-									</xp:td>
-									<xp:td>
-										@Name(action:string,
-										name:string) : string Allows you
-										to manipulate LDAP formatted
-										names.
-									</xp:td>
-								</xp:tr>
-							</xp:table>
-							<xp:table>
-								<xp:tr>
-									<xp:td>
-										<xp:label value="@UserName() "
-											id="label7">
-										</xp:label>
-									</xp:td>
-									<xp:td>
-										<xp:text escape="true"
-											id="computedField1" value="#{javascript:@UserName()}">
-										</xp:text>
-									</xp:td>
-								</xp:tr>
-								<xp:tr>
-									<xp:td>
-										<xp:label id="label8">
-											<xp:this.value><![CDATA[@Name("[CN]",@UserName()) ]]></xp:this.value>
-										</xp:label>
-									</xp:td>
-									<xp:td>
-										<xp:text escape="true"
-											id="computedField2">
-											<xp:this.value><![CDATA[#{javascript:@Name("[CN]",@UserName())}]]></xp:this.value>
-										</xp:text>
-									</xp:td>
-								</xp:tr>
-								<xp:tr>
-									<xp:td>
-										<xp:label id="label9">
-											<xp:this.value><![CDATA[@Name("[ABBREVIATE]",@UserName()) ]]></xp:this.value>
-										</xp:label>
-									</xp:td>
-									<xp:td>
-										<xp:text escape="true"
-											id="computedField3">
-											<xp:this.value><![CDATA[#{javascript:@Name("[ABBREVIATE]",@UserName())}]]></xp:this.value>
-										</xp:text>
-									</xp:td>
-								</xp:tr>
-								<xp:tr>
-									<xp:td>
-										<xp:label id="label10">
-											<xp:this.value><![CDATA[@Name("[ADDRESS821]",@UserName()) ]]></xp:this.value>
-										</xp:label>
-									</xp:td>
-									<xp:td>
-										<xp:text escape="true"
-											id="computedField4">
-											<xp:this.value><![CDATA[#{javascript:@Name("[ADDRESS821]",@UserName())}]]></xp:this.value>
-										</xp:text>
-									</xp:td>
-								</xp:tr>
-								<xp:tr>
-									<xp:td>
-										<xp:label id="label11">
-											<xp:this.value><![CDATA[@Name("[CANONICALIZE]",@UserName()) ]]></xp:this.value>
-										</xp:label>
-									</xp:td>
-									<xp:td>
-										<xp:text escape="true"
-											id="computedField5">
-											<xp:this.value><![CDATA[#{javascript:@Name("[CANONICALIZE]",@UserName())}]]></xp:this.value>
-										</xp:text>
-									</xp:td>
-								</xp:tr>
-								<xp:tr>
-									<xp:td>
-										<xp:label id="label12">
-											<xp:this.value><![CDATA[@Name("[HIERARCHYONLY]",@UserName()) ]]></xp:this.value>
-										</xp:label>
-									</xp:td>
-									<xp:td>
-										<xp:text escape="true"
-											id="computedField6">
-											<xp:this.value><![CDATA[#{javascript:@Name("[HIERARCHYONLY]",@UserName())}]]></xp:this.value>
-										</xp:text>
-									</xp:td>
-								</xp:tr>
-								<xp:tr>
-									<xp:td>
-										<xp:label id="label13">
-											<xp:this.value><![CDATA[@Name("[O]",@UserName()) ]]></xp:this.value>
-										</xp:label>
-									</xp:td>
-									<xp:td>
-										<xp:text escape="true"
-											id="computedField7">
-											<xp:this.value><![CDATA[#{javascript:@Name("[O]",@UserName())}]]></xp:this.value>
-										</xp:text>
-									</xp:td>
-								</xp:tr>
-								<xp:tr>
-									<xp:td></xp:td>
-									<xp:td></xp:td>
-								</xp:tr>
-							</xp:table>
-							<xp:br />
-						</xp:panel>
-						<xp:panel>
-							<xp:this.rendered>
-								<![CDATA[#{javascript:sessionScope.atFuncsNs == "atFN02"}]]>
-							</xp:this.rendered>
-							<xp:table styleClass="customTable">
-								<xp:tr>
-									<xp:td>
-										<xp:label value="@Function: "
-											id="label3">
-										</xp:label>
-									</xp:td>
-									<xp:td>
-										@NewLine() : string Returns the
-										newline character.
-									</xp:td>
-								</xp:tr>
-							</xp:table>
-							<xp:br />
-						</xp:panel>
-						<xp:panel>
-							<xp:this.rendered>
-								<![CDATA[#{javascript:sessionScope.atFuncsNs == "atFN03"}]]>
-							</xp:this.rendered>
-							<xp:table styleClass="customTable">
-								<xp:tr>
-									<xp:td>
-										<xp:label value="@Function: "
-											id="label4">
-										</xp:label>
-									</xp:td>
-									<xp:td>
-										@No() : int Returns the number
-										0.
-									</xp:td>
-								</xp:tr>
-							</xp:table>
-							<xp:br />
-						</xp:panel>
-						<xp:panel>
-							<xp:this.rendered>
-								<![CDATA[#{javascript:sessionScope.atFuncsNs == "atFN04"}]]>
-							</xp:this.rendered>
-							<xp:table styleClass="customTable">
-								<xp:tr>
-									<xp:td>
-										<xp:label value="@Function: "
-											id="label5">
-										</xp:label>
-									</xp:td>
-									<xp:td>
-										@Now() : Date Returns the
-										current date in the server time
-										zone.
-									</xp:td>
-								</xp:tr>
-							</xp:table>
-							<xp:br />
-						</xp:panel>
-						<xp:panel>
-							<xp:this.rendered>
-								<![CDATA[#{javascript:sessionScope.atFuncsNs == "atFN05"}]]>
-							</xp:this.rendered>
-							<xp:table styleClass="customTable">
-								<xp:tr>
-									<xp:td>
-										<xp:label value="@Function: "
-											id="label6">
-										</xp:label>
-									</xp:td>
-									<xp:td>
-										@Null() : any Returns an empty
-										string.
-									</xp:td>
-								</xp:tr>
-							</xp:table>
-							<xp:br />
-						</xp:panel>
-					</xp:panel>
-				</xp:panel>
-			</xp:panel>
-		</xp:this.facets>
-	</XPa:ccLayout>
+  <XPa:ccLayout id="cc4cclayout" navPath="/events/atfn/">
+    <xp:this.facets>
+      <xc:ccMenu_events xp:key="facetLeft"></xc:ccMenu_events>
+      <xp:panel xp:key="facetMain">
+        <xp:panel>
+          <xp:label id="label1" value="@N*: "
+            style="font-weight:bold;font-size:12pt">
+          </xp:label>
+          <xp:comboBox id="comboBoxAtFuncsN"
+            value="#{sessionScope.atFuncsNs}" defaultValue="None">
+            <xp:selectItem itemLabel="None"
+              itemValue="None">
+            </xp:selectItem>
+            <xp:selectItem itemLabel="@Name"
+              itemValue="atFN01">
+            </xp:selectItem>
+            <xp:selectItem itemLabel="@NewLine"
+              itemValue="atFN02">
+            </xp:selectItem>
+            <xp:selectItem itemLabel="@No"
+              itemValue="atFN03">
+            </xp:selectItem>
+            <xp:selectItem itemLabel="@Now"
+              itemValue="atFN04">
+            </xp:selectItem>
+            <xp:selectItem itemLabel="@Null"
+              itemValue="atFN05">
+            </xp:selectItem>
+            <xp:eventHandler event="onchange" submit="true"
+              refreshMode="complete">
+              <xp:this.action>
+                <![CDATA[#{javascript:print("")}]]>
+              </xp:this.action>
+            </xp:eventHandler>
+          </xp:comboBox>
+          <xp:panel>
+            <xp:panel>
+              <xp:this.rendered>
+                <![CDATA[#{javascript:sessionScope.atFuncsNs == "atFN01"}]]>
+              </xp:this.rendered>
+              <xp:table styleClass="customTable">
+                <xp:tr>
+                  <xp:td>
+                    <xp:label value="@Function: "
+                      id="label2">
+                    </xp:label>
+                  </xp:td>
+                  <xp:td>
+                    @Name(action:string,
+                    name:string) : string 
+                  </xp:td>
+                </xp:tr>
+              </xp:table>
+              <xp:table>
+                <xp:tr>
+                  <xp:td>
+                    <xp:label value="@UserName() "
+                      id="label7">
+                    </xp:label>
+                  </xp:td>
+                  <xp:td>
+                    <xp:text escape="true"
+                      id="computedField1" value="#{javascript:@UserName()}">
+                    </xp:text>
+                  </xp:td>
+                </xp:tr>
+                <xp:tr>
+                  <xp:td>
+                    <xp:label id="label8">
+                      <xp:this.value><![CDATA[@Name("[CN]",@UserName()) ]]></xp:this.value>
+                    </xp:label>
+                  </xp:td>
+                  <xp:td>
+                    <xp:text escape="true"
+                      id="computedField2">
+                      <xp:this.value><![CDATA[#{javascript:@Name("[CN]",@UserName())}]]></xp:this.value>
+                    </xp:text>
+                  </xp:td>
+                </xp:tr>
+                <xp:tr>
+                  <xp:td>
+                    <xp:label id="label9">
+                      <xp:this.value><![CDATA[@Name("[ABBREVIATE]",@UserName()) ]]></xp:this.value>
+                    </xp:label>
+                  </xp:td>
+                  <xp:td>
+                    <xp:text escape="true"
+                      id="computedField3">
+                      <xp:this.value><![CDATA[#{javascript:@Name("[ABBREVIATE]",@UserName())}]]></xp:this.value>
+                    </xp:text>
+                  </xp:td>
+                </xp:tr>
+                <xp:tr>
+                  <xp:td>
+                    <xp:label id="label10">
+                      <xp:this.value><![CDATA[@Name("[ADDRESS821]",@UserName()) ]]></xp:this.value>
+                    </xp:label>
+                  </xp:td>
+                  <xp:td>
+                    <xp:text escape="true"
+                      id="computedField4">
+                      <xp:this.value><![CDATA[#{javascript:@Name("[ADDRESS821]",@UserName())}]]></xp:this.value>
+                    </xp:text>
+                  </xp:td>
+                </xp:tr>
+                <xp:tr>
+                  <xp:td>
+                    <xp:label id="label11">
+                      <xp:this.value><![CDATA[@Name("[CANONICALIZE]",@UserName()) ]]></xp:this.value>
+                    </xp:label>
+                  </xp:td>
+                  <xp:td>
+                    <xp:text escape="true"
+                      id="computedField5">
+                      <xp:this.value><![CDATA[#{javascript:@Name("[CANONICALIZE]",@UserName())}]]></xp:this.value>
+                    </xp:text>
+                  </xp:td>
+                </xp:tr>
+                <xp:tr>
+                  <xp:td>
+                    <xp:label id="label12">
+                      <xp:this.value><![CDATA[@Name("[HIERARCHYONLY]",@UserName()) ]]></xp:this.value>
+                    </xp:label>
+                  </xp:td>
+                  <xp:td>
+                    <xp:text escape="true"
+                      id="computedField6">
+                      <xp:this.value><![CDATA[#{javascript:@Name("[HIERARCHYONLY]",@UserName())}]]></xp:this.value>
+                    </xp:text>
+                  </xp:td>
+                </xp:tr>
+                <xp:tr>
+                  <xp:td>
+                    <xp:label id="label13">
+                      <xp:this.value><![CDATA[@Name("[O]",@UserName()) ]]></xp:this.value>
+                    </xp:label>
+                  </xp:td>
+                  <xp:td>
+                    <xp:text escape="true"
+                      id="computedField7">
+                      <xp:this.value><![CDATA[#{javascript:@Name("[O]",@UserName())}]]></xp:this.value>
+                    </xp:text>
+                  </xp:td>
+                </xp:tr>
+                <xp:tr>
+                  <xp:td>
+                    Description:&#160;Allows you
+                    to manipulate LDAP formatted
+                    names.</xp:td>
+                  <xp:td></xp:td>
+                </xp:tr>
+              </xp:table>
+              <xp:br />
+            </xp:panel>
+            <xp:panel>
+              <xp:this.rendered>
+                <![CDATA[#{javascript:sessionScope.atFuncsNs == "atFN02"}]]>
+              </xp:this.rendered>
+              <xp:table styleClass="customTable">
+                <xp:tr>
+                  <xp:td>
+                    <xp:label value="@Function: "
+                      id="label3">
+                    </xp:label>
+                  </xp:td>
+                  <xp:td>
+                    @NewLine() : string </xp:td>
+                </xp:tr>
+                <xp:tr>
+                  <xp:td>Description:</xp:td>
+                  <xp:td>Returns the
+                    newline character.
+                  </xp:td>
+                </xp:tr>
+              </xp:table>
+              <xp:br />
+            </xp:panel>
+            <xp:panel>
+              <xp:this.rendered>
+                <![CDATA[#{javascript:sessionScope.atFuncsNs == "atFN03"}]]>
+              </xp:this.rendered>
+              <xp:table styleClass="customTable">
+                <xp:tr>
+                  <xp:td>
+                    <xp:label value="@Function: "
+                      id="label4">
+                    </xp:label>
+                  </xp:td>
+                  <xp:td>
+                    @No() : int 
+                  </xp:td>
+                </xp:tr>
+                <xp:tr>
+                  <xp:td>Description:</xp:td>
+                  <xp:td>Returns the number
+                    0.</xp:td>
+                </xp:tr>
+              </xp:table>
+              <xp:br />
+            </xp:panel>
+            <xp:panel>
+              <xp:this.rendered>
+                <![CDATA[#{javascript:sessionScope.atFuncsNs == "atFN04"}]]>
+              </xp:this.rendered>
+              <xp:table styleClass="customTable">
+                <xp:tr>
+                  <xp:td>
+                    <xp:label value="@Function: "
+                      id="label5">
+                    </xp:label>
+                  </xp:td>
+                  <xp:td>
+                    @Now() : Date 
+                  </xp:td>
+                </xp:tr>
+                <xp:tr>
+                  <xp:td>Description:</xp:td>
+                  <xp:td>Returns the
+                    current date in the server time
+                    zone.</xp:td>
+                </xp:tr>
+              </xp:table>
+              <xp:br />
+            </xp:panel>
+            <xp:panel>
+              <xp:this.rendered>
+                <![CDATA[#{javascript:sessionScope.atFuncsNs == "atFN05"}]]>
+              </xp:this.rendered>
+              <xp:table styleClass="customTable">
+                <xp:tr>
+                  <xp:td>
+                    <xp:label value="@Function: "
+                      id="label6">
+                    </xp:label>
+                  </xp:td>
+                  <xp:td>
+                    @Null() : any </xp:td>
+                </xp:tr>
+                <xp:tr>
+                  <xp:td>Description:</xp:td>
+                  <xp:td>Returns an empty
+                    string.
+                  </xp:td>
+                </xp:tr>
+              </xp:table>
+              <xp:br />
+            </xp:panel>
+          </xp:panel>
+        </xp:panel>
+      </xp:panel>
+    </xp:this.facets>
+  </XPa:ccLayout>
 </xp:view>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xe="http://www.ibm.com/xsp/coreex">
+
+
+	  <xe:djxmHeading
+	    id="djxmHeading1"
+	    label="File Upload"
+	    back="Home"
+	    moveTo="home">
+	    <xp:this.facets>
+	      <xe:toolBarButton
+	        id="toolBarButton1"
+	        xp:key="actionFacet"
+	        label="New"
+	        moveTo="fileuploadDoc"
+	        transition="slide"
+	        dir="ltr">
+	      </xe:toolBarButton>
+	    </xp:this.facets>
+	  </xe:djxmHeading>
+	  <xe:dataView
+	    id="dataView1"
+	    openDocAsReadonly="true"
+	    pageName="fileuploadDoc">
+	    <xe:this.data>
+	      <xp:dominoView
+	        var="view1"
+	        viewName="($All)">
+	      </xp:dominoView>
+	    </xe:this.data>
+	    <xe:this.summaryColumn>
+	      <xe:viewSummaryColumn columnName="Topic"></xe:viewSummaryColumn>
+	    </xe:this.summaryColumn>
+	  </xe:dataView>
+
+</xp:view>

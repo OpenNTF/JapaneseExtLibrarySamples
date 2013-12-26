@@ -295,7 +295,7 @@
 									</xp:this.converter>
 									<xp:this.validators>
 										<xp:validateDateTimeRange
-											minimum="#{javascript:@Now()}"
+											minimum="#{javascript:@Today()}"
 											message="The date must be in this year and not in the past.">
 											<xp:this.maximum><![CDATA[#{javascript:var now = @Now();
 var thisyr = now.getFullYear();

@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?><note class="form" replicaid="85257A870079CB8F" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="6a2" sequence="159" unid="B877CA0426195252802573DB003E4C33">
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="80257C350049C2B7" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="44e" sequence="159" unid="B877CA0426195252802573DB003E4C33">
 <created><datetime dst="true">20080125T122027,39+01</datetime></created>
-<modified><datetime>20130319T214348,97+09</datetime></modified>
-<revised><datetime>20130319T214348,96+09</datetime></revised>
-<lastaccessed><datetime>20130319T214348,97+09</datetime></lastaccessed>
-<addedtofile><datetime dst="true">20120928T180627,71-04</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=Admin/O=LotusLab</name></updatedby>
+<modified><datetime>20131225T164159,63+09</datetime></modified>
+<revised><datetime>20131225T164159,62+09</datetime></revised>
+<lastaccessed><datetime>20131225T164159,63+09</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20131202T142544,06+01</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=a admin/O=ibm</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=a admin/O=ibm</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=Admin/O=lotuslab</name></updatedby>
 <revisions><datetime dst="true">20110331T101039,60+01</datetime><datetime dst="true">20121126T174705,25+01</datetime><datetime dst="true">20121126T174705,77+01</datetime><datetime dst="true">20121212T105021,23+01</datetime><datetime dst="true">20121212T105021,81+01</datetime></revisions>
-<wassignedby><name>CN=Admin/O=LotusLab</name></wassignedby>
+<wassignedby><name>CN=Admin/O=lotuslab</name></wassignedby>
 <item name="$TITLE"><text>ctrlsContainerTabbedPanel.xsp</text></item>
 
 <item name="$Flags"><text>gK4</text></item>

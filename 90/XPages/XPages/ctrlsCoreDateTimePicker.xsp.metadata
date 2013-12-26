@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?><note class="form" replicaid="85257A870079CB8F" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="62e" sequence="135" unid="116B144DF9561D0B802573DB003E4C49">
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="80257C350049C2B7" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="3f2" sequence="135" unid="116B144DF9561D0B802573DB003E4C49">
 <created><datetime dst="true">20080125T122027,61+01</datetime></created>
-<modified><datetime>20130319T214348,61+09</datetime></modified>
-<revised><datetime>20130319T214348,60+09</datetime></revised>
-<lastaccessed><datetime>20130319T214348,61+09</datetime></lastaccessed>
-<addedtofile><datetime dst="true">20120928T180622,52-04</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=Admin/O=LotusLab</name></updatedby>
+<modified><datetime>20131225T164159,27+09</datetime></modified>
+<revised><datetime>20131225T164159,26+09</datetime></revised>
+<lastaccessed><datetime>20131225T164159,27+09</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20131202T142543,60+01</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=a admin/O=ibm</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=a admin/O=ibm</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=Admin/O=lotuslab</name></updatedby>
 <revisions><datetime dst="true">20100603T132257,27+01</datetime><datetime dst="true">20110331T101054,31+01</datetime><datetime dst="true">20121212T114622,68+01</datetime><datetime dst="true">20121212T114623,21+01</datetime></revisions>
-<wassignedby><name>CN=Admin/O=LotusLab</name></wassignedby>
+<wassignedby><name>CN=Admin/O=lotuslab</name></wassignedby>
 <item name="$TITLE"><text>ctrlsCoreDateTimePicker.xsp</text></item>
 
 <item name="$Flags"><text>gK4</text></item>

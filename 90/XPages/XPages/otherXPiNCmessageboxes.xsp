@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view
+  xmlns:xp="http://www.ibm.com/xsp/core"
+  xmlns:XPa="component/XPages.nsf"
+  xmlns:xc="http://www.ibm.com/xsp/custom">
+
+  <XPa:ccLayout navPath="/other/mb/">
+    <xp:this.facets>
+      <xp:panel xp:key="facetMain">
+      <xp:button value="XSP Prompt" id="buttonXSPPrompt">
+          <xp:eventHandler
+            event="onclick"
+            submit="false">
+            <xp:this.script><![CDATA[XSP.prompt("XSP Prompt","Where in the World should one say Hello?")]]></xp:this.script>
+          </xp:eventHandler></xp:button>
+      <xp:br></xp:br>
+      <xp:button value="Prompt" id="buttonPrompt">
+          <xp:eventHandler
+            event="onclick"
+            submit="false">
+            <xp:this.script><![CDATA[prompt("prompt","Hello XPages World")]]></xp:this.script>
+          </xp:eventHandler></xp:button>
+      <xp:br></xp:br>
+      <xp:button value="XSP alert" id="buttonXSPAlert">
+          <xp:eventHandler event="onclick" submit="false">
+            <xp:this.script><![CDATA[XSP.alert("XSP alert")]]></xp:this.script>
+          </xp:eventHandler></xp:button>
+      <xp:br></xp:br>
+      <xp:button value="Alert" id="buttonAlert">
+          <xp:eventHandler event="onclick" submit="false">
+            <xp:this.script><![CDATA[alert("alert")]]></xp:this.script>
+          </xp:eventHandler></xp:button>
+      <xp:br></xp:br>
+      <xp:button value="XSP Error" id="buttonXSPError">
+          <xp:eventHandler event="onclick" submit="false">
+            <xp:this.script><![CDATA[XSP.error("XSP Error")]]></xp:this.script>
+          </xp:eventHandler></xp:button><xp:button value="error" id="button6" rendered="false">
+          <xp:eventHandler event="onclick" submit="false">
+            <xp:this.script><![CDATA[error("Error")]]></xp:this.script>
+          </xp:eventHandler></xp:button>
+      
+      </xp:panel>
+      <xc:ccMenu_other xp:key="facetLeft"></xc:ccMenu_other>
+    </xp:this.facets>
+  </XPa:ccLayout>
+</xp:view>

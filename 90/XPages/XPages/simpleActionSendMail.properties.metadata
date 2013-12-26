@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><note class="form" replicaid="85257A870079CB8F" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="143e" sequence="2" unid="9887A3992C9FF2A249257B330045E87D">
-<created><datetime>20130319T214335,01+09</datetime></created>
-<modified><datetime>20130319T214338,87+09</datetime></modified>
-<revised><datetime>20130319T214338,86+09</datetime></revised>
-<lastaccessed><datetime>20130319T214338,87+09</datetime></lastaccessed>
-<addedtofile><datetime>20130319T214338,85+09</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Admin/O=LotusLab</name></updatedby>
-<wassignedby><name>CN=Admin/O=LotusLab</name></wassignedby>
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="80257C350049C2B7" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="1262" sequence="2" unid="05815D31C6BA28E249257C4C002A3FF5">
+<created><datetime>20131225T164128,85+09</datetime></created>
+<modified><datetime>20131225T164128,88+09</datetime></modified>
+<revised><datetime>20131225T164128,87+09</datetime></revised>
+<lastaccessed><datetime>20131225T164128,88+09</datetime></lastaccessed>
+<addedtofile><datetime>20131225T164128,86+09</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Admin/O=lotuslab</name></updatedby>
+<wassignedby><name>CN=Admin/O=lotuslab</name></wassignedby>
 <item name="$Flags"><text>gC~4K2</text></item>
 <item name="$TITLE"><text>simpleActionSendMail.properties</text></item>
 

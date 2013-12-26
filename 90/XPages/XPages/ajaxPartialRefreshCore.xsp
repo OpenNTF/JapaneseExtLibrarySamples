@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xp:view xmlns:xp="http://www.ibm.com/xsp/core"
 	xmlns:XPa="component/XPages.nsf"
-	xmlns:xc="http://www.ibm.com/xsp/custom">
+	xmlns:xc="http://www.ibm.com/xsp/custom"> 
 
 
 	<xp:this.beforePageLoad><![CDATA[#{javascript:var w = new java.util.Vector();
@@ -32,9 +32,7 @@ requestScope.put("checkboxValues",w);
 						</xp:this.action>
 					</xp:eventHandler>
 				</xp:link>
-				<xp:br></xp:br>
-				<xp:br></xp:br>
-				<xp:br></xp:br>
+				
 				<xp:table>
 					<xp:tr>
 
@@ -479,7 +477,7 @@ requestScope.put("checkboxValues",w);
 							- updates check box group and checkbox group
 							computed field
 						</xp:td>
-						<xp:td>
+						<xp:td valign="top">
 							<xp:checkBoxGroup id="checkBoxGroup1"
 								layout="lineDirection" value="#{requestScope.checkboxValues}">
 
@@ -513,7 +511,7 @@ return requestScope.get("checkboxValues");
 							</xp:span>
 						</xp:td>
 						<xp:td></xp:td>
-						<xp:td>
+						<xp:td valign="top">
 							Checkbox Group
 							<xp:br id="br48"></xp:br>
 							<xp:text escape="true"
@@ -582,7 +580,7 @@ element.value = "radio 2 selected";
 							- updates radio button and radio button
 							computed field
 						</xp:td>
-						<xp:td>
+						<xp:td valign="top">
 							<xp:radio text="radio 1" id="radio1"
 								defaultSelected="true" groupName="radio">
 
@@ -609,7 +607,7 @@ element.value = "radio 2 selected";
 							</xp:span>
 						</xp:td>
 						<xp:td></xp:td>
-						<xp:td>
+						<xp:td valign="top">
 							Radio Button
 							<xp:br id="br51"></xp:br>
 							<xp:text escape="true" id="radioCompField"
@@ -852,7 +850,7 @@ element.value = "2010-10-12T24:00:00"}]]></xp:this.action>
 							- updates date&amp;time and date/time
 							computed field
 						</xp:td>
-						<xp:td>
+						<xp:td valign="top">
 							<xp:panel
 								style="border-color:rgb(255,128,64);border-style:solid;border-width:medium"
 								id="orangePanel">
@@ -865,16 +863,18 @@ element.value = "2010-10-12T24:00:00"}]]></xp:this.action>
 											type="date">
 										</xp:convertDateTime>
 									</xp:this.converter>
-									<xp:eventHandler event="onclick"
+									<!--<xp:eventHandler event="onclick"
 										submit="true" refreshMode="partial" id="eventHandler12"
 										refreshId="DTPDateCompField">
-									</xp:eventHandler>
+										</xp:eventHandler>
+									-->
 									<xp:eventHandler event="onchange"
 										submit="true" refreshMode="partial"
 										refreshId="DTPDateCompField" id="eventHandler25">
 									</xp:eventHandler>
 								</xp:inputText>
-								<xp:br id="br1"></xp:br>
+								<xp:br />
+								<xp:br />
 								<xp:inputText id="inputText5">
 									<xp:dateTimeHelper
 										id="dateTimeHelper2">
@@ -884,12 +884,13 @@ element.value = "2010-10-12T24:00:00"}]]></xp:this.action>
 											type="time">
 										</xp:convertDateTime>
 									</xp:this.converter>
-									<xp:eventHandler event="onclick"
+									<xp:eventHandler event="onchange"
 										submit="true" refreshMode="partial"
 										refreshId="DTPTimeCompField" id="eventHandler50">
 									</xp:eventHandler>
 								</xp:inputText>
-								<xp:br id="br2"></xp:br>
+								<xp:br />
+								<xp:br />
 								<xp:inputText id="inputText3">
 									<xp:dateTimeHelper
 										id="dateTimeHelper3">
@@ -899,7 +900,7 @@ element.value = "2010-10-12T24:00:00"}]]></xp:this.action>
 											type="both">
 										</xp:convertDateTime>
 									</xp:this.converter>
-									<xp:eventHandler event="onclick"
+									<xp:eventHandler event="onchange"
 										submit="true" refreshMode="partial"
 										refreshId="DTPDateTimeCompField" id="eventHandler65">
 									</xp:eventHandler>
@@ -919,25 +920,36 @@ element.value = "2010-10-12T24:00:00"}]]></xp:this.action>
 							</xp:span>
 						</xp:td>
 						<xp:td></xp:td>
-						<xp:td>
+						<xp:td valign="top">
 							Date/Time Computed Field
 							<xp:br id="br56"></xp:br>
 							<xp:text escape="true" id="DTPDateCompField"
 								style="font-weight:bold">
 								<xp:this.value><![CDATA[#{javascript:var element = getComponent('inputText2');
 element.value}]]></xp:this.value>
+								<xp:this.converter>
+									<xp:convertDateTime type="date"></xp:convertDateTime>
+								</xp:this.converter>
 							</xp:text>
 							<xp:br id="br6"></xp:br>
 							<xp:text escape="true" id="DTPTimeCompField"
 								style="font-weight:bold">
 								<xp:this.value><![CDATA[#{javascript:var element = getComponent('inputText5');
 element.value}]]></xp:this.value>
+								<xp:this.converter>
+									<xp:convertDateTime type="time"></xp:convertDateTime>
+								</xp:this.converter>
 							</xp:text>
 							<xp:br id="br7"></xp:br>
 							<xp:text escape="true"
 								id="DTPDateTimeCompField" style="font-weight:bold">
 								<xp:this.value><![CDATA[#{javascript:var element = getComponent('inputText3');
 element.value}]]></xp:this.value>
+								<xp:this.converter>
+									<xp:convertDateTime type="both"
+										dateStyle="medium" timeStyle="short">
+									</xp:convertDateTime>
+								</xp:this.converter>
 							</xp:text>
 						</xp:td>
 

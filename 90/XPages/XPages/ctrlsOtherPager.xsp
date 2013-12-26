@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:XPa="component/XPages.nsf">
-	<XPa:ccLayout id="cc4cclayout">
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:XPa="component/XPages.nsf"
+	xmlns:xc="http://www.ibm.com/xsp/custom"> 
+	
+	<XPa:ccLayout id="cc4cclayout" navPath="/views/otherpagers/">
 		<xp:this.facets>
+			<xc:ccMenu_views xp:key="facetLeft"></xc:ccMenu_views>
 			<xp:panel xp:key="facetMain">
 				<xp:panel>
 					<xp:this.data>
@@ -15,9 +19,34 @@
 								formName="MainTopic">
 							</xp:dominoDocument>
 						</xp:this.data>
-						<xp:panel>
-							<xp:button value="Save" id="buttonPgrSave"
-								styleClass="customButton">
+            <xp:panel>
+            
+            <xp:button value="Create Test Documents" id="buttonCreateTestDocs">
+  <xp:eventHandler
+    event="onclick"
+    submit="true"
+    refreshMode="complete">
+    <xp:this.action><![CDATA[#{javascript:for (var i=0; i<40; i++)
+{
+	var doc = session.getCurrentDatabase().createDocument();
+	doc.appendItemValue("Form","MainTopic");
+	doc.appendItemValue("Subject","Test Document | " + @UpperCase(@Unique()));
+	doc.appendItemValue("NewCats",@UpperCase(@Right(@Unique(),3)));
+	doc.computeWithForm(true,true);
+	doc.save();	
+}		}]]></xp:this.action>
+  </xp:eventHandler></xp:button>
+  <xp:button value="Delete All Test Documents" id="buttonDeleteAllFromView">
+  <xp:eventHandler
+    event="onclick"
+    submit="true"
+    refreshMode="complete">
+    <xp:this.action><![CDATA[#{javascript:database.getView("($All)").getAllEntries().removeAll(true);
+context.redirectToPage("/ctrlsOtherPager")}]]></xp:this.action>
+  </xp:eventHandler></xp:button><hr/></xp:panel>
+						<xp:panel rendered="false">
+							<xp:button value="Save"
+								id="buttonPgrSave">
 								<xp:eventHandler event="onclick"
 									submit="true" refreshMode="complete">
 									<xp:this.action>
@@ -27,8 +56,8 @@
 									</xp:this.action>
 								</xp:eventHandler>
 							</xp:button>
-							<xp:button value="New" id="buttonPgrNewDoc"
-								styleClass="customButton">
+							<xp:button value="New"
+								id="buttonPgrNewDoc">
 								<xp:eventHandler event="onclick"
 									submit="true" refreshMode="complete">
 									<xp:this.action>
@@ -39,7 +68,7 @@
 								</xp:eventHandler>
 							</xp:button>
 							<xp:button value="Edit"
-								id="buttonPgrEditDoc" styleClass="customButton">
+								id="buttonPgrEditDoc">
 								<xp:eventHandler event="onclick"
 									submit="true" refreshMode="complete">
 									<xp:this.action>
@@ -50,7 +79,7 @@
 								</xp:eventHandler>
 							</xp:button>
 							<xp:button value="Delete"
-								id="buttonPgrDeleteDoc" styleClass="customButton">
+								id="buttonPgrDeleteDoc">
 								<xp:this.rendered><![CDATA[#{javascript:sessionScope.pgr01 == "pgrDataTable" || sessionScope.pgr01 == "pgrRepeat"}]]></xp:this.rendered>
 								<xp:eventHandler event="onclick"
 									submit="true" refreshMode="complete">
@@ -63,7 +92,7 @@
 								</xp:eventHandler>
 							</xp:button>
 							<xp:button value="Delete Selected"
-								id="buttonPgrDeleteSelectedDoc" styleClass="customButton">
+								id="buttonPgrDeleteSelectedDoc">
 								<xp:this.rendered><![CDATA[#{javascript:sessionScope.pgr01 == "pgrViewPanel"}]]></xp:this.rendered>
 								<xp:eventHandler event="onclick"
 									submit="true" refreshMode="complete">
@@ -76,8 +105,7 @@
 								</xp:eventHandler>
 							</xp:button>
 						</xp:panel>
-						<xp:panel
-							style="background-color:rgb(244,250,255)">
+						<xp:panel rendered="false">
 							<xp:table>
 								<xp:tr>
 									<xp:td>
@@ -121,125 +149,173 @@
 					<xp:label value="Pagers on a :" id="label1"
 						style="font-weight:bold">
 					</xp:label>
-					<xp:comboBox id="comboBox4PagerContainer"
-						value="#{sessionScope.pgr01}" defaultValue="none">
-						<xp:selectItem itemLabel="none"
-							itemValue="none">
-						</xp:selectItem>
-						<xp:selectItem itemLabel="View"
-							itemValue="pgrViewPanel">
-						</xp:selectItem>
-						<xp:selectItem itemLabel="Data Table"
-							itemValue="pgrDataTable">
-						</xp:selectItem>
-						<xp:selectItem itemLabel="Repeat"
-							itemValue="pgrRepeat">
-						</xp:selectItem>
-						<xp:eventHandler event="onchange" submit="true"
-							refreshMode="complete" execMode="partial">
-						</xp:eventHandler>
+					<xp:comboBox
+					  id="comboBox4PagerContainer"
+					  value="#{sessionScope.pgr01}"
+					  defaultValue="None">
 
-						<xp:selectItem itemLabel="Pager Sample 1"
-							itemValue="pgrSample1">
-						</xp:selectItem>
-						<xp:selectItem itemLabel="Pager Sample 2"
-							itemValue="pgrSample2">
-						</xp:selectItem>
-						<xp:selectItem itemLabel="Pager Sample 3" itemValue="pgrSample3"></xp:selectItem>
-						<xp:selectItem itemLabel="Pager Sample 4" itemValue="pgrSample4"></xp:selectItem>
-						<xp:selectItem itemLabel="Pager Sample 5" itemValue="pgrSample5"></xp:selectItem>
-						<xp:selectItem itemLabel="Pager Sample 6" itemValue="pgrSample6"></xp:selectItem>
-						<xp:selectItem itemLabel="Pager Sample 7" itemValue="pgrSample7"></xp:selectItem>
-						<xp:selectItem itemLabel="Custom Pager" itemValue="pgrCustom"></xp:selectItem>
+					  <xp:selectItem
+					    itemLabel="View"
+					    itemValue="pgrViewPanel">
+					  </xp:selectItem>
+					  <xp:selectItem itemLabel="None" itemValue=""></xp:selectItem><xp:selectItem
+					    itemLabel="Data Table"
+					    itemValue="pgrDataTable">
+					  </xp:selectItem>
+					  <xp:selectItem
+					    itemLabel="Repeat"
+					    itemValue="pgrRepeat">
+					  </xp:selectItem>
+					  <xp:eventHandler
+					    event="onchange"
+					    submit="true"
+					    refreshMode="complete"
+					    execMode="partial">
+					  </xp:eventHandler>
+
+					  <xp:selectItem
+					    itemLabel="Pager Sample 1"
+					    itemValue="pgrSample1">
+					  </xp:selectItem>
+					  <xp:selectItem
+					    itemLabel="Pager Sample 2"
+					    itemValue="pgrSample2">
+					  </xp:selectItem>
+					  <xp:selectItem
+					    itemLabel="Pager Sample 3"
+					    itemValue="pgrSample3">
+					  </xp:selectItem>
+					  <xp:selectItem
+					    itemLabel="Pager Sample 4"
+					    itemValue="pgrSample4">
+					  </xp:selectItem>
+					  <xp:selectItem
+					    itemLabel="Pager Sample 5"
+					    itemValue="pgrSample5">
+					  </xp:selectItem>
+					  <xp:selectItem
+					    itemLabel="Pager Sample 6"
+					    itemValue="pgrSample6">
+					  </xp:selectItem>
+					  <xp:selectItem
+					    itemLabel="Pager Sample 7"
+					    itemValue="pgrSample7">
+					  </xp:selectItem>
+					  <xp:selectItem
+					    itemLabel="Custom Pager"
+					    itemValue="pgrCustom">
+					  </xp:selectItem>
+					  
 					</xp:comboBox>
 					<xp:panel id="panel4ViewPanel">
 						<xp:this.rendered><![CDATA[#{javascript:sessionScope.pgr01 == "pgrViewPanel"}]]></xp:this.rendered>
 						<xp:label value="View Panel" id="label5"></xp:label>
-						<xp:viewPanel rows="5" id="viewPanel4Pager01"
-							pageName="/ctrlsOtherPager.xsp" viewStyle="width:100%">
-							<xp:this.data>
-								<xp:dominoView var="defaultView"
-									viewName="(Default View)">
-								</xp:dominoView>
-							</xp:this.data>
-							<xp:this.facets>
-								<xp:pager xp:key="header"
-									id="pagerViewPanelHeader">
-									<xp:pagerControl type="Separator"
-										value="Header - Page:" />
-									<xp:pagerControl type="Status"
-										value="{0}" />
-									<xp:pagerControl type="Separator" />
-									<xp:pagerControl type="First" />
-									<xp:pagerControl type="Separator" />
-									<xp:pagerControl type="Previous" />
-									<xp:pagerControl type="Separator" />
-									<xp:pagerControl type="Group" />
-									<xp:pagerControl type="Separator" />
-									<xp:pagerControl type="Next" />
-									<xp:pagerControl type="Separator" />
-									<xp:pagerControl type="Last" />
-								</xp:pager>
-								<xp:pager xp:key="footer"
-									id="pagerViewPanelFooter">
-									<xp:pagerControl type="Separator"
-										value="Footer - Page:" />
-									<xp:pagerControl type="Status"
-										value="{0}" />
-									<xp:pagerControl type="Separator" />
-									<xp:pagerControl type="First" />
-									<xp:pagerControl type="Separator" />
-									<xp:pagerControl type="Previous" />
-									<xp:pagerControl type="Separator" />
-									<xp:pagerControl type="Group" />
-									<xp:pagerControl type="Separator" />
-									<xp:pagerControl type="Next" />
-									<xp:pagerControl type="Separator" />
-									<xp:pagerControl type="Last" />
-								</xp:pager>
-							</xp:this.facets>
-							<xp:viewColumn columnName="Date"
-								id="viewColumn1" style="width:17%">
-								<xp:viewColumnHeader value="Date"
-									id="viewColumnHeader1">
-								</xp:viewColumnHeader>
-							</xp:viewColumn>
-							<xp:viewColumn columnName="Topic"
-								id="viewColumn2" showCheckbox="true" displayAs="link"
-								openDocAsReadonly="true">
-								<xp:viewColumnHeader value="Topic"
-									id="viewColumnHeader2">
-								</xp:viewColumnHeader>
-							</xp:viewColumn>
+						<xp:viewPanel
+						  rows="5"
+						  id="viewPanel4Pager01"
+						  pageName="/ctrlsOtherPager.xsp"
+						  viewStyle="width:100%">
+						  <xp:this.facets>
+						    <xp:pager
+						      partialRefresh="true"
+						      xp:key="headerPager"
+						      id="pager9">
+						      <xp:pagerControl
+						        type="First"
+						        id="pagerControl14">
+						      </xp:pagerControl>
+						      <xp:pagerControl
+						        type="Previous"
+						        id="pagerControl15">
+						      </xp:pagerControl>
+						      <xp:pagerControl
+						        type="Next"
+						        id="pagerControl16">
+						      </xp:pagerControl>
+						      <xp:pagerControl
+						        type="Last"
+						        id="pagerControl17">
+						      </xp:pagerControl>
+						      <xp:pagerControl
+						        type="Group"
+						        id="pagerControl18">
+						      </xp:pagerControl>
+						      <xp:pagerControl
+						        type="Status"
+						        id="pagerControl19">
+						      </xp:pagerControl>
+						    </xp:pager>
+						    <xp:pager
+						      partialRefresh="true"
+						      layout="Previous Group Next"
+						      xp:key="footerPager"
+						      id="pager10">
+						    </xp:pager>
+						  </xp:this.facets>
+
+
+
+
+						  <xp:this.data>
+						    <xp:dominoView
+						      var="defaultView"
+						      viewName="(Default View)">
+						    </xp:dominoView>
+						  </xp:this.data>
+
+						  <xp:viewColumn
+						    columnName="Date"
+						    id="viewColumn1"
+						    style="width:17%">
+						    <xp:viewColumnHeader
+						      value="Date"
+						      id="viewColumnHeader1">
+						    </xp:viewColumnHeader>
+						  </xp:viewColumn>
+						  <xp:viewColumn
+						    columnName="Topic"
+						    id="viewColumn2"
+						    showCheckbox="true"
+						    displayAs="link"
+						    openDocAsReadonly="true">
+						    <xp:viewColumnHeader
+						      value="Topic"
+						      id="viewColumnHeader2">
+						    </xp:viewColumnHeader>
+						  </xp:viewColumn>
 						</xp:viewPanel>
 					</xp:panel>
 					<xp:panel id="panel4DataTable">
 						<xp:this.rendered><![CDATA[#{javascript:sessionScope.pgr01 == "pgrDataTable"}]]></xp:this.rendered>
 						<xp:label value="Data Table" id="label6"></xp:label>
 						<xp:dataTable rows="5" id="dataTable4Pager01"
-							value="#{view1}" var="coll1" styleClass="customTable">
+							value="#{view1}" var="coll1" styleClass="customTable" style="width:100%">
 							<xp:this.facets>
-								<xp:pager xp:key="header"
-									id="pagerDataTableHeader">
-									<xp:pagerControl type="separator"
-										value="Header - Page:" />
-									<xp:pagerControl type="status"
-										value="{0}" />
-									<xp:pagerControl type="separator" />
-									<xp:pagerControl type="first" />
-									<xp:pagerControl type="separator" />
-									<xp:pagerControl type="previous" />
-									<xp:pagerControl type="separator" />
-									<xp:pagerControl type="group" />
-									<xp:pagerControl type="separator" />
-									<xp:pagerControl type="next" />
-									<xp:pagerControl type="separator" />
-									<xp:pagerControl type="last" />
+								<xp:pager
+								  xp:key="header"
+								  id="pagerDataTableHeader"
+								  alwaysCalculateLast="true">
+								  <xp:pagerControl
+								    type="separator"
+								    value="DT Header - Page:" />
+								  <xp:pagerControl
+								    type="status"
+								    value="{0}" />
+								  <xp:pagerControl type="separator" />
+								  <xp:pagerControl type="first" />
+								  <xp:pagerControl type="separator" />
+								  <xp:pagerControl type="previous" />
+								  <xp:pagerControl type="separator" />
+								  <xp:pagerControl type="group" />
+								  <xp:pagerControl type="separator" />
+								  <xp:pagerControl type="next" />
+								  <xp:pagerControl type="separator" />
+								  <xp:pagerControl type="last" />
 								</xp:pager>
 								<xp:pager xp:key="footer"
-									id="pagerDataTableFooter">
+									id="pagerDataTableFooter" alwaysCalculateLast="true" partialRefresh="true">
 									<xp:pagerControl type="separator"
-										value="Footer - Page:" />
+										value="DT Footer - Page:" />
 									<xp:pagerControl type="status"
 										value="{0}" />
 									<xp:pagerControl type="separator" />
@@ -280,7 +356,7 @@
 					<xp:panel id="panel4Repeat">
 						<xp:this.rendered><![CDATA[#{javascript:sessionScope.pgr01 == "pgrRepeat"}]]></xp:this.rendered>
 						<xp:pager xp:key="header" id="pagerRepeatHeader"
-							for="repeat4Pager01" style="height:28.0px;width:529.0px">
+							for="repeat4Pager01" style="height:28.0px;width:529.0px" alwaysCalculateLast="true">
 							<xp:pagerControl type="separator"
 								value="Header - Page:" />
 							<xp:pagerControl type="status" value="{0}" />
@@ -297,37 +373,46 @@
 
 						</xp:pager>
 						<xp:label value="Repeat" id="label7"></xp:label>
-						<xp:repeat rows="5" value="#{view1}" var="coll2"
-							id="repeat4Pager01">
+						<xp:repeat
+						  rows="5"
+						  value="#{view1}"
+						  var="coll2"
+						  id="repeat4Pager01"
+						  style="width:99.0%">
 
-							<xp:table styleClass="customTable">
-								<xp:tr>
-									<xp:td style="width:12%">
-										<xp:text escape="true"
-											id="computedField3">
-											<xp:this.value><![CDATA[#{javascript:coll2.getColumnValue("Date")}]]></xp:this.value>
-										</xp:text>
-									</xp:td>
-									<xp:td>
-										<xp:link escape="true"
-											id="link4DocRepeat">
-											<xp:this.text><![CDATA[#{javascript:coll2.getColumnValue("Topic")}]]></xp:this.text>
-											<xp:eventHandler
-												event="onclick" submit="true" refreshMode="complete">
-												<xp:this.action>
-													<xp:openPage
-														name="/ctrlsOtherPager.xsp" target="openDocument"
-														documentId="#{javascript:coll2.getId()}">
-													</xp:openPage>
-												</xp:this.action>
-											</xp:eventHandler>
-										</xp:link>
-									</xp:td>
-								</xp:tr>
-							</xp:table>
+						  <xp:table styleClass="customTable">
+						    <xp:tr>
+						      <xp:td style="width:12%">
+						        <xp:text
+						          escape="true"
+						          id="computedField3">
+						          <xp:this.value><![CDATA[#{javascript:coll2.getColumnValue("Date")}]]></xp:this.value>
+						        </xp:text>
+						      </xp:td>
+						      <xp:td>
+						        <xp:link
+						          escape="true"
+						          id="link4DocRepeat">
+						          <xp:this.text><![CDATA[#{javascript:coll2.getColumnValue("Topic")}]]></xp:this.text>
+						          <xp:eventHandler
+						            event="onclick"
+						            submit="true"
+						            refreshMode="complete">
+						            <xp:this.action>
+						              <xp:openPage
+						                name="/ctrlsOtherPager.xsp"
+						                target="openDocument"
+						                documentId="#{javascript:coll2.getId()}">
+						              </xp:openPage>
+						            </xp:this.action>
+						          </xp:eventHandler>
+						        </xp:link>
+						      </xp:td>
+						    </xp:tr>
+						  </xp:table>
 						</xp:repeat>
 						<xp:pager xp:key="footer" id="pagerRepeatFooter"
-							for="repeat4Pager01" style="height:23.0px;width:529.0px">
+							for="repeat4Pager01" style="height:23.0px;width:529.0px" alwaysCalculateLast="true">
 							<xp:pagerControl type="separator"
 								value="Footer - Page:" />
 							<xp:pagerControl type="status" value="{0}" />
@@ -345,13 +430,14 @@
 
 					</xp:panel>
 					<xp:panel id="panel4PagerSample1">
-				<xp:this.rendered><![CDATA[#{javascript:sessionScope.pgr01 == "pgrSample1"}]]></xp:this.rendered><xp:label value="Pager Sample 1" id="label8"></xp:label>
+						<xp:this.rendered><![CDATA[#{javascript:sessionScope.pgr01 == "pgrSample1"}]]></xp:this.rendered>
+						<xp:label value="Pager Sample 1" id="label8"></xp:label>
 						<xp:viewPanel rows="5" id="viewPanel1"
 							viewStyle="width:100%">
 							<xp:this.facets>
 								<xp:pager partialRefresh="true"
-									layout="Previous Group Next" xp:key="headerPager"
-									id="pager1" panelPosition="left">
+									layout="Previous Group Next" xp:key="headerPager" id="pager1"
+									panelPosition="left" alwaysCalculateLast="true">
 								</xp:pager>
 							</xp:this.facets>
 
@@ -379,15 +465,17 @@
 									id="viewColumnHeader5">
 								</xp:viewColumnHeader>
 							</xp:viewColumn>
-						</xp:viewPanel></xp:panel>
+						</xp:viewPanel>
+					</xp:panel>
 					<xp:panel id="pager4PagerSample2">
-					<xp:this.rendered><![CDATA[#{javascript:sessionScope.pgr01 == "pgrSample2"}]]></xp:this.rendered><xp:label id="newlab" value="Pager Sample 2"></xp:label>
+						<xp:this.rendered><![CDATA[#{javascript:sessionScope.pgr01 == "pgrSample2"}]]></xp:this.rendered>
+						<xp:label id="newlab" value="Pager Sample 2"></xp:label>
 						<xp:viewPanel rows="5" id="viewPanel2"
 							viewStyle="width:100%">
 							<xp:this.facets>
 								<xp:pager partialRefresh="true"
-									layout="Previous Separator Group Separator Next" xp:key="headerPager"
-									id="pager2" panelPosition="left">
+									layout="Previous Separator Group Separator Next"
+									xp:key="headerPager" id="pager2" panelPosition="left" alwaysCalculateLast="true">
 								</xp:pager>
 							</xp:this.facets>
 
@@ -415,7 +503,8 @@
 									id="viewColumnHeader8">
 								</xp:viewColumnHeader>
 							</xp:viewColumn>
-						</xp:viewPanel></xp:panel>
+						</xp:viewPanel>
+					</xp:panel>
 
 					<xp:panel id="panel4pagerSample3">
 						<xp:this.rendered><![CDATA[#{javascript:sessionScope.pgr01 == "pgrSample3"}]]></xp:this.rendered>
@@ -427,8 +516,8 @@
 									id="viewTitle1" value="Pager Sample 3">
 								</xp:viewTitle>
 								<xp:pager partialRefresh="true"
-									layout="SeparatorPage Status SeparatorPage Group Previous Separator Next" xp:key="headerPager"
-									id="pager3" panelPosition="left">
+									layout="SeparatorPage Status SeparatorPage Group Previous Separator Next"
+									xp:key="headerPager" id="pager3" panelPosition="left" alwaysCalculateLast="true">
 								</xp:pager>
 							</xp:this.facets>
 
@@ -469,8 +558,8 @@
 									id="viewTitle2" value="Pager Sample 4">
 								</xp:viewTitle>
 								<xp:pager partialRefresh="true"
-									layout="FirstImage PreviousImage SeparatorPage Group NextImage LastImage" xp:key="headerPager"
-									id="pager4" panelPosition="left">
+									layout="FirstImage PreviousImage SeparatorPage Group NextImage LastImage"
+									xp:key="headerPager" id="pager4" panelPosition="left" alwaysCalculateLast="true">
 								</xp:pager>
 							</xp:this.facets>
 
@@ -500,7 +589,7 @@
 
 						</xp:viewPanel>
 					</xp:panel>
-										<xp:panel id="panel4pagerSample5">
+					<xp:panel id="panel4pagerSample5">
 						<xp:this.rendered><![CDATA[#{javascript:sessionScope.pgr01 == "pgrSample5"}]]></xp:this.rendered>
 						<xp:viewPanel rows="5" id="viewPanel5"
 							viewStyle="width:100%">
@@ -510,8 +599,8 @@
 									id="viewTitle3" value="Pager Sample 5">
 								</xp:viewTitle>
 								<xp:pager partialRefresh="true"
-									layout="SeparatorPage Status FirstImage PreviousImage SeparatorPage Group NextImage LastImage" xp:key="headerPager"
-									id="pager5" panelPosition="left">
+									layout="SeparatorPage Status FirstImage PreviousImage SeparatorPage Group NextImage LastImage"
+									xp:key="headerPager" id="pager5" panelPosition="left" alwaysCalculateLast="true">
 								</xp:pager>
 							</xp:this.facets>
 
@@ -541,8 +630,8 @@
 
 						</xp:viewPanel>
 					</xp:panel>
-					
-										<xp:panel id="panel4pagerSample6">
+
+					<xp:panel id="panel4pagerSample6">
 						<xp:this.rendered><![CDATA[#{javascript:sessionScope.pgr01 == "pgrSample6"}]]></xp:this.rendered>
 						<xp:viewPanel rows="5" id="viewPanel6"
 							viewStyle="width:100%">
@@ -552,8 +641,8 @@
 									id="viewTitle4" value="Pager Sample 6">
 								</xp:viewTitle>
 								<xp:pager partialRefresh="true"
-									layout="FirstArrow Separator PreviousArrow Separator SeparatorPage Group Separator NextArrow Separator LastArrow" xp:key="headerPager"
-									id="pager6" panelPosition="left">
+									layout="FirstArrow Separator PreviousArrow Separator SeparatorPage Group Separator NextArrow Separator LastArrow"
+									xp:key="headerPager" id="pager6" panelPosition="left" alwaysCalculateLast="true">
 								</xp:pager>
 							</xp:this.facets>
 
@@ -583,8 +672,8 @@
 
 						</xp:viewPanel>
 					</xp:panel>
-					
-										<xp:panel id="panel4pagerSample7">
+
+					<xp:panel id="panel4pagerSample7">
 						<xp:this.rendered><![CDATA[#{javascript:sessionScope.pgr01 == "pgrSample7"}]]></xp:this.rendered>
 						<xp:viewPanel rows="5" id="viewPanel7"
 							viewStyle="width:100%">
@@ -594,8 +683,8 @@
 									id="viewTitle5" value="Pager Sample 7">
 								</xp:viewTitle>
 								<xp:pager partialRefresh="true"
-									layout="SeparatorPage Status FirstArrow Separator PreviousArrow Separator SeparatorPage Group Separator NextArrow Separator LastArrow" xp:key="headerPager"
-									id="pager7" panelPosition="left">
+									layout="SeparatorPage Status FirstArrow Separator PreviousArrow Separator SeparatorPage Group Separator NextArrow Separator LastArrow"
+									xp:key="headerPager" id="pager7" panelPosition="left">
 								</xp:pager>
 							</xp:this.facets>
 
@@ -627,7 +716,7 @@
 					</xp:panel>
 
 
-						<xp:panel id="panel4CustomSamplePager">
+					<xp:panel id="panel4CustomSamplePager">
 						<xp:this.rendered><![CDATA[#{javascript:sessionScope.pgr01 == "pgrCustom"}]]></xp:this.rendered>
 						<xp:viewPanel rows="5" id="viewPanel8"
 							viewStyle="width:100%">
@@ -637,7 +726,7 @@
 									id="viewTitle6" value="Pager Custom">
 								</xp:viewTitle>
 								<xp:pager partialRefresh="true"
-									xp:key="headerPager" id="pager8" panelPosition="left">
+									xp:key="headerPager" id="pager8" panelPosition="left" alwaysCalculateLast="true">
 									<xp:pagerControl id="pagerControl13"
 										type="Separator">
 									</xp:pagerControl>
@@ -706,9 +795,9 @@
 
 						</xp:viewPanel>
 					</xp:panel>
-					
-					
-				
+
+
+
 				</xp:panel>
 			</xp:panel>
 		</xp:this.facets>

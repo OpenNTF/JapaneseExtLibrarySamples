@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xe="http://www.ibm.com/xsp/coreex">
+	<xe:widgetContainer id="widgetContainer1" titleBar="true"
+		titleBarText="On the fly" type="standard">
+		<xp:label value="Change the Theme: " id="label1"
+			for="comboBox1">
+		</xp:label>
+		<xp:comboBox id="comboBox1" value="#{sessionScope.themeSet}"
+			defaultValue="default" style="width:100%">
+			<xp:selectItem itemLabel="default"></xp:selectItem>
+			<xp:selectItem itemLabel="webstandard"
+				itemValue="webstandard" />
+			<xp:selectItem itemLabel="oneui" itemValue="oneui" />
+			<xp:selectItem itemLabel="oneuiv2" itemValue="oneuiv2" />
+			<xp:selectItem itemLabel="oneuiv2.1" itemValue="oneuiv2.1" />
+			<xp:selectItem itemLabel="oneuiv3.0.2"
+				itemValue="oneuiv3.0.2" />
+
+
+
+			<xp:eventHandler event="onchange" submit="true"
+				refreshMode="complete">
+				<xp:this.action><![CDATA[#{javascript:var f = "/"+@RightBack(context.getUrl().getAddress(),"/");
+context.setSessionProperty('xsp.theme', getComponent('comboBox1').getValue());
+context.redirectToPage(f)}]]></xp:this.action>
+			</xp:eventHandler>
+		</xp:comboBox>
+		<xp:br /><hr/>
+		<xp:label value="Timezone: " id="label3" />
+		<xp:comboBox id="comboBox2" value="#{sessionScope.tz2}"
+			defaultValue="None" style="width:100%">
+
+
+			<xp:selectItem itemLabel="None" itemValue="">
+			</xp:selectItem>
+			<xp:selectItems>
+				<xp:this.value><![CDATA[${javascript:TimeZone.getAvailableIDs().sort()}]]></xp:this.value>
+			</xp:selectItems>
+
+			<xp:eventHandler event="onchange" submit="true"
+				refreshMode="complete">
+				<xp:this.action><![CDATA[#{javascript:var tz = sessionScope.tz2;
+context.setTimeZoneString(tz)
+//context.setTimeZone(tz)}]]></xp:this.action>
+			</xp:eventHandler>
+
+		</xp:comboBox>
+		<xp:button value="Reset" id="button6">
+			<xp:eventHandler event="onclick" submit="true"
+				refreshMode="complete">
+				<xp:this.action><![CDATA[#{javascript:context.setTimeZoneString("")}]]></xp:this.action>
+			</xp:eventHandler>
+		</xp:button>
+		<xp:br /><hr/>
+
+		<xp:label id="label2" ><xp:this.value><![CDATA[#{javascript:var lc = context.getLocale().getDisplayName();
+"Current locale: "+lc}]]></xp:this.value></xp:label>
+		<xp:comboBox id="comboBoxChangeLocale"
+			value="#{sessionScope.lc2}" style="width:100%">
+			<xp:selectItem itemLabel="default" itemValue="">
+			</xp:selectItem>
+			<xp:selectItems>
+				<xp:this.value><![CDATA[${javascript:context.getLocale().getAvailableLocales().sort()}]]></xp:this.value>
+			</xp:selectItems>
+			<xp:eventHandler event="onchange" submit="true"
+				refreshMode="complete">
+				<xp:this.action><![CDATA[#{javascript:var lc2 = sessionScope.lc2;
+var lng = @If(@Contains(lc2,"_"),@Left(lc2,"_"),"");
+var cty = @If(@Contains(lc2,"_"),@Right(lc2,"_"),"");
+@If(
+@Contains(lc2,"_"), 
+context.setLocale(new Locale(lng, cty)) , 
+context.setLocaleString(lc2))
+context.reloadPage()}]]></xp:this.action>
+			</xp:eventHandler>
+		</xp:comboBox>
+		<xp:button value="Reset" id="button3">
+			<xp:eventHandler
+			  event="onclick"
+			  submit="true"
+			  refreshMode="complete">
+			  <xp:this.action><![CDATA[#{javascript:context.setLocale(null);
+sessionScope.remove("lc2");
+context.reloadPage()}]]></xp:this.action>
+			</xp:eventHandler>
+		</xp:button>
+
+		<hr />
+		<xp:text escape="true" id="computedField1">
+			<xp:this.value><![CDATA[#{javascript:"Aggregate: "+context.getSessionProperty('xsp.resources.aggregate')}]]></xp:this.value>
+		</xp:text>
+		<xp:br />
+		<xp:label value="Change Aggregation: " id="label5"
+			for="comboBox1">
+		</xp:label>
+		<xp:comboBox id="comboBox3" value="#{sessionScope.setAgg}"
+			defaultValue="default" style="width:100%">
+			<xp:selectItem itemLabel="default" itemValue="true"></xp:selectItem>
+			<xp:selectItem itemLabel="false" itemValue="false" />
+
+
+
+
+			<xp:eventHandler event="onchange" submit="true"
+				refreshMode="complete">
+				<xp:this.action><![CDATA[#{javascript:var d = "/"+@RightBack(context.getUrl().getAddress(),"/");
+context.setSessionProperty('xsp.resources.aggregate', getComponent('comboBox3').getValue());
+context.redirectToPage(d)}]]></xp:this.action>
+			</xp:eventHandler>
+		</xp:comboBox>
+		
+				<hr />
+		<xp:text escape="true" id="computedField3a">
+			<xp:this.value><![CDATA[#{javascript:"Navigation: "+context.getSessionProperty('xsp.domino.view.navigator')}]]></xp:this.value>
+		</xp:text>
+		<xp:br />
+		<xp:label value="Change View Navigation: " id="label7"
+			for="comboBox6">
+		</xp:label>
+		<xp:comboBox id="comboBox6" value="#{sessionScope.setNav}"
+			defaultValue="default" style="width:100%">
+			<xp:selectItem itemLabel="App Default - By NoteID" itemValue="" ></xp:selectItem>
+			<xp:selectItem itemLabel="ByPosition" itemValue="ByPosition" />
+			<xp:selectItem itemLabel="ByNoteId" itemValue="ByNoteId" />
+
+			<xp:eventHandler event="onchange" submit="true"
+				refreshMode="complete">
+				<xp:this.action><![CDATA[#{javascript:var d = "/"+@RightBack(context.getUrl().getAddress(),"/");
+context.setSessionProperty('xsp.domino.view.navigator', getComponent('comboBox6').getValue());
+context.redirectToPage(d)}]]></xp:this.action>
+			</xp:eventHandler>
+		</xp:comboBox>
+		<xp:br />
+
+		<xp:br />
+
+
+		<xp:br />
+
+
+	</xe:widgetContainer>
+
+</xp:view>

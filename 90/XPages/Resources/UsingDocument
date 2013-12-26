@@ -1,15 +1,16 @@
 <?xml version='1.0' encoding='utf-8'?>
 <note default='true' class='helpusingdocument' xmlns='http://www.lotus.com/dxl'
- version='9.0' replicaid='85257A870079CB8F'>
-<noteinfo noteid='6aa' unid='000001753D049D4685255BAC00564FC3' sequence='79'>
+ version='9.0' maintenanceversion='1.0' replicaid='80257C350049C2B7'>
+<noteinfo noteid='456' unid='000001753D049D4685255BAC00564FC3' sequence='79'>
 <created><datetime dst='true'>19910212T114245,15-04</datetime></created>
-<modified><datetime dst='true'>20130118T074700,15-04</datetime></modified>
-<revised><datetime dst='true'>20130118T074700,14-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20130118T074656,75-04</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20120928T180627,99-04</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
+<modified><datetime dst='true'>20131202T142544,10+01</datetime></modified>
+<revised><datetime dst='true'>20131202T140814,61+01</datetime></revised>
+<lastaccessed><datetime dst='true'>20131202T142544,10+01</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20131202T142544,10+01</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name><name
+>CN=a admin/O=ibm</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name
+>CN=a admin/O=ibm</name></updatedby>
 <revisions><datetime dst='true'>20080328T100628,53+01</datetime></revisions>
-<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
 <item name='OriginalModTime' sign='true'><datetime dst='true'>20050415T100122,54-07</datetime></item>
 <item name='$HTMLCode' sign='true'>
 <rawitemdata type='1'>

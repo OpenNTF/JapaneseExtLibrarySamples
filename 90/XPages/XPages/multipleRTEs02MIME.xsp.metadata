@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?><note class="form" replicaid="85257A870079CB8F" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="856" sequence="32" unid="A0882B63A1322DFD80257AC5003AAAD1">
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="80257C350049C2B7" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="5ee" sequence="35" unid="A0882B63A1322DFD80257AC5003AAAD1">
 <created><datetime dst="true">20121129T114048,17+01</datetime></created>
-<modified><datetime>20130319T214346,37+09</datetime></modified>
-<revised><datetime>20130319T214346,36+09</datetime></revised>
-<lastaccessed><datetime>20130319T214346,37+09</datetime></lastaccessed>
-<addedtofile><datetime dst="true">20121129T064103,21-04</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=Admin/O=LotusLab</name></updatedby>
-<revisions><datetime dst="true">20121129T114048,19+01</datetime><datetime dst="true">20121129T114048,21+01</datetime><datetime dst="true">20121129T114051,08+01</datetime><datetime dst="true">20121129T114051,10+01</datetime><datetime dst="true">20121129T114051,12+01</datetime><datetime dst="true">20121129T114051,14+01</datetime><datetime dst="true">20121129T135046,25+01</datetime><datetime dst="true">20121129T135454,08+01</datetime><datetime dst="true">20121129T135454,75+01</datetime><datetime dst="true">20121129T135454,77+01</datetime><datetime dst="true">20121129T135520,72+01</datetime><datetime dst="true">20121129T135743,89+01</datetime><datetime dst="true">20121129T135744,50+01</datetime><datetime dst="true">20121129T135744,53+01</datetime><datetime dst="true">20121129T144302,47+01</datetime><datetime dst="true">20121129T144303,17+01</datetime><datetime dst="true">20121129T144422,05+01</datetime><datetime dst="true">20121129T144422,70+01</datetime><datetime dst="true">20121129T144422,72+01</datetime><datetime dst="true">20121129T145551,25+01</datetime><datetime dst="true">20121129T145551,97+01</datetime><datetime dst="true">20121129T145846,03+01</datetime><datetime dst="true">20121129T145846,63+01</datetime><datetime dst="true">20121129T151759,97+01</datetime><datetime dst="true">20121129T151800,55+01</datetime><datetime dst="true">20121214T165208,93+01</datetime></revisions>
-<wassignedby><name>CN=Admin/O=LotusLab</name></wassignedby>
+<modified><datetime>20131225T164154,19+09</datetime></modified>
+<revised><datetime>20131225T164154,18+09</datetime></revised>
+<lastaccessed><datetime>20131225T164154,19+09</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20131202T142546,12+01</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=a admin/O=ibm</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=Admin/O=lotuslab</name></updatedby>
+<revisions><datetime dst="true">20121214T165209,54+01</datetime><datetime dst="true">20130320T101242,39+01</datetime><datetime dst="true">20130320T101242,88+01</datetime></revisions>
+<wassignedby><name>CN=Admin/O=lotuslab</name></wassignedby>
 <item name="$Flags"><text>gC~4K</text></item>
 <item name="$TITLE"><text>multipleRTEs02MIME.xsp</text></item>
 

@@ -1,198 +1,245 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xp:view xmlns:xp="http://www.ibm.com/xsp/core"
-	xmlns:XPa="component/XPages.nsf">
+	xmlns:XPa="component/XPages.nsf"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
 
-	<XPa:ccLayout><xp:this.facets>
-	<xp:panel xp:key="facetMain">
-		<xp:this.data>
-			<xp:dominoDocument var="document1"
-				formName="xspMultipleRTEs02MIME">
-			</xp:dominoDocument>
-		</xp:this.data><xp:button value="Save Doc" id="button1" rendered="#{javascript:document1.isEditable()}"><xp:eventHandler event="onclick" submit="true" refreshMode="complete">
-	<xp:this.action>
-		<xp:saveDocument var="document1"></xp:saveDocument>
-	</xp:this.action></xp:eventHandler></xp:button>
-		<xp:button id="button2" rendered="#{javascript:document1.isEditable()}"><xp:this.value><![CDATA[Save & Close]]></xp:this.value><xp:eventHandler event="onclick" submit="true" refreshMode="complete">
-	<xp:this.action>
-		<xp:save name="/multipleRTEsMainView.xsp"></xp:save>
-	</xp:this.action></xp:eventHandler></xp:button>
-		<xp:button value="Edit" id="button3" rendered="#{javascript:!document1.isEditable()}"><xp:eventHandler event="onclick" submit="true" refreshMode="complete">
-	<xp:this.action>
-		<xp:changeDocumentMode mode="edit" var="document1"></xp:changeDocumentMode>
-	</xp:this.action></xp:eventHandler></xp:button>
-		<xp:button value="Close" id="button4"><xp:eventHandler event="onclick" submit="true" refreshMode="complete" immediate="true" save="false">
-	<xp:this.action>
-		<xp:openPage name="/multipleRTEsMainView.xsp"></xp:openPage>
-	</xp:this.action></xp:eventHandler></xp:button>
-		
-		<xp:br></xp:br>
-		<xp:table>
-			<xp:tr style="background-color:rgb(239,248,239)">
-				<xp:td>
-					<xp:label value="Subject:" id="subject_Label1"
-						for="subject1">
-					</xp:label>
-				</xp:td>
-				<xp:td>
-					<xp:inputText value="#{document1.subject}"
-						id="subject1">
-					</xp:inputText>
-				</xp:td>
-			</xp:tr>
-			<xp:tr>
-				<xp:td>
-					<xp:label value="Body m i m e_1:"
-						id="bodyMIME_1_Label1" for="bodyMIME_11">
-					</xp:label>
-				</xp:td>
-				<xp:td>
-					
-				<xp:inputRichText id="inputRichText1" value="#{document1.bodyMIME_1}"></xp:inputRichText>
-				<hr/>
-				<xp:fileUpload id="fileUpload1"
-					value="#{document1.bodyMIME_1}">
-				</xp:fileUpload>
-				<xp:fileDownload rows="60" id="fileDownload1"
-					displayLastModified="true" value="#{document1.bodyMIME_1}"
-					allowDelete="true" hideWhen="true" displaySize="true"
-					displayType="true" caption="File Download Caption"
-					title="File Download Title property">
-				</xp:fileDownload>
-				</xp:td>
-			</xp:tr>
-			<xp:tr style="background-color:rgb(239,248,239)">
-				<xp:td>
-					<xp:label value="Body m i m e_2:"
-						id="bodyMIME_2_Label1" for="bodyMIME_21">
-					</xp:label>
-				</xp:td>
-				<xp:td>
-				<xp:inputRichText id="inputRichText2" value="#{document1.bodyMIME_2}"></xp:inputRichText>
-				<hr/>
-				<xp:fileUpload id="fileUpload2"
-					value="#{document1.bodyMIME_2}">
-				</xp:fileUpload>
-				<xp:fileDownload rows="60" id="fileDownload2"
-					displayLastModified="true" value="#{document1.bodyMIME_2}"
-					allowDelete="true" hideWhen="true" displaySize="true"
-					displayType="true" caption="File Download Caption"
-					title="File Download Title property">
-				</xp:fileDownload>
-				</xp:td>
-			</xp:tr>
-			<xp:tr>
-				<xp:td>
-					<xp:label value="Body m i m e_3:"
-						id="bodyMIME_3_Label1" for="bodyMIME_31">
-					</xp:label>
-				</xp:td>
-				<xp:td>
-					<xp:inputRichText id="inputRichText3" value="#{document1.bodyMIME_3}"></xp:inputRichText>
-				<hr/>
-				<xp:fileUpload id="fileUpload3"
-					value="#{document1.bodyMIME_3}">
-				</xp:fileUpload>
-				<xp:fileDownload rows="60" id="fileDownload3"
-					displayLastModified="true" value="#{document1.bodyMIME_3}"
-					allowDelete="true" hideWhen="true" displaySize="true"
-					displayType="true" caption="File Download Caption"
-					title="File Download Title property">
-				</xp:fileDownload>
-				</xp:td>
-			</xp:tr>
-			<xp:tr style="background-color:rgb(239,248,239)">
-				<xp:td>
-					<xp:label value="Body m i m e_4:"
-						id="bodyMIME_4_Label1" for="bodyMIME_41">
-					</xp:label>
-				</xp:td>
-				<xp:td>
-					<xp:inputRichText id="inputRichText4" value="#{document1.bodyMIME_4}"></xp:inputRichText>
-				<hr/>
-				<xp:fileUpload id="fileUpload4"
-					value="#{document1.bodyMIME_4}">
-				</xp:fileUpload>
-				<xp:fileDownload rows="60" id="fileDownload4"
-					displayLastModified="true" value="#{document1.bodyMIME_4}"
-					allowDelete="true" hideWhen="true" displaySize="true"
-					displayType="true" caption="File Download Caption"
-					title="File Download Title property">
-				</xp:fileDownload>
-				</xp:td>
-			</xp:tr>
-			<xp:tr>
-				<xp:td>
-					<xp:label value="Body m i m e_5:"
-						id="bodyMIME_5_Label1" for="bodyMIME_51">
-					</xp:label>
-				</xp:td>
-				<xp:td>
-					<xp:fileUpload id="fileUpload5"
-					value="#{document1.bodyMIME_5}">
-				</xp:fileUpload>
-				<xp:fileDownload rows="60" id="fileDownload5"
-					displayLastModified="true" value="#{document1.bodyMIME_5}"
-					allowDelete="true" hideWhen="true" displaySize="true"
-					displayType="true" caption="File Download Caption"
-					title="File Download Title property">
-				</xp:fileDownload>
-				</xp:td>
-			</xp:tr>
-			<xp:tr style="background-color:rgb(239,248,239)">
-				<xp:td>
-					<xp:label value="Body m i m e_6:"
-						id="bodyMIME_6_Label1" for="bodyMIME_61">
-					</xp:label>
-				</xp:td>
-				<xp:td>
-					<xp:fileUpload id="fileUpload6"
-					value="#{document1.bodyMIME_6}">
-				</xp:fileUpload>
-				<xp:fileDownload rows="60" id="fileDownload6"
-					displayLastModified="true" value="#{document1.bodyMIME_6}"
-					allowDelete="true" hideWhen="true" displaySize="true"
-					displayType="true" caption="File Download Caption"
-					title="File Download Title property">
-				</xp:fileDownload>
-				</xp:td>
-			</xp:tr>
-			<xp:tr>
-				<xp:td>
-					<xp:label value="Body m i m e_7:"
-						id="bodyMIME_7_Label1" for="bodyMIME_71">
-					</xp:label>
-				</xp:td>
-				<xp:td>
-					<xp:fileUpload id="fileUpload7"
-					value="#{document1.bodyMIME_7}">
-				</xp:fileUpload>
-				<xp:fileDownload rows="60" id="fileDownload7"
-					displayLastModified="true" value="#{document1.bodyMIME_7}"
-					allowDelete="true" hideWhen="true" displaySize="true"
-					displayType="true" caption="File Download Caption"
-					title="File Download Title property">
-				</xp:fileDownload>
-				</xp:td>
-			</xp:tr>
-			<xp:tr style="background-color:rgb(239,248,239)">
-				<xp:td>
-					<xp:label value="Body m i m e_8:"
-						id="bodyMIME_8_Label1" for="bodyMIME_81">
-					</xp:label>
-				</xp:td>
-				<xp:td>
-					<xp:fileUpload id="fileUpload8"
-					value="#{document1.bodyMIME_8}">
-				</xp:fileUpload>
-				<xp:fileDownload rows="60" id="fileDownload8"
-					displayLastModified="true" value="#{document1.bodyMIME_8}"
-					allowDelete="true" hideWhen="true" displaySize="true"
-					displayType="true" caption="File Download Caption"
-					title="File Download Title property">
-				</xp:fileDownload>
-				</xp:td>
-			</xp:tr>
-		</xp:table></xp:panel></xp:this.facets>
-	
-	
-	</XPa:ccLayout></xp:view>
+	<XPa:ccLayout  navPath="/other/mrte/">
+		<xp:this.facets>
+			<xc:ccMenu_other xp:key="facetLeft"></xc:ccMenu_other>
+			<xp:panel xp:key="facetMain">
+				<xp:this.data>
+					<xp:dominoDocument var="document1"
+						formName="xspMultipleRTEs02MIME">
+					</xp:dominoDocument>
+				</xp:this.data>
+				<xp:button value="Save Doc" id="button1"
+					rendered="#{javascript:document1.isEditable()}">
+					<xp:eventHandler event="onclick" submit="true"
+						refreshMode="complete">
+						<xp:this.action>
+							<xp:saveDocument var="document1"></xp:saveDocument>
+						</xp:this.action>
+					</xp:eventHandler>
+				</xp:button>
+				<xp:button id="button2"
+					rendered="#{javascript:document1.isEditable()}">
+					<xp:this.value><![CDATA[Save & Close]]></xp:this.value>
+					<xp:eventHandler event="onclick" submit="true"
+						refreshMode="complete">
+						<xp:this.action>
+							<xp:save name="/multipleRTEsMainView.xsp"></xp:save>
+						</xp:this.action>
+					</xp:eventHandler>
+				</xp:button>
+				<xp:button value="Edit" id="button3"
+					rendered="#{javascript:!document1.isEditable()}">
+					<xp:eventHandler event="onclick" submit="true"
+						refreshMode="complete">
+						<xp:this.action>
+							<xp:changeDocumentMode mode="edit"
+								var="document1">
+							</xp:changeDocumentMode>
+						</xp:this.action>
+					</xp:eventHandler>
+				</xp:button>
+				<xp:button value="Close" id="button4">
+					<xp:eventHandler event="onclick" submit="true"
+						refreshMode="complete" immediate="true" save="false">
+						<xp:this.action>
+							<xp:openPage
+								name="/multipleRTEsMainView.xsp">
+							</xp:openPage>
+						</xp:this.action>
+					</xp:eventHandler>
+				</xp:button>
+
+				<xp:br></xp:br>
+				<xp:table>
+					<xp:tr style="background-color:rgb(239,248,239)">
+						<xp:td>
+							<xp:label value="Subject:"
+								id="subject_Label1" for="subject1">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:inputText value="#{document1.subject}"
+								id="subject1">
+							</xp:inputText>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							<xp:label value="Body m i m e_1:"
+								id="bodyMIME_1_Label1" for="bodyMIME_11">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+
+							<xp:inputRichText id="inputRichText1"
+								value="#{document1.bodyMIME_1}">
+							</xp:inputRichText>
+							<hr />
+							<xp:fileUpload id="fileUpload1"
+								value="#{document1.bodyMIME_1}">
+							</xp:fileUpload>
+							<xp:fileDownload rows="60"
+								id="fileDownload1" displayLastModified="true"
+								value="#{document1.bodyMIME_1}" allowDelete="true"
+								hideWhen="true" displaySize="true" displayType="true"
+								caption="File Download Caption"
+								title="File Download Title property">
+							</xp:fileDownload>
+						</xp:td>
+					</xp:tr>
+					<xp:tr style="background-color:rgb(239,248,239)">
+						<xp:td>
+							<xp:label value="Body m i m e_2:"
+								id="bodyMIME_2_Label1" for="bodyMIME_21">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:inputRichText id="inputRichText2"
+								value="#{document1.bodyMIME_2}">
+							</xp:inputRichText>
+							<hr />
+							<xp:fileUpload id="fileUpload2"
+								value="#{document1.bodyMIME_2}">
+							</xp:fileUpload>
+							<xp:fileDownload rows="60"
+								id="fileDownload2" displayLastModified="true"
+								value="#{document1.bodyMIME_2}" allowDelete="true"
+								hideWhen="true" displaySize="true" displayType="true"
+								caption="File Download Caption"
+								title="File Download Title property">
+							</xp:fileDownload>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							<xp:label value="Body m i m e_3:"
+								id="bodyMIME_3_Label1" for="bodyMIME_31">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:inputRichText id="inputRichText3"
+								value="#{document1.bodyMIME_3}">
+							</xp:inputRichText>
+							<hr />
+							<xp:fileUpload id="fileUpload3"
+								value="#{document1.bodyMIME_3}">
+							</xp:fileUpload>
+							<xp:fileDownload rows="60"
+								id="fileDownload3" displayLastModified="true"
+								value="#{document1.bodyMIME_3}" allowDelete="true"
+								hideWhen="true" displaySize="true" displayType="true"
+								caption="File Download Caption"
+								title="File Download Title property">
+							</xp:fileDownload>
+						</xp:td>
+					</xp:tr>
+					<xp:tr style="background-color:rgb(239,248,239)">
+						<xp:td>
+							<xp:label value="Body m i m e_4:"
+								id="bodyMIME_4_Label1" for="bodyMIME_41">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:inputRichText id="inputRichText4"
+								value="#{document1.bodyMIME_4}">
+							</xp:inputRichText>
+							<hr />
+							<xp:fileUpload id="fileUpload4"
+								value="#{document1.bodyMIME_4}">
+							</xp:fileUpload>
+							<xp:fileDownload rows="60"
+								id="fileDownload4" displayLastModified="true"
+								value="#{document1.bodyMIME_4}" allowDelete="true"
+								hideWhen="true" displaySize="true" displayType="true"
+								caption="File Download Caption"
+								title="File Download Title property">
+							</xp:fileDownload>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							<xp:label value="Body m i m e_5:"
+								id="bodyMIME_5_Label1" for="bodyMIME_51">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:fileUpload id="fileUpload5"
+								value="#{document1.bodyMIME_5}">
+							</xp:fileUpload>
+							<xp:fileDownload rows="60"
+								id="fileDownload5" displayLastModified="true"
+								value="#{document1.bodyMIME_5}" allowDelete="true"
+								hideWhen="true" displaySize="true" displayType="true"
+								caption="File Download Caption"
+								title="File Download Title property">
+							</xp:fileDownload>
+						</xp:td>
+					</xp:tr>
+					<xp:tr style="background-color:rgb(239,248,239)">
+						<xp:td>
+							<xp:label value="Body m i m e_6:"
+								id="bodyMIME_6_Label1" for="bodyMIME_61">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:fileUpload id="fileUpload6"
+								value="#{document1.bodyMIME_6}">
+							</xp:fileUpload>
+							<xp:fileDownload rows="60"
+								id="fileDownload6" displayLastModified="true"
+								value="#{document1.bodyMIME_6}" allowDelete="true"
+								hideWhen="true" displaySize="true" displayType="true"
+								caption="File Download Caption"
+								title="File Download Title property">
+							</xp:fileDownload>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							<xp:label value="Body m i m e_7:"
+								id="bodyMIME_7_Label1" for="bodyMIME_71">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:fileUpload id="fileUpload7"
+								value="#{document1.bodyMIME_7}">
+							</xp:fileUpload>
+							<xp:fileDownload rows="60"
+								id="fileDownload7" displayLastModified="true"
+								value="#{document1.bodyMIME_7}" allowDelete="true"
+								hideWhen="true" displaySize="true" displayType="true"
+								caption="File Download Caption"
+								title="File Download Title property">
+							</xp:fileDownload>
+						</xp:td>
+					</xp:tr>
+					<xp:tr style="background-color:rgb(239,248,239)">
+						<xp:td>
+							<xp:label value="Body m i m e_8:"
+								id="bodyMIME_8_Label1" for="bodyMIME_81">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:fileUpload id="fileUpload8"
+								value="#{document1.bodyMIME_8}">
+							</xp:fileUpload>
+							<xp:fileDownload rows="60"
+								id="fileDownload8" displayLastModified="true"
+								value="#{document1.bodyMIME_8}" allowDelete="true"
+								hideWhen="true" displaySize="true" displayType="true"
+								caption="File Download Caption"
+								title="File Download Title property">
+							</xp:fileDownload>
+						</xp:td>
+					</xp:tr>
+				</xp:table>
+			</xp:panel>
+		</xp:this.facets>
+
+
+	</XPa:ccLayout>
+</xp:view>

@@ -32,9 +32,12 @@ context.reloadPage()}]]></xp:this.action>
 					</xp:eventHandler>
 				</xp:comboBox>
 				<xp:button value="Reset Locale" id="button3">
-					<xp:eventHandler event="onclick" submit="true"
-						refreshMode="complete">
-						<xp:this.action><![CDATA[#{javascript:context.setLocaleString("")
+					<xp:eventHandler
+					  event="onclick"
+					  submit="true"
+					  refreshMode="complete">
+					  <xp:this.action><![CDATA[#{javascript:context.setLocale(null);
+sessionScope.remove("lc1");
 context.reloadPage()}]]></xp:this.action>
 					</xp:eventHandler>
 				</xp:button>
@@ -161,8 +164,1478 @@ context.reloadPage()}]]></xp:this.action>
 				</xp:table>
 
 
-				<xp:br></xp:br>
+				<hr/>
+	<xp:table>
+		<xp:tr>
+			<xp:td>LRGU9B74Q8</xp:td>
+			<xp:td>
+				<xp:label value="Default" id="label34" style="font-weight:bold"></xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:label value="Short" id="label35" style="font-weight:bold"></xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:label value="Medium" id="label36" style="font-weight:bold"></xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:label value="Long" id="label37" style="font-weight:bold"></xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:label value="Full" id="label38" style="font-weight:bold"></xp:label>
+			</xp:td>
+			<xp:td>
 
+			</xp:td>
+
+
+
+
+
+
+
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:label value="Default" id="label15" style="font-weight:bold"></xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField92">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return dt}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date"></xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField19">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return dt}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date" dateStyle="short">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField37">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return dt}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date" dateStyle="medium">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField55">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return dt}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date" dateStyle="long">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField73">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return dt}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date" dateStyle="full">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td></xp:td>
+
+
+
+
+
+
+
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:label value="+1 day" id="label39" style="font-weight:bold"></xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField110">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,0,1,0, 0, 0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date"></xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField20">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,0,1,0, 0, 0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date" dateStyle="short">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField38">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,0,1,0, 0, 0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date" dateStyle="medium">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField56">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,0,1,0, 0, 0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date" dateStyle="long">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField74">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,0,1,0, 0, 0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date" dateStyle="full">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td></xp:td>
+
+
+
+
+
+
+
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:label value="+2 days" id="label16" style="font-weight:bold"></xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField3">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,0,2,0, 0, 0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date"></xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField21">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,0,2,0, 0, 0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date" dateStyle="short">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField39">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,0,2,0, 0, 0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date" dateStyle="medium">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField57">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,0,2,0, 0, 0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date" dateStyle="long">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField75">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,0,2,0, 0, 0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date" dateStyle="full">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td></xp:td>
+
+
+
+
+
+
+
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:label value="+3 days" id="label17" style="font-weight:bold"></xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField4">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,0,3,0, 0, 0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date"></xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField22">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,0,3,0, 0, 0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date" dateStyle="short">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField40">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,0,3,0, 0, 0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date" dateStyle="medium">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField58">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,0,3,0, 0, 0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date" dateStyle="long">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField76">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,0,3,0, 0, 0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date" dateStyle="full">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td></xp:td>
+
+
+
+
+
+
+
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:label value="+4 days" id="label18" style="font-weight:bold"></xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField5">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,0,4,0, 0, 0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date"></xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField23">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,0,4,0, 0, 0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date" dateStyle="short">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField41">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,0,4,0, 0, 0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date" dateStyle="medium">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField59">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,0,4,0, 0, 0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date" dateStyle="long">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField77">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,0,4,0, 0, 0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date" dateStyle="full">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td></xp:td>
+
+
+
+
+
+
+
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:label value="+5 days" id="label19" style="font-weight:bold"></xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField6">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,0,5,0, 0, 0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date"></xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField24">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,0,5,0, 0, 0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date" dateStyle="short">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField42">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,0,5,0, 0, 0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date" dateStyle="medium">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField60">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,0,5,0, 0, 0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date" dateStyle="long">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField78">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,0,5,0, 0, 0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date" dateStyle="full">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td></xp:td>
+
+
+
+
+
+
+
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:label value="+6 days" id="label20" style="font-weight:bold"></xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField7">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,0,6,0, 0, 0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date"></xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField25">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,0,6,0, 0, 0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date" dateStyle="short">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField43">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,0,6,0, 0, 0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date" dateStyle="medium">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField61">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,0,6,0, 0, 0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date" dateStyle="long">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField79">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,0,6,0, 0, 0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date" dateStyle="full">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td></xp:td>
+
+
+
+
+
+
+
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:label id="label21" value="+1 Month" style="font-weight:bold"></xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField8">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,1,0,0, 0, 0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date"></xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField26">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,1,0,0, 0, 0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date" dateStyle="short">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField44">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,1,0,0, 0, 0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date" dateStyle="medium">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField62">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,1,0,0, 0, 0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date" dateStyle="long">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField80">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,1,0,0, 0, 0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date" dateStyle="full">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td></xp:td>
+
+
+
+
+
+
+
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:label id="label22" value="+2 Months" style="font-weight:bold"></xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField9">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,2,0,0, 0, 0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date"></xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField27">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,2,0,0, 0, 0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date" dateStyle="short">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField45">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,2,0,0, 0, 0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date" dateStyle="medium">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField63">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,2,0,0, 0, 0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date" dateStyle="long">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField81">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,2,0,0, 0, 0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date" dateStyle="full">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td></xp:td>
+
+
+
+
+
+
+
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:label value="+3 Months" id="label23" style="font-weight:bold"></xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField10">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,3,0,0, 0, 0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date"></xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField28">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,3,0,0, 0, 0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date" dateStyle="short">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField46">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,3,0,0, 0, 0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date" dateStyle="medium">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField64">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,3,0,0, 0, 0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date" dateStyle="long">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField82">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,3,0,0, 0, 0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date" dateStyle="full">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td></xp:td>
+
+
+
+
+
+
+
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:label value="+4 Months" id="label24" style="font-weight:bold"></xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField11">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,4,0,0, 0, 0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date"></xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField29">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,4,0,0, 0, 0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date" dateStyle="short">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField47">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,4,0,0, 0, 0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date" dateStyle="medium">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField65">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,4,0,0, 0, 0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date" dateStyle="long">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField83">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,4,0,0, 0, 0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date" dateStyle="full">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td></xp:td>
+
+
+
+
+
+
+
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:label value="+5 Months" id="label25" style="font-weight:bold"></xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField12">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,5,0,0, 0, 0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date"></xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField30">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,5,0,0, 0, 0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date" dateStyle="short">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField48">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,5,0,0, 0, 0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date" dateStyle="medium">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField66">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,5,0,0, 0, 0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date" dateStyle="long">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField84">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,5,0,0, 0, 0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date" dateStyle="full">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td></xp:td>
+
+
+
+
+
+
+
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:label value="+6 Months" id="label26" style="font-weight:bold"></xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField13">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,6,0,0, 0, 0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date"></xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField31">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,6,0,0, 0, 0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date" dateStyle="short">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField49">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,6,0,0, 0, 0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date" dateStyle="medium">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField67">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,6,0,0, 0, 0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date" dateStyle="long">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField85">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,6,0,0, 0, 0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date" dateStyle="full">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td></xp:td>
+
+
+
+
+
+
+
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:label value="+7 Months" id="label27" style="font-weight:bold"></xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField14">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,7,0,0, 0, 0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date"></xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField32">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,7,0,0, 0, 0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date" dateStyle="short">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField50">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,7,0,0, 0, 0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date" dateStyle="medium">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField68">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,7,0,0, 0, 0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date" dateStyle="long">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField86">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,7,0,0, 0, 0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date" dateStyle="full">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td></xp:td>
+
+
+
+
+
+
+
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:label value="+8 Months" id="label28" style="font-weight:bold"></xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField15">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,8,0,0, 0, 0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date"></xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField33">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,8,0,0, 0, 0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date" dateStyle="short">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField51">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,8,0,0, 0, 0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date" dateStyle="medium">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField69">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,8,0,0, 0, 0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date" dateStyle="long">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField87">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,8,0,0, 0, 0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date" dateStyle="full">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td></xp:td>
+
+
+
+
+
+
+
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:label value="+9 Months" id="label29" style="font-weight:bold"></xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField16">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,9,0,0, 0, 0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date"></xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField34">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,9,0,0, 0, 0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date" dateStyle="short">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField52">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,9,0,0, 0, 0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date" dateStyle="medium">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField70">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,9,0,0, 0, 0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date" dateStyle="long">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField88">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,9,0,0, 0, 0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date" dateStyle="full">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td></xp:td>
+
+
+
+
+
+
+
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:label value="+10 Months" id="label30" style="font-weight:bold"></xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField17">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,10,0,0, 0, 0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date"></xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField35">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,10,0,0, 0, 0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date" dateStyle="short">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField53">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,10,0,0, 0, 0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date" dateStyle="medium">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField71">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,10,0,0, 0, 0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date" dateStyle="long">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField89">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,10,0,0, 0, 0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date" dateStyle="full">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td></xp:td>
+
+
+
+
+
+
+
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:label value="+11 Months" id="label31" style="font-weight:bold"></xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField18">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,11,0,0, 0, 0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date"></xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField36">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,11,0,0, 0, 0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date" dateStyle="short">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField54">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,11,0,0, 0, 0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date" dateStyle="medium">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField72">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,11,0,0, 0, 0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date" dateStyle="long">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField90">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,11,0,0, 0, 0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="date" dateStyle="full">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td></xp:td>
+
+
+
+
+
+
+
+		</xp:tr>
+
+
+
+
+	</xp:table>
+
+	<hr />
+
+	<xp:table>
+		<xp:tr>
+			<xp:td></xp:td>
+			<xp:td>
+				<xp:label value="Default" id="label40" style="font-weight:bold">
+				</xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:label value="Short" id="label41" style="font-weight:bold"></xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:label value="Medium" id="label42" style="font-weight:bold"></xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:label value="Long" id="label12" style="font-weight:bold"></xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:label value="Full" id="label13" style="font-weight:bold"></xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:label value="Pattern" id="label33" style="font-weight:bold"></xp:label>
+			</xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:label value="Default" id="label9" style="font-weight:bold">
+				</xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField91">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return dt}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="time">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField93">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return dt}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="time" timeStyle="short">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField94">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return dt}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="time" timeStyle="medium">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField95">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return dt}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="time" timeStyle="long">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField96">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return dt}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="time" timeStyle="full">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField107">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return dt}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime pattern="HH:mm:ss z">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:label id="label43" style="font-weight:bold" value="+12 hours">
+				</xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField97">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,0,0,12,0,0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="time"></xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField99">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,0,0,12,0,0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="time" timeStyle="short">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField100">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,0,0,12,0,0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="time" timeStyle="medium">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField101">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,0,0,12,0,0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="time" timeStyle="long">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField102">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,0,0,12,0,0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="time" timeStyle="full">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField108">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,0,0,12,0,0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime pattern="hh:mm z">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:label value="+24 hours" id="label32" style="font-weight:bold">
+				</xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField98">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,0,0,24,0,0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="time"></xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField103">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,0,0,24,0,0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime timeStyle="short" type="time">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField104">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,0,0,24,0,0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="time" timeStyle="medium">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField105">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,0,0,24,0,0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="time" timeStyle="long">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField106">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,0,0,24,0,0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime type="time" timeStyle="full">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+			<xp:td>
+				<xp:text escape="true" id="computedField109">
+					<xp:this.value><![CDATA[#{javascript:var dt = new Date();
+return @Adjust(dt,0,0,0,24,0,0);
+}]]></xp:this.value>
+					<xp:this.converter>
+						<xp:convertDateTime pattern="HH:mm z">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:text>
+			</xp:td>
+		</xp:tr>
+</xp:table>
+<hr/>
 
 
 

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="80257C350049C2B7" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="69e" sequence="29" unid="8B48D179C37BED9F80257C300048E24B">
+<created><datetime dst="true">20131127T141605,23+01</datetime></created>
+<modified><datetime>20131226T000131,16+09</datetime></modified>
+<revised><datetime>20131226T000131,15+09</datetime></revised>
+<lastaccessed><datetime>20131226T000131,16+09</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20131202T142547,00+01</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=a admin/O=ibm</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=Admin/O=lotuslab</name></updatedby>
+<revisions><datetime dst="true">20131127T141605,23+01</datetime><datetime dst="true">20131127T141605,26+01</datetime><datetime dst="true">20131127T141605,64+01</datetime><datetime dst="true">20131127T141605,67+01</datetime><datetime dst="true">20131127T141607,78+01</datetime><datetime dst="true">20131127T141607,80+01</datetime><datetime dst="true">20131127T141607,82+01</datetime><datetime dst="true">20131127T141607,84+01</datetime><datetime dst="true">20131127T141637,98+01</datetime><datetime dst="true">20131127T141638,06+01</datetime><datetime dst="true">20131127T141638,36+01</datetime><datetime dst="true">20131127T141638,38+01</datetime><datetime dst="true">20131127T141641,26+01</datetime><datetime dst="true">20131127T141641,28+01</datetime><datetime dst="true">20131127T141641,30+01</datetime><datetime dst="true">20131127T141641,32+01</datetime><datetime dst="true">20131127T141832,64+01</datetime><datetime dst="true">20131127T141832,83+01</datetime><datetime dst="true">20131127T141832,85+01</datetime><datetime dst="true">20131127T142520,54+01</datetime><datetime dst="true">20131127T142520,75+01</datetime></revisions>
+<wassignedby><name>CN=Admin/O=lotuslab</name></wassignedby>
+<item name="$Flags"><text>gC~4;</text></item>
+
+
+<item name="$TITLE" sign="true"><text>ccm_countrycity_document.xsp</text></item>
+
+
+
+<item name="$FileNames" sign="true"><text>ccm_countrycity_document.xsp</text></item>
+
+
+<item name="$DesignerVersion"><text>8.5</text></item>
+
+</note>

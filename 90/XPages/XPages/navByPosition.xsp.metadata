@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="80257C350049C2B7" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="67a" sequence="37" unid="08B45EFAC364137780257C05004DD6D7">
+<created><datetime dst="true">20131015T151012,71+01</datetime></created>
+<modified><datetime>20131225T164153,89+09</datetime></modified>
+<revised><datetime>20131225T164153,88+09</datetime></revised>
+<lastaccessed><datetime>20131225T164153,89+09</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20131202T142546,82+01</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=a admin/O=ibm</name><name>CN=Paul Hannan/OU=Ireland/O=IBM</name><name>CN=Admin/O=lotuslab</name></updatedby>
+<revisions><datetime dst="true">20131015T151012,71+01</datetime><datetime dst="true">20131015T151012,73+01</datetime><datetime dst="true">20131015T151017,81+01</datetime><datetime dst="true">20131015T151017,83+01</datetime><datetime dst="true">20131015T151017,85+01</datetime><datetime dst="true">20131015T151017,87+01</datetime><datetime dst="true">20131015T151418,72+01</datetime><datetime dst="true">20131015T151418,89+01</datetime><datetime dst="true">20131015T151418,91+01</datetime><datetime dst="true">20131015T151602,66+01</datetime><datetime dst="true">20131015T151602,83+01</datetime><datetime dst="true">20131015T151602,85+01</datetime><datetime dst="true">20131015T152020,07+01</datetime><datetime dst="true">20131015T152020,30+01</datetime><datetime dst="true">20131015T152020,32+01</datetime><datetime dst="true">20131015T152133,25+01</datetime><datetime dst="true">20131015T152133,45+01</datetime><datetime dst="true">20131015T152446,82+01</datetime><datetime dst="true">20131015T152447,22+01</datetime><datetime dst="true">20131015T152447,24+01</datetime><datetime dst="true">20131015T152513,06+01</datetime><datetime dst="true">20131015T152513,28+01</datetime><datetime dst="true">20131015T152513,30+01</datetime><datetime dst="true">20131015T152605,72+01</datetime><datetime dst="true">20131015T152605,94+01</datetime><datetime dst="true">20131015T153058,85+01</datetime><datetime dst="true">20131015T153059,05+01</datetime><datetime dst="true">20131015T153604,65+01</datetime><datetime dst="true">20131015T153604,86+01</datetime><datetime dst="true">20131015T153653,52+01</datetime><datetime dst="true">20131015T153653,72+01</datetime></revisions>
+<wassignedby><name>CN=Admin/O=lotuslab</name></wassignedby>
+<item name="$Flags"><text>gC~4K</text></item>
+<item name="$TITLE"><text>navByPosition.xsp</text></item>
+
+
+
+<item name="$FileNames" sign="true"><text>navByPosition.xsp</text></item>
+<item name="$DesignerVersion"><text>8.5.2</text></item>
+
+
+
+</note>

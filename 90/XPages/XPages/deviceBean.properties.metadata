@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="80257C350049C2B7" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="14ce" sequence="2" unid="F9FF24003524AF2749257C4C002A4651">
+<created><datetime>20131225T164145,13+09</datetime></created>
+<modified><datetime>20131225T164145,14+09</datetime></modified>
+<revised><datetime>20131225T164145,13+09</datetime></revised>
+<lastaccessed><datetime>20131225T164145,14+09</datetime></lastaccessed>
+<addedtofile><datetime>20131225T164145,12+09</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Admin/O=lotuslab</name></updatedby>
+<wassignedby><name>CN=Admin/O=lotuslab</name></wassignedby>
+<item name="$Flags"><text>gC~4K2</text></item>
+<item name="$TITLE"><text>deviceBean.properties</text></item>
+
+
+<item name="$FileNames" sign="true"><text>deviceBean.properties</text></item></note>
