@@ -1,84 +1,70 @@
 ﻿XPages Extension Library Japan プロジェクト Release 2.0
-====================================================
+=======================================================
 
 内容
 ----
-XPages Extension Library Japan プロジェクト Release 2.0 では、
-以下の翻訳済みサンプルアプリケーションおよび翻訳済みのコントロールを提供しています。
-
-<XPages Extension Library コントロール>
-本ベータリリースではコントロールは含んでいません。
+XPages Extension Library Japan プロジェクト Release 2.0 では、IBM Notes/Domino 9.0.1 用に
+以下の翻訳済みサンプルアプリケーションを提供しています。
 
 <XPages Extension Library 付属のサンプルアプリケーション>
 ・XPages Extension Library Demo (XPagesExt.nsf)
 	XPages Extension Library が提供している機能を試すことができます。
 ・XPages JDBC Demo (XPagesJDBC.nsf)
 	XPages から JDBC によってリレーショナルデータベースにアクセスします。
-・XPages Social Enabler Demo (XPagesSBT.nsf)
-	XPages からクラウドサービスやソーシャルネットワークサービスにアクセスします。
 
 <Demonstration Application for XPages>
 ・Demonstration Application for XPages (XPages.nsf)
 
-これらの翻訳済みサンプルアプリケーションを利用する前に以下の作業が必要になります。
-1. このサンプルは IBM Domino サーバーで使用します。Domino Designer のプリビュー機能ではすべての機能が正しく動作しません
 
-2. XPages Social Enabler Demo (XPagesSBT.nsf) の動作には「OAuth Token Store」アプリケーション (WebSecurityStore.nsf) が必要です。
-   このアプリケーションを作成するためのテンプレート (WebSecurityStore.ntf) は
-   オリジナルの XPages Extension Library プロジェクト (http://extlib.openntf.org/) のリリースに含まれます。
-   また、IBM Notes/Domino 9.0 Social Edition に同梱の WebSecutiryStore.ntf も利用可能だが
-   一部の機能が正しく動作しません。
-   
-3. XPages Social Enabler Demo (XPagesSBT.nsf) では接続対象のサービスでのユーザーアカウントが必要です。
-   また OAuth による認証を行うサービスでは連携アプリケーションの登録が必要です。
-   - IBM Sametime、IBM Connections  ･･･ Lotus Greenhouse のアカウント
-   - Twitter ･･･ Twitter のアカウントと https://dev.twitter.com/apps でのアプリケーション登録
-   - Dropbox ･･･ Dropbox のアカウントと https://www.dropbox.com/developers/apps でのアプリケーション登録
+翻訳済みサンプルアプリケーションを利用する際には以下にご注意ください。
+
+1. IBM Notes/Domino 9.0 から XPages Extension Library モジュールの多くが製品に組み込まれています。
+しかし、JDBC Demo アプリケーションで利用されている JDBC のモジュールなど、いくつかのモジュールはまだ製品に組み込まれて
+いないため、それらを利用するには対象バージョンの XPages Extension Library モジュールをインストールする必要があります。
+現在、ベースとしている XPages Extension Library モジュールのバージョンは、[901v00_04.20140226-1506]です。
+http://extlib.openntf.org/
+
+2. このサンプルは IBM Domino サーバーで使用します。Domino Designer のプリビュー機能ではすべての機能が正しく動作しません。
+
+3. 翻訳には XPages の「ローカライゼーションのオプション」機能を使用しています。
+計算結果フィールドなどのサーバーサイド JavaScript コードの中に文字がハードコードされている部分についてはこの
+「ローカライゼーションのオプション」機能では対応できないため、翻訳されていない場合があります。
+
 
 *参考文献
 
 ビデオで見る XPages Extension Library のインストール方法
 http://bit.ly/TDUi1h
 
-ビデオで見る XPages Social Enabler
-http://bit.ly/TDUgXg
+XPages アプリケーションで「ローカライゼーションのオプション」の使用方法
+http://bit.ly/1jueZ1E
 
-XPages Social Enabler で Twitter と連携する方法
-http://bit.ly/TDUxcN
 
-XPages Social Enabler で DropBox と連携する方法
-http://bit.ly/TDUwW8
+Release 2.0 での変更点
+----------------------
 
-XPages Extension Library の Social Enabler Sametime コントロールの使い方
-http://bit.ly/UcCygn
+・対象の IBM Notes/Domino のバージョンを 8.5.3 から最新の 9.0.1 にアップデート
+・最新バージョンのサンプルアプリケーションで新たに追加された部分の翻訳
+・XPages Extension Library Demo (XPagesExt.nsf) アプリケーションのサンプルデータの翻訳
+	人名などのサンプルデータを日本語に
+・XPages Social Enabler Demo（XPagesSBT.nsf) アプリケーションの削除
+	Social Enabler モジュールが XPages Extension Library から IBM Social Business Toolkit SDK に移動されたため
 
-XPages Social Enabler で IBM Connections と連携する方法
-http://bit.ly/YulFjy
-
-XPages: Social Tools cheatshee (英語) の「XPages: Social Tools」リンク先の文書に
-XPages Social Enabler の設定がまとめられています。(英語)
-http://xpagescheatsheet.com/cheatsheet.nsf
-
-現在、ベースとしている XPages Extension Library モジュールのバージョンは、[900v00_02.20130515-2200]です。
-本モジュールを利用するためには、対象バージョンの XPages Extension Library を導入する必要があります。
-http://extlib.openntf.org/
 
 Content
 -------
-Beta version of Release 2.0 is including following translated sample applications.
+Release 2.0 is including following translated sample applications.
 
 <Sample Application of XPages Extension Library>
 * XPages Extension Library Demo (XPagesExt.nsf)
 	You can try the functions of XPages Extension Library with this application.
 * XPages JDBC Demo (XPagesJDBC.nsf)
 	You can access a Relational Database via JDBC from this XPages application.
-* XPages Social Enabler Demo (XPagesSBT.nsf)
-	You can access Cloud Services and Social Network Services from this XPages application.
 
 <Demonstration Application for XPages>
 ・Demonstration Application for XPages (XPages.nsf)
 
-Currently, it is based on the version [900v00_02.20130515-2200] of XPages Extension Library module.
+Currently, it is based on the version [901v00_04.20140226-1506] of XPages Extension Library module.
 Before using Extension Library Japan modules, you have to install target version of Extension Library modules.
 http://extlib.openntf.org/
 
